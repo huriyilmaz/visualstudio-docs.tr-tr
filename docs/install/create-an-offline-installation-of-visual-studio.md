@@ -1,7 +1,7 @@
 ---
 title: Çevrimdışı yükleme oluşturma
 description: güvenilir olmayan bir internet bağlantınız veya düşük bant genişliğiniz olduğunda Visual Studio çevrimdışı olarak yüklemeyi öğrenin.
-ms.date: 4/16/2021
+ms.date: 11/23/2021
 ms.topic: conceptual
 f1_keywords:
 - offline installation [Visual Studio]
@@ -15,19 +15,19 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 20d2d3324dcd96af4c2e5d679642034e1816c98b
-ms.sourcegitcommit: 8b44ba7864f67afa476708d5092729345e689f93
+ms.openlocfilehash: 9f8a06a615dfa76ef6426ad33132e7ca6cf131b3
+ms.sourcegitcommit: 2281b4f1f8737f263c0d7e55e00b5ec81517327d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2021
-ms.locfileid: "132861594"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "133108685"
 ---
 # <a name="create-an-offline-installation-of-visual-studio"></a>Visual Studio’nun çevrimdışı yüklemesini oluşturma
 
 çeşitli ağ ve bilgisayar yapılandırmalarında iyi şekilde çalışacak Visual Studio tasarlıyoruz. düzenli aralıklarla çevrimiçi güncelleştirmeleri denetleyen küçük bir dosya olan [Visual Studio Yükleyicisi](https://visualstudio.microsoft.com/downloads)kullanmanızı öneririz ve en son düzeltmeler ve özelliklerle güncel kalabilmenizi sağlar. Ancak, bazen çevrimiçi erişim sorunlu olur. Örneğin, güvenilir olmayan bir internet bağlantınız olabilir veya internet bağlantınızın bant genişliği düşük olabilir. Bunlar gibi durumlarda, Visual Studio almak için kullanabileceğiniz birkaç farklı yöntem yaptık. yüklemeden önce dosyaları yerel makinede yerel bir önbelleğe indirmek için Visual Studio Yükleyicisi **tümünü indir, sonra yükle** özelliğini kullanabilir veya daha sonra yüklenecek dosyaların yerel bir önbelleğini oluşturmak için komut satırını kullanabilirsiniz.
 
 > [!NOTE]
-> istemci iş istasyonları ağına Visual Studio dağıtımı gerçekleştirmek isteyen bir kurumsal bt yöneticisiyseniz, [Visual Studio yöneticileri kılavuzumuzu](https://aka.ms/vs/admin/guide)inceleyin.
+> istemci iş istasyonları ağına Visual Studio dağıtımı gerçekleştirmek isteyen bir kurumsal bt yöneticisiyseniz, [Visual Studio yöneticileri kılavuzumuzu](https://aka.ms/vs/admin/guide) ve [Visual Studio ağ tabanlı yüklemesi oluşturma](create-a-network-installation-of-visual-studio.md) ' ya bakın.
 
 ## <a name="use-the-download-all-then-install-feature"></a>"Tümünü Indir, sonra Yükle" özelliğini kullanın
 
@@ -120,7 +120,7 @@ bir komut istemi açın ve önyükleyici parametrelerini kullanarak, yerel yükl
 - .NET Web ve .NET masaüstü geliştirme için şunu çalıştırın:
 
    ```shell
-    vs_enterprise.exe --layout c:\vslayout --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --includeOptional --lang en-US
+    vs_enterprise.exe --layout c:\localVScache --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --includeOptional --lang en-US
     ```
 ::: moniker-end
 

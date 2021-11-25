@@ -1,7 +1,7 @@
 ---
-title: Yanıt dosyası ile yükleme işlemini otomatikleştirme
-description: Uygulama yüklemenizi otomatikleştirmenize yardımcı olacak bir JSON yanıt dosyası Visual Studio öğrenin
-ms.date: 03/30/2019
+title: Yüklemeyi bir yanıt dosyasıyla otomatikleştirin
+description: Visual Studio yüklemenizi otomatikleştirmenize yardımcı olan bir JSON yanıt dosyası oluşturmayı öğrenin
+ms.date: 11/23/2021
 ms.topic: conceptual
 helpviewer_keywords:
 - response file
@@ -15,43 +15,50 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 37b81b957c708f18d896d436a0687298b8bc7bee
-ms.sourcegitcommit: 215680b355cf613bfa125cf6b864c8bb5f2c71a5
+ms.openlocfilehash: 8fba7b02adec1abfe5bc0325a7614414d05c2cdb
+ms.sourcegitcommit: 2281b4f1f8737f263c0d7e55e00b5ec81517327d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "132453691"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "133108698"
 ---
-# <a name="automate-installs-by-using-settings-in-a-response-file"></a>Yanıt dosyasındaki ayarları kullanarak yüklemeleri otomatikleştirme
+# <a name="programmatically-configure-default-settings-using-a-response-file"></a>Yanıt dosyası kullanarak program aracılığıyla varsayılan ayarları yapılandırma
 
-Aşağıdaki örnekte Visual Studio dağıtan yöneticiler parametresini kullanarak bir yanıt `--in` dosyası belirtebilirsiniz:
+Visual Studio yanıt dosyası, içeriği komut satırı parametrelerini ve bağımsız değişkenlerini yansıtan bir [JSON](http://json-schema.org/) dosyasıdır. Yanıt dosyası, ürünün ilk yüklemesi sırasında ayarları başlatmak için kullanılır. 
+
+## <a name="automate-installation"></a>Yüklemeyi otomatikleştirin
+Visual Studio dağıtan yöneticiler `--in` , aşağıdaki örnekte olduğu gibi parametresini kullanarak bir yanıt dosyası belirtebilir:
 
 ```shell
 vs_enterprise.exe --in customInstall.json
 ```
+## <a name="response-file-contents"></a>Yanıt dosyası içeriği
+Yanıt dosyası komut satırı parametrelerini kapsüller ve şu genel kuralları izler:
+ - Bir komut satırı parametresi bağımsız değişken alırsa (örneğin,, `--quiet` `--passive` vb.), yanıt dosyasındaki değer true/false olmalıdır. 
+ - Parametresi bir bağımsız değişkeni (örneğin, `--installPath <dir>` ) alırsa, yanıt dosyasındaki değer bir dize olmalıdır. 
+ - Parametresi bir bağımsız değişken alırsa ve komut satırında birden çok kez görünebilen (örneğin, `--add <id>` ), yanıt dosyasındaki değer bir dize dizisi olmalıdır.
 
-Yanıt dosyaları, içeriği komut satırı bağımsız değişkenlerini yansıtan [JSON](http://json-schema.org/) dosyalarıdır.  Genel olarak, bir komut satırı parametresi bağımsız değişken (örneğin, , vb.) kabul yoksa, yanıt dosyasındaki değer `--quiet` `--passive` true/false olmalıdır.  Bir bağımsız değişken (örneğin, ) alıyorsa, yanıt `--installPath <dir>` dosyasındaki değer bir dize olmalıdır.  Bir bağımsız değişken alır ve komut satırı üzerinde birden çok kez görünebilirse (örneğin, `--add <id>` ), bir dize dizisi olması gerekir.
+Komut satırında belirtilen parametreler, parametrelerin birden çok giriş (örneğin,) olması dışında, yanıt dosyasına dahil edilen ayarları geçersiz kılar `--add` . Birden çok giriş olduğunda, komut satırında sağlanan girişler yanıt dosyasındaki ayarlarla birleştirilir.
 
-Parametrelerin birden çok giriş almaları (örneğin, ) dışında, yanıt dosyasından komut satırı geçersiz kılma ayarlarında belirtilen `--add` parametreler. Birden çok girişiniz olduğunda, komut satırına sağlanan girişler yanıt dosyasındaki ayarlarla birleştirilir.
+## <a name="configure-the-response-file-used-with-network-layouts"></a>Ağ düzenleriyle kullanılan yanıt dosyasını yapılandırma
+Komutunu kullanarak bir ağ düzeni oluşturduysanız `--layout` , düzen klasörünün kökünde bir başlangıç varsayılan Vanilla `response.json` dosyası oluşturulmuştur. yöneticiler daha sonra bu `response.json` dosyada, istemci üzerinde Visual Studio yüklemek veya güncelleştirmek üzere bu düzendeki önyükleyici çağırdıklarında kullanması gereken ayarları denetlemek için düzende bu dosyayı değiştirebilir.
 
-## <a name="setting-a-default-configuration-for-visual-studio"></a>Visual Studio için varsayılan yapılandırma ayarlama
+Dosyadaki yapılandırma ayarlarına `response.json` yalnızca istemci düzende önyükleyici kullanılıyorsa başvurulur ve kullanılır. , `response.json` İstemci güncelleştirmeyi istemcide yerel  olarak çağırırsa mizanpajda kullanılamaz.  
 
-ile bir ağ düzeni önbelleği `--layout` oluşturduysanız, `response.json` düzende bir başlangıç dosyası oluşturulur. Kısmi bir düzen oluşturmanız, bu yanıt dosyası düzenin içinde yer alan iş yüklerini ve dilleri içerir.  Kurulumu bu düzenden çalıştırarak bu response.json dosyası otomatik olarak kullanılır ve bu dosya düzende yer alan iş yüklerini ve bileşenleri seçer.  Kullanıcılar, yüklemeden önce kurulum kullanıcı arabiriminde iş yüklerini seçmeye veya Visual Studio.
+Yönetici kısmi bir düzen oluşturmadıysa, varsayılan `response.json` dosya yalnızca kısmi düzende yer alan iş yüklerini ve dilleri belirtir. 
 
-Düzen oluşturan yöneticiler, kullanıcıların düzenden yükleme yaptıklarında göreceği varsayılan ayarları kontrol etmek için Visual Studio `response.json` değiştirebilir.  Örneğin, bir yönetici varsayılan olarak belirli iş yüklerinin ve bileşenlerin yüklü olması istiyorsa, bunları eklemek `response.json` için dosyayı yapılandırabilirsiniz.
+`--quiet`İstemci ilk yüklemeyi  gerçekleştirirken modunun kullanılmadığını varsayarsak, ilk yükleme çalıştıran kullanıcılar içinde belirtilen Varsayılanları geçersiz kılabilir `response.json` ve yükleme gerçekten gerçekleşmeden önce kurulum Kullanıcı arabirimindeki iş yüklerini daha da seçebilir veya seçimden kaldırabilirsiniz. kullanıcı, mizanpajda kullanılamayan bileşenleri veya iş yüklerini seçip, `response.json` Microsoft tarafından barındırılan sunucu noktalarında channeluri ise, Visual Studio kurulum paketleri ınternet 'ten edinmeye çalışacaktır.
 
-Kurulum Visual Studio bir düzen klasöründen çalıştırılırsa, otomatik _olarak_ düzen klasöründeki yanıt dosyasını kullanır.  seçeneğini kullanmak zorunda `--in` değildir.
-
-Bu düzenden yükleme yapan kullanıcılar için varsayılan ayarı tanımlamak üzere çevrimdışı düzen `response.json` klasöründe oluşturulan dosyayı güncelleştirebilirsiniz.
+Visual Studio kurulum bir düzen klasöründen çalıştırıldığında, kurulum dosyayı _otomatik olarak_ `response.json` düzen klasöründe kullanacaktır. Seçeneğini kullanmak zorunda değilsiniz `--in` .
 
 > [!WARNING]
-> Düzen oluşturulduğunda tanımlanan mevcut özellikleri bırakmanız kritik öneme sahiptir.
+> Düzen oluşturulduğu sırada tanımlanmış olan ' de herhangi bir özelliği silmemenizi çok önemlidir `response.json` . Değerleri değiştirebilirsiniz, ancak herhangi bir öğeyi kaldıramazsınız.
 
-Bir düzende yer alan temel dosya, yüklemek istediğiniz ürün ve kanalın değerini içermesi dışında `response.json` aşağıdaki örnekteki gibi görünüyor olabilir:
+`response.json`Bir düzendeki temel dosya, yüklemek istediğiniz ürün ve kanal için değeri içermesi dışında aşağıdaki örneğe benzer olmalıdır:
 
 ::: moniker range="vs-2017"
 
-```json
+```Default response.json
 {
   "installChannelUri": ".\\ChannelManifest.json",
   "channelUri": "https://aka.ms/vs/15/release/channel",
@@ -63,9 +70,9 @@ Bir düzende yer alan temel dosya, yüklemek istediğiniz ürün ve kanalın de�
 
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range="=vs-2019"
 
-```json
+```Default response.json
 {
   "installChannelUri": ".\\ChannelManifest.json",
   "channelUri": "https://aka.ms/vs/16/release/channel",
@@ -77,18 +84,42 @@ Bir düzende yer alan temel dosya, yüklemek istediğiniz ürün ve kanalın de�
 
 ::: moniker-end
 
-Bir düzen oluşturulduğunda veya güncelleştiren bir response.template.json dosyası da oluşturulur.  Bu dosya, kullanılmaktadır tüm iş yükünü, bileşeni ve dil kimliklerini içerir.  Bu dosya, özel bir yüklemeye dahil edilecek her şey için bir şablon olarak sağlanır.  Yöneticiler bu dosyayı özel yanıt dosyası için başlangıç noktası olarak kullanabilir.  Yüklemek istemediklerinizi için kimlikleri kaldırmanız ve kendi yanıt dosyanıza kaydetmeniz gerekir.  response.template.json dosyasını özelleştirin, yoksa düzen her güncelleştirildiğinde değişiklikleriniz kaybolur.
+::: moniker range="=vs-2022"
 
-## <a name="example-layout-response-file-content"></a>Örnek düzen yanıt dosyası içeriği
+```Default response.json for Current channel layout
+{
+  "installChannelUri": ".\\ChannelManifest.json",
+  "channelUri": "https://aka.ms/vs/17/release/channel",
+  "installCatalogUri": ".\\Catalog.json",
+  "channelId": "VisualStudio.17.Release",
+  "productId": "Microsoft.VisualStudio.Product.Enterprise"
+}
+```
 
-Aşağıdaki örnek, Visual Studio Enterprise iş yükü ve bileşeni olan ve hem İngilizce hem de Fransızca kullanıcı arabirimi dilleriyle birlikte yüklemeleri gerçekleştirmektedir. Bu örneği şablon olarak kullanabilirsiniz; yalnızca iş yüklerini ve bileşenleri yüklemek istediğiniz bileşenlerle değiştirmenizi sağlar:
+```Default response.json for LTSC 17.0 channel layout
+{
+  "installChannelUri": ".\\ChannelManifest.json",
+  "channelUri": "https://aka.ms/vs/17/release.ltsc.17.0/channel",
+  "installCatalogUri": ".\\Catalog.json",
+  "channelId": "VisualStudio.17.Release.LTSC.17.0",
+  "productId": "Microsoft.VisualStudio.Product.Enterprise"
+}
+```
+
+::: moniker-end
+
+Bir düzen oluşturduğunuzda veya güncelleştirdiğinizde bir Response. Template. JSON dosyası da oluşturulur.  Bu dosya, kullanılabilecek tüm iş yükü, bileşen ve dil kimliklerini içerir.  Bu dosya, tümünün özel bir yüklemeye dahil edilip edildikleriniz için bir şablon olarak sağlanır. Yöneticiler, bu dosyayı özel bir yanıt dosyası için bir başlangıç noktası olarak kullanabilir. Yüklemek istemediğiniz nesnelerin kimliklerini kaldırmanız ve `response.json` dosyaya veya kendi yanıt dosyanıza kaydetmeniz yeterlidir. Response. Template. json dosyasını özelleştirmeyin veya Düzen her güncelleştirildiğinde değişiklikleriniz kaybedilir.
+
+## <a name="example-customized-layout-response-file-content"></a>Örnek özelleştirilmiş düzen yanıt dosyası içeriği
 
 ::: moniker range="vs-2017"
 
-```json
+aşağıdaki `response.json` dosya örneği, hem ingilizce hem de fransızca kullanıcı arabirimi dillerini dahil etmek ve güncelleştirme konumunun düzene geri dönmesi için yapılandırılmasını sağlamak üzere bir Visual Studio Enterprise istemci yüklemesini başlatacak. Visual Studio 2017 için, istemci üzerinde güncelleştirme konumu (channeluri) ayarlandığında, daha sonra değiştirilemez.
+
+```Example response.json
 {
   "installChannelUri": ".\\ChannelManifest.json",
-  "channelUri": "https://aka.ms/vs/15/release/channel",
+  "channelUri": "\\\\server\\share\\layoutdirectory\\ChannelManifest.json",
   "installCatalogUri": ".\\Catalog.json",
   "channelId": "VisualStudio.15.Release",
   "productId": "Microsoft.VisualStudio.Product.Enterprise",
@@ -118,12 +149,14 @@ Aşağıdaki örnek, Visual Studio Enterprise iş yükü ve bileşeni olan ve he
 
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range="=vs-2019"
 
-```json
+aşağıdaki `response.json` dosya örneği, birkaç ortak iş yükü ve bileşeni seçmek, hem ingilizce hem de fransızca kullanıcı arabirimi dillerini seçmek ve güncelleştirme konumunun düzene geri işaret edecek şekilde yapılandırılmasını sağlamak için Visual Studio Enterprise istemci yüklemesini başlatacak. Visual Studio 2019 ' de, güncelleştirme konumunun (channeluri) yalnızca ilk yükleme sırasında yapılandırılabileceğini ve en son yükleyicideki işlevselliği kullanmadığınız _durumlar dışında_ , bundan sonra değiştirilemeyeceğini unutmayın. bunun nasıl yapılandırılacağı hakkında bilgi için [, Visual Studio enterprise dağıtımları için varsayılanları ayarlama](\visualstudio\install\set-defaults-for-enterprise-deploymnets#Use-the-latest-installer) bölümüne bakın.
+
+```Example response.json
 {
   "installChannelUri": ".\\ChannelManifest.json",
-  "channelUri": "https://aka.ms/vs/16/release/channel",
+  "channelUri": "\\\\server\\share\\layoutdirectory\\ChannelManifest.json",
   "installCatalogUri": ".\\Catalog.json",
   "channelId": "VisualStudio.16.Release",
   "productId": "Microsoft.VisualStudio.Product.Enterprise",
@@ -153,9 +186,48 @@ Aşağıdaki örnek, Visual Studio Enterprise iş yükü ve bileşeni olan ve he
 
 ::: moniker-end
 
+::: moniker range="=vs-2022"
+
+aşağıdaki `response.json` dosya örneği, birkaç ortak iş yükü ve bileşeni seçmek, hem ingilizce hem de fransızca kullanıcı arabirimi dillerini seçmek ve güncelleştirme konumunun düzene geri işaret edecek şekilde yapılandırılmasını sağlamak için Visual Studio Enterprise istemci yüklemesini başlatacak. 
+
+```Example response.json
+{
+  "installChannelUri": ".\\ChannelManifest.json",
+  "channelUri": "\\\\server\\share\\layoutdirectory\\ChannelManifest.json",
+  "installCatalogUri": ".\\Catalog.json",
+  "channelId": "VisualStudio.17.Release",
+  "productId": "Microsoft.VisualStudio.Product.Enterprise",
+
+  "installPath": "C:\\VS2022",
+  "quiet": false,
+  "passive": false,
+  "includeRecommended": true,
+  "norestart": false,
+
+  "addProductLang": [
+    "en-US",
+    "fr-FR"
+    ],
+
+    "add": [
+        "Microsoft.VisualStudio.Workload.ManagedDesktop",
+        "Microsoft.VisualStudio.Workload.Data",
+        "Microsoft.VisualStudio.Workload.NativeDesktop",
+        "Microsoft.VisualStudio.Workload.NetWeb",
+        "Microsoft.VisualStudio.Workload.Office",
+        "Microsoft.VisualStudio.Workload.Universal"
+    ]
+}
+```
+
+::: moniker-end
+
+## <a name="troubleshooting"></a>Sorun giderme
+Visual Studio önyükleyici ile bir dosyayla eşleştirmeniz sırasında hata oluşturan bir sorunla karşılaşırsanız `response.json` , daha fazla bilgi için [Visual Studio sayfasını yüklerken veya kullanırken ağla ilgili hatalarda sorun giderme](../install/troubleshooting-network-related-errors-in-visual-studio.md#error-failed-to-parse-id-from-parent-process) bölümüne bakın.
+
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
-
+* [Visual Studio yöneticileri kılavuzu](https://aka.ms/vs/admin/guide)
 * [Visual Studio iş yükü ve bileşen kimlikleri](workload-and-component-ids.md)
-* [Visual Studio'i yükleme veya kullanma sırasında ağ ile ilgili Visual Studio](troubleshooting-network-related-errors-in-visual-studio.md)
+* [Visual Studio yüklerken veya kullanırken ağla ilgili hatalarda sorun giderme](troubleshooting-network-related-errors-in-visual-studio.md)

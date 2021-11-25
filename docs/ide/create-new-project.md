@@ -1,6 +1,6 @@
 ---
 title: Yeni proje oluşturma
-description: Yeni bir proje oluşturma hakkında bilgi Visual Studio.
+description: Visual Studio'da yeni bir proje Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/24/2021
 ms.topic: how-to
@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 31955aa0cff228af34df5cc7dc8772feb4a3454b
-ms.sourcegitcommit: 17202f3ac3f7f17ce3756b57dd56321f7254d1dd
+ms.openlocfilehash: 626c94d24eb557a90d4cc1e03f11f89c4e465ce4
+ms.sourcegitcommit: 2281b4f1f8737f263c0d7e55e00b5ec81517327d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "133093039"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "133108893"
 ---
 # <a name="create-a-new-project-in-visual-studio"></a>Visual Studio'de yeni proje oluşturma
 
@@ -29,7 +29,7 @@ Bu makalede, şablondan hızla yeni bir proje oluşturma Visual Studio gösterec
 
 ## <a name="open-the-new-project-page-in-visual-studio-2017"></a>Visual Studio 2017'de Yeni Project sayfasını açın
 
-Visual Studio 2017'de yeni proje oluşturmanın birden çok yolu vardır. Başlangıç sayfasında, Proje şablonlarını ara kutusuna bir proje  şablonunun adını yazabilirsiniz  veya Yeni proje oluştur bağlantısını seçerek Yeni proje oluştur **iletişim Project** açabilirsiniz. Başlat sayfasının yanı sıra, menü **çubuğunda** Dosya Yeni Project'ı veya  >    >   araç **çubuğundaki Yeni** Project düğmesini de seçebilirsiniz.
+Visual Studio 2017'de yeni proje oluşturmanın birden çok yolu vardır. Başlangıç sayfasında, Proje şablonlarını ara kutusuna bir proje  şablonunun adını yazabilirsiniz  veya Yeni proje oluştur bağlantısını seçerek Yeni proje oluştur **iletişim Project** açabilirsiniz. Başlangıç sayfasının yanı sıra, menü **çubuğunda** Dosya Yeni Project'ı veya  >    >   araç **çubuğundaki Yeni** Project düğmesini de seçebilirsiniz.
 
 ![Dosya Adı Yeni dosya seçenekleri Visual Studio menü çubuğunun > > Project görüntüsü.](./media/vside-newproject1.png)
 
@@ -40,13 +40,13 @@ Yeni **Project** iletişim kutusunda, kullanılabilir proje şablonları Şablon
 ![Yüklü şablonların listesini Project Yeni YüklemeLer iletişim kutusunun ekran görüntüsü.](./media/vside-newproject-templates-list.png)
 
 > [!NOTE]
-> Görüntülenen kullanılabilir dillerin ve proje şablonlarının listesi, Visual Studio ve yüklü iş yüklerinin sürümüne bağlıdır. Ek iş yüklerini yükleme hakkında bilgi edinmek için [bkz. İş Visual Studio ve bileşenleri ekleyerek veya](../install/modify-visual-studio.md)kaldırarak verileri değiştirme.
+> Görüntülenen kullanılabilir dillerin ve proje şablonlarının listesi, Visual Studio ve yüklü iş yüklerinin sürümüne bağlıdır. Ek iş yüklerini yükleme hakkında bilgi edinmek için [bkz. Visual Studio](../install/modify-visual-studio.md)ve bileşenleri ekleyerek veya kaldırarak verileri değiştirme.
 
 Dil adının yanındaki üçgeni ve ardından bir proje kategorisini (Windows Desktop gibi) seçerek kullanmak istediğiniz programlama diline yönelik şablon listesini görüntüleyin.
 
 Aşağıdaki görüntüde Visual C# .NET Core projeleri için kullanılabilen proje şablonları yer almaktadır:
 
-![Seçebilirsiniz proje Project Listele iletişim kutusunun ekran görüntüsü.](./media/new-project-dialog-net-core.png)
+![Seçebilirsiniz proje Project yeni özellikler iletişim kutusunun ekran görüntüsü.](./media/new-project-dialog-net-core.png)
 
 ## <a name="configure-your-project-in-visual-studio-2017"></a>Visual Studio 2017'de projenizi yapılandırma
 
@@ -145,7 +145,7 @@ Yeni **projeyi** oluşturmak için Oluştur'a seçin.
 
 ## <a name="configure-your-new-project"></a>Yeni projenizi yapılandırma
 
-Yeni **projenizi yapılandır iletişim** kutusunda projenizi (ve çözüme) ad ve ardından bir disk konumu seçin ve bir Framework sürümü seçin (seçtiğiniz şablon için uygunsa) seçenekleri vardır.
+Yeni **projenizi yapılandır iletişim** kutusunda projenizi (ve çözüme) ad ve ardından bir disk konumu seçme ve daha fazlası için seçenekler vardır.
 
 :::image type="content" source="media/vs-2022/configure-new-project.png" alt-text="Visual Studio 2022'de 'Yeni projenizi yapılandır' iletişim kutusunun ekran görüntüsü.":::
 

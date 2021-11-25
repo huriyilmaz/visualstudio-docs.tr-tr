@@ -1,7 +1,7 @@
 ---
-title: koyu Visual Studio temasını ayarlama ve metin renklerini değiştirme
-description: varsayılan Visual Studio color temasını koyu moda değiştirme ve kod düzenleyicisinde yazı tipi renklerini değiştirme hakkında bilgi edinin.
-ms.date: 11/19/2021
+title: Koyu Visual Studio ve metin renklerini değiştirme
+description: Varsayılan renk temasını koyu Visual Studio ve kod düzenleyicisinde yazı tipi renklerini değiştirme hakkında bilgi edinin.
+ms.date: 11/24/2021
 ms.topic: how-to
 ms.custom: contperf-fy21q1
 author: TerryGLee
@@ -10,84 +10,96 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 52e8ab6a713e20b7ec3c9d574af05b7cceb727d6
-ms.sourcegitcommit: 932cf0f653c6258b73f42102d134cbaf50b8f20c
+ms.openlocfilehash: 48ac5ca7d1d1ce236ff51cff57ee9a152761d371
+ms.sourcegitcommit: 5af130d3ff64b71d415819e42f4f2efb2ae36a6a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2021
-ms.locfileid: "132880009"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "133117555"
 ---
-# <a name="how-to-personalize-the-visual-studio-ide-and-the-editor"></a>nasıl yapılır: Visual Studio ıde ve düzenleyiciyi kişiselleştirme
+# <a name="how-to-personalize-the-visual-studio-ide-and-the-editor"></a>Nasılürür: Visual Studio IDE'leri ve düzenleyiciyi kişiselleştirme
 
-bu nasıl yapılır makalesinde, mavi temadan koyu temaya Visual Studio color temasını özelleştireceğiz. Daha sonra, kod düzenleyicisinde iki farklı metin türünün renklerini özelleştireceğiz.
+::: moniker range="vs-2022"
 
-> [!NOTE]
-> [Visual Studio 2022](/visualstudio/releases/2022/release-notes-preview)' de, renk temaları işlevini Windows ayarlarınızdaki bir şekilde kullanıma sunduk. daha fazla bilgi için bkz. [**Visual Studio blog gönderisi için esnek tema özellikleri**](https://devblogs.microsoft.com/visualstudio/flexible-theming-visual-studio/) .
+Bu nasıl yapılan makalesinde, renk temasının Visual Studio özelleştirdik. Ardından, kod düzenleyicisinde iki farklı metin türü için renkleri özelleştirin.
 
-::: moniker range="vs-2017"
-
-Visual Studio henüz yüklemediyseniz, [Visual Studio indirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) sayfasına giderek ücretsiz yükleme yapın.
-
-::: moniker-end
-
-::: moniker range=">=vs-2019"
-
-Visual Studio henüz yüklemediyseniz, [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına giderek ücretsiz yükleme yapın.
-
-::: moniker-end
+Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/downloads) ücretsiz yükleyin.
 
 ## <a name="set-the-color-theme-for-the-ide"></a>IDE için renk temasını ayarlama
 
-Visual Studio kullanıcı arabirimine yönelik varsayılan renk teması **mavi** olarak adlandırılır. **Koyu** olarak değiştirelim.
+Visual Studio kullanıcı arabirimi için varsayılan renk teması **Koyu'dır.** Bunu farklı bir renk teması olarak değiştirmenin nasıl bir şey olduğunu burada sınız.
 
-1. **Dosya** ve **düzenleme** gibi menülerin bir satırı olan menü çubuğunda **Araçlar**  >  **Seçenekler**' i seçin.
+1. Menü çubuğunda Araçlar **Seçenekler'i** > **seçin.**
 
-1. **Ortam**  >  **genel** seçenekleri sayfasında, **renk teması** seçimini **koyu** olarak değiştirin ve ardından **Tamam**' ı seçin.
+1. Seçenekler listesinde Ortam **Genel'i** > **seçin.**
 
-   tüm Visual Studio geliştirme ortamı (ıde) için renk teması **koyu** olarak değişir.
+1. Renk **teması listesinde** varsayılan Koyu tema, Mavi  **tema** ve Mavi (Ek Karşıtlık) teması ile Açık tema arasında **seçim** seçin.  Ya da Sistemi **kullan ayarını seçerek** bu ayarın Windows seçebilirsiniz.
 
-   ::: moniker range="vs-2017"
+   :::image type="content" source="media/vs-2022/fonts-colors-theme.png" alt-text="Renk temasını değiştirebilirsiniz Seçenekler iletişim kutusunun ekran görüntüsü.":::
 
-   ![koyu temada Visual Studio 2017](media/quickstart-personalize-dark-theme.png)
+   > [!NOTE]
+   > Bir renk temasını değiştirseniz, IDE'de metin bu tema için varsayılan veya daha önce özelleştirilmiş yazı tiplerini ve boyutlarını geri döner.
 
-   ::: moniker-end
-
-   ::: moniker range=">=vs-2019"
-
-   ![koyu temada Visual Studio 2019](media/vs-2019/dark-theme.png)
-
-   ::: moniker-end
-
-::: moniker range="vs-2017"
-
-> [!TIP]
-> [Visual Studio market](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor)'ten **Visual Studio Color Theme düzenleyicisini** yükleyerek, önceden tanımlanmış ek temalar yükleyebilirsiniz. Bu aracı yükledikten sonra, **renk teması** açılan listesinde ek renk temaları görüntülenir.
+    > [!TIP]
+    > Daha fazla tema seçmek ister misiniz? Visual Studio Market'te çok çeşitli [**özel temalara göz atabilirsiniz.**](https://marketplace.visualstudio.com/search?target=VS&category=Tools&vsVersion=&subCategory=Themes&sortBy=Installs) VS Code tabanlı yeni Visual Studio 2022 özel temalarının örneklerini görmek için Yeni Visual Studio temaları koleksiyonuna tanıtma blog [**gönderisi'ne**](https://devblogs.microsoft.com/visualstudio/custom-themes/) göz atabilirsiniz.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
+Bu nasıl yapılan makalesinde, mavi Visual Studio renk temasını koyu temaya özelleştirdik. Ardından, kod düzenleyicisinde iki farklı metin türü için renkleri özelleştirin.
+
+Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/downloads) ücretsiz yükleyin.
+
+## <a name="set-the-color-theme-for-the-ide"></a>IDE için renk temasını ayarlama
+
+Visual Studio kullanıcı arabirimi için varsayılan renk teması **Mavi'dir.** Şimdi bunu Koyu olarak **değiştir bakalım.**
+
+1. Dosya ve Düzenle gibi menülerin satırı olan menü çubuğunda **Araçlar** **Seçenekleri'ne**  > **tıklayın.**
+
+1. Ortam Genel **seçenekleri** > **sayfasında** Renk teması seçimini  **Koyu olarak** ve ardından Tamam'ı **seçin.**
+
+   Geliştirme ortamının (IDE) Visual Studio renk teması Koyu olarak **değişir.**
+
+   ![Visual Studio temada 2019'da](media/vs-2019/dark-theme.png)
+
 > [!TIP]
-> [Visual Studio marketi](https://marketplace.visualstudio.com/items?itemName=ms-madsk.ColorThemeDesigner)'nden **Visual Studio Color teması tasarımcısını** yükleyerek kendi temalarınızı oluşturabilirsiniz.
+> Visual Studio Market'te Visual Studio **Tema Tasarımcısı'Visual Studio** [oluşturabilirsiniz.](https://marketplace.visualstudio.com/items?itemName=ms-madsk.ColorThemeDesigner)
 
 ::: moniker-end
 
-::: moniker range="vs-2022"
+::: moniker range="vs-2017"
+
+Bu nasıl yapılan makalesinde, mavi Visual Studio renk temasını koyu temaya özelleştirdik. Ardından, kod düzenleyicisinde iki farklı metin türü için renkleri özelleştirin.
+
+Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ücretsiz yükleyin.
+
+## <a name="set-the-color-theme-for-the-ide"></a>IDE için renk temasını ayarlama
+
+Visual Studio kullanıcı arabirimi için varsayılan renk teması **Mavi'dir.** Şimdi bunu Koyu olarak **değiştir bakalım.**
+
+1. Dosya ve Düzenle gibi menülerin satırı olan menü çubuğunda **Araçlar** **Seçenekleri'ne**  > **tıklayın.**
+
+1. Ortam Genel **seçenekleri** > **sayfasında** Renk teması seçimini  **Koyu olarak** ve ardından Tamam'ı **seçin.**
+
+   Geliştirme ortamının (IDE) Visual Studio renk teması Koyu olarak **değişir.**
+
+   ![Visual Studio 2017'de koyu tema](media/quickstart-personalize-dark-theme.png)
 
 > [!TIP]
-> Daha da fazla tema seçeistiyor musunuz? [**Visual Studio market**](https://marketplace.visualstudio.com/search?target=VS&category=Tools&vsVersion=&subCategory=Themes&sortBy=Installs)'teki özel temaların geniş yelpazesini inceleyin. ayrıca, VS Code tabanlı yeni Visual Studio 2022 özel temalarının örneklerini görmek için, [**yeni Visual Studio temalarının bir koleksiyonunu tanıtma**](https://devblogs.microsoft.com/visualstudio/custom-themes/) blog gönderisine göz atın.
+> Visual Studio Market'te Visual Studio Tema **Düzenleyicisi'ni** yükleyerek önceden [tanımlanmış Visual Studio yükleyebilirsiniz.](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor) Bu aracı yükledikten sonra, Renk teması açılan **listesinde ek renk** temaları görünür.
 
 ::: moniker-end
 
-## <a name="change-text-colors-in-the-editor"></a>Düzenleyicideki metin renklerini değiştirme
+## <a name="change-text-colors-in-the-editor"></a>Düzenleyicide metin renklerini değiştirme
 
-Artık düzenleyicinin bazı metin renklerini özelleştireceğiz. İlk olarak, varsayılan renkleri görmek için yeni bir XML dosyası oluşturalım.
+Şimdi düzenleyici için bazı metin renklerini özelleştirebilirsiniz. İlk olarak, varsayılan renkleri görmek için yeni bir XML dosyası oluşturabilirsiniz.
 
-1. Menü çubuğundan **Dosya**  >  **Yeni**  >  **Dosya**' yı seçin.
+1. Menü çubuğundan Dosya Yeni **Dosya'ya**  >    >  **tıklayın.**
 
-1. **Yeni dosya** iletişim kutusunda, **genel** kategori altında **XML dosyası**' nı seçin ve **Aç**' ı seçin.
+1. Yeni Dosya **iletişim kutusunda,** Genel kategorisi **altında** XML Dosyası'na ve **ardından** Aç'ı **seçin.**
 
-1. Aşağıdaki XML 'i içeren satırın altına yapıştırın `<?xml version="1.0" encoding="utf-8"?>` .
+1. Aşağıdaki XML dosyasını içeren satırın altına `<?xml version="1.0" encoding="utf-8"?>` yapıştırın.
 
    ```xml
    <Catalog>
@@ -115,32 +127,32 @@ Artık düzenleyicinin bazı metin renklerini özelleştireceğiz. İlk olarak, 
    </Catalog>
    ```
 
-   Satır numaralarının turkuaz mavi renkli olduğunu ve XML özniteliklerinin (gibi `id="bk101"` ) açık mavi renkli olduğunu unutmayın. Bu öğelerin metin rengini değiştireceğiz.
+   Satır numaralarının turququua-blue renk, XML özniteliklerinin ise (örneğin) açık `id="bk101"` mavi bir renk olduğunu farkedin. Bu öğelerin metin rengini değiştirmeyeceksiniz.
 
    ![XML dosyası yazı tipi renkleri](media/quickstart-personalize-xml-file.png)
 
-1. **Seçenekler** iletişim kutusunu açmak için menü çubuğundan **Araçlar**  >  **Seçenekler** ' i seçin.
+1. Seçenekler iletişim **kutusunu açmak** için menü   >  **çubuğundan Araçlar** Seçenekler'i seçin.
 
-1. **Ortam** altında **yazı tipleri ve renkler** kategorisini seçin.
+1. Ortam **altında** Yazı Tipleri **ve Renkler kategorisini** seçin.
 
-   **Ayarları göster** ' in altındaki metin bir **metin Düzenleyicisi** olduğunu söyler &mdash; . Yazı tiplerini ve metin rengini özelleştirebileceğiniz yerlerin kapsamlı listesini görmek için açılan listeyi genişletin.
+   Ayarlarını göster altındaki **metinde Metin** **Düzenleyici'nin şu** &mdash; şekilde olduğunu fark edebilirsiniz. Yazı tiplerini ve metin rengini özelleştirebileceğiniz yerlerin kapsamlı listesini görmek için açılan listeyi genişletin.
 
-1. Satır numaraları metninin rengini değiştirmek için, **görüntüleme öğeleri** listesinde **satır numarası**' nı seçin. **Öğe ön planı** kutusunda, **zeytin**' ı seçin.
+1. Satır numaraları metninin rengini değiştirmek için Öğeleri görüntüle **listesinde Satır** Numarası'ı **seçin.** Öğe ön **plan kutusunda, Yeşil'i** **seçin.**
 
-    :::image type="content" source="media/vs-2022/personalize-line-number-color.png" alt-text="Seçenekler iletişim kutusundaki yazı tipi ve renkler kategorisinin ekran görüntüsü.":::
+    :::image type="content" source="media/vs-2022/personalize-line-number-color.png" alt-text="Seçenekler iletişim kutusundaki Yazı Tipleri ve Renkler kategorisinin ekran görüntüsü.":::
 
-   Bazı dillerin kendilerine özgü yazı tipleri ve renkler ayarları vardır. C++ geliştiricisiyseniz ve işlevler için kullanılan rengi değiştirmek istiyorsanız, **görüntüleme öğeleri** listesinde **C++ işlevlerine** bakabilirsiniz.
+   Bazı dillerin kendi özel yazı tipleri ve renk ayarları vardır. C++ geliştiricisiyseniz ve örneğin, işlevler için kullanılan rengi değiştirmek istiyorsanız, Öğeleri görüntüle listesinde **C++** **İşlevleri'ne bakabilirsiniz.**
 
-1. İletişim kutusundan çıkmadan önce, XML özniteliklerinin rengini de değiştirelim. **Öğeleri görüntüle** listesinde, **XML özniteliği** ' ne gidin ve bunu seçin. **Öğe ön planı** kutusunda, **limon sarısı**' ı seçin. Seçimlerinizi kaydetmek ve iletişim kutusunu kapatmak için **Tamam** ' ı seçin.
+1. İletişim kutusundan çıkmadan önce XML özniteliklerinin rengini de değiştirebilirsiniz. Öğeleri **görüntüle listesinde aşağı** kaydırarak **XML Özniteliği'ne kaydırın** ve seçin. Öğe ön **plan kutusunda Yer'i** **seçin.** **Seçimlerimizi** kaydetmek ve iletişim kutusunu kapatmak için Tamam'ı seçin.
 
-   Satır numaraları artık bir zeytin rengi ve XML öznitelikleri parlak, limon yeşili. C++ veya C# kod dosyası gibi başka bir dosya türünü açarsanız, satır numaralarının de zeytin rengi içinde göründüğünü görürsünüz.
+   Çizgi numaraları artık yeşil renklidir ve XML öznitelikleri parlak, yeşil yeşil renktedir. C++ veya C# kod dosyası gibi başka bir dosya türü açarsanız, satır numaralarının da yeşil renkte olduğunu görüyorsunuz.
 
-   ![Yeni yazı tipi renkleriyle XML dosyası](media/quickstart-personalize-xml-file-new-colors.png)
+   ![Yeni yazı tipi renkleri ile XML dosyası](media/quickstart-personalize-xml-file-new-colors.png)
 
-Visual Studio renkleri özelleştirmenin yalnızca birkaç yolunu araştırtık. [**seçenekler**](../ide/reference/fonts-and-colors-environment-options-dialog-box.md) iletişim kutusundaki diğer özelleştirme seçeneklerini, gerçekten Visual Studio sahip olmak için araştırmanızı umuyoruz.
+Visual Studio'da renkleri özelleştirmenin yalnızca birkaç Visual Studio. Seçenekleri gerçekten kendi özelleştirmenizi yapmak için [](../ide/reference/fonts-and-colors-environment-options-dialog-box.md) Seçenekler iletişim kutusundaki diğer özelleştirme seçeneklerini Visual Studio umuyoruz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Visual Studio yazı tiplerini, renkleri ve temaları değiştirme](../ide/how-to-change-fonts-and-colors-in-visual-studio.md)
-- [Nasıl yapılır: düzenleyicide metin durumunu değiştirme](../ide/how-to-change-text-case-in-the-editor.md)
-- [Visual Studio ıde 'ye genel bakış](../get-started/visual-studio-ide.md)
+- [Nasıl yapabilirsiniz: Visual Studio'de yazı tiplerini, renkleri ve temaları değiştirme](../ide/how-to-change-fonts-and-colors-in-visual-studio.md)
+- [Nasıl olur: Düzenleyicide metin büyük/yeni harf değiştirme](../ide/how-to-change-text-case-in-the-editor.md)
+- [Visual Studio IDE'ye genel bakış](../get-started/visual-studio-ide.md)

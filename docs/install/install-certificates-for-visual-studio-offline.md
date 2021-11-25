@@ -14,18 +14,18 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 084ffd10a106daa9f3d8539699fe124166c6217b
-ms.sourcegitcommit: 215680b355cf613bfa125cf6b864c8bb5f2c71a5
+ms.openlocfilehash: 8df6d40f7c5226a75fa5e2f818423b61a41ce99b
+ms.sourcegitcommit: 2281b4f1f8737f263c0d7e55e00b5ec81517327d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "132453709"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "133108659"
 ---
 # <a name="install-certificates-required-for-visual-studio-offline-installation"></a>Çevrimdışı yükleme için Visual Studio sertifikaları yükleme
 
 Visual Studio, birçok bileşen düzenli olarak güncelleştirildiğinden, birincil olarak İnternet'e bağlı bir makineye yüklenmek üzere tasarlanmıştır. Ancak, bazı ek adımlarla, Visual Studio İnternet bağlantısının kullanıla olmadığı bir ortama dağıtabilirsiniz.
 
-Yükleme Visual Studio altyapısı yalnızca güvenilen içeriği yüklür. Bunu, indirilen içeriğin Authenticode imzalarını kontrol ederek ve yüklemeden önce tüm içeriğin güvenilir olduğunu doğrular. Bu, ortamınızı indirme konumunun tehlikeye atılmış olduğu saldırılara karşı güvende tutar. Visual Studio bu nedenle, bir kullanıcının makinesine birkaç standart Microsoft kök ve ara sertifikasının yüklü ve güncel olması gerekir. Makine Güncelleştirme ile güncel Windows, imzalama sertifikaları genellikle günceldir. Makine İnternet'e bağlı ise, yükleme sırasında Visual Studio imzaları doğrulamak için sertifikaları yeniler. Makine çevrimdışıysa sertifikaların başka bir şekilde yenilenmesi gerekir.
+Yükleme Visual Studio altyapısı yalnızca güvenilen içeriği yüklür. Bunu, indirilen içeriğin Authenticode imzalarını kontrol ederek ve yüklemeden önce tüm içeriğin güvenilir olduğunu doğrular. Bu, ortamınızı indirme konumunun tehlikeye atılmış olduğu saldırılara karşı güvende tutar. Visual Studio nedenle, bir kullanıcının makinesine birkaç standart Microsoft kök ve ara sertifikasının yüklü ve güncel olması gerekir. Makine Güncelleştirme ile güncel Windows, imzalama sertifikaları genellikle günceldir. Makine İnternet'e bağlı ise, yükleme sırasında Visual Studio imzaları doğrulamak için sertifikaları yeniler. Makine çevrimdışıysa sertifikaların başka bir şekilde yenilenmesi gerekir.
 
 ## <a name="how-to-refresh-certificates-when-offline"></a>Çevrimdışıyken sertifikaları yenileme
 
@@ -55,7 +55,7 @@ En son kök sertifikalara sahip çevrimdışı makinelere sahip kuruluşlar içi
 
 İstemci iş istasyonlarına çevrimdışı ortamda Visual Studio betik yazıyorsanız şu adımları izlemalısınız:
 
-1. Sertifika Yöneticisi [Aracı'nı](/dotnet/framework/tools/certmgr-exe-certificate-manager-tool) (certmgr.exe) ağ düzenine veya yerel önbellek yükleme konuma kopyalayın. Certmgr.exe, kendi Windows parçası olarak dahil değildir, ancak Windows [SDK'sı kapsamında kullanılabilir.](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
+1. Sertifika Yöneticisi [Aracı'nı](/dotnet/framework/tools/certmgr-exe-certificate-manager-tool) (certmgr.exe) ağ düzenine veya yerel önbellek yükleme konuma kopyalayın. Certmgr.exe bir parçası olarak Windows, ancak Windows [SDK'sı kapsamında kullanılabilir.](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
 
 2. Aşağıdaki komutlarla bir toplu iş dosyası oluşturun:
 
@@ -90,7 +90,7 @@ Bu Visual Studio Yükleyicisi yalnızca kök sertifikaların sistemde yüklü ol
 
 ## <a name="why-are-the-certificates-from-the-certificates-folder-not-installed-automatically"></a>Sertifikalar klasöründeki sertifikalar neden otomatik olarak yüklenmez?
 
-Çevrimiçi ortamda bir imza doğrulandığında, sertifikaları Windows ve sisteme eklemek için api'ler kullanılır. Sertifikanın güvenilir olduğunu ve yönetim ayarları aracılığıyla izin verildiğini doğrulama işlemi bu işlem sırasında gerçekleşir. Bu doğrulama işlemi çoğu çevrimdışı ortamda olamaz. Sertifikaları el ile yüklemek, kuruluş yöneticilerinin sertifikaların güvenilir olduğundan emin olmasını ve kuruluşlarının güvenlik ilkesine uygun olmasını sağlar.
+Çevrimiçi bir ortamda bir imza doğrulandığında, sertifikaları Windows ve sisteme eklemek için api'ler kullanılır. Sertifikanın güvenilir olduğunu ve yönetim ayarları aracılığıyla izin verildiğini doğrulama işlemi bu işlem sırasında gerçekleşir. Bu doğrulama işlemi çoğu çevrimdışı ortamda olamaz. Sertifikaları el ile yüklemek, kuruluş yöneticilerinin sertifikaların güvenilir olduğundan emin olmasını ve kuruluşlarının güvenlik ilkesine uygun olmasını sağlar.
 
 ## <a name="checking-if-certificates-are-already-installed"></a>Sertifikaların zaten yüklü olup olduğunu denetleme
 
@@ -117,7 +117,7 @@ Sertifika adları Verilenler **sütunlarında yer alıyorsa,** bunların yüklü
 
 ## <a name="install-visual-studio"></a>Visual Studio'yu yükleme
 
-Sertifikaları istemci makinesine yükledikten sonra, yerel [önbellekten](../install/create-an-offline-installation-of-visual-studio.md#step-3---install-visual-studio-from-the-local-cache)Visual Studio veya ağ düzeni [](create-a-network-installation-of-visual-studio.md#deploy-from-a-network-installation) paylaşımından Visual Studio istemci makinesine dağıtmaya hazır olursanız.
+Sertifikaları istemci makinesine yükledikten sonra, yerel önbellekten Visual Studio veya ağ düzeni [](/visualstudio/install/create-a-network-installation-of-visual-studio#install-visual-studio-onto-a-client-machine-from-a-network-installation) paylaşımından Visual Studio istemci makinesine dağıtmaya hazır olursanız. [](../install/create-an-offline-installation-of-visual-studio.md#step-3---install-visual-studio-from-the-local-cache)
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 

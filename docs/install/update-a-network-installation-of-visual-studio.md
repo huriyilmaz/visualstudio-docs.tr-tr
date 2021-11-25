@@ -1,7 +1,7 @@
 ---
 title: Ağ tabanlı bir yüklemeyi güncelleştirme
-description: --layout komutunu kullanarak ağ tabanlı bir Visual Studio güncelleştirmeyi öğrenin
-ms.date: 05/26/2021
+description: Ağ düzeninden yüklenmiş Visual Studio istemcisini güncelleştirmeyi öğrenin
+ms.date: 11/23/2021
 ms.topic: conceptual
 helpviewer_keywords:
 - '{{PLACEHOLDER}}'
@@ -14,168 +14,161 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 2ee79274c6203f0de7217dbe058edb0b62a78a88
-ms.sourcegitcommit: 215680b355cf613bfa125cf6b864c8bb5f2c71a5
+ms.openlocfilehash: 858e593ab6c2e5bc0beed0749c5864d8a75b3e97
+ms.sourcegitcommit: 2281b4f1f8737f263c0d7e55e00b5ec81517327d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "132453808"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "133108828"
 ---
-# <a name="update-a-network-based-installation-of-visual-studio"></a>Visual Studio’nun ağ tabanlı yüklemesini güncelleştirme
+# <a name="update-a-visual-studio-client-that-was-installed-from-a-network-layout"></a>Bir Visual Studio düzeninden yüklenmiş bir istemciyi güncelleştirme
 
-Visual Studio'nin ağ yükleme düzenini en son ürün güncelleştirmeleriyle güncelleştirebilirsiniz; böylece hem Visual Studio'nin en son güncelleştirmesi için bir yükleme noktası olarak hem de istemci iş istasyonlarına dağıtılmış olan yüklemelerin bakımını yapmak için kullanılabilir.
+En son güvenlik ve işlev düzeltmelerini Visual Studio tüm istemcilerini düzenli aralıklarla güncelleştirin ve güncelleştirin. 
 
-## <a name="how-to-update-a-network-layout"></a>Ağ düzenini güncelleştirme
+Visual Studio istemci başlangıçta bir ağ düzeni aracılığıyla yüklendiyse, büyük olasılıkla istemci makinesi "yönetilen bir ortamın" parçasıdır, yani merkezi bir yönetim ekibi tarafından yönetilir ve kuruluş ilkelerine uyması gerekir. Yönetilen bir ortamdaki istemci makinelerini güncelleştirmek için, aşağıdaki yanıtlarının güncelleştirme sürecine nasıl yaklaşması gerektiği konusunda bilgi edinecek soruları göz önünde bulundurabilirsiniz. 
 
-> [!IMPORTANT]
-> Bu yönergeler, daha önce bir ağ yükleme düzeni oluşturduğunuz ve istemcinin güncelleştirmeleri nasıl aldırması gerektiğinin bazı kararlarını aldığı varsayılan bir uygulamadır. Bunun nasıl olduğu hakkında daha fazla bilgi için Ağ yüklemesi oluşturma [ve Visual Studio](create-a-network-installation-of-visual-studio.md) dağıtımları için [güncelleştirmeleri Visual Studio sayfasına](../install/controlling-updates-to-visual-studio-deployments.md) bakın.
+-  Güncelleştirmeler nereden geliyor: ağ düzeni veya Microsoft tarafından barındırılan sunucular? Güncelleştirme bir ağ düzeninden geliyorsa ağ düzeni hazır mı?
+-  Güncelleştirme kullanıcı tarafından mı başlatacak yoksa yönetici tarafından başlatılan bir olay mı? Güncelleştirmeyi gerçekleştiren kişinin yönetici izinlerine sahip olması gerektiğini unutmayın.
 
-Ağ yükleme paylaşımınızı en son güncelleştirmeleri içeren şekilde yenilemek için, güncelleştirilmiş paketleri indirmek için parametresini `--layout` kullanarak önyükleyiciyi çalıştırın.
+## <a name="prepare-the-update-source"></a>Güncelleştirme kaynağını hazırlama
 
-Ağ düzenini ilk oluşturulduğunda kısmi [bir düzen seçtiysanız,](create-a-network-installation-of-visual-studio.md)bu ayarlar kaydedilir. Gelecekteki düzen komutları, önceki seçeneklerin yanı sıra belirttiğiniz yeni seçenekleri kullanır.
+İstemcinizi Microsoft tarafından barındırılan sunuculardan güncelleştireceksanız, istemci microsoft'tan edinilen en son sürümü bu kanala indirir ve [indirir.](/visualstudio/releases/2022/vs2022-release-rhythm) 
 
-Bir dosya paylaşımında düzen barındırırsanız, düzenin özel bir kopyasını güncelleştirmeniz (örneğin, c:\VSLayout) ve ardından, tüm güncelleştirilmiş içerik indirildikten sonra bunu dosya paylaşımınıza \\ (örneğin, sunucu\ürünler\VS) kopyalamanız gerekir. Bunu yapmasanız, düzeni güncelleştirirken Kurulumu çalıştıran kullanıcıların henüz tamamen güncelleştirilmediklerinden tüm içeriği düzenden alama ihtimali daha yüksek olur.
+İstemcinizi bir ağ düzeninden güncelleştiriyorsanız, ilk adım güncelleştirilmiş ürünle ağ düzenini hazırlamaktır. Hem yeni [yüklemelerin hem de güncelleştirmelerin güncelleştirilmiş sürümü](/visualstudio/install/create-a-network-installation-of-visual-studio#update-or-modify-your-layout) aldıracak şekilde mevcut düzeninizi en son ürün güncelleştirmeleriyle güncelleştirebilirsiniz. Veya istemci [makinelerini güncelleştirmek için kullanabileceğiniz](/visualstudio/install/create-a-network-installation-of-visual-studio) farklı bir dizinde yepyeni bir düzen oluşturabilirsiniz.
 
-Şimdi düzeni oluşturma ve güncelleştirmeye birkaç örnek verilmiştir:
+## <a name="enable-manual-user-initiated-client-side-updates"></a>El ile kullanıcı tarafından başlatılan istemci tarafı güncelleştirmelerini etkinleştirme 
+İstemci makinesi üzerinde yeterli izinlere sahip bir kullanıcı, kendi [kendini güncelleştiren Visual Studio başlatabilirsiniz.](/visualstudio/install/update-visual-studio) Yeni Visual Studio, güncelleştirmelerin doğru kaynak konumunu bakarak bir güncelleştirmenin kullanılabilir olduğunu tanıyacak şekilde düzgün yapılandırılması gerekir. Güncelleştirme gerçekleşirken herhangi bir dosya (Visual Studio açıksa) kullanılırsa, Visual Studio tamamlamak için dosyanın kapanması gerekir. Bazen bir güncelleştirmenin yeniden başlatılması gerekir.
 
-* İlk olarak, yalnızca İngilizce için tek bir iş yüküne sahip bir düzen oluşturma örneği:
+### <a name="manually-configure-where-the-visual-studio-client-looks-for-updates"></a>İstemcinin güncelleştirmeleri Visual Studio el ile yapılandırma
 
-  ```shell
-  vs_enterprise.exe --layout c:\VSLayout --add Microsoft.VisualStudio.Workload.ManagedDesktop --lang en-US
-  ```
-
-* Aynı düzeni daha yeni bir sürüme nasıl güncelleştirebilirsiniz? Ek komut satırı parametresi belirtmenize gerek yok. Önceki ayarlar kaydedilmiştir ve bu düzen klasöründeki sonraki düzen komutları tarafından kullanılacaktır.
-
-  ```shell
-  vs_enterprise.exe --layout c:\VSLayout
-  ```
-
-* Burada, düzeninizi katılımsız bir şekilde daha yeni bir sürüme nasıl güncelleştirebilirsiniz? Düzen işlemi, kurulum işlemini yeni bir konsol penceresinde çalıştırır. Kullanıcıların son sonucu ve oluşan hataların özetini görene kadar pencere açık bıraktır. Bir düzen işlemini katılımsız bir şekilde gerçekleştirıyorsanız (örneğin, düzeninizi en son sürüme güncelleştirmek için düzenli olarak çalıştıran bir betiğiniz varsa) parametresini kullanın; böylece işlem pencereyi otomatik `--passive` olarak kapatır.
-
-  ```shell
-  vs_enterprise.exe --layout c:\VSLayout --passive
-  ```
-
-* Ek bir iş yükü ve yerelleştirilmiş dil eklemenin nasıl olduğunu burada açıklarız.  (Bu komut *Azure* geliştirme iş yükünü ekler.)  Artık hem Yönetilen Masaüstü hem de Azure bu düzende yer almaktadır.  İngilizce ve Almanca dil kaynakları da tüm bu iş yüklerine dahil edilir.  Ayrıca düzen, kullanılabilir en son sürüme güncelleştirilir.
-
-  ```shell
-  vs_enterprise.exe --layout c:\VSLayout --add Microsoft.VisualStudio.Workload.Azure --lang de-DE
-  ```
-
-    > [!IMPORTANT]
-    > Güncelleştirme işlemi, düzen veya istemciye ek isteğe bağlı bileşenleri indirmez veya yüklemez. İsteğe bağlı bileşenleri eklemeniz veya değiştirmenizi gerekirse, önce yanıt dosyasından eski isteğe bağlı bileşenleri kaldırın ve ihtiyacınız olan yeni bileşenleri `Layout.JSON` [](automated-installation-with-response-file.md) dosyasının "ekle" bölümüne `Layout.JSON` ekleyin. Ardından, düzende update komutunu çalıştırarak yeni eklenen bileşenleri düzene indirir. 
-    >
-    > Bu yeni bileşenleri istemci makinesine yüklemek için bu üç adımı tamamlayanın. İlk olarak, düzenin yukarıda açıklandığı gibi yeni bileşenleri içerdiğini doğrulayın. Ardından, istemcinizi düzende en son bitlere güncelleştirin.  Son olarak, istemcide yeniden, istemci makinesine yeni bileşenleri (düzene eklenmiş olan) yükecek bir değiştirme işlemi çalıştırın.
-
-* Son olarak, sürümü güncelleştirmeden ek bir iş yükü ve yerelleştirilmiş dil eklemenin nasıl olduğunu burada açıklarız. (Bu komut, ASP.NET *web geliştirme iş yükünü* ekler.)  Artık Yönetilen Masaüstü, Azure ve ASP.NET & Web Geliştirme iş yükleri bu düzende yer almaktadır. Bu iş yüklerinin tamamında İngilizce, Almanca ve Fransızca dil kaynakları da mevcuttur.  Ancak, bu komut çalıştırılana kadar düzen kullanılabilir en son sürüme güncelleştirilmedi. Mevcut sürümde kalır.
-
-  ```shell
-  vs_enterprise.exe --layout c:\VSLayout --add Microsoft.VisualStudio.Workload.NetWeb --lang fr-FR --keepLayoutVersion
-  ```
-
-## <a name="deploy-an-update-to-client-machines"></a>İstemci makinelere güncelleştirme dağıtma
-
-Ağ ortamının nasıl yapılandırıldığına bağlı olarak, bir güncelleştirme bir kuruluş yöneticisi tarafından dağıtılabilir veya bir istemci makineden başlatılabilir.
-
-* Kullanıcılar çevrimdışı bir Visual Studio klasöründen yüklenmiş bir örnek örneğini güncelleştirebilirsiniz:
-  * Aşağıdaki Visual Studio Yükleyicisi.
-  * Ardından **Güncelleştir'e tıklayın.**
+İstemci Visual Studio başlangıçta yüklü olduğunda, güncelleştirmeleri denetlemesi gereken konumu kaydeder. Microsoft Visual Studio sunuculardan yüklenmişse, varsayılan olarak Microsoft tarafından barındırılan sunuculardan güncelleştirmeleri aramaz. Ağ Visual Studio önyükleyicisi tarafından yüklenmiş veya güncelleştirilmişse, düzeni tarafından belirtilen konumdaki [güncelleştirmeleri bakar.](/visualstudio/install/automated-installation-with-response-file)  
 
 ::: moniker range="vs-2017"
 
-* Yöneticiler iki ayrı komutla kullanıcı etkileşimi Visual Studio istemci dağıtımlarını güncelleştirebilirsiniz:
-  * İlk olarak, Visual Studio güncelleştirin: <br>```vs_enterprise.exe --quiet --update```
-  * Ardından, uygulamanın Visual Studio güncelleştirin: <br>```vs_enterprise.exe update --installPath "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise" --quiet --wait --norestart```
+Bu Visual Studio 2017'de, istemci ürünü yüklediği zaman istemcinin güncelleştirme konumu yapılandırması kilitlenir ve değiştirilemez. Güncelleştirmeler için farklı bir kaynak konumu yapılandırmak üzere, doğru düzen yapılandırmasını kullanarak ürünü kaldırmanız ve yeniden yüklemeniz gerekir.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-* Yöneticiler iki ayrı komutla kullanıcı etkileşimi Visual Studio istemci dağıtımlarını güncelleştirebilirsiniz:
-  * İlk olarak, Visual Studio güncelleştirin: <br>```vs_enterprise.exe --quiet --update```
-  * Ardından, uygulamanın Visual Studio güncelleştirin: <br>```vs_enterprise.exe update --installPath "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise" --quiet --wait --norestart```
+Varsayılan Visual Studio 2019 işlevselliğiyle, istemci ürünü yükledikten sonra istemcinin güncelleştirme konumu yapılandırması kilitlenir ve değiştirilemez. Güncelleştirmelerin kaynak _konumunu güvenilir bir_ şekilde değiştirmenin tek yolu, doğru yapılandırmayı kullanarak ürünü kaldırmak ve yeniden yüklemektir.
+ 
+Ancak, Visual Studio en son Visual Studio 2022 Yükleyicisi kullanıyorsa, güncelleştirmeler için istemcinin kaynak konumu değiştirilebilir. Bu, bir düzenden yüklemek ancak güncelleştirmelerin başka bir düzenden geliyor olması için kullanışlıdır. Visual Studio 2022 Yükleyicisini bir istemci makinesine almak için iki yol vardır. En kolayı, Visual Studio 2022 ürününü yüklemek ve kullanmaktır. Alternatif olarak, Visual Studio [2022 yükleyicisini Visual Studio 2019 düzenleri aracılığıyla dağıtabilirsiniz.](/visualstudio/install/create-a-network-installation-of-visual-studio#configure-the-layout-to-always-use-the-latest-installer)
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+İstemcinin güncelleştirmeleri araması için güncelleştirme konumunu el ile görüntülemek ve yapılandırmak için Update [Ayarlar'yi](/visualstudio/install/update-visual-studio?view=vs-2022&preserve-view=true#configure-source-location-of-updates-1)getirin ve doğru yapılandırıldığından emin olun. Ardından güncelleştirmeyi istemciden başlatarak başlatarak.  
+
+::: moniker-end
+
+### <a name="update-notifications"></a>Güncelleştirme bildirimleri
+
+İstemcinin güncelleştirmeleri aray bulunduğu konumda kullanılabilir bir güncelleştirme varsa, istemci bir [ileti veya bildirim bayrağı görüntüler.](/visualstudio/install/update-visual-studio?#use-the-message-box-in-the-ide-1)  
+
+Güncelleştirme bildirimlerinin kullanıcılara ne zaman sun alınarak kontrol edilecekleri hakkında ayrıntılı bilgi için bkz. Ağ tabanlı [güncelleştirmeler ve dağıtımlar için Visual Studio denetleme.](/visualstudio/install/set-defaults-for-enterprise-deployments#controlling-notifications-in-the-visual-studio-ide)
+
+### <a name="manually-initiate-the-update"></a>Güncelleştirmeyi el ile başlatma
+
+Kullanıcılar bir [örneği el](/visualstudio/install/update-visual-studio) Visual Studio şu şekilde güncelleştirebilir: 
+  * başlatarak Visual Studio Yükleyicisi. Bir güncelleştirme varsa Güncelleştir'e **tıklarlar.**
+  * IDE'Visual Studio başlatma ve bildirim bayrağına veya iletisine yanıt verme ya da Yardım/Güncelleştirmeleri denetleme'ye tıklayın.  
+
+## <a name="programatically-update-the-client-machines"></a>İstemci makinelerini programlı olarak güncelleştirme
+Yöneticiler, komutları istemci tarafı yükleyiciye Visual Studio veya bir önyükleyiciyi başlatarak istemci yüklemelerini program aracılığıyla güncelleştirebilirsiniz.
+
+### <a name="programatically-update-visual-studio-by-using-the-visual-studio-installer"></a>Visual Studio Yükleyicisi kullanarak Visual Studio programlı güncelleştirme Visual Studio Yükleyicisi
+
+::: moniker range="vs-2017"
+
+İstemcinin yükleyicisini program Visual Studio ve güncelleştirme komutunu başlatarak bir güncelleştirme başlatabilirsiniz. Örnek:
+
+```shell
+c:\program files (x86)\microsoft\visual studio\installer\>setup.exe update --installPath "C:\Program Files\Microsoft Visual Studio\2017\Enterprise" 
+```
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+İstemcinin yükleyicisini program Visual Studio ve güncelleştirme komutunu başlatarak bir güncelleştirme başlatabilirsiniz. Bu komut, Visual Studio için kaynak konumda bulunan güncelleştirilmiş ürüne [göre güncelleştirilecek.](/visualstudio/install/update-visual-studio#configure-source-location-of-updates-1) İstemcide güncelleştirme kaynağı konumunu değiştirmek için --channelURI parametresini geçerek programlı olarak bunu yapabiliriz. Örnek:  
+
+Kanalı bir ağ düzeni olarak değiştirebilir ve _istemcide_ aşağıdaki gibi bir güncelleştirme komutu yürütebilirsiniz:
+
+```shell
+c:\program files (x86)\microsoft\visual studio\installer\>setup.exe update --installPath "C:\Program Files\Microsoft Visual Studio\2019\Enterprise" --channelURI "\\\\server\\share\\newlayoutdir\\channelmanifest.json"
+```
+veya bunun gibi, güncelleştirmelerin kaynağını Microsoft tarafından barındırılan bir konuma ayarlar:
+
+```shell
+c:\program files (x86)\microsoft\visual studio\installer\>setup.exe update --installPath "C:\Program Files\Microsoft Visual Studio\2019\Enterprise" --channelURI "https://aka.ms/vs/16/release/channel"
+```
+
+::: moniker-end
+
+### <a name="programatically-update-visual-studio-by-using-a-bootstrapper"></a>Önyükleyici kullanarak Visual Studio'ya programlı güncelleştirme.
+
+::: moniker range=">=vs-2017"
+
+İlk olarak Visual Studio konumdan bir önyükleyiciyi programlı olarak çağırarak bu önyükleyiciyi güncelleştirebilirsiniz. Microsoft tarafından barındırılan sunuculardan gelen tüm önyükleyiciler aynı konumdan kabul edilir. Önyükleyiciniz bir ağ düzeni paylaşımında ise, ağ düzeninin istenen ürün [güncelleştirmelerini](/visualstudio/install/create-a-network-installation-of-visual-studio#update-or-modify-your-layout) içermesi için güncelleştirilmiş olması gerekir.
+
+```shell
+\\server\share\originalinstallVSdirectory\vs_enterprise.exe update --installPath "C:\clientmachine\installpath" --quiet 
+```
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+Ayrıca, istemciyi güncelleştirmek istediğiniz ürünün sürümünü içeren farklı bir kaynak konumdan programlı  bir önyükleyici çağırarak Visual Studio 2019 istemcinizi güncelleştirebilirsiniz. Bunu yapmak için istemcide Visual Studio 2022 yükleyicisini alasiniz. Bunu etkinleştirmenin en kolay yolu, [yeni 2019 Visual Studio en son yükleyiciyi kullanmaktır.](/visualstudio/install/create-a-network-installation-of-visual-studio#ensure-your-layout-is-using-the-latest-installer) Önyükleyiciyi yeni bir düzenden çalıştırırsanız, istemcinin güncelleştirme kanalı, düzeninde [belirtilen güncelleştirme konumu olarak ayarlanır.](/visualstudio/install/automated-installation-with-response-file) Örneğin, bu komutu istemci makinede çalıştırabilirsiniz:
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2022"
 
-* Yöneticiler iki ayrı komutla kullanıcı etkileşimi Visual Studio istemci dağıtımlarını güncelleştirebilirsiniz:
-  * İlk olarak, Visual Studio güncelleştirin: <br>```vs_enterprise.exe --quiet --update```
-  * Ardından, uygulamanın Visual Studio güncelleştirin: <br>```vs_enterprise.exe update --installPath "C:\Program Files\Microsoft Visual Studio\2022\Enterprise" --quiet --wait --norestart```
+Ayrıca, istemciyi güncelleştirmek istediğiniz ürünün sürümünü içeren farklı bir kaynak konumdan  programlı bir önyükleyici çağırarak Visual Studio istemcinize bir güncelleştirme başlatabilirsiniz. Önyükleyiciyi yeni bir düzenden çalıştırırsanız, istemcinin güncelleştirme kanalı, düzeninde [belirtilen güncelleştirme konumu olarak ayarlanır.](/visualstudio/install/automated-installation-with-response-file) Örneğin, bu komutu istemci makinede çalıştırabilirsiniz:
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+```shell
+   \\server\share\desiredupdatelayoutdir\vs_enterprise.exe update --installPath "C:\clientmachine\installpath" --quiet 
+```
+Düzenin response.json dosyasındaki channelURI değeri ne olursa olsun, istemcinin gelecekteki güncelleştirmeleri için bakacakları konum olacaktır.
 
 ::: moniker-end
 
 > [!NOTE]
 > İstemci [vswhere.exe var](tools-for-managing-visual-studio-instances.md) olan bir istemci örneğinin yükleme yolunu belirlemek için Visual Studio komutunu kullanın.
->
-> [!TIP]
-> Güncelleştirme bildirimlerinin kullanıcılara ne zaman sun alınarak kontrol edilecekleri hakkında ayrıntılı bilgi için bkz. Ağ tabanlı [güncelleştirmeler ve dağıtımlar Visual Studio denetleme.](controlling-updates-to-visual-studio-deployments.md)
 
-## <a name="verify-a-layout"></a>Düzeni doğrulama
+### <a name="programatically-update-a-client-that-doesnt-have-internet-access"></a>İnternet erişimi olmayan bir istemciyi programlı olarak güncelleştirme
 
-Sağlanan `--verify` çevrimdışı önbellekte doğrulama gerçekleştirmek için kullanın. Paket dosyalarının eksik mi yoksa geçersiz mi olduğunu denetler. Doğrulamanın sonunda eksik dosyaların ve geçersiz dosyaların listesini yazdırır.
+İstemci makinenizin İnternet erişimi yoksa, güncelleştirmeleri _bir ağ_ düzeninden edinmesi gerekir. Her güncelleştirildiğinde güncelleştirilen iki parça olduğunu Visual Studio unutmayın. Birincisi yükleyici, ikincisi ise Visual Studio ürünüdür. İstemci makinede bu Visual Studio _komutlarını_ _çalıştırarak_ ağ düzeninden bu bileşenlerin her ikisini de açık bir şekilde ağına bakmalarını belirtebilirsiniz. İlk komut yükleyiciyi düzenden gelecek şekilde, ikinci komut ise paketlerin Microsoft tarafından barındırılan sunuculardan internete indirildikten sonra indirilmalarını önler.
 
-```shell
-vs_enterprise.exe --layout <layoutDir> --verify
-```
+ ```shell
+    \\server\share\VSlayoutdirectory\vs_enterprise.exe --quiet --update
+    \\server\share\VSlayoutdirectory\vs_enterprise.exe update --installPath "C:\clientmachine\installpath" --noWeb --wait --quiet --norestart
+ ```
+    
+İstemcinin güncelleştirmelerini ağ düzeninden alıyor olmasını sağlamak için ve seçeneklerini tek bir komutta ağ düzeninde önyükleyiciye `--noweb` `--noUpdateInstaller` iletirsiniz. önceki, güncelleştirilmiş iş yüklerinin ve bileşenlerin internetten indir indirebilirsiniz ve ikincisi yükleyicinin kendi kendini güncelleştirmesini önler. Kullanılabilir durumdayken bu seçenek genellikle önerilmez çünkü her zaman en son ve en büyük yükleyiciyi kullansanız iyi olur.
 
-vs_enterprise.exe layoutDir içinde çağrılabilir.
+> [!IMPORTANT]
+> seçeneği, `--noWeb` İnternet'e Visual Studio bir bilgisayarda kurulumun güncelleştirmeleri _denetlemesi için bu ayarı_ durdurmaz. Bunun yerine, istemcinin ürün paketlerini indirmesini önler. Daha fazla bilgi için Ağ [tabanlı dağıtımlarda güncelleştirmeleri denetleme Visual Studio bakın.](controlling-updates-to-visual-studio-deployments.md)
 
-> [!NOTE]
-> seçeneği tarafından gereken bazı önemli meta veri `--verify` dosyaları, düzen çevrimdışı önbelleğinde yer almalı. Bu meta veri dosyaları eksikse "--verify" çalıştıramaz ve Kurulum size bir hata verir. Bu hatayla karşılaştıysanız, farklı bir klasöre (veya aynı çevrimdışı önbellek klasörüne) yeni bir çevrimdışı düzen yeniden oluşturun. Bunu yapmak için, ilk çevrimdışı düzeni oluşturmak için kullanılan düzen komutunu çalıştırın. Örneğin, `vs_enterprise.exe --layout <layoutDir>`.
+## <a name="get-support-for-your-network-layout"></a>Ağ düzeniniz için destek al
 
-Microsoft, güncelleştirmeleri Visual Studio düzenli aralıklarla yayına iletir, bu nedenle, yeni oluştur o düzen ilk düzenle aynı sürümde olmayacaktır.
+Ağ düzeniniz ile ilgili bir sorun yaşamanız, bunun hakkında bilgi almak istiyor. Bize söylemenin en iyi yolu, hem Visual Studio Yükleyicisi hem de Visual Studio IDE'de görünen Sorun Bildir aracını kullanmaktır. [](/visualstudio/ide/how-to-report-a-problem-with-visual-studio) BIR IT Yöneticisiyseniz ve yüklü bir Visual Studio yoksa, BURADA IT Yöneticisi geri [**bildirimi gönderebilirsiniz.**](https://aka.ms/vs/admin/guide) Bu aracı kullanırsanız, vs [Collect](https://aka.ms/vscollect) aracından günlükleri gönderebilirsiniz ve bu da sorunu tanılamamıza ve düzeltmemıza yardımcı olabilir.
 
-> [!NOTE]
-> Doğrulama yalnızca belirli bir ikincil sürümün en son sürümü için Visual Studio. Yeni bir sürüm yayımlanmasıyla doğrulama, aynı ikincil sürümün önceki düzeltme eki düzeyi sürümleri için çalışmaz.
+Ayrıca yüklemeyle ilgili [**sorunlar için bir**](https://visualstudio.microsoft.com/vs/support/#talktous) yükleme sohbeti (yalnızca İngilizce) destek seçeneği sunuyoruz.
 
-## <a name="fix-a-layout"></a>Düzeni düzeltme
+Başka destek seçenekleri de mevcuttur. Geliştirici [Visual Studio'mıza Community.](https://developercommunity.visualstudio.com/home)
 
-ile `--fix` aynı doğrulamayı gerçekleştirmek için `--verify` kullanın ve ayrıca tanımlanan sorunları düzeltmeyi deneyin. İşlem için bir İnternet bağlantısı olması gerekir, bu nedenle çağırmadan `--fix` önce makinenizin İnternet'e bağlı olduğundan emin `--fix` olun.
-
-```shell
-vs_enterprise.exe --layout <layoutDir> --fix
-```
-
-vs_enterprise.exe layoutDir içinde çağrılabilir.
-
-## <a name="remove-older-versions-from-a-layout"></a>Düzenden eski sürümleri kaldırma
-
-Çevrimdışı bir önbellekte düzen güncelleştirmeleri gerçekleştirdikten sonra, düzen önbelleği klasöründe artık en son önbellek yüklemesi için gerekmeyecek bazı eski Visual Studio olabilir. Eski paketleri çevrimdışı `--clean` önbellek klasöründen kaldırmak için seçeneğini kullanabilirsiniz.
-
-Bunu yapmak için, bu eski paketleri içeren katalog bildirimlerini içeren dosya yollara ihtiyacınız vardır. Katalog bildirimlerini çevrimdışı düzen önbelleğinde bir "Arşiv" klasöründe bulabilirsiniz. Bir düzeni güncelleştirenler buraya kaydedilir. "Arşiv" klasöründe, her biri eski bir katalog bildirimi içeren bir veya daha fazla "GUID" adlı klasör vardır. "GUID" klasörlerinin sayısı, çevrimdışı önbelleğinize yapılan güncelleştirmelerin sayısıyla aynı olması gerekir.
-
-Her "GUID" klasörüne birkaç dosya kaydedilir. En çok ilgini alan iki dosya bir "catalog.json" dosyası ve bir "version.txt" dosyasıdır. "catalog.json" dosyası, seçeneğine geçmemiz gereken eski katalog `--clean` bildirimidir. Diğer version.txt dosyası bu eski katalog bildiriminin sürümünü içerir. Sürüm numarasına bağlı olarak, bu katalog bildiriminden eski paketleri kaldırmak isteyip istemeyebilirsiniz. Aynı şekilde diğer "GUID" klasörlerini de geçebilirsiniz. Temizlemek istediğiniz kataloglarla ilgili karar verdikten sonra, bu kataloglara dosya yollarını `--clean` serek komutunu çalıştırın.
-
---clean seçeneğinin nasıl kullanıla ilgili birkaç örnek aşağıda verilmiştir:
-
-```shell
-vs_enterprise.exe --layout <layoutDir> --clean <file-path-of-catalog1> <file-path-of-catalog2> …
-```
-
-```shell
-vs_enterprise.exe --layout <layoutDir> --clean <file-path-of-catalog1> --clean <file-path-of-catalog2> …
-```
-
-LayoutDir içinde vs_enterprise.exe da &lt; &gt; çağırabilirsiniz. Aşağıda bir örnek verilmiştir:
-
-```shell
-c:\VSLayout\vs_enterprise.exe --layout c:\VSLayout --clean c:\VSLayout\Archive\1cd70189-fc55-4583-8ad8-a2711e928325\Catalog.json --clean c:\VS2017Layout\Archive\d420889f-6aad-4ba4-99e4-ed7833795a10\Catalog.json
-```
-
-Bu komutu yürütürken, Kurulum, kaldıracak dosyaların listesini bulmak için çevrimdışı önbellek klasörlerinizi analiz eder. Ardından, silinecek dosyaları gözden geçirme ve silme işlemlerini onaylama fırsatınız olur.
-
-## <a name="get-support-for-your-offline-installer"></a>Çevrimdışı yükleyiciniz için destek alın
-
-Çevrimdışı yükleme işlemiyle ilgili bir sorun yaşamanız gerekir. Bize söylemenin en iyi yolu Sorun Bildir [aracını kullanmaktır.](../ide/how-to-report-a-problem-with-visual-studio.md) Bu aracı kullanarak sorunu tanılamamıza ve düzeltmeye yardımcı olmak için ihtiyacımız olan telemetri ve günlükleri bize gönderebilirsiniz.
-
-Yüklemeyle ilgili sorunlar [**için canlı**](https://visualstudio.microsoft.com/vs/support/#talktous) sohbet (yalnızca İngilizce) destek seçeneği de sunuyoruz.
-
-Başka destek seçenekleri de mevcuttur. Geliştirici [hesabımıza Community.](https://developercommunity.visualstudio.com/home)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Visual Studio'yu yükleme](install-visual-studio.md)
+* [Ağ düzeni oluşturma ve sürdürme](create-a-network-installation-of-visual-studio.md)
 * [Visual Studio yönetici kılavuzu](visual-studio-administrator-guide.md)
 * [Komut satırı parametrelerini kullanarak Visual Studio'yu yükleme](use-command-line-parameters-to-install-visual-studio.md)
 * [Visual Studio örneklerini algılamaya ve yönetmeye yönelik araçlar](tools-for-managing-visual-studio-instances.md)
