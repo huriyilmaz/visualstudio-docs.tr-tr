@@ -5,14 +5,14 @@ ms.faqid: group1_10
 ms.topic: include
 ms.assetid: f2aa9631-12e0-41cc-84eb-df97b155ac18
 author: evanwindom
-ms.author: cabuschl
+ms.author: amast
 ms.date: 11/10/2020
-ms.openlocfilehash: 55e6aff63d96bf0eca3e45f58ee48d0610aad4d9
-ms.sourcegitcommit: 593bdd2da62633f8d1f1eef70d0238e2682f3e02
-ms.translationtype: HT
+ms.openlocfilehash: 0fe617cb0f8205557adceb6206d419040479c317
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "94626248"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133255207"
 ---
 ## <a name="why-am-i-not-seeing-an-agreement-while-logged-into-the-portal"></a>Portalda oturum açtığımda sözleşmeyi neden görmüyorum?
 

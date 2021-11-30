@@ -1,18 +1,18 @@
 ---
 title: GitHub hesabınızla abonelikler Visual Studio için oturum açma | Microsoft Docs
 author: evanwindom
-ms.author: cabuschl
-manager: cabuschl
+ms.author: amast
+manager: shve
 ms.assetid: 1bdcb3c9-bba1-4e25-a609-9d7e539d78e0
 ms.date: 10/13/2021
 ms.topic: conceptual
 description: GitHub hesabınızla Visual Studio abonelikleriniz üzerinde nasıl oturum kullanabileceğinizi öğrenin.
-ms.openlocfilehash: a1108bbacde08a08da7e744095b8acabb147c24c
-ms.sourcegitcommit: 72f8ce4992cc62c4833e6dcb0f79febb328c44be
+ms.openlocfilehash: ad7fd599c3c8b49d35ab748b784a64b41df9c4d6
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "130011373"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133257406"
 ---
 # <a name="signing-in-to-visual-studio-subscriptions-with-your-github-account"></a>GitHub hesabınızla abonelikler Visual Studio için oturum açma 
 Visual Studio aboneliğinizde oturum açma adımları, kullanmakta olduğunuz hesap türüne bağlıdır. Örneğin, bir Microsoft hesabı (MSA) veya işvereniniz veya okulunuz tarafından sağlanan bir e-posta adresi kullanıyor olabilirsiniz. 2019 ocak itibariyle artık bazı aboneliklerde oturum açmak için GitHub hesabınızı da kullanabilirsiniz. 

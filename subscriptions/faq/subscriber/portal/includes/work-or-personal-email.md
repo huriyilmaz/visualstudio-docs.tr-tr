@@ -3,16 +3,16 @@ title: Oturum açarken iş e-postamı mı yoksa kişisel e-posta mı kullanmalı
 description: Aboneliğe erişmek için, aboneliğin atandığı e-posta adresiyle oturum açmalısınız. Çoğu durumda abonelik...
 ms.topic: include
 ms.assetid: 68d39644-b5ce-4824-bd24-dd5bb27198dc
-author: CaityBuschlen
-ms.author: cabuschl
+author: evanwindom
+ms.author: amast
 ms.date: 4/3/2020
 ms.faqid: q1_1
-ms.openlocfilehash: 9df919ae6a4dd95b2e4013b205c48a864cbfa326
-ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
-ms.translationtype: HT
+ms.openlocfilehash: becf630bb9ea7880273e1ecdc0cea4768a915d7e
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "81386514"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133257687"
 ---
 ## <a name="should-i-sign-in-using-my-work-email-or-my-personal-email"></a>Oturum açarken iş e-postamı mı yoksa kişisel e-posta mı kullanmalıyım?
 

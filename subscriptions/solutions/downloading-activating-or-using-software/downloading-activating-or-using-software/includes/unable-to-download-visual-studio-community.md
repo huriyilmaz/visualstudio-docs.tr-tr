@@ -1,21 +1,21 @@
 ---
-title: Visual Studio Community karşıdan yüklenemiyor veya etkinleştirilemiyor
-description: Visual Studio Community 'yi indiremiyorum veya etkinleştiremedik.
+title: Visual Studio Community indiremiyor veya Visual Studio Community
+description: Visual Studio Community'i indiremiyor veya Visual Studio Community.
 ms.topic: include
 ms.assetid: 0c74cb35-a500-4fa0-b010-ac76ee56d2f9
-author: caitybuschlen
-ms.author: cabuschl
+author: evanwindom
+ms.author: amast
 ms.date: 08/14/2020
 user.type: subscriber
 tags: download, activate
 subscription.type: vl, cloud, retail, partner
 sap.id: 53a7a6d4-7755-352a-5a65-715d78af84bf
-ms.openlocfilehash: 88a87598842b038240a21843e51fa6ba8a278475
-ms.sourcegitcommit: 645303f47a5258d4b65cc56bf9e2303865587e1e
+ms.openlocfilehash: 708e0be9233b5fc460c93c721bb088b69f846cab
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99541193"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133255691"
 ---
-## <a name="im-unable-to-download-or-activate-visual-studio-community"></a>Visual Studio Community 'yi indiremiyorum veya etkinleştiremedik
-Visual Studio Community, IDE 'nin ücretsiz ve hafif sürümüdür ve bunu kullanmak için ücretli bir Visual Studio aboneliğine ihtiyacınız yoktur. [Bunu doğrudan](https://visualstudio.microsoft.com/vs/community/) Visual Studio Web sitesinden indirebilirsiniz.  
+## <a name="im-unable-to-download-or-activate-visual-studio-community"></a>Visual Studio Community'ı indiremiyor veya etkinleştir Visual Studio Community
+Visual Studio Community IDE'nin ücretsiz ve basit sürümüdür ve bunu kullanmak için ücretli Visual Studio aboneliğine ihtiyacınız olmaz. Bunu [doğrudan Visual Studio](https://visualstudio.microsoft.com/vs/community/) indirebilirsiniz.  

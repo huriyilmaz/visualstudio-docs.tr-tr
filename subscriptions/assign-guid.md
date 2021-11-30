@@ -2,21 +2,21 @@
 title: Belirli GUID'leri Visual Studio abonelere | Microsoft Docs
 author: evanwindom
 ms.author: amast
-manager: amast
+manager: shve
 ms.date: 03/19/2021
 ms.topic: conceptual
 ms.assetid: f9c82d7d-55bd-4e41-a170-6077b28ba5af
 description: Yöneticilerin abonelere abonelik GUID'lerini nasıl belirliyebilirsiniz?
-ms.openlocfilehash: c71638390d1765f6b3e47b21ec74b3f6ffe4940a
-ms.sourcegitcommit: a1c18c491e310b00a43e76a911f778e643cd8f8d
+ms.openlocfilehash: ac93ce09f049d96d9e23455dd77f667c396648ab
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "132995663"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133257029"
 ---
-# <a name="assign-specific-subscriptions-in-the-visual-studio-subscriptions-administration-portal"></a>Visual Studio Abonelikler Yönetim Portalı'Visual Studio belirli abonelikleri atama
+# <a name="assign-specific-subscriptions-in-the-visual-studio-subscriptions-administration-portal"></a>Visual Studio Abonelikleri Yönetim Portalı'Visual Studio belirli abonelikleri atama
 
-Yöneticiler artık abonelikleri tek Visual Studio atamak için Abonelikler Yönetim Portalı'nın kullanımını kullanabilir.  Bu, kuruluşun bir aboneliğe kısa bir süre için erişmesi gereken geçici personel veya satıcılara sahip olduğu durumlarda yararlı olabilir.  Yöneticiler zaten kısmen kullanılmış bir abonelik atayarak yeni aboneliklerini daha uzun süreli kullanım için bırakarak atayabilirsiniz.  
+Yöneticiler artık Abonelikler Yönetim Portalı Visual Studio abonelikleri tek tek abonelere atamak için kullanabilir.  Bu, kuruluşun bir aboneliğe kısa bir süre için erişmesi gereken geçici personel veya satıcılara sahip olduğu durumlarda yararlı olabilir.  Yöneticiler zaten kısmen kullanılmış bir abonelik atayarak yeni aboneliklerini daha uzun süreli kullanım için bırakarak atayabilirsiniz.  
 
 Kullanıcılara belirli abonelik GUID'lerini atama hakkında bilgi edinmek için videoyu izleyin veya okumaya devam etmeyi öğrenin. 
 
@@ -60,7 +60,7 @@ Son adım Toplu ekleme şablonunu **indirmek,** atamak istediğiniz abonelikler 
 > - GUID zaten dışarı aktarıldı listesinde başka bir kullanıcıya atanmamış. 
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
-### <a name="q-how-do-i-change-which-subscription-is-currently-assigned-to-an-individual-user"></a>S: Nasıl yaparım? bir kullanıcıya atanmış olan aboneliği nasıl değiştirebilirsiniz?
+### <a name="q-how-do-i-change-which-subscription-is-currently-assigned-to-an-individual-user"></a>S: Nasıl yaparım? bir kullanıcıya şu anda hangi aboneliğin atandığı değişir mi?
 A: Bir kullanıcıya atanan GUID'i değiştirmek için önce o kullanıcının aboneliğini silmeniz gerekir.  Daha fazla bilgi için lütfen [Abonelikleri silme makalemize](delete-license.md) bakın.  Bu kullanıcının aboneliğini sildikten sonra, listeyi dışarı aktarın ve yeni abonelik bilgilerini karşıya yüklemek için yukarıda özetlenen işlemi kullanın.  
 
 ## <a name="resources"></a>Kaynaklar

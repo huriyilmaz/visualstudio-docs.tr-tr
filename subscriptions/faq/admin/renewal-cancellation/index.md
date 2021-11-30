@@ -1,20 +1,20 @@
 ---
-title: Satın alma, yenileme, iptal etme veya faturalandırma
-description: Satın alma, yenileme, iptal etme veya faturalandırma için SSS listesi
+title: Satın alma, yenileme, iptal etme veya faturalama
+description: Satın alma, yenileme, iptal etme veya faturalama ile ilgili SSS listesi
 ms.faqid: Section4
 ms.topic: conceptual
 ms.assetid: 9d7a7d4c-dce3-4655-983c-a7e4180a5433
-author: CaityBuschlen
-ms.author: cabuschl
+author: evanwindom
+ms.author: amast
 ms.date: 02/15/2021
-ms.openlocfilehash: c174b6a7124231581ed68a53d784954c1117309a
-ms.sourcegitcommit: 367a2d9df789aa617abaa09b0cd0a18db7357d0c
+ms.openlocfilehash: 5aac0afb75680c2e51f011ce71029caeca89b0d7
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107800753"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133257957"
 ---
-# <a name="purchasing-renewing-canceling-or-billing"></a>Satın alma, yenileme, iptal etme veya faturalandırma 
+# <a name="purchasing-renewing-canceling-or-billing"></a>Satın alma, yenileme, iptal etme veya faturalama 
 
 [!INCLUDE [How do I purchase Visual Studio subscriptions?](includes/how-to-purchase.md)] 
 

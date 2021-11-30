@@ -2,17 +2,17 @@
 title: Visual Studio Microsoft | tarafından silinen abonelik atamaları Microsoft Docs
 author: evanwindom
 ms.author: amast
-manager: amast
+manager: shve
 ms.assetid: f853ed9d-3543-4f5f-a754-92381ee03523
 ms.date: 09/30/2021
 ms.topic: how-to
 description: Microsoft'un aboneliği sildi bildirimini gördüğünüzde bunun ne anlama geldiğini öğrenin.
-ms.openlocfilehash: 1c35755053bd2f37f4553d0b84e39ea275f5f893
-ms.sourcegitcommit: a1c18c491e310b00a43e76a911f778e643cd8f8d
+ms.openlocfilehash: 7d8a0d44f147f3490afd85de28173839ee222629
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "132995500"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133257887"
 ---
 # <a name="why-does-my-dashboard-shows-microsoft-removed-a-subscriber"></a>Panom neden Microsoft'un bir aboneyi kaldırılmış olarak gösteriyor? 
 Yönetim **portalında** Pano'daki Son [](https://manage.visualstudio.com)değişiklikler bölümünde aboneliklerin kaldırılmış olduğunu ve bunun nedeninin "Hesap kapatıldı" olarak gösterildiğini görebilirsiniz.  Bunun iki nedeni olabilir.  

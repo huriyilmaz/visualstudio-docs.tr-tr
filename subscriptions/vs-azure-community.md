@@ -1,21 +1,21 @@
 ---
-title: Visual Studio Aboneliği aboneliğinde Azure Community Desteği | Microsoft Docs
+title: Visual Studio Aboneliği Community Azure | Microsoft Docs
 author: evanwindom
-ms.author: cabuschl
-manager: cabuschl
+ms.author: amast
+manager: shve
 ms.assetid: c15f7e18-b280-4902-a60d-2c2598653207
 ms.date: 10/14/2021
 ms.topic: conceptual
-description: Seçili aboneliklere dahil edilen Azure Community Desteği avantajı hakkında Visual Studio öğrenin.
-ms.openlocfilehash: 6204bae1727238853fbc8c3363b1621658469ded
-ms.sourcegitcommit: 7a820b7698a8dcf076eb36e3d766fb0751f56bb1
+description: Seçili aboneliklere dahil olan Azure Community Desteği avantajı hakkında Visual Studio öğrenin.
+ms.openlocfilehash: a1ce1af145dde040f3f87dd03b1c4544903bc300
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "131127097"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133256925"
 ---
-# <a name="azure-community-support-forum-in-visual-studio-subscriptions"></a>Community aboneliklerde Azure Visual Studio Desteği forumu
-Azure destek forumları aracılığıyla doğrudan Azure ekibinden yardım Community.  Azure Community avantajı, Azure ile ilgili konulara odaklanan bir forum koleksiyonuna erişmeniz için size erişim sağlar.
+# <a name="azure-community-support-forum-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerde Azure Community Desteği forumu
+Azure destek forumları aracılığıyla doğrudan Azure ekibinden yardım alın Community.  Azure Community avantajı, Azure ile ilgili konulara odaklanan bir forum koleksiyonuna erişmeniz için size erişim sağlar.
 
 ## <a name="available-topics"></a>Kullanılabilir konular
 
@@ -59,7 +59,7 @@ Azure Community'i kolayca kullanabilirsiniz.
 
 3. Kullanılabilir forumların listesini bulabilirsiniz.  İstediğiniz foruma tıklamanız tek yapmanız gereken.
     > [!div class="mx-imgBorder"]
-    > ![Azure Community Forumları](_img/vs-azure-community/vs-azure-community-forums.png "Azure Community sayfasında, tercihlerinizi forumlar olarak seçin.")
+    > ![Azure Community Forumları](_img/vs-azure-community/vs-azure-community-forums.png "Azure Community Sayfasında, tercihlerinizi forumlar olarak seçin.")
 
 4. Forumda konu başlıklarını ve yanıtlarını görüntüleme, soru cevaplarını arama veya yeni bir soru gönderisi yayınlayabilirsiniz.
     > [!div class="mx-imgBorder"]
@@ -71,8 +71,8 @@ Azure topluluğu ücretsiz olarak kullanılabilir.  Abonelik gerekmez.
 ## <a name="support-resources"></a>Destek Kaynakları
 - Diğer Azure Community için lütfen Azure Community Destek [sayfasını ziyaret edin.](https://azure.microsoft.com/support/forums/)
 - [Azure belgeleri.](/azure/)
-- Visual Studio Abonelikleri için satış, abonelikler, hesaplar ve faturalama konusunda yardıma mı ihtiyacınız var?  Abonelikler Visual Studio [ile iletişime geçin.](https://aka.ms/vssubscriberhelp)
-- IDE, Visual Studio veya diğer Azure DevOps Services ürün veya Visual Studio hakkında bir Visual Studio var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
+- Visual Studio Abonelikleri için satışlar, abonelikler, hesaplar ve faturalama konusunda yardıma mı ihtiyacınız var?  Abonelikler Visual Studio [ile iletişime geçin.](https://aka.ms/vssubscriberhelp)
+- IDE, Visual Studio veya diğer Azure DevOps Services ürün veya Visual Studio soru var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

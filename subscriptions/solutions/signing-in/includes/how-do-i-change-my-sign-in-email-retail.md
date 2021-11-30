@@ -1,8 +1,8 @@
 ---
-title: Nasıl yaparım? aboneliğim için oturum açma e-postamı Visual Studio mi?
-description: Abonelikler aracılığıyla alınan abonelikler için Visual Studio oturum açma adresinizin nasıl değiştirilerek Microsoft Store
-author: CaityBuschlen
-ms.author: cabuschl
+title: Nasıl yaparım? Visual Studio perakende aboneliğim için oturum açma e-postamı değiştirilsin mi?
+description: Microsoft Store aracılığıyla alınan abonelikler için Visual Studio oturum açma adresiniz için bir değişiklik isteme hakkında bilgi edinin
+author: evanwindom
+ms.author: amast
 ms.date: 06/02/2021
 ms.assetid: 8fc5fb35-5c57-4560-9aa3-0db38b3e7120
 ms.topic: include
@@ -10,14 +10,14 @@ user.type: subscriber
 tags: sign-in
 subscription.type: retail
 sap.id: 17a2bf94-0d03-2629-dfd8-e8935f9126ec
-ms.openlocfilehash: fe5bdf874bdc7342cb419cf0aac9dba20738f406
-ms.sourcegitcommit: a740129796159a69c704d9d372edaa7a7f191d17
+ms.openlocfilehash: 114aaa456f4a3f200770d7666d34c0567dd3506f
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2021
-ms.locfileid: "111530433"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133255728"
 ---
-## <a name="how-to-change-your-sign-in-email-address-for-visual-studio-subscriptions-purchased-through-the-microsoft-store"></a>Abonelikler aracılığıyla satın alınan abonelikler için oturum Visual Studio e-posta adresinizi Microsoft Store
-Visual Studio abonelikleri ile oturum asanız ve aboneliklerinizi Microsoft Store üzerinden satın aldıysanız, oturum açma e-postanızı değiştirmek için Microsoft Hesabı, Abonelik ve Faturalama Desteği ekibiyle iletişime geçin. 
+## <a name="how-to-change-your-sign-in-email-address-for-visual-studio-subscriptions-purchased-through-the-microsoft-store"></a>Microsoft Store aracılığıyla satın alınan Visual Studio abonelikler için oturum açma e-posta adresinizi değiştirme
+Visual Studio aboneliğinizde oturum açmak için kullandığınız e-posta adresini değiştirmek istiyorsanız ve aboneliklerinizi Microsoft Store üzerinden satın aldıysanız, oturum açma e-postanızı değiştirmek için Microsoft 'un hesap, abonelik ve faturalandırma destek ekibine başvurun. 
 
-Yardım almak **için aşağıdaki** Çevrimiçi istek düğmesine tıklayın.
+Yardım almak için aşağıdaki **çevrimiçi istek** düğmesine tıklayın.

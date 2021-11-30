@@ -1,23 +1,23 @@
 ---
-title: Nasıl yaparım? faturamı görüntüle?
-description: Nasıl yaparım? aylık ve yıllık Visual Studio abonelikleri için faturanızı görüntüleyin
+title: Nasıl yaparım? görüntü mü?
+description: Nasıl yaparım? ve yıllık abonelikler için faturamı Visual Studio görüntüleme
 ms.faqid: q4_5
 ms.topic: include
 ms.assetid: 2b91ea18-d8d5-4a75-a2cd-4996e63d77e8
-author: CaityBuschlen
-ms.author: cabuschl
+author: evanwindom
+ms.author: amast
 ms.date: 04/20/2021
-ms.openlocfilehash: 1d86c3f591a5b1d612a5cae5b087f6164a386e16
-ms.sourcegitcommit: 367a2d9df789aa617abaa09b0cd0a18db7357d0c
+ms.openlocfilehash: f02c54502e18600c030d2aaad1331defae0bc105
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107800913"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133255835"
 ---
-## <a name="how-do-i-view-my-invoice-for-monthly-and-annual-subscriptions"></a>Nasıl yaparım? aylık ve yıllık abonelikler için faturamı görüntüleyin?
+## <a name="how-do-i-view-my-invoice-for-monthly-and-annual-subscriptions"></a>Nasıl yaparım? ve yıllık abonelikler için faturamı nasıl görüntülebilirsiniz?
 
-Aylık Visual Studio abonelikleri (ve Aralık 2018 ' den önce satın alındığında yıllık abonelikler) Azure üzerinden faturalandırılır ve faturanızı [Azure Portal](https://portal.azure.com/)bulabilirsiniz. 
+Aylık Visual Studio (ve Aralık 2018'den önce satın alınan yıllık abonelikler) Azure üzerinden faturalandırıldı ve faturanızı [Azure portal.](https://portal.azure.com/) 
 
-Visual Studio abonelikleri faturanızı görüntülemek için:
-1. [Azure portalında](https://portal.azure.com/) oturum açın. 
-0. Genel bakış, abonelik listesi ve faturaların bir özetini bulmak için menüdeki **maliyet yönetimi + faturalama** dikey penceresine tıklayın. 
+Abonelikler faturanızı Visual Studio için:
+1. [Azure Portal](https://portal.azure.com/) oturum açın. 
+0. Genel **bakış, abonelik listesi ve** faturalar bulmak için menüde Maliyet Yönetimi + Faturalama dikey penceresine tıklayın. 

@@ -3,16 +3,16 @@ title: Avantajlarımı nasıl kullanabilirim?
 description: Avantaj türleri çeşitlilik gösterdiği gibi, bunları etkinleştirme ve kullanma yöntemleri de çeşitlilik gösterir. Örneğin avantajlarımızdan çoğu iş ortakları tarafından...
 ms.topic: include
 ms.assetid: 9109bf1e-f725-439d-a870-13741e0dbc90
-author: CaityBuschlen
-ms.author: cabuschl
+author: evanwindom
+ms.author: amast
 ms.date: 04/20/2021
 ms.faqid: q3_2
-ms.openlocfilehash: 8938ce58100630a13205b54e98515e41440b78ce
-ms.sourcegitcommit: 367a2d9df789aa617abaa09b0cd0a18db7357d0c
+ms.openlocfilehash: 9c6ce24ea8c16c9a11844ea122ce2cbd11e473cf
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107800835"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133256414"
 ---
 ## <a name="how-do-i-use-my-benefits"></a>Avantajlarımı nasıl kullanabilirim?
 

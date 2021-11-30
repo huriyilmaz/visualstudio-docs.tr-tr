@@ -1,21 +1,21 @@
 ---
-title: Aboneliklerde Azure Geliştirme ve Test kredileri Visual Studio uygunluğu | Microsoft Docs
+title: Visual Studio aboneliklerde Azure Geliştirme ve Test kredileri | Microsoft Docs
 author: evanwindom
 ms.author: amast
-manager: amast
+manager: shve
 ms.assetid: 3a8f9439-90e7-4a8a-a5a1-d0d6dcd1ba49
 ms.date: 11/11/2021
 ms.topic: conceptual
 description: Visual Studio Azure Geliştirme ve Test kredileri olup olmadığını öğrenin
-ms.openlocfilehash: 559f0e455a2dc674d88709a07d7de2031b10c65a
-ms.sourcegitcommit: cc8b4e96ec49a8045b6c31a9cdce1caa30c3ab54
+ms.openlocfilehash: f36d3498ae60ebc4ffb05076078bf842f77b25c6
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "132396966"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133256652"
 ---
-# <a name="azure-devtest-credits-for-visual-studio-subscribers"></a>Aboneler için Azure Geliştirme ve Test Visual Studio kredileri
-Birçok Visual Studio Azure bireysel Geliştirme ve Test kredileri içerir.  Bu kredilerle, çeşitli Azure hizmetlerini ücretsiz olarak keşfedebilir ve denemeniz mümkün olur. Kredi tutarları abonelik düzeyine göre değişiklik gösterir.  Bu makalede her abonelik düzeyi için kredi ödemeleri açıklanmıştır.  
+# <a name="azure-devtest-credits-for-visual-studio-subscribers"></a>Aboneler için Azure Geliştirme ve Test Visual Studio
+Birçok Visual Studio azure bireysel Geliştirme ve Test kredileri içerir.  Bu kredilerle, çeşitli Azure hizmetlerini ücretsiz olarak keşfedebilir ve denemeniz mümkün olur. Kredi tutarları abonelik düzeyine göre değişiklik gösterir.  Bu makalede her abonelik düzeyi için kredi ödemeleri açıklanmıştır.  
 
 Aboneliğinize dahil edilen Azure Geliştirme ve Test kredilerini kullanmaya başlama için Azure belgelerinde Bireysel [Azure](https://docs.microsoft.com/azure/devtest/offer/quickstart-individual-credit) Kredi Aboneliğinizi kullanmaya başlama makalesine bakın.  
 
@@ -26,7 +26,7 @@ Aboneliğinize dahil edilen Azure Geliştirme ve Test kredilerini kullanmaya ba�
 |              Visual Studio Enterprise ile abonelik GitHub Enterprise               |     150 ABD doları aylık kredi     |                             Yes                             |
 |               Visual Studio Enterprise aylık               |        Kullanılamaz        |                                                             |
 |             Visual Studio Professional Standard              |     50 ABD doları aylık kredi      |                             Yes
-|              Visual Studio Professional ile abonelik GitHub Enterprise              |     50 ABD doları aylık kredi     |                             Yes                             |
+|              Visual Studio Professional aboneliği GitHub Enterprise              |     50 ABD doları aylık kredi     |                             Yes                             |
 |              Visual Studio Professional aylık              |        Kullanılamaz        |                                                             |
 |                    Visual Studio Test Pro                    |     50 ABD doları aylık kredi      |                             Yes                             |
 |                        MSDN Platformları                        |     100 ABD doları aylık kredi     |                             Yes                             |

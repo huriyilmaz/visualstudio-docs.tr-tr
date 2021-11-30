@@ -5,18 +5,18 @@ ms.topic: include
 ms.prod: ''
 ms.assetid: c41fbf02-a623-43b4-9aa7-0c1c51fbda2a
 ms.technology: ''
-author: CaityBuschlen
-ms.author: cabuschl
+author: evanwindom
+ms.author: amast
 manager: ''
 robots: ''
 ms.date: 04/20/2020
 ms.faqid: q1_5
-ms.openlocfilehash: 3e58da3dcb713e44bc2850445ef70b024a55e817
-ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
+ms.openlocfilehash: 4b753d58225066d39173984c895ab382546d9a02
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "129980735"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133257670"
 ---
 ## <a name="how-do-i-add-alternate-identities-to-my-subscription-and-how-does-this-impact-my-azure-credits-and-azure-devops"></a>Aboneliğime alternatif kimlikleri nasıl ekleyebilirim ve bu durum Azure kredilerimi ve Azure DevOps’umu nasıl etkiler?
 

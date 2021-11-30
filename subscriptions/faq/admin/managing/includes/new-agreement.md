@@ -4,15 +4,15 @@ description: 'Abonelerinizi önceki sözleşmenizden dışarı aktarabilir ve To
 ms.faqid: group1_6
 ms.topic: include
 ms.assetid: cc15e1c7-6b3a-43bf-8ce0-4120dbbb5a47
-author: CaityBuschlen
-ms.author: cabuschl
+author: evanwindom
+ms.author: amast
 ms.date: 3/3/2020
-ms.openlocfilehash: e44617f2114201bcd14fbde938d0a420773f1022
-ms.sourcegitcommit: 593bdd2da62633f8d1f1eef70d0238e2682f3e02
-ms.translationtype: HT
+ms.openlocfilehash: f1245047726a8db948628981203ef1a8620cec83
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "92526105"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133255215"
 ---
 ## <a name="i-have-a-new-agreement--how-do-i-move-my-subscribers"></a>Yeni bir sözleşmem var.  Abonelerimi nasıl taşıyabilirim?
 

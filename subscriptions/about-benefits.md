@@ -2,17 +2,17 @@
 title: Abonelikler ve Visual Studio avantajlarını | Microsoft Docs
 author: evanwindom
 ms.author: amast
-manager: amast
+manager: shve
 ms.assetid: 0a02232c-437f-4c48-85c1-93ca7887236b
-ms.date: 10/08/2021
+ms.date: 11/29/2021
 ms.topic: how-to
 description: Aboneliklere dahil edilen avantajları ve bunları etkinleştirmeyi öğrenin.
-ms.openlocfilehash: 5b3be00d379f43e891bfc6b17f622414b65e27c4
-ms.sourcegitcommit: a1c18c491e310b00a43e76a911f778e643cd8f8d
+ms.openlocfilehash: effc372a1c1f40973f69b685547024569dba4668
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "132995980"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133255092"
 ---
 # <a name="about-your-subscription-benefits"></a>Abonelik avantajlarınız hakkında
 Bir Visual Studio olarak, abonelik düzeyinize bağlı olarak çeşitli avantajlara erişebilirsiniz. Avantajlar hakkında dikkat etmek gereken birkaç önemli şey vardır.
@@ -35,7 +35,7 @@ Varsayılan olarak, tüm avantajlarınız ziyaret edince <https://my.visualstudi
 
 ## <a name="benefits-and-offers-provided-by-partners"></a>İş ortakları tarafından sağlanan avantajlar ve teklifler
 Eğitim ve araçlar gibi popüler Visual Studio dahil olmak üzere aboneliklere dahil edilen avantajlardan bazıları iş ortaklarımız tarafından sağlanır. Bu tekliflerin ayrıntıları iş ortakları tarafından belirlenir. Örnek:
-- Avantajın süresi, aboneliğinizin süresiyle Visual Studio eşleşmez. Örneğin, 12 aylık Visual Studio aboneliğiniz olabilirken, iş ortağı tarafından sağlanan avantajların çoğu üç veya altı ay gibi daha kısa bir süre sürebilir.
+- Avantajın süresi, aboneliğinizin süresiyle Visual Studio olabilir. Örneğin, 12 aylık Visual Studio aboneliğiniz olabilirken, iş ortağı tarafından sağlanan avantajların çoğu üç veya altı ay gibi daha kısa bir süre sürebilir.
 - Bu avantajlar veya teklifler için sağlanan tüm destek iş ortakları tarafından da sağlanır.
 - Bazı avantajlar, Visual Studio yenilendi. Diğer durumlarda iş ortağı teklifi "yaşam süresinde bir kez" olur ve yenilenmez. Bireysel avantajlar hakkında daha fazla bilgi için içindekiler tablosunda ilgili makaleye göz atabilirsiniz.
 - İş ortakları teklifleri sona erdir kullanmayı seçebilir. 

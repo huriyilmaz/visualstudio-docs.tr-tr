@@ -3,19 +3,19 @@ title: Aylık Azure kredimin Azure portal görüntülenemiyor
 description: Azure portal oturum açtıktan sonra aylık Azure kredimi göremiyorum
 ms.topic: include
 ms.assetid: 48420a4c-11b4-4bbd-a509-2c939d24e81a
-author: CaityBuschlen
-ms.author: cabuschl
+author: evanwindom
+ms.author: amast
 ms.date: 8/14/2020
 user.type: subscriber
 tags: benefit, azure
 subscription.type: vl, cloud, retail, partner
 sap.id: 8dedd10e-cb1c-2eb1-bcda-fe00b07ac903
-ms.openlocfilehash: cd353f056dce15b9a766bb4d1ea78df25a2f707b
-ms.sourcegitcommit: 54aac5044a9853a435577acc5a134cb254494ffb
+ms.openlocfilehash: a373ea56330c766eb2ad1233eaf10d7cdd2c35b3
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/17/2021
-ms.locfileid: "107590085"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133255692"
 ---
 ## <a name="im-unable-to-see-my-azure-monthly-credit-in-the-azure-portal"></a>Azure portal Azure aylık kredimi göremiyorum
 
@@ -23,9 +23,9 @@ Azure aylık kredilerini görmeyebilirsiniz. Oturum açmak için yanlış e-post
 
 ## <a name="azure-subscription-account"></a>Azure abonelik hesabı 
 
-Aylık kredinizi etkinleştirdiğinizde, etkinleştirme sırasında kullandığınız e-postayı Visual Studio aboneliğiniz ile bağlantılandırıyoruz.  
+aylık kredinizi etkinleştirdiğinizde, etkinleştirme sırasında kullandığınız e-postayı Visual Studio aboneliğiniz ile bağlantılandırıyoruz.  
 
-Ayrıca, [alternatif bir hesabı](https://docs.microsoft.com/visualstudio/subscriptions/vs-alternate-identity) Visual Studio aboneliğiniz ile ilişkilendirebilirsiniz. Visual Studio aboneliğinize alternatif hesap eklemek, aboneliğin atandığı kimlikten farklı bir kimlikle Azure DevOps ve Azure gibi abonelik avantajlarına erişebilmenizi sağlar.  
+ayrıca, Visual Studio aboneliğiniz ile [alternatif bir hesabı](https://docs.microsoft.com/visualstudio/subscriptions/vs-alternate-identity) da ilişkilendirebilirsiniz. Visual Studio aboneliğinize alternatif hesap eklemek, aboneliğin atandığı kimlikten farklı bir kimlikle Azure DevOps ve Azure gibi abonelik avantajlarına erişebilmenizi sağlar.  
 
 Hesabı ayarladığınız e-postayla [Azure Portal](https://portal.azure.com/) oturum açmanız gerekir. Örneğin, aylık kredinizi alternatif hesabınızla etkinleştirdiyseniz, bu e-posta ile her zaman Azure aboneliğinizde oturum açmanız gerekir. 
 

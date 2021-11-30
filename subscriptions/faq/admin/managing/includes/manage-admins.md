@@ -5,15 +5,15 @@ ms.faqid: group1_2
 ms.topic: include
 ms.assetid: 11274272-d834-44c7-acdb-09c9ba2f852d
 ms.technology: ''
-author: CaityBuschlen
-ms.author: cabuschl
+author: evanwindom
+ms.author: amast
 ms.date: 3/3/2020
-ms.openlocfilehash: 8bbeb8a5e13ad000939057a7d476f6979b15dca8
-ms.sourcegitcommit: 593bdd2da62633f8d1f1eef70d0238e2682f3e02
-ms.translationtype: HT
+ms.openlocfilehash: 887fe51521276b20ecd5b88eb59793aa20897bf6
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "91838276"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133255208"
 ---
 ## <a name="how-do-i-manage-administrators"></a>Yöneticileri nasıl yönetebilirim?
 

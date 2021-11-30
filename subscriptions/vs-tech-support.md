@@ -1,39 +1,39 @@
 ---
-title: Aboneliklerde teknik Visual Studio avantajı
+title: Visual Studio aboneliklerde teknik destek avantajı
 author: evanwindom
-ms.author: cabuschl
-manager: cabuschl
+ms.author: amast
+manager: shve
 ms.assetid: 2e0fd8bb-8f20-487c-b350-b8fde405ea5e
 ms.date: 03/17/2021
 ms.topic: how-to
-description: Visual Studio aboneliğinize dahil olan teknik destek avantajını etkinleştirmeyi öğrenin.
-ms.openlocfilehash: c77e88e0ef8106c6f2cacfa36fb4d7618b1b4a17
-ms.sourcegitcommit: 7a820b7698a8dcf076eb36e3d766fb0751f56bb1
+description: Visual Studio aboneliğinizle birlikte sunulan teknik destek avantajını nasıl etkinleştireceğinizi öğrenin.
+ms.openlocfilehash: 8bc9775e1427cd9994778fbad94eef02a04b8a77
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "131127734"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133256938"
 ---
-# <a name="activate-and-use-the-technical-support-benefit-in-visual-studio-subscriptions"></a>Aboneliklerde Teknik Destek avantajını etkinleştirme Visual Studio kullanma
-Visual Studio aboneliklerinde Teknik Destek avantajı, destek yaşam döngüsünün  hala temel destek aşamasında olan ürünler için üretim dışı ortamlardaki kesme düzeltme sorunlarını [çözmektir.](https://support.microsoft.com/lifecycle/search) Visual Studio Enterprise ve yıllık bulut abonelikleri dört olay alırken, standart Visual Studio Professional yıllık bulut abonelikleri avantajı etkinleştirmeden itibaren 1 yıla kadar olmak için iki olay alır. Abonelik geçerliyken avantaj etkinleştirmesi gerçekleşmesi gerekir.
+# <a name="activate-and-use-the-technical-support-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerde teknik destek avantajını etkinleştirin ve kullanın
+Visual Studio aboneliklerde teknik destek avantajı, hala [destek yaşam döngüsünün](https://support.microsoft.com/lifecycle/search)temel destek aşamasında olan ürünlere yönelik **üretim dışı ortamlarda** onarım sorunlarını çözmeye yöneliktir. Visual Studio Enterprise standart ve yıllık bulut abonelikleri dört olay alır, Visual Studio Professional ancak standart ve yıllık bulut abonelikleri, avantajı etkinleştirmede 1 yıla kadar olmak üzere iki olay alır. Abonelik geçerli olduğunda avantajı etkinleştirme gerçekleşmelidir.
 
 > [!NOTE]
-> Microsoft artık Bulut Abonelikleri'Visual Studio Professional yıllık abonelikler Visual Studio Enterprise yıllık abonelikler sunmaktadır. Mevcut müşterilerin deneyimi ve aboneliklerini yenileme, artırma, azaltma veya iptal etme becerilerinde bir değişiklik olmayacaktır. Yeni müşterilerin abonelik satın almak için <https://visualstudio.microsoft.com/vs/pricing/> farklı seçenekleri keşfetmeye Visual Studio.
+> Microsoft artık Visual Studio Professional yıllık abonelikler ve Visual Studio Enterprise yıllık abonelikleri bulut aboneliklerinde sunmayacaktır. Mevcut müşteriler deneyiminde değişiklik yapılmaz ve aboneliklerini yenileyebilme, artırma, azaltma veya iptal etme imkanına sahip olmayacaktır. yeni müşterilerin, <https://visualstudio.microsoft.com/vs/pricing/> Visual Studio abonelikleri satın almaya yönelik farklı seçenekleri araştırmak için ' a gitmesi önerilir.
 
 > [!NOTE]
-> Verilen düzeydeki tüm abonelikler destek olaylarını almaya uygun değildir. FTE, NFR, MPN, MCT ve diğer programlar aracılığıyla alınan abonelikler destek olayı almaz. Aboneliğiniz teknik destek olaylarını almaya uygun değilse, Teknik Destek kutucuğu kullanılabilir avantajlarınız içinde görünmez.
+> Belirli bir düzeydeki tüm abonelikler destek olayları almaya uygun değildir. FTE, NFR, MPN, MCT ve diğer programlar aracılığıyla edinilen abonelikler destek olaylarını almaz. Aboneliğiniz, teknik destek olayları almaya uygun değilse, teknik destek kutucuğu kullanılabilir avantajlarda görünmez.
 
-**Avantajı kullanarak bir destek isteği göndermek için önce bunu etkinleştirmeniz gerekir.  Etkinleştirmeyi tamamlamak için sonraki bölümdeki adımları izleyin.**
+**Avantajı kullanarak bir destek isteği göndermek için, önce onu etkinleştirmeniz gerekir.  Etkinleştirmeyi gerçekleştirmek için sonraki bölümdeki adımları izleyin.**
 
 ## <a name="supported-products"></a>Desteklenen ürünler 
-Geliştirici Araçları IDE ve Visual Studio gibi Azure DevOps Server abonelikler aracılığıyla hem temel hem de genişletilmiş Visual Studio alır.
+Visual Studio ıde ve Azure DevOps Server gibi Geliştirici Araçları, Visual Studio abonelikleri aracılığıyla hem temel hem de genişletilmiş destek alır.
 
-Visual Studio aboneliklerinden indirilen geliştirici olmayan ürünler (SQL, Windows, SharePoint gibi) yalnızca temel destek için uygundur. Bu ürünler yalnızca uygulamaları tasarlamak, geliştirmek, test etmek veya göstermek için geliştirme ortamları için lisanslıdır. Bu ürünler üretim ortamları için lisanslı değildir.
+Visual Studio aboneliklerden indirilen geliştirici olmayan ürünler (SQL, Windows, SharePoint) yalnızca temel destek için uygundur. Bu ürünler yalnızca uygulamaları tasarlamak, geliştirmek, test etmek veya göstermek için geliştirme ortamları için lisanslanır. Bu ürünler üretim ortamları için lisanslanmaz.
 
-Ürün düzeyi açıklamaları: Kullanılamıyor **destek planlarını genişletin.** Destek planının belirtilen üründe destek için kullanılamaz **(Kod: 8)** görüyorsanız, destek sözleşmeniz seçtiğiniz ürün sürümü için kullanılamaz.
+Ürün düzeyi açıklamaları: **kullanılamayan destek planlarını** genişletin. **Belirtilen ürüne (kod: 8) destek için destek planı kullanılmıyorsa**, destek sözleşmeniz seçtiğiniz ürün sürümü için kullanılamaz.
 
 > [!IMPORTANT]
-> Sağlanan destek olayları, düzeltme desteği için sağlanmıştır.  Aşağıdaki ürünlerle ilgili kodlama/geliştirme sorunlarıyla ilgili yardım için kullanılmayabilirsiniz:
+> Belirtilen destek olayları, onarım desteği içindir.  Bunlar, aşağıdaki ürünlerle ilgili kodlama/geliştirme sorunlarıyla ilgili yardım için kullanılamayabilir:
 > - Microsoft Teams
 > - Microsoft Office
 > - Microsoft SharePoint
@@ -43,74 +43,74 @@ Visual Studio aboneliklerinden indirilen geliştirici olmayan ürünler (SQL, Wi
 
 ## <a name="how-to-activate-the-benefit"></a>Avantajı etkinleştirme
 > [!NOTE]
-> Aşağıdaki adımlar avantajın yalnızca İngilizce olarak **etkinleştirilmesi için** geçerlidir.  Diğer diller için, ziyaret edin, en alta kaydırın ve Hesap, Abonelik ve Faturalama Desteği'ne tıklayın ve açılan listeden <https://visualstudio.microsoft.com/subscriptions/support> ülkenizi seçin. 
+> Aşağıdaki adımlar yalnızca **İngilizce** olarak avantajın etkinleştirilmesi için geçerlidir.  Diğer diller için, ' i ziyaret edin <https://visualstudio.microsoft.com/subscriptions/support> , en alta kaydırın, **Hesap, abonelik ve faturalandırma desteği** ' ne tıklayın ve ardından açılır listeden bulunduğunuz ülkeyi seçin.
 
-1. bölümüne <https://my.visualstudio.com/Benefits> gidin, Destek bölümüne inin ve Teknik Destek kutucuğunu etkinleştirmek için **Sohbet'e tıklayın.**
+1. Git ' e gidin <https://my.visualstudio.com/Benefits> , destek bölümüne gidin ve teknik destek kutucuğunda **etkinleştirmek için sohbet**' e tıklayın.
     > [!div class="mx-imgBorder"]
-    > ![Teknik Destek Avantajı Kutucuğu](_img/vs-tech-support/vs-tech-support-tile.png "Teknik Destek kutucuğunun 'Etkinleştirmek için sohbet'e tıklayın.")
-2. Bu, Sözleşme Kimliği ve Erişim Kimliği'nizi  oluşturacak bir temsilciyle sohbet oturumu başlatacak ve kayıtlarınız için size e-posta yoluyla bunları sağlayacaktır. 
+    > ![Teknik destek avantajı kutucuğu](_img/vs-tech-support/vs-tech-support-tile.png "Teknik Destek kutucuğunun 'Etkinleştirmek için sohbet'e tıklayın.")
+2. Bu, **sözleşme kimliği** ve **erişim kimliğiniz** oluşturabileceğiniz bir temsilciyle sohbet oturumu başlatır ve bunları sizin kayıtlarınızda olacak şekilde e-posta yoluyla size sağlayabilir.
 
-3. Süreci tamamlamak için temsilciye şunları sağlamanız gerekir:
+3. Bu işlemi gerçekleştirmek için temsilciyle birlikte sağlamanız gerekir:
    - Ülkeniz/bölgeniz
    - Şirket adı
    - Tam adınız
-   - Aboneliğiniz için oturum asanıza e-posta adresi
-   - Abonelikler sekmesinde bulunan Abonelik [Kimliği.](https://my.visualstudio.com/subscriptions)
+   - Aboneliğinizde oturum açmak için kullandığınız e-posta adresi
+   - [Abonelikler](https://my.visualstudio.com/subscriptions) sekmesinde bulunan abonelik kimliği.
 
    > [!div class="mx-imgBorder"]
-   > ![Teknik Destek Avantajı Abonelik Kimliğini Bulma](_img/vs-tech-support/vs-tech-support-subID-cropped.png "Abonelikler sekmesinde abonelik kimliğinizi bulun.")
+   > ![Teknik destek avantajı abonelik KIMLIĞINI bulun](_img/vs-tech-support/vs-tech-support-subID-cropped.png "Abonelikler sekmesinde abonelik kimliğinizi bulun.")
 
-4. İşlem tamamlandıktan sonra, destek olayı oluştururken kullanmak istediğiniz Sözleşme Kimliğini **ve** **Erişim** Kimliğini içeren bir e-posta alırsınız.  Ayrıca yeni Erişim Kimliğiniz ve Sözleşme Kimliğinizi kullanarak destek olaylarını gönderme yönergeleri de sağlar. 
+4. İşlem tamamlandıktan sonra, bir destek olayı oluştururken kullanacağınız **sözleşme kimliğini** ve **erişim Kimliğinizi** içeren bir e-posta alırsınız.  Ayrıca, yeni erişim KIMLIĞINIZI ve sözleşme KIMLIĞINIZI kullanarak destek olaylarını göndermek için yönergeler sağlar. 
 
-## <a name="how-to-submit-an-incident-using-your-benefit"></a>Avantajınızı kullanarak olay gönderme
-Sözleşme Kimliğiniz **ve Erişim Kimliğiniz** **ayarlandıktan** sonra, bunu kullanarak bir Teknik Destek olayı göndersiniz. 
+## <a name="how-to-submit-an-incident-using-your-benefit"></a>Avantajınızı kullanarak bir olay gönderme
+**Sözleşme kimliğiniz** ve **erişim kimliğiniz** kurulduktan sonra, bir teknik destek olayı göndermek için bu ayarı kullanabilirsiniz. 
 
-Olayları çevrimiçi, telefonla veya telefon üzerinden Azure portal. 
+Olayları çevrimiçi olarak, telefon üzerinden veya Azure portal gönderebilirsiniz. 
 
-### <a name="submit-an-incident-online"></a>Çevrimiçi bir olay gönderme
+### <a name="submit-an-incident-online"></a>Çevrimiçi olay Gönder
 İş portalı desteği aracılığıyla bir olay göndermek için şu adımları izleyin:
 
   > [!NOTE]
-  > E-posta adresinizi onaylamanız gereken bir bildirim alırsınız.  Onayını **profilinizde** listelenen e-posta adresine göndermek için bildirimde E-posta gönder bağlantısına tıklayın. 
+  > E-posta adresinizi onaylamanız gerektiğini belirten bir uyarı alabilirsiniz.  Onayı profilinizde listelenen e-posta adresine göndermek için bildirimde bulunan **e-posta gönder** bağlantısına tıklayın. 
 
 1. <https://support.microsoft.com/en-us/supportforbusiness/productselection> oturumunu açın
 
-0. **1. Adım** bölümünde, ürün, sürüm, sorun vb. belirtmek için açılan listelerden uygun girişleri seçin. Sorunun özeti ve sorunu daha ayrıntılı bir şekilde açıklamak için metin alanlarını doldurun. Ardından **İleri**'ye tıklayın.
+0. 1. **adım** bölümünde, ürün, sürüm, sorun vb. belirtmek için açılan listelerden uygun girişleri seçin. Sorunun Özeti için metin alanlarını doldurun ve sorunu daha ayrıntılı olarak tanıtın. Ardından **İleri**'ye tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![Yeni destek isteği oluşturma](_img/vs-tech-support/vs-tech-support-create-new.png "Yeni bir destek isteği oluşturmak için alanları doldurun.") 
-0. **2. Adım bölümünde,** konumunuz ve saat diliminizi sağlar.
-0. Anlaşma **ekle'ye tıklayın.**
-0. Destek **avantajınızı** **etkinleştirdikten sonra onay** e-postanıza gelen Erişim Kimliği ve Sözleşme Kimliğini girin. **Ekle**'ye tıklayın.
+   > ![Yeni bir destek isteği oluşturun](_img/vs-tech-support/vs-tech-support-create-new.png "Yeni bir destek isteği oluşturmak için alanları doldurun.") 
+0. 2. **adım** bölümünde, konum ve saat diliminizi girin.
+0. **Sözleşme Ekle**' ye tıklayın.
+0. Destek avantajınızı etkinleştirdiğinizde onay e-postanıza aldığınız **ERIŞIM kimliğini** ve **sözleşme numarasını** girin. **Ekle**'ye tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![Sözleşme Kimliği ekleme](_img/vs-tech-support/vs-tech-support-add-contract-id.png "Onay e-postanıza Erişim Kimliği ve Sözleşme Kimliğini ekleyin.") 
-0. Yeni destek sözleşmeniz **2. Adımda görünür.**  Kalem simgesini seçin.
-0. Lütfen sorun durumunun önem derecesine dikkat edin.  "Önemli" varsayılan değerdir. 
-0. Destek almak istediğiniz zaman seçin. "Yalnızca iş saatleri sırasında" varsayılan olarak seçilidir. "7/24 destek" seçeneği yalnızca önem derecesi olarak "Kritik" seçeneğini seçtiyseniz kullanılabilir.
+   > ![Bir sözleşme KIMLIĞI ekleyin](_img/vs-tech-support/vs-tech-support-add-contract-id.png "Onay e-postanıza Erişim Kimliği ve Sözleşme Kimliğini ekleyin.") 
+0. Yeni destek sözleşmeniz **Adım 2**' de görünür.  Kalem simgesini seçin.
+0. Lütfen sorununuzun önem derecesini belirtin.  "Önemli" varsayılandır. 
+0. Ne zaman destek almak istediğinizi seçin. "Yalnızca iş saatleri boyunca" varsayılan olarak seçilidir. "24/7 desteği" seçeneği yalnızca önem derecesi olarak "kritik" seçildiyse kullanılabilir.
 0. Devam etmek için **İleri**'ye tıklayın. 
-0. **3. Adım** için, destek aracınız ile iletişim kurmak için kullanmalarını sağlamak üzere iletişim bilgilerini sağlar. 
+0. **3. adım** için destek aracınızın sizinle iletişim kurmak üzere kullanmasını istediğiniz iletişim bilgilerini sağlayın. 
    > [!div class="mx-imgBorder"]
-   > ![İletişim bilginizi doğrulama](_img/vs-tech-support/vs-tech-support-contact-info.png "İletişim bilgilerini ve tercih edilen iletişim yöntemini doğrulayın.") 
-0. **4. Adımda,** bu destek isteği bilgilerini takımınız içinde başkalarla paylaşma seçeneğiniz vardır.  İsteği paylaşmak istediğiniz kişinin e-posta adreslerini girin. Sonraki **adıma** taşımak için Sonraki'ne tıklayın.
-0. **5.** Adım, olay için sağladığımız tüm bilgileri özetler.  Her şeyin doğru olduğunu ve devam etmeye hazır olduğunu biliyorsanız Gönder'e **tıklayın.** 
+   > ![İletişim bilgilerinizi doğrulayın](_img/vs-tech-support/vs-tech-support-contact-info.png "İletişim bilgilerini ve tercih edilen iletişim yöntemini doğrulayın.") 
+0. **4. adımda**, bu destek isteği bilgilerini takımınızda başkalarıyla paylaşma seçeneğiniz vardır.  İsteği paylaşmak istediğiniz e-posta adreslerini girin. Sonraki adıma geçmek için **İleri** ' ye tıklayın.
+0. **5. adım** , olay için verdiğiniz tüm bilgileri özetler.  Her şeyin doğru olduğundan ve devam etmeye hazırsanız, **Gönder**' e tıklayın. 
  
-### <a name="submit-an-incident-by-phone"></a>Telefonla olay gönderme
-Telefonda bir destek olayı oluşturmak için lütfen ülkenizin/bölgenizin [Müşteri](https://support.microsoft.com/help/13948/global-customer-service-phone-numbers) Hizmetleri telefon numarasını bulun. Lütfen çağrısında Sözleşme Kimliğiniz ve Erişim Kimliğiniz olduğundan emin olur.
+### <a name="submit-an-incident-by-phone"></a>Telefonla bir olay gönderme
+Telefonda bir destek olayı oluşturmak istiyorsanız lütfen ülkeniz/bölgeniz için [Müşteri Hizmetleri](https://support.microsoft.com/help/13948/global-customer-service-phone-numbers) telefon numarasını bulun. Lütfen çağırdığınızda sözleşme KIMLIĞINIZIN ve erişim KIMLIĞINIZIN kullanılabilir olduğundan emin olun.
 
-### <a name="submit-an-incident-in-the-azure-portal"></a>Azure portal'da bir olay gönderme
-Azure ile ilgili Visual Studio abonelik teknik destek avantajınızı kullanmak için Sözleşme Kimliğiniz ve Erişim Kimliği'nizi Azure aboneliğinize bağlamanız gerekir.
+### <a name="submit-an-incident-in-the-azure-portal"></a>Azure portal bir olay gönderme
+azure ile ilgili sorunlar için Visual Studio abonelik teknik destek avantajını kullanmak için, sözleşme kimliği ve erişim kimliğinizi azure aboneliğinize bağlamanız gerekir.
 
-1. Ziyaret https://portal.azure.com edin ve oturum açma
-0. Sol gezinti bölmesinde Yardım **+ Destek'e tıklayın**
-0. "Destek" altında Yeni Destek **İsteği'ne tıklayın**
+1. Ziyaret edin https://portal.azure.com ve oturum açın
+0. Sol taraftaki gezinmede **Yardım ve destek** ' e tıklayın.
+0. "Destek" altında **Yeni destek isteği** ' ne tıklayın.
 
-## <a name="eligibility"></a>Uygunluk
+## <a name="eligibility"></a>Önceliği
 
-| Abonelik Düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilen -ebilir?    |
+| Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart)   | VL, Azure, Perakende, seçili NFR<sup>1</sup> | 4 olay       |  Yes|
-| Visual Studio Enterprise ile abonelik GitHub Enterprise | VL | 4 olay       |  Yes|
-| Visual Studio Professional (Standart) | VL, Azure, Perakende, seçili NFR<sup>2</sup>                                        | 2 olay                                                          |Yes         |
-| Visual Studio Professional ile abonelik GitHub Enterprise | VL                                     | 2 olay                                                          |Yes         |
+| Visual Studio Enterprise (standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | 4 olay       |  Yes|
+| GitHub Enterprise aboneliği Visual Studio Enterprise | VL | 4 olay       |  Yes|
+| Visual Studio Professional (standart) | VL, Azure, perakende, seçili NFR<sup>2</sup>                                        | 2 olay                                                          |Yes         |
+| GitHub Enterprise aboneliği Visual Studio Professional | VL                                     | 2 olay                                                          |Yes         |
 | Visual Studio Test Professional (Standart)                         | VL, Perakende                                              | 2 olay                                             |  Yes         |
 | MSDN Platformları (Standart)                                          | VL, Perakende                                              | 2 olay                                               | Yes         |
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure                                       | Kullanılamaz                                                           |NA|

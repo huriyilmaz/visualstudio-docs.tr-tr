@@ -4,16 +4,16 @@ description: Kullanılabilir yazılım indirmeleri sahip olduğunuz aboneliklere
 ms.topic: include
 ms.assetid: 543dba4a-b4dc-48e3-94cb-8d803800b570
 ms.technology: ''
-author: CaityBuschlen
-ms.author: cabuschl
+author: evanwindom
+ms.author: amast
 ms.date: 4/3/2020
 ms.faqid: q2_1
-ms.openlocfilehash: 249c5b8ca545973c4f06a6117d6d65b62657998b3e19caa501f3635258b30c6a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e576d38589a223d9b7d459a4d9cb35ae4b8a88c8
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121381279"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133255066"
 ---
 ## <a name="what-software-downloads-are-available"></a>Hangi yazılım indirmeleri kullanılabilir?
 

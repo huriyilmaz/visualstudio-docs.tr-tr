@@ -1,23 +1,23 @@
 ---
 title: Visual Studio aboneliklerde Microsoft Windows sanal masaüstü | Microsoft Docs
 author: evanwindom
-ms.author: cabuschl
-manager: cabuschl
+ms.author: amast
+manager: shve
 ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
 ms.date: 10/18/2021
 ms.topic: conceptual
 description: Visual Studio aboneliğiniz aracılığıyla Microsoft Windows sanal masaüstünden nasıl yararlanalabileceğinizi öğrenin
-ms.openlocfilehash: 9202de0d906621a70dd1171facfc6dcb1cda87d0
-ms.sourcegitcommit: 7a820b7698a8dcf076eb36e3d766fb0751f56bb1
+ms.openlocfilehash: 918e36930f1b42963c87a790f24b4f67bb379a5d
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "131127058"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133257822"
 ---
 # <a name="access-windows-virtual-desktop-in-subscriptions"></a>aboneliklerde sanal masaüstü Windows erişim 
 Visual Studio aboneler artık Microsoft Windows sanal masaüstü hizmetleri için Azure geliştirme ve test kredilerini kullanabilir.  
 
-Windows Sanal Masaüstü, bulutta çalışan kapsamlı bir masaüstü ve uygulama sanallaştırma hizmetidir. basitleştirilmiş yönetim, çoklu oturum Windows 10, Kurumlar için Microsoft 365 Uygulamaları için iyileştirmeler ve Uzak Masaüstü Hizmetleri (RDS) ortamları için destek sunan tek sanal masaüstü altyapısı (vdı). Windows masaüstü ve uygulamalarınızı Azure 'da dakikalar içinde dağıtın ve ölçeklendirin, yerleşik güvenlik ve uyumluluk özellikleri alın.
+Windows sanal masaüstü, bulutta çalışan kapsamlı bir masaüstü ve uygulama sanallaştırma hizmetidir. basitleştirilmiş yönetim, çoklu oturum Windows 10, Kurumlar için Microsoft 365 Uygulamaları için iyileştirmeler ve Uzak Masaüstü Hizmetleri (RDS) ortamları için destek sunan tek sanal masaüstü altyapısı (vdı). Windows masaüstü ve uygulamalarınızı Azure 'da dakikalar içinde dağıtın ve ölçeklendirin, yerleşik güvenlik ve uyumluluk özellikleri alın.
 
 Azure 'da Windows sanal masaüstü çalıştırdığınızda şunları yapabilirsiniz:
 - ölçeklenebilirlik ile tam Windows 10 sağlayan çoklu oturum Windows 10 dağıtımı ayarlama
@@ -34,7 +34,7 @@ Visual Studio aboneler artık Windows sanal masaüstü hizmetleri için ödeme y
 - [Azure Kurumsal Anlaşma devtest teklifi](/azure/devtest/offer/quickstart-create-enterprise-devtest-subscriptions).  bu teklifle, Enterprise sözleşmeleri olan aboneler Azure ile Windows sanal masaüstü için indirimli fiyatlandırmadan ödeme yapabilir. 
 
 ## <a name="requirements"></a>Gereksinimler
-Windows sanal masaüstü, vm 'lerin katılacağını Azure Active Directory (Azure AD) gerektirir.  Kullanıcılar bu Azure AD 'nin üyesi olmalıdır.  Azure AD 'yi uygulamak için iki seçenek vardır:
+Windows sanal masaüstü, vm 'lerin katıldığı bir Azure Active Directory (Azure AD) gerektirir.  Kullanıcılar bu Azure AD 'nin üyesi olmalıdır.  Azure AD 'yi uygulamak için iki seçenek vardır:
 - Azure AD Dizin Hizmetleri.  Çoğu kullanıcı için bu, uygulamak daha kolay bir seçenektir.
 - Bir etki alanı denetleyicisi promosyon çalıştıran bir sanal makine.  Bu seçenek, daha fazla iş ayarlanmasını gerektirir, ancak çoğu kullanıcıya daha düşük bir işletim maliyeti sunar.
 Windows sanal masaüstü kullanımıyla ilgili önkoşulların tam listesini görmek için lütfen Windows sanal masaüstüne [genel bakış sayfasını](/azure/virtual-desktop/overview#requirements)ziyaret edin. 

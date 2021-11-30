@@ -2,17 +2,17 @@
 title: Abonelik yönetim portalına yeni aylık abonelikler | Microsoft Docs
 author: evanwindom
 ms.author: amast
-manager: amast
+manager: shve
 ms.assetid: 36f0d9f1-fe28-469f-a54c-dc46638270a8
 ms.date: 10/08/2021
 ms.topic: how-to
 description: Abonelikler Yönetim Portalı'Visual Studio yeni aylık satın alma hakkında bilgi edinin
-ms.openlocfilehash: add6e5d575e1aa950faf555fa193f0ea432aad00
-ms.sourcegitcommit: a1c18c491e310b00a43e76a911f778e643cd8f8d
+ms.openlocfilehash: 1c69ceb3ace1f7ec9f1f6992d1f0d353162e38c4
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "132994929"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133256301"
 ---
 # <a name="add-new-monthly-visual-studio-subscriptions-to-the-subscriptions-administration-portal"></a>Abonelikler Yönetim Visual Studio yeni aylık abonelikler ekleme
 Azure aboneliği kullanarak yeni Visual Studio abonelikler satın aldığınız zaman, bunları kullanıcılara atamak için Abonelikler Yönetim Portalı'ne eklemeniz gerekir.  
@@ -30,7 +30,7 @@ Aylık abonelik ekleme adımları, ne tür aboneliklere sahip olduğunu ve yeni 
    > [!div class="mx-imgBorder"]
    > ![Yeni aylık abonelikler ekleme açılan listesinde](_img/add-monthly-subs/add-subs-drop-down.png "'Anlaşma ekle'yi ve ardından 'Yeni aylık abonelikler'i seçin.")
 1. Sistem, Kullanıcı Erişimi Yöneticisi haklarına sahip olduğunuz tüm Azure aboneliklerini aratır ve bu Azure abonelikleriyle Visual Studio abonelikleri içeri aktaracak.
-1. Kullanıcı Erişimi Yöneticisi haklarına sahip olmadığınız veya uygun Azure abonelikleri bulunsa da Visual Studio azure abonelikleri bulunamasa aşağıdaki iletiyi alırsınız:
+1. Kullanıcı Erişimi Yöneticisi haklarına sahip olmadığınız veya uygun Azure abonelikleri bulunsa da herhangi bir Visual Studio azure aboneliği bulunamasa aşağıdaki iletiyi alırsınız:
    > [!div class="mx-imgBorder"]
    > ![Yeni aylık abonelik bulunamadı](_img/add-monthly-subs/no-subs-found.png "Kullanılabilir Azure aboneliği veya abonelik Visual Studio belirten hata iletisi.")
 1. Yeni aylık abonelikler bulunursa bir onay iletisi alırsınız
@@ -42,7 +42,7 @@ Aylık abonelik ekleme adımları, ne tür aboneliklere sahip olduğunu ve yeni 
 - Yeni abonelikler bulunursa abonelere zaten atanmış olduklarını görebilirsiniz.  Bunun nedeni, Azure aboneliğine erişimi olan başka yöneticiler de olduğu ve yeni yönetici aboneliklerini kullanıcılara Visual Studio vardır.  Bunları portala da eklediniz, artık bu abonelikleri yönetebilirsiniz. 
 
 ## <a name="support-resources"></a>Destek kaynakları
-- Visual Studio Aboneliklerinin yönetimiyle ilgili yardım için, Visual Studio [abonelik desteği ile iletişim kurun.](https://aka.ms/vsadminhelp)
+- Visual Studio Aboneliklerinin yönetimiyle ilgili yardım için, Visual Studio [ile iletişime geçin.](https://aka.ms/vsadminhelp)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Abonelikleri eklediklerine göre, bunları kullanıcılara atamaya hazırsınız.  Bunu çeşitli yollarla yapabilirsiniz:

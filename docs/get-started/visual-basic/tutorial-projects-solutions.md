@@ -15,12 +15,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 816b72782866bc8c44e88431db3782a182428969
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: 0a7efaa9fdff2c09cdbb6c26c1bf81e3bf285da8
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128430699"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133257991"
 ---
 # <a name="learn-about-projects-and-solutions-using-visual-basic"></a>Visual Basic kullanarak projeler ve çözümler hakkında bilgi edinin
 
@@ -190,7 +190,7 @@ Boş bir projem var. Bir kod dosyası ekleyelim.
 
 1. **Çözüm Gezgini** **Project** , proje özelliklerini açmak için tıklayın. **Uygulama** sekmesinde **uygulama türünü** **sınıf kitaplığı** olarak değiştirin. Projeyi başarıyla derlemek için bu adım gereklidir.
 
-1. Proje derlemesinde **QuickDate'e sağ tıklar ve** **Çözüm Gezgini'i** **seçerek projeyi derleme.** Çıkış penceresinde başarılı bir derleme iletisi **görüyorsanız.**
+1. Proje derlemesinde **QuickDate'e** sağ tıklar ve **Çözüm Gezgini'ı seçerek projeyi derleme.**  Çıkış penceresinde başarılı bir derleme iletisi **görüyorsanız.**
 
 ## <a name="add-a-second-project"></a>İkinci proje ekleme
 
@@ -198,13 +198,13 @@ Boş bir projem var. Bir kod dosyası ekleyelim.
 
 Şimdi çözüme bir birim testi projesi ekleriz. Bu kez projeye ek bir kod dosyası eklememiz gerekmay için bir proje şablonundan başlayacağız.
 
-1. içinde Çözüm **'QuickSolution'** öğesinin sağ tıklama veya bağlam **menüsünden Çözüm Gezgini** Ekle'yi **Project.**  >  
+1. içinde Çözüm **'QuickSolution'** öğesinin sağ tıklaması veya bağlam  **menüsünden Çözüm Gezgini**  >  **Ekle'yi** Project.
 
 ::: moniker range="vs-2017"
 
 2. Sol bölmede, **Visual Basic'yi** genişletin ve **Test kategorisini** seçin. Orta bölmede Birim Testi Project **(.NET Framework) proje** şablonunu seçin. Projeye **QuickTest adını ve** ardından Tamam'ı **seçin.**
 
-   dosyasına ikinci bir proje **Çözüm Gezgini** *unitTest1.vb adlı bir dosya* düzenleyicide açılır.
+   dosyasına ikinci bir proje **Çözüm Gezgini** *unitTest1.vb* adlı bir dosya düzenleyicide açılır.
 
    ![Visual Studio Çözüm Gezgini projeyle çalışma](media/tutorial-projects-solution-explorer-vb.png)
 
@@ -218,31 +218,31 @@ Boş bir projem var. Bir kod dosyası ekleyelim.
 
 4. Projeye **QuickTest adını ve** ardından Oluştur'a **seçin.**
 
-   dosyasına ikinci bir proje **Çözüm Gezgini** *unitTest1.vb adlı bir dosya* düzenleyicide açılır.
+   dosyasına ikinci bir proje **Çözüm Gezgini** *unitTest1.vb* adlı bir dosya düzenleyicide açılır.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2022"
 
-2. Yeni **proje ekle iletişim** kutusunda, en üstte yer alan arama kutusuna metin birimi **testini**  girin ve ardından Tüm diller **Visual Basic'yi** seçin.
+2. Yeni **proje ekle iletişim** kutusunda, en üstte yer alan arama kutusuna metin birimi **testini**  girin ve ardından Tüm diller **Visual Basic** açılan listesinden Yenile'yi seçin.
 
 3. Birim Testi **Project (.NET Framework) proje** şablonunu ve ardından Sonraki'yi **seçin.**
 
 4. Projeye **QuickTest adını ve** ardından Oluştur'a **seçin.**
 
-   dosyasına ikinci bir proje **Çözüm Gezgini** *unitTest1.vb adlı bir dosya* düzenleyicide açılır.
+   dosyasına ikinci bir proje **Çözüm Gezgini** *unitTest1.vb* adlı bir dosya düzenleyicide açılır.
 
 ::: moniker-end
 
 ## <a name="add-a-project-reference"></a>Proje başvurusu ekleme
 
-**QuickDate** projesinde yöntemimizi test etmek için yeni birim testi projesini kullaneceğimiz için bu projeye bir başvuru eklememiz gerekiyor. Başvuru, iki proje *arasında bir derleme* bağımlılığı oluşturur, yani çözümü derlemek için **QuickDate,** QuickTest'den önce **inşa edilmiştir.**
+**QuickDate** projesinde yöntemimizi test etmek için yeni birim testi projesini kullanacak, bu nedenle bu projeye bir başvuru eklememiz gerekiyor. Başvuru, iki proje *arasında bir derleme* bağımlılığı oluşturur; başka bir anlama gelir; çözümü derlemek için **QuickDate,** QuickTest'den önce **yerleşiktir.**
 
 ::: moniker range="vs-2019"
 
 1. QuickTest **projesinde** **Başvurular düğümünü** seçin ve sağ tıklama veya bağlam menüsünden Başvuru Ekle'yi **seçin.**
 
-   !['Başvuru Ekle' seçeneğinin seçili olduğu QuickTest projesinde Başvurular düğümünün bağlam menüsünü gösteren creenshot.](media/tutorial-projects-add-reference-vb.png)
+   !['Başvuru Ekle' seçeneğinin seçili olduğu QuickTest projesinde Başvurular düğümünün bağlam menüsünü gösteren ekran görüntüsü.](media/tutorial-projects-add-reference-vb.png)
 
    Başvuru **Yöneticisi iletişim** kutusu açılır.
 
@@ -270,7 +270,7 @@ Boş bir projem var. Bir kod dosyası ekleyelim.
 
 ::: moniker range="vs-2019"
 
-1. Şimdi test kodunu yeni kod dosyasına Visual Basic ekleyebilirsiniz. *UnitTest1.vb içeriğini* aşağıdaki kodla değiştirin.
+1. Şimdi test kodunu Visual Basic ekleyebilirsiniz. *UnitTest1.vb içeriğini* aşağıdaki kodla değiştirin.
 
    ```vb
    <TestClass()> Public Class UnitTest1
@@ -294,13 +294,13 @@ Boş bir projem var. Bir kod dosyası ekleyelim.
 
    Kod dosyası aşağıdaki gibi görünüyor olmalı:
 
-   ![Imports deyimi ve Assembly öznitelik satırları eklendikten sonra Visual Basic düzenleyicisi penceresinde Calendar.vb kodunu gösteren ekran görüntüsü.](media/tutorial-projects-code-vb.png)
+   ![Imports deyimi ve Derleme öznitelik satırları eklendikten sonra Visual Basic düzenleyicisi penceresinde Calendar.vb kodunu gösteren ekran görüntüsü.](media/tutorial-projects-code-vb.png)
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2022"
 
-1. Şimdi test kodunu yeni kod dosyasına Visual Basic ekleyebilirsiniz. *UnitTest1.vb içeriğini* aşağıdaki kodla değiştirin.
+1. Şimdi test kodunu Visual Basic ekleyebilirsiniz. *UnitTest1.vb içeriğini* aşağıdaki kodla değiştirin.
 
    ```vb
    <TestClass()> Public Class UnitTest1
@@ -334,13 +334,13 @@ Boş bir projem var. Bir kod dosyası ekleyelim.
 
 *Calendar.vb dosyasında özniteliğini* içeren satır, QuickTest projesinin derleme adına <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> (dosya adı) başvurur.  Derleme adı her zaman proje adıyla aynı olmayacaktır. Projenin derleme adını bulmak için proje özelliklerini açın.
 
-1. Bu **Çözüm Gezgini** **QuickTest projesini** seçin. Sağ tıklama veya bağlam menüsünde Özellikler'i seçin **veya** Alt Enter **tuşuna** + **basın.** (Ayrıca, Çözüm Gezgini **.)** Project **My** Çözüm Gezgini tıklar.
+1. Bu **Çözüm Gezgini** **QuickTest projesini** seçin. Sağ tıklama veya bağlam menüsünde Özellikler'i seçin **veya** Yalnızca Alt Enter **tuşuna** + **basın.** (Ayrıca, Çözüm Gezgini **'de** **Project'a çift** tıklar.)
 
-   *Projenin özellik* sayfaları Uygulama **sekmesinde** açılır. Özellik sayfaları, proje için çeşitli ayarlar içerir. **QuickTest** projesinin derleme adının gerçekten de "QuickTest" olduğunu fark ediyorum. Derleme adını değiştirmek için bunu burada yapacak oluruz. Ardından test projesini derlemeniz sonucunda elde edilen ikili dosyanın adı,QuickTest.dll *olarak* değişir.
+   Projenin *özellik* sayfaları Uygulama **sekmesinde** açılır. Özellik sayfaları, proje için çeşitli ayarlar içerir. **QuickTest** projesinin derleme adının gerçekten de "QuickTest" olduğunu fark ediyorum. Derleme adını değiştirmek için bunu burada yapacak oluruz. Ardından test projesini derlemeniz sonucunda elde edilen ikili dosyanın adı,QuickTest.dll *olarak* değişir.
 
    ![QuickTest projesinin özellik sayfalarının Uygulama sekmesini gösteren ekran görüntüsü. Derleme adı alanı vurgulanmış ve değer 'QuickTest'tir.](../media/tutorial-projects-properties.png)
 
-1. Projenin özellik sayfalarının Compile ve Ayarlar gibi **diğer** **sekmelerinden Ayarlar.** Bu sekmeler farklı proje türleri için farklıdır.
+1. Projenin özellik sayfalarının Compile ve Ayarlar gibi diğer  **sekmelerini Ayarlar.** Bu sekmeler farklı proje türleri için farklıdır.
 
 ::: moniker-end
 
@@ -348,13 +348,13 @@ Boş bir projem var. Bir kod dosyası ekleyelim.
 
 *Calendar.vb dosyasında* özniteliğini içeren <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> satır, **QuickTest** projesinin derleme adına (dosya adı) başvurur. Derleme adı her zaman proje adıyla aynı olmayacaktır. Projenin derleme adını bulmak için proje özelliklerini açın.
 
-1. Bu **Çözüm Gezgini** **QuickTest projesini** seçin. Sağ tıklama veya bağlam menüsünde Özellikler'i seçin **veya** Alt Enter **tuşuna** + **basın.** (Ayrıca, Çözüm Gezgini **.)** Project **My** Çözüm Gezgini tıklar.
+1. Bu **Çözüm Gezgini** **QuickTest projesini** seçin. Sağ tıklama veya bağlam menüsünde Özellikler'i seçin **veya** Yalnızca Alt Enter **tuşuna** + **basın.** (Ayrıca, Çözüm Gezgini **'de** **Project'a çift** tıklar.)
 
-   *Projenin özellik* sayfaları Uygulama **sekmesinde** açılır. Özellik sayfaları, proje için çeşitli ayarlar içerir. **QuickTest** projesinin derleme adının gerçekten de "QuickTest" olduğunu fark ediyorum. Derleme adını değiştirmek için bunu burada yapacak oluruz. Ardından test projesini derlemeniz sonucunda elde edilen ikili dosyanın adı,QuickTest.dll *olarak* değişir.
+   Projenin *özellik* sayfaları Uygulama **sekmesinde** açılır. Özellik sayfaları, proje için çeşitli ayarlar içerir. **QuickTest** projesinin derleme adının gerçekten de "QuickTest" olduğunu fark ediyorum. Derleme adını değiştirmek için bunu burada yapacak oluruz. Ardından test projesini derlemeniz sonucunda elde edilen ikili dosyanın adı,QuickTest.dll *olarak* değişir.
 
    :::image type="content" source="media/vs-2022/tutorial-projects-properties.png" alt-text="QuickTest projesinin özellik sayfalarının Uygulama sekmesini gösteren ekran görüntüsü. Derleme adı alanı vurgulanmış ve değer 'QuickTest'tir.":::
 
-1. Projenin özellik sayfalarının Compile ve Ayarlar gibi **diğer** **sekmelerinden Ayarlar.** Bu sekmeler farklı proje türleri için farklıdır.
+1. Projenin özellik sayfalarının Compile ve Ayarlar gibi diğer  **sekmelerini Ayarlar.** Bu sekmeler farklı proje türleri için farklıdır.
 
 ::: moniker-end
 ## <a name="optional-run-the-test"></a>(İsteğe bağlı) Testi çalıştırma
@@ -366,7 +366,7 @@ Birim testinizin çalışa çalışa çalışa bir kontrol etmek için menü **�
 ![TestGetCurrentDate testinin Visual Studio Test Gezgini'nin ekran görüntüsü.](../media/tutorial-projects-test-explorer.png)
 
 > [!TIP]
-> **Test Gezgini otomatik** olarak açılmazsa, menü çubuğunda **Test** Gezgini'ni  >  **Windows** Test  >  **Gezgini'ni** seçerek açın.
+> **Test Gezgini otomatik** olarak açılmazsa, menü çubuğunda Test Gezgini'ni  >  **Windows** Test  >  **Gezgini'ni** seçerek açın.
 
 ::: moniker-end
 
@@ -377,13 +377,13 @@ Birim testinizin çalışa çalışa çalışa bir kontrol etmek için menü **�
 :::image type="content" source="media/vs-2022/tutorial-projects-test-explorer.png" alt-text="TestGetCurrentDate testinin Visual Studio Test Gezgini'nin ekran görüntüsü.":::
 
 > [!TIP]
-> **Test Gezgini otomatik** olarak açılmazsa, menü çubuğunda **Test** Gezgini'ni  >  **Windows** Test  >  **Gezgini'ni** seçerek açın.
+> **Test Gezgini otomatik** olarak açılmazsa, menü çubuğunda Test Gezgini'ni  >  **Windows** Test  >  **Gezgini'ni** seçerek açın.
 
 ::: moniker-end
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Daha fazla araştırma yapmak Visual Studio öğreticilerinden birini kullanarak bir uygulama [Visual Basic düşünün.](index.yml)
+Uygulama hakkında daha fazla Visual Studio, öğreticilerde yer alan öğreticilerden birini Visual Basic [düşünün.](index.yml)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

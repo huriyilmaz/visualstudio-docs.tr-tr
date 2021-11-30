@@ -4,15 +4,15 @@ description: Visual Studio Aboneliklerini yönetme ile ilgili SSS listesi.
 ms.faqid: Section1
 ms.topic: conceptual
 ms.assetid: 933c7f9e-dce9-46e7-939e-68682c65d972
-author: CaityBuschlen
-ms.author: cabuschl
+author: evanwindom
+ms.author: amast
 ms.date: 01/27/2021
-ms.openlocfilehash: dabdd03589e49e518c6bb19905264c5196b19fef1c995cd4661fb6dc9ad8f137
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b2d88a95a9fd71ecad55b82431df0ccf84c75d9c
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121265602"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133255224"
 ---
 # <a name="managing-visual-studio-subscriptions"></a>Visual Studio aboneliklerini yönetme
 

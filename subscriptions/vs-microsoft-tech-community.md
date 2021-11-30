@@ -1,48 +1,48 @@
 ---
-title: Visual Studio aboneliklerde Microsoft Tech Community | Microsoft Docs
+title: Visual Studio abonelik Community Microsoft Tech | Microsoft Docs
 author: evanwindom
-ms.author: cabuschl
-manager: cabuschl
+ms.author: amast
+manager: shve
 ms.assetid: 8fccb5f6-ff61-488f-a91e-447faeda798d
 ms.date: 10/21/2021
 ms.topic: conceptual
-description: seçili Visual Studio aboneliklerine dahil edilen Microsoft Tech Community forum desteği avantajı hakkında bilgi edinin.
-ms.openlocfilehash: 17084b2cdf9521b7dd2b429e00173b885d053371
-ms.sourcegitcommit: efe1d737fd660cc9183177914c18b0fd4e39ba8b
+description: Seçili aboneliklere dahil edilen Microsoft Tech Community forum destek avantajı hakkında Visual Studio öğrenin.
+ms.openlocfilehash: 61d884ff1d7c9b62ffbe514e298331a4cebf8f87
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "130211681"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133257068"
 ---
-# <a name="microsoft-tech-community-forum-support-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerde Microsoft Tech Community forum desteği
-Bağlan ve en iyi uygulamalar, tasarım mimarisi ve en son güncelleştirmeler hakkında daha fazla kullanıcı ve Microsoft teknik uzmanlarıyla etkileşim kurun.
+# <a name="microsoft-tech-community-forum-support-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerde Microsoft Tech Community forumu desteği
+Bağlan uygulamaları, tasarım mimarisini ve en son güncelleştirmeleri diğer kullanıcılarla ve Microsoft teknik uzmanlarıyla birlikte kullanın.
 
-## <a name="access-the-microsoft-tech-community"></a>Microsoft Tech Community erişin 
-Topluluk forumuna erişim basittir.  
+## <a name="access-the-microsoft-tech-community"></a>Microsoft Tech Community 
+Topluluk forumuna erişmek oldukça kolaydır.  
 
 1. <https://my.visualstudio.com/benefits> oturumunu açın
-0. **Microsoft Tech Community** kutucuğunu bulun ve **yardım al 'a** tıklayın
+0. Microsoft **Tech Community kutucuğunu** bulun ve Yardım al'a **tıklayın**
 
     > [!div class="mx-imgBorder"]
-    > ![Microsoft Tech Community kutucuğu](_img/vs-tech-community/vs-tech-community-tile.png "Microsoft Tech Community kutucuğunda ' yardım al ' düğmesine tıklayın")
+    > ![Microsoft Tech Community Kutucuğu](_img/vs-tech-community/vs-tech-community-tile.png "Microsoft Tech Community kutucuğunun 'Yardım al' Community tıklayın")
 
-0. Daha önce topluluk için kaydolmadıysanız, **kullanmaya başlama** ' ye tıklayın.
-0. **Adım 1: Profilinizi kurma** bölümünde:
+0. Daha önce topluluk için kayıt olduysanız, Kullanmaya başlayın 
+0. **1. Adım: Profilinizi ayarlama bölümünde:**
    - Tercih ettiğiniz dili seçin
    - İş e-posta adresinizi girin
-   - Profil adınızı oluşturun 
-0. **2. Adım: katılacak toplulukları seçme** başlıklı bölümde, her birinin bilgi kartında listelenen **Birleştir** düğmesine tıklayarak çeşitli topluluklar seçebilirsiniz.  Ayrıca, kullanılabilen toplulukların listesini filtrelemek için en sağdaki arama kutusunu da kullanabilirsiniz.  90 toplulukların tüm listesini görmek için bilgi kartlarının altındaki **Tümünü görüntüle (90)** bağlantısına tıklayın. 
-0. **3. Adım: kullanım** kuralları Için lütfen kullanım kodlarını okuyun ve sonra, kullanım ve hizmet koşulları 'nın kabul edildiğini belirtmek için onay kutusuna tıklayın.
-0. Profilinizi ayarlamayı sona bırakmak için **Kaydet** ' e tıklayın.
+   - Profil adı oluşturma 
+0. **2. Adım:** Katılmak için Topluluklar'ı seçin başlıklı bölümde,  her birinin bilgi kartında listelenen Katıl düğmesine tıklayarak çeşitli toplulukları seçin.  Kullanılabilir toplulukların listesini filtrelemek için en sağdan arama kutusunu da kullanabilirsiniz.  90 topluluk listesini görmek için bilgi kartlarının altındaki Tüm Toplulukları **Görüntüle (90)** bağlantısına tıklayın. 
+0. **3. Adım:** Kullanım Kuralları için lütfen Kullanım Kuralları'nın okuyun ve ardından Kullanım Kuralları ve Hizmet Koşulları'nın kabul olduğunu belirtmek üzere onay kutusuna tıklayın.
+0. Profilinizi **ayarlamayı** tamamlamak için Kaydol'a tıklayın.
 
-İşte bu kadar kolay.  Artık topluluk portalını kullanmaya hazırsınız.  Giriş sayfasında, topluluk hakkında haberler bulunur.  katılmakta olduğunuz topluluklara özgü içeriği görmek için sayfanın üst kısmındaki **Community hub** açılır listesine tıklayın ve listenizden bir topluluk seçin.  her zaman, istediğiniz hub 'a ve ardından **birleştir** düğmesine tıklayarak **tüm Community hub 'lara gözatıp** ' ye tıklayarak toplulukları listeye ekleyebilirsiniz. 
+İşte bu kadar kolay.  Artık topluluk portalını kullanmaya hazırsınız.  Giriş sayfasında toplulukla ilgili haberler vardır.  Katıldığınız topluluklara özgü içeriği görmek için sayfanın üst kısmında **Community Hub'lar** açılan listesine tıklayın ve listeden bir topluluk seçin.  İstediğiniz hub'a ve ardından Katıl düğmesine **tıklayarak Community Tüm** Hub'lara Gözat'a tıklayarak toplulukları listeye **ekleyebilirsiniz.** 
 
-## <a name="eligibility"></a>Önceliği
-Microsoft Tech Community, ücretsiz olarak kullanılabilir.  Abonelik gerekli değildir. 
+## <a name="eligibility"></a>Uygunluk
+Microsoft Tech Community ücretsiz olarak kullanılabilir.  Abonelik gerekmez. 
 
-## <a name="support-resources"></a>Destek kaynakları
-- Visual Studio abonelikleriniz için satış, abonelik, hesap ve faturalandırma konusunda yardım mı gerekiyor?  [Visual Studio abonelik desteğiyle](https://my.visualstudio.com/gethelp)iletişim kurun.
-- Visual Studio ıde, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
+## <a name="support-resources"></a>Destek Kaynakları
+- Visual Studio Abonelikleri için satışlar, abonelikler, hesaplar ve faturalama konusunda yardıma mı ihtiyacınız var?  Abonelikler [Visual Studio iletişim kurma.](https://my.visualstudio.com/gethelp)
+- IDE, Visual Studio veya diğer Azure DevOps Services ürün veya Visual Studio soru var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)
@@ -51,7 +51,7 @@ Microsoft Tech Community, ücretsiz olarak kullanılabilir.  Abonelik gerekli de
 - [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Aşağıdakiler dahil olmak üzere kullanılabilir diğer destek kaynaklarına göz atın:
+Aşağıdakiler dahil olmak üzere kullanılabilir diğer destek kaynaklarına göz atabilirsiniz:
 - [Concierge Sohbeti](vs-concierge-chat.md)
 - [Geliştirici Topluluğu](vs-developer-community.md)
 - [Microsoft Soru-Cevap](vs-microsoft-qa.md)

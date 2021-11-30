@@ -1,34 +1,34 @@
 ---
-title: neden yalnızca Visual Studio Dev Essentials görüyorum ve Visual Studio aboneliğimi değil mi?
-description: tüm Visual Studio aboneliklerinizi görmüyorsanız yapılacaklar hakkında bilgi edinin
+title: Neden yalnızca Visual Studio Dev Essentials aboneliğimi görüyorum ve Visual Studio görüyorum?
+description: Tüm aboneliklerinizi görmüyorsanız ne Visual Studio öğrenin
 ms.topic: include
 ms.assetid: ab387e76-baec-4f27-9769-b2fc86e0c932
-author: caitybuschlen
-ms.author: cabuschl
+author: evanwindom
+ms.author: amast
 ms.date: 08/13/2021
 user.type: subscriber
 tags: portal-error
 subscription.type: vl, cloud, retail, partner
 sap.id: 8250612f-7446-20c5-7473-16d089f2280d
-ms.openlocfilehash: 013fcc9141e6189bb3dca4274a560a483d36cb2b
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: 594d602240309073b1986a97ab78e785472c19a4
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128427699"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133255711"
 ---
-## <a name="why-am-i-only-seeing-visual-studio-dev-essentials"></a>Neden yalnızca Visual Studio Dev Essentials görüyorum?
+## <a name="why-am-i-only-seeing-visual-studio-dev-essentials"></a>Neden yalnızca Visual Studio Dev Essentials?
 
-Aboneliklerinizin tamamını görmüyorsanız en yaygın nedenler şunlardır:
+Tüm aboneliklerinizi görmüyorsanız en yaygın nedenler:
 
-- **Abonelikleriniz farklı e-posta diğer adlarıyla ilişkili.**  Örneğin, Dev Essentials üyeliğiniz, genellikle gibi bir e-posta adresi kullanan Microsoft hesabınızla (MSA) ilişkiliyse myname@outlook.com ve sizin gibi farklı bir diğer adla ilişkili iş veya okulunuz tarafından size sağlanmış olan abonelikleriniz varsa myname@contoso.com . 
+- **Abonelikleriniz farklı e-posta diğer adlarla ilişkilendirildi.**  Örneğin, Dev Essentials üyeliğiniz genellikle gibi bir e-posta adresi kullanan Microsoft Hesabınız (MSA) ile ilişkili ise ve gibi farklı bir diğer adla ilişkilendirilmiş iş veya okul tarafından size sağlanan aboneliklere myname@outlook.com myname@contoso.com sahipsinizdir. 
 
-    Bu abonelikleri görmek için, uygun kimlik bilgileriyle [abonelikler portalında](https://my.visualstudio.com/subscriptions) oturum açmanız gerekir.  
+    Bu abonelikleri görmek için uygun kimlik bilgileriyle [abonelikler portalında](https://my.visualstudio.com/subscriptions) oturum açmanız gerekir.  
 
-- **Hangi aboneliğin görüntülendiğini değiştirmeniz gerekir.** Oturum açmak için kullandığınız e-postayla ilişkili birden çok aboneliğiniz varsa, aralarında iki şekilde geçiş yapabilirsiniz:
-    - Aboneliklerinizin listesini göstermek için [Abonelikler sayfasına](https://my.visualstudio.com/subscriptions) gidin ve kullanmak istediğiniz bir öğesine tıklayın. 
-    - [Avantajlar sayfasının](https://my.visualstudio.com/benefits) sağ üst kısmındaki abonelik seçicisine tıklayın ve istediğiniz aboneliği seçin. 
+- **Hangi aboneliğin görüntüleniyor olduğunu değiştirebilirsiniz.** Oturum a0 için kullanabileceğiniz e-posta ile ilişkilendirilmiş birden çok aboneliğiniz varsa, iki şekilde bu abonelikler arasında geçiş yapabilirsiniz:
+    - Aboneliklerin [listesini görüntülemek](https://my.visualstudio.com/subscriptions) için Abonelikler sayfasına gidin ve kullanmak istediğiniz aboneye tıklayın. 
+    - Avantajlar sayfasının sağ üst kısmında abonelik seçiciye [tıklayın ve](https://my.visualstudio.com/benefits) istediğiniz aboneliği seçin. 
 
-- **Aboneliğiniz kaldırıldı.**  Aboneliğiniz, iş veya okul 'niz tarafından size sağlanmışsa, yöneticiniz bu dosyayı kaldırmış olabilir. Yardım almak için [abonelik yöneticinize başvurun](https://docs.microsoft.com/visualstudio/subscriptions/contact-my-admin) .
+- **Aboneliğiniz kaldırıldı.**  Aboneliğiniz size iş veya okul tarafından sağlandı ise yöneticiniz aboneliği kaldırılmış olabilir. [Yardım için abonelik yöneticinize](https://docs.microsoft.com/visualstudio/subscriptions/contact-my-admin) başvurun.
 
-- **Aboneliğinizin geçerliliği bitmiş olabilir.** aboneliğinizi Microsoft Store satın aldıysanız, zaman aşımına uğradı. Bu durumda, erişimi yeniden kazanmak için yenilemeniz gerekir. [Abonelikler satın alma](https://docs.microsoft.com/visualstudio/subscriptions/buy-activate-retail)hakkında daha fazla bilgi edinin. 
+- **Aboneliğinizin süresi dolmuş olabilir.** Abonelikten kendi aboneliğinizi satın Microsoft Store süresi dolmuş olabilir. Bu durumda, yeniden erişim kazanmak için yenilemelisiniz. Abonelik satın alma hakkında daha [fazla bilgi edinin.](https://docs.microsoft.com/visualstudio/subscriptions/buy-activate-retail) 

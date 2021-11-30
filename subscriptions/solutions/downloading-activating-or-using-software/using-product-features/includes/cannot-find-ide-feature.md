@@ -4,18 +4,18 @@ description: Kullanmak istediğiniz IDE özelliğini bulamazsanız, yanlış Vis
 ms.topic: include
 ms.assetid: 986a4c63-610b-4d33-8b22-48452964da8b
 author: evanwindom
-ms.author: cabuschl
+ms.author: amast
 ms.date: 05/11/2020
 user.type: subscriber
 tags: download, activate, licensing
 subscription.type: vl, cloud, retail, partner
 sap.id: af210210-e3e1-2b2e-8d79-9bd20e851241
-ms.openlocfilehash: 662eae10edd485d274fdae9c7650c804992cb88f
-ms.sourcegitcommit: 364e106fcbf4fb6af534e81d8b700901f79f4ec8
+ms.openlocfilehash: 226898f94e317692d1dbd45c2ccea5d1b32083b0
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2021
-ms.locfileid: "129013356"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133255707"
 ---
 ## <a name="what-if-you-cant-find-the-ide-feature-you-want-to-use"></a>Kullanmak istediğiniz IDE özelliğini bulamazsanız ne olacak? 
 
@@ -29,7 +29,7 @@ aboneliğinize hangi Visual Studio sürümünün ekleneceğini belirledikten son
 
 Özellik başka bir abonelik düzeyine özel ise, abonelik düzeyinizi değiştirmeniz gerekir.  
 
-Visual Studio aboneliğiniz iş veya okulunuz tarafından sağlanmışsa, size bir abonelik yöneticisi tarafından atanmamıştır. [Abonelikler portalındaki](https://my.visualstudio.com/benefits)gezinimin sağ köşesindeki "yöneticime ulaşın" düğmesini kullanarak kuruluşunuzun yöneticisine ulaşın.  
+Visual Studio aboneliğiniz sizinle veya okulunuzda size sağlanmışsa, bu, size bir abonelik yöneticisi tarafından atanmış olabilir. [abonelikler portalındaki](https://my.visualstudio.com/benefits)gezinti alanının sağ köşesindeki "yöneticime ulaşın" düğmesini kullanarak kuruluşunuzun yöneticisine ulaşın.  
 
 Aboneliğinizi doğrudan satın aldıysanız veya bir yönetici yoksa, ihtiyacınız olan düzeyde yeni bir abonelik satın almanız gerekecektir.  
 

@@ -3,16 +3,16 @@ title: Bir sorum olduğunda yöneticimi nasıl bulabilirim?
 description: Aboneliğiniz size işinizden veya okulunuzdan sağlandıysa, yardım almak için sözleşmedeki yöneticilere...
 ms.topic: include
 ms.assetid: db6af747-4736-42e4-b090-404bcf45b015
-author: CaityBuschlen
-ms.author: cabuschl
+author: evanwindom
+ms.author: amast
 ms.date: 4/3/2020
 ms.faqid: q1_3
-ms.openlocfilehash: 2b2a45f31cad9ff131aa41bb5979c3e566f20b88
-ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
-ms.translationtype: HT
+ms.openlocfilehash: 41352f1b1e434df870a5c1c45900360f6d08f446
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "91838294"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133257686"
 ---
 ## <a name="how-do-i-find-my-admin-if-i-have-a-question"></a>Bir sorum olduğunda yöneticimi nasıl bulabilirim?
 

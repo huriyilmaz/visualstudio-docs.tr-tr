@@ -3,19 +3,19 @@ title: Nasıl yaparım? abonelik atamak istiyor musunuz?
 description: Süper yönetici veya yönetici, tek bir kullanıcı ekleme hakkında yardım arıyor.
 ms.topic: include
 ms.assetid: bd97b69d-f07e-43aa-b6a0-82c4633b8d88
-author: CaityBuschlen
-ms.author: cabuschl
+author: evanwindom
+ms.author: amast
 ms.date: 06/01/2021
 user.type: admin
 tags: assign
 subscription.type: vl, cloud, retail, partner
 sap.id: b84fffb5-3363-eb7d-224e-1c63faf4067b
-ms.openlocfilehash: 9982fa1a042eee846844b34601347d99be60ca61
-ms.sourcegitcommit: 65a1b6aae8387735f05a83b45e1a6865e9805e1f
+ms.openlocfilehash: ca59f224a4a0959c121137cc02efbd7367158257
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2021
-ms.locfileid: "129339820"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133254644"
 ---
 ## <a name="how-do-i-assign-a-subscription"></a>Nasıl yaparım? abonelik atamak istiyor musunuz?
 

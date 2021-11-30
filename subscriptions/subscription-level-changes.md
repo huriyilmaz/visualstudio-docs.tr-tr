@@ -1,25 +1,25 @@
 ---
-title: Abonelik düzeylerini Visual Studio değiştirmenin | Visual Studio Pazar
+title: Abonelik düzeylerini Visual Studio değiştirmenin | Visual Studio Market
 author: evanwindom
-ms.author: cabuschl
-manager: cabuschl
+ms.author: amast
+manager: shve
 ms.assetid: bb2fa359-8170-4db0-a0c5-d49fc692b0aa
 ms.date: 10/13/2021
 ms.topic: conceptual
-description: Abonelik düzeyinizi yükseltmenin veya indirmenin etkileri Visual Studio öğrenin.
-ms.openlocfilehash: fbb67ab6a79870695ad00809e900ca1e07c043c0
-ms.sourcegitcommit: 7a820b7698a8dcf076eb36e3d766fb0751f56bb1
+description: Aboneliğinizi yükseltmenin veya indirmenin etkileri hakkında Visual Studio öğrenin.
+ms.openlocfilehash: 4c37e2c73a7b59c6634b6937ffb849069653ad76
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "131127318"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133256716"
 ---
 # <a name="what-happens-when-you-change-visual-studio-subscription-levels"></a>Abonelik düzeylerinde değişiklik Visual Studio olur?
-Bu Visual Studio, sizin için kullanılabilen yazılım, araçlar, hizmetler ve diğer avantajlar abonelik düzeyinize bağlıdır.  Genellikle abonelik düzeyiniz ne kadar yüksek olursa sağladığı avantajlar o kadar sağlam olur.  
+Bu Visual Studio, yazılım, araçlar, hizmetler ve sizin için kullanılabilen diğer avantajlar abonelik düzeyinize bağlıdır.  Genellikle abonelik düzeyiniz ne kadar yüksek olursa sağladığı avantajlar o kadar sağlam olur.  
 
 Bir abonelik düzeyiyle başlayacağınız ve başka bir düzeye yükseltme (yükseltme) veya azaltma (eski sürüme düşürme) gibi senaryolar olabilir.  Bu senaryolara örnekler şunlardır:
 - Visual Studio IDE'nin daha tam özellikli bir sürümüne veya daha fazla yazılım indirmesi seçeneğine erişmeye ihtiyacınız olduğuna karar verirsiniz, bu nedenle yükseltmeyi seçersiniz. 
-- Şirketin abonelik yöneticisi, geçerli rolünüz veya projeniz ya da şirketinizin satın alma planlarında yapılan değişikliklere göre abonelik düzeyinizi değiştirebilir. Örneğin, şirketiniz maliyet tasarrufu sağlamak için satın alınan aboneliklerin karışımını değiştirebilir.  
+- Şirketin abonelik yöneticisi, geçerli rolünüz veya projeniz ya da şirketinizin satın alma planlarında yapılan değişikliklere göre abonelik düzeyinizi değiştirebilir. Örneğin, şirket maliyet tasarrufu elde etmek için satın alınan aboneliklerin karışımını değiştirebilir.  
 
 Yükseltme veya eski sürüme düşürme ve sahip olunan abonelik düzeyine bağlı olarak, yeni aboneliğinizin avantajlarına erişmek için eyleme geçebilirsiniz.
 
@@ -27,7 +27,7 @@ Yükseltme veya eski sürüme düşürme ve sahip olunan abonelik düzeyine bağ
 Belirli bir avantaj için göreceğiniz değişiklikler, avantajın kendisine bağlıdır.  Bazı örneklere göz atacak ve her biri için yükseltme ve eski sürüm düşürme etkilerini ele aacağız.
 
 ### <a name="visual-studio-ide"></a>Visual Studio IDE
-Aboneliklerinize hangi Visual Studio dahil olduğu hakkında bilgi için abonelik avantajları [sayfamızı Visual Studio göz atın.](https://visualstudio.microsoft.com/vs/benefits/) Aboneliklerinize dahil edilen sürümler arasındaki farklar hakkında bilgi edinmek için Visual Studio [2019](https://visualstudio.microsoft.com/vs/compare/) Yayınlarını Karşılaştır sayfasını ziyaret edin.
+Aboneliklerinize hangi Visual Studio dahil olduğu hakkında bilgi için abonelik avantajları [sayfamızı Visual Studio göz atın.](https://visualstudio.microsoft.com/vs/benefits/) Aboneliklerinize dahil Visual Studio arasındaki farklar hakkında bilgi edinmek için Karşılaştırma [2019](https://visualstudio.microsoft.com/vs/compare/) Sürümleri sayfasını ziyaret edin.
  
 YÜKSELTMELER: Yeni aboneliğiniz için sağlanan IDE düzeyine erişebilirsiniz.  Bunu kullanmak için alt sürümü kaldırıp yeni ve daha yüksek sürümü yüklemeniz gerekir.  
 
@@ -48,7 +48,7 @@ Aboneliğinizi Visual Studio, kredileri alan Azure aboneliğinizin bağlantısı
 Sizin için kullanılabilir yazılım indirmeleri, abonelik düzeyinize bağlıdır.  Ayrıntılar için kullanılabilir yazılım [indirmeleri listesi makalemize](software-download-list.md) bakın. 
 
   > [!TIP] 
-  > İndirmeler sayfasında gördüğünüz yazılım başlıklarının [listesi,](https://my.visualstudio.com/downloads) oturum açma e-posta adresinize atadığı en yüksek abonelik düzeyine bağlıdır.  Sahip olduğunuz en yüksek abonelik düzeyindeki **tüm başlıkların** kullanılabilir olduğunu görüyorsunuz.  Örneğin, bir Visual Studio Enterprise aboneliğiniz ve Visual Studio Dev Essentials üyeliğiniz varsa Dev Essentials üyeliğinde oturum asanız bile Enterprise aboneliğinize dahil edilen tüm başlıkların olduğunu görebilir.  
+  > İndirmeler sayfasında gördüğünüz yazılım başlıklarının [listesi,](https://my.visualstudio.com/downloads) oturum açma e-posta adresinize atadığı en yüksek abonelik düzeyine bağlıdır.  Sahip olduğunuz en yüksek abonelik düzeyine sahip **tüm başlıkların** kullanılabilir olduğunu görüyorsunuz.  Örneğin, bir Visual Studio Enterprise aboneliğiniz ve Visual Studio Dev Essentials üyeliğiniz varsa Dev Essentials üyeliğinde oturum asanız bile Enterprise aboneliğinize dahil edilen tüm başlıkların olduğunu görebilir.  
 
 ### <a name="other-benefits"></a>Diğer avantajlar 
 Abonelik düzeylerini değiştirmenin diğer avantajlar üzerindeki etkileri büyük ölçüde değişiklik gösterebilir.  
@@ -63,7 +63,7 @@ Visual Studio'da her oturum asanız kimliği doğrulanmış bir avantaj kullanı
 Geçerli aboneliğinize sunulan avantajları kullanıyorsanız ancak sizin eski sürüme düşürülen abonelikte kullanmadıysanız, bu avantajlara erişimi kaybedebilirsiniz.  
 
 ## <a name="support-resources"></a>Destek kaynakları
-- Visual Studio Abonelikleri için satış, abonelikler, hesaplar ve faturalama ile ilgili yardım için destek [Visual Studio ile iletişime geçin.](https://my.visualstudio.com/gethelp)
+- Abonelikler için satış, abonelikler, hesaplar ve faturalama konusunda yardım Visual Studio abonelik [desteği için Visual Studio iletişim kurun.](https://my.visualstudio.com/gethelp)
 - IDE, Visual Studio veya diğer Azure DevOps ürünler veya hizmetler hakkında Visual Studio bir soru var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
 
 ## <a name="see-also"></a>Ayrıca bkz.

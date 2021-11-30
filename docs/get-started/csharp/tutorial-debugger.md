@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5a6bc40fc19dd36c7cfae35e33b94c6c27a348e5
-ms.sourcegitcommit: bfae1f88c278835e26f3200cfced769be3191fc4
+ms.openlocfilehash: b872043a5e8b200f6f5678857aa1c4e67c53945b
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2021
-ms.locfileid: "132535314"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133257055"
 ---
 # <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>Öğretici: Visual Studio kullanarak C# kodunun hatalarını ayıklamayı öğrenin
 
@@ -117,7 +117,7 @@ zaten Visual Studio sahipseniz ancak **.net masaüstü geliştirme** iş yükü 
 
 1. **yeni projeyi yapılandırın** penceresinde, **Project adı** kutusuna *getstarteddebugging* yazın veya girin. Ardından **İleri**' yi seçin.
 
-1. Önerilen hedef Framework 'ü (.NET Core 3,1) veya .NET 5 ' i seçin ve ardından **Oluştur**' u seçin.
+1. Önerilen hedef Framework 'ü (.NET Core 3,1 (uzun süreli destek)) veya .NET 5,0 (geçerli) seçin ve ardından **Oluştur**' u seçin.
 
    Visual Studio yeni projenizi açar.
 
@@ -142,7 +142,7 @@ zaten Visual Studio sahipseniz ancak **.net masaüstü geliştirme** iş yükü 
 
 1. **yeni projeyi yapılandırın** penceresinde, **Project adı** kutusuna *getstarteddebugging* yazın veya girin. Ardından **İleri**' yi seçin.
 
-1. **Ek bilgi** penceresinde, **Framework** açılan menüsünde **.net 6,0** ' ın seçildiğinden emin olun ve ardından **Oluştur**' u seçin.
+1. **Ek bilgi** penceresinde, **Framework** açılan menüsünde **.net 6,0 (uzun vadeli destek)** seçildiğinden emin olun ve ardından **Oluştur**' u seçin.
 
     Visual Studio yeni projenizi açar.
 
@@ -250,7 +250,7 @@ Genellikle, burada klavye kısayollarını kullanıyoruz. Bu, hata ayıklayıcı
 
     Kesme noktaları, güvenilir hata ayıklamanın en temel ve temel özelliklerinden biridir. bir kesme noktası Visual Studio, çalışan kodunuzun nerede askıya alınacağını gösterir; böylece değişkenlerin değerlerine veya bellek davranışına ya da kodun bir dalının çalıştırılıp çalıştırılmayacağı konusunda bir görünüm elde edebilirsiniz.
 
-1. **F5** tuşuna basın veya ![' hata ayıklamayı Başlat ' düğmesinin ekran görüntüsünü](../../debugger/media/dbg-tour-start-debugging.png "Hata ayıklamayı Başlat") **başlatın** ., uygulama başlar ve hata ayıklayıcı, kesme noktasını ayarladığınız kod satırına çalışır.
+1. **F5** tuşuna basın veya ![' hata ayıklamayı Başlat ' düğmesinin ekran görüntüsünü](../../debugger/media/dbg-tour-start-debugging.png "Hata Ayıklamayı Başlat") **başlatın** ., uygulama başlar ve hata ayıklayıcı, kesme noktasını ayarladığınız kod satırına çalışır.
 
     ![Kesme noktası ayarlama ve isabet](../csharp/media/get-started-set-breakpoint.gif)
 
@@ -264,171 +264,171 @@ Genellikle, burada klavye kısayollarını kullanıyoruz. Bu, hata ayıklayıcı
 
 ::: moniker range=">=vs-2022"
 
-1. `for` `Main` İşlevin döngüsünde, aşağıdaki kod satırının sol kenar boşluğuna tıklayarak bir kesme noktası ayarlayın:
+1. işlevinin `for` `Main` döngüsünde, aşağıdaki kod satırın sol kenar boşluğuna tıklayarak bir kesme noktası ayarlayın:
 
     `name += letters[i];`
 
-    Kesme noktasını ayarladığınız yerde kırmızı bir daire görünür.
+    Kesme noktası ayar yakın bir yerde kırmızı bir daire görünür.
 
-    :::image type="content" source="media/vs-2022/dbg-tour-breakpoint.png" alt-text="Visual Studio 2022 ' de bir kesme noktasının ekran görüntüsü."::: 
+    :::image type="content" source="media/vs-2022/dbg-tour-breakpoint.png" alt-text="Visual Studio 2022'de kesme noktası ekran görüntüsü."::: 
 
-    Kesme noktaları, güvenilir bir hata ayıklama için önemli bir özelliktir. değişkenlerin değerlerine veya bellek davranışına bakabilmeniz veya kodun bir dalının çalıştırılıp çalıştırılmadığını bilmeniz için, Visual Studio çalışan kodunuzu duraklatmayı istediğiniz noktaları ayarlayabilirsiniz.
+    Kesme noktaları, güvenilir hata ayıklamanın temel bir özelliğidir. Değişkenlerin değerlerine veya bellek davranışına bakarak veya bir kod dalını çalıştırıp çalıştırmama konusunda bilgi almak için Visual Studio'nin çalışan kodunuzu duraklatmanızı istediğiniz kesme noktaları ayarlayın.
 
-1. Hata ayıklamayı başlatmak için **F5**' i seçin veya Standart araç çubuğunda **hedefi Ayıkla** ' yı seçin veya hata ayıklama araç çubuğunda Hata **ayıklamayı** Başlat düğmesini seçin veya menü çubuğunda hata ayıklamayı Başlat ' **ı seçin**  >   . Uygulama başlar ve hata ayıklayıcı, kesme noktasını ayarladığınız kod satırına çalışır.
+1. Hata ayıklamayı başlatmak için **F5'i** seçin veya Standart araç çubuğundan  Hata Ayıklama Hedefi düğmesini seçin ya da Hata Ayıklama araç çubuğunda Hata Ayıklamayı Başlat düğmesini seçin veya menü çubuğundan Hata AyıklamaYı Başlat'ı   >   seçin. Uygulama başlatılır ve hata ayıklayıcı, kesme noktası ayarlayıcısının ayar bulunduğu kod satırına çalışır.
 
-    :::image type="content" source="media/vs-2022/get-started-set-breakpoint.png" alt-text="Visual Studio 2022 ' nin kod düzenleyicisinde bir kesme noktasını gösteren ekran görüntüsü, kod yürütme kesme noktasında duraklatıldı.":::
+    :::image type="content" source="media/vs-2022/get-started-set-breakpoint.png" alt-text="Visual Studio 2022'nin kod düzenleyicisinde kesme noktası gösteren ve kesme noktası sırasında kod yürütmenin duraklatılmış olduğu ekran görüntüsü.":::
 
-    Sarı ok, hata ayıklayıcının duraklatıldığı ifadeye işaret eder. Uygulama yürütmesi, deyimin henüz yürütülmemiş olduğu bir noktada duraklatılır.
+    Sarı ok, hata ayıklayıcının duraklatılmış olduğu deyimini belirtir. Uygulama yürütme aynı noktada duraklatılır ve deyimi henüz yürütülmedi.
 
-    Uygulama çalışmadığı zaman, **F5** , ilk kesme noktasına ulaşıncaya kadar uygulamayı çalıştıracak hata ayıklayıcıyı başlatır. Uygulama bir kesme noktasında duraklatıldığında, **F5** bir sonraki kesme noktasına ulaşıncaya kadar uygulamayı çalıştırmaya devam edecektir.
+    Uygulama çalışmadığı zaman **F5** hata ayıklayıcıyı başlatacak ve ilk kesme noktası ulaşana kadar uygulamayı çalıştıracak. Uygulama bir kesme noktası üzerinden duraklatılırsa **F5,** bir sonraki kesme noktası ulaşana kadar uygulamayı çalıştırmaya devam eder.
 
-    Ayrıntılı olarak incelemek istediğiniz kod satırını veya bölümünü bildiğiniz kesme noktaları yararlı bir özelliktir. Koşullu kesme noktaları gibi ayarlayabileceğiniz farklı kesme noktaları türleri hakkında daha fazla bilgi için bkz. [kesme noktaları kullanma](../../debugger/using-breakpoints.md).
+    Kesme noktaları, ayrıntılı olarak incelemek istediğiniz kod satırı veya bölümünü biliyorken yararlı bir özelliktir. Koşullu kesme noktaları gibi ayar yalnızca farklı kesme noktası türleri hakkında daha fazla bilgi için [bkz. Kesme noktaları kullanma.](../../debugger/using-breakpoints.md)
 
 ::: moniker-end
 
-## <a name="navigate-code-and-inspect-data-by-using-data-tips"></a>Veri ipuçlarını kullanarak kodda gezinin ve verileri inceleyin
+## <a name="navigate-code-and-inspect-data-by-using-data-tips"></a>Veri ipuçlarını kullanarak kodda gezinme ve verileri inceleme
 
 ::: moniker range="<=vs-2019"
 
-Çoğu durumda buradaki klavye kısayollarını kullanıyoruz. Bu, uygulamanızı hata ayıklayıcıda yürütmek için iyi bir yoldur (menü komutları gibi eşdeğer komutlar parantez içinde gösterilir).
+Genellikle burada klavye kısayollarını kullanırız çünkü bu, uygulamanızı hata ayıklayıcısında yürütmeyi hızlı bir şekilde yürütmenin iyi bir yolu olduğundan (menü komutları gibi eşdeğer komutlar parantez içinde gösterilir).
 
-1. İfadede duraklalarken `name += letters[i]` , değişkenin üzerine gelin `letters` ve varsayılan değerini, dizideki ilk öğenin değerini görürsünüz `char[10]` .
+1. deyiminde duraklatılmışken değişkeninin üzerine gelin ve bunun varsayılan değeri olan dizideki ilk `name += letters[i]` `letters` öğenin değerini `char[10]` görüyorsunuz.
 
-     Değişkenleri incelemenizi sağlayan özellikler, hata ayıklayıcının en yararlı özelliklerinden biridir ve bunu yapmak için farklı yollar vardır. Genellikle, bir sorunu ayıklamaya çalıştığınızda, değişkenlerin belirli bir zamanda sahip olmalarını istediğiniz değerleri depolayıp depoladığını bulmaya çalışıyorsunuz.
+     Değişkenleri incelemenizi sağlayan özellikler, hata ayıklayıcının en kullanışlı özelliklerinden birisidir ve bunu yapmak için farklı yollar vardır. Genellikle, bir sorunda hata ayıklamaya çalışırken değişkenlerin belirli bir zamanda sahip olmasını beklediğiniz değerleri depolayarak depolamaya çalışmaya çalıştığınız olur.
 
 1. Değişkenin `letters` içerdiği tüm öğeleri içeren özelliklerini görmek için değişkeni genişletin.
 
-     ![Hata ayıklayıcının ' name + = harfler [I] ' deyimindeki durakladığı ekran görüntüsü.](../csharp/media/get-started-view-data-tip.png)
+     !['name+= letters[I]' deyiminde duraklatılmış olan hata ayıklayıcının ekran görüntüsü.](../csharp/media/get-started-view-data-tip.png)
 
-1. Sonra, değişkenin üzerine gelin `name` ve geçerli değerini boş bir dize olarak görürsünüz.
+1. Ardından değişkeninin `name` üzerine gelin ve geçerli değerinin boş bir dize olduğunu görüyorsunuz.
 
-1. Yöntem çağrısına ilerlemek için **F10** tuşuna basın (veya **hata ayıklama > Adımlama**' i seçin) `SendMessage` ve ardından **F10** bir kez daha tuşuna basın.
+1. Yöntem **çağrısına ilerlemek için F10** **tuşuna basın**(veya > AdımLa) hata ayıkla'ya basın ve `SendMessage` ardından **F10'a** bir kez daha basın.
 
-     F10 hata ayıklayıcıyı, uygulama kodunuzda işlevlere veya yöntemlere adımla bir sonraki ifadeye ilerletir (kod yine de çalıştırılır). Yöntem çağrısında F10 tuşuna basarak `SendMessage` , için uygulama kodu atlandık `SendMessage` (Bu, şu anda ilgilentik olabilir).
+     F10, uygulama kodundaki işlevlere veya yöntemlere adımlamadan hata ayıklayıcıyı bir sonraki deyime ilerletmektedir (kod yürütülmektedir). Yöntem çağrısında F10 tuşuna basarak, uygulama kodunu atlamıştık (bu şu `SendMessage` `SendMessage` anda ilgilenmediğimiz bir şey olabilir).
 
-1. Bir  kez döngü aracılığıyla  > birkaç kez yineleyebilir `for` , kesme noktasında tekrar duraklatarak ve `name` değerini denetlemek için her seferinde üzerine gelindiğinde, F10 tuşuna basın (veya hata ayıklama adımından).
+1. Döngüde birkaç kez  tekrarlama, kesme noktası üzerinde yeniden duraklatma ve değerini kontrol etmek için her zaman değişkenin üzerine gelme için **F10'a** (veya Adım Adım Hata Ayıklama) birkaç kez >  `for` `name` basın.
 
-     ![Visual Studio hata ayıklayıcının, F10 tuşuna basarak "adımla" ve hata ayıklama sırasında bir döngüde yineleme etkisini gösteren animasyonlu bir ekran görüntüsü.](../csharp/media/get-started-data-tip.gif)
+     ![Hata Ayıklayıcısı'Visual Studio F10'a "Adım At" tuşuna basmanın ve hata ayıklama sırasında döngüde tekrarlamanın etkisini gösteren animasyonlu ekran görüntüsü.](../csharp/media/get-started-data-tip.gif)
 
-     Değişkenin değeri, döngü her tekrarında değişir ve `for` değerlerini, sonra, vb. gösterir `f` `fr` `fre` . Bu senaryoda hata ayıklayıcıyı daha hızlı bir şekilde ilerletmek için **F5** tuşuna basabilir (veya **Hata Ayıkla**  >  **devam et**' i seçebilirsiniz), bunun yerine bir sonraki ifade yerine kesme noktasına ilerletebilirsiniz.
+     Değişkenin değeri, döngüde her yineleme ile birlikte değişir ve ardından `for` , ve gibi değerleri `f` `fr` `fre` gösterir. Bu senaryoda hata ayıklayıcıyı döngüde daha hızlı ilerlemek için  **F5** tuşuna basabilirsiniz (veya Devam Et'i seçerek) bir sonraki deyim yerine kesme noktası  >  üzerinden ilerleyin.
 
-     Genellikle, hata ayıklarken, değişkenleri üzerinde özellik değerlerini denetlemeye yönelik hızlı bir yol isteyeceksiniz ve bu değerlerin depolanmasını beklediğinizi ve veri ipuçları bunu yapmanın iyi bir yoludur.
+     Hata ayıklama sırasında genellikle değişkenlerde özellik değerlerini denetlemenin, depolamasını beklediğiniz değerleri depolayarak depolamalarının gerekip gerek olmadığını ve veri ipuçlarının bunu yapmak için iyi bir yol olup olmadığını görmek için hızlı bir yol gerekir.
 
-1. Metodun döngüsünde hala duraklatıldıktan `for` `Main` sonra, yöntem çağrısında duraklamadan **F11** tuşuna basın (veya **Hata Ayıkla > adımla**' yı seçin) `SendMessage` .
+1. yönteminde döngüde duraklatılmışken, yöntem çağrısında duraklatana kadar F11 tuşuna basın (veya Hata ayıkla > `for` `Main` **Adımla)**  `SendMessage` seçin.
 
-     Şu kod satırında olmalısınız:
+     Şu kod satırına bakabilirsiniz:
 
      `SendMessage(name, a[i]);`
 
-1. Yönteme adım eklemek için bir kez daha **F11** tuşuna basın `SendMessage` .
+1. yöntemine **adımını atarak F11'e** bir kez daha `SendMessage` basın.
 
-     Sarı işaretçi `SendMessage` yöntemine ilerler.
+     Sarı işaretçi yöntemine `SendMessage` ilerler.
 
-     ![' SendMessage ' yöntemindeki yürütme işaretçisinin ekran görüntüsü.](../csharp/media/get-started-f11.png "F10 adımla")
+     !['SendMessage' yönteminde yürütme işaretçisinin ekran görüntüsü.](../csharp/media/get-started-f11.png "F10 Içine Adımla")
 
-     F11, **adımla** komutuna ve aynı anda uygulama yürütmeyi tek bir ifadeye ilerletir. F11, yürütme akışını en ayrıntılı incelemek için iyi bir yoldur. Varsayılan olarak, hata ayıklayıcı kullanıcı olmayan koddan atlar (daha fazla ayrıntı istiyorsanız, bkz. [yalnızca kendi kodum](../../debugger/just-my-code.md)).
+     F11, **Adımla komutudır** ve uygulama yürütmeyi tek tek bir deyimle ilerleter. F11, yürütme akışını en ayrıntılı şekilde incelemek için iyi bir yol sağlar. Varsayılan olarak, hata ayıklayıcı kullanıcı olmayan kodu atlar (daha fazla ayrıntı için bkz. [Yalnızca kendi kodum).](../../debugger/just-my-code.md)
 
-     Yöntemi incelemeyi bitirdiğinizde `SendMessage` ve yönteminden yararlanmak ve hata ayıklayıcıda kalmak istediğinizi varsayalım. Bunu, **Step Out** komutunu kullanarak yapabilirsiniz.
+     Yöntemini incelemeyi tamamlaya kadar yöntemin dışında kalmak ancak hata `SendMessage` ayıklayıcıda kalmak istediğinizi diyelim. Bunu Yapmak için Dışarı **Adımla komutunu kullanın.**
 
-1. **SHIFT** + **F11** tuşuna basın (veya **hata ayıklama > Step Out**).
+1. Shift  + **F11 tuşuna** basın (veya **> Adım Atarak) hata ayıkla'ya basın.**
 
-     Bu komut, geçerli yöntem veya işlev dönene kadar uygulama yürütmeyi sürdürür (ve hata ayıklayıcıyı ilerletir).
+     Bu komut, geçerli yöntem veya işlev geri dönene kadar uygulama yürütmeyi sürdürür (ve hata ayıklayıcıyı ilerleter).
 
-     Yöntem `for` çağrısında duraklamış olması için, yöntemde döngüde geri dönüş yapmanız gerekir `Main` `SendMessage` . Kodunuzda taşımanın farklı yolları hakkında daha fazla bilgi için bkz. [hata ayıklayıcıdaki koda gitme](../../debugger/navigating-through-code-with-the-debugger.md).
+     yöntem çağrısında `for` duraklatılmış `Main` yönteminde döngüsüne geri `SendMessage` dönmeniz gerekir. Kodunuz arasında taşımanın farklı yolları hakkında daha fazla bilgi için bkz. [Hata ayıklayıcısında kodda gezinme.](../../debugger/navigating-through-code-with-the-debugger.md)
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2022"
 
-1. İfadede duraklalarken `name += letters[i]` , `letters` dizi boyutunu ve öğe türünü gösteren bir veri ipucu görmek için değişkenin üzerine gelin `char[10]` .
+1. deyiminde duraklatılırken, dizi boyutunu ve öğe türünü gösteren bir veri ipucu görmek için `name += letters[i]` `letters` değişkeninin üzerine `char[10]` gelin.
 
     > [!NOTE]
-    > Hata ayıklayıcının en faydalı özelliklerinden biri bir değişkeni İnceleme olanağıdır. Genellikle, bir sorunu ayıklamaya çalışırken, değişkenlerin belirli bir zamanda beklediğinizi belirten değerlere sahip olup olmadığını bulmaya çalışıyorsunuz. Veri ipuçlarını görüntüleme, bunu denetlemek için iyi bir yoldur.
+    > Hata ayıklayıcının en kullanışlı özelliklerinden biri, değişkeni incelemesidir. Genellikle bir sorunda hata ayıklamaya çalışırken değişkenlerin belirli bir zamanda beklediğiniz değerlere sahip olup olmadığını bulmaya çalışıyor oluruz. Veri ipuçlarını görüntüleme, bunu denetlemenin iyi bir yolu olabilir.
 
-1. `letters`Tüm dizi öğelerini ve bunların değerlerini görüntülemek için değişkeni genişletin.
+1. Tüm dizi `letters` öğelerini ve değerlerini görüntülemek için değişkenini genişletin.
 
-    :::image type="content" source="media/vs-2022/get-started-view-data-tip.png" alt-text="Visual Studio 2022 ' de, ' harfler ' dizi değişkeninin öğe değerlerini gösteren bir hata ayıklayıcı veri ipucu ekran görüntüsü.":::
+    :::image type="content" source="media/vs-2022/get-started-view-data-tip.png" alt-text="'Letters' dizi değişkeninin öğe değerlerini gösteren Visual Studio 2022'de hata ayıklayıcısı veri ipucu ekran görüntüsü.":::
 
-1. `name`Boş bir dize olan geçerli değerini görmek için değişkenin üzerine gelin.
+1. Boş bir `name` dize olan geçerli değerini görmek için değişkenin üzerine gelin.
 
-1. Hata ayıklayıcıyı sonraki ifadeye ilerletmek için **F10**' i seçin veya hata ayıklama araç çubuğunda **adım adım** düğmesini seçin ya da menü çubuğunda **hata ayıklama**  >  **adımı** ' nı seçin. Yöntem çağrısının ötesine geçmek için **F10** iki kez daha seçin `SendMessage` . 
+1. Hata ayıklayıcıyı bir sonraki deyime ilerlemek için  **F10'u** seçin veya Hata Ayıklama araç çubuğundaKi Adım Adım düğmesini seçin veya menü çubuğundan Hata Ayıklama Adımını  >   Ayıkla'ya tıklayın. Yöntem **çağrısının geri adımını** taşımak için F10'ı iki `SendMessage` kez daha seçin. 
 
-    **F10** , kod ya da yöntemlere adımla hata ayıklayıcıyı ilerletir, ancak kodu hala yürütülür. Bu şekilde, `SendMessage` Şu anda ilgilendiğimiz yöntemde kodda hata ayıklamayı atladık.
+    **F10,** kodu hala yürütülse de işlev veya yöntemlere adımlamadan hata ayıklayıcıyı ilerleter. Bu şekilde yönteminde kodun hata ayıklamasını atlamış oluruz ve şu anda `SendMessage` ilgilenmeziz.
 
-1. `for`Döngüyü birkaç kez yinelemek Için **F10** ' i tekrar tekrar seçin. Her döngü yinelemesi sırasında kesme noktasında duraklatın ve sonra `name` veri ipucunda değerini denetlemek için değişkenin üzerine gelin.
+1. Döngüde birkaç kez `for` yinelenirken **tekrar tekrar F10'ı** seçin. Her döngü yinelemesi sırasında kesme noktası sırasında duraklatın ve ardından veri ipucunda değerini `name` kontrol etmek için değişkenin üzerine gelin.
 
-    :::image type="content" source="media/vs-2022/get-started-data-tip.png" alt-text="Visual Studio 2022 ' de hata ayıklayıcı veri ipucunun ekran görüntüsü ' name ' değişkeninin dize değerini gösterir.":::
+    :::image type="content" source="media/vs-2022/get-started-data-tip.png" alt-text="'name' değişkeninin dize değerini gösteren Visual Studio 2022'de hata ayıklayıcısı veri ipucu ekran görüntüsü.":::
 
-    Değişkenin değeri, döngü her tekrarında değişir ve `for` değerlerini, sonra, vb. gösterir `f` `fr` `fre` . Hata ayıklayıcıyı daha hızlı bir şekilde ilerletmek için, bunun yerine **F5** ' i seçin. Bu, sonraki bildiri yerine kesme noktasına ilerletir.
+    Değişkenin değeri, döngüde her yineleme ile birlikte değişir ve ardından `for` , ve gibi değerleri `f` `fr` `fre` gösterir. Hata ayıklayıcıyı döngüde daha hızlı ilerlemek için **F5'i** seçin. Bu seçim sonraki deyim yerine kesme noktanıza ilerler.
 
-1. Metodun döngüsünde durakladığında `for` `Main` , **F11**' ı seçin veya hata ayıklama araç çubuğundan **adımla** düğmesine basın veya menü çubuğunda **Hata Ayıkla** > **adımla** ' i seçerek `SendMessage` yöntem çağrısına erişin.
+1. Yöntemin döngüsünde duraklatılmışken `for` `Main`   **F11'i** seçin veya Hata Ayıklama araç çubuğundan Adımla düğmesini seçin veya yöntem çağrısına ulaşana kadar menü çubuğundan Hata Ayıklama Adımını Ayıkla'ya >  `SendMessage` tıklayın.
 
-     Hata ayıklayıcı bu kod satırında duraklamalıdır:
+     Hata ayıklayıcısı şu kod satırına duraklatılmış olması gerekir:
 
      `SendMessage(name, a[i]);`
 
-1. Yöntemine dönmek için `SendMessage` **F11** ' i yeniden seçin.
+1. yöntemine adımını `SendMessage` eklemek için **F11'i yeniden** seçin.
 
-     Sarı işaretçi `SendMessage` yöntemine ilerler.
+     Sarı işaretçi yöntemine `SendMessage` ilerler.
 
-     :::image type="content" source="media/vs-2022/get-started-f11.png" alt-text="' SendMessage ' yöntemi içindeki hata ayıklayıcının yürütme işaretçisini gösteren ekran görüntüsü.":::
+     :::image type="content" source="media/vs-2022/get-started-f11.png" alt-text="'SendMessage' yönteminde hata ayıklayıcının yürütme işaretçisini gösteren ekran görüntüsü.":::
 
-     **F11** , kodunuzun yürütme akışını daha ayrıntılı bir şekilde incelemenize yardımcı olur. Yöntem çağrısından bir yönteme geçmek için **F11**' i seçin. Varsayılan olarak, hata ayıklayıcı kullanıcı olmayan yöntemlere adımlamayı atlar. Kullanıcı olmayan koddan hata ayıklama hakkında bilgi edinmek için bkz. [yalnızca kendi kodum](../../debugger/just-my-code.md).
+     **F11,** kodunuzun yürütme akışını daha ayrıntılı incelemenize yardımcı olur. Yöntem çağrısından bir yönteme adım eklemek için **F11'i seçin.** Varsayılan olarak, hata ayıklayıcı kullanıcı olmayan yöntemlere adımlamayı atlar. Kullanıcı olmayan kodda hata ayıklama hakkında bilgi edinmek için bkz. [Yalnızca kendi kodum.](../../debugger/just-my-code.md)
 
-     Yöntemi hata ayıklamayı tamamladıktan sonra `SendMessage` , yönteminin döngüsüne geri dönmek için hazırsınız demektir `for` `main` .
+     Yöntemin hata ayıklamasını `SendMessage` tamamladikten sonra yöntemin döngüsüne `for` geri dönmek için hazır `main` oluruz.
 
-1. Yöntemi bırakmak için `SendMessage` **SHIFT + F11**' i seçin veya hata ayıklama araç çubuğundaki **Step Out** (Hata Ayıkla) düğmesini seçin veya menü çubuğunda **Hata Ayıkla** seçeneğini belirleyin >  .
+1. Yöntemi bırakmak `SendMessage` için **Shift+F11'i** seçin  veya Hata Ayıklama araç çubuğundaki  Adım At düğmesini seçin veya menü çubuğundan Hata Ayıklama > **Adımını** Ayıkla'ya tıklayın.
 
-     **Adımla** , uygulama yürütmeye devam eder ve geçerli yöntem veya işlev dönene kadar hata ayıklayıcıyı ilerletir.
+     **Dışarı Adımla,** uygulama yürütmeyi sürdürür ve geçerli yöntem veya işlev geri dönene kadar hata ayıklayıcıyı ilerleter.
 
-     Yöntemin döngüsünde sarı işaretçiyi geri görürsünüz `for` `Main` ve `SendMessage` Yöntem çağrısında duraklatılabilir. Kodunuzda taşımanın farklı yolları hakkında daha fazla bilgi için bkz. [hata ayıklayıcıdaki koda gitme](../../debugger/navigating-through-code-with-the-debugger.md).
+     Yöntemin döngüsünde sarı `for` işaretçiyi, yöntem `Main` çağrısında duraklatılmış `SendMessage` olarak tekrar görüyorsunuz. Kodunuz arasında taşımanın farklı yolları hakkında daha fazla bilgi için bkz. [Hata ayıklayıcısında kodda gezinme.](../../debugger/navigating-through-code-with-the-debugger.md)
 
 ::: moniker-end
 
-## <a name="navigate-code-using-run-to-click"></a>Çalıştırmak için Çalıştır 'ı kullanarak kodu gezin
+## <a name="navigate-code-using-run-to-click"></a>Tıklarken Çalıştır'ı kullanarak kodda gezinme
 
 ::: moniker range="<=vs-2019"
 
-1. Kesme noktasına yeniden ilerlemek için **F5** ' i seçin.
+1. Kesme noktası tekrar ilerlemek için **F5'i** seçin.
 
-1. Kod Düzenleyicisi 'nde aşağı kaydırın ve `Console.WriteLine` `SendMessage` ![' tıklamak üzere Çalıştır ' düğmesinin](../../debugger/media/dbg-tour-run-to-click.png "RunToClick") düğmesine **tıklayana** kadar, yöntemin içindeki yöntemin üzerine gelin. Sol tarafta görüntülenir. Düğme araç ipucu "yürütmeyi buraya kadar Çalıştır" gösterir.
+1. Kod düzenleyicisinde aşağı kaydırın ve yeşil renkli Tıklanacak Şekilde Çalıştır düğmesinin Görüntüsü 'Tıklanacak Şekilde Çalıştır' düğmesinin görüntüsüne kadar `Console.WriteLine` `SendMessage` ![yönteminde yönteminin üzerine gelin.](../../debugger/media/dbg-tour-run-to-click.png "RunToClick")  sol tarafta görünür. Düğmenin araç ipucu "Yürütmeyi buraya kadar çalıştır" ifadesini gösterir.
 
-     ![' Tıklama için Çalıştır ' düğmesinin ekran görüntüsü.](../csharp/media/get-started-run-to-click.png "Tıklanan Satıra Kadar Çalıştır")
+     !['Tıklamak için Çalıştır' düğmesinin ekran görüntüsü.](../csharp/media/get-started-run-to-click.png "Tıklanan Satıra Kadar Çalıştır")
 
    > [!NOTE]
-   > **Tıklama Için Çalıştır düğmesi '** de yenidir [!include[vs_dev15](../../misc/includes/vs_dev15_md.md)] . (Yeşil ok düğmesini görmüyorsanız, hata ayıklayıcıyı doğru yere ilerletmek için bu örnekte **F11** kullanın.)
+   > Tıklayarak **Çalıştır düğmesi** içinde [!include[vs_dev15](../../misc/includes/vs_dev15_md.md)] yenidir. (Yeşil ok düğmesini görmüyorsanız hata ayıklayıcıyı doğru yere ilerlemek için bu örnekte **F11** kullanın.)
 
-1. ![' Tıklamanız Için Çalıştır ' düğmesinin](../../debugger/media/dbg-tour-run-to-click.png "RunToClick")düğmesine **tıklayarak Çalıştır** ' a tıklayın.
+1. **Tıklarken Çalıştır düğmesine** Tıklayın !['Tıklaya Çalıştır' düğmesinin görüntüsü.](../../debugger/media/dbg-tour-run-to-click.png "RunToClick").
 
-    Hata ayıklayıcı `Console.WriteLine` yöntemine ilerler.
+    Hata ayıklayıcısı yöntemine `Console.WriteLine` ilerler.
 
-    Bu düğme kullanıldığında geçici bir kesme noktası ayarlamaya benzer. **' I tıklatarak** , uygulama kodunun görünür bir bölgesi içinde hızlıca elde etmek için kullanışlıdır (herhangi bir açık dosyaya tıklayabilirsiniz).
+    Bu düğmeyi kullanmak, geçici bir kesme noktası ayarlamaya benzer. **Tıklamak için** Çalıştır, uygulama kodunun görünür bir bölgesi içinde hızlıca dolaşarak (herhangi bir açık dosyaya tıklarsınız) kullanışlıdır.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2022"
 
-1. Kesme noktasına yeniden ilerlemek için **F5** ' i seçin.
+1. Kesme noktası tekrar ilerlemek için **F5'i** seçin.
 
-1. Kod Düzenleyicisi 'nde, `Console.WriteLine` `SendMessage` **tıklama düğmesine Çalıştır** düğmesi solda görüntülenene kadar yöntemindeki yöntem çağrısının üzerine gelin. Düğme araç ipucu "yürütmeyi buraya kadar Çalıştır" gösterir.
+1. Kod düzenleyicisinde, sol tarafta `Console.WriteLine` Tıklanacak Şekilde Çalıştır düğmesi görünene kadar `SendMessage` **yönteminde yöntem** çağrısının üzerine gelin. Düğmenin araç ipucu "Yürütmeyi buraya kadar çalıştır" ifadesini gösterir.
 
-    :::image type="content" source="media/vs-2022/get-started-run-to-click.png" alt-text="Visual Studio 2022 ' de ' tıklama için çalıştır ' düğmesini gösteren ekran görüntüsü.":::
+    :::image type="content" source="media/vs-2022/get-started-run-to-click.png" alt-text="2022'de 'Tıkla' düğmesini Visual Studio ekran görüntüsü.":::
 
-1. **Tıklama Için Çalıştır** düğmesini seçin. Alternatif olarak, imlecinizin `Console.WriteLine` Ifadesinde **CTRL + F10**' i seçin. Ya da yöntem çağrısına sağ tıklayın `Console.WriteLine` ve bağlam menüsünden **Imlece Çalıştır** ' ı seçin.
+1. **Tıklarken Çalıştır düğmesini** seçin. Alternatif olarak imlecinizi deyiminde `Console.WriteLine` **Ctrl+F10 tuşlarına basarak da ctrl+F10 tuşlarına basın.** Ya da yöntem çağrısına `Console.WriteLine` sağ tıklayın ve bağlam **menüsünden İmleçte** Çalıştır'ı seçin.
 
-    Hata ayıklayıcı `Console.WriteLine` yöntem çağrısına ilerler.
+    Hata ayıklayıcısı yöntem `Console.WriteLine` çağrısına ilerler.
 
-    **Tıklama Için Çalıştır** düğmesinin kullanılması, geçici bir kesme noktası ayarlamaya benzer ve açık bir dosyada uygulama kodunuzun görünür bir bölgesi içinde hızlıca elde etmek için kullanışlıdır.
+    Tıklayarak **Çalıştır düğmesinin** kullanımı geçici bir kesme noktası ayarlamaya benzer ve uygulama kodunuzun görünür bir bölgesi içinde açık bir dosyada hızlıca dolaşabilir.
 
 ::: moniker-end
 
-## <a name="restart-your-app-quickly"></a>Uygulamanızı hızlıca yeniden başlatın
+## <a name="restart-your-app-quickly"></a>Hızlı bir şekilde uygulamayı yeniden başlatın
 
 ::: moniker range="<=vs-2019"
 
-![' Uygulamayı yeniden Başlat ' düğmesinin](../../debugger/media/dbg-tour-restart.png "RestartApp") **yeniden başlatma** görüntüsü ' ne tıklayın. düğmesini ayıklayın (**CTRL**  +  **SHIFT**  +  **F5**).
+'Uygulamayı **Yeniden** ![Başlat' düğmesinin Yeniden Başlat Görüntüsüne tıklayın.](../../debugger/media/dbg-tour-restart.png "RestartApp") Hata Ayıklama Araç Çubuğundaki düğmesi (**Ctrl**  +  **Shift**  +  **F5**).
 
-**Yeniden Başlat**'a bastığınızda, uygulamanın durdurulması ve hata ayıklayıcının yeniden başlatılması ile zaman kazandırır. Hata ayıklayıcı, kodu yürüterek vuran ilk kesme noktasında duraklatılır.
+Yeniden **Başlat'a bassanız,** uygulamayı durdurmak ve hata ayıklayıcıyı yeniden başlatmak yerine zamandan tasarruf sağlar. Hata ayıklayıcısı, kod yürüterek isabet alan ilk kesme noktası üzerinde duraklatılır.
 
 Hata ayıklayıcı daha önce döngü içinde ayarladığınız kesme noktasında yeniden durmaktadır `for` .
 
@@ -458,7 +458,7 @@ Uygulamanızı hata ayıklayıcıda başlayarak yeniden çalıştırmak için **
 
 1. Değişkenini, `letters` içerdiği öğeleri göstermek için genişletin.
 
-     ![Visual Studio 'teki Yereller penceresinin ekran görüntüsü.](../csharp/media/get-started-locals-window.png "Yereller penceresi")
+     ![Visual Studio 'teki Yereller penceresinin ekran görüntüsü.](../csharp/media/get-started-locals-window.png "YerelLer Penceresi")
 
     **Yereller** penceresi, geçerli yürütme bağlamı olan geçerli [kapsamda](https://www.wikipedia.org/wiki/Scope_(computer_science))olan değişkenleri gösterir.
 

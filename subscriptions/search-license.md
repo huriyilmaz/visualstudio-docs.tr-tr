@@ -1,21 +1,21 @@
 ---
 title: Arama ve filtreleme | Microsoft Docs
 author: evanwindom
-ms.author: cabuschl
-manager: cabuschl
+ms.author: amast
+manager: shve
 ms.assetid: 9c0b9a4f-b9a3-491c-a68f-6e4bac7f7b3d
 ms.date: 10/21/2021
 ms.topic: how-to
 description: Yöneticilerin Yönetim Portalı'nde tek tek aboneleri veya grupları nasıl bularak bulunalarını öğrenin.
-ms.openlocfilehash: 888090c218b4f57173414552c03b2d391fe0aa57
-ms.sourcegitcommit: efe1d737fd660cc9183177914c18b0fd4e39ba8b
+ms.openlocfilehash: 965b61a394de0d88aca121fa3fbadaf95a2ce3b0
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "130212019"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133255950"
 ---
 # <a name="search-and-filter-subscribers-in-visual-studio-subscriptions"></a>Aboneliklerde aboneleri arama Visual Studio filtreleme
-Abonelikler Visual Studio Portalı, çeşitli ölçütlere göre belirli bir abone alt kümesini bulmanıza olanak sağlar. Abone listesini ad, e-posta adresi veya başvuruya göre filtreleebilirsiniz.
+Visual Studio Abonelikler Yönetim Portalı, çeşitli ölçütlere göre belirli bir abone alt kümesini bulmanıza olanak sağlar. Abone listesini ad, e-posta adresi veya başvuruya göre filtreleebilirsiniz.
 
 ## <a name="to-filter-the-subscriber-list"></a>Abone listesini filtrelemek için
 1. Belirli bir abone grubunu aramak için" "Aboneleri yönet" sayfasının hemen altındaki **Ad,** e-posta veya başvuruya göre filtrele kutusuna tıklayın.
@@ -23,7 +23,7 @@ Abonelikler Visual Studio Portalı, çeşitli ölçütlere göre belirli bir abo
    > ![Abone listesinde arama yapmak için Filtre'yi seçin](_img/search-filter/filter-list.png "Görüntülenen abonelikleri sınırlama ölçütlerini girmek için 'filtre' kutusuna tıklayın.")
 
 2. Arama ölçütlerinizi girin.  Siz yazarak listenin dinamik olarak güncelleştirilmiş olduğunu fark edersiniz.  
-Örnek: Outlook e-posta adreslerini kullanan tüm aboneleri bulmak için " " yazabilirsiniz ve liste yalnızca @outlook Outlook.com adreslerine sahip olan abonelerle sınırlı olacaktır.  
+Örnek: Outlook e-posta adreslerini kullanan tüm aboneleri bulmak istediyseniz " " yazabilirsiniz ve liste yalnızca Outlook.com adreslerine sahip @outlook abonelerle sınırlı olacaktır.  
 
 > [!TIP]
 > Arama, Azure Active Directory gruplarının üyesi olan aboneleri içerir. Bu nedenle, grupta detaya gitmedikçe aboneler listeniz üzerinde görüntülenmese bile, bunlar arama sonuçlarında tek tek listelenir.  

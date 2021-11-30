@@ -1,18 +1,18 @@
 ---
 title: Microsoft Q Visual Studio aboneliklerde bir destek&| Microsoft Docs
 author: evanwindom
-ms.author: cabuschl
-manager: cabuschl
+ms.author: amast
+manager: shve
 ms.assetid: 16af82df-380a-4864-9f4e-6c3442cc7da2
 ms.date: 03/17/2021
 ms.topic: conceptual
 description: seçili Visual Studio aboneliklerine eklenen bir forum desteği avantajı olan Microsoft Q&hakkında bilgi edinin.
-ms.openlocfilehash: 5cde59a1745711c4445a9dc58d9ccd92f2e32962
-ms.sourcegitcommit: efe1d737fd660cc9183177914c18b0fd4e39ba8b
+ms.openlocfilehash: ee499b38f4788e399147658a3470e979abdcbdd8
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "130211694"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133255079"
 ---
 # <a name="microsoft-qa-forum-support-in-visual-studio-subscriptions"></a>Microsoft Q&Visual Studio aboneliklerde forum desteği
 Teknik ürün sorunuz mu var? Microsoft 'un teknik soruları ve yanıtları hakkında bilgi edinmek için Microsoft soru-cevap&A 'da bulabilirsiniz.

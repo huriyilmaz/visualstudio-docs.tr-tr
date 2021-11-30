@@ -1,18 +1,18 @@
 ---
 title: Visual Studio aboneliklerde beyaz kaynak sürgüsü | Microsoft Docs
 author: evanwindom
-ms.author: cabuschl
-manager: cabuschl
+ms.author: amast
+manager: shve
 ms.assetid: 5e5d3f1a-533d-42eb-960e-01bb6bc7ca16
 ms.date: 10/18/2021
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil edilen beyaz kaynak sürgüsü aboneliğini nasıl etkinleştireceğinizi öğrenin.
-ms.openlocfilehash: 03ba82311d0f12d5cfdbaa16a786018e59d2820e
-ms.sourcegitcommit: 7a820b7698a8dcf076eb36e3d766fb0751f56bb1
+ms.openlocfilehash: f444bb131adffcd8a0d820f85b6d5f5a5ee63724
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "131127682"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133257848"
 ---
 # <a name="whitesource-bolt-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerde beyaz kaynak sürgüsü
 Açık kaynak güvenlik açıklarını bulup düzeltir ve derinizdeki tüm açık kaynaklı bileşenlerin kapsamlı envanterini ve lisans raporlarını oluşturun. Visual Studio Enterprise abonelikler, sınırsız sayıda tarama alır.

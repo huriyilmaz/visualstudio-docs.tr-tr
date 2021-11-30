@@ -3,16 +3,16 @@ title: Visual Studio Aboneliği ile yazılım indirme ve etkinleştirme
 description: Yazılım İndirme ve Etkinleştirme ile ilgili SSS listesi.
 ms.topic: conceptual
 ms.assetid: f7d64255-9c98-4c97-8a7d-67d9dc7cf98f
-author: CaityBuschlen
-ms.author: cabuschl
+author: evanwindom
+ms.author: amast
 ms.date: 4/3/2020
 ms.faqid: Section2
-ms.openlocfilehash: c00c3ad39730099dec6851212ac12400a6883e1e9ed072b7a2d240313de9d8d4
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 56558df068614663334d73986ebcba4d7a6164ab
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121381285"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133255013"
 ---
 # <a name="downloading-and-activating-software"></a>Yazılımı indirme ve etkinleştirme
 

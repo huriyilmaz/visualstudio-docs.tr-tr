@@ -1,48 +1,48 @@
 ---
 title: Visual Studio aboneliklerinde DataCamp ile veri bilimi | Microsoft Docs
 author: evanwindom
-ms.author: cabuschl
-manager: cabuschl
+ms.author: amast
+manager: shve
 ms.assetid: fc33d419-78cf-485e-b558-5b7efa900f14
 ms.date: 10/18/2021
 ms.topic: how-to
 description: Seçili aboneliklere dahil olan DataCamp eğitim aboneliği hakkında Visual Studio öğrenin.
-ms.openlocfilehash: 94861eedcc0db99cf69d9ca44926ce036567398e
-ms.sourcegitcommit: 6c847aedf0f943e253a4c2f0e4b516b953168bc7
+ms.openlocfilehash: b47a238eb270ee260c6dd27f9e93bc5199b579ad
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "130152104"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133257471"
 ---
 # <a name="the-datacamp-training-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerde DataCamp eğitim avantajı
-Uygun abonelikler Visual Studio DataCamp aboneliklerini içerir.  DataCamp ile ihtiyacınız olan tüm veri bilimi becerilerini tarayıcınızın rahat bir şekilde öğrenebilirsiniz. Ne zaman ve ne öğreneceğinizi seçebilirsiniz. Yüklenmek için yazılım olmadığı ve özel donanım gereksinimleri olmadığı için veri bilimi her zamankinden daha kolaydır.
+Uygun abonelikler Visual Studio DataCamp aboneliklerini içerir.  DataCamp ile ihtiyacınız olan tüm veri bilimi becerilerini tarayıcınızın rahat bir şekilde öğrenebilirsiniz. Ne zaman ve ne öğreneceğinizi seçebilirsiniz. Yazılım yükleme ve özel donanım gereksinimleri olmadığı için veri bilimi öğrenme hiç olmadığı kadar kolaylaşır.
 
 ## <a name="activation-steps"></a>Etkinleştirme adımları
 1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) adresinde oturum açın.
 
-2. "Professional Development" kategorisinde DataCamp avantajı kutucuğunu bulun ve Etkinleştir'e **tıklayın.**
+2. "Professional Geliştirme" kategorisinde datacamp avantajı kutucuğunu bulun ve Etkinleştir'e **tıklayın.**
    > [!div class="mx-imgBorder"]
    > ![DataCamp Avantajı Kutucuğu](_img/vs-datacamp/vs-datacamp-tile-2.png "Başlamak için 'Etkinleştir'e tıklayın.")
 
-3. DataCamp sayfasında yeni bir hesap oluşturabilirsiniz.  Bir e-posta adresi ve parola girmeyi veya Facebook, LinkedIn veya Google'daki mevcut hesapları kullanarak oturum açmayı seçebilirsiniz.  Oturum açma bilgilerini sağladıktan sonra, **Başlarken.**
+3. DataCamp sayfasında yeni bir hesap oluşturabilirsiniz.  Bir e-posta adresi ve parola girmeyi ya da Facebook, LinkedIn veya Google'daki mevcut hesapları kullanarak oturum açmayı seçebilirsiniz.  Oturum açma bilgilerini sağladıktan sonra, **Başlarken.**
 
    > [!NOTE]
    > Hesap oluşturmaya başsanız şu hata iletisini alabilirsiniz: "OOPS!  Promosyon kodunuz geçersiz veya süresi doldu."  Bunun nedeni promosyon kodunuzun oluşturulduğunda birkaç dakika sonra süresinin dolmasıdır.  Bu iletiyi alırsanız Avantajlar sayfasına [dönüp](https://my.visualstudio.com/benefits) DataCamp avantajı kutucuğunun **Etkinleştir** bağlantısına tıklamanız gerekir.
 
 4. Hesabınız oluşturulduktan sonra bir öğrenme yolu seçebilirsiniz.  Seçeneklere şunlar dahildir:
-    - Learning Veri Bilimi için R
-    - Veri Learning Python'da çalışmaya başlama
+    - Learning Için R
+    - Veri bilimi Learning Python'da çalışmaya başlama
     - Veri Bilimi Becerilerinizi geliştirme
 
    Başlamanız için seçtiğiniz yola tıklamanız gerekir.
    > [!div class="mx-imgBorder"]
    > ![DataCamp Yol Seçme](_img/vs-datacamp/vs-datacamp-choose-path.png "İlginizi ilgilendiren bir öğrenme yolu seçin.")
 
-5. Yolu seçtikten sonra, bir hedef seçerek öğrenme yollarınızı daha da geliştirin.  Örneğin, "Veri Bilimi BeceriNizi Geliştirin" yolunu seçtiysanız aşağıdaki seçenekleri karşınıza gelecektir. Bir seçenek belirtin veya Emin **değilim'e tıklayın.  Daha geniş bir yol oluşturmak için** tüm kariyer yollarını göster.
+5. Yol seçtikten sonra, bir hedef seçerek öğrenme yollarınızı daha da geliştirin.  Örneğin, "Veri Bilimi BeceriNizi Geliştirin" yolunu seçtiyebilirsiniz, aşağıdaki seçeneklerin olduğunu göreceğiz. Bir seçenek belirtin veya Emin **değilim'e tıklayın.  Daha geniş bir yol oluşturmak için** tüm kariyer yollarını göster.
    > [!div class="mx-imgBorder"]
-   > ![DataCamp Veri Bilimi Beceri Kümesi](_img/vs-datacamp/vs-datacamp-datascience.png "'Emin değilim'e tıklayın.  Tam listeyi görüntülemek için tüm kariyer yollarını göster' .")
+   > ![DataCamp Veri Bilimi Beceri Kümesi](_img/vs-datacamp/vs-datacamp-datascience.png "'Emin değilim'e tıklayın.  Tam listeyi görüntülemek için tüm kariyer yollarını göster.")
 
-6. Seçtiğiniz yola ve seçeneklere bağlı olarak Bir Kariyer İzleri'nin bir seçkisi görüntülenir.  İstediğiniz iz **için** Kaydol düğmesine tıklayın.
+6. Seçtiğiniz yola ve seçeneklere bağlı olarak Career Tracks(Kariyer İzleri) seçiminin olduğunu göreceğiz.  İstediğiniz iz **için** Kaydol düğmesine tıklayın.
    > [!div class="mx-imgBorder"]
    > ![DataCamp Career Track](_img/vs-datacamp/vs-datacamp-all-tracks.png "Başlamanız için seçtiğiniz yolda 'Kaydol' düğmesine tıklayın.")
 
@@ -62,7 +62,7 @@ Herhangi bir noktada durdurabilir ve sonraki oturumda eğitiminizi sürdürebili
 | Visual Studio Enterprise (Standart)   | VL, Azure, Perakende, | 3 ay       |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
 | Visual Studio Enterprise ile abonelik GitHub Enterprise   | VL | 3 ay       |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
 | Visual Studio Professional (Standart) | VL, Azure, Perakende                                       | 3 ay                                                            |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir           |
-| Visual Studio Professional ile abonelik GitHub Enterprise| VL | 3 ay                                                            |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir           |
+| Visual Studio Professional aboneliği GitHub Enterprise| VL | 3 ay                                                            |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir           |
 | Visual Studio Test Professional (Standart)                         | VL, Perakende                                              | 3 ay                                             |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir           |
 | MSDN Platformları (Standart)                                          | VL, Perakende                                              | 3 ay                                              |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir           |
 | Visual Studio Enterprise (Standart)  | NFR<sup>1</sup> |Kullanılamaz  | Yok |
@@ -77,11 +77,11 @@ Hangi aboneliği kullanmakta olduğundan emin değil misiniz?  Bağlan [https://
 
 ## <a name="support-resources"></a>Destek kaynakları
 - DataCamp kullanımıyla ilgili yardıma mı ihtiyacınız var?  Aşağıdaki kaynakları inceleyin:
-  - [DataCamp Community](https://www.datacamp.com/community/tutorials)forumları ve öğreticileri içeren bir uygulamadır.
+  - [DataCamp Community,](https://www.datacamp.com/community/tutorials)forumları ve öğreticileri içerir.
   - [DataCamp Yardım Merkezi,](https://support.datacamp.com/hc)burada arama destek konuları ve kullanıcı soruları isteğine bakın.
   - [Destek isteği gönderme](https://support.datacamp.com/hc/requests/new)
-- Visual Studio Abonelikleri için satış, abonelikler, hesaplar ve faturalama ile ilgili yardım için destek [Visual Studio ile iletişime geçin.](https://my.visualstudio.com/gethelp)
-- IDE, Visual Studio veya diğer Azure DevOps Services ürün veya Visual Studio soru var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
+- Abonelikler için satış, abonelikler, hesaplar ve faturalama konusunda yardım Visual Studio abonelik [desteği için Visual Studio iletişim kurun.](https://my.visualstudio.com/gethelp)
+- IDE, Azure DevOps Services diğer Visual Studio ilgili bir Visual Studio var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

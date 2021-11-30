@@ -2,17 +2,17 @@
 title: Abonelikler yönetici Visual Studio tercihleri ayarlama
 author: evanwindom
 ms.author: amast
-manager: amast
+manager: shve
 ms.assetid: 0fe9eaa4-f589-429e-a443-13bf86637d5a
 ms.date: 10/08/2021
 ms.topic: conceptual
 description: Yönetim Portalı'nın dil, kişiler, abonelik düzeyi ve diğerleri için tercihleri ayarlamayı öğrenin
-ms.openlocfilehash: b246eda712c3ca7fce24b54fe5f6659112db7213
-ms.sourcegitcommit: a1c18c491e310b00a43e76a911f778e643cd8f8d
+ms.openlocfilehash: 80f6630d66cedcfe98f6915dc466176ef02b9faf
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "132995513"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133255976"
 ---
 # <a name="set-preferences-for-your-agreements-in-the-admin-portal"></a>Yönetim portalında sözleşmeleriniz için tercihleri ayarlama
 Süper yöneticiler, Yönetim portalında (yönetim portalı) her sözleşme için genel olarak uygulanacak belirli tercihler ayarlayabilecek.  Bu tercihler, abone eklerken yöneticileriniz için abonelik ayrıntılarını otomatik olarak doldurmakta ve yalnızca süper yöneticiler tarafından genel olarak değiştirilebilir.  
@@ -85,7 +85,7 @@ A: İlgili kişinin e-posta adresi tercihi içinde belirli bir **e-posta** adres
 - [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Abonelikleri yönetme hakkında daha Visual Studio bilgi edinin.
+Abonelikleri yönetme hakkında daha fazla Visual Studio edinin.
 - [Bireysel abonelik atama](assign-license.md)
 - [Birden çok abonelik atama](assign-license-bulk.md)
 - [Abonelikleri düzenleme](edit-license.md)

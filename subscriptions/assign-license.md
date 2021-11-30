@@ -1,76 +1,76 @@
 ---
-title: Kullanıcılara Visual Studio abonelikleri | Microsoft Docs
+title: kullanıcılara Visual Studio abonelikleri atama | Microsoft Docs
 author: evanwindom
 ms.author: amast
-manager: amast
+manager: shve
 ms.assetid: 4e529a43-7aed-4eee-895d-862a631952df
 ms.date: 10/25/2021
 ms.topic: conceptual
-description: Yöneticilerin abonelere lisans atamasını öğrenin
-ms.openlocfilehash: 0b20fe2cdf0561bebbc7023146313cdeb3bf4fa1
-ms.sourcegitcommit: a1c18c491e310b00a43e76a911f778e643cd8f8d
+description: Yöneticilerin abonelere nasıl lisans atayabileceği hakkında bilgi edinin
+ms.openlocfilehash: 764694d345fd40ec5b752403ef67b821de996ae4
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "132995740"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133255105"
 ---
-# <a name="assign-licenses-in-the-visual-studio-subscriptions-administration-portal"></a>Visual Studio Abonelikleri Yönetim Portalı'Visual Studio lisans atama
-Bir Visual Studio yöneticisi olarak, bireysel kullanıcılara ve kullanıcı gruplarına abonelik atamak için yönetici portalını kullanabilirsiniz.
+# <a name="assign-licenses-in-the-visual-studio-subscriptions-administration-portal"></a>Visual Studio abonelikleri yönetim portalı 'nda lisans atama
+Visual Studio abonelikleri yöneticisi olarak, bireysel kullanıcılara ve kullanıcı gruplarına abonelik atamak için yönetim portalını kullanabilirsiniz.
 
-Kullanıcı grupları için abonelik atama seçenekleriniz vardır.  
-- Abonelikleri tek tek atabilirsiniz.
-- Ayrıca Toplu ekleme özelliğini kullanarak abone listelerini ve abonelik bilgilerini hızlı ve kolay bir şekilde [karşıya yükleyebilirsiniz.](assign-license-bulk.md)
-- Kuruluşta Microsoft Azure Active Directory (Azure AD) kullanıyorsa, [kullanıcı gruplarına](./assign-license-bulk.md#use-azure-active-directory-groups-to-assign-subscriptions) abonelik atamak için Azure AD gruplarını kullanabilirsiniz.  
+Kullanıcı grupları için, abonelikleri nasıl atayacağınızı gösteren seçimleriniz vardır.  
+- Her seferinde bir abonelik atayabilirsiniz.
+- Ayrıca [toplu ekleme](assign-license-bulk.md) özelliğini kullanarak abone listelerini ve abonelik bilgilerini hızlıca ve kolayca karşıya yükleyebilirsiniz.
+- kuruluşunuz Microsoft Azure Active Directory (azure ad) kullanıyorsa, kullanıcı gruplarına [abonelik atamak için Azure ad gruplarını kullanabilirsiniz](./assign-license-bulk.md#use-azure-active-directory-groups-to-assign-subscriptions) .  
 
 
-## <a name="add-a-single-subscriber"></a>Tek abone ekleme
-Yeni bir kullanıcıya abonelik avantajlarına erişmek için Visual Studio aboneliği atamayı öğrenmek için videoyu izleyin veya okumaya devam edin.
+## <a name="add-a-single-subscriber"></a>Tek bir abone ekleme
+abonelik avantajlarına erişebilmeleri için yeni bir kullanıcıya Visual Studio aboneliğini nasıl atayacağınızı öğrenmek için videoyu izleyin veya okuyun.
 
 <br>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vpPh]
 
 
-1. Yönetici portalında [oturum açın.](https://manage.visualstudio.com)
-2. Tek bir aboneye lisans atamak Visual Studio, tablonun üst kısmında Ekle'yi **ve** ardından Bireysel **abone'yi seçin.**
+1. [Yönetim portalında](https://manage.visualstudio.com)oturum açın.
+2. tek bir Visual Studio aboneye bir lisans atamak için, tablonun üst kısmında **ekle**' yi seçin ve **bireysel abone**' i seçin.
    > [!div class="mx-imgBorder"]
-   > ![Tek abone ekleme](_img/assign-license-add/add-subscriber-individual.png "Ekle'yi ve ardından Tek abone'yi seçerek tek bir abonelik attayabilirsiniz.")
-3. Sağda bir fly-out paneli görüntülenir.  Bilgileri yeni abonenin form alanlarına girin. 
-   - Kuruluş bir Azure Active Directory kullanıyorsa, **Arama** Azure Active Directory kutusuna abonenin adını yazarak ölçütlerinize uyan tüm Azure AD grup üyelerinin adlarını geri alır.  Bu kişiyi seçmenizin ardından oturum açma e-postası ve bildirim e-postası otomatik olarak yüklenir.  
-   - Abone, kuruluşta bulunamasa, Ad alanına abonenin adını **girebilirsiniz.**  
-   - Abonenizin oturum açmasını istediğiniz e-posta adresini girin.  Ayrıca İletişim almak  için farklı bir bildirim e-postası ekle bağlantısına tıklar ve abonelerin ve yöneticilerin Microsoft'tan abonelikle ilgili önemli e-postaları aldıracak şekilde farklı bir bildirim e-posta adresi belirtebilirsiniz.
+   > ![Tek bir abone ekleme](_img/assign-license-add/add-subscriber-individual.png "Ekle ' yi seçin ve tek bir abonelik atamak için bireysel abone ' i seçin.")
+3. Bir uçarak çıkış paneli sağ tarafta görüntülenir.  Yeni abone için form alanlarına bilgi girin. 
+   - kuruluşunuz Azure Active Directory kullanıyorsa, **arama Azure Active Directory** kutusuna abonenin adını yazmak, ölçütlerinizle eşleşen herhangi bir Azure AD grubu üyesinin adlarını döndürür.  Bu kişiyi seçtikten sonra, oturum açma e-postası ve bildirim e-postası otomatik olarak doldurulur.  
+   - Abone kuruluşunuzda bulunamazsa, abone adının **adını ad** alanına girebilirsiniz.  
+   - Abonenin oturum açmasını sağlamak için kullanmak istediğiniz e-posta adresini girin.  Ayrıca, **iletişim almak için farklı bir bildirim e-postası Ekle** ' ye tıklayabilir ve farklı bir bildirim e-posta adresi belirtebilirsiniz. böylece aboneler ve Yöneticiler Microsoft 'tan alınan önemli e-postaları alır.
       > [!div class="mx-imgBorder"]
-      > ![Abone ayrıntıları](_img/assign-license-add/subscriber-details.png "Abone adını ve diğer ayrıntıları girin veya kiracı üyelerinden birini seçin.")
+      > ![Abone ayrıntıları](_img/assign-license-add/subscriber-details.png "Abone adı ve diğer ayrıntıları girin veya kiracı üyelerinden birini seçin.")
 
       > [!NOTE]
-      > Bir kiracının üyelerinin Azure Active Directory bir abone adı girerken görünür olması için yöneticinin kiracının bir üyesi olması gerekir. 
-   - Bu kullanıcıya atamak istediğiniz abonelik düzeyini seçin.  (Liste yalnızca sözleşmenizin bir parçası olarak satın alınan abonelik düzeylerini içerir.)  
-   - Bu abonenin Visual Studio Abonelikler [Portalı'Visual Studio](https://my.visualstudio.com?wt.mc_id=o~msft~docs)yazılım indirmelerine erişmesine izin verirseniz, İndirme aboneliklerini indir bölümünde indirmeler iki durumlu Ayarlar **olun.** İndirmeleri devre dışı bırakmayı seçerseniz, kullanıcının yazılım indirmelerine veya ürün anahtarlarına erişimi olmaz.  Abone, aboneliğe dahil edilen diğer tüm avantajlara erişmeye devam ediyor.
+      > bir abone adı girdiğinizde Azure Active Directory kiracının üyelerinin görünür olması için, yöneticinin kiracının bir üyesi olması gerekir. 
+   - Bu kullanıcıya atamak istediğiniz abonelik düzeyini seçin.  (Liste yalnızca anlaşmanızın bir parçası olarak satın alınan abonelik düzeylerini içerir.)  
+   - bu abonenin [Visual Studio abonelikleri portalında](https://my.visualstudio.com?wt.mc_id=o~msft~docs)oturum açtıklarında yazılım indirmelerine erişimi olmasını istiyorsanız, **indirme Ayarlar** bölümünde indirmelerin etkin ' i açıp bırakmadığınızdan emin olun. İndirmeleri devre dışı bırakmayı seçerseniz, kullanıcının Yazılım İndirmeleri veya ürün anahtarlarına erişimi olmayacaktır.  Abonenin abonelik kapsamındaki diğer tüm avantajlara erişimi olmaya devam edecektir.
      > [!div class="mx-imgBorder"]
-     > ![İndirmelere erişim](media/access-to-downloads.png "Aboneye yazılım indirme erişimi sağlamak için 'İzin Ver'i seçin.")
+     > ![İndirmelere erişim](media/access-to-downloads.png "Abone 'ya yazılım indirmelerine erişim sağlamak için ' Izin ver ' seçeneğini belirleyin.")
 
-   - Aboneliğe kendi başvuru notlarınızı eklemek için Başvuru ekle bölümünde **bunu yapabiliriz.**
+   - Kendi başvuru notlarınızı aboneliğe eklemek istiyorsanız, **Başvuru Ekle** bölümünde bunu yapabilirsiniz.
       > [!div class="mx-imgBorder"]
-      > ![Her aboneliğe kendi başvuru notlarınızı ekleme](media/add-subscriber-reference-notes.png "Bu abonelikle ilgili notları kaydetmek için Başvuru alanını kullanın.")
+      > ![Her aboneliğe kendi başvuru notlarınızı ekleyin](media/add-subscriber-reference-notes.png "Bu abonelikle ilgili notları kaydetmek için başvuru alanını kullanın.")
 
-    Seçenekleri seçmeyi ve aboneye veri girmeyi tamamlayın, Abone Ekle seçeneğinin alt kısmında **Ekle'yi** seçin. 
+    Seçenekleri seçip abone için veri girmeyi tamamladığınızda, **abone Ekle** ' nin altında **Ekle** ' yi seçin.
       > [!div class="mx-imgBorder"]
-      > ![Ekle düğmesini seçin](media/add-button.png "Bilgileri kaydetmek ve aboneliği aboneye atamak için Ekle'yi seçin.")
+      > ![Ekle düğmesini seçin](media/add-button.png "Bilgileri kaydetmek ve aboneliği aboneye atamak için Ekle ' yi seçin.")
 
-## <a name="why-use-a-different-notification-email-address"></a>Neden farklı bir bildirim e-posta adresi kullanasınız?
-Bazı kuruluşlar, diğer etki alanlarından gelen e-postaları engellemek için e-posta hizmetlerini ayarlamış.  Gelen e-postaları engellemek, abonelerin ve yöneticilerin önemli iletişimleri kaçırması anlamına gelir:
-  - Aboneler, abonelik atandığı hakkında bildirim almaz.  Bu, dahil edilen bazı avantajları etkinleştirmelerini de önler.  
-  - Visual Studio aboneliğine GitHub Enterprise aboneler, GitHub kuruluşa katılma davetini almaz, yani daveti kabul etmezler. **E-posta ile gönderilen daveti kabul** etmeleri gerekir. Bu davet, GitHub erişim elde eder. 
-  - Yöneticiler bir sözleşmeye ekleniyorsa, abonelikleri yönetme yolunu etkileyen aylık yönetici bildirimleri veya özellik değişiklikleri bildirimleriyle ilgili bildirim alır.
+## <a name="why-use-a-different-notification-email-address"></a>Neden farklı bir bildirim e-posta adresi kullanmalısınız?
+Bazı kuruluşlar, e-posta hizmetlerini diğer etki alanlarından gelen e-postaları engelleyecek şekilde ayarladı.  Gelen e-postaların engellenmesi, aboneler ve yöneticilerin önemli iletişimleri kaçırmayacağı anlamına gelir:
+  - Aboneler, bir aboneliğin atandığı bir bildirim almaz.  Bu, bazı avantajlardan bazılarını etkinleştirmesini de engeller.  
+  - GitHub Enterprise sahip abonelikler Visual Studio atanmış aboneler GitHub kuruluşunuza katılma davetini almaz, yani daveti kabul edemeyecektir. GitHub kuruluşunuza erişim kazanmak için e- **postayla gönderilen daveti kabul etmelidir** . 
+  - Yöneticilere bir sözleşmeye eklendiğinde bildirimde bulunulmayacak, aylık yönetici deyimlerini veya abonelikleri yönetme biçimini etkileyen özellik değişikliklerinin bildirimlerini alma.
 
-Bildirim e-posta adresi kullanmak, abonelerin oturum açma e-posta adreslerinin işlevselliğini değiştirmeden abonelikleri hakkında önemli iletişimler almalarına izin verme seçeneği sağlar.  
+Bir bildirim e-posta adresi kullanmak, abonelerin, oturum açma e-posta adreslerinin işlevlerini değiştirmeden abonelikleriyle ilgili önemli iletişimler almasına izin verir.  
 
 ## <a name="resend-assignment-emails"></a>Atama e-postalarını yeniden gönder
-Aboneyi ekledikten sonra, yeni aboneye ek yönergeler içeren bir atama e-postası otomatik olarak gönderilir. Aboneyi ve ardından üst menüyü yeniden gönder düğmesini seçerek atama **e-postalarını** istediğiniz zaman yeniden gönderebilirsiniz.  E-postaları birden çok kullanıcıya yeniden göndermek için aboneleri **seçerken Ctrl** tuşunu basılı tutun.  Yeniden **e-postala düğmesini** seçerek bu abonelere yeniden sormak istediğinizden emin olmak istediğiniz bir iletişim kutusu görüntülenir.  
+Bir abone ekledikten sonra, bir atama e-postası, daha fazla yönerge ile otomatik olarak yeni aboneye gönderilir. Atama e-postasını istediğiniz zaman, abone ' i seçip üst menüdeki yeniden **Gönder** düğmesini seçerek gönderebilirsiniz.  E-postaları birden çok kullanıcıya yeniden göndermek için, aboneleri seçerken **CTRL** tuşunu basılı tutun.  Yeniden **Gönder** düğmesini seçtiğinizde, bu abonelere yeniden göndermek istediğinizi onaylamanızı isteyen bir iletişim kutusu görürsünüz.  
 
 
 ## <a name="resources"></a>Kaynaklar
-- Yardıma mı ihtiyacınız var?  Abonelikler [Desteği'ne başvurun.](https://aka.ms/vsadminhelp)
+- Yardıma mı ihtiyacınız var?  [Abonelik desteğiyle](https://aka.ms/vsadminhelp)iletişim kurun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)
@@ -79,4 +79,4 @@ Aboneyi ekledikten sonra, yeni aboneye ek yönergeler içeren bir atama e-postas
 - [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-- Eklemek istediğiniz çok fazla kullanıcı var mı?  Birden çok aboneye abonelik [atamayı öğrenin.](assign-license-bulk.md)
+- Eklemek için çok sayıda kullanıcı mı var?  [Birden çok aboneye](assign-license-bulk.md)abonelik atamayı öğrenin.

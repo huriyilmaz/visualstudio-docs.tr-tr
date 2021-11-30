@@ -3,16 +3,16 @@ title: Visual Studio eski sürümlerini nereden bulabilirim?
 description: indirme için önceki Visual Studio sürümlerini bul
 ms.topic: include
 ms.assetid: 611a9d9f-0b72-4dd1-ac5a-987a52433627
-author: CaityBuschlen
-ms.author: cabuschl
+author: evanwindom
+ms.author: amast
 ms.date: 03/24/2021
 ms.faqid: q2_4
-ms.openlocfilehash: a4bde2cb7df7feec1932c7116a089e4d6ad477ecc5b2247599b43453d38257d0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 23e3616b5eb36bdb1adc69feec552548703dcb0b
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121381290"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133255049"
 ---
 ## <a name="where-can-i-find-older-versions-of-visual-studio"></a>Visual Studio eski sürümlerini nereden bulabilirim? 
 

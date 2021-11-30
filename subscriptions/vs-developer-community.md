@@ -1,24 +1,24 @@
 ---
 title: Abonelikler Community geliştirici Visual Studio avantajı | Microsoft Docs
 author: evanwindom
-ms.author: cabuschl
-manager: cabuschl
+ms.author: amast
+manager: shve
 ms.assetid: 44a790d1-f37e-4be0-9023-af1b3fdfcd35
 ms.date: 10/18/2021
 ms.topic: conceptual
-description: Seçili aboneliklere dahil Community Geliştirici Desteği avantajı hakkında Visual Studio öğrenin.
-ms.openlocfilehash: 0da591530222d73a5b28f2eed60f779713b2488a
-ms.sourcegitcommit: efe1d737fd660cc9183177914c18b0fd4e39ba8b
+description: Seçili aboneliklere dahil Community Geliştirici Destek avantajı hakkında Visual Studio öğrenin.
+ms.openlocfilehash: a00fb0ba9220962270a0a0abe83e12762c299c90
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "130211707"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133257393"
 ---
 # <a name="developer-community-support-forum-in-visual-studio-subscriptions"></a>Geliştirici Community aboneliklerde geliştirici Visual Studio forumu
 Sorularınızı gönderin, yanıtları bulun ve geliştirici forumlarında Community paylaşın.
 
-## <a name="access-the-developer-community"></a>Geliştirici Erişimi Community
-Geliştirici Hesabı'Community bağlanmak oldukça kolaydır.
+## <a name="access-the-developer-community"></a>Developer Community
+Developer Community basit bir işlemdir.
 1. Visual Studio abonelikler portalında oturum açın<https://my.visualstudio.com/benefits>
 0. Destek bölümünde **Geliştirici Community'yi** bulun ve Yardım al'a **tıklayın.**
 (Tarayıcınızı doğrudan da <https://developercommunity.visualstudio.com/> işaretleyebilirsiniz.)
@@ -42,7 +42,7 @@ Geliştirici Community ücretsiz olarak kullanılabilir.  Abonelik gerekmez.
 
 ## <a name="support-resources"></a>Destek Kaynakları
 - Visual Studio Abonelikleri için satışlar, abonelikler, hesaplar ve faturalama konusunda yardıma mı ihtiyacınız var?  Abonelikler [Visual Studio iletişim kurma.](https://my.visualstudio.com/gethelp)
-- IDE, Visual Studio veya diğer Azure DevOps Services ürün veya Visual Studio soru var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
+- IDE, Azure DevOps Services diğer Visual Studio ilgili bir Visual Studio var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

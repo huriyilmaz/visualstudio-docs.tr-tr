@@ -1,18 +1,18 @@
 ---
-title: Abonelikler Visual Studio Portal sayfasındaki abonelik atamalarını | Microsoft Docs
+title: Abonelikler Visual Studio Portal sayfasında abonelik atamalarını | Microsoft Docs
 author: evanwindom
 ms.author: amast
-manager: amast
+manager: shve
 ms.assetid: e49242bc-e9f2-49e8-8caa-f574d508aba6
 ms.date: 03/21/2021
 ms.topic: how-to
-description: Yöneticilerin abonelik atamalarını nasıl sileceklerini Visual Studio Abonelikler Yönetim Portalı'Visual Studio öğrenin
-ms.openlocfilehash: 7526ddd33c76343e672dbc4a473e38874365b535
-ms.sourcegitcommit: 17202f3ac3f7f17ce3756b57dd56321f7254d1dd
+description: Yöneticilerin abonelik atamalarını nasıl sileceklerini Visual Studio Abonelikler Yönetim Portalı'nın
+ms.openlocfilehash: ebe9e7b6669c70cbe8a01881b57b67ec94dd43d6
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "133092859"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133256574"
 ---
 # <a name="delete-assignments-in-visual-studio-subscriptions"></a>Aboneliklerde atamaları Visual Studio silme
 Abonenin şirketten ayrılmaları, bir projeyi tamamlamaları veya yeni bir iş rolüne geçmeleri gibi bir abonelik Visual Studio aboneliğe ihtiyaç kalmadan aboneliğini kaldırabilir ve başka birine atabilirsiniz. Aboneliği yeniden asanız tüm abone avantajlarının sıfırlanmayacak olduğunu lütfen unutmayın.  Yeni kullanıcı, sahipsiz anahtarları talep etmek ve önceden talep edilen anahtarları görüntülemek mümkün olacak ancak talep sınırları **sıfırlanmaz.**  Enterprise Sözleşmesi (EA) olan kuruluşlarda, pluralsight eğitimi gibi özgün kullanıcı tarafından kullanılan tüm avantajlar sıfırlanır. 

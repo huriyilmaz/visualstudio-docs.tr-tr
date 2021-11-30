@@ -1,18 +1,18 @@
 ---
 title: Visual Studio aboneliklerinde abone portalını kullanma | Microsoft Docs
 author: evanwindom
-ms.author: cabuschl
-manager: cabuschl
+ms.author: amast
+manager: shve
 ms.assetid: 8470f035-2a82-4052-9a12-6f24ce796861
 ms.date: 10/14/2021
 ms.topic: overview
 description: Visual Studio abonelikleri portalında kullanabileceğiniz tüm avantajlar hakkında bilgi edinin
-ms.openlocfilehash: a45af3cfe098ef79ae383b1c413cf0e5253aec84
-ms.sourcegitcommit: a8e6a8c6ca36dc76cdc44d1db934eae43470b5fa
+ms.openlocfilehash: f520c8b0d97d5a86ea4ee1a9e3226582cc59ba4d
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "130030212"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133256743"
 ---
 # <a name="using-the-subscriber-portal---myvisualstudiocom"></a>Abone portalını kullanma-my.visualstudio.com
 Visual Studio abonelikleri portalı, [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) Visual Studio aboneliğiniz aracılığıyla sunulan tüm avantajların avantajlarından yararlanmak için hepsi bir arada kaynaktır.

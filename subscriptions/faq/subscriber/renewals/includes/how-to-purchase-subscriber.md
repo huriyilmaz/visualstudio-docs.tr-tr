@@ -4,15 +4,15 @@ description: Visual Studio abonelikleri satın almanın çeşitli yolları hakk�
 ms.faqid: q4_1
 ms.topic: include
 ms.assetid: 5b27454c-f036-4f4d-9d67-54d1fc775f72
-author: CaityBuschlen
-ms.author: cabuschl
+author: evanwindom
+ms.author: amast
 ms.date: 04/20/2021
-ms.openlocfilehash: cdacf4bb150d4fb836b4c7088f80f63e738aea15
-ms.sourcegitcommit: 367a2d9df789aa617abaa09b0cd0a18db7357d0c
+ms.openlocfilehash: 731a15d01037a64333dd1f97988fee531a936913
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107800881"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133255836"
 ---
 ## <a name="how-do-i-purchase-visual-studio-subscriptions"></a>Visual Studio aboneliklerini nasıl satın alabilirim?
 
@@ -28,7 +28,7 @@ Microsoft Store aracılığıyla sunulan perakende Visual Studio abonelikleri ar
 
 Bu aboneliklerden her biri, ilk satın alma veya var olan bir aboneliği yenileme seçeneği sunar. Yenileme fiyatlandırması önemli miktarda indirime sahiptir ve yalnızca mevcut aboneliklerde kullanılabilir. Abonelikleri indirimli yenileme fiyatıyla yenileme koşullarını sağlaması için aboneliklerin süresi dolmadan önce yenilenmeleri gerekir. 
 
-Bir abonelik veya bir aboneliğe dahil olan avantajlardan biri olmadan Visual Studio 'nun tek seferlik satın alımı yapmayı arıyorsanız, [Visual Studio Professional 2019](https://www.microsoft.com/p/visual-studio-professional-2019/dg7gmgf0f6q1?cid=msft_web_collection&activetab=pivot%3aoverviewtab)Microsoft Store ziyaret edin. 
+bir abonelik veya bir aboneliğe dahil olan avantajlardan biri olmadan Visual Studio bir kerelik satın alma yapmayı arıyorsanız [Visual Studio Professional 2019](https://www.microsoft.com/p/visual-studio-professional-2019/dg7gmgf0f6q1?cid=msft_web_collection&activetab=pivot%3aoverviewtab)için Microsoft Store ziyaret edin. 
 
 ### <a name="visual-studio-marketplace"></a>Visual Studio Market 
 Aylık aboneliklerle, uzun dönemli sözleşme olmadan Visual Studio’yu ve Azure DevOps’u kiralayabilirsiniz. Faturalandırma, Microsoft Azure aboneliğiniz üzerinden sağlanır. Henüz bir Azure aboneliğiniz yoksa ilk satın alımınızı yaparken ücretsiz bir şekilde oluşturabilirsiniz.  

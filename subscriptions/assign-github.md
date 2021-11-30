@@ -2,25 +2,25 @@
 title: Visual Studio abonelikleri GitHub Enterprise | Microsoft Docs
 author: evanwindom
 ms.author: amast
-manager: amast
+manager: shve
 ms.assetid: f271d623-dcde-442a-865c-4dca5ad8a9c5
 ms.date: 03/03/2021
 ms.topic: conceptual
 description: GitHub Enterprise ile Visual Studio abonelikleri yönetme
-ms.openlocfilehash: fc2dd98d4c72e25cab834d26aebbaac34c297dc3
-ms.sourcegitcommit: 0b949fd7bb38d784ff66edec4725de55d57e76fc
+ms.openlocfilehash: 912ff9c3cbfbbed24d3fed3c8a2767fda0608c83
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "133219254"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133257706"
 ---
 # <a name="manage-visual-studio-subscriptions-with-github-enterprise"></a>Abonelikleri Visual Studio ile GitHub Enterprise
-Microsoft ile Enterprise Anlaşması (EA) olan müşteriler, standart abonelikleri ve abonelikleri bir araya getiren yeni Visual Studio teklifi GitHub Enterprise. Bu, Visual Studio abonelerin GitHub Enterprise. 
+Microsoft ile Enterprise Sözleşmesi (EA) olan müşteriler, standart abonelikleri ve abonelikleri bir araya getiren yeni Visual Studio teklifi satın GitHub Enterprise. Bu, Visual Studio abonelerin daha kolay ve ekonomik bir GitHub Enterprise. 
 
-Kuruluş, Visual Studio abonelik satın GitHub Enterprise iki parçalı olarak sağlandı ve yönetiliyor.
+Bu abonelikler, Visual Studio satın GitHub Enterprise iki parçalı olarak sağlandı ve yönetiliyor.
 
 ## <a name="manage-visual-studio-subscriptions"></a>Abonelikleri Visual Studio yönetme
-GitHub Enterprise Visual Studio satın alan GitHub Enterprise, aboneliklerin Visual Studio kısmı hemen sağlandı ve abonelikler Visual Studio Abonelikler Yönetimi'ne atama ve yönetim için [kullanılabilir](https://manage.visualstudio.com) Portal. GitHub Enterprise ile Visual Studio aboneliği atadikten sonra, aboneye üzerinden kendi aboneliklerine erişe Visual Studio e-posta <https://my.visualstudio.com/subscriptions> alır.
+Visual Studio ile Visual Studio satın alan GitHub Enterprise, aboneliklerin Visual Studio kısmı hemen hazır olur ve abonelikler Visual Studio [Abonelikler](https://manage.visualstudio.com) Yönetimi'ne atama ve yönetim için kullanılabilir Portal. Visual Studio aboneliğini GitHub Enterprise, aboneye üzerinden kendi aboneliklerine erişe Visual Studio e-posta <https://my.visualstudio.com/subscriptions> alır.
 
 Abonelikleri yönetme hakkında daha fazla Visual Studio için şu konulara göz atabilirsiniz:
 - [Yönetici Portalını Kullanma](using-admin-portal.md)
@@ -30,14 +30,14 @@ Abonelikleri yönetme hakkında daha fazla Visual Studio için şu konulara göz
 - [Fazla Yüklemeler](handle-overclaimed-license.md)
 
 > [!Important]
-> Visual Studio aboneliğiniz GitHub Enterprise satın almadan Visual Studio abonelik yöneticileri tarafından atanırsa GitHub, GitHub Enterprise hesabı oluşturmak istediğinize GitHub Enterprise.  **Abonelikler atanmadan önce Visual Studio** en az GitHub Enterprise abonelik satın alınarak satın alınabilir.
+> Visual Studio sahip abonelikler GitHub Enterprise satın almadan Visual Studio abonelik yöneticileri tarafından atanırsa, GitHub bir GitHub Enterprise hesabı oluşturmak istediğinize GitHub Enterprise olmaz.  **Abonelikler atanmadan önce Visual Studio** en az GitHub Enterprise abonelik satın alınarak satın alınabilir.
 
 ## <a name="moving-to-visual-studio-with-github-enterprise"></a>Visual Studio ile GitHub Enterprise
 </br>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWEAsv]
 
-Kuruluş standart paket ve Visual Studio sonra GitHub Enterprise paketlerle Visual Studio Enterprise satın Visual Studio Professional  abonelikler atanmıştır. Yönetici portalı, mevcut abonelerinizi GitHub Enterprise ve/veya Visual Studio Enterprise ile ilgili Visual Studio Professional'a taşımanıza yardımcı GitHub Enterprise abonelikleri seçin.  Örneğin, farklı aboneliklere sahip Visual Studio Professional aboneler, Visual Studio Professional abonelikleriyle GitHub Enterprise eder. Sol çubuk "Genel Bakış" panelinde aşağıdaki kutucuğu görüntülenir:
+Kuruluş standart paket ve Visual Studio sonra GitHub Enterprise paketlerle Visual Studio Enterprise satın Visual Studio Professional  abonelikler atanmıştır, yönetici portalı mevcut abonelerinizi GitHub Enterprise ve/veya Visual Studio Professional ile ilgili Visual Studio Enterprise'a taşımanıza yardımcı GitHub Enterprise abonelikleri seçin.  Örneğin, farklı aboneliklere sahip Visual Studio Professional aboneler, Visual Studio Professional abonelikleriyle GitHub Enterprise eder. Sol çubuk "Genel Bakış" panelinde aşağıdaki kutucuğu görüntülenir:
 
    > [!div class="mx-imgBorder"]
    > ![Şimdi Taşı düğmesi](_img/assign-github/move-now.png "Abonelikleri abonelikleri Visual Studio'a yükseltmek için 'Şimdi Taşı GitHub Enterprise tıklayın")

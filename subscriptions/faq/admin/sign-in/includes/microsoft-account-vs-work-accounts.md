@@ -4,15 +4,15 @@ description: Microsoft Hesabı (MSA), bir bireyin sahip olduğu ve kuruluş Offi
 ms.faqid: group3_1
 ms.topic: include
 ms.assetid: 7fc185d7-b658-4855-a663-ac56cf0f5355
-author: CaityBuschlen
-ms.author: cabuschl
+author: evanwindom
+ms.author: amast
 ms.date: 3/3/2020
-ms.openlocfilehash: 4027c134813204819e4ea354d43b6ef561bd69a8
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
-ms.translationtype: HT
+ms.openlocfilehash: 7860d9ca65439fac84328906af88ad8b2a60b0d3
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95970340"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133257740"
 ---
 ## <a name="what-is-the-difference-between-using-a-microsoft-account-vs-work-account"></a>Microsoft hesabı kullanmakla İş hesabı kullanmak arasındaki fark nedir?
 

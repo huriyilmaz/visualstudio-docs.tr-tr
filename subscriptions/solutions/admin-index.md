@@ -4,15 +4,15 @@ description: Visual Studio abonelikleri için dosya listesi yönetici pencere ö
 ms.topic: conceptual
 ms.assetid: 478648b9-f6f0-4ea3-83b4-5cffa196a496
 robots: noindex, nofollow
-author: CaityBuschlen
-ms.author: cabuschl
+author: evanwindom
+ms.author: amast
 ms.date: 08/13/2021
-ms.openlocfilehash: 1290121bf975b48943b77e3207ac1c3bd2b4e71f
-ms.sourcegitcommit: 65a1b6aae8387735f05a83b45e1a6865e9805e1f
+ms.openlocfilehash: d536dba2438c41f26d56798a03d9ccd6a2265ef2
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2021
-ms.locfileid: "129339832"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133254652"
 ---
 # <a name="visual-studio-subscriptions-admin-support-widget-content-includes-files"></a>Visual Studio abonelikleri yönetici desteği pencere öğesi içeriği dosyaları içerir
 

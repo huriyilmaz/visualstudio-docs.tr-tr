@@ -3,16 +3,16 @@ title: GitHub Enterprise ile Visual Studio abonelikleri kurulum işlemi nasıld�
 description: GitHub Enterprise aboneliğinizi etkinleştirme sürecini anlama
 ms.topic: include
 ms.assetid: 6f9aa66b-111f-45a0-a168-e0e5ff21aa46
-author: CaityBuschlen
-ms.author: cabuschl
+author: evanwindom
+ms.author: amast
 ms.date: 12/03/2020
 ms.faqid: q3_3
-ms.openlocfilehash: 5b6422db320deab327b525307116b6214b99eb67
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
-ms.translationtype: HT
+ms.openlocfilehash: 43009f7e02067d2c45f31327c2705b13d7b54915
+ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96560789"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "133256402"
 ---
 ## <a name="what-is-the-visual-studio-subscriptions-with-github-enterprise-setup-process"></a>GitHub Enterprise ile Visual Studio abonelikleri kurulum işlemi nasıldır? 
 
