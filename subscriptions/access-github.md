@@ -7,12 +7,12 @@ ms.assetid: 2249b32a-46d7-4e29-b543-4769c71ceda6
 ms.date: 10/08/2021
 ms.topic: conceptual
 description: Visual Studio aboneliklerinin bir parçası olarak GitHub Enterprise erişme hakkında bilgi edinin
-ms.openlocfilehash: d3c1cd3bd621b5804e65e10aae86837e60cfd346
-ms.sourcegitcommit: a1c18c491e310b00a43e76a911f778e643cd8f8d
+ms.openlocfilehash: d8fdd5b3892ff4b3fa325b647adca15584df9f6d
+ms.sourcegitcommit: 0b949fd7bb38d784ff66edec4725de55d57e76fc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "132995949"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "133219280"
 ---
 # <a name="visual-studio-subscriptions-with-github-enterprise"></a>GitHub Enterprise abonelikleri Visual Studio 
 
@@ -81,7 +81,7 @@ y: bir GitHub Enterprise hesabı ayarlamaya yönelik işlem biraz zaman alabilir
 y: GitHub Enterprise birlikte, yazılım indirmeleri, bulut hizmetleri, teknik destek ve iş ortağı avantajları dahil olmak üzere standart bir Visual Studio aboneliğinin tüm avantajlarını, aboneliğin ayrı olarak satın alındığına göre alırsınız.
 
 ## <a name="support-resources"></a>Destek kaynakları
-- [GitHub Docs](https://docs.github.com/github/setting-up-and-managing-your-enterprise-account/managing-licenses-for-the-github-enterprise-and-visual-studio-bundle) 'ta GitHub atama hakkında daha fazla bilgi edinin
+- [GitHub Docs](https://docs.github.com/en/enterprise-cloud@latest/billing/managing-licenses-for-visual-studio-subscriptions-with-github-enterprise/about-visual-studio-subscriptions-with-github-enterprise) 'ta GitHub atama hakkında daha fazla bilgi edinin
 - [GitHub yardım](https://help.github.com)'da çok çeşitli GitHub konularda soruların yanıtlarını bulun.
 - Daha fazla yardıma mı ihtiyacınız var?  [GitHub desteğe](https://support.github.com/) başvurun
 - [GitHub Community forumundaki](https://github.community/)diğer GitHub kullanıcılardan yardım alın.
