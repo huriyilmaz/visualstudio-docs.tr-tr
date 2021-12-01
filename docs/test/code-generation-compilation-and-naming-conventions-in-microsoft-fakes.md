@@ -1,6 +1,6 @@
 ---
 title: 'Microsoft Fakes: & derleme kodu oluşturma; adlandırma kuralları'
-description: Fakes üretilen türler, üyeler ve parametreler için adlandırma kuralları da dahil olmak üzere Fakes kod oluşturma ve derleme konularında seçenekler ve sorunlar hakkında bilgi edinin.
+description: Fakes tarafından oluşturulan türler, üyeler ve parametreler için adlandırma kuralları dahil olmak üzere Fakes kod oluşturma ve derleme konularında seçenekler ve sorunlar hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,23 +10,23 @@ ms.technology: vs-ide-test
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: e683d40d93dca29445491b1e3fccdcd9c863b8f6
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: d4622deaafd69da44b6e2dde835cc0cb6e3ec455
+ms.sourcegitcommit: 263703af9c4840e0e0876aa99df6dd7455c43519
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126634281"
+ms.lasthandoff: 12/01/2021
+ms.locfileid: "133387425"
 ---
 # <a name="code-generation-compilation-and-naming-conventions-in-microsoft-fakes"></a>Microsoft Fakes'te kod oluşturma, derleme ve adlandırma kuralları
 
-bu makalede Fakes kod oluşturma ve derleme içindeki seçenekler ve sorunlar ele alınmaktadır ve Fakes oluşturulan türler, üyeler ve parametreler için adlandırma kuralları açıklanmaktadır.
+bu makalede Fakes kod oluşturma ve derleme içindeki seçenekler ve sorunlar ele alınmaktadır ve Fakes tarafından oluşturulan türler, üyeler ve parametreler için adlandırma kuralları açıklanmaktadır.
 
 **Gereksinimler**
 
 - Visual Studio Enterprise
 - bir .NET Framework projesi
 ::: moniker range=">=vs-2019"
-- Visual Studio 2019 güncelleştirme 6 ' da önizlenen .net Core, .net 5,0 ve SDK stili proje desteği ve güncelleştirme 8 ' de varsayılan olarak etkinleştirilmiştir. daha fazla bilgi için bkz. [.net Core ve SDK stilindeki projeler için Microsoft Fakes](/visualstudio/releases/2019/release-notes#microsoft-fakes-for-net-core-and-sdk-style-projects).
+- .net Core, .net 5,0 veya üzeri ve SDK stili proje, Visual Studio 2019 güncelleştirme 6 ' da önizlemesi görüntülenen ve güncelleştirme 8 ' de varsayılan olarak etkinleştirilmiştir. daha fazla bilgi için bkz. [.net Core ve SDK stilindeki projeler için Microsoft Fakes](/visualstudio/releases/2019/release-notes#microsoft-fakes-for-net-core-and-sdk-style-projects).
 ::: moniker-end
 
 ## <a name="code-generation-and-compilation"></a>Kod oluşturma ve derleme
@@ -184,7 +184,7 @@ Bir ekip derleme ortamında, tüm derleme çıkışları tek bir dizinde birleş
 
 bu sorundan kaçınmak için, Fakes *. fakes* dosyalarını eklerken proje dışı başvurular için otomatik olarak sürüm Fakes derleme adları oluşturmalıdır. sürüm nitelikli Fakes bütünleştirilmiş kod adı, Fakes bütünleştirilmiş kod adı oluştururken bir sürüm numarası katıştırır:
 
-bir derleme myassembly ve bir sürüm 1.2.3.4 verildiğinde Fakes bütünleştirilmiş kod adı myassembly. 1.2.3.4 olur. Fakes.
+bir derleme myassembly ve bir sürüm 1.2.3.4 verildiğinde Fakes bütünleştirilmiş kod adı myassembly. 1.2.3.4. Fakes.
 
 *. Fakes* içindeki derleme öğesinin sürüm özniteliğini düzenleyerek bu sürümü değiştirebilir veya kaldırabilirsiniz:
 
@@ -242,41 +242,41 @@ Boş bir adından başlayarak alan adlandırmayla ilgili **temel kurallar** :
 |Statik **Oluşturucu**|`.cctor`|`StaticConstructor`|
 |"_" (Özellik alıcıları gibi) ile ayrılmış iki bölümden oluşan Yöntem adına sahip bir **erişimci**|*kind_name* (yaygın durum, ancak ECMA tarafından zorlanmaz)|*NameKind*, her iki parça da büyük harfli ve değiştirilmiş|
 ||Özelliğin alıcısı `Prop`|`PropGet`|
-||Özelliğin ayarlayıcısı `Prop`|`PropSet`|
-||Olay Ekleyici|`Add`|
-||Olay çıkarıcı|`Remove`|
-|İki bölümden oluşan bir **operatör**|`op_name`|`NameOp`|
+||Özelliğin ayarıcısı `Prop`|`PropSet`|
+||Olay ekleyici|`Add`|
+||Olay kaldırıcı|`Remove`|
+|İki **parçadan** oluşan bir işleç|`op_name`|`NameOp`|
 |Örneğin: + işleci|`op_Add`|`AddOp`|
-|Bir **dönüştürme işleci** için, dönüş türü eklenir.|`T op_Implicit`|`ImplicitOpT`|
+|Dönüştürme **işleci** için dönüş türü eklenir.|`T op_Implicit`|`ImplicitOpT`|
 
 > [!NOTE]
-> - **Dizin oluşturucularının alıcıları ve ayarlayıcıları** özelliğe benzer şekilde işlenir. Bir dizin oluşturucunun varsayılan adı `Item` .
-> - **Parametre türü** adları dönüştürülür ve bitiştirilir.
-> - Aşırı yükleme belirsizliğe neden olmadıkça **dönüş türü** yok sayılır. Bir aşırı yükleme varsa, dönüş türü adın sonuna eklenir.
+> - **Dizinicilerin alicileri ve ayaricileri,** özelliğine benzer şekilde kabul edilir. Dizin oluşturma için varsayılan ad şu `Item` şekildedir: .
+> - **Parametre türü** adları dönüştürülen ve bir içine alındı.
+> - **Aşırı yükleme** belirsizlikleri olmadığı sürece dönüş türü yoksayılır. Aşırı yükleme bilgisi varsa, adın sonuna dönüş türü eklenir.
 
 ### <a name="parameter-type-naming-conventions"></a>Parametre türü adlandırma kuralları
 
-|İşlemlerindeki|Eklenen dize...|
+|Verilen|Eklenen dize...|
 |-|-|
-|Bir **tür**`T`|T<br /><br /> Ad alanı, iç içe yapı ve genel olarak bırakılır.|
-|**Out parametresi**`out T`|`TOut`|
-|Bir **ref parametresi**`ref T`|`TRef`|
-|Bir **dizi türü**`T[]`|`TArray`|
-|**Çok boyutlu dizi** türü`T[ , , ]`|`T3`|
-|Bir **işaretçi** türü `T*`|`TPtr`|
-|**Genel tür**`T<R1, ...>`|`TOfR1`|
-|Türünde **genel bir tür bağımsız değişkeni** `!i``C<TType>`|`Ti`|
-|Metodun **genel metot bağımsız değişkeni** `!!i``M<MMethod>`|`Mi`|
-|**İç içe bir tür**`N.T`|`N` eklendiğinde, `T`|
+|Bir **tür**`T`|T<br /><br /> Ad alanı, iç içe geçmiş yapı ve genel tikler bırakılır.|
+|Out **parametresi**`out T`|`TOut`|
+|Başvuru **parametresi** `ref T`|`TRef`|
+|Dizi **türü**`T[]`|`TArray`|
+|Çok **boyutlu dizi** türü `T[ , , ]`|`T3`|
+|**İşaretçi** türü`T*`|`TPtr`|
+|Genel **tür**`T<R1, ...>`|`TOfR1`|
+|Türünde **genel tür bağımsız** `!i` değişkeni`C<TType>`|`Ti`|
+|Yöntemin **genel yöntem bağımsız** `!!i` değişkeni`M<MMethod>`|`Mi`|
+|İç **içe geçmiş tür**`N.T`|`N` eklenir, ardından `T`|
 
-### <a name="recursive-rules"></a>Özyinelemeli kurallar
+### <a name="recursive-rules"></a>Cursive kuralları
 
-Aşağıdaki kurallar yinelemeli olarak uygulanır:
+Aşağıdaki kurallar, tekrar tekrar uygulanır:
 
-- Fakes, Fakes derlemeleri oluşturmak için C# kullandığından, geçersiz bir C# belirteci üreten herhangi bir karakter "_" (alt çizgi) öğesine atlanmalıdır.
+- Bu Fakes derlemeleri oluşturmak için C# Fakes, geçersiz bir C# belirteci üretecek herhangi bir karakter "_" (alt çizgi) olarak kaçmıştır.
 
-- Elde edilen bir ad, bildirim türünün herhangi bir üyesiyle çakışıyor, bir numaralandırma düzeni, 01 ' den başlayarak iki basamaklı bir sayaç eklenerek kullanılır.
+- Sonuçta elde edilen bir ad, bildirim türünün herhangi bir üyesiyle çatışıyorsa, 01'den başlayarak iki basamaklı bir sayaç ek adıyla bir numaralama düzeni kullanılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Microsoft Fakes test edilen kodu yalıtma](../test/isolating-code-under-test-with-microsoft-fakes.md)
+- [Kodla test altındaki kodu yalıtma Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md)

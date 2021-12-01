@@ -15,24 +15,24 @@ manager: jmartens
 ms.technology: vs-ide-code-analysis
 ms.workload:
 - dotnet
-ms.openlocfilehash: a0b477f4dcb5d7c2148b40f648c41b9fea5a1578
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 39b61dca9c550e70a4caa942a495274383849459
+ms.sourcegitcommit: 263703af9c4840e0e0876aa99df6dd7455c43519
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126631844"
+ms.lasthandoff: 12/01/2021
+ms.locfileid: "133387207"
 ---
 # <a name="overview-of-source-code-analysis"></a>Kaynak kodu analizine genel bakış
 
-.NET Compiler Platform (Roslyn) Çözümleyicileri C# veya stil Visual Basic kalite, bakım, tasarım ve diğer sorunlar için kodlarınızı inceler. Bu inceleme veya analiz, tüm açık dosyalarda tasarım zamanında yapılır.
+.NET Compiler Platform (Roslyn) Çözümleyicileri C# veya stil Visual Basic, bakım, tasarım ve diğer sorunlar için kodlarınızı inceler. Bu inceleme veya analiz, tüm açık dosyalarda tasarım zamanında yapılır.
 
 Çözümleyiciler aşağıdaki gruplara ayrılmalıdır:
 
-- [Kod stili](/dotnet/fundamentals/code-analysis/code-style-rule-options?preserve-view=true&view=vs-2019#convention-categories) çözümleyiciler, yerleşik olarak Visual Studio. Bu çözümleyicilerin tanılama kimliği veya kodu IDExxxx biçimindedir, örneğin, IDE0067. Tercihleri metin düzenleyici seçenekleri [sayfasında veya editorConfig](../ide/code-styles-and-code-cleanup.md) dosyasında [yapılandırabilirsiniz.](/dotnet/fundamentals/code-analysis/code-style-rule-options) .NET 5.0'dan başlayarak, kod stili çözümleyiciler .NET SDK'sı ile birlikte gelir ve derleme uyarıları veya hatalar olarak katı bir şekilde zorlanabilir. Daha fazla bilgi için buraya [bakın.](/dotnet/fundamentals/productivity/code-analysis#code-style-analysis)
+- [Kod stili](/dotnet/fundamentals/code-analysis/code-style-rule-options?preserve-view=true&view=vs-2019#convention-categories) çözümleyiciler, yerleşik olarak Visual Studio. Bu çözümleyiciler için tanılama kimliği veya kod IDExxxx biçimindedir, örneğin, IDE0067. Tercihleri metin düzenleyici seçenekleri [sayfasında veya editorConfig](../ide/code-styles-and-code-cleanup.md) dosyasında [yapılandırabilirsiniz.](/dotnet/fundamentals/code-analysis/code-style-rule-options) .NET 5.0'dan başlayarak, kod stili çözümleyicileri .NET SDK'sı ile birlikte gelir ve derleme uyarıları veya hatalar olarak katı bir şekilde zorlanabilir. Daha fazla bilgi için buraya [bakın.](/dotnet/fundamentals/productivity/code-analysis#code-style-analysis)
 
-- [Kod kalitesi](/dotnet/fundamentals/code-analysis/quality-rules/index) çözümleyicileri artık .NET 5 SDK'sı ile birlikte gelir ve varsayılan olarak etkinleştirilir. Bu çözümleyiciler için tanılama kimliği veya kod CAxxxx biçimindedir, örneğin CA1822. Daha fazla bilgi için [bkz. .NET kod kalitesi analizine genel bakış.](/dotnet/fundamentals/productivity/code-analysis#code-quality-analysis)
+- [Kod kalitesi](/dotnet/fundamentals/code-analysis/quality-rules/index) çözümleyicileri artık .NET 5 SDK'sı ile başlayarak dahil edilmiştir ve varsayılan olarak etkindir. Bu çözümleyiciler için tanılama kimliği veya kod CAxxxx biçimindedir, örneğin, CA1822. Daha fazla bilgi için [bkz. .NET kod kalitesi analizine genel bakış.](/dotnet/fundamentals/productivity/code-analysis#code-quality-analysis)
 
-- Üçüncü taraf çözümleyiciler bir NuGet paketi veya Visual Studio yükleyebilir. [StyleCop,](https://www.nuget.org/packages/StyleCop.Analyzers/) [Roslynator](https://www.nuget.org/packages/Roslynator.Analyzers/), [XUnit Analyzers](https://www.nuget.org/packages/xunit.analyzers/)ve Sonar Analyzer gibi üçüncü [taraf çözümleyiciler.](https://www.nuget.org/packages/SonarAnalyzer.CSharp/)
+- Üçüncü taraf çözümleyiciler bir NuGet paketi veya Visual Studio olarak yükleyebilir. [StyleCop,](https://www.nuget.org/packages/StyleCop.Analyzers/) [Roslynator](https://www.nuget.org/packages/Roslynator.Analyzers/), [XUnit Analyzers](https://www.nuget.org/packages/xunit.analyzers/)ve Sonar Analyzer gibi [üçüncü taraf çözümleyiciler.](https://www.nuget.org/packages/SonarAnalyzer.CSharp/)
 
 ## <a name="severity-levels-of-analyzers"></a>Çözümleyicilerin önem derecesi
 
@@ -40,9 +40,9 @@ Her çözümleyici aşağıdaki önem düzeylerinden birini içerir:
 
 | Önem Derecesi (Çözüm Gezgini) | Önem Derecesi (EditorConfig dosyası) | Derleme zamanı davranışı | Düzenleyici davranışı |
 |-|-|-|
-| Hata | `error` | İhlaller *Hata* Listesinde ve komut satırı derleme çıkışında Hatalar olarak görünür ve derlemelerin başarısız olmasına neden olur.| Rahatsız olan kodun altı kırmızı bir çizgiyle çizili ve kaydırma çubuğunda küçük bir kırmızı kutu ile işaretlenmiştir. |
-| Uyarı | `warning` | İhlaller *Hata* Listesinde ve komut satırı derleme çıkışında Uyarılar olarak görünür, ancak derlemelerin başarısız olmasına neden olmaz. | Soruna neden olan kodun altı yeşil bir geçişle çizili ve kaydırma çubuğunda küçük bir yeşil kutuyla işaretlenmiştir. |
-| Bilgi | `suggestion` | İhlaller, komut satırı derleme çıkışında değil Hata Listesinde İletiler olarak görünür.  | Soruna neden olan kod, gri bir geçişle altı çizili ve kaydırma çubuğunda küçük bir gri kutuyla işaretlenmiştir. |
+| Hata | `error` | İhlaller *Hata* Listesinde ve komut satırı derleme çıkışında Hatalar olarak görünür ve derlemelerin başarısız olmasına neden olur.| Soruna neden olan kodun altı kırmızı bir çizgiyle çizili ve kaydırma çubuğunda küçük bir kırmızı kutu ile işaretlenmiştir. |
+| Uyarı | `warning` | İhlaller *Hata* Listesinde ve komut satırı derleme çıkışında Uyarılar olarak görünür, ancak derlemelerin başarısız olmasına neden olmaz. | Soruna neden olan kodun altı yeşil bir geçişle çizili ve kaydırma çubuğunda küçük bir yeşil kutu ile işaretlenmiştir. |
+| Bilgi | `suggestion` | İhlaller, komut satırı derleme çıkışında değil Hata Listesinde İletiler olarak görünür.  | Soruna neden olan kodun altı gri bir geçişle çizili ve kaydırma çubuğunda küçük bir gri kutuyla işaretlenir. |
 | Gizli | `silent` | Kullanıcı tarafından görülemeyebilir. | Kullanıcı tarafından görülemeyebilir. Ancak tanılama, IDE tanılama altyapısına raporlandı. |
 | Hiçbiri | `none` | Tamamen gizlendi. | Tamamen gizlendi. |
 | Varsayılan | `default` | Kuralın varsayılan önem derecesine karşılık gelen. Bir kuralın varsayılan değerini belirlemek için aşağıdaki Özellikler penceresi. | Kuralın varsayılan önem derecesine karşılık gelen. |
@@ -53,9 +53,9 @@ Kural ihlalleri bir çözümleyici tarafından bulunursa, bunlar kod düzenleyic
 
 Hata listesinde bildirilen çözümleyici ihlalleri, [kuralın önem derecesi ayarıyla](../code-quality/use-roslyn-analyzers.md#configure-severity-levels) eş görünür. Çözümleyici ihlalleri, kod düzenleyicisinde rahatsız eden kodun altında geçişler olarak da gösterilir. Aşağıdaki görüntüde bir hata (kırmızı geçiş), bir uyarı (yeşil geçiş) ve bir öneri (üç gri nokta) olmak için üç &mdash; ihlal gösterilir:
 
-![Visual Studio'da kod düzenleyicisinde Visual Studio](media/diagnostics-severity-colors.png)
+![Visual Studio'de kod düzenleyicisinde Visual Studio](media/diagnostics-severity-colors.png)
 
-Birçok çözümleyici kuralı veya *tanılama,* kural ihlallerini düzeltmek için uygulayabilecek *bir* veya daha fazla ilişkili kod düzeltmesi içerir. Kod düzeltmeleri, diğer Hızlı Eylemler türleriyle birlikte ampul simgesi menüsünde [gösterilir.](../ide/quick-actions.md) Bu kod düzeltmeleri hakkında daha fazla bilgi için bkz. [Yaygın Hızlı Eylemler](../ide/quick-actions.md).
+Birçok çözümleyici kuralı *veya tanılama,* kural ihlallerini düzeltmek için uygulayabilecek *bir veya* daha fazla ilişkili kod düzeltmesi içerir. Kod düzeltmeleri, diğer Hızlı Eylemler türleriyle birlikte ampul simgesi menüsünde [gösterilir.](../ide/quick-actions.md) Bu kod düzeltmeleri hakkında bilgi için bkz. [Yaygın Hızlı Eylemler.](../ide/quick-actions.md)
 
 ![Çözümleyici ihlali ve Hızlı Eylem kod düzeltmesi](../code-quality/media/built-in-analyzer-code-fix.png)
 
@@ -70,19 +70,19 @@ Birçok çözümleyici kuralı veya *tanılama,* kural ihlallerini düzeltmek i�
 
 ## <a name="nuget-package-versus-vsix-extension"></a>NuGet VSIX uzantısına karşı
 
-Üçüncü taraf çözümleyiciler, proje başına bir NuGet yükleyebilir. Bunların bazıları, Visual Studio uzantısı olarak da kullanılabilir. Bu durumda bunlar, Visual Studio. Çözümleyicileri yüklemenin bu iki yöntemi arasında bazı önemli [davranış farklılıkları vardır.](../code-quality/install-roslyn-analyzers.md)
+Üçüncü taraf çözümleyiciler, proje başına bir NuGet yükleyebilir. Bunların bazıları, Visual Studio uzantısı olarak da kullanılabilir. Bu durumda, bu uzantılar, Visual Studio. Çözümleyicileri yüklemenin bu iki yöntemi arasında bazı önemli [davranış farklılıkları vardır.](../code-quality/install-roslyn-analyzers.md)
 
 ### <a name="scope"></a>Kapsam
 
-Çözümleyicileri bir Visual Studio uzantısı olarak yüklüler, çözüm düzeyinde ve tüm çözüm örneklerine Visual Studio. Çözümleyicileri tercih edilen yöntem olan NuGet paketi olarak yüklemeniz, yalnızca NuGet paketinin yük olduğu projeye uygulanır. Takım ortamlarında, uygulama paketleri olarak NuGet çözümleyiciler, bu proje üzerinde *çalışmakta olan* tüm geliştiricilerin kapsamındadır.
+Çözümleyicileri bir Visual Studio olarak yüklüler, çözüm düzeyinde ve tüm çözüm örneklerine Visual Studio. Çözümleyicileri tercih edilen yöntem olan bir NuGet paketi olarak yüklürsanız, bunlar yalnızca NuGet paketin yük olduğu projeye uygulanır. Takım ortamlarında, paket olarak NuGet çözümleyiciler, bu proje üzerinde *çalışmakta olan* tüm geliştiricilerin kapsamındadır.
 
 ### <a name="build-errors"></a>Derleme hataları
 
-Komut satırı aracılığıyla veya sürekli tümleştirme (CI) derlemesi kapsamında dahil olmak üzere derleme zamanında kuralların uygulanması için aşağıdaki seçeneklerden birini seçebilirsiniz:
+Komut satırı veya sürekli tümleştirme (CI) derlemesi kapsamında dahil olmak üzere derleme zamanında kuralların zorunlu kılınarak aşağıdaki seçeneklerden birini seçebilirsiniz:
 
-- .NET SDK'da varsayılan olarak çözümleyicileri içeren bir .NET 5.0 projesi oluşturun. Kod analizi, .NET 5.0 veya sonraki sürümleri hedefleyen projeler için varsayılan olarak etkindir. [EnableNETAnalyzers](/dotnet/core/project-sdk/msbuild-props#enablenetanalyzers) özelliğini true olarak ayarerek önceki .NET sürümlerini hedef alan projelerde kod analizini etkinleştirebilirsiniz.
+- .NET SDK'da varsayılan olarak çözümleyicileri içeren bir .NET 5.0 veya sonraki bir proje oluşturun. Kod analizi, .NET 5.0 veya sonraki sürümleri hedefleyen projeler için varsayılan olarak etkindir. [EnableNETAnalyzers](/dotnet/core/project-sdk/msbuild-props#enablenetanalyzers) özelliğini true olarak ayarerek önceki .NET sürümlerini hedef alan projelerde kod analizini etkinleştirebilirsiniz.
 
-- Çözümleyicileri bir NuGet yükleyin. Çözümleyicileri bir uzantı olarak yüklemiş olursanız derleme raporunda çözümleyici uyarıları ve hataları gösternmıyor.
+- Çözümleyicileri bir NuGet yükleyin. Çözümleyicileri bir uzantı olarak yüklemiş olursanız derleme raporunda çözümleyici uyarıları ve hataları göster yok.
 
 Aşağıdaki görüntüde çözümleyici kuralı ihlali içeren bir proje derlemenin komut satırı derleme çıktısı gösterilir:
 

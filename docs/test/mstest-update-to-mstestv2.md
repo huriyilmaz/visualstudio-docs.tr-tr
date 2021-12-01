@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-test
 ms.workload:
 - multiple
-ms.openlocfilehash: 68ca8dbe123fd0585a321fbefd49fd61713f4329
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 0cbbbe38d92f4eee74ca55939bbe5004aa8d7553
+ms.sourcegitcommit: 263703af9c4840e0e0876aa99df6dd7455c43519
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126726729"
+ms.lasthandoff: 12/01/2021
+ms.locfileid: "133387461"
 ---
 # <a name="upgrade-from-mstestv1-to-mstestv2"></a>MSTestV1 'den MSTestV2 'ye yükseltme
 
@@ -52,7 +52,7 @@ Sample *. csproj* artık MSTestV2 hedefleniyor:
 > [!NOTE]
 > Kodlanmış UI testleri veya Web yük testleri olan test projeleri, MSTestV2 ile uyumlu değildir. Bu proje türleri kullanım dışı bırakıldı. [KODLANMıŞ UI testi kullanımdan](https://devblogs.microsoft.com/devops/changes-to-coded-ui-test-in-visual-studio-2019/) kaldırma ve [Web yük testi](https://devblogs.microsoft.com/devops/cloud-based-load-testing-service-eol/)kullanım dışı bırakma hakkında daha fazla bilgi edinin.
 
-### <a name="sdk-style-csproj-net-core-and-net-5"></a>SDK stili csproj (.NET Core ve .NET 5)
+### <a name="sdk-style-csproj-net-core-and-net-5-or-later"></a>SDK stili csproj (.NET Core ve .NET 5 veya üzeri)
 
 *. Csproj* 'niz daha yeni *SDK stili ise* , büyük olasılıkla zaten MSTestV2 kullanıyor olabilirsiniz. [MSTestV2](https://www.nuget.org/packages/MSTest.TestFramework) ve [MSTestV2 bağdaştırıcısı](https://www.nuget.org/packages/MSTest.TestAdapter/) için NuGet paketlerini NuGet bulabilirsiniz.
 

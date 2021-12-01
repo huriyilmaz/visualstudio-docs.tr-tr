@@ -1,8 +1,8 @@
 ---
 description: uygulamaları msı olarak paketleme, genellikle Visual Studio Yükleyicisi projeleri uzantısı kullanılarak gerçekleştirilir.
-title: Visual Studio Yükleyicisi Projeler ve .NET Core 3,1 ve .NET 5,0
+title: Visual Studio Yükleyicisi projeleri ve .net 6,0
 titleSuffix: ''
-ms.date: 08/18/2020
+ms.date: 11/29/2021
 ms.topic: conceptual
 helpviewer_keywords:
 - installer projects
@@ -13,20 +13,30 @@ manager: MSLukeWest
 monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: d1c756ce38a397b3dc7fe94a0d2627f1a55da9c2
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: 23c927de1cc6a40988679c9991cbb5cbafae90f3
+ms.sourcegitcommit: 263703af9c4840e0e0876aa99df6dd7455c43519
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128426406"
+ms.lasthandoff: 12/01/2021
+ms.locfileid: "133387194"
 ---
-# <a name="visual-studio-installer-projects-extension-and-net-core-31--net-50"></a>Visual Studio Yükleyicisi Projeler uzantısı ve .NET Core 3,1/.NET 5,0
+# <a name="visual-studio-installer-projects-extension-and-net-60"></a>Visual Studio Yükleyicisi projeleri uzantısı ve .net 6,0
 
 uygulamaları msı olarak paketleme, genellikle Visual Studio Yükleyicisi projeleri uzantısı kullanılarak gerçekleştirilir.
 
-uzantıyı buradan indirebilirsiniz: [Visual Studio Yükleyicisi projeler](https://marketplace.visualstudio.com/items?itemName=VisualStudioClient.MicrosoftVisualStudio2017InstallerProjects)
+Bu makale, .NET Core 3,1, .NET 5 ve .NET 6 ' yı hedefleyen uygulamalar için geçerlidir.
+
+Uzantıyı buradan indirebilirsiniz:
+
+::: moniker range=">= vs-2022"
+[Visual Studio Yükleyicisi projeleri](https://marketplace.visualstudio.com/items?itemName=VisualStudioClient.MicrosoftVisualStudio2022InstallerProjects)
+::: moniker-end
+::: moniker range="vs-2019"
+[Visual Studio Yükleyicisi projeleri](https://marketplace.visualstudio.com/items?itemName=VisualStudioClient.MicrosoftVisualStudio2017InstallerProjects)
+::: moniker-end
 
 ## <a name="update-for-net-core"></a>.NET Core için güncelleştirme
+
 .NET Core yayımlamanın iki farklı modeline sahiptir.
 
 - Çerçeveye bağımlı dağıtımlar
@@ -35,9 +45,9 @@ uzantıyı buradan indirebilirsiniz: [Visual Studio Yükleyicisi projeler](https
 
 Bu dağıtım stratejileri hakkında daha fazla bilgi edinmek için bkz. [.NET Core uygulama yayımlamaya genel bakış](/dotnet/core/deploying/).
 
-### <a name="workflow-changes-for-net-core-31-and-net-50"></a>.NET Core 3,1 ve .NET 5,0 için iş akışı değişiklikleri
+### <a name="workflow-changes-for-net-core-31-and-later-versions"></a>.NET Core 3,1 ve üzeri sürümler için iş akışı değişiklikleri
 
-1. .NET Core 3,1 ve .NET 5,0 projeleri için doğru çıktıyı almak üzere **birincil çıkış** yerine **öğeleri yayımla** ' yı seçin.  bu iletişim kutusunu açmak için   >  projenin bağlam menüsünden **Project Output...** ekle öğesini seçin.
+1. .NET Core 3,1, .NET 5,0 veya .NET 6,0 projeleri için doğru çıktıyı almak üzere **birincil çıkış** yerine **öğeleri yayımla** ' yı seçin.  bu iletişim kutusunu açmak için   >  projenin bağlam menüsünden **Project Output...** ekle öğesini seçin.
 
     ![Project çıkış grubu ekle iletişim kutusunda öğeleri yayımla çıkış grubu](../deployment/media/installer-projects-net-core-publish-items-output.png "Yayımlama öğelerini seçin")
 
@@ -48,9 +58,9 @@ Bu dağıtım stratejileri hakkında daha fazla bilgi edinmek için bkz. [.NET C
 >[!NOTE]
 >bu iş akışı ASP.NET Core uygulamalar için desteklenmez, yalnızca masaüstü uygulamaları Windows.
 
-### <a name="prerequisites-for-net-core-31-and-net-50"></a>.NET Core 3,1 ve .NET 5,0 önkoşulları
+### <a name="prerequisites"></a>Önkoşullar
 
-Yükleyicinizin, çerçeveye bağımlı bir .NET Core 3,1 veya .NET 5,0 uygulaması için gerekli çalışma zamanını yükleyebilmesini isterseniz, bunu [önkoşulları](../deployment/application-deployment-prerequisites.md)kullanarak yapabilirsiniz.  Yükleyici projenizin Özellikler iletişim kutusunda **Önkoşullar...** iletişim kutusunu açın ve aşağıdaki girdileri görürsünüz:
+Yükleyicinizin, çerçeveye bağımlı bir .NET Core 3,1, .NET 5,0 veya .NET 6,0 uygulaması için gerekli çalışma zamanını yükleyebilmesini isterseniz, bunu [önkoşulları](../deployment/application-deployment-prerequisites.md)kullanarak yapabilirsiniz.  Yükleyici projenizin Özellikler iletişim kutusunda **Önkoşullar...** iletişim kutusunu açın ve aşağıdaki girdileri görürsünüz:
 
 ![Önkoşullar iletişim kutusunda .NET Core öğeleri](../deployment/media/installer-projects-net-core-prerequisites.png ".NET Core önkoşulları")
 

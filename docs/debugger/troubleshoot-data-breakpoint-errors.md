@@ -17,12 +17,12 @@ ms.author: waan
 manager: caslan
 ms.workload:
 - multiple
-ms.openlocfilehash: deb06d9fdb084ca1a99f5fa1991c2e4d93d087574f73781979f630db973c22d5
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f7d599c1ceb0f6b767cf6c772c13a0babbdf175c
+ms.sourcegitcommit: 263703af9c4840e0e0876aa99df6dd7455c43519
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121378482"
+ms.lasthandoff: 12/01/2021
+ms.locfileid: "133387412"
 ---
 # <a name="troubleshooting-data-breakpoint-errors"></a>Veri kesme noktası hatalarında sorun giderme
 Bu sayfa, "değer değiştiğinde kes" kullanırken görülen yaygın hataları çözme konusunda size kılavuzluk eder
@@ -37,7 +37,7 @@ Yönetilen veri kesme noktaları kullanılırken oluşabilecek hataların bir li
 
   - Yönetilen veri kesme noktaları desteği .NET Core 3,0 ' de başlamıştır. bu, şu anda .NET Framework, .net Core 'un sürümleri 3,0 veya 5.0.3 altında .net sürümleri için desteklenmez. 
     
-  - **Çözüm**: Bu çözüm, projenizi .net Core 3,0 sürümüne yükseltmek olacaktır.
+  - **Çözüm**: bunun çözümü, projenizi .NET Core 3. x veya .NET 5 + sürümüne yükseltmek olacaktır.
 
 - *"Yönetilen yığında değer bulunamıyor ve izlenemez."*
   - Yığında belirtilen değişken.
@@ -92,5 +92,5 @@ Bu özellikle ilgili herhangi bir sorun veya öneri için, lütfen yardım > [bi
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Core 3,0 ' de "değer değiştiğinde kes" kullanımı](using-breakpoints.md#BKMK_set_a_data_breakpoint_native_cplusplus).
+- [.Net 'teki "değer değiştiğinde kes" kullanımı](using-breakpoints.md#BKMK_set_a_data_breakpoint_managed).
 - [devblog: değer değiştiğinde kes: Visual Studio 2019 ' de .net Core için veri kesme noktaları](https://devblogs.microsoft.com/visualstudio/break-when-value-changes-data-breakpoints-for-net-core-in-visual-studio-2019/)

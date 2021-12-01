@@ -10,12 +10,12 @@ ms.technology: vs-ide-test
 monikerRange: '>= vs-2022'
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e4094864c92ac95f879ff67023ee63c4b5c6c6d
-ms.sourcegitcommit: d3ce2900d838d1fb509df51bda9a9a8b72dfd880
+ms.openlocfilehash: 7b756ac42a7747d1d9011b5e3e84f75731b38a7e
+ms.sourcegitcommit: 263703af9c4840e0e0876aa99df6dd7455c43519
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "131521643"
+ms.lasthandoff: 12/01/2021
+ms.locfileid: "133387487"
 ---
 # <a name="remote-testing-experimental-preview"></a>Uzaktan test (deneysel Önizleme)
 
@@ -26,7 +26,7 @@ Uzaktan test 'in bu deneysel sürümünü kullanma gereksinimleri:
 * Yalnızca .NET testleri için kullanılabilir.
   * Diğer diller için uzaktan test desteğiyle ilgileniyorsanız lütfen [bir öneri](/visualstudio/ide/suggest-a-feature) gönderin veya mevcut bir öneriyi oylayın. [C++ uzaktan sınamasını destekleme](https://developercommunity.visualstudio.com/t/run-c-unit-tests-on-linux-with-visual-studio/1403357).
 * şu anda, uzak ortamda yalnızca Windows, ubuntu ve de, görüntülerini destekliyoruz. 
-* Şu anda ortamın sağlanması, kullanıcının belirtimine ayrılmakta. Kullanıcının hedef ortamınıza gerekli bağımlılıkları yüklemesi gerekir. Örneğin, testleriniz .NET 5,0 ' i hedefliyorsanız, kapsayıcının Dockerfile ile .NET 5,0 yüklendiğinden emin olmanız gerekir. Uzak ortama .NET Core yüklemek için bir istem olabilir. Bu, testleri uzaktan çalıştırmak ve saptamak için gereklidir. 
+* Şu anda ortamın sağlanması, kullanıcının belirtimine ayrılmakta. Kullanıcının hedef ortamınıza gerekli bağımlılıkları yüklemesi gerekir. Örneğin, testleriniz .NET 6,0 ' i hedefliyorsanız, kapsayıcının Dockerfile ile .NET 6,0 yüklendiğinden emin olmanız gerekir. Uzak ortama .NET Core yüklemek için bir istem olabilir. Bu, testleri uzaktan çalıştırmak ve saptamak için gereklidir. 
 * Çıkış > testleri bölmesini kullanarak bağlantı durumunuzu uzak ortama izlemeyi planlayın. Örneğin, kapsayıcı durdurulmuşsa çıktı > testleri bölmesinde bir ileti görüntülenir. Tüm senaryoları algılayamıyoruz, bu nedenle bağlantı kaybedildiği gibi görünüyorsa çıktınızdan emin olun. Özellikle, çıkış bölmesi "test" olarak ayarlanmamışsa iletiyi hemen görmeyebilirsiniz. Bağlantı kaybolursa, bağlantıyı yerel ortamınıza geri ayarlamak için test Gezgini 'ndeki ortam açılır öğesini kullanabilir ve sonra bağlantıyı yeniden başlatmak için uzak ortamı yeniden seçebilirsiniz.
 
 ## <a name="set-up-the-remote-testing-environment"></a>Uzaktan test ortamını ayarlama
