@@ -125,7 +125,7 @@
     "ghogen@microsoft.com"
   ],
   "branches_to_filter": [
-    "master",
+    "main",
     "live-sxs"
   ],
   "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/visualstudio-docs.tr-tr",
@@ -139,7 +139,7 @@
     {
       "path_to_root": "_themes",
       "url": "https://github.com/Microsoft/templates.docs.msft.tr-tr",
-      "branch": "master",
+      "branch": "main",
       "branch_mapping": {}
     },
     {
@@ -154,7 +154,7 @@
     {
       "path_to_root": "_themes.pdf",
       "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
-      "branch": "master",
+      "branch": "main",
       "branch_mapping": {}
     }
   ],
