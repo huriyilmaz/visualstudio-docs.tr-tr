@@ -8,12 +8,12 @@ ms.topic: include
 ms.date: 11/11/2021
 ms.author: mikejo
 ms.custom: include file
-ms.openlocfilehash: b9307efd693f40c6b94e89169b54fe098b7a0859
-ms.sourcegitcommit: 00451b7258ab86e259d0fe787669330b61efa8e5
+ms.openlocfilehash: 37ecee1ea4b58fa3e9e9127d37430d1163e5aec7
+ms.sourcegitcommit: a149b3a034bb555ad217656c0ec8bc1672b1e215
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "132377145"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "133529971"
 ---
 Visual Studio makine yerine, hata ayıklamak istediğiniz uzak cihazda veya sunucuda, aşağıdaki tablodaki bağlantılardan uzak araçların doğru sürümünü indirip yükleyin.
 
@@ -25,7 +25,7 @@ Visual Studio makine yerine, hata ayıklamak istediğiniz uzak cihazda veya sunu
 |Sürüm|Bağlantı|Notlar|
 |-|-|-|
 |Visual Studio 2022|[Uzak araçlar](https://visualstudio.microsoft.com/downloads/#remote-tools-for-visual-studio-2022)|tüm Visual Studio 2022 sürümleriyle uyumludur. Cihazınızın işletim sistemi (x86, x64 veya ARM64) ile eşleşen sürümü indirin. Windows sunucuda, uzak araçları indirme konusunda yardım için bkz. [dosya indirme engelini kaldırma](../../debugger/remote-debugging-unblock-file-download.md) .|
-|Visual Studio 2019|[Uzak araçlar](https://visualstudio.microsoft.com/downloads#remote-tools-for-visual-studio-2019)|tüm Visual Studio 2019 sürümleriyle uyumludur. Cihazınızın işletim sistemi (x86, x64 veya ARM64) ile eşleşen sürümü indirin. Windows sunucuda, uzak araçları indirme konusunda yardım için bkz. [dosya indirme engelini kaldırma](../../debugger/remote-debugging-unblock-file-download.md) .|
+|Visual Studio 2019|[Uzak araçlar](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202019)|tüm Visual Studio 2019 sürümleriyle uyumludur. Cihazınızın işletim sistemi (x86, x64 veya ARM64) ile eşleşen sürümü indirin. Windows sunucuda, uzak araçları indirme konusunda yardım için bkz. [dosya indirme engelini kaldırma](../../debugger/remote-debugging-unblock-file-download.md) .|
 |Visual Studio 2017|[Uzak araçlar](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202017)|tüm Visual Studio 2017 sürümleriyle uyumludur. Cihazınızın işletim sistemi (x86, x64 veya ARM64) ile eşleşen sürümü indirin. Windows sunucuda, uzak araçları indirme konusunda yardım için bkz. [dosya indirme engelini kaldırma](../../debugger/remote-debugging-unblock-file-download.md) .|
 |Visual Studio 2015|[Uzak araçlar](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202015)|Visual Studio 2015 için uzak araçlar My.VisualStudio.com adresinden edinilebilir. istenirse, ücretsiz [Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/) programına katılarak veya Visual Studio abonelik kimliğinizle oturum açın. Windows sunucuda, uzak araçları indirme konusunda yardım için bkz. [dosya indirme engelini kaldırma](../../debugger/remote-debugging-unblock-file-download.md) .|
 |Visual Studio 2013|[Uzak araçlar](/previous-versions/visualstudio/visual-studio-2013/bt727f1t(v=vs.120)#installing-the-remote-tools)|Visual Studio 2013 belgelerine indirme sayfası|
