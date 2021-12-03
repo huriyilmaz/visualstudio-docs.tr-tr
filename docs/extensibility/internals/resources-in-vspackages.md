@@ -1,6 +1,6 @@
 ---
-title: VSPackages | Microsoft Docs
-description: VSPackage'lara hangi tür yerelleştirilmiş kaynakların ekli olduğunu öğrenin. Kaynakları yerel uydu kullanıcı arabirimi DLL'lere veya yönetilen uydu DLL'lere de katıştırmanız gerekir.
+title: VSPackages 'teki kaynaklar | Microsoft Docs
+description: Hangi tür yerelleştirilmiş kaynakların VSPackages 'e katıştırılabileceği hakkında bilgi edinin. Ayrıca yerel uydu UI dll 'Leri veya yönetilen uydu dll 'Lerine kaynak ekleyebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,47 +15,47 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 87ebfb777aed483fefbf5d4c3caeee8587c41b03
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: b485c68f01cd2db5e525c463b7326660ca1ac73b
+ms.sourcegitcommit: a149b3a034bb555ad217656c0ec8bc1672b1e215
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126725005"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "133514616"
 ---
 # <a name="resources-in-vspackages"></a>VSPackage’lardaki Kaynaklar
-Yerelleştirilmiş kaynakları yerel uydu UI DLL'lerine, yönetilen uydu DLL'lerine veya yönetilen bir VSPackage'ın kendisine katıştırma.
+Yerelleştirilmiş kaynakları yerel uydu UI dll 'Lerine, yönetilen uydu dll 'Lerine veya yönetilen bir VSPackage 'a ekleyebilirsiniz.
 
- Bazı kaynaklar VSPackage'lara katıştıramaz. Aşağıdaki yönetilen türler ekli olabilir:
+ Bazı kaynaklar VSPackages içine Katıştırılamaz. Aşağıdaki yönetilen türler gömülebilir:
 
 - Dizeler
 
-- Paket yükleme anahtarları (aynı zamanda dizeler)
+- Paket yükleme anahtarları (Ayrıca dizeler)
 
 - Araç penceresi simgeleri
 
-- Derlenmiş Komut Tablosu Çıktısı (CTO) dosyaları
+- Derlenen komut tablosu çıkışı (CTO) dosyaları
 
-- CTO bit eşlemleri
+- CTO bit eşlemler
 
-- Komut Satırı Yardımı
+- Komut satırı yardımı
 
 - İletişim kutusu verileri hakkında
 
-  Yönetilen pakette yer alan kaynaklar kaynak kimliğine göre seçilir. Özel durum, CTO dosyasıdır ve bu dosya CTMENU olarak adlandırılmıştır. CTO dosyası kaynak tablosunda olarak görün `byte[]` gerekir. Diğer tüm kaynak öğeleri türe göre tanımlanır.
+Yönetilen paketteki kaynaklar kaynak KIMLIĞI tarafından seçilir. Özel durum, CTMENU adlı bir CTO dosyasıdır. CTO dosyası kaynak tablosunda bir olarak görünmelidir `byte[]` . Diğer tüm kaynak öğeleri türe göre tanımlanır.
 
-  Yönetilen kaynakların kullanılabilir <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute> olduğunu belirtmek [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] için özniteliğini kullanabilirsiniz.
+<xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute>Yönetilen kaynakların kullanılabilir olduğunu göstermek için özniteliğini kullanabilirsiniz [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
-  :::code language="csharp" source="../../snippets/csharp/VS_Snippets_VSSDK/vssdkresources/cs/vssdkresourcespackage.cs" id="Snippet1":::
-  :::code language="vb" source="../../snippets/visualbasic/VS_Snippets_VSSDK/vssdkresources/vb/vssdkresourcespackage.vb" id="Snippet1":::
+:::code language="csharp" source="../../snippets/csharp/VS_Snippets_VSSDK/vssdkresources/cs/vssdkresourcespackage.cs" id="Snippet1":::
+:::code language="vb" source="../../snippets/visualbasic/VS_Snippets_VSSDK/vssdkresources/vb/vssdkresourcespackage.vb" id="Snippet1":::
 
-  Bu şekilde ayar, örneğin kullanarak kaynakları ararken, unmanaged uydu URL'lerini <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute> [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] yoksaymak gerektiğini <xref:Microsoft.VisualStudio.Shell.Interop.IVsShell.LoadPackageString%2A> gösterir. Aynı [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kaynak kimliğine sahip iki veya daha fazla kaynakla karşılaşırsa bulduğu ilk kaynağı kullanır.
+<xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute>Bu şekilde ayarlanması [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , örneğin kullanarak, kaynakları ararken yönetilmeyen uydu dll 'lerini yoksayması gerektiğini belirtir <xref:Microsoft.VisualStudio.Shell.Interop.IVsShell.LoadPackageString%2A> . [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Aynı kaynak kimliğine sahip iki veya daha fazla kaynakla karşılaşırsa, bulduğu ilk kaynağı kullanır.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bir araç penceresi simgesinin yönetilen gösterimidir.
+Aşağıdaki örnek bir araç penceresi simgesinin yönetilen bir gösterimidir.
 
 ```
 <data name="1001"
-type="System.Resources.ResXFileRef,System.Windows.Forms">
+     type="System.Resources.ResXFileRef,System.Windows.Forms">
      <value>
      MyToolWinIcon.bmp;
      System.Drawing.Bitmap,
@@ -67,11 +67,11 @@ type="System.Resources.ResXFileRef,System.Windows.Forms">
 </data>
 ```
 
- Aşağıdaki örnek, CTO byte dizisinin nasıl eklenerek CTMENU olarak adlandırılmış olması gerektiğini gösterir.
+Aşağıdaki örnek, CTMENU 'nin adlandırılması gereken CTO bayt dizisinin nasıl ekleneceğini gösterir.
 
 ```
 <data name="CTMENU"
-type="System.Resources.ResXFileRef,System.Windows.Forms">
+     type="System.Resources.ResXFileRef,System.Windows.Forms">
      <value>
      MyPackage.cto;
      System.Byte[],
@@ -83,11 +83,11 @@ type="System.Resources.ResXFileRef,System.Windows.Forms">
 </data>
 ```
 
-## <a name="implementation-notes"></a>Uygulama Notları
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] mümkün olduğunda VSPackage'ların yüklenmesini geciktirmektedir. VsPackage'a bir CTO dosyası eklemenin bir sonucu, Kurulum sırasında bu tür tüm VSPackage'ları belleğe yüklemesi gerekir ve bu da birleştirilmiş bir komut [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] tablosu derlemesi sırasında olur. Kaynaklar VSPackage'da kod çalıştırmadan meta veriler inceler ve vsPackage'dan ayıklanır. VSPackage şu anda başlatılmamış olduğundan performans kaybı en düşük düzeydedir.
+## <a name="implementation-notes"></a>Uygulama notları
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] mümkün olduğunda VSPackages yükleme gecikmeleri. Bir VSPackage içindeki bir CTO dosyasını gömmenin bir sonucu, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Kurulum sırasında bir birleştirilmiş komut tablosu oluştururken bulunan tüm VSPackages 'leri belleğe yüklemelidir. Kaynak, VSPackage 'da kod çalıştırmadan meta verileri inceleyerek VSPackage 'dan ayıklanabilir. VSPackage Şu anda başlatılmaz, bu nedenle performans kaybı en düşük düzeydedir.
 
- Kurulumdan sonra VSPackage'dan bir kaynak isteğinde olduğunda, bu paketin zaten yüklenmiş ve başlatılmış olması olasıdır, dolayısıyla [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] performans kaybı en düşük düzeydedir.
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Kurulumdan sonra bir VSPackage kaynağından bir kaynak istediğinde, bu paketin daha önce yüklenmiş ve başlatılmış olması olasıdır, bu nedenle performans kaybı en düşük düzeydedir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [VSPackage’ları Yönetme](../../extensibility/managing-vspackages.md)
-- [MFC Uygulamalarında Yerelleştirilmiş Kaynaklar: Uydu DLL'leri](/cpp/build/localized-resources-in-mfc-applications-satellite-dlls)
+- [MFC uygulamalarında yerelleştirilmiş kaynaklar: uydu dll 'Leri](/cpp/build/localized-resources-in-mfc-applications-satellite-dlls)

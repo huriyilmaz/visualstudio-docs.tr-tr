@@ -1,8 +1,8 @@
 ---
 title: C# birim testi öğreticisi
-description: yönetilen kod ve Visual Studio test gezgini için Microsoft birim testi çerçevesini kullanarak bir dizi birim testi oluşturmayı, çalıştırmayı ve özelleştirmeyi öğrenin.
+description: Yönetilen kod için Microsoft birim testi çerçevesini ve Test Gezgini'ni kullanarak bir dizi birim testi oluşturma, çalıştırma ve Visual Studio öğrenin.
 ms.custom: SEO-VS-2020
-ms.date: 08/17/2021
+ms.date: 12/01/2021
 ms.topic: conceptual
 helpviewer_keywords:
 - unit tests, walkthrough
@@ -16,35 +16,35 @@ ms.technology: vs-ide-test
 ms.workload:
 - dotnet
 author: mikejo5000
-ms.openlocfilehash: ccedcea78a1e05342c254cfc18cd2ca0523faec6
-ms.sourcegitcommit: aaa3146356421d921714c29ffd586083570ade3d
+ms.openlocfilehash: 3c44819e9c56a9f3fc68ebb3fc0e179a128fc208
+ms.sourcegitcommit: a149b3a034bb555ad217656c0ec8bc1672b1e215
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2021
-ms.locfileid: "129635666"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "133514680"
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-managed-code"></a>İzlenecek yol: Yönetilen kod için birim testleri oluşturma ve çalıştırma
 
-bu makalede, yönetilen kod ve Visual Studio **test gezgini** için Microsoft birim testi çerçevesini kullanarak bir dizi birim testi oluşturma, çalıştırma ve özelleştirme işlemleri adım adım anlatılmaktadır. Geliştirme kapsamında olan bir C# projesi ile çalışmaya başlayın, kodunu çalıştıran testler oluşturun, testleri çalıştırın ve sonuçları inceleyin. Ardından proje kodunu değiştirin ve testleri yeniden çalıştırın. Bu adımlara geçmeden önce bu görevlere kavramsal bir genel bakış isterseniz, bkz. [birim testi temelleri](../test/unit-test-basics.md).
+Bu makalede, yönetilen kod için Microsoft birim testi çerçevesini ve Test Gezgini'ni kullanarak bir dizi birim testi oluşturma, çalıştırma ve Visual Studio **adım adım açıklanmıştır.** Geliştirme aşamasında olan bir C# projesiyle başlayacak, kodunun alıştırmasını yapılacak testler oluşturacak, testleri çalıştıracak ve sonuçları inceleyebilirsiniz. Ardından proje kodunu değiştirir ve testleri yeniden çalıştırabilirsiniz. Bu adımları incelemeden önce bu görevlere kavramsal bir genel bakışa sahip olmak için [bkz. Birim testi temelleri.](../test/unit-test-basics.md)
 
-## <a name="create-a-project-to-test"></a>Test etmek için bir proje oluşturun
+## <a name="create-a-project-to-test"></a>Test etmek için proje oluşturma
 
 ::: moniker range="vs-2017"
 
 1. Visual Studio'yu açın.
 
-2. **dosya** menüsünde **yeni** > **Project**' yi seçin.
+2. Dosya menüsünde **Yeni** **dosya'Project.** > 
 
    **Yeni Proje** iletişim kutusu görünür.
 
-3. **Visual C#** > **.NET Core** kategorisi altında **konsol uygulaması (.NET Core)** proje şablonunu seçin.
+3. Visual **C#** > **.NET Core kategorisi** altında Konsol Uygulaması **(.NET Core) proje** şablonunu seçin.
 
-4. Proje **bankasının** adını belirleyip **Tamam**' a tıklayın.
+4. Projeye Bank adını **ve** ardından Tamam'a **tıklayın.**
 
-   Banka projesi oluşturulur ve kod düzenleyicisinde açık *program. cs* dosyası ile **Çözüm Gezgini** görüntülenir.
+   Banka projesi, *Program.cs* **Çözüm Gezgini** kod düzenleyicisinde açık şekilde oluşturulur ve bu dosyada görüntülenir.
 
    > [!NOTE]
-   > *Program. cs* düzenleyicide açık değilse dosya programını açmak için **Çözüm Gezgini** *. cs* dosyasına çift tıklayın.
+   > Düzenleyicide *Program.cs* açık yoksa, *program.cs dosyasındaki Program.cs* **dosyasına Çözüm Gezgini** çift tıklayın.
 
 ::: moniker-end
 
@@ -52,25 +52,25 @@ bu makalede, yönetilen kod ve Visual Studio **test gezgini** için Microsoft bi
 
 1. Visual Studio'yu açın.
 
-2. Başlangıç penceresinde **Yeni proje oluştur**' u seçin.
+2. Başlangıç penceresinde Yeni proje **oluştur'a tıklayın.**
 
-3. .NET Core için C# **konsol uygulaması** proje şablonunu arayıp seçin ve ardından **İleri**' ye tıklayın.
-
-   > [!NOTE]
-   > **Konsol uygulaması** şablonunu görmüyorsanız, **Yeni proje oluştur** penceresinden yükleyebilirsiniz. **Aradığınızı bulamıyor musunuz?** iletisi için **daha fazla araç ve özellik yüklemeyi** seçin bağlantısına tıklayın. sonra, Visual Studio Yükleyicisi **.net Core platformlar arası geliştirme** iş yükünü seçin.
-
-4. Proje **bankasının** adını belirleyip **İleri**' ye tıklayın.
-
-   Önerilen hedef Framework veya .NET 6 ' ı seçin ve ardından **Oluştur**' u seçin.
-
-   Banka projesi oluşturulur ve kod düzenleyicisinde açık *program. cs* dosyası ile **Çözüm Gezgini** görüntülenir.
+3. .NET Core için C# **Konsol Uygulaması** proje şablonunu arayın ve seçin ve ardından Sonraki 'ye **tıklayın.**
 
    > [!NOTE]
-   > *Program. cs* düzenleyicide açık değilse dosya programını açmak için **Çözüm Gezgini** *. cs* dosyasına çift tıklayın.
+   > Konsol Uygulaması şablonunu **görmüyorsanız,** Yeni proje oluştur **penceresinden yükleyebilirsiniz.** Neyi **bulasınız? iletisinde** Daha fazla araç ve **özellik yükle bağlantısını** seçin. Ardından, Visual Studio Yükleyicisi **.NET Core** platformlar arası geliştirme iş yükünü seçin.
+
+4. Projeye Bank adını **ve** ardından Sonraki'ye **tıklayın.**
+
+   Önerilen hedef çerçeveyi veya .NET 6'yi seçin ve ardından **Oluştur'a seçin.**
+
+   Banka projesi, *Program.cs* **Çözüm Gezgini** kod düzenleyicisinde açık şekilde oluşturulur ve bu dosyada görüntülenir.
+
+   > [!NOTE]
+   > Düzenleyicide *Program.cs* açık yoksa, *program.cs dosyasındaki Program.cs* **dosyasına Çözüm Gezgini** çift tıklayın.
 
 ::: moniker-end
 
-5. *Program. cs* ' nin içeriğini bir sınıfı tanımlayan aşağıdaki C# kodu ile değiştirin, *BankAccount*:
+5. *Program.cs içeriğini* BankAccount sınıfını tanımlayan aşağıdaki C# *koduyla değiştirin:*
 
    ```csharp
    using System;
@@ -140,75 +140,75 @@ bu makalede, yönetilen kod ve Visual Studio **test gezgini** için Microsoft bi
    }
    ```
 
-6. Sağ tıklayıp **Çözüm Gezgini** **Yeniden Adlandır** ' ı seçerek dosyayı *BankAccount. cs* olarak yeniden adlandırın.
+6. Sağ tıklar ve *dosyada Yeniden Adlandır'ı* seçerek dosyayı BankAccount.cs **olarak** **Çözüm Gezgini.**
 
-7. **Yapı** menüsünde **çözüm oluştur** ' a tıklayın (veya **CTRL**  +  **SHIFT**  +  **B** tuşlarına basın).
+7. Derleme menüsünde **Çözümü Derleme'ye** **tıklayın (veya** **Ctrl** SHIFT B  +    +  **tuşlarına basın).**
 
-Artık test edebilirsiniz yöntemleri olan bir projeniz var. Bu makalede, testler yöntemine odaklanmaktadır `Debit` . Bu `Debit` Yöntem para bir hesaptan geri geldiğinde çağrılır.
+Artık test etmek için yöntemlerle bir projeniz var. Bu makalede testler yöntemine `Debit` odaklanır. Yöntem, `Debit` bir hesaptan para çekildiğiniz zaman çağrılır.
 
 ## <a name="create-a-unit-test-project"></a>Birim testi projesi oluşturma
 
-1. **dosya** menüsünde   >  **yeni Project** ekle ' yi seçin.
+1. Dosya menüsünde **Yeni** Ekle'yi **seçin**  >  **Project.**
 
    > [!TIP]
-   > ayrıca **Çözüm Gezgini** çözüme sağ tıklayıp   >  **yeni Project** ekle ' yi seçebilirsiniz.
+   > Ayrıca, Çözüm Gezgini'de çözüme  **sağ tık**  >  Project.
 
 ::: moniker range="vs-2017"
 
-2. **yeni Project** iletişim kutusunda, **yüklü**' i genişletin, **Visual C#**' ı genişletin ve ardından **Test**' i seçin.
+2. Yeni **Project** iletişim kutusunda Yüklü'yi **genişletin,** **Visual C# öğesini genişletin** ve ardından Test'i **seçin.**
 
-3. şablonlar listesinden **MSTest Test Project (.net Core)** seçeneğini belirleyin.
+3. Şablon listesinden MSTest Test Project **(.NET Core) öğesini seçin.**
 
-4. **Ad** kutusuna yazın `BankTests` ve ardından **Tamam**' ı seçin.
+4. Ad **kutusuna yazın** ve `BankTests` Tamam'ı **seçin.**
 
-   **BankTests** projesi **Banka** çözümüne eklenir.
+   **BankTests** projesi Banka **çözümüne** eklenir.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-2. arama kutusuna **test** yazın, dil olarak **c#** ' yi seçin ve ardından .net Core şablonu için c# **birim testi Project** seçin ve ardından **ileri**' ye tıklayın.
+2. Arama **kutusuna test** yazın, dil olarak **C#** öğesini seçin ve ardından .NET Core şablonu için C# MSTest Birim Testi Project **(.NET Core)** şablonunu seçin ve ardından Sonraki 'ye **tıklayın.**
 
    > [!NOTE]
-   > Visual Studio 2019 sürüm 16,9 ' den başlayarak, mstest proje şablonu adı **mstest birim testi Project (.net Core)** iken **birim testi Project** olarak değiştirildi.
+   > 2019 Visual Studio 16.9 sürümünde MSTest proje şablonu, Birim **Testi** Project.
 
-3. Projeyi **BankTests** olarak adlandırın ve **İleri**' ye tıklayın.
+3. Projeye **BankTests adını ve Ardından'ya** **tıklayın.**
 
-4. Önerilen hedef Framework veya .NET 6 ' ı seçin ve ardından **Oluştur**' u seçin.
+4. Önerilen hedef çerçeveyi veya .NET 6'yi seçin ve ardından **Oluştur'a seçin.**
 
-   **BankTests** projesi **Banka** çözümüne eklenir.
+   **BankTests** projesi Banka **çözümüne** eklenir.
 
 ::: moniker-end
 
-5. **BankTests** projesinde, **Banka** projesine bir başvuru ekleyin.
+5. **BankTests projesine** bir başvuru **ekleyin.**
 
-   **Çözüm Gezgini**, **BankTests** projesi altındaki **Bağımlılıklar** ' ı seçin ve ardından sağ tıklama menüsünden **Başvuru Ekle** ' yi seçin.
+   Bu **Çözüm Gezgini** **BankTests** projesinin altında Bağımlılıklar'ı seçin ve ardından sağ tıklama menüsünden Başvuru **Ekle** (veya Project Başvurusu **Ekle)** seçeneğini belirleyin. 
 
-6. **Başvuru Yöneticisi** iletişim kutusunda, **Projeler**' i genişletin, **çözüm**' ü seçin ve ardından **Banka** öğesini kontrol edin.
+6. Başvuru Yöneticisi **iletişim kutusunda** Projeler'i **genişletin,** **Çözüm'i seçin** ve ardından Banka **öğesini** işaretleyin.
 
-7. **Tamam ' ı** seçin.
+7. **Tamam'ı seçin.**
 
-## <a name="create-the-test-class"></a>Test sınıfı oluşturma
+## <a name="create-the-test-class"></a>Test sınıfını oluşturma
 
-Sınıfı doğrulamak için bir test sınıfı oluşturun `BankAccount` . Proje şablonu tarafından oluşturulan *UnitTest1. cs* dosyasını kullanabilir, ancak dosya ve sınıfa daha açıklayıcı adlar verebilirsiniz.
+Sınıfını doğrulamak için bir test sınıfı `BankAccount` oluşturun. Proje şablonu tarafından *oluşturulan UnitTest1.cs* dosyasını kullanabilirsiniz, ancak dosyaya ve sınıfa daha açıklayıcı adlar veebilirsiniz.
 
-### <a name="rename-a-file-and-class"></a>Dosya ve sınıfı yeniden adlandırma
+### <a name="rename-a-file-and-class"></a>Bir dosyayı ve sınıfı yeniden adlandırma
 
-1. Dosyayı yeniden adlandırmak için, **Çözüm Gezgini** Içinde, BankTests projesindeki *UnitTest1. cs* dosyasını seçin. Sağ tıklama menüsünde, **Yeniden Adlandır** ' ı seçin (veya **F2** tuşuna basın) ve ardından dosyayı *BankAccountTests. cs* olarak yeniden adlandırın.
+1. Dosyayı yeniden adlandırmak **için, Çözüm Gezgini** *BankTests projesinde UnitTest1.cs* dosyasını seçin. Sağ tıklama menüsünden Yeniden Adlandır'ı **seçin** (veya **F2** tuşuna basın) ve ardından dosyayı *BankAccountTests.cs olarak yeniden adlandırın.*
 
 ::: moniker range="vs-2017"
 
-2. Sınıfı yeniden adlandırmak için, açılan iletişim kutusunda **Evet** ' i seçin ve ayrıca kod öğesine başvuruları yeniden adlandırmak isteyip istemediğinizi sorar.
+2. Sınıfı yeniden adlandırmak **için** açılan iletişim kutusunda Evet'i seçin ve kod öğesine yapılan başvuruları yeniden adlandırmak isteyip istemediklerini sorar.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-2. Sınıfı yeniden adlandırmak için, imleci `UnitTest1` kod düzenleyicisinde üzerine konumlandırın, sağ tıklayın ve ardından **Yeniden Adlandır** ' ı seçin (veya **F2** tuşuna basın). **BankAccountTests** yazın ve **ENTER** tuşuna basın.
+2. Sınıfı yeniden adlandırmak için imleci kod düzenleyicisinde üzerine getirin, sağ tıklayın ve Yeniden `UnitTest1` Adlandır'ı  seçin (veya **F2 tuşuna basın).** **BankAccountTests yazın ve** Enter tuşuna **basın.**
 
 ::: moniker-end
 
-*BankAccountTests. cs* dosyası artık aşağıdaki kodu içerir:
+*BankAccountTests.cs* dosyası artık aşağıdaki kodu içerir:
 
 ```csharp
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -226,9 +226,9 @@ namespace BankTests
 }
 ```
 
-### <a name="add-a-using-statement"></a>Using deyimleri ekleme
+### <a name="add-a-using-statement"></a>Using deyimi ekleme
 
-Tam nitelikli adlar kullanmadan test kapsamındaki projeye çağrı yapabilmesi için test sınıfına bir [ `using` ifade](/dotnet/csharp/language-reference/keywords/using-statement) ekleyin. Sınıf dosyasının en üstünde şunu ekleyin:
+Tam [ `using` adları](/dotnet/csharp/language-reference/keywords/using-statement) kullanmadan test altındaki projeye çağrı yapmak için test sınıfına bir deyimi ekleyin. Sınıf dosyasının en üstüne şunları ekleyin:
 
 ```csharp
 using BankAccountNS;
@@ -236,32 +236,32 @@ using BankAccountNS;
 
 ### <a name="test-class-requirements"></a>Test sınıfı gereksinimleri
 
-Bir test sınıfı için en düşük gereksinimler şunlardır:
+Bir test sınıfı için en düşük gereksinimler:
 
-- `[TestClass]`Özniteliği, test Gezgini 'nde çalıştırmak istediğiniz birim testi yöntemlerini içeren herhangi bir sınıfta gereklidir.
+- özniteliği, `[TestClass]` Test Gezgini'nde çalıştırmak istediğiniz birim testi yöntemlerini içeren herhangi bir sınıfta gereklidir.
 
-- Test Gezgini 'nin tanımasını istediğiniz her test yönteminin özniteliğine sahip olması gerekir `[TestMethod]` .
+- Test Gezgini'nin tanımasını istediğiniz her test yönteminin özniteliğine sahip olması `[TestMethod]` gerekir.
 
-Özniteliği olmayan bir birim testi projesinde başka sınıflarınız olabilir `[TestClass]` ve özniteliği olmayan test sınıflarında başka yöntemlere sahip olabilirsiniz `[TestMethod]` . Test yöntemlerinizin bu diğer sınıflarını ve yöntemlerini çağırabilirsiniz.
+Bir birim testi projesinde özniteliğine sahip olan başka sınıflar olabilir ve test sınıflarında özniteliğine sahip `[TestClass]` başka yöntemleriniz `[TestMethod]` olabilir. Bu diğer sınıfları ve yöntemleri test yöntemlerinize çağırabilirsiniz.
 
 ## <a name="create-the-first-test-method"></a>İlk test yöntemini oluşturma
 
-Bu yordamda, sınıfının yönteminin davranışını doğrulamak için birim testi yöntemleri yazacaksınız `Debit` `BankAccount` .
+Bu yordamda, sınıfının yönteminin davranışını doğrulamak için birim testi `Debit` yöntemleri `BankAccount` yazacaksiniz.
 
-Denetlenmesi gereken en az üç davranış vardır:
+Denetlenen en az üç davranış vardır:
 
-- Bu yöntem, <xref:System.ArgumentOutOfRangeException> Borç tutarının bakiyesinden büyük olması halinde bir oluşturur.
+- yöntemi, banka tutarı <xref:System.ArgumentOutOfRangeException> bakiyeden büyükse bir atar.
 
-- Bu yöntem, <xref:System.ArgumentOutOfRangeException> Borç tutarının sıfırdan küçük olması halinde bir oluşturur.
+- Yöntemi, banka tutarı <xref:System.ArgumentOutOfRangeException> sıfırdan küçükse bir atar.
 
-- Borç miktarı geçerliyse, yöntemi hesap bakiyesinden borç tutarını çıkartır.
+- Banka tutarı geçerli ise yöntemi, banka tutarını hesap bakiyeden çıkarır.
 
 > [!TIP]
-> `TestMethod1`Bu izlenecek yolda kullanmayacağından, varsayılan yöntemi silebilirsiniz.
+> Varsayılan yöntemi `TestMethod1` silebilirsiniz çünkü bu kılavuzda kullanmayabilirsiniz.
 
 ### <a name="to-create-a-test-method"></a>Test yöntemi oluşturmak için
 
-İlk test, geçerli bir tutarın (yani, hesap bakiyesi ve sıfırdan büyük bir değerden daha az), hesaptan doğru miktarı çizdiğini doğrular. Aşağıdaki yöntemi bu `BankAccountTests` sınıfa ekleyin:
+İlk test, geçerli bir miktarın (hesap bakiyeden küçük ve sıfırdan büyük bir miktar) hesaptan doğru miktarı geri çekildiğini doğrular. Bu sınıfa aşağıdaki yöntemi `BankAccountTests` ekleyin:
 
 ```csharp
 [TestMethod]
@@ -282,41 +282,41 @@ public void Debit_WithValidAmount_UpdatesBalance()
 }
 ```
 
-Yöntemi basittir: `BankAccount` bir başlangıç bakiyesine sahip yeni bir nesne ayarlar ve ardından geçerli bir miktar çizer. <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual%2A?displayProperty=nameWithType>Son Bakiyenin beklenen şekilde olduğunu doğrulamak için yöntemini kullanır. `Assert.AreEqual`, Ve gibi yöntemler <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue%2A?displayProperty=nameWithType> birim testinde sık sık kullanılır. Birim testi yazma hakkında daha fazla kavramsal bilgi için, bkz. [Testlerinizi yazma](../test/unit-test-basics.md#write-your-tests).
+Yöntemi basittir: Başlangıç bakiyesi olan yeni `BankAccount` bir nesne ayarlar ve ardından geçerli bir miktarı geri çeker. Bitiş <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual%2A?displayProperty=nameWithType> bakiyenin beklendiği gibi olduğunu doğrulamak için yöntemini kullanır. Birim testlerinde `Assert.AreEqual` <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue%2A?displayProperty=nameWithType> , ve diğerleri gibi yöntemler sıklıkla kullanılır. Birim testi yazma hakkında daha fazla kavramsal bilgi için [bkz. Testlerinizi yazma.](../test/unit-test-basics.md#write-your-tests)
 
 ### <a name="test-method-requirements"></a>Test yöntemi gereksinimleri
 
-Bir test yönteminin aşağıdaki gereksinimleri karşılaması gerekir:
+Test yöntemi aşağıdaki gereksinimleri karşılamalıdır:
 
-- Bu, özniteliğiyle donatılmalıdır `[TestMethod]` .
+- özniteliğiyle birlikte dekore `[TestMethod]` edilmiştir.
 
-- Döndürür `void` .
+- döndürür. `void`
 
-- Parametrelere sahip olamaz.
+- Parametreleri olamaz.
 
-## <a name="build-and-run-the-test"></a>Test oluşturun ve çalıştırın
+## <a name="build-and-run-the-test"></a>Testi derleme ve çalıştırma
 
-1. **Yapı** menüsünde **çözüm oluştur** ' u seçin (veya **CTRL**  +  **+ SHIFT**  +  **B** tuşlarına basın).
+1. Derleme menüsünde **Çözümü** Derleme'yi **seçin (veya** **Ctrl** SHIFT B  +    +  **tuşlarına basın).**
 
-2. **test gezgini** açık değilse, üstteki menü çubuğundan test Windows test gezgini ' **ni seçerek dosyayı** açın  >    >   (veya **Ctrl**  +  **E**, **T**'ye basın).
+2. **Test Gezgini açık** yoksa, üst menü çubuğundan **Test** Gezgini Windows Test Gezgini'ni seçerek  >    >   açın **(veya Ctrl** E , T  +  **tuşlarına** **basın).**
 
-3. Testi çalıştırmak için **Tümünü Çalıştır** ' ı seçin (veya **CTRL**  +  **R**, **V** tuşlarına basın).
+3. Testi **çalıştırmak için Hepsini** Çalıştır'ı seçin (veya **Ctrl**  +  **R**, **V tuşlarına basın).**
 
-   Test çalışırken, **Test Gezgini** penceresinin üstündeki durum çubuğu canlandırılır. Test çalıştırmasının sonunda, tüm test yöntemleri başarılı olursa çubuk yeşile dönüşür veya testlerin herhangi biri başarısız olursa kırmızı olur.
+   Test çalışırken Test Gezgini penceresinin üst kısmında yer alan durum **çubuğu animasyonlu** olur. Test çalıştırması sonunda tüm test yöntemleri başarılı olursa çubuk yeşile, testlerden herhangi biri başarısız olursa kırmızıya döner.
 
-   Bu durumda, test başarısız olur.
+   Bu durumda test başarısız olur.
 
-4. Pencerenin alt kısmındaki Ayrıntıları görüntülemek için **Test Gezgini** ' nde yöntemi seçin.
+4. Pencerenin alt kısmında **ayrıntıları görüntülemek** için Test Gezgini'nde yöntemini seçin.
 
-## <a name="fix-your-code-and-rerun-your-tests"></a>Kodunuzu düzeltemedi ve testlerinizi yeniden çalıştırın
+## <a name="fix-your-code-and-rerun-your-tests"></a>Kodunuzu düzeltme ve testlerinizi yeniden çalıştırma
 
-Test sonucu, hatayı açıklayan bir ileti içerir. Yöntemi için `AreEqual` , ileti beklendiğini ve gerçekten alındığını gösterir. Bakiyenin azalmasını bekliyorduk, ancak bunun yerine çekme miktarı artar.
+Test sonucu, başarısızlığı açıklayan bir ileti içerir. yöntemi `AreEqual` için ileti, beklenen ve gerçekte alınan öğeleri görüntüler. Dengenin azalmayı beklemiştiniz ama bunun yerine denge miktarı artmıştır.
 
-Birim testi bir hatayı kapsamıyor: geri al 'ın miktarı, *kaldırılması gereken hesap* bakiyesine *eklenir* .
+Birim testi bir hata olduğunu tespit etti:  çıkarılma gereken hesap bakiyesi için geri ödeme *miktarı eklenir.*
 
-### <a name="correct-the-bug"></a>Hatayı düzeltin
+### <a name="correct-the-bug"></a>Hatayı düzeltme
 
-Hatayı düzeltmek için *BankAccount. cs* dosyasında şu satırı değiştirin:
+Hatayı düzeltmek için *BankAccount.cs* dosyasındaki şu satırı değiştirin:
 
 ```csharp
 m_balance += amount;
@@ -332,7 +332,12 @@ m_balance -= amount;
 
 **Test Gezgini**'nde, testi yeniden **çalıştırmak için Tümünü Çalıştır** ' ı seçin (veya **CTRL**  +  **R**, **V** tuşlarına basın). Kırmızı/yeşil çubuk, testin geçtiğini belirtmek için yeşile dönüşür.
 
+::: moniker range="<=vs-2019"
 ![geçilen testi gösteren Visual Studio 2019 ' de Test gezgini](media/test-explorer-banktests-passed.png)
+::: moniker-end
+::: moniker range=">=vs-2022"
+![geçilen testi gösteren Visual Studio 2019 ' de Test gezgini](media/vs-2022/test-explorer-banktests-passed.png)
+::: moniker-end
 
 ## <a name="use-unit-tests-to-improve-your-code"></a>Kodunuzu geliştirmek için birim testlerini kullanın
 

@@ -1,6 +1,6 @@
 ---
-title: Bir Visual Studio güncelleştirme
-description: Visual Studio 2022 ile çalışmak için Visual Studio güncelleştirmeyi öğrenin.
+title: Visual Studio uzantısını güncelleştirme
+description: Visual Studio uzantınızı Visual Studio 2022 ile çalışacak şekilde güncelleştirmeyi öğrenin.
 ms.date: 06/08/2021
 ms.topic: conceptual
 author: leslierichardson95
@@ -11,61 +11,59 @@ monikerRange: vs-2022
 ms.workload:
 - vssdk
 feedback_system: GitHub
-ms.openlocfilehash: 354312c6c874380297a7a7a5b70700d9f72ad6a3
-ms.sourcegitcommit: 932cf0f653c6258b73f42102d134cbaf50b8f20c
+ms.openlocfilehash: 7969f08bef0a746df72de6a4582a06f7bdc1e685
+ms.sourcegitcommit: a149b3a034bb555ad217656c0ec8bc1672b1e215
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2021
-ms.locfileid: "132880133"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "133514590"
 ---
 # <a name="update-a-visual-studio-extension-for-visual-studio-2022"></a>Visual Studio 2022 için Visual Studio uzantısını güncelleştirme
 
 > [!IMPORTANT]
-> Bu kılavuzda yer alan öneri, geliştiricilere hem 2019 hem de 2022'de büyük değişiklikler gerektiren uzantıların Visual Studio yöneliktir. Bu gibi durumlarda iki VSIX projesi ve koşullu derleme kullanılması önerilir.
-> Birçok uzantı hem Visual Studio 2019 hem de 2022'de bu kılavuzda uzantınızı modernleştirme önerisinde yer alan önerilerin ardından gerekli olmayacak küçük değişikliklerle birlikte çalışabilecektir.
-> 2022'Visual Studio uzantınızı deneyin ve uzantınız için en uygun seçeneği değerlendirin.
+> bu makaledeki öneri, Visual Studio 2019 ve Visual Studio 2022 ' de büyük değişiklikler yapılmasını gerektiren uzantıları geçirmede geliştiricilere rehberlik edebilir. Bu durumlarda, iki VSıX projeniz ve koşullu derlemeniz olması önerilir.
+>
+> çoğu uzantı, bu makalede uzantınızı modernleştirmede gerekli olan küçük değişikliklerle birlikte Visual Studio 2019 ve Visual Studio 2022 ' de çalışır. uzantınızı Visual Studio 2022 ' de deneyin ve uzantınız için en uygun seçeneği değerlendirin.
 
-Bu kılavuzu takip edin ve uzantınızı Visual Studio 2022 ile çalışacak şekilde güncelleştirin. Visual Studio 2022 bir 64 bit uygulamadır ve VS SDK'da bazı yeni değişikliklere neden olur. Bu kılavuz, uzantınızı Visual Studio 2022'nin geçerli önizlemesi ile birlikte çalışarak kullanıcıların Visual Studio 2022 GA'ya ulaşmadan önce yüklemesi için hazır hale geldi.
+Visual Studio 2022, 64 bitlik bir uygulamadır ve Visual Studio SDK 'sında bazı önemli değişiklikler sunar. bu makalede, uzantınızı Visual Studio 2022 ' in güncel önizlemesine sahip olacak şekilde yapmanız gereken adımlarda adım adım açıklanmaktadır. uzantınız daha sonra, Visual Studio 2022 genel kullanıma ulaşmadan önce kullanıcıların yüklemesi için hazır hale gelir.
 
-## <a name="installing"></a>Yükleme
+## <a name="install-visual-studio-and-compile-extensions"></a>Visual Studio yükleyip derleme uzantıları
 
-2022 Visual Studio 2022'den [yükleme Visual Studio 2022 indirmeleri.](https://visualstudio.microsoft.com/downloads)
+[Visual Studio 2022 indirmelerden](https://visualstudio.microsoft.com/downloads)Visual Studio 2022 ' ü yükler.
 
-### <a name="extensions-written-in-a-net-language"></a>.NET dilinde yazılmış uzantılar
+### <a name="extensions-written-in-a-net-language"></a>.NET dilinde yazılan uzantılar
 
-Yönetilen uzantılar için Visual Studio 2022'ye yönelik VS SDK yalnızca *şu NuGet:*
+yönetilen uzantılar için Visual Studio 2022 ' i hedefleyen Visual Studio SDK yalnızca NuGet yöneliktir:
 
-- [Microsoft.VisualStudio.Sdk](https://www.nuget.org/packages/Microsoft.VisualStudio.Sdk/) (17.x sürümleri) meta-paketi, ihtiyacınız olacak başvuru derlemelerinin çoğunu veya hepsini getirir.
-- [Microsoft.VSSDK.BuildTools](https://www.nuget.org/packages/Microsoft.VSSDK.BuildTools/) (17.x sürümleri) paketine VSIX projenizin başvurarak 2022 uyumlu bir VSIX Visual Studio oluşturması gerekir.
+- [Microsoft. VisualStudio. SDK](https://www.nuget.org/packages/Microsoft.VisualStudio.Sdk/) (17. x sürümleri) metapackage, ihtiyacınız olan başvuru derlemelerinin çoğunu veya tümünü getirir.
+- [Microsoft. vssdk. buildtools](https://www.nuget.org/packages/Microsoft.VSSDK.BuildTools/) (17. x sürümleri) paketine, Visual Studio 2022 uyumlu bir vsıx oluşturmak için vsıx projenizden başvurulmalıdır.
 
-Yeni değişikliklere başvursanız bile uzantıların  "Herhangi bir CPU" veya "x64" platformuyla derlenmiş olması gerekir. "x86" platformu, Visual Studio 2022'nin 64 bit işlemiyle uyumsuzdur.
+Herhangi bir son değişikliğe başvuramasanız bile, uzantıların **herhangi BIR CPU** veya **x64** platformu ile derlenmesi *gerekir* . **x86** platformu Visual Studio 2022 ' deki 64-bit işlemle uyumlu değildir.
 
-### <a name="extensions-written-in-c"></a>C++ ile yazılmış uzantılar
+### <a name="extensions-written-in-c"></a>C++ dilinde yazılan uzantılar
 
-C++ ile derlenmiş uzantılar için VS SDK her zamanki gibi Visual Studio SDK ile kullanılabilir.
+C++ ile derlenen uzantılar için Visual Studio SDK, her zamanki gibi yüklü Visual Studio SDK ile kullanılabilir.
 
-Yeni değişikliklere başvursanız bile uzantılar  özellikle Visual Studio 2022 SDK'sı ve amd64 için derlenmiş olması gerekir.
+herhangi bir bölme değişikliğine başvurmasa bile, uzantıların özellikle Visual Studio 2022 SDK ve AMD64 için derlenmesi *gerekir* .
 
-### <a name="update-your-extension-to-visual-studio-2022"></a>Uzantınızı Visual Studio 2022'ye güncelleştirme
+### <a name="extensions-with-running-code"></a>Çalışan kod içeren uzantılar
 
-#### <a name="extensions-with-running-code"></a>Kod çalıştıran uzantılar
+kod çalıştıran uzantılar özellikle Visual Studio 2022 için *derlenmelidir* . Visual Studio 2022, Visual Studio önceki bir sürümünü hedefleyen herhangi bir uzantıyı yüklemez.
 
-Çalışan koda sahip *uzantılar* özel olarak 2022 Visual Studio derlenmiş olması gerekir. Visual Studio 2022 özellikle 2022'ye yönelik Visual Studio yüklemez.
+daha önceki Visual Studio sürümleri için uzantılarınızı Visual Studio 2022 ' ye nasıl geçirebileceğinizi öğrenin:
 
-Visual Studio 2022 öncesi uzantılarınızı 2022'de Visual Studio öğrenin:
+1. [Modernleştirin](#modernize-your-vsix-project).
+1. Visual Studio 2022 ve daha eski sürümleri hedeflemeye olanak tanımak için [kaynak kodunuzu paylaşılan bir projeye yeniden düzenleyin](#use-shared-projects-for-multi-targeting) .
+1. [Visual Studio 2022 hedefli bir vsıx projesi](#add-a-visual-studio-2022-target) ve bir [paket/derleme yeniden eşleme tablosu](migrated-assemblies.md)ekleyin.
+1. [Gerekli kod ayarlamalarını yapın](#handle-breaking-api-changes).
+1. [Visual Studio 2022 uzantınızı Test edin](#test-your-extension).
+1. [Visual Studio 2022 uzantınızı yayımlayın](#publish-your-extension).
 
-1. [Projelerinizi modernleştirin.](#modernize-your-vsix-project)
-1. 2022 [ve daha eski sürümleri hedeflemek](#use-shared-projects-for-multi-targeting) için kaynak kodunuzu paylaşılan Visual Studio yeniden düzenleme.
-1. [2022 Visual Studio VSIX](#add-a-visual-studio-2022-target)projesine ve paket/derleme yeniden kırpma [tablomuza bir ekleme.](migrated-assemblies.md)
-1. [Gerekli kod ayarlamalarını yapma.](#handle-breaking-api-changes)
-1. [Visual Studio 2022 uzantınızı test etme.](#test-your-extension)
-1. [Visual Studio 2022 uzantınızı yayımlama.](#publish-your-extension)
+### <a name="extensions-without-running-code"></a>Kod çalıştırmadan uzantılar
 
-#### <a name="extensions-without-running-code"></a>Kod çalıştırmadan uzantılar
+Çalışan herhangi bir kod içermeyen uzantılar (örneğin, proje veya öğe şablonları), iki ayrı VSIXs üretimi dahil olmak üzere önceki adımları izlemek için gerekli *değildir* .
 
-Çalışan kod (örneğin, proje/öğe şablonları) içeren uzantılar,  iki ayrı VSIX'in üretimi de dahil olmak üzere yukarıdaki adımları izlemesi gerekmez.
-
-Bunun yerine, bir VSIX dosyasında aşağıdaki gibi iki yükleme `source.extension.vsixmanifest` hedefi bildirilecek şekilde değiştirilmelidir:
+Bunun yerine, bir VSıX `source.extension.vsixmanifest` dosyasını, dosyasının iki yükleme hedefi bildirdiği şekilde değiştirin:
 
 ```xml
 <Installation>
@@ -78,22 +76,22 @@ Bunun yerine, bir VSIX dosyasında aşağıdaki gibi iki yükleme `source.extens
 </Installation>
 ```
 
-Paylaşılan projeleri ve birden çok VSIX'i kullanma hakkında bu makaledeki adımları atlayabilirsiniz. Teste devam [edebilirsiniz!](#test-your-extension)
+Bu makaledeki adımları, paylaşılan projeler ve birden çok VNET kullanımı ile ilgili adımları atlayabilirsiniz. [Sınamaya](#test-your-extension)devam edebilirsiniz.
 
 > [!NOTE]
-> Visual Studio 2022 kullanarak *yeni* bir Visual Studio uzantısı yazarsanız ve (ayrıca) Visual Studio 2019 veya önceki bir sürümü hedeflemek için bu kılavuzu [göz atabilirsiniz.](target-previous-versions.md)
+> Visual Studio 2022 kullanarak *yeni* bir Visual Studio uzantısı yazıyorsanız ve ayrıca Visual Studio 2019 veya önceki bir sürümü hedeflemek istiyorsanız, [bu kılavuza](target-previous-versions.md)bakın.
 
 ### <a name="msbuild-tasks"></a>MSBuild görevleri
 
-MSBuild görevleri yazarsanız, Visual Studio 2022'de bunların 64 bitlik bir işlemde yüklenme olasılığı çok daha MSBuild.exe. Görevinizin çalışması için 32 bit bir işlem [](../../msbuild/how-to-configure-targets-and-tasks.md#usingtask-attributes-and-task-parameters) gerekirse, MSBuild 32 bit bir işlemde yüklemesi MSBuild emin olmak için bu MSBuild belgelerine bakın.
+MSBuild görevleri yazardıysanız, Visual Studio 2022 ' de, bunun büyük olasılıkla 64 bit MSBuild.exe bir işleme yüklenebilecekleri hakkında farkında olun. göreviniz çalıştırmak için 32 bitlik bir işlem gerektiriyorsa, MSBuild [görevlerinizi ve görevleri yapılandırma](../../msbuild/how-to-configure-targets-and-tasks.md#usingtask-attributes-and-task-parameters) bölümüne, görevi 32 bit bir işleme yüklenmesini sağlamak için bkz..
 
-## <a name="modernize-your-vsix-project"></a>VSIX projenizi modernleştirme
+## <a name="modernize-your-vsix-project"></a>VSıX projenize modernleştirin
 
-Uzantınıza Visual Studio 2022 desteği eklemeden önce aşağıdakiler dahil olmak üzere mevcut projenizi temizlemenizi ve modernleştirmenizi kesinlikle öneririz:
+uzantınızı Visual Studio 2022 desteği eklemeden önce, var olan projenizi temizlemeniz ve modernleştirin önerilir:
 
-1. [packages.config'a geçiş. `PackageReference` ](/nuget/consume-packages/migrate-packages-config-to-package-reference)
+1. [packages.config ' den ' `PackageReference` ye geçirin ](/nuget/consume-packages/migrate-packages-config-to-package-reference).
 
-1. Tüm doğrudan derleme VS SDK'sı derleme başvurularını PackageReference öğeleriyle değiştirin.
+1. tüm doğrudan Visual Studio SDK derleme başvurularını öğelerle değiştirin `PackageReference` :
 
    ```diff
    -<Reference Include="Microsoft.VisualStudio.OLE.Interop" />
@@ -101,7 +99,7 @@ Uzantınıza Visual Studio 2022 desteği eklemeden önce aşağıdakiler dahil o
    ```
 
    > [!TIP]
-   > Birçok derleme *başvurularını* meta paketimize *yalnızca bir* PackageReference ile değiştirebilirsiniz:
+   > Meta paket için *çok sayıda* derleme başvurularını yalnızca *bir* `PackageReference` örnekle değiştirebilirsiniz:
    >
    >```diff
    >-<Reference Include="Microsoft.VisualStudio.OLE.Interop" />
@@ -110,76 +108,86 @@ Uzantınıza Visual Studio 2022 desteği eklemeden önce aşağıdakiler dahil o
    >+<PackageReference Include="Microsoft.VisualStudio.Sdk" Version="..." />
    >```
 
-   Hedeflemekte olduğu en düşük sürümle Visual Studio emin olun.
+   hedeflediğinizden Visual Studio en düşük sürümü ile eşleşen paket sürümlerini seçtiğinizden emin olun.
 
-   VS SDK'ya özgü olmayan bazı derlemeler (örneğin, Newtonsoft.Json.dll) Visual Studio 2022'den önce basit bir başvuru aracılığıyla keşfedilebilir ama Visual Studio 2022'de bunun yerine bir paket başvurusu gerektirir çünkü Visual Studio 2022'de bazı Visual Studio çalışma zamanı ve SDK dizinlerini 'den kaldırmıştık `<Reference Include="Newtonsoft.Json" />` MSBuild derleme arama yolunu seçin.
+Visual Studio SDK 'sı için benzersiz olmayan bazı derlemeler (örneğin, *Newtonsoft.Json.dll*), 2022 Visual Studio önce basit bir başvuru aracılığıyla bulunabilir `<Reference Include="Newtonsoft.Json" />` . ancak Visual Studio 2022 ' de, bunun yerine bir paket başvurusu gerekir. bunun nedeni, bazı Visual Studio çalışma zamanının ve SDK dizinlerinin MSBuild varsayılan derleme arama yolundan kaldırıldığı nedenidir.
 
-   Doğrudan derleme başvurularından paket NuGet geçişte, bağımlılıkların geçişli kapanışı otomatik olarak yükleyerek NuGet ek derleme başvuruları ve çözümleyici paketleri topabilirsiniz. Bu genellikle normaldir, ancak derlemeniz sırasında ek uyarıların işaretlenmelerine neden olabilir. Bu uyarıların üzerinden geçerek mümkün olan en iyi şekilde çözüm bulun ve kod içinde bölgeleri kullanarak çözemeyebilirsiniz. `#pragma warning disable <id>`
+doğrudan derleme başvurularından NuGet paket başvurularına geçiş yapmak için, NuGet otomatik olarak bağımlılıkların geçişli kapatılmasını yüklediği için ek derleme başvuruları ve çözümleyici paketleri alabilirsiniz. Bu genellikle Tamam, ancak derlemeniz sırasında ek uyarılara neden olabilir. Bu uyarılarla çalışın ve olabildiğince fazla çözün. `#pragma warning disable <id>`Giderebileceğiniz uyarıları bastırmak için kod içi bölgeleri kullanmayı düşünün.
 
-## <a name="use-shared-projects-for-multi-targeting"></a>Birden çok hedefleme için paylaşılan projeleri kullanma
+## <a name="use-shared-projects-for-multi-targeting"></a>Çoklu hedefleme için paylaşılan projeler kullanma
 
-[Paylaşılan projeler,](/xamarin/cross-platform/app-fundamentals/shared-projects?tabs=windows) 2015'te Visual Studio tür. Proje içinde paylaşılan Visual Studio, kaynak kod dosyalarının birden çok proje arasında paylaşılmalarını ve koşullu derleme sembolleri ve benzersiz başvuru kümeleri kullanılarak farklı şekilde derlenmesine olanak sağlar.
+[paylaşılan projeler](/xamarin/cross-platform/app-fundamentals/shared-projects?tabs=windows) Visual Studio 2015 ' de tanıtılan bir proje türüdür. Visual Studio paylaşılan projeler, kaynak kodu dosyalarının birden fazla proje arasında paylaşılmasını ve koşullu derleme sembolleri ve benzersiz başvuru kümelerini kullanarak farklı şekilde oluşturulması için etkinleştirir.
 
-Visual Studio 2022 tüm önceki VS sürümlerinden ayrı bir başvuru derlemeleri kümesi gerektirdiğinden, kılavuzumuz uzantınızı kolayca Visual Studio 2022 öncesi ve Visual Studio 2022 (ve sonraki sürümler) için çoklu hedef olarak kullanmak, size kod paylaşımı ve ayrı başvurular vermek için paylaşılan projeleri kullanmaktır.
+Visual Studio 2022, önceki Visual Studio sürümlerinden farklı bir başvuru derlemeleri kümesi gerektirir. bu nedenle, uzantınızı Visual Studio 2022, önceki sürümleri ve sonraki sürümleri için kolayca çok hedeflemek üzere paylaşılan projeler kullanmanızı öneririz. Bu teknik size kod paylaşımı, ancak ayrı başvurular verecektir.
 
-Visual Studio uzantıları bağlamında, Visual Studio 2022 ve sonrası için bir VSIX projeniz ve Visual Studio 2019 ve önceki sürümler için bir VSIX projeniz olabilir. Bu projelerin her biri yalnızca bir içerir ve paket `source.extension.vsixmanifest` 16.x SDK'sı veya 17.x SDK'sı başvurularını içerir. Bu VSIX projeleri, iki VS sürümü arasında paylaştırılacak tüm kaynak kodunuzu barındıracak yeni bir paylaşılan projeye yönelik paylaşılan proje başvurusuna da sahip olur.
+Visual Studio uzantıları bağlamında, Visual Studio 2022 ve üzeri için bir vsıx projesine ve Visual Studio 2019 ve daha önceki bir vsıx projesine sahip olabilirsiniz. Bu projelerin her biri yalnızca bir `source.extension.vsixmanifest` örnek ve paketin 16. x SDK 'sı ya da 17. x SDK 'sine başvurduğu bir örnek içerir. bu vsıx projeleri ayrıca, iki Visual Studio sürümünde paylaşılabilen tüm kaynak kodunuzu barındıracak yeni bir paylaşılan projeye paylaşılan bir proje başvurusu da olur.
 
-Başlangıç noktası olarak, bu belge için zaten Visual Studio 2019'a yönelik bir VSIX projeniz olduğunu ve uzantının 2022'de Visual Studio varsayabilirsiniz.
+bu bölümde, Visual Studio 2019 ' i hedefleyen ve uzantınızın Visual Studio 2022 ' de çalışmasını istediğiniz bir vsıx projeniz zaten var.
 
-Bu adımların hepsi 2019 Visual Studio tamamlanır.
+bu adımların tümünü Visual Studio 2019 ' i kullanarak tamamlayabilirsiniz:
 
-1. Henüz bunu yapmadıysanız, bu [güncelleştirme işleminin sonraki adımlarını](#modernize-your-vsix-project) kolaylaştırmak için projelerinizi modernleştirin.
+1. Daha önce yapmadıysanız, bu güncelleştirme işlemindeki adımları kolaylaştırmak için [projelerinizi modernleştirin](#modernize-your-vsix-project) .
 
-1. VS SDK'ya başvurulan mevcut her proje için çözümünüze yeni bir paylaşılan proje ekleyin.
-   ![Yeni proje Project ](media/update-visual-studio-extension/add-new-project.png)
-    ![ Yeni proje şablonu ekle](media/update-visual-studio-extension/new-shared-project-template.png)
+1. Visual Studio SDK 'ya başvuran mevcut her proje için çözümünüze yeni bir paylaşılan proje ekleyin. çözüme sağ tıklayın ve sonra   >  **yeni Project** ekle ' yi seçin.
 
-1. Vs SDK'ya başvuran her projeden, paylaşılan proje karşılıklarına bir başvuru ekleyin.
-   :::image type="content" source="media/update-visual-studio-extension/add-shared-project-reference.png" alt-text="Paylaşılan proje başvurusu ekleme" lightbox="media/update-visual-studio-extension/add-shared-project-reference.png":::
+   ![Yeni proje ekleme seçimlerini gösteren ekran görüntüsü.](media/update-visual-studio-extension/add-new-project.png)
 
-1. Tüm kaynak kodu (.cs, .resx dahil) vs SDK'ya başvuran her projeden paylaşılan proje karşılıklarına taşıma.
-Dosyayı `source.extension.vsixmanifest` VSIX projesinde bırakın.
-   ![Paylaşılan proje tüm kaynak dosyaları içeriyor](media/update-visual-studio-extension/source-files-in-shared-project.png)
+1. **yeni proje ekle** iletişim kutusunda **paylaşılan proje**' yi arayın ve ardından **paylaşılan Project** şablonunu seçin.
 
-1. Meta veri dosyaları (sürüm notları, lisans, simgeler ve diğer) ve VSCT dosyaları paylaşılan bir dizine taşınarak VSIX projesine bağlı dosyalar olarak eklenmiştir. Paylaşılan dizinin paylaşılan projeden ayrı olduğunu unutmayın.
-   ![Meta verileri ve VSCT dosyalarını bağlantılı dosyalar olarak ekleme](media/update-visual-studio-extension/add-linked-items-to-vsix.png)
-    - Meta veri dosyaları için BuildAction'i olarak `Content` ayarlayın ve VSIX'e dahil edin'i olarak `true` ayarlayın.
+   ![paylaşılan Project şablonunu aramayı ve seçmeyi gösteren ekran görüntüsü.](media/update-visual-studio-extension/new-shared-project-template.png)
 
-      ![VSIX'e meta veri dosyaları dahil edin](./media/update-visual-studio-extension/include-metadata-files-in-vsix.png)
-    - VSCT dosyaları için BuildAction olarak ayarlayın `VSCTCompile` ve VSIX'e dahil etmeyebilirsiniz.
-      Visual Studio ayarın destek olmadığını şikayet ediyor olabilir, ancak projeyi kaldırıp olarak değiştirerek derleme eylemlerini el ile `Content` değiştirebilirsiniz`VSCTCompile`
+1. Visual Studio her bir SDK 'ya başvuran projeden, paylaşılan projesine karşılık gelen bir başvuru ekleyin.
 
-    ```diff
-    -<Content Include="..\SharedFiles\VSIXProject1Package.vsct">
-    -  <Link>VSIXProject1Package.vsct</Link>
-    -</Content>
-    +<VSCTCompile Include="..\SharedFiles\VSIXProject1Package.vsct">
-    +  <Link>VSIXProject1Package.vsct</Link>
-    +  <ResourceName>Menus.ctmenu</ResourceName>
-    +</VSCTCompile>
-    ```
+   :::image type="content" source="media/update-visual-studio-extension/add-shared-project-reference.png" alt-text="Paylaşılan proje başvurusu ekleme seçimlerini gösteren ekran görüntüsü." lightbox="media/update-visual-studio-extension/add-shared-project-reference.png":::
 
-      ![VSCT dosyalarını VSCTCompile olarak ayarlama](media/update-visual-studio-extension/build-linked-vsct-files.png)
+1. tüm kaynak kodunu ( *. cs* ve *. resx* dosyaları dahil), her Visual Studio SDK 'ya başvuran projeden paylaşılan proje karşılığına taşıyın.
+*Kaynak. Extension. valtmanifest* dosyasını VSIX projesinde bırakın.
 
-1. Herhangi bir yeni hata oluşturmamanızı onaylamak için projelerinizi derleme.
+   ![Tüm kaynak dosyalarını içeren paylaşılan bir projeyi gösteren ekran görüntüsü.](media/update-visual-studio-extension/source-files-in-shared-project.png)
 
-Projeniz artık 2022 Visual Studio eklemeye hazırdır.
+1. Meta veri dosyalarını (örneğin, sürüm notları, lisans ve simgeler) ve VSCT dosyalarını paylaşılan bir dizine taşıyın. Sonra VSıX projesine bağlı dosyalar olarak ekleyin. Paylaşılan dizinin paylaşılan projeden ayrı olduğunu unutmayın.
 
-## <a name="add-a-visual-studio-2022-target"></a>2022 Visual Studio ekleme
+   ![Meta veri ve V S C 'ler dosyalarını bağlı dosyalar olarak ekleme seçimlerini gösteren ekran görüntüsü.](media/update-visual-studio-extension/add-linked-items-to-vsix.png)
+   
+   - Meta veri dosyaları için **derleme eylemini** **içerik** olarak ayarlayın. **VSIX** 'i **true** olarak ayarlayın.
 
-Bu belgede, paylaşılan projelerle uzantınızı çarpanlara Visual Studio [adımlarını tamamlamış olduğunuz varsayılır.](#use-shared-projects-for-multi-targeting)
+     ![V S I X 'te meta veri dosyaları dahil gösteren ekran görüntüsü.](./media/update-visual-studio-extension/include-metadata-files-in-vsix.png)
 
-Uzantınıza Visual Studio 2022 desteği eklemeye devam edin. Bu adımlar 2019'da Visual Studio tamamlanabilirsiniz:
+   - VSCT dosyaları için, **derleme eylemini** **Vsctcompile** olarak ayarlayın. **VSIX 'Te** **false** olarak ayarlayın. 
+   
+     ![Bir V S C T dosyasının seçili özelliklerini gösteren ekran görüntüsü.](media/update-visual-studio-extension/build-linked-vsct-files.png)
+   
+     bu ayarın desteklenmediğini Visual Studio şikayet ediyorsanız, projeyi kaldırarak ve ' ye değiştirerek yapı eylemini el ile değiştirebilirsiniz `Content` `VSCTCompile` :
 
-1. Çözümünüze yeni bir VSIX Project ekleyin. Bu, 2022'de Visual Studio projedir. Şablonla birlikte gelen tüm kaynak kodunu kaldırın, ancak *dosyasını olduğu gibi `source.extension.vsixmanifest` kaldırın.*
+     ```diff
+     -<Content Include="..\SharedFiles\VSIXProject1Package.vsct">
+     -  <Link>VSIXProject1Package.vsct</Link>
+     -</Content>
+     +<VSCTCompile Include="..\SharedFiles\VSIXProject1Package.vsct">
+     +  <Link>VSIXProject1Package.vsct</Link>
+     +  <ResourceName>Menus.ctmenu</ResourceName>
+     +</VSCTCompile>
+     ```
 
-1. Yeni VSIX projeniz üzerinde, 2019'da hedeflenen VSIX başvurularını Visual Studio paylaşılan projeye paylaşılan proje başvurusu ekleyin.
+1. Herhangi bir hata sunmadığınızdan emin olmak için projenizi derleyin.
 
-   ![Bir paylaşılan projeye ve iki VSIX projesine sahip bir çözüm](media/update-visual-studio-extension/shared-project-with-two-heads.png)
+projeniz artık Visual Studio 2022 desteğine eklenmeye hazırdır.
 
-1. Yeni VSIX projesinin düzgün şekilde derlemesini doğrulayın. Derleyici hatalarını çözmek için özgün VSIX projeniz ile eşleşmesi için başvurular eklemeniz gerekir.
+## <a name="add-a-visual-studio-2022-target"></a>Visual Studio 2022 hedefi ekleme
 
-1. Yönetilen VS uzantıları için, NuGet Paket Yöneticisi kullanarak veya doğrudan proje dosyasını düzenleyerek paket başvurularınızı 16.x (veya önceki) sürümlerden Visual Studio 2022 hedefli proje dosyanız içinde 17.x paket sürümlerine güncelleştirin:
+bu bölüm, [Visual Studio uzantınızı paylaşılan projelerle çarpanlara katmada](#use-shared-projects-for-multi-targeting)kullanılan adımları tamamladığınızı varsayar.
+
+aşağıdaki adımları kullanarak uzantınızı Visual Studio 2022 desteği ekleyin. bunları, Visual Studio 2019 kullanarak tamamlayabilirsiniz.
+
+1. Çözümünüze yeni bir VSıX projesi ekleyin. bu proje 2022 Visual Studio hedeflenecek. Şablonla gelen tüm kaynak kodlarını kaldırın, ancak *Source. Extension. valtmanifest* dosyasını saklayın.
+
+1. yeni vsıx projenizde, Visual Studio 2019-hedef vsıx 'in başvurduğu paylaşılan projeye bir başvuru ekleyin.
+
+   ![Paylaşılan bir proje ve iki V S ı X projesi içeren bir çözüm gösteren ekran görüntüsü.](media/update-visual-studio-extension/shared-project-with-two-heads.png)
+
+1. Yeni VSıX projesinin düzgün bir şekilde yapılandırıldığını doğrulayın. Derleyici hatalarını çözmek için özgün VSıX projenizle eşleşecek başvurular eklemeniz gerekebilir.
+
+1. yönetilen Visual Studio uzantıları için, paket başvurularınızı 16. x (veya önceki bir sürümü) ile Visual Studio 2022 hedefli proje dosyanızdaki 17. x paket sürümlerine güncelleştirin. Proje NuGet Paket Yöneticisi doğrudan düzenleyin:
 
     ```diff
     -<PackageReference Include="Microsoft.VisualStudio.SDK" Version="16.0.206" />
@@ -188,17 +196,17 @@ Uzantınıza Visual Studio 2022 desteği eklemeye devam edin. Bu adımlar 2019'd
     +<PackageReference Include="Microsoft.VSSDK.BuildTools" Version="17.0.63-preview.1" />
     ```
 
-   Bu sürümlerden gerçekten kullanılabilen sürümleri nuget.org. Daha önce kullanılanlar yalnızca tanıtım amaçlıdır.
+   Önceki kodda gösterilen sürümler yalnızca tanıtım amaçlıdır. Kodunda, NuGet web sitesinde [bulunan NuGet kullanın.](https://www.nuget.org/) 
 
-   Çoğu durumda paket kimlikleri değişmiştir. 2022'de yapılan değişikliklerin listesi için [paket/derleme](migrated-assemblies.md) Visual Studio bakın.
+   Çoğu durumda paket kimlikleri değişmiştir. 2022'de Visual Studio listesi için [paket/derleme eşleme tablosuna bakın.](migrated-assemblies.md)
 
-   C++ ile yazılan uzantıların henüz derlen bir SDK'sı yoktur.
+   C++ ile yazılmış uzantıların henüz derlen bir SDK'sı yoktur.
 
-1. C++ projeleri için amd64 için derlenmiş olması gerekir. Yönetilen uzantılar için projenizi Herhangi bir CPU için yapıdan hedeflemeye değiştirmeyi göz önünde Visual Studio `x64` 2022'de uzantınız her zaman 64 bitlik bir işlemde yüklenir. `Any CPU` de sorun değil, ancak herhangi bir x64 yerel ikilisi başvurursanız uyarılar üretebilir.
+1. C++ projeleri için uzantıların AMD64 için derlenmiş olması gerekir. Yönetilen uzantılar için projenizi Herhangi bir **CPU** için yapıdan **x64'ü hedeflemeye değiştirmeyi göz önünde bulundurarak.** Bu değişiklik, Visual Studio 2022'de uzantının her zaman 64 bit bir işlemde yüklemesini sağlar. **Herhangi bir CPU** da iyidir, ancak herhangi bir x64 yerel ikilisi başvurursanız uyarılar üretebilir.
 
-   Uzantınıza yerel modülde sahip olunan tüm bağımlılıkların x86 görüntüsünden amd64 görüntüsüne güncelleştirilmiş olması gerekir.
+   Uzantınıza yerel modülde sahip olabileceği tüm bağımlılıkların x86 görüntüsünden AMD64 görüntüsüne güncelleştirilmiş olması gerekir.
 
-1. Dosyanızı `source.extension.vsixmanifest` 2022'de Visual Studio şekilde düzenleyin. Etiketi `<InstallationTarget>` 2022'Visual Studio yansıtacak şekilde ayarlayın ve amd64 yükünü belirtin:
+1. *Source.extension.vsixmanifest* dosyanızı 2022'de Visual Studio düzenleyin. Etiketi `<InstallationTarget>` 2022'Visual Studio ayarlayın. `ProductArchitecture`Amd64 yükünü belirtmek için öğesini ayarlayın.
 
    ```xml
    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0,18.0)">
@@ -206,41 +214,44 @@ Uzantınıza Visual Studio 2022 desteği eklemeye devam edin. Bu adımlar 2019'd
    </InstallationTarget>
    ```
 
-   Visual Studio 2019'da, bu dosyanın tasarımcısı yeni öğeyi açığa çıkarmaz, bu nedenle bu değişikliğin Çözüm Gezgini'daki Birlikte Aç komutuyla erişebilirsiniz bir xml düzenleyicisiyle `ProductArchitecture` **yapılması gerekir.** 
-
-   Bu `ProductArchitecture` öğe kritiktir. Visual Studio 2022, *uzantınız* olmadan yüklenmez.
+   > [!IMPORTANT]
+   > Bu Visual Studio 2019'da, bu dosyanın tasarımcısı yeni öğeyi açığa `ProductArchitecture` çıkarmaz. Bu değişikliği yapmak için bir XML düzenleyicisi kullan gerekir. XML düzenleyicisine erişmek için, Çözüm Gezgini'ye gidin ve Birlikte **Aç komutunu** seçin.
+   >
+   > öğesi `ProductArchitecture` kritiktir. Visual Studio 2022, uzantınız olmadan yüklenmez.
 
    | Öğe | Değer | Açıklama |
    | - | - | - |
-   | ProductArchitecture | X86, AMD64 | Bu VSIX tarafından desteklenen platformlar. Büyük/büyük/büyük harfe duyarlı değildir. Öğe başına bir platform ve InstallTarget başına bir öğe. 17.0'dan küçük ürün sürümleri için varsayılan değer x86'dır ve atlanabilir.  17.0 ve daha büyük ürün sürümleri için bu öğe gereklidir ve varsayılan değer yoktur. 2022 Visual Studio için bu öğe için tek geçerli içerik "amd64" şeklindedir. |
+   | `ProductArchitecture` | `x86`, `amd64` | Bu VSIX'in desteklediği platformlar. Büyük/büyük/büyük harfe duyarlı değildir. Öğe başına bir platform ve örnek başına bir öğe `InstallationTarget` kullanın. 17.0'dan küçük ürün sürümleri için varsayılan değerdir `x86` ve atlanabilir. 17.0 ve sonraki ürün sürümleri için bu öğe gereklidir ve varsayılan değer yoktur. 2022 Visual Studio için, bu öğe için tek geçerli içerik `amd64` olur. |
 
-1. Source.extension.vsixmanifest içinde 2019'un (varsa) hedefle Visual Studio diğer ayarlamaları da yapabilirsiniz. Her biri farklı bir VS sürümünü hedef alan uzantının 2 farklı sürümünü yayımlarsanız, bildirimin öğesinde VSIX kimliğinin her iki uzantı için de farklı olduğu `Identity` önemlidir.
+1. *Source.extension.vsixmanifest* içinde 2019'da (varsa) hedefle Visual Studio diğer ayarlamaları da yapabilirsiniz. 
 
-Bu noktada, 2022 Visual Studio VSIX uzantınız vardır. 2022 Visual Studio VSIX projenizi derlemeniz ve görünen [derleme sonları üzerinde çalışmanız gerekir.](#handle-breaking-api-changes) Visual Studio 2022 hedefli VSIX projeniz için derleme sonları yoksa, tebrikler: Test için hazırsın!
+   Her biri farklı bir Visual Studio sürümünü hedef alan uzantının iki sürümünü yayımlarsanız, bildirimin öğesinde VSIX kimliğinin her uzantı için farklı `Identity` olduğundan emin olun.
+
+Bu noktada, 2022 Visual Studio VSIX uzantınız vardır. 2022 Visual Studio VSIX projenizi derlemeniz ve görünen [derleme sonları üzerinde çalışmanız gerekir.](#handle-breaking-api-changes) Visual Studio 2022 hedefli VSIX projeniz için derleme sonları yoksa tebrikler! Test için hazır mısınız?
 
 ## <a name="handle-breaking-api-changes"></a>Yeni API değişikliklerini işleme
 
-Visual Studio 2022'de, önceki sürümlerde çalışmalarından itibaren kodunda değişiklik gerektiren [hataya](breaking-api-list.md) neden olan API değişiklikleri vardır. Kodunuzu her biri için güncelleştirme ipuçları için bu belgeyi gözden geçirebilirsiniz.
+Hataya neden olan API değişiklikleri, uygulamanın önceki sürümlerinde Visual Studio. Kodunuzu güncelleştirme hakkında ipuçları için bkz. [2022'de api Visual Studio.](breaking-api-list.md)
 
-Kodunuzu uyarlarken, kodunuzun [](#use-conditional-compilation-symbols) Visual Studio 2022 için destek eklerken ön Visual Studio 2022'yi desteklemeye devam etmek için koşullu derlemeyi Visual Studio öneririz.
+Kodunuzu uyarlarken koşullu derlemeyi [kullanmanızı öneririz.](#use-conditional-compilation-symbols) Kodunuz daha sonra 2022'Visual Studio için destek eklerken önceki sürümleri desteklemeye devam Visual Studio olabilir.
 
-2022 hedefli uzantı Visual Studio için teste devam [edin.](#test-your-extension)
+2022 hedefli uzantı Visual Studio için test işlemine devam [edin.](#test-your-extension)
 
 ## <a name="use-conditional-compilation-symbols"></a>Koşullu derleme sembolleri kullanma
 
-Visual Studio 2022 ve önceki sürümler için aynı kaynak kodu, hatta aynı dosyayı kullanmak isterseniz, hataya neden olan değişikliklere uyum sağlamak için kodunuzun bir hataya neden olması için koşullu derlemeyi kullanmanız gerekir. Koşullu derleme, C#, Visual Basic ve C++ dillerinin bir özelliğidir ve belirli yerlerde farklı API'leri bulundurarak çoğu kodu paylaşmak için kullanılabilir.
+2022 ve önceki sürümler için aynı kaynak kodu, hatta aynı dosyayı Visual Studio, koşullu derlemeyi kullanmanız gerekir. Daha sonra hataya neden olan değişikliklere uyum sağlamak için kodunuzun bir hataya neden olabilir. Koşullu derleme C#, Visual Basic ve C++ dillerinin bir özelliğidir. Belirli yerlerde farklı API'ler kullanılırken çoğu kodu paylaşmak için kullanılabilir.
 
-Ön işlemci yönergelerinin ve koşullu derleme sembollerinin kullanımı hakkında daha fazla bilgi, önişlemci yönergesi #if Microsoft [belgesinde bulunabilir.](/dotnet/csharp/language-reference/preprocessor-directives#conditional-compilation)
+Ön işlemci yönergelerinin ve koşullu derleme sembollerinin kullanımı hakkında daha fazla bilgi için bkz. [C# önişlemci yönergeleri.](/dotnet/csharp/language-reference/preprocessor-directives#conditional-compilation)
 
-Daha önceki sürümleri hedef alan Visual Studio, daha sonra kodun farklı API'leri kullanmak üzere mürekkeplenmesi için kullanılan bir koşullu derleme simgesine ihtiyaç olacaktır. Aşağıdaki görüntüde gösterildiği gibi, proje özellikleri sayfasında koşullu derleme simgesini ayarlayın:
+Önceki sürümleri hedef alan Visual Studio bir koşullu derleme simgesi gerekir. Bu simge daha sonra farklı API'leri kullanmak üzere kodun biriktiri için kullanılabilir. Koşullu derleme simgesini proje özellikleri sayfasından belirtebilirsiniz:
 
-![Koşullu derleme simgelerini ayarlama](media/update-visual-studio-extension/conditional-compilation-symbols.png)
+![Koşullu derleme simgesi girme kutusunu gösteren ekran görüntüsü.](media/update-visual-studio-extension/conditional-compilation-symbols.png)
 
-Varsayılan olarak, girersiniz sembolü *yalnızca* bir yapılandırma için geçerli olduğundan, tüm yapılandırmalar için derleme sembolünü ayardan emin olun.
+Tüm Yapılandırmalar için derleme simgesini **ayardan emin olun.** Varsayılan olarak, girersiniz simgesi yalnızca bir yapılandırma için geçerli olabilir.
 
 ### <a name="c-techniques"></a>C \# teknikleri
 
-Daha sonra bu sembolü aşağıdaki kodda gösterildiği gibi bir ön işlemci yönergesi ( `#if` ) olarak kullanabilirsiniz. Daha sonra farklı sürümler arasındaki hataya neden olan değişiklikle başa başa olmak için kodunuzun Visual Studio abilirsiniz.
+Derleme sembolünü, aşağıdaki kodda gösterildiği gibi önişlemci yönergesi () `#if` olarak kullanabilirsiniz. Daha sonra, yeni sürümler arasındaki hataya neden olan bir değişiklikle başa Visual Studio.
 
 ```cs
     Guid myGuid = new Guid("{633FBA02-719B-40E7-96BF-0899767CD104}");
@@ -253,7 +264,7 @@ Daha sonra bu sembolü aşağıdaki kodda gösterildiği gibi bir ön işlemci y
 #endif
 ```
 
-Bazı durumlarda, türünü adlandırmayı `var` önlemek ve bu sayede bölgelere ihtiyaçtan kaçınmak için `#if` kullanabilirsiniz. Yukarıdaki kod parçacığı şu şekilde de yazabilirsiniz:
+Bazı durumlarda, türünü `var` adlandırmayı önlemek ve bölgelere ihtiyaçtan kaçınmak için `#if` kullanabilirsiniz. Yukarıdaki kod parçacığı şu şekilde de yazleştirilebilir:
 
 ```cs
     Guid myGuid = new Guid("{633FBA02-719B-40E7-96BF-0899767CD104}");
@@ -262,15 +273,15 @@ Bazı durumlarda, türünü adlandırmayı `var` önlemek ve bu sayede bölgeler
     shell.LoadUILibrary(myGuid, myFlags, out var ptrLib);
 ```
 
-Söz dizimi kullanılırken, aşağıda gösterilen belgede dil hizmeti bağlam açılır listesinden söz dizimi vurgulamayı nasıl değiştirerek kullanabileceğinizi ve diğer dil hizmetinin uzantımızın bir hedef Visual Studio sürümüne odaklanmaya odaklanması için sunduğu diğer yardımlara dikkat `#if` edin.
+Söz dizimi kullanırken, dil hizmeti bağlamı için açılan listeyi kullanarak söz dizimi `#if` vurgulamayı nasıl değiştirebilirsiniz? Diğer açılan liste, dil hizmetinin bu uzantıya göre bir hedef sürüme Visual Studio dikkat çekmelerine yardımcı olur.
 
-![Paylaşılan projede koşullu derleme](media/update-visual-studio-extension/conditional-compilation-if-region.png)
+![Paylaşılan projede koşullu derlemeyi gösteren ekran görüntüsü.](media/update-visual-studio-extension/conditional-compilation-if-region.png)
 
 ### <a name="xaml-sharing-techniques"></a>XAML paylaşım teknikleri
 
-XAML'de içeriği ön işlemci sembollerine göre özelleştirmeye olanak sağlayan bir ön işlemci yoktur. İçeriklerinin 2022 ve önceki sürümler arasında farklı olması gereken iki XAML Visual Studio kopyalayıp bakımının gerçek olması gerekebilir.
+XAML'de içeriği ön işlemci sembollerine göre özelleştirmeye olanak sağlayan bir ön işlemci yoktur. İçeriği 2022 ve önceki sürümler arasında farklılık Visual Studio XAML sayfalarını kopyalamanız ve korumanız gerekir.
 
-Ancak bazı durumlarda, Visual Studio 2022 ve önceki sürümler arasında ayrı derlemelerde var olan bir türe yapılan bir başvuru, derlemeye başvuran ad alanını kaldırarak bir XAML dosyasında temsil edilebilir:
+Bazı durumlarda, Visual Studio 2022 ve önceki sürümler arasında ayrı derlemelerde var olan bir türe başvuru yine de bir XAML dosyasında gösterilebilir. Derlemeye başvurulan ad alanını kaldırın:
 
 ```diff
 -xmlns:vsui="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Shell.14.0"
@@ -280,59 +291,58 @@ Ancak bazı durumlarda, Visual Studio 2022 ve önceki sürümler arasında ayrı
 
 ## <a name="test-your-extension"></a>Uzantınızı test etmek
 
-2022'Visual Studio bir uzantıyı test etmek için 2022'de Visual Studio gerekir.
-2022'den önce Visual Studio sürümlerinde 64 bit Visual Studio çalıştıramayacaktır.
+2022'Visual Studio bir uzantıyı test etmek için 2022'de Visual Studio gerekir. Önceki sürümlerde 64 bit uzantılar çalıştıra Visual Studio.
 
-Uzantılarınızı 2022'Visual Studio 2022 veya önceki bir sürümü hedeflese Visual Studio ve test etmek için kullanabilirsiniz. Visual Studio 2022'den bir VSIX projesi başlatan deneysel Visual Studio örneği başlatacak.
+Uzantılarınızı 2022'Visual Studio 2022 veya önceki bir sürümü hedeflese Visual Studio ve test etmek için kullanabilirsiniz. Visual Studio 2022'den bir VSIX projesi Visual Studio açılır.
 
-Uzantının desteklemeyi Visual Studio sürümüyle test etmeyi kesinlikle öneririz.
-
-Artık uzantınızı [yayımlamaya hazır olursanız.](#publish-your-extension)
+Uzantının desteklemesi istediğiniz her bir Visual Studio sürümüyle test etmek kesinlikle önerilir.
 
 ## <a name="publish-your-extension"></a>Uzantınızı yayımlama
 
-Harika, bu nedenle uzantınıza bir Visual Studio 2022 hedefi eklediniz ve test ettiniz. Artık uzantıyı dünya için yayımlamaya hazır olursanız.
+Uzantınıza bir Visual Studio 2022 hedefi eklediniz ve test ettiniz. Artık uzantıyı dünya için yayımlamaya hazır olursanız.
 
 ### <a name="visual-studio-marketplace"></a>Visual Studio Market
 
-Uzantınızı Visual Studio [Market'te yayımlamak,](https://marketplace.visualstudio.com/) yeni kullanıcıların uzantınızı bulup yüklemesi için harika bir yol sağlar. Uzantınız 2022'Visual Studio veya eski VS sürümlerini de hedeflese de Market sizi desteklemek için oradadır.
+Uzantınızı [Market'Visual Studio yayımlamak,](https://marketplace.visualstudio.com/) yeni kullanıcıların uzantınızı bulup yüklemesi için harika bir yol sağlar. Uzantınız 2022'Visual Studio 2022'ye veya daha eski Visual Studio sürümleri de hedeflese de Market sizi desteklemek için oradadır.
 
-Gelecekte Market, tek bir Market listelemesine birden çok VSIX yüklemenizi sağlayarak Visual Studio 2022 hedefli VSIX'inizi ve 2022 öncesi VSIX Visual Studio karşıya yüklemenizi sağlar. Kullanıcılarınız, VS uzantısı yöneticisini kullanırken, yüklemiş olduğu VS sürümü için doğru VSIX'i otomatik olarak alır.
+Gelecekte Market birden çok VSIX'i tek bir Market listelemesine yüklemenizi sağlayacaktır. Ardından 2022 Visual Studio VSIX ve önceki bir sürüm için VSIX'i karşıya Visual Studio. Kullanıcılarınız, Visual Studio uzantısı yöneticisini kullanırken, yüklemiş olduğu sürüm için doğru VSIX'Visual Studio alır.
 
 ### <a name="custom-installer"></a>Özel yükleyici
 
-Uzantınızı yüklemek için bir MSI/EXE derlemeniz ve uzantınızı yüklemek vsixinstaller.exe (bir parçası) oluşturmak için bir MSI/EXE derlemeniz, Visual Studio 2022'deki VSIX yükleyicinin güncelleştirilmiş olduğunu bilirsiniz. Geliştiricilerin, Visual Studio 2022'ye uzantı yüklemek için VSIX yükleyicisi sürümünü Visual Studio gerekir. Visual Studio 2022'deki VSIX yükleyicisi, aynı makinede Visual Studio 2022 ile yan yana yüklü olan önceki Visual Studio sürümlerini hedef alan geçerli uzantıları da yükleyecek.
+Uzantınızı yüklemek için bir MSI veya EXE dosyası derlemeniz ve uzantınızı yüklemek için (bir parçası) ortaya `vsixinstaller.exe` çıktınız, Visual Studio 2022'deki VSIX yükleyicinin güncelleştirilmiş olduğunu bilirsiniz. Geliştiricilerin bu sürüme uzantı yüklemek için Visual Studio 2022 ile birlikte gelen VSIX yükleyici sürümünü Visual Studio. 
+
+Visual Studio 2022'deki VSIX yükleyicisi, aynı makinede Visual Studio 2022 ile mevcut olan önceki Visual Studio sürümlerini hedef alan geçerli uzantıları da yüklür.
 
 ### <a name="network-share"></a>Ağ paylaşımı
 
-Uzantınızı LAN veya başka bir yolla paylaşabilirsiniz. Visual Studio 2022 ve Visual Studio 2022 öncesi sürümlere yönelikse, size birden çok VSIX'i ayrı ayrı paylaşmanız ve kullanıcılarınıza hangi VSIX'in yüklemiş olduğu sürümüne göre yüklenecekleri VSIX'i Visual Studio dosya adı (veya benzersiz klasörlere yer verme) gerekir.
+Uzantınızı LAN veya başka bir yolla paylaşabilirsiniz. 2022 Visual Studio önceki sürümleri hedefle ediyorsanız, birden çok VSIX'inizi ayrı ayrı paylaşmanız gerekir. Kullanıcılarınızı hangi VSIX'in yüklemiş olduklarının sürümüne göre yüklemelerine yardımcı olacak dosya Visual Studio (veya benzersiz klasörlere yer) verme.
 
-### <a name="other-considerations"></a>Diğer önemli noktalar
+### <a name="dependencies"></a>Bağımlılıklar
 
-#### <a name="dependencies"></a>Bağımlılıklar
+VSIX'iniz diğer VSIX'leri öğesi aracılığıyla bağımlılıklar olarak belirtirse, başvurulan her VSIX'in VSIX'iniz ile aynı hedeflere ve ürün `<dependency>` mimarilerine yüklenmiş olması gerekir. Bağımlı bir VSIX hedeflenen yüklemesini desteklemezse Visual Studio VSIX'iniz başarısız olur. 
 
-VSIX'iniz öğesi aracılığıyla bağımlılık olarak başka bir VSIX belirtirse, başvurulan her VSIX'in VSIX'iniz ile aynı hedeflere ve ürün `<dependency>` mimarilerine yüklemesi gerekir. Bağımlı bir VSIX hedeflenen yüklemesini desteklemezse Visual Studio VSIX'iniz başarısız olur. Bağımlı VSIX'in sizinkilerden daha fazla hedefi ve mimariyi desteklemesi sorun değil. Bu kısıtlama, bağımlılıkları olan bir VSIX'in dağıtım ve dağıtım yaklaşımının bağımlılarınkileri yansıtması gerektiği anlamına gelir.
+Bağımlı VSIX'in sizinkilerden daha fazla hedefi ve mimariyi desteklemesi sorun değildir. Bu kısıtlama, bağımlılıkları olan bir VSIX'in dağıtım ve dağıtım yaklaşımının bağımlılarınkileri yansıtması gerektiği anlamına gelir.
 
 ## <a name="q--a"></a>Soru-Cevap
 
-**S:** Uzantım herhangi bir birlikte çalışma değişikliği gerektirmez çünkü yalnızca veri sağlar (örneğin, şablonlar), 2022'de de Visual Studio uzantı oluşturabilir miyim?
+**S:** Uzantım yalnızca veri sağladığı için (örneğin şablonlar) birlikte çalışabilirlik değişiklikleri gerektirmez. 2022'de aynı zamanda Visual Studio oluşturabilir miyim?
 
-**A:** Evet!  Bu [konuda daha fazla bilgi için bkz.](#extensions-without-running-code) Kod çalıştırmadan uzantılar.
+**A:** Evet! Bu [konuda bilgi için bkz. Kod](#extensions-without-running-code) çalıştırmadan uzantılar.
 
-**S:** NuGet bir bağımlılık, eski birlikte çalışma derlemelerini getirmek ve sınıfların çatıştırmasına neden olmaktır.
+**S:** NuGet bir bağımlılık, eski birlikte çalışabilirlik derlemelerini getirmek ve sınıfların çatıştırıcısına neden olmaktır. Ne yapmalıyım?
 
-**Bir**: Derlemelerin yinelen etmesini önlemek için .csproj dosyanıza aşağıdaki satırı ekleyin:
+Y **: yinelenen** derlemeleri önlemek için *. csproj* dosyanıza aşağıdaki satırı ekleyin:
 
 ```xml
     <PackageReference Include="<Name of offending assembly>" ExcludeAssets="compile" PrivateAssets="all" />
 ```
 
-Bu, paket başvurularının derlemenin eski sürümünü diğer bağımlılıklardan içeri aktarmasını önler.
+Bu kod, paket başvurularının, derlemenin eski sürümünün diğer bağımlılıklardan içeri aktarılmasını engeller.
 
-**S:** Kaynak dosyalarım paylaşılan bir projeye Visual Studio komutlarım ve kısayol tuşlarım çalışmaıyor.
+**s**: kaynak dosyalarımı paylaşılan bir projeye geçirdikten sonra komutlarım ve kısayol tuşları Visual Studio çalışmayı durdurdu. Ne yapmalıyım?
 
-**A:** [Görüntü İyileştirici örneğinin 2.4.](samples.md#step-2---refactor-source-code-into-a-shared-project) adımı, VSCT dosyalarının VSCT dosyanıza derlenmiş şekilde bağlı öğeler olarak nasıl ekli olduğunu gösterir.
+Y **: görüntü** iyileştirici örneği için [Adım 2,4](samples.md#step-2---refactor-source-code-into-a-shared-project) , vsct dosyalarını vsct dosyanıza derlenmek üzere bağlantılı öğeler olarak nasıl ekleneceğini gösterir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Her adım için proje bağlantılarını ve kod değişikliklerini içeren [ImageOptimizer](samples.md)adım adım örneğini izleyin.
+Bir adım adım örneği, [ımageiyileştiriciyi](samples.md), projenin bağlantılarıyla ve her bir adımla ilgili kod değişikliklerinden izleyin.

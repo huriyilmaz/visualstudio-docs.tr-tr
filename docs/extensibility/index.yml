@@ -11,12 +11,12 @@ metadata:
   manager: jmartens
   ms.prod: visual-studio-windows
   ms.technology: vs-ide-general
-  ms.openlocfilehash: cc63b6d9b96e297b985e2eb3afe6a654e18b6a00
-  ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+  ms.openlocfilehash: c4741301d253fa9c159e667eb8dfdcf6cd24e370
+  ms.sourcegitcommit: a149b3a034bb555ad217656c0ec8bc1672b1e215
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 09/13/2021
-  ms.locfileid: "126725093"
+  ms.lasthandoff: 12/03/2021
+  ms.locfileid: "133514655"
 landingContent:
 - title: Başlarken
   linkLists:
@@ -24,6 +24,8 @@ landingContent:
     links:
     - text: Visual Studio SDK’yı Yükleme
       url: ./installing-the-visual-studio-sdk.md
+    - text: Visual Studio Community araç seti ile Visual Studio uzantıları yazma
+      url: ./vsix/visual-studio-community-toolkit.md
   - linkListType: overview
     links:
     - text: Visual Studio uzantıları yazma

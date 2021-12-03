@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 52432b92be987f3340f0e722a37e6720b603f682
-ms.sourcegitcommit: 0257750be796cc46e01cebd8976f637743d29417
+ms.openlocfilehash: 4e64c59d773b17b1137f32d0da8906d7804ba7c7
+ms.sourcegitcommit: a149b3a034bb555ad217656c0ec8bc1672b1e215
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2021
-ms.locfileid: "130290661"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "133514291"
 ---
 # <a name="customize-your-build"></a>Derlemenizi özelleştirme
 
@@ -148,7 +148,7 @@ Bu kural `<Project Sdk="SdkName">` içeri aktarmalar tarafından zorlanır (yani
 
 ## <a name="msbuildprojectextensionspath"></a>Msbuildprojeclarsionspath
 
-Varsayılan olarak, *Microsoft. Common. props* içeri aktarmaları `$(MSBuildProjectExtensionsPath)$(MSBuildProjectFile).*.props` ve *Microsoft. Common. targets* içeri aktarmaları `$(MSBuildProjectExtensionsPath)$(MSBuildProjectFile).*.targets` . Varsayılan değeri `MSBuildProjectExtensionsPath` `$(BaseIntermediateOutputPath)` , olur `obj/` . NuGet, paketlerle birlikte sunulan derleme mantığına başvurmak için bu mekanizmayı kullanır; diğer bir deyişle, geri yükleme sırasında `{project}.nuget.g.props` paket içeriğine başvuran dosyalar oluşturulur.
+Varsayılan olarak, *Microsoft. Common. props* içeri aktarmaları `$(MSBuildProjectExtensionsPath)$(MSBuildProjectFile).*.props` ve *Microsoft. Common. targets* içeri aktarmaları `$(MSBuildProjectExtensionsPath)$(MSBuildProjectFile).*.targets` . Varsayılan değeri `MSBuildProjectExtensionsPath` `$(BaseIntermediateOutputPath)` , olur `obj/` . NuGet, paketlerle birlikte sunulan derleme mantığına başvurmak için bu mekanizmayı kullanır; yani, geri yükleme sırasında `{project}.nuget.g.props` paket içeriklerine başvuran dosyalar oluşturulur.
 
 Özelliğini `ImportProjectExtensionProps` `false` bir *Dizin. Build. props* veya *Microsoft. Common. props* içeri aktarmadan önce bir dizinde ayarlayarak bu genişletilebilirlik mekanizmasını devre dışı bırakabilirsiniz.
 
@@ -179,6 +179,22 @@ $(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\{TargetFileName}\ImportAfter\*.t
 ardından. Bu kural, yüklü SDK 'ların ortak proje türlerinin derleme mantığını belirlemesine izin verir.
 
 Aynı dizin yapısı içinde `$(MSBuildUserExtensionsPath)` , *%LocalAppData%\Microsoft\ MSBuild* Kullanıcı başına klasörü olan aranır. Bu klasöre yerleştirilmiş dosyalar, ilgili proje türünün tüm derlemeleri için kullanıcının kimlik bilgileri altında çalıştırılacaktır. Düzendeki içeri aktarma dosyasından sonra adlı özellikleri ayarlayarak Kullanıcı uzantılarını devre dışı bırakabilirsiniz `ImportUserLocationsByWildcardBefore{ImportingFileNameWithNoDots}` . Örneğin, olarak ayarlanması `ImportUserLocationsByWildcardBeforeMicrosoftCommonProps` `false` içeri aktarmayı engeller `$(MSBuildUserExtensionsPath)\$(MSBuildToolsVersion)\Imports\Microsoft.Common.props\ImportBefore\*` .
+
+## <a name="custom-configuration-based-on-project-language"></a>Proje diline dayalı özel yapılandırma
+
+.net diline (C#, Visual Basic veya F #) bağlı olarak farklı davranışlara ihtiyacınız varsa, `$(MSBuildProjectExtension)` dile özgü özellikleri ve bunların değerlerini tanımlamak için içindeki proje dosyası uzantısına bağlı koşullara sahip özellik grupları ekleyebilirsiniz.
+
+```xml
+<PropertyGroup Condition="'$(MSBuildProjectExtension)' == '.vbproj'">
+   <!-- Put VB-only property definitions here -->
+</PropertyGroup>
+<PropertyGroup Condition="'$(MSBuildProjectExtension)' == '.fsproj'">
+   <!-- Put F#-only property definitions here -->
+</PropertyGroup>
+<PropertyGroup Condition="'$(MSBuildProjectExtension)' == '.csproj'">
+   <!-- Put C#-only property definitions here -->
+</PropertyGroup>
+```
 
 ## <a name="customize-the-solution-build"></a>Çözüm derlemesini özelleştirme
 

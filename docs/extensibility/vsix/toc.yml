@@ -1,0 +1,51 @@
+- name: Visual Studio Community Araç Seti
+  href: visual-studio-community-toolkit.md
+  expanded: true
+  items:
+    - name: Başlarken
+      expanded: true
+      items:
+        - name: Genel Bakış
+          href: get-started/get-started-guide.md
+        - name: Araçları elde edin
+          href: get-started/get-tools.md
+        - name: Uzantı anatomisi
+          href: get-started/extension-anatomy.md
+        - name: İlk uzantınız
+          href: get-started/first-extension.md
+        - name: Yararlı kaynaklar
+          href: get-started/useful-resources.md
+    - name: Tarifler
+      items:
+        - name: Menüler & komutları
+          href: recipes/menus-buttons-commands.md
+        - name: Araç pencereleri
+          href: recipes/custom-tool-windows.md
+        - name: Tema oluşturma
+          href: recipes/use-themes.md
+        - name: Ayarlar & seçenekleri
+          href: recipes/settings-options.md
+        - name: Bildirimler
+          href: recipes/notifications.md
+        - name: Hata işleme
+          href: recipes/handle-errors.md
+        - name: İlerleme durumu gösteriliyor
+          href: recipes/show-progress.md
+    - name: İpuçları & püf noktaları
+      items:
+        - name: Dosyalar & belgeleri
+          href: tips/files.md
+        - name: Projeler
+          href: tips/projects.md
+        - name: Çözümler
+          href: tips/solutions.md
+        - name: Derleme
+          href: tips/build.md
+    - name: Yayımlama
+      items:
+        - name: Genel Bakış
+          href: publish/publish-guide.md
+        - name: Denetim Listesi
+          href: publish/checklist.md
+        - name: Uzantı paketleri
+          href: publish/create-extension-pack.md

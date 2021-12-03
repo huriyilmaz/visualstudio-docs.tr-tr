@@ -2,7 +2,7 @@
 title: Birim testi yöntemi saplamaları oluşturma
 description: Bir test projesinin, test sınıfının ve test yöntemi saplamanın kolayca yapılandırmasını sağlayan Birim Testleri Oluştur komutunu kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
-ms.date: 08/19/2021
+ms.date: 12/01/2021
 ms.topic: how-to
 helpviewer_keywords:
 - unit testing, create unit tests
@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-test
 ms.workload:
 - multiple
-ms.openlocfilehash: d17afa2a73f395d99c73fc367c6f59d3666ff37c
-ms.sourcegitcommit: 197fb7b1a4d62c1c445ca2b2c7db054df1775933
+ms.openlocfilehash: 95dc8d9424c0881304e3812cfed79b2e87c91f70
+ms.sourcegitcommit: a149b3a034bb555ad217656c0ec8bc1672b1e215
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "133311970"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "133514718"
 ---
 # <a name="create-unit-test-method-stubs-from-code"></a>Koddan birim testi yöntemi saplamaları oluşturma
 
@@ -42,7 +42,7 @@ Birim **Testleri Oluştur menü** komutu genişletilebilir ve MSTest, MSTest V2,
 ![Birim testleri oluştur komutunu kullanma](media/createunittestcommand.png)
 ::: moniker-end
 ::: moniker range=">=vs-2022"
-![Birim testleri oluştur komutunu ve menü iletişim kutusunu kullanma](media/create-unit-test-command-menu-dialog.png)
+![Birim testleri oluştur komutunu ve menü iletişim kutusunu kullanma](media/vs-2022/create-unit-test-command-menu-dialog.png)
 ::: moniker-end
 
 NUnit veya xUnit için test çerçevesi seçeneklerini görmüyorsanız bkz. Üçüncü taraf [birim test çerçevelerini kullanma.](#use-third-party-unit-test-frameworks)
@@ -55,7 +55,7 @@ Bu testleri test otomasyonu işleminin bir parçası olarak çalıştırmayı pl
 ![Birim testi niteliklerini ayarlama](media/createunittest.png)
 ::: moniker-end
 ::: moniker range=">=vs-2022"
-![Birim testi oluşturma niteliklerini kullanma](media/create-unit-test-traits.png)
+![Birim testi oluşturma niteliklerini kullanma](media/vs-2022/create-unit-test-traits.png)
 ::: moniker-end
 
 ## <a name="use-third-party-unit-test-frameworks"></a>Üçüncü taraf birim testi çerçevelerini kullanma
@@ -63,7 +63,7 @@ Bu testleri test otomasyonu işleminin bir parçası olarak çalıştırmayı pl
 NUnit veya xUnit için birim testlerini otomatik olarak oluşturmak için Market'te şu test çerçevesi uzantılarından Visual Studio yükleyin:
 
 * [Test oluşturucuları için NUnit uzantısı](https://marketplace.visualstudio.com/items?itemName=NUnitDevelopers.TestGeneratorNUnitextension-18371)
-* [xUnit.net oluşturucular için uzantıyı genişletme](https://marketplace.visualstudio.com/items?itemName=YowkoTsai.xUnitnetTestGenerator)
+* [xUnit.net oluşturucular için bir uzantı](https://marketplace.visualstudio.com/items?itemName=YowkoTsai.xUnitnetTestGenerator)
 
 ## <a name="when-should-i-use-this-feature"></a>Bu özelliği ne zaman kullan gerekir?
 

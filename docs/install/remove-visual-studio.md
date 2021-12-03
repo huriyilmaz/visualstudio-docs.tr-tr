@@ -1,8 +1,8 @@
 ---
 title: Kaldırma Visual Studio
 titleSuffix: ''
-description: Adım adım bilgisayarınızdan Visual Studio kaldırmayı öğrenin.
-ms.date: 08/24/2021
+description: Bilgisayarınızdan adım adım Visual Studio kaldırmayı öğrenin.
+ms.date: 12/01/2021
 ms.custom: vs-acquisition
 ms.topic: how-to
 f1_keywords:
@@ -22,12 +22,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 360124f0e831233728ba8b4c222e6ad2106ef098
-ms.sourcegitcommit: 215680b355cf613bfa125cf6b864c8bb5f2c71a5
+ms.openlocfilehash: af5c4b66e3776e8e74f8e669cec5b7ed214e9c36
+ms.sourcegitcommit: a149b3a034bb555ad217656c0ec8bc1672b1e215
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "132453587"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "133514460"
 ---
 # <a name="remove-visual-studio"></a>Kaldırma Visual Studio
 
@@ -57,8 +57,10 @@ Aracı şu şekilde `InstallCleanup.exe` çalıştırabilirsiniz:
    "C:\Program Files (x86)\Microsoft Visual Studio\Installer\InstallCleanup.exe"
    ```
 
+   Örneğin, sürümü 17 olan tüm ürünleri kaldırmak için ile *-i* `InstallCleanup.exe` 17 anahtarını kullanın.
+
    > [!NOTE]
-   > Her zaman dizininde bulunan Visual Studio Yükleyicisi dizininde `InstallCleanup.exe` bulamazsanız, `%ProgramFiles(x86)%\Microsoft Visual Studio` bundan sonra yapacaklar şu şekildedir. 'i yüklemek için [yönergeleri Visual Studio.](install-visual-studio.md) Ardından iş yükü seçim ekranı görüntülendiğinde pencereyi kapatın ve bu sayfada yer alan adımları tekrar izleyin.
+   > Her zaman dizininde bulunan Visual Studio Yükleyicisi dizininde `InstallCleanup.exe` bulamazsanız, `%ProgramFiles(x86)%\Microsoft Visual Studio` bundan sonra yapacaklar şu şekildedir. yükleme yönergelerini [Visual Studio.](install-visual-studio.md) Ardından iş yükü seçim ekranı görüntülendiğinde pencereyi kapatın ve bu sayfada yer alan adımları tekrar izleyin.
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 

@@ -1,21 +1,21 @@
 ---
-title: Visual Studio Kapsayıcı araçları başlatma ayarları
+title: Visual Studio Araçları başlatma ayarları
 author: ghogen
-description: Visual Studio kapsayıcılı uygulamaları nasıl işleyeceğinden ilişkili kapsayıcı araçları için başlatma ayarları hakkında bilgi edinin.
+description: Kapsayıcılı uygulamaları nasıl işleyebilirsiniz? ile ilgili kapsayıcı araçları Visual Studio başlatma ayarları hakkında bilgi edinin.
 ms.author: ghogen
 ms.date: 08/15/2019
 ms.technology: vs-container-tools
 ms.topic: reference
-ms.openlocfilehash: d05d4a42a6e2433cc9dfc5190a9e380dda49dab0
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 5fd18cd83a6049d289518a06cee8480e76d4e12e
+ms.sourcegitcommit: a149b3a034bb555ad217656c0ec8bc1672b1e215
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126631767"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "133514434"
 ---
-# <a name="container-tools-launch-settings"></a>Kapsayıcı araçları başlatma ayarları
+# <a name="container-tools-launch-settings"></a>Kapsayıcı Araçları başlatma ayarları
 
-ASP.NET Core projesindeki *özellikler* klasöründe, web uygulamanızın geliştirme makinenizde nasıl başlatıldığını denetleyen ayarları içeren launchsettings. json dosyasını bulabilirsiniz. bu dosyanın ASP.NET geliştirmede nasıl kullanıldığı hakkında ayrıntılı bilgi için bkz. [ASP.NET Core birden çok ortam kullanma](/aspnet/core/fundamentals/environments?view=aspnetcore-2.2&preserve-view=true). *launchsettings. json* dosyasında **docker** bölümündeki ayarlar kapsayıcılı uygulamaları nasıl işleyeceğinden Visual Studio ilgilidir.
+ASP.NET Core  projesinin Özellikler klasöründe, web uygulamanın geliştirme makineniz üzerinde nasıl başlat olduğunu kontrol altına alan ayarları içeren launchSettings.json dosyasını bulabilirsiniz. Bu dosyanın geliştirme aşamasında nasıl ASP.NET hakkında ayrıntılı bilgi için [bkz.](/aspnet/core/fundamentals/environments?view=aspnetcore-2.2&preserve-view=true)ASP.NET Core. *launchSettings.json'da* **Docker** bölümündeki ayarlar, kapsayıcılı uygulamaları Visual Studio ile ilgilidir.
 
 ::: moniker range="vs-2017"
 
@@ -47,14 +47,14 @@ ASP.NET Core projesindeki *özellikler* klasöründe, web uygulamanızın geliş
 
 ::: moniker-end
 
-CommandName ayarı, bu bölümün kapsayıcı araçları için geçerli olduğunu tanımlar. Aşağıdaki tabloda, bu bölümde ayarlankullanılabilecek özellikler gösterilmektedir:
+commandName ayarı, bu bölümün Kapsayıcı Araçları için geçerli olduğunu tanımlar. Aşağıdaki tabloda bu bölümde ayarlanacak özellikler yer almaktadır:
 
 ::: moniker range="vs-2017"
 
 |Ayar adı|Sürüm|Örnek|Description|
 |------------|-------|-------|---------------|
-|launchBrowser|Visual Studio 2017|"launchBrowser": true|Projeyi başarıyla başlattıktan sonra tarayıcının başlatılıp başlatılmayacağını belirtir.|
-|launchUrl 'Si|Visual Studio 2017|"launchUrl": "{Scheme}:/\ {ServiceHost}: {ServicePort}"|Bu URL tarayıcı başlatılırken kullanılır.  Bu dize için desteklenen değiştirme belirteçleri şunlardır:<br>   {Scheme}-SSL 'nin kullanılıp kullanılmadığından bağımsız olarak, "http" veya "https" ile değiştirilmiştir.<br>   {ServiceHost}-genellikle "localhost" ile değiştirilmiştir. Windows 10 RS3 veya daha eski bir sürüm Windows kapsayıcılar hedeflenirken, kapsayıcının ıp 'si ile değiştirilmiştir.<br>   {ServicePort}-genellikle, SSL 'nin kullanılıp kullanılmadığını bağlı olarak sslPort veya httpPort ile değiştirilmiştir.  Windows 10 RS3 veya daha eski bir sürüm Windows kapsayıcılar hedeflenirken, SSL 'nin kullanılıp kullanıldığına bağlı olarak, "443" veya "80" ile değiştirilmiştir.|
+|launchBrowser|Visual Studio 2017|"launchBrowser": true|Projeyi başarıyla başlattıktan sonra tarayıcının başlatıp başlatmay olmadığını gösterir.|
+|launchUrl|Visual Studio 2017|"launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}"|Bu URL, tarayıcı açılırken kullanılır.  Bu dize için desteklenen değiştirme belirteçleri:<br/><br/>   - {Scheme} - SSL'nin kullanıp kullanılmadığına bağlı olarak "http" veya "https" ile değiştirilir.<br/><br/>   - {ServiceHost} - Genellikle "localhost" ile değiştirilir. Ancak, Windows RS3 veya Windows 10 üzerinde kapsayıcıları hedeflerken, kapsayıcının IP'si ile değiştirilir.<br/><br/>   {ServicePort} - SSL'nin kullanıp kullanılmay durumuna bağlı olarak genellikle sslPort veya httpPort ile değiştirilir.  Ancak, Windows RS3 veya daha eski bir Windows 10 kapsayıcılarını hedeflerken, SSL'nin kullanıp kullanılmay durumuna bağlı olarak "443" veya "80" ile değiştirilir.|
 
 ::: moniker-end
 
@@ -62,32 +62,21 @@ CommandName ayarı, bu bölümün kapsayıcı araçları için geçerli olduğun
 
 | Ayar adı         | Örnek                                               | Description                                                                                                             |
 | -------------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| commandLineArgs      | "Commanddoğrgs": "--myValue" ayarı              | Uygulamanızı başlatmak için bu komut satırı bağımsız değişkenleri, projenizde projeniz başlatılırken kullanılır.                                     |
-| environmentVariables | "environmentVariables": {                             | Bu ortam değişkeni değerleri, kapsayıcıda başlatıldığında işleme geçirilir.                       |
-|                      | "ASPNETCORE_URLS": " https://+:443 ; http://+:80 ",       |                                                                                                                         |
-|                      | "ASPNETCORE_HTTPS_PORT": "44381"                      |                                                                                                                         |
-|                      | }                                                     |                                                                                                                         |
-| httpPort             | "httpPort": 24051                                     | Bu bağlantı noktası, kapsayıcıyı başlatırken kapsayıcının bağlantı noktası 80 ' e eşlenir.                                |
-|                      |                                                       | Belirtilmemişse, değer iisSettings değerinden alınır.                                                          |
-| launchBrowser        | "launchBrowser": true                                 | Projeyi başarıyla başlattıktan sonra tarayıcının başlatılıp başlatılmayacağını belirtir.                                       |
-| launchUrl 'Si            | "launchUrl": "{Scheme}:/\ {ServiceHost}: {ServicePort}" | Bu URL tarayıcı başlatılırken kullanılır. Bu dize için desteklenen değiştirme belirteçleri şunlardır:                          |
-|                      |                                                       | -{Scheme}-SSL 'nin kullanılıp kullanılmadığından bağımsız olarak "http" veya "https" ile değiştirilmiştir.                                   |
-|                      |                                                       | -{ServiceHost}-genellikle "localhost" ile değiştirilmiştir.                                                                    |
-|                      |                                                       | Windows 10 RS3 veya daha eski bir sürüm Windows kapsayıcılar hedeflenirken, kapsayıcının ıp 'si ile değiştirilmiştir.           |
-|                      |                                                       | -{ServicePort}-genellikle, SSL 'nin kullanılıp kullanılmadığını bağlı olarak sslPort veya httpPort ile değiştirilmiştir.                   |
-|                      |                                                       | Windows 10 RS3 veya daha eski bir sürüm Windows kapsayıcılar hedeflenirken, "443" veya "80" ile değiştirilmiştir         |
-|                      |                                                       | SSL 'nin kullanılıp kullanılmadığını bağlı olarak.                                                                                       |
-| sslPort              | "sslPort": 44381                                      | Bu bağlantı noktası, kapsayıcıyı başlatırken kapsayıcının bağlantı noktası 443 ' e eşlenir.                               |
-|                      |                                                       | Belirtilmemişse, değer iisSettings değerinden alınır.                                                          |
-| useSSL               | "useSSL": true                                        | Projeyi başlatırken SSL kullanılıp kullanılmayacağını gösterir. UseSSL belirtilmemişse, sslPort 0 > için SSL kullanılır. |
+| commandLineArgs      | "commandLineArgs": "--mysetting myvalue"              | Kapsayıcıda projenizi başlatmak için bu komut satırı bağımsız değişkenleri kullanılır.                                     |
+| environmentVariables | "environmentVariables": {<br/>   "ASPNETCORE_URLS": " https://+:443 ; http://+:80 ", <br/>   "ASPNETCORE_HTTPS_PORT": "44381" <br/> }                    | Bu ortam değişkeni değerleri, kapsayıcıda başlatıldıklarında işleme geçiri.                       |
+| httpPort             | "httpPort": 24051                                     | Konakta bu bağlantı noktası, kapsayıcıyı başlatmadan önce kapsayıcının 80 bağlantı noktasıyla eşlenmiş. |
+| launchBrowser        | "launchBrowser": true                                 | Projeyi başarıyla başlattıktan sonra tarayıcının başlatıp başlatmay olmadığını gösterir.                                       |
+| launchUrl            | "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}" | Bu URL, tarayıcı açılırken kullanılır. Bu dize için desteklenen değiştirme belirteçleri: <br/><br/> - {Scheme} - SSL'nin kullanıp kullanılmadığına bağlı olarak "http" veya "https" ile değiştirilir. <br/><br/> - {ServiceHost} - Genellikle "localhost" ile değiştirilir. <br/> Ancak, Windows RS3 veya Windows 10 üzerinde kapsayıcıları hedeflerken, kapsayıcının IP'si ile değiştirilir. <br/><br/> - {ServicePort} - SSL'nin kullanıp kullanılmay durumuna bağlı olarak genellikle sslPort veya httpPort ile değiştirilir. <br/> Ancak, Windows RS3 veya daha eski bir Windows 10 kapsayıcılarını hedeflerken, SSL'nin kullanıp kullanılmay durumuna bağlı olarak "443" veya "80" ile değiştirilir. |
+| sslPort              | "sslPort": 44381                                      | Konakta bu bağlantı noktası, kapsayıcıyı başlatmadan önce kapsayıcının bağlantı noktası 443 ile eşlenmiş. |
+| useSSL               | "useSSL": true                                        | Projeyi başlatmada SSL kullanıp kullanmaycazını gösterir. useSSL belirtilmezse sslPort 0 olduğunda SSL > kullanılır. |
 
 ::: moniker-end
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-[Kapsayıcı araçları derleme özelliklerini](container-msbuild-properties.md)ayarlayarak projenizi yapılandırın.
+Container Tools derleme özelliklerini [ayarerek projenizi yapılandırma.](container-msbuild-properties.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Docker Compose derleme özellikleri](docker-compose-properties.md)
+- [Docker Compose özellikleri oluşturma](docker-compose-properties.md)
 - [Docker Compose için başlatma profillerini yönetme](launch-profiles.md)

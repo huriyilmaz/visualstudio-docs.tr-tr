@@ -1,5 +1,5 @@
 ---
-title: MSBuild Öğe | Microsoft Docs
+title: öğe MSBuild | Microsoft Docs
 description: bir yapıya dahil edilecek dosyaları belirtmek için ıtemgroup 'un MSBuild Include özniteliğini nasıl kullanacağınızı öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: de25a3d1433a067869a5725ec725d8d20d174e32
-ms.sourcegitcommit: 4efdab6a579b31927c42531bb3f7fdd92890e4ac
+ms.openlocfilehash: 11da7d47cf4d654564f5015afabfd842ce1f8d91
+ms.sourcegitcommit: a149b3a034bb555ad217656c0ec8bc1672b1e215
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/26/2021
-ms.locfileid: "130350709"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "133514525"
 ---
 # <a name="msbuild-items"></a>MSBuild öğeleri
 
@@ -166,7 +166,7 @@ Joker karakterler hakkında daha fazla bilgi için bkz. [nasıl yapılır: oluş
 </Target>
 ```
 
- Daha fazla bilgi için bkz. [dönüşümler](../msbuild/msbuild-transforms.md).
+öğeler hakkında daha fazla işlem için bkz. [MSBuild öğe işlevleri](item-functions.md) ve [dönüştürmeleri](../msbuild/msbuild-transforms.md).
 
 ## <a name="item-definitions"></a>Öğe tanımları
 
@@ -257,15 +257,15 @@ Yukarıdaki satır, `_TransitiveItemsToCopyToOutputDirectory` `TargetPath` için
 
 #### <a name="matchonmetadataoptions-attribute"></a>MatchOnMetadataOptions özniteliği
 
-Öğeler arasında meta veri değerlerini eşleştirmek için tarafından kullanılan dize eşleştirme stratejisini belirtir (meta veri adları her zaman `MatchOnMetadata` büyük/büyük/büyük harfe duyarlı değildir). Olası değerler `CaseSensitive` , `CaseInsensitive` veya `PathLike` değerleridir. `CaseSensitive` varsayılan değerdir.
+`MatchOnMetadata`Öğeler arasındaki meta veri değerlerini eşleştirmek için tarafından kullanılan dize ile eşleşen stratejiyi belirtir (meta veri adları her zaman büyük/küçük harfe duyarlıdır). Olası değerler `CaseSensitive` , `CaseInsensitive` , veya `PathLike` . `CaseSensitive` varsayılan değerdir.
 
-`PathLike` , eğik çizgi yönlendirmelerini normalleştirme, sondaki eğik çizgileri yoksayma, ve 'yi ortadan kaldırma ve tüm göreli yolları geçerli dizinde mutlak hale gelme gibi değerlere yol farkında `.` `..` normalleştirme uygular.
+`PathLike` eğik çizgi yönlerinin normalleştirilmesi, sondaki eğik çizgileri yoksayarak `.` ve `..` tüm göreli yolların geçerli dizine göre mutlak hale getirilmesi gibi değerlere yol algılayan normalleştirme uygular.
 
 ### <a name="keepmetadata-attribute"></a><a name="BKMK_KeepMetadata"></a> KeepMetadata özniteliği
 
- Bir öğe hedef içinde oluşturulursa öğe öğesi özniteliğini `KeepMetadata` içerebilir. Bu öznitelik belirtilirse, yalnızca noktalı virgülle ayrılmış ad listesinde belirtilen meta veriler kaynak öğeden hedef öğeye aktarılır. Bu öznitelik için boş bir değer belirtmeye eşdeğerdir. özniteliği `KeepMetadata` 4.5 .NET Framework tanıtıldı.
+ Bir hedef içinde bir öğe oluşturulduysa, öğe öğesi `KeepMetadata` özniteliğini içerebilir. Bu öznitelik belirtilmişse, yalnızca noktalı virgülle ayrılmış ad listesinde belirtilen meta veriler, kaynak öğeden hedef öğeye aktarılır. Bu öznitelik için boş bir değer, Belirtmemeye eşdeğerdir. `KeepMetadata`öznitelik .NET Framework 4,5 ' de tanıtılmıştı.
 
- Aşağıdaki örnek özniteliğinin nasıl kullanılageldi? `KeepMetadata`
+ Aşağıdaki örnek, özniteliğini nasıl kullanacağınızı gösterir `KeepMetadata` .
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
@@ -306,9 +306,9 @@ Output:
 
 ### <a name="removemetadata-attribute"></a><a name="BKMK_RemoveMetadata"></a> RemoveMetadata özniteliği
 
- Bir öğe hedef içinde oluşturulursa öğe öğesi özniteliğini `RemoveMetadata` içerebilir. Bu öznitelik belirtilirse, adları noktalı virgülle ayrılmış ad listesinde yer alan meta veriler dışında tüm meta veriler kaynak öğeden hedef öğeye aktarılır. Bu öznitelik için boş bir değer belirtmeye eşdeğerdir. özniteliği `RemoveMetadata` 4.5 .NET Framework tanıtıldı.
+ Bir hedef içinde bir öğe oluşturulduysa, öğe öğesi `RemoveMetadata` özniteliğini içerebilir. Bu öznitelik belirtilmişse, tüm meta veriler kaynak öğeden, adları noktalı virgülle ayrılmış ad listesinde yer alan meta veriler hariç hedef öğeye aktarılır. Bu öznitelik için boş bir değer, Belirtmemeye eşdeğerdir. `RemoveMetadata`öznitelik .NET Framework 4,5 ' de tanıtılmıştı.
 
- Aşağıdaki örnek özniteliğinin nasıl kullanılageldi? `RemoveMetadata`
+ Aşağıdaki örnek, özniteliğini nasıl kullanacağınızı gösterir `RemoveMetadata` .
 
 ```xml
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -354,13 +354,15 @@ Output:
 -->
 ```
 
-### <a name="keepduplicates-attribute"></a><a name="BKMK_KeepDuplicates"></a> KeepDuplicates özniteliği
+öğeler hakkında daha fazla işlem için bkz. [MSBuild öğe işlevleri](item-functions.md).
 
- Bir öğe hedef içinde oluşturulursa öğe öğesi özniteliğini `KeepDuplicates` içerebilir. `KeepDuplicates` , bir öğenin var olan bir öğenin tam olarak yineleniyorsa hedef gruba ekli olup olmadığını `Boolean` belirten bir özniteliktir.
+### <a name="keepduplicates-attribute"></a><a name="BKMK_KeepDuplicates"></a> Mi Pduplilıları özniteliği
 
- Kaynak ve hedef öğe aynı Include değerine ancak farklı meta verilere sahipse, öğesi olarak ayarlanmış `KeepDuplicates` olsa bile `false` eklenir. Bu öznitelik için boş bir değer belirtmeye eşdeğerdir. özniteliği `KeepDuplicates` 4.5 .NET Framework tanıtıldı.
+ Bir hedef içinde bir öğe oluşturulduysa, öğe öğesi `KeepDuplicates` özniteliğini içerebilir. `KeepDuplicates` öğe, `Boolean` varolan bir öğenin tam yinelemesi ise, bir öğenin hedef gruba eklenip eklenmeyeceğini belirten bir özniteliktir.
 
- Aşağıdaki örnek özniteliğinin nasıl kullanılageldi? `KeepDuplicates`
+ Kaynak ve hedef öğe aynı ekleme değerine ancak farklı meta verilere sahip ise, olarak ayarlanmış olsa bile öğe eklenir `KeepDuplicates` `false` . Bu öznitelik için boş bir değer, Belirtmemeye eşdeğerdir. `KeepDuplicates`öznitelik .NET Framework 4,5 ' de tanıtılmıştı.
+
+ Aşağıdaki örnek, özniteliğini nasıl kullanacağınızı gösterir `KeepDuplicates` .
 
 ```xml
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -394,9 +396,9 @@ Output:
 -->
 ```
 
-## <a name="updating-metadata-on-items-in-an-itemgroup-outside-of-a-target"></a>Hedef dışında bir ItemGroup'ta öğelerdeki meta verileri güncelleştirme
+## <a name="updating-metadata-on-items-in-an-itemgroup-outside-of-a-target"></a>Bir hedef dışındaki bir ItemGroup öğelerinde bulunan öğelerde meta verileri güncelleştirme
 
-Hedeflerin dışındaki öğelerin mevcut meta verileri özniteliği aracılığıyla `Update` güncelleştirilebilir. Bu **öznitelik, hedefler** altındaki öğeler için kullanılamaz.
+Hedeflerin dışındaki öğeler, var olan meta verilerinin öznitelik aracılığıyla güncelleştirilmesini sağlayabilir `Update` . Bu öznitelik, hedefler altındaki öğeler **için kullanılamaz.**
 
 ```xml
 <Project>
@@ -469,7 +471,7 @@ Item1: notebook
 ```
 
 :::moniker range=">=vs-2019"
-Sürüm MSBuild 16.6 ve sonraki sürümlerde özniteliği, iki veya daha fazla öğeden meta verileri içeri aktarmayı kolaylaştırmak için tam meta veri `Update` başvurularını destekler.
+MSBuild sürüm 16,6 ve üzeri sürümlerde öznitelik, `Update` iki veya daha fazla öğeden meta verilerin içeri aktarılmasını kolaylaştırmak için nitelikli meta veri başvurularını destekler.
 
 ```xml
 <Project>
@@ -552,20 +554,20 @@ Item1: notebook
 -->
 ```
 
-Açıklamalar:
-- Tam olmayan meta veriler (%(M)) güncelleştirilen öğe türüne `Item1` (yukarıdaki örnekte) bağlar. Nitelikli meta veriler ( `%(Item2.Color)` ) Update ifadesinde yakalanan eşleşen öğe türleri kümesi içinde bağlar.
-- Bir öğe birden çok başvurulan öğenin içinde ve arasında birden çok kez eşlese:
-  - Başvurulan her öğe türünden son oluşum yakalanır (bu nedenle her öğe türü için bir yakalanan öğe).
-  - Bu, hedef altında toplu iş işleme görev öğesinin davranışıyla eşler.
-- Burada %() başvuruları yer almaktadır:
+Açıklamalarının
+- Nitelenmemiş meta veriler (% (e)) güncelleştirilmekte olan öğe türüne bağlar ( `Item1` Yukarıdaki örnekte). Nitelenmiş meta veriler ( `%(Item2.Color)` ), güncelleştirme ifadesinden yakalanan eşleşen öğe türleri kümesinin içine bağlar.
+- Bir öğe, birden fazla başvurulan öğe içinde birden çok kez eşleşiyorsa:
+  - Başvurulan her öğe türünden son oluşum yakalanır (Bu nedenle, öğe türü başına yakalanan bir öğe).
+  - Bu, hedefler altında görev öğesi toplu işleme davranışını eşleştirir.
+- Her biri%() başvuruyu koyabileceği yer:
   - Meta veri
   - Meta veri koşulları
-- Meta veri adı eşleştirmesi büyük/büyük/büyük harfe duyarlı değildir.
+- Meta veri adı eşleştirmesi büyük/küçük harfe duyarlıdır.
 :::moniker-end
 
-## <a name="updating-metadata-on-items-in-an-itemgroup-of-a-target"></a>Bir Hedefin ItemGroup'larında öğelerdeki meta verileri güncelleştirme
+## <a name="updating-metadata-on-items-in-an-itemgroup-of-a-target"></a>Bir hedefin ItemGroup öğelerinde bulunan öğelerde meta verileri güncelleştirme
 
-Meta veriler, hedeflerde de yerine daha az ifade eden söz dizimi ile `Update` değiştirilebilir:
+Meta veriler, daha az bir ifade sözdizimi ile hedefler içinde değiştirilebilir `Update` :
 
 ```xml
 <Project>
@@ -655,8 +657,8 @@ Item1: notebook
 - [Yaygın MSBuild proje öğeleri](../msbuild/common-msbuild-project-items.md)
 - [MSBuild kavramları](../msbuild/msbuild-concepts.md)
 - [MSBuild](../msbuild/msbuild.md)
-- [Nasıl kullanılır: Derlemek için dosyaları seçme](../msbuild/how-to-select-the-files-to-build.md)
-- [Nasıl kullanılır: Dosyaları derlemeden dışlama](../msbuild/how-to-exclude-files-from-the-build.md)
-- [Nasıl kullanılır: Virgülle ayrılmış bir öğe listesi görüntüleme](../msbuild/how-to-display-an-item-list-separated-with-commas.md)
+- [Nasıl yapılır: derlenecek dosyaları seçme](../msbuild/how-to-select-the-files-to-build.md)
+- [Nasıl yapılır: derlemeden Dosya dışlama](../msbuild/how-to-exclude-files-from-the-build.md)
+- [Nasıl yapılır: virgülle ayrılmış bir öğe listesini görüntüleme](../msbuild/how-to-display-an-item-list-separated-with-commas.md)
 - [Öğe tanımları](../msbuild/item-definitions.md)
 - [Toplu İşleme](../msbuild/msbuild-batching.md)

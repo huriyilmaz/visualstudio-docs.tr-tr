@@ -5,6 +5,8 @@
       href: visual-studio-sdk.md
     - name: Visual Studio SDK’yı Yükleme
       href: installing-the-visual-studio-sdk.md
+    - name: Visual Studio Community araç seti
+      href: vsix/visual-studio-community-toolkit.md
     - name: Visual Studio Uzantıları Geliştirmeye Başlama
       href: starting-to-develop-visual-studio-extensions.md
     - name: 'İlk Uzantınızı Oluşturma: Merhaba Dünya'
