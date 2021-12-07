@@ -7,18 +7,18 @@ helpviewer_keywords:
 - Visual Studio, accessibility
 - accessibility [Visual Studio]
 ms.assetid: aa1ada29-4d93-4bf0-af8b-03633fcb0fba
-author: anandmeg
-ms.author: meghaanand
+author: TerryGLee
+ms.author: tglee
 manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 880863d483845f75d316db0f088ab8bcc6f98972
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 4ce9504f26d8d479d2d144ef2927ba4022f4a371
+ms.sourcegitcommit: 7a300823cf1bd3355be03bde561cf2777bc09eae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122137203"
+ms.lasthandoff: 12/07/2021
+ms.locfileid: "133978140"
 ---
 # <a name="accessibility-features-of-visual-studio"></a>Visual Studio'nin erişilebilirlik özellikleri
 
@@ -50,7 +50,7 @@ Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:
 - [Nasıl kullanılır: Yazı tiplerini ve renkleri değiştirme](../../ide/how-to-change-fonts-and-colors-in-visual-studio.md)
 
 > [!IMPORTANT]
-> Bu sayfada yer alan bilgiler yalnızca microsoft ürün lisansına sahip kullanıcılar için Birleşik Devletler. Bu ürünü özel bir Birleşik Devletler microsoft destek hizmetleri [](https://www.microsoft.com/accessibility/) telefon numaralarının ve adreslerinin listesi için Microsoft Erişilebilirlik web sitesini ziyaret edin. Bu sayfada açıklanan ürün ve hizmet türünün bölgenize uygun olup olmadığını bulmak için yan kuruluşa başvurabilirsiniz. Erişilebilirlikle ilgili bilgiler diğer dillerde de kullanılabilir.
+> Bu sayfada yer alan bilgiler yalnızca microsoft ürün lisansı veren kullanıcılar için Birleşik Devletler. Bu ürünü web sitesinin dışında aldı Birleşik Devletler [Microsoft](https://www.microsoft.com/accessibility/) destek hizmetleri telefon numaralarının ve adreslerinin listesi için Microsoft Erişilebilirlik web sitesini ziyaret edin. Bu sayfada açıklanan ürün ve hizmet türünün bölgenize uygun olup olmadığını bulmak için yan kuruluşa başvurabilirsiniz. Erişilebilirlikle ilgili bilgiler diğer dillerde de kullanılabilir.
 
 ::: moniker range="vs-2017"
 

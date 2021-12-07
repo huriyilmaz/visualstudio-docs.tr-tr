@@ -1,6 +1,6 @@
 ---
 title: Basit veri bağlamayı destekleyen kullanıcı denetimleri oluşturma
-description: Visual Studio'de DefaultBindingPropertyAttribute sınıfını kullanarak basit veri bağlamayı destekleyen bir Windows Forms kullanıcı denetimi Visual Studio.
+description: Windows'daki DefaultBindingPropertyAttribute sınıfını kullanarak basit veri bağlamayı destekleyen bir Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -17,12 +17,12 @@ manager: jmartens
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 213bededbd5d6eea8a0eb6b01f742c6cf82d8e4a
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 439ceb0983244369924550922f9d67507e7a8175
+ms.sourcegitcommit: 7a300823cf1bd3355be03bde561cf2777bc09eae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126631478"
+ms.lasthandoff: 12/07/2021
+ms.locfileid: "133977438"
 ---
 # <a name="create-a-windows-forms-user-control-that-supports-simple-data-binding"></a>Basit veri bağlama modelini destekleyen bir Windows Forms kullanıcı denetimi oluşturma
 
@@ -34,15 +34,15 @@ Veri bağlama senaryolarında kullanmak üzere denetimler yazarken, aşağıdaki
 
 |Veri bağlama özniteliği kullanımı|
 | - |
-|Tek <xref:System.ComponentModel.DefaultBindingPropertyAttribute> bir veri sütunu (veya <xref:System.Windows.Forms.TextBox> özelliği) görüntüleniyor gibi basit denetimler üzerinde uygulaması. (Bu işlem bu kılavuz sayfasında açıklanmıştır.)|
+|Tek <xref:System.ComponentModel.DefaultBindingPropertyAttribute> bir veri sütununu (veya özelliğini) görüntülemek için gibi basit <xref:System.Windows.Forms.TextBox> denetimler üzerinde gerçekleştirin. (Bu işlem bu kılavuz sayfasında açıklanmıştır.)|
 |Veri <xref:System.ComponentModel.ComplexBindingPropertiesAttribute> listelerini <xref:System.Windows.Forms.DataGridView> (veya tablolarını) görüntülemek için gibi on denetimlerini uygulama. Daha fazla bilgi için [bkz. Karmaşık veri bağlamayı Windows Forms kullanıcı denetimi oluşturma.](../data-tools/create-a-windows-forms-user-control-that-supports-complex-data-binding.md)|
 |Veri <xref:System.ComponentModel.LookupBindingPropertiesAttribute> listelerini (veya tablolarını) görüntülemenin yanı sıra tek bir sütun veya özellik de sun ihtiyacı olan , gibi <xref:System.Windows.Forms.ComboBox> üzerinde denetimlerini uygulama. Daha fazla bilgi için [bkz. Arama Windows destekleyen bir Formlar kullanıcı denetimi oluşturma.](../data-tools/create-a-windows-forms-user-control-that-supports-lookup-data-binding.md)|
 
-Bu kılavuz, bir tablodaki tek bir sütundaki verileri görüntüleyen basit bir denetim oluşturur. Bu örnekte `Phone` Northwind örnek `Customers` veritabanındaki tablonun sütunu kullanılır. Basit kullanıcı denetimi, kullanarak ve maskeyi telefon numarasına ayarerek müşterilerin telefon numaralarını standart <xref:System.Windows.Forms.MaskedTextBox> bir telefon numarası biçiminde görüntüler.
+Bu kılavuz, bir tablodaki tek bir sütundaki verileri görüntüleyen basit bir denetim oluşturur. Bu örnekte `Phone` Northwind örnek `Customers` veritabanındaki tablonun sütunu kullanılır. Basit kullanıcı denetimi, bir kullanarak ve maskeyi bir telefon numarasına ayarerek müşterilerin telefon numaralarını <xref:System.Windows.Forms.MaskedTextBox> standart bir telefon numarası biçiminde görüntüler.
 
 Bu kılavuzda şunları yapmayı öğrenirsiniz:
 
-- Forms Uygulaması için **Windows oluşturun.**
+- Yeni bir Windows **Forms Uygulaması oluşturun.**
 
 - Projenize **yeni bir Kullanıcı** Denetimi ekleyin.
 
@@ -52,7 +52,7 @@ Bu kılavuzda şunları yapmayı öğrenirsiniz:
 
 - Veri Kaynağı Yapılandırma sihirbazı ile **bir veri kümesi** oluşturun.
 
-- Yeni **Telefon** kullanmak için **Veri Kaynakları penceresindeki** Veri Kaynakları sütununu ayarlayın.
+- Yeni **Telefon** kullanmak için **Veri Kaynakları penceresindeki** Telefon sütununu ayarlayın.
 
 - Yeni denetimde verileri görüntülemek için bir form oluşturun.
 
@@ -60,15 +60,15 @@ Bu kılavuzda şunları yapmayı öğrenirsiniz:
 
 Bu kılavuzda LocalDB SQL Server Express Northwind örnek veritabanı kullanılır.
 
-1. YerelDB'yi SQL Server Express yükleme sayfasından veya [SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express)sayfasından **Visual Studio Yükleyicisi.** Bu **Visual Studio Yükleyicisi,** yerel SQL Server Express veri depolama ve işleme iş yükünün bir parçası olarak veya tek bir bileşen olarak yükleyebilirsiniz. 
+1. Yerel VERITABANınız yoksa, SQL Server Express sayfasından veya [SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express)sayfasından **Visual Studio Yükleyicisi.** Bu **Visual Studio Yükleyicisi,** yerel SQL Server Express veri depolama ve işleme iş  yükünün bir parçası olarak veya tek bir bileşen olarak yükleyebilirsiniz.
 
 2. Aşağıdaki adımları kullanarak Northwind örnek veritabanını yükleyin:
 
-    1. Bu Visual Studio, **SQL Server Nesne Gezgini** açın. (SQL Server Nesne Gezgini, veri depolama ve işleme iş **yükünün bir parçası olarak** **Visual Studio Yükleyicisi.)** SQL Server **genişletin.** LocalDB örneğine sağ tıklayın ve Yeni **Sorgu'yı seçin.**
+    1. Bu Visual Studio, **SQL Server Nesne Gezgini** açın. (SQL Server Nesne Gezgini, veri depolama ve işleme iş yükünün **bir parçası olarak** Visual Studio Yükleyicisi.)  SQL Server **genişletin.** LocalDB örneğine sağ tıklayın ve Yeni **Sorgu'yı seçin.**
 
-       Sorgu düzenleyicisi penceresi açılır.
+       Bir sorgu düzenleyicisi penceresi açılır.
 
-    2. [Northwind Transact-SQL betiği panoya](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) kopyalayın. Bu T-SQL, Northwind veritabanını sıfırdan oluşturur ve verilerle doldurmak için kullanılır.
+    2. [Northwind Transact-SQL betiği panoya](https://github.com/MicrosoftDocs/visualstudio-docs/blob/main/docs/data-tools/samples/northwind.sql?raw=true) kopyalayın. Bu T-SQL, Northwind veritabanını sıfırdan oluşturur ve verilerle doldurmak için kullanılır.
 
     3. T-SQL betiği sorgu düzenleyicisine yapıştırın ve ardından Yürüt **düğmesini** seçin.
 
@@ -78,7 +78,7 @@ Bu kılavuzda LocalDB SQL Server Express Northwind örnek veritabanı kullanıl�
 
 İlk adım, Windows **Forms Uygulaması oluşturmaktır:**
 
-1. Yeni Visual Studio'nin Dosya **menüsünde Yeni**   >  **dosya'Project.**
+1. Bu Visual Studio, Dosya menüsünde **Yeni** **dosya'Project.**  >  
 
 2. Sol **bölmede Visual C#** **Visual Basic** görseli genişletin ve ardından Masaüstü'Windows **seçin.**
 
@@ -121,11 +121,11 @@ Veri bağlamayı destekleyen basit denetimler için: <xref:System.ComponentModel
 
 3. Derleme **menüsünden** Çözümü **Derleme'yi seçin.**
 
-## <a name="create-a-data-source-from-your-database"></a>Veritabanınız ile veri kaynağı oluşturma
+## <a name="create-a-data-source-from-your-database"></a>Veritabanınıza bir veri kaynağı oluşturma
 
 Bu adım, Northwind **örnek veritabanındaki** tabloyu temel alan bir veri kaynağı oluşturmak için Veri Kaynağı `Customers` Yapılandırma sihirbazını kullanır. Bağlantıyı oluşturmak için Northwind örnek veritabanına erişiminiz olmalıdır. Northwind örnek veritabanını ayarlama hakkında daha fazla bilgi için [bkz. Nasıl kullanılır: Örnek veritabanlarını yükleme.](../data-tools/installing-database-systems-tools-and-samples.md)
 
-1. Veri Kaynakları **penceresini açmak için** Veri menüsünde **Veri** Kaynaklarını **Göster'e tıklayın.**
+1. Veri Kaynakları **penceresini açmak** için Veri menüsünde **Veri** Kaynaklarını **Göster'e tıklayın.**
 
 2. Veri Kaynağı **Yapılandırma sihirbazını** başlatmak **için Veri Kaynakları penceresinde** Yeni Veri Kaynağı **Ekle'yi** seçin.
 
@@ -149,7 +149,7 @@ Bu adım, Northwind **örnek veritabanındaki** tabloyu temel alan bir veri kayn
 
 ## <a name="set-the-phone-column-to-use-the-phonenumberbox-control"></a>PhoneNumberBox denetimi kullanmak için telefon sütununu ayarlama
 
-Veri **Kaynakları penceresinde,** öğeleri form üzerine sürüklemeden önce oluşturulacak denetimi ayarlayın:
+Veri **Kaynakları penceresinde,** öğeleri form üzerine sürüklemeden önce denetimin oluşturulacak şekilde ayarlayın:
 
 1. Tasarımcıda **Form1'i** açın.
 
@@ -161,15 +161,15 @@ Veri **Kaynakları penceresinde,** öğeleri form üzerine sürüklemeden önce 
 
 5. Veri Kullanıcı Arabirimi Özelleştirme Seçenekleri iletişim kutusundaki **İlişkili Denetimler** **listesinden PhoneNumberBox'ı** seçin. 
 
-6. Telefon sütundaki açılan **oka tıklayın ve** **PhoneNumberBox'ı seçin.**
+6. Telefon sütunundaki açılan **oka tıklayın ve** **PhoneNumberBox'ı seçin.**
 
 ## <a name="add-controls-to-the-form"></a>Forma denetimler ekleme
 
 Veri Kaynakları penceresindeki öğeleri forma sürükleyerek **veriye bağlı** denetimler oluşturabilirsiniz.
 
-Formda veriye bağlı denetimler oluşturmak  için Ana  Müşteriler düğümünü Veri Kaynakları penceresinden forma sürükleyin ve verileri veri sütununa görüntülemek için **PhoneNumberBox** Telefon **doğrulayın.**
+Formda veriye bağlı denetimler oluşturmak için Veri  Kaynakları penceresinden ana **Müşteriler** düğümünü forma sürükleyin ve verileri veri sütununa görüntülemek için **PhoneNumberBox** Telefon **doğrulayın.**
 
-Formda, kayıtlarda gezinmek için bir araç şeridi ( ) ile birlikte açıklayıcı <xref:System.Windows.Forms.BindingNavigator> etiketlere sahip veriye bağlı denetimler görüntülenir. [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter <xref:System.Windows.Forms.BindingSource> ve bileşen <xref:System.Windows.Forms.BindingNavigator> tepsisinde görüntülenir.
+Formda, kayıtlarda gezinmek için bir araç şeridi ( ) ile birlikte açıklayıcı <xref:System.Windows.Forms.BindingNavigator> etiketlere sahip veriye bağlı denetimler görünür. [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter <xref:System.Windows.Forms.BindingSource> ve bileşen <xref:System.Windows.Forms.BindingNavigator> tepsisinde görüntülenir.
 
 ## <a name="run-the-application"></a>Uygulamayı çalıştırma
 

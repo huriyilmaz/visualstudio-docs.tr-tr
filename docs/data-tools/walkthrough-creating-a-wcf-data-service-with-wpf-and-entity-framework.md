@@ -19,12 +19,12 @@ manager: jmartens
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: ca3912539d8c651fd65fbcd87c809597748654cc
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: c699b82de822a8498bc8267015a474ac548fe158
+ms.sourcegitcommit: 7a300823cf1bd3355be03bde561cf2777bc09eae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126631053"
+ms.lasthandoff: 12/07/2021
+ms.locfileid: "133977659"
 ---
 # <a name="walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework"></a>İzlenecek Yol: WPF ve Entity Framework ile WCF Veri Hizmeti Oluşturma
 bu izlenecek yol [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] , bir web uygulamasında barındırılan basit bir oluşturma [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ve ardından bu uygulamaya Windows Forms bir uygulamadan erişme işlemlerinin nasıl yapılacağını gösterir.
@@ -54,7 +54,7 @@ bu izlenecek yol, SQL Server Express localdb ve Northwind örnek veritabanını 
 
        Sorgu Düzenleyicisi penceresi açılır.
 
-    2. [Northwind Transact-SQL betiğini](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) panonuza kopyalayın. bu T-SQL betiği, Northwind veritabanını sıfırdan oluşturur ve verileri veriyle doldurur.
+    2. [Northwind Transact-SQL betiğini](https://github.com/MicrosoftDocs/visualstudio-docs/blob/main/docs/data-tools/samples/northwind.sql?raw=true) panonuza kopyalayın. bu T-SQL betiği, Northwind veritabanını sıfırdan oluşturur ve verileri veriyle doldurur.
 
     3. T-SQL betiğini sorgu düzenleyicisine yapıştırın ve sonra **yürüt** düğmesini seçin.
 
@@ -234,28 +234,28 @@ Sonraki adımda, hizmetten gelen verileri görüntüleyen Kullanıcı arabirimin
    }
    ```
 
-6. **Çözüm Gezgini**, **NorthwindCustomers. svc** dosyasının kısayol menüsünü açın ve **Tarayıcıda görüntüle '** yi seçin. Internet Explorer açılır ve hizmetin XML şeması görüntülenir.
+6. **Çözüm Gezgini**, **NorthwindCustomers. svc** dosyasının kısayol menüsünü açın ve **Tarayıcıda görüntüle '** yi seçin. Internet Explorer açılır ve hizmet için XML şeması görüntülenir.
 
 7. Internet Explorer adres çubuğundan URL'yi kopyalayın.
 
-8. 4. adımda ekley istediğiniz kodu seçin ve yeni `http://localhost:53161/NorthwindCustomers.svc/` kopyalanan URL ile değiştirin.
+8. 4. adımda eklediğiniz kodda, öğesini seçin `http://localhost:53161/NorthwindCustomers.svc/` ve yeni KOPYALADıĞıNıZ URL ile değiştirin.
 
-9. Uygulamayı çalıştırmak için menü çubuğunda **Hata Ayıklama**  >  **Hata AyıklamaYı Başlat'ı** seçin. Müşteri bilgileri gösterilir.
+9. Uygulamayı çalıştırmak için menü çubuğunda **hata**  >  **ayıklamayı Başlat** ' ı seçin. Müşteri bilgileri gösterilir.
 
-   Artık, NorthwindCustomers hizmetinden müşterilerin listesini görüntüleyen çalışır bir uygulamanız var. Hizmet aracılığıyla ek verileri açığa çıkarmak için, northwind veritabanından ek tablolar eklemek [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] için değiştirebilirsiniz.
+   Artık, NorthwindCustomers hizmetinden müşterilerin listesini görüntüleyen çalışır bir uygulamanız var. Hizmet aracılığıyla ek verileri kullanıma sunmak istiyorsanız, öğesini [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] Northwind veritabanından ek tablolar içerecek şekilde değiştirebilirsiniz.
 
-Sonraki isteğe bağlı adımda, hizmet tarafından döndürülen verileri filtrelemeyi öğrenirsiniz.
+Sonraki isteğe bağlı adımda, hizmet tarafından döndürülen verileri nasıl filtreleyeceğinizi öğrenirsiniz.
 
 ## <a name="adding-filtering-capabilities"></a>Filtreleme Yetenekleri Ekleme
-Bu adımda, verileri müşterinin şehrine göre filtrelemek için uygulamayı özelleştirin.
+Bu adımda, verileri müşterinin şehre göre filtrelemek için uygulamayı özelleştirirsiniz.
 
 ### <a name="to-add-filtering-by-city"></a>Şehir bilgisine göre filtreleme eklemek için
 
-1. Bu **Çözüm Gezgini** **Form1.vb veya Form1.cs** düğümünün kısayol menüsünü açın ve Aç'ı **seçin.** 
+1. **Çözüm Gezgini**, **Form1. vb** veya **Form1. cs** düğümünün kısayol menüsünü açın ve **Aç**' ı seçin.
 
-2. Forma <xref:System.Windows.Forms.TextBox> Araç <xref:System.Windows.Forms.Button> Kutusundan bir **denetim ve** denetim ekleyin.
+2. <xref:System.Windows.Forms.TextBox> <xref:System.Windows.Forms.Button> **Araç kutusundan** forma bir denetim ve denetim ekleyin.
 
-3. Denetimin kısayol menüsünü <xref:System.Windows.Forms.Button> açın, Kodu **Görüntüle'yi seçin** ve olay işleyicisinde aşağıdaki `Button1_Click` kodu ekleyin:
+3. Denetim için kısayol menüsünü açın <xref:System.Windows.Forms.Button> , **kodu görüntüle**' yi seçin ve olay işleyicisine aşağıdaki kodu ekleyin `Button1_Click` :
 
     ```vb
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -284,13 +284,13 @@ Bu adımda, verileri müşterinin şehrine göre filtrelemek için uygulamayı �
     }
     ```
 
-4. Önceki kodda yerine olay `http://localhost:53161/NorthwindCustomers.svc` işleyicisinin `Form1_Load` URL'sini yazın.
+4. Önceki kodda, `http://localhost:53161/NorthwindCustomers.svc` `Form1_Load` olay IŞLEYICISINDEKI URL ile değiştirin.
 
-5. Uygulamayı çalıştırmak için menü çubuğunda **Hata Ayıklama**  >  **Hata AyıklamaYı Başlat'ı** seçin.
+5. Uygulamayı çalıştırmak için menü çubuğunda **hata**  >  **ayıklamayı Başlat** ' ı seçin.
 
-6. Metin kutusuna Londra **yazın** ve düğmeyi seçin. Yalnızca Londralı müşteriler görüntülenir.
+6. Metin kutusuna **Londra** yazın ve ardından düğmeyi seçin. Yalnızca Londralı müşteriler görüntülenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio'da Windows Communication Foundation Hizmetleri ve WCF Veri Hizmetleri](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)
-- [Nasıl kullanılır: WCF Veri Hizmeti başvurusu ekleme, güncelleştirme veya kaldırma](../data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference.md)
+- [Nasıl yapılır: WCF veri hizmeti başvurusu ekleme, güncelleştirme veya kaldırma](../data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference.md)

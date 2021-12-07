@@ -6,18 +6,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - accessibility [Visual Studio]
 ms.assetid: 6b491d88-f79e-4686-8841-857624bdcfda
-author: anandmeg
-ms.author: meghaanand
+author: TerryGLee
+ms.author: tglee
 manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: eb727816073571cc165677b0c9f84634867f04c6
-ms.sourcegitcommit: 1a6efe8a081841fdab9de18d3869375867dd5dcc
+ms.openlocfilehash: f9db3da41e1509d246bc51798f3e8751a3bcf569
+ms.sourcegitcommit: 7a300823cf1bd3355be03bde561cf2777bc09eae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "131571873"
+ms.lasthandoff: 12/07/2021
+ms.locfileid: "133977854"
 ---
 # <a name="accessibility-tips-and-tricks-for-visual-studio"></a>Visual Studio için erişilebilirlik ipuçları ve püf noktaları
 

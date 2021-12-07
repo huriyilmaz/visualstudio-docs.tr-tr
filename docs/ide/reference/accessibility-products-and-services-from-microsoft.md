@@ -14,25 +14,25 @@ helpviewer_keywords:
 - TT/TDD services
 - recorded documentation
 ms.assetid: ef3c6247-9f59-4ef4-aa8b-a8922b3e0943
-author: anandmeg
-ms.author: meghaanand
+author: TerryGLee
+ms.author: tglee
 manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: d5b56f7c5e84eab0a95b9178c0a582da95adcfcf
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 103956108f8ec30fe259cae7d5ecf10b345799de
+ms.sourcegitcommit: 7a300823cf1bd3355be03bde561cf2777bc09eae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122144151"
+ms.lasthandoff: 12/07/2021
+ms.locfileid: "133978075"
 ---
 # <a name="accessibility-products-and-services-from-microsoft"></a>Microsoft'tan erişilebilirlik ürünleri ve hizmetleri
 
 Microsoft ürünlerinin ve hizmetlerinin kullanımını herkes için daha kolay hale getireceğini taahhüt eder. Bu sayfa, Microsoft'un engelli kişiler için daha kolay erişilebilir olmasını Windows özellikler, ürünler ve hizmetler hakkında bilgi sağlar.
 
 > [!IMPORTANT]
-> Bu sayfada yer alan bilgiler yalnızca microsoft ürün lisansı veren kullanıcılar için Birleşik Devletler. Bu ürünü ürünün dışında aldınız Birleşik Devletler [Microsoft](https://www.microsoft.com/accessibility/) destek hizmetleri telefon numaralarının ve adreslerinin listesi için Microsoft Erişilebilirlik web sitesini ziyaret edin. Bu sayfada açıklanan ürün ve hizmet türünün bölgenize uygun olup olmadığını bulmak için yan kuruluşa başvurabilirsiniz. Erişilebilirlikle ilgili bilgiler diğer dillerde kullanılabilir.
+> Bu sayfada yer alan bilgiler yalnızca microsoft ürün lisansı veren kullanıcılar için Birleşik Devletler. Bu ürünü web sitesinin dışında aldı Birleşik Devletler [Microsoft](https://www.microsoft.com/accessibility/) destek hizmetleri telefon numaralarının ve adreslerinin listesi için Microsoft Erişilebilirlik web sitesini ziyaret edin. Bu sayfada açıklanan ürün ve hizmet türünün bölgenize uygun olup olmadığını bulmak için yan kuruluşa başvurabilirsiniz. Erişilebilirlikle ilgili bilgiler diğer dillerde kullanılabilir.
 
 ## <a name="accessibility-features-of-windows"></a><a name="windows"></a>Windows'nin erişilebilirlik özellikleri
 
@@ -46,7 +46,7 @@ Microsoft ürünlerine adım adım öğreticiler bulmak için Bkz. [Microsoft Er
 
 ### <a name="assistive-technology-products-for-windows"></a>Windows için yardımcı teknoloji ürünleri
 
-Engelliler için bilgisayar kullanımını daha kolay hale getirmek için çok çeşitli yardımcı teknolojik ürün kullanılabilir. Microsoft Erişilebilirlik web sitesinde, Windows teknoloji ürünlerinin [kataloğunu arayabilirsiniz.](https://www.microsoft.com/accessibility/)
+Engelliler için bilgisayar kullanımını daha kolay hale getirmek için çok çeşitli yardımcı teknolojik ürün kullanılabilir. Microsoft Erişilebilirlik web sitesinde, Windows destekli teknoloji ürünlerinin [kataloğunu arayabilirsiniz.](https://www.microsoft.com/accessibility/)
 
 Yardımcı teknoloji kullanıyorsanız, yazılımınızı veya donanımınızı yükseltmeden önce olası uyumluluk sorunlarına karşı yardımcı teknoloji satıcınızla iletişime geçin.
 
@@ -54,7 +54,7 @@ Yardımcı teknoloji kullanıyorsanız, yazılımınızı veya donanımınızı 
 
 Yazdırılan malzemelerin okunmasında veya yönetilmesinde zorluk yaşıyorsanız, bir Microsoft ürününe yönelik belgeleri daha erişilebilir bir biçimde edinebilirsiniz. Microsoft Erişilebilirlik web sitesinde erişilebilir ürün belgelerinin [dizinini görüntüebilirsiniz.](https://www.microsoft.com/accessibility/)
 
-Ayrıca, Ally'den ek Microsoft Learning edinebilirsiniz. Learning Ally, bu belgeleri dağıtım hizmetinin kayıtlı, nitelikli üyelerine dağıtır. Microsoft ürün belgelerinin ve Microsoft Press kitaplarının uygunluğu hakkında bilgi için şuraya başvurun:
+Ayrıca, Learning Ally'den ek Microsoft yayınları edinebilirsiniz. Learning Ally, bu belgeleri dağıtım hizmetinin kayıtlı, nitelikli üyelerine dağıtır. Microsoft ürün belgelerinin ve Microsoft Press kitaplarının uygunluğu hakkında bilgi için şuraya başvurun:
 
 > Learning Ally<br />
 > 20 Roszel Road<br /> Princeton, NJ 08540<br /><br /> Learning Ally web sitesi:[http://www.learningally.org](https://learningally.org/)
@@ -78,7 +78,7 @@ Bilgisayarlar için erişilebilir teknolojinin engelli kişilerin yaşamlarını
 ::: moniker range="vs-2017"
 
 > [!TIP]
-> Visual Studio'a yapılan son erişilebilirlik güncelleştirmeleri hakkında daha fazla bilgi edinmek için [Visual Studio 2017 sürüm 15.3](https://devblogs.microsoft.com/visualstudio/accessibility-improvements-in-visual-studio-2017-version-15-3/) blog gönderisi'ne bakın.
+> Visual Studio'a yapılan son erişilebilirlik güncelleştirmeleri hakkında daha fazla bilgi edinmek için [Visual Studio 2017 sürüm 15.3'te](https://devblogs.microsoft.com/visualstudio/accessibility-improvements-in-visual-studio-2017-version-15-3/) erişilebilirlik geliştirmeleri blog gönderisi'ne bakın.
 
 ::: moniker-end
 

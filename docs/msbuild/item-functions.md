@@ -1,6 +1,6 @@
 ---
-title: Öğe Işlevleri | Microsoft Docs
-description: görev ve hedeflerdeki MSBuild kodun, projedeki öğeler hakkında bilgi almak için nasıl öğe işlevleri çağırabileceğinizi öğrenin.
+title: Öğe İşlevleri | Microsoft Docs
+description: Projedeki MSBuild almak için görevlerdeki ve hedeflerde yer alan kodun öğe işlevlerini nasıl çağırası hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,24 +13,24 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 8150231e6ecf6c2b2f789da68fd4aae8d334854f
-ms.sourcegitcommit: a149b3a034bb555ad217656c0ec8bc1672b1e215
+ms.openlocfilehash: 3f4685674ed963484111832df3c052a737527754
+ms.sourcegitcommit: 7a300823cf1bd3355be03bde561cf2777bc09eae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "133514512"
+ms.lasthandoff: 12/07/2021
+ms.locfileid: "133977451"
 ---
 # <a name="item-functions"></a>Öğe işlevleri
 
-görev ve hedeflerdeki kod, projedeki öğeler hakkında bilgi almak için (MSBuild 4,0 ve üzeri) öğe işlevlerini çağırabilir. Bu işlevler ayrı öğeler almayı basitleştirir ve öğeler aracılığıyla döngüden daha hızlıdır.
+Görev ve hedeflerde kod, projedeki öğeler hakkında bilgi almak için öğe işlevlerini çağırabilir (MSBuild 4.0 ve sonraki bir sonraki bir yıl içinde). Bu işlevler ayrı öğeleri alma sürecini basitleştirir ve öğelerde döngüye almaya göre daha hızlıdır.
 
 ## <a name="string-item-functions"></a>Dize öğesi işlevleri
 
-herhangi bir öğe değerinde çalıştırmak için .NET Framework dize yöntemleri ve özellikleri kullanabilirsiniz. <xref:System.String>Yöntemler için yöntem adını belirtin. <xref:System.String>Özellikler için, "get_" öğesinden sonra özellik adını belirtin.
+Herhangi bir öğe değeri üzerinde çalıştırmak için .NET Framework dize yöntemlerini ve özelliklerini kullanabilirsiniz. Yöntemler <xref:System.String> için yöntem adını belirtin. Özellikler <xref:System.String> için özellik adını "get_" olarak belirtin.
 
-Birden çok dizeye sahip öğeler için, dize yöntemi veya özelliği her bir dizede çalışır.
+Birden çok dizeye sahip öğeler için dize yöntemi veya özelliği her dizede çalışır.
 
-Aşağıdaki örnekte, bu dize öğesi işlevlerinin nasıl kullanılacağı gösterilmektedir.
+Aşağıdaki örnek, bu dize öğesi işlevlerinin nasıl kullanılagelmektedir.
 
 ```xml
 <ItemGroup>
@@ -53,49 +53,49 @@ Aşağıdaki örnekte, bu dize öğesi işlevlerinin nasıl kullanılacağı gö
   -->
 ```
 
-## <a name="intrinsic-item-functions"></a>İç öğe işlevleri
+## <a name="intrinsic-item-functions"></a>Iç öğe işlevleri
 
-Aşağıdaki tabloda, öğeler için kullanılabilen iç işlevler listelenmiştir.
+Aşağıdaki tabloda öğeler için kullanılabilen iç işlevler listelenmiştir.
 
 :::moniker range="vs-2017"
 
 |İşlev|Örnek|Description|
 |--------------|-------------|-----------------|
 |`Count`|`@(MyItem->Count())`|Öğelerin sayısını döndürür.|
-|`DirectoryName`|`@(MyItem->DirectoryName())`|`Path.DirectoryName`Her öğe için eşdeğerini döndürür.|
-|`Distinct`|`@(MyItem->Distinct())`|Farklı değerlere sahip öğeleri döndürür `Include` . Meta veriler yoksayıldı. Karşılaştırma büyük/küçük harfe duyarlıdır.|
-|`DistinctWithCase`|`@(MyItem->DistinctWithCase())`|Farklı değerlere sahip öğeleri döndürür `itemspec` . Meta veriler yoksayıldı. Karşılaştırma büyük/küçük harfe duyarlıdır.|
+|`DirectoryName`|`@(MyItem->DirectoryName())`|Her öğe için `Path.DirectoryName` eşdeğerini döndürür.|
+|`Distinct`|`@(MyItem->Distinct())`|Farklı değerlere sahip öğeleri `Include` döndürür. Meta veriler yoksayılır. Karşılaştırma büyük/büyük/büyük harfe duyarlı değildir.|
+|`DistinctWithCase`|`@(MyItem->DistinctWithCase())`|Farklı değerlere sahip öğeleri `itemspec` döndürür. Meta veriler yoksayılır. Karşılaştırma büyük/büyük/büyük harfe duyarlıdır.|
 |`Reverse`|`@(MyItem->Reverse())`|Öğeleri ters sırada döndürür.|
-|`AnyHaveMetadataValue`|`@(MyItem->AnyHaveMetadataValue("MetadataName", "MetadataValue"))`|Herhangi bir `boolean` öğenin belirtilen meta veri adı ve değerine sahip olup olmadığını belirtmek için öğesini döndürür. Karşılaştırma büyük/küçük harfe duyarlıdır.|
-|`ClearMetadata`|`@(MyItem->ClearMetadata())`|Meta verileri işaretsiz öğeleri döndürür. Yalnızca, `itemspec` tutulur.|
-|`HasMetadata`|`@(MyItem->HasMetadata("MetadataName"))`|Verilen meta veri adına sahip öğeleri döndürür. Karşılaştırma büyük/küçük harfe duyarlıdır.|
+|`AnyHaveMetadataValue`|`@(MyItem->AnyHaveMetadataValue("MetadataName", "MetadataValue"))`|Herhangi bir `boolean` öğenin verilen meta veri adına ve değerine sahip olup olmadığını belirtmek için bir döndürür. Karşılaştırma büyük/büyük/büyük harfe duyarlı değildir.|
+|`ClearMetadata`|`@(MyItem->ClearMetadata())`|Meta verileri temiz olan öğeleri döndürür. Yalnızca `itemspec` korunur.|
+|`HasMetadata`|`@(MyItem->HasMetadata("MetadataName"))`|Verilen meta veri adına sahip öğeleri döndürür. Karşılaştırma büyük/büyük/büyük harfe duyarlı değildir.|
 |`Metadata`|`@(MyItem->Metadata("MetadataName"))`|Meta veri adına sahip meta verilerin değerlerini döndürür.|
-|`WithMetadataValue`|`@(MyItem->WithMetadataValue("MetadataName", "MetadataValue"))`|Verilen meta veri adı ve değerine sahip öğeleri döndürür. Karşılaştırma büyük/küçük harfe duyarlıdır.|
+|`WithMetadataValue`|`@(MyItem->WithMetadataValue("MetadataName", "MetadataValue"))`|Verilen meta veri adına ve değerine sahip öğeleri döndürür. Karşılaştırma büyük/büyük/büyük harfe duyarlı değildir.|
 
 :::moniker-end
 :::moniker range=">=vs-2019"
 
 |İşlev|Örnek|Description|
 |--------------|-------------|-----------------|
-|`Combine`|`@(MyItems->Combine('path'))`|Tüm giriş öğelerine eklenen belirli bir göreli yol ile yeni bir öğe kümesi döndürür.|
+|`Combine`|`@(MyItems->Combine('path'))`|Tüm giriş öğelerine belirli bir göreli yol ekli yeni bir öğe kümesi döndürür.|
 |`Count`|`@(MyItems->Count())`|Öğelerin sayısını döndürür.|
-|`DirectoryName`|`@(MyItems->DirectoryName())`|`Path.DirectoryName`Her öğe için eşdeğerini döndürür.|
-|`Distinct`|`@(MyItems->Distinct())`|Farklı değerlere sahip öğeleri döndürür `Include` . Meta veriler yoksayıldı. Karşılaştırma büyük/küçük harfe duyarlıdır.|
-|`DistinctWithCase`|`@(MyItems->DistinctWithCase())`|Farklı değerlere sahip öğeleri döndürür `itemspec` . Meta veriler yoksayıldı. Karşılaştırma büyük/küçük harfe duyarlıdır.|
-|`Exists`|`@(MyItems->Exists())`|Öğelerin bir kümesini diskte bulunanlara filtreler.|
-|`GetPathsOfAllDirectoriesAbove`| `@(MyItems->GetPathsOfAllFilesAbove())`|Bir dizi öğe verildiğinde, tüm üst dizinleri temsil eden öğeleri döndürür. Hiçbir sipariş garanti edilmez.|
+|`DirectoryName`|`@(MyItems->DirectoryName())`|Her öğe için `Path.DirectoryName` eşdeğerini döndürür.|
+|`Distinct`|`@(MyItems->Distinct())`|Farklı değerlere sahip öğeleri `Include` döndürür. Meta veriler yoksayılır. Karşılaştırma büyük/büyük/büyük harfe duyarlı değildir.|
+|`DistinctWithCase`|`@(MyItems->DistinctWithCase())`|Farklı değerlere sahip öğeleri `itemspec` döndürür. Meta veriler yoksayılır. Karşılaştırma büyük/büyük/büyük harfe duyarlıdır.|
+|`Exists`|`@(MyItems->Exists())`|Bir öğe kümesine, diskte gerçekten var olan öğeleri filtreler.|
+|`GetPathsOfAllDirectoriesAbove`| `@(MyItems->GetPathsOfAllFilesAbove())`|Bir öğe kümesi verildi, tüm üst dizinleri temsil eden öğeleri döndürür. Hiçbir sipariş garanti edilemez.|
 |`Reverse`|`@(MyItems->Reverse())`|Öğeleri ters sırada döndürür.|
-|`AnyHaveMetadataValue`|`@(MyItems->AnyHaveMetadataValue("MetadataName", "MetadataValue"))` | Herhangi bir `boolean` öğenin belirtilen meta veri adı ve değerine sahip olup olmadığını belirtmek için öğesini döndürür. Karşılaştırma büyük/küçük harfe duyarlıdır. |
-|`ClearMetadata`|`@(MyItems->ClearMetadata())` |Meta verileri işaretsiz öğeleri döndürür. Yalnızca, `itemspec` tutulur.|
-|`HasMetadata`|`@(MyItems->HasMetadata("MetadataName"))`|Verilen meta veri adına sahip öğeleri döndürür. Karşılaştırma büyük/küçük harfe duyarlıdır.|
+|`AnyHaveMetadataValue`|`@(MyItems->AnyHaveMetadataValue("MetadataName", "MetadataValue"))` | Herhangi bir `boolean` öğenin verilen meta veri adına ve değerine sahip olup olmadığını belirtmek için bir döndürür. Karşılaştırma büyük/büyük/büyük harfe duyarlı değildir. |
+|`ClearMetadata`|`@(MyItems->ClearMetadata())` |Meta verileri temiz olan öğeleri döndürür. Yalnızca `itemspec` korunur.|
+|`HasMetadata`|`@(MyItems->HasMetadata("MetadataName"))`|Verilen meta veri adına sahip öğeleri döndürür. Karşılaştırma büyük/büyük/büyük harfe duyarlı değildir.|
 |`Metadata`|`@(MyItems->Metadata("MetadataName"))`|Meta veri adına sahip meta verilerin değerlerini döndürür.|
-|`WithMetadataValue`|`@(MyItems->WithMetadataValue("MetadataName", "MetadataValue"))`|Verilen meta veri adı ve değerine sahip öğeleri döndürür. Karşılaştırma büyük/küçük harfe duyarlıdır.|
+|`WithMetadataValue`|`@(MyItems->WithMetadataValue("MetadataName", "MetadataValue"))`|Verilen meta veri adına ve değerine sahip öğeleri döndürür. Karşılaştırma büyük/büyük/büyük harfe duyarlı değildir.|
 
 > [!NOTE]
-> `Exists`, diğer bağlamlarda da kullanılabilir; örneğin [](msbuild-conditions.md), örneğin `Condition="Exists('path')"` veya [statik özellik işlevlerinde](property-functions.md)MSBuild koşullarda `$([System.IO.File]::Exists("path"))` .
+> `Exists`diğer bağlamlarda da kullanılabilir; içinde [MSBuild ,](msbuild-conditions.md)örneğin ; veya Statik özellik `Condition="Exists('path')"` [işlevlerinde](property-functions.md), örneğin `$([System.IO.File]::Exists("path"))` .
 :::moniker-end
 
-Aşağıdaki örnek, iç öğe işlevlerinin nasıl kullanılacağını göstermektedir.
+Aşağıdaki örnek, iç öğe işlevlerinin nasıl kullanılagelmektedir.
 
 ```xml
 <ItemGroup>
@@ -130,10 +130,10 @@ Aşağıdaki örnek, iç öğe işlevlerinin nasıl kullanılacağını gösterm
   -->
 ```
 
-## <a name="msbuild-condition-functions"></a>MSBuild koşul işlevleri
+## <a name="msbuild-condition-functions"></a>MSBuild koşulu işlevleri
 
-Ve işlevleri `Exists` `HasTrailingSlash` öğe işlevleri değildir. Bu öznitelikler, özniteliğiyle birlikte kullanılmak üzere kullanılabilir `Condition` . [MSBuild koşullara](msbuild-conditions.md)bakın.
+İşlev `HasTrailingSlash` bir öğe işlevi değildir. özniteliğiyle birlikte `Condition` kullanılabilir. Bkz. [MSBuild koşulları.](msbuild-conditions.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-Öğe listelerinde, öğe meta verilerinde filtreleme gibi işlemler gerçekleştirmek için özniteliklerini de kullanabilirsiniz; [öğeleri](../msbuild/msbuild-items.md)görüntüleyin.
+Öğe meta verilerini filtreleme gibi öğe listelerinde işlem gerçekleştirmek için öznitelikleri de kullanabilirsiniz; Bkz. [Öğeler.](../msbuild/msbuild-items.md)

@@ -4,17 +4,17 @@ description: C++ projenizi kodlarken kullanabileceğiniz bazı IntelliSense öze
 ms.custom: SEO-VS-2020
 ms.date: 10/08/2018
 ms.topic: conceptual
-author: TerryGLee
-ms.author: tglee
+author: corob-msft
+ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef572014009fd0516140f0d73ecbb054ff9bb011db1e334604dd274daafe6820
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 53ef15fda9ac09fc7d38ed2b6bbcfe8605ac8d5d
+ms.sourcegitcommit: 7a300823cf1bd3355be03bde561cf2777bc09eae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121399938"
+ms.lasthandoff: 12/07/2021
+ms.locfileid: "133977490"
 ---
 # <a name="visual-c-intellisense-features"></a>Visual C++ IntelliSense özellikleri
 

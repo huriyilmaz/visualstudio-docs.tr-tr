@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: amast
 manager: shve
 ms.assetid: 0a02232c-437f-4c48-85c1-93ca7887236b
-ms.date: 11/29/2021
+ms.date: 12/02/2021
 ms.topic: how-to
 description: Aboneliklere dahil edilen avantajları ve bunları etkinleştirmeyi öğrenin.
-ms.openlocfilehash: effc372a1c1f40973f69b685547024569dba4668
-ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
+ms.openlocfilehash: d4d4989a307a1194687cffcb7952ead9e90e36f9
+ms.sourcegitcommit: 7a300823cf1bd3355be03bde561cf2777bc09eae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "133255092"
+ms.lasthandoff: 12/07/2021
+ms.locfileid: "133977919"
 ---
 # <a name="about-your-subscription-benefits"></a>Abonelik avantajlarınız hakkında
 Bir Visual Studio olarak, abonelik düzeyinize bağlı olarak çeşitli avantajlara erişebilirsiniz. Avantajlar hakkında dikkat etmek gereken birkaç önemli şey vardır.
@@ -44,7 +44,7 @@ Eğitim ve araçlar gibi popüler Visual Studio dahil olmak üzere aboneliklere 
 Nadir olsa da, bazen teknik sorunlar bir avantajı kısa bir süre için kullanılamaz hale getirir. Böyle durumlarda, sorun çözülene kadar Visual Studio Abonelikler [portalında](https://my.visualstudio.com/benefits) avantajın "Geçici Olarak Kullanılamıyor" olduğunu belirtmek için avantaj kutucuğunu değiştirecek ve kutucuğu geri yükleyinceye kadar avantajı yeniden kullanacağız.
 
 ## <a name="support-resources"></a>Destek kaynakları
-- Abonelikler için satış, abonelikler, hesaplar ve faturalama konusunda yardım Visual Studio abonelik [desteği için Visual Studio iletişim kurun.](https://aka.ms/vssubscriberhelp)
+- Visual Studio Abonelikleri için satış, abonelikler, hesaplar ve faturalama ile ilgili yardım için destek [Visual Studio ile iletişime geçin.](https://aka.ms/vssubscriberhelp)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

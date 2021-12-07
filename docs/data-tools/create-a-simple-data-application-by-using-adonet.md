@@ -2,7 +2,7 @@
 title: ADO.NET kullanarak basit veri uygulaması oluşturma
 description: Visual Studio Windows Forms ve ADO.NET kullanarak basit bir form-veri uygulaması oluşturmayı öğrenin.
 ms.custom: SEO-VS-2020
-ms.date: 08/23/2017
+ms.date: 12/03/2021
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 506983ffacf846969f6e74fd503344d90180ca91
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 25c3c8bbab99536e83741bd1461dac4643453a8e
+ms.sourcegitcommit: 7a300823cf1bd3355be03bde561cf2777bc09eae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126631520"
+ms.lasthandoff: 12/07/2021
+ms.locfileid: "133978295"
 ---
 # <a name="create-a-simple-data-application-by-using-adonet"></a>ADO.NET kullanarak basit veri uygulaması oluşturma
 
@@ -30,15 +30,18 @@ Bu makalede, verileri bir veritabanından hızlı bir şekilde almanın basit bi
 > [!IMPORTANT]
 > Kodu basit tutmak için üretime hazırlanma özel durum işleme içermez.
 
+> [!NOTE]
+> bu öğreticinin tüm koduna [C#](https://github.com/MicrosoftDocs/visualstudio-docs/tree/main/docs/data-tools/codesnippet/CSharp/SimpleDataApp) ve [Visual Basic](https://github.com/MicrosoftDocs/visualstudio-docs/tree/main/docs/data-tools/codesnippet/VisualBasic/SimpleDataApp)Visual Studio docs GitHub deposundan erişilebilir.
+
 ## <a name="prerequisites"></a>Önkoşullar
 
 Uygulamayı oluşturmak için şunlar gerekir:
 
 - Visual Studio.
 
-- SQL Server Express LocalDB. SQL Server Express localdb yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)yükleyebilirsiniz.
+- SQL Server Express localdb. SQL Server Express localdb yoksa, [SQL Server indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-downloads)yükleyebilirsiniz.
 
-bu konu, Visual Studio ıde 'nin temel işlevleriyle ilgili bilgi sahibi olduğunuzu ve bir Windows Forms uygulaması oluşturabileceğiniz, projeye form ekleyebileceğiniz, düğmeleri ve diğer denetimleri formlara ekleyebileceğiniz, denetimlerin özelliklerini ayarlayabildiğiniz ve basit olaylar kodlarınızın olduğu varsayılmaktadır. bu görevlerle ilgili deneyimli değilseniz, bu yönergeyi başlamadan önce [Visual C# ve Visual Basic ile çalışmaya](../ide/quickstart-visual-basic-console.md) başlama konusunu tamamlamanızı öneririz.
+bu konu, Visual Studio ıde 'nin temel işlevleriyle ilgili bilgi sahibi olduğunuzu ve bir Windows Forms uygulaması oluşturabileceğiniz, projeye form ekleyebileceğiniz, düğmeleri ve diğer denetimleri formlara ekleyebileceğiniz, denetimlerin özelliklerini ayarlayabildiğiniz ve basit olaylar kodlarınızın olduğu varsayılmaktadır. bu görevleri rahat bir şekilde kullanabileceğinizden, bu kılavuza başlamadan önce Visual Basic öğreticisi ile [Visual Studio Windows Forms uygulama oluşturma](../ide/create-a-visual-basic-winform-in-visual-studio.md) ve [C# öğreticisi ile Visual Studio Windows Forms bir uygulama](../ide/create-csharp-winform-visual-studio.md) oluşturma işlemini tamamlamanızı öneririz.
 
 ## <a name="set-up-the-sample-database"></a>Örnek veritabanını ayarlama
 
@@ -58,7 +61,7 @@ Aşağıdaki adımları izleyerek örnek veritabanını oluşturun:
 
      Sorgu Düzenleyicisi penceresi açılır.
 
-6. [Sales Transact-SQL betiğini](https://github.com/MicrosoftDocs/visualstudio-docs/raw/master/docs/data-tools/samples/sales.sql) panonuza kopyalayın.
+6. [Sales Transact-SQL betiğini](https://github.com/MicrosoftDocs/visualstudio-docs/raw/main/docs/data-tools/samples/sales.sql) panonuza kopyalayın.
 
 7. T-SQL betiğini sorgu düzenleyicisine yapıştırın ve sonra **yürüt** düğmesini seçin.
 
@@ -125,60 +128,68 @@ Aşağıdaki adımları izleyerek örnek veritabanını oluşturun:
 ## <a name="store-the-connection-string"></a>Bağlantı dizesini depolayın
 Uygulamanız veritabanına bir bağlantı açmaya çalıştığında, uygulamanızın bağlantı dizesine erişimi olması gerekir. Dizeyi her bir forma el ile girmekten kaçınmak için, dizeyi projenizdeki *App.config* dosyasına depolayın ve yöntemi uygulamanızdaki herhangi bir formdan çağrıldığında dizeyi döndüren bir yöntem oluşturun.
 
-Bağlantı dizesini **Sunucu Gezgini** ' de **Satış** verileri bağlantısına sağ tıklayıp **Özellikler**' i seçerek bulabilirsiniz. **ConnectionString özelliğini bulun,** ardından **Ctrl** + **A**, **Ctrl** C tuşlarını kullanarak dizeyi seçin +  ve panoya kopyalayın.
+Bağlantı dizesini **Sunucu Gezgini** ' de **Satış** verileri bağlantısına sağ tıklayıp **Özellikler**' i seçerek bulabilirsiniz. **ConnectionString** özelliğini bulun ve ardından  +   + dizeyi seçmek ve panoya kopyalamak için CTRL A, CTRL **C** tuşlarını kullanın.
 
-1. C# kullanıyorsanız, **Çözüm Gezgini** altında Özellikler düğümünü  genişletin ve **Ayarlar.settings dosyasını** açın.
-    Visual Basic kullanıyorsanız, **Çözüm Gezgini** Tüm Dosyaları Göster'e **tıklayın,** **My Project** düğümünü genişletin ve **Ayarlar.settings dosyasını** açın.
+1. C# kullanıyorsanız, **Çözüm Gezgini**' de, proje altındaki **özellikler** düğümünü genişletin ve ardından **Ayarlar. Settings** dosyasını açın.
+    Visual Basic kullanıyorsanız, **Çözüm Gezgini**' de **tüm dosyaları göster**' e tıklayın, **Project** düğümünü genişletin ve ardından **Ayarlar. Settings** dosyasını açın.
 
-2. Ad **sütununa** `connString` girin.
+2. **Ad** sütununda, girin `connString` .
 
-3. Tür **listesinde (Bağlantı** **Dizesi) öğesini seçin.**
+3. **Tür** listesinde **(bağlantı dizesi)** öğesini seçin.
 
-4. Kapsam **listesinde Uygulama'ya** **tıklayın.**
+4. **Kapsam** listesinde, **uygulama**' yı seçin.
 
-5. Değer **sütununa** bağlantı dizenizi girin (dış tırnak olmadan) ve ardından değişikliklerinizi kaydedin.
+5. **Değer** sütununda, Bağlantı dizenizi (dış tırnak işaretleri olmadan) girin ve ardından değişikliklerinizi kaydedin.
+
+   :::image type="content" source="media/vs-2022/simple-data-app-settings.png" alt-text="Ayarlar. Settings öğesinde bağlantı dizesinin ekran görüntüsü" lightbox="media/vs-2022/simple-data-app-settings.png":::
 
 > [!NOTE]
-> Bağlantı dizeleri ve yapılandırma dosyaları altında açıklandığı gibi, gerçek bir uygulamada bağlantı dizesini [güvenli bir şekilde depolamanız gerekir.](/dotnet/framework/data/adonet/connection-strings-and-configuration-files)
+> Gerçek bir uygulamada bağlantı dizesini [bağlantı dizeleri ve yapılandırma dosyalarında](/dotnet/framework/data/adonet/connection-strings-and-configuration-files)açıklandığı gibi güvenli bir şekilde depolamanız gerekir.
 
-## <a name="write-the-code-for-the-forms"></a>Formlar için kod yazma
+## <a name="write-the-code-for-the-forms"></a>Formların kodunu yazma
 
-Bu bölümde, her formun ne yaptığına ilişkin kısa genel bakışlar yer almaktadır. Ayrıca formda bir düğmeye tıkıldığında temel mantığı tanımlayan kodu da sağlar.
+Bu bölüm her bir formun ne işe yönelik kısa genel bakış içerir. Ayrıca, formdaki bir düğmeye tıklandığında temel alınan mantığı tanımlayan kodu sağlar.
 
 ### <a name="navigation-form"></a>Gezinti formu
 
-Uygulamayı çalıştırarak Gezinti formu açılır. Hesap **ekle düğmesi** NewCustomer formunu açar. Siparişleri **doldur veya iptal et** düğmesi FillOrCancel formunu açar. **Çıkış düğmesi** uygulamayı kapatır.
+Uygulamayı çalıştırdığınızda gezinti formu açılır. **Hesap Ekle** düğmesi NewCustomer formunu açar. **Siparişleri doldur veya iptal et** düğmesi FillOrCancel formunu açar. **Çıkış** düğmesi uygulamayı kapatır.
 
-#### <a name="make-the-navigation-form-the-startup-form"></a>Gezinti formunu başlangıç formu yapma
+#### <a name="make-the-navigation-form-the-startup-form"></a>Gezinti formunu başlangıç formu haline getirme
 
-C# kullanıyorsanız, **Çözüm Gezgini** içinde **Program.cs'yi** açın ve satırı `Application.Run` şu şekilde değiştirebilirsiniz: `Application.Run(new Navigation());`
+C# kullanıyorsanız, **Çözüm Gezgini**' de **program. cs**' yi açın ve ardından `Application.Run` satırı bu şekilde değiştirin: `Application.Run(new Navigation());`
 
-Visual Basic kullanıyorsanız, **Çözüm Gezgini** penceresini açın, Uygulama sekmesini  seçin ve ardından  Başlangıç formu listesinde **SimpleDataApp.Navigation** **öğesini** seçin.
+Visual Basic kullanıyorsanız, **Çözüm Gezgini**' de **özellikler** penceresini açın, **uygulama** sekmesini seçin ve ardından **başlangıç formu** listesinden **simpledataapp. Navigation** öğesini seçin.
 
 #### <a name="create-auto-generated-event-handlers"></a>Otomatik olarak oluşturulan olay işleyicileri oluşturma
 
-Boş olay işleyici yöntemleri oluşturmak için Gezinti formundaki üç düğmeye çift tıklayın. Düğmelere çift tıklarsanız Tasarımcı kod dosyasına otomatik olarak oluşturulan kod ekleyen bu kod, bir düğmeye tıklamanın bir olay oluşturması için olanak sağlar.
+Boş olay işleyicisi yöntemleri oluşturmak için gezinti formundaki üç düğmeye çift tıklayın. Düğmelere çift tıklamak, tasarımcı kod dosyasında bir olayı yükseltmek üzere bir düğme tıklamalarını sağlayan otomatik oluşturulan kod de ekler.
+
+> [!NOTE]
+> Tasarımcıda çift tıklama eylemini atlar ve yalnızca kodu kopyalayıp kod dosyalarınıza yapıştırırsanız, olay işleyicisini doğru yönteme ayarlamayı unutmayın. Bunu **Özellikler** penceresinde yapabilirsiniz. **Olaylar** sekmesine geçin (şimşek ve araç çubuğu düğmesini kullanın) ve **tıklama** işleyicisine bakın.
 
 #### <a name="add-code-for-the-navigation-form-logic"></a>Gezinti formu mantığı için kod ekleme
 
-Gezinti formunun kod sayfasında, aşağıdaki kodda gösterildiği gibi üç düğmenin tıklama olayı işleyicileri için yöntem gövdelerini doldurun.
+Gezinti formu için kod sayfasında, aşağıdaki kodda gösterildiği gibi üç düğme için yöntem gövdelerini, olay işleyicileri ' ne tıklayın.
 
 :::code language="csharp" source="../data-tools/codesnippet/CSharp/SimpleDataApp/Navigation.cs" id="Snippet1":::
 :::code language="vb" source="../data-tools/codesnippet/VisualBasic/SimpleDataApp/Navigation.vb" id="Snippet1":::
 
+> [!NOTE]
+> Bu öğreticinin kodu C# ve Visual Basic kullanılabilir. C# ve Visual Basic arasında bu sayfada kod dilini değiştirmek için, sağ taraftaki sayfanın üst kısmındaki kod dili değiştiricisini kullanın.
+
 ### <a name="newcustomer-form"></a>NewCustomer formu
 
-Bir müşteri adı girerek Hesap  Oluştur düğmesini seçerek NewCustomer formu bir müşteri hesabı oluşturur ve SQL Server kimliği olarak bir IDENTITY değeri döndürür. Ardından, bir tutar ve sipariş tarihi belirterek ve Siparişi Sırala düğmesini seçerek yeni hesap için **bir sipariş veebilirsiniz.**
+bir müşteri adı girip **hesap oluştur** düğmesini seçtiğinizde, newcustomer formu bir müşteri hesabı oluşturur ve SQL Server yeni müşteri kimliği olarak bir kimlik değeri döndürür. Daha sonra bir miktar ve sipariş tarihi belirtip **siparişi yerleştir** düğmesini seçerek yeni hesap için bir sipariş yerleştirebilirsiniz.
 
 #### <a name="create-auto-generated-event-handlers"></a>Otomatik olarak oluşturulan olay işleyicileri oluşturma
 
-Dört düğmenin her biri üzerine çift tıklayarak NewCustomer formundaki her düğme için boş bir Tıklama olayı işleyicisi oluşturun. Düğmelere çift tıklarsanız Tasarımcı kod dosyasına otomatik olarak oluşturulan kod ekleyen bu kod, bir düğmeye tıklamanın bir olay oluşturması için olanak sağlar.
+Dört düğmenin her birine çift tıklayarak NewCustomer formundaki her düğme için boş bir tıklama olayı işleyicisi oluşturun. Düğmelere çift tıklamak, tasarımcı kod dosyasında bir olayı yükseltmek üzere bir düğme tıklamalarını sağlayan otomatik oluşturulan kod de ekler.
 
-#### <a name="add-code-for-the-newcustomer-form-logic"></a>NewCustomer form mantığı için kod ekleme
+#### <a name="add-code-for-the-newcustomer-form-logic"></a>NewCustomer form mantığı için kod ekleyin
 
-NewCustomer form mantığını tamamlamak için aşağıdaki adımları izleyin.
+NewCustomer form mantığını gerçekleştirmek için aşağıdaki adımları izleyin.
 
-1. Ad `System.Data.SqlClient` alanını kapsamına alın, böylece üyelerinin adlarını tam olarak nitelendirebilirsiniz.
+1. `System.Data.SqlClient`Üyelerinin adlarını tam olarak nitelemeniz gerekmiyorsa, ad alanını kapsama taşıyın.
 
      ```csharp
      using System.Data.SqlClient;
@@ -188,29 +199,29 @@ NewCustomer form mantığını tamamlamak için aşağıdaki adımları izleyin.
      Imports System.Data.SqlClient
      ```
 
-2. Aşağıdaki kodda gösterildiği gibi sınıfına bazı değişkenler ve yardımcı yöntemler ekleyin.
+2. Aşağıdaki kodda gösterildiği gibi, sınıfa bazı değişkenler ve yardımcı yöntemler ekleyin.
 
      :::code language="csharp" source="../data-tools/codesnippet/CSharp/SimpleDataApp/NewCustomer.cs" id="Snippet1":::
      :::code language="vb" source="../data-tools/codesnippet/VisualBasic/SimpleDataApp/NewCustomer.vb" id="Snippet1":::
 
-3. Dört düğmenin yöntem gövdelerini tamamlamak için aşağıdaki kodda gösterildiği gibi olay işleyicilerini tıklatın.
+3. Aşağıdaki kodda gösterildiği gibi dört düğme için yöntem gövdelerini, olay işleyiciler ' ı doldurun.
 
      :::code language="csharp" source="../data-tools/codesnippet/CSharp/SimpleDataApp/NewCustomer.cs" id="Snippet2":::
      :::code language="vb" source="../data-tools/codesnippet/VisualBasic/SimpleDataApp/NewCustomer.vb" id="Snippet2":::
 
 ### <a name="fillorcancel-form"></a>FillOrCancel formu
 
-FillOrCancel formu, sipariş kimliği girerken sipariş dönmek için bir sorgu çalıştırır ve ardından Siparişi Bul **düğmesine** tıklayın. Döndürülen satır salt okunur veri kılavuzunda görünür. Siparişi İptal Et düğmesini seçerse siparişi iptal  edildi (X) olarak veya Siparişi Doldur düğmesini seçerse siparişi doldurulmuş (F) olarak **işaretlayabilirsiniz.** Siparişi Bul düğmesini **yeniden** seçersiniz, güncelleştirilmiş satır görüntülenir.
+FillOrCancel formu, bir sipariş KIMLIĞI girerken bir siparişi döndürmek için bir sorgu çalıştırır ve ardından **sırayı bul** düğmesine tıklayabilirsiniz. Döndürülen satır salt okunurdur bir veri kılavuzunda görünür. Siparişi **Iptal et** düğmesini seçerseniz siparişi iptal edildi (X) olarak işaretleyebilirsiniz veya sırayı **doldur** düğmesini seçerseniz sırayı doldurulmuş (F) olarak işaretleyebilirsiniz. **Siparişi bul** düğmesini tekrar seçerseniz, güncelleştirilmiş satır görüntülenir.
 
 #### <a name="create-auto-generated-event-handlers"></a>Otomatik olarak oluşturulan olay işleyicileri oluşturma
 
-FillOrCancel formundaki dört düğme için düğmelere çift tıklayarak boş Tıklama olayı işleyicileri oluşturun. Düğmelere çift tıklarsanız Tasarımcı kod dosyasına otomatik olarak oluşturulan kod ekleyen bu kod, bir düğmeye tıklamanın bir olay oluşturması için olanak sağlar.
+Düğmeleri çift tıklatarak FillOrCancel formundaki dört düğme için boş tıklama olay işleyicileri oluşturun. Düğmelere çift tıklamak, tasarımcı kod dosyasında bir olayı yükseltmek üzere bir düğme tıklamalarını sağlayan otomatik oluşturulan kod de ekler.
 
 #### <a name="add-code-for-the-fillorcancel-form-logic"></a>FillOrCancel form mantığı için kod ekleme
 
-FillOrCancel form mantığını tamamlamak için aşağıdaki adımları izleyin.
+FillOrCancel form mantığını gerçekleştirmek için aşağıdaki adımları izleyin.
 
-1. Üyelerinin adlarını tam olarak nitelendirmamanız için aşağıdaki iki ad alanını kapsamına alın.
+1. Üyelerinin adlarını tamamen nitelemeniz gerekmiyorsa, aşağıdaki iki ad alanını kapsama taşıyın.
 
      ```csharp
      using System.Data.SqlClient;
@@ -222,19 +233,19 @@ FillOrCancel form mantığını tamamlamak için aşağıdaki adımları izleyin
      Imports System.Text.RegularExpressions
      ```
 
-2. Aşağıdaki kodda gösterildiği gibi sınıfına bir değişken ve yardımcı yöntemi ekleyin.
+2. Aşağıdaki kodda gösterildiği gibi sınıfına bir değişken ve yardımcı yöntem ekleyin.
 
      :::code language="csharp" source="../data-tools/codesnippet/CSharp/SimpleDataApp/FillOrCancel.cs" id="Snippet1":::
      :::code language="vb" source="../data-tools/codesnippet/VisualBasic/SimpleDataApp/FillOrCancel.vb" id="Snippet1":::
 
-3. Dört düğmenin yöntem gövdelerini tamamlamak için aşağıdaki kodda gösterildiği gibi olay işleyicilerini tıklatın.
+3. Aşağıdaki kodda gösterildiği gibi dört düğme için yöntem gövdelerini, olay işleyiciler ' ı doldurun.
 
      :::code language="csharp" source="../data-tools/codesnippet/CSharp/SimpleDataApp/FillOrCancel.cs" id="Snippet2":::
      :::code language="vb" source="../data-tools/codesnippet/VisualBasic/SimpleDataApp/FillOrCancel.vb" id="Snippet2":::
 
-## <a name="test-your-application"></a>Uygulamalarınızı test etmek
+## <a name="test-your-application"></a>Uygulamanızı test etme
 
-Her Click olayı işleyicisini kodladikten sonra ve kodlamayı bitirdikten sonra, uygulamayı derlemek ve test etmek için **F5** anahtarını seçin.
+Uygulamayı çalıştırın ve her şeyin beklendiği gibi çalıştığını doğrulamak için birkaç müşteri ve sipariş oluşturmayı deneyin. Veritabanının değişikliklerinizle güncelleştirildiğinden emin olmak için, **Sunucu Gezgini**' de **Tablolar** düğümünü açın, **müşteriler** ve **siparişler** düğümlerine sağ tıklayın ve **tablo verilerini göster**' i seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

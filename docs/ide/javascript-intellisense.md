@@ -1,6 +1,6 @@
 ---
 title: JavaScript IntelliSense
-description: Daha Visual Studio IntelliSense, modern JavaScript özellikleri için destek ve gelişmiş üretkenlik özellikleri sunma hakkında bilgi edinebilirsiniz.
+description: Daha zengin IntelliSense Visual Studio, modern JavaScript özellikleri için destek ve gelişmiş üretkenlik özellikleri sunma hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 06/28/2017
 ms.topic: conceptual
@@ -22,30 +22,30 @@ helpviewer_keywords:
 - IntelliSense [JavaScript], about
 - IntelliSense extensibility [JavaScript]
 - XML documentation comments [JavaScript]
-author: TerryGLee
-ms.author: tglee
+author: mikejo5000
+ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c5f997b7a4be43e6a8482a6282ecaaf2e3babf3e13bb5b08e734bb149b9ea75
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ba9392c05938247d9a33268565893448342ec44c
+ms.sourcegitcommit: 7a300823cf1bd3355be03bde561cf2777bc09eae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121357836"
+ms.lasthandoff: 12/07/2021
+ms.locfileid: "133977841"
 ---
 # <a name="javascript-intellisense"></a>JavaScript IntelliSense
 
 Visual Studio hemen güçlü bir JavaScript düzenleme deneyimi sağlar. TypeScript tabanlı bir dil hizmeti tarafından desteklenen Visual Studio, daha zengin IntelliSense, modern JavaScript özellikleri için destek ve Tanıma Git, yeniden düzenleme gibi gelişmiş üretkenlik özellikleri sunar.
 
 > [!NOTE]
-> 2017'Visual Studio başlayarak, JavaScript dil hizmeti dil hizmeti için yeni bir altyapı ("Salsa" olarak adlandırılır) kullanır. Ayrıntılar bu makalede yer almaktadır ve bu blog gönderisine de [bakabilirsiniz.](https://devblogs.microsoft.com/visualstudio/previewing-salsa-javascript-language-service-visual-studio-15/) Yeni düzenleme deneyimi çoğunlukla yeni Visual Studio Code. Daha fazla [VS Code için bkz.](https://code.visualstudio.com/docs/languages/javascript) VS Code belgeleri.
+> 2017'Visual Studio başlayarak, JavaScript dil hizmeti dil hizmeti için ("Salsa" olarak adlandırılır) yeni bir altyapı kullanır. Ayrıntılar bu makalede yer almaktadır ve bu blog gönderisine de [bakabilirsiniz.](https://devblogs.microsoft.com/visualstudio/previewing-salsa-javascript-language-service-visual-studio-15/) Yeni düzenleme deneyimi çoğunlukla yeni Visual Studio Code. Daha fazla [VS Code için VS Code](https://code.visualstudio.com/docs/languages/javascript) belgelerine bakın.
 
 Uygulamanın genel IntelliSense işlevselliği hakkında daha fazla bilgi Visual Studio [bkz. IntelliSense kullanma.](../ide/using-intellisense.md)
 
-## <a name="whats-new-in-the-javascript-language-service-in-visual-studio-2017"></a>Visual Studio 2017'de JavaScript dil hizmet Visual Studio
+## <a name="whats-new-in-the-javascript-language-service-in-visual-studio-2017"></a>Visual Studio 2017'de JavaScript dil hizmetlerinde yapılan Visual Studio
 
-2017'Visual Studio başlayarak, JavaScript IntelliSense parametre ve üye listeleri hakkında çok daha fazla bilgi görüntüler. Bu yeni bilgiler, kodunuzu daha iyi anlamak için arka planlarda statik analiz kullanan TypeScript dil hizmeti tarafından sağlanır.
+2017'Visual Studio başlayarak JavaScript IntelliSense, parametre ve üye listeleri hakkında çok daha fazla bilgi görüntüler. Bu yeni bilgiler, kodunuzu daha iyi anlamak için arka planlarda statik analiz kullanan TypeScript dil hizmeti tarafından sağlanır.
 
 TypeScript, bu bilgileri oluşturmak için çeşitli kaynaklar kullanır:
 
@@ -137,9 +137,9 @@ TypeScript dünyasında, en popüler JavaScript kitaplıklarının API'leri *.d.
 Varsayılan olarak, Salsa dil hizmeti hangi JavaScript kitaplıklarının kullanımda olduğunu algılamaya çalışır ve daha zengin IntelliSense sağlamak için kitaplığı açıklayan ilgili *.d.ts* dosyasını otomatik olarak indirip başvurur. Dosyalar % *LOCALAPPDATA%\Microsoft\TypeScript* konumundaki kullanıcı klasörü altında bulunan bir önbelleğe indirilir.
 
 > [!NOTE]
-> Yapılandırma dosyasında **bir yapılandırma** dosyası tsconfig.jsbu özellik varsayılan olarak devre dışı bırakılır, ancak aşağıda daha fazla özetlenen şekilde etkinleştirilebilir.
+> Bir *tsconfig.json* yapılandırma dosyası kullanıyorsanız bu özellik varsayılan olarak devre dışıdır, ancak aşağıda daha fazla özetlenen şekilde etkin olarak ayarlanmış olabilir. 
 
-Şu anda otomatik algılama npm'den indirilen bağımlılıklar (dosyada *package.js* okuyarak), Bower (dosyada *bower.js* okuyarak) ve projenizin en popüler 400 JavaScript kitaplığının listesiyle eşan gevşek dosyalar için çalışır. Örneğin, *projenizejquery-1.10.min.js* daha iyi bir düzenleme deneyimi sağlamak için *jquery.d.ts* dosyası getirilsin ve yüklenir. Bu *.d.ts* dosyasının projeniz üzerinde hiçbir etkisi olmaz.
+Şu anda otomatik algılama npm'den indirilen bağımlılıklar *(package.json* dosyasını okuyarak), Bower *(bower.json* dosyasını okuyarak) ve projenizin en popüler 400 JavaScript kitaplığının listesiyle eşan gevşek dosyalar için çalışır. Örneğin, *projenizejquery-1.10.min.js* daha iyi bir düzenleme deneyimi sağlamak için *jquery.d.ts* dosyası getirilsin ve yüklenir. Bu *.d.ts* dosyasının projeniz üzerinde hiçbir etkisi olmaz.
 
 Otomatik alma özelliğini kullanmak için aşağıda özetlenen bir yapılandırma dosyası ekleyerek devre dışı indirebilirsiniz. Tanım dosyalarını doğrudan projenizin içine el ile kullanmak üzere yine de ekleyebilirsiniz.
 

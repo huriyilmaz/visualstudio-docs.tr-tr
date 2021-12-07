@@ -20,30 +20,30 @@ manager: jmartens
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3cc1516eb083f6446a30adba8a0973878cd99654
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 223a5985a34f5063eacfcd0125b624a09520e6fb
+ms.sourcegitcommit: 7a300823cf1bd3355be03bde561cf2777bc09eae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126631185"
+ms.lasthandoff: 12/07/2021
+ms.locfileid: "133978465"
 ---
 # <a name="walkthrough-save-data-in-a-transaction"></a>İzlenecek yol: Bir işlemde veri kaydetme
 
-Bu kılavuzda, ad alanını kullanarak bir işlemde veri kaydetme işlemi <xref:System.Transactions> gösterir. Bu kılavuzda, bir Windows Forms uygulaması oluşturabilirsiniz. Northwind örnek veritabanında iki tablo için veri kümesi oluşturmak üzere Veri Kaynağı Yapılandırma Sihirbazı'nı kullanalım. Veri bağlama denetimlerini bir Windows formuna ek olarak BindingNavigator'ın kaydetme düğmesinin kodunu değiştirerek TransactionScope içindeki veritabanını güncelleştirin.
+Bu kılavuz, ad alanını kullanarak bir işlemde veri kaydetmeyi <xref:System.Transactions> gösterir. Bu kılavuzda, bir Windows Forms uygulaması oluşturabilirsiniz. Northwind örnek veritabanında iki tablo için veri kümesi oluşturmak üzere Veri Kaynağı Yapılandırma Sihirbazı'nı kullanalım. Veri bağlama denetimlerini bir Windows formuna ek olarak BindingNavigator'ın kaydetme düğmesinin kodunu değiştirerek TransactionScope içindeki veritabanını güncelleştirebilirsiniz.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
 Bu kılavuzda LocalDB SQL Server Express Northwind örnek veritabanı kullanılır.
 
-1. YerelDB'yi SQL Server Express yükleme sayfasından veya [SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express)sayfasından **Visual Studio Yükleyicisi.** Yerel Visual Studio Yükleyicisi, **SQL Server Express.NET** masaüstü geliştirme iş yükünün bir parçası olarak veya tek bir bileşen olarak yükleyebilir.
+1. Yerel VERITABANınız yoksa, SQL Server Express sayfasından veya [SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express)sayfasından **Visual Studio Yükleyicisi.** Yerel Visual Studio Yükleyicisi,SQL Server Express.NET masaüstü geliştirme iş yükünün parçası olarak  veya tek bir bileşen olarak yükleyebilirsiniz.
 
 2. Aşağıdaki adımları kullanarak Northwind örnek veritabanını yükleyin:
 
     1. Bu Visual Studio, **SQL Server Nesne Gezgini** açın. (SQL Server Nesne Gezgini, veri depolama ve işleme iş **yükünün bir parçası olarak** Visual Studio Yükleyicisi.) SQL Server **genişletin.** LocalDB örneğine sağ tıklayın ve Yeni **Sorgu'yı seçin.**
 
-       Sorgu düzenleyicisi penceresi açılır.
+       Bir sorgu düzenleyicisi penceresi açılır.
 
-    2. [Northwind Transact-SQL betiği panoya](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) kopyalayın. Bu T-SQL, Northwind veritabanını sıfırdan oluşturur ve verilerle doldurmak için kullanılır.
+    2. [Northwind Transact-SQL betiği panoya](https://github.com/MicrosoftDocs/visualstudio-docs/blob/main/docs/data-tools/samples/northwind.sql?raw=true) kopyalayın. Bu T-SQL, Northwind veritabanını sıfırdan oluşturur ve verilerle doldurmak için kullanılır.
 
     3. T-SQL betiği sorgu düzenleyicisine yapıştırın ve ardından Yürüt **düğmesini** seçin.
 
@@ -53,9 +53,9 @@ Bu kılavuzda LocalDB SQL Server Express Northwind örnek veritabanı kullanıl�
 
 İlk adım, bir Windows **Forms Uygulaması oluşturmaktır.**
 
-1. Yeni Visual Studio'nin Dosya **menüsünde Yeni**   >  **dosya'Project.**
+1. Bu Visual Studio, Dosya menüsünde **Yeni** **dosya'Project.**  >  
 
-2. Sol **bölmede Visual C#** **Visual Basic** görseli genişletin ve masaüstüne **Windows seçin.**
+2. Sol **bölmede Visual C#** **Visual Basic** görseli genişletin ve ardından Masaüstü'Windows **seçin.**
 
 3. Orta bölmede Windows **Forms Uygulaması proje** türünü seçin.
 
@@ -69,7 +69,7 @@ Bu adım, Northwind **örnek veritabanındaki** ve tablolarını temel alan bir 
 
 1. Veri Kaynakları **penceresini açmak** için Veri menüsünde **Veri** Kaynaklarını **Göster'i seçin.**
 
-2. Veri Kaynakları **penceresinde Yeni** Veri Kaynağı **Ekle'yi seçerek** Veri Kaynağı **Yapılandırma Sihirbazı'nı başlatın.**
+2. Veri Kaynağı **Yapılandırma Sihirbazı'nı** başlatmak **için Veri Kaynakları penceresinde** Yeni Veri Kaynağı **Ekle'yi seçin.**
 
 3. Veri Kaynağı **Türü Seçin ekranında Veritabanı'ı** **ve ardından** Sonraki'yi **seçin.**
 
@@ -81,7 +81,7 @@ Bu adım, Northwind **örnek veritabanındaki** ve tablolarını temel alan bir 
 
     - Bağlantı **Ekle/Değiştir** iletişim **kutusunu başlatmak ve** Northwind veritabanına bir bağlantı oluşturmak için Yeni Bağlantı'ya tıklayın.
 
-5. Veritabanınız parola gerektiriyorsa, hassas verileri dahil etmek için seçeneğini belirtin ve ardından Sonraki seçeneğini **belirleyin.**
+5. Veritabanınız parola gerektiriyorsa hassas verileri dahil etmek için seçeneğini belirleyin ve ardından Sonraki seçeneğini **belirleyin.**
 
 6. Bağlantı **dizesini Uygulama Yapılandırması dosyasına kaydet ekranında, Sonraki'yi** **seçin.**
 
@@ -89,7 +89,7 @@ Bu adım, Northwind **örnek veritabanındaki** ve tablolarını temel alan bir 
 
 8. ve `Customers` tablolarını `Orders` ve ardından Son'a **seçin.**
 
-     **NorthwindDataSet** projenize eklenir ve `Customers` ve `Orders` tabloları Veri Kaynakları **penceresinde** görüntülenir.
+     **NorthwindDataSet** projenize eklenir ve ve `Customers` tabloları Veri Kaynakları `Orders` **penceresinde** görüntülenir.
 
 ## <a name="add-controls-to-the-form"></a>Forma denetimler ekleme
 
@@ -111,7 +111,7 @@ Veri Kaynakları penceresindeki öğeleri form üzerine sürükleyerek **veriye 
 
 ### <a name="to-add-a-reference-to-the-systemtransactions-dll-file"></a>System.Transactions DLL dosyasına başvuru eklemek için
 
-1. Yeni **Project** **Ekle'yi seçin.**
+1. Yeni **Project** Başvuru Ekle'yi **seçin.**
 
 2. **System.Transactions 'ı** **(.NET sekmesinde)** ve ardından Tamam'ı **seçin.**
 
@@ -119,7 +119,7 @@ Veri Kaynakları penceresindeki öğeleri form üzerine sürükleyerek **veriye 
 
 ## <a name="modify-the-code-in-the-bindingnavigators-saveitem-button"></a>BindingNavigator'ın SaveItem düğmesinde kodu değiştirme
 
-Form üzerine bırakılan ilk tablo için, kod varsayılan olarak üzerinde `click` kaydetme düğmesinin olayına <xref:System.Windows.Forms.BindingNavigator> eklenir. Ek tabloları güncelleştirmek için el ile kod eklemeniz gerekir. Bu kılavuzda, mevcut kaydetme kodunu kaydet düğmesinin tıklama olayı işleyicisi dışında yeniden düzenlememiz gerekir. Ayrıca satırın ekleniyor mu yoksa silin mi olduğuna bağlı olarak belirli güncelleştirme işlevleri sağlamak için birkaç yöntem daha oluşturuz.
+Form üzerine bırakılan ilk tablo için kod varsayılan olarak üzerinde `click` kaydet düğmesinin olayına <xref:System.Windows.Forms.BindingNavigator> eklenir. Ek tabloları güncelleştirmek için el ile kod eklemeniz gerekir. Bu kılavuzda, mevcut kaydetme kodunu kaydet düğmesinin tıklama olayı işleyicisi dışında yeniden düzenlememiz gerekir. Ayrıca satırın ekleniyor mu yoksa silin mi olduğuna bağlı olarak belirli güncelleştirme işlevleri sağlamak için birkaç yöntem daha oluşturuz.
 
 ### <a name="to-modify-the-auto-generated-save-code"></a>Otomatik olarak oluşturulan kaydetme kodunu değiştirmek için
 
