@@ -1,40 +1,40 @@
 ---
 title: GitHub Actions
-description: GitHub Actions'ta Visual Studio
+description: Visual Studio içinde GitHub eylemleri nasıl geliştirebileceğiniz hakkında bilgi edinin
 author: ghogen
 manager: jmartens
 ms.technology: vs-azure
 ms.custom: vs-azure
 ms.workload: azure-vs
 ms.topic: overview
-ms.date: 10/19/2021
+ms.date: 12/06/2021
 ms.author: ghogen
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 581132bb222b3717e8cfbc22b1041ed11123a011
-ms.sourcegitcommit: 32fa8ec0b469a7a9a87de25ff769d8d21d9f30d2
+ms.openlocfilehash: f2f93625bc746aa7d3f77cb3c515090150a98ea2
+ms.sourcegitcommit: 64d6c5cf93984bbb22812577af17128cd2239f79
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2021
-ms.locfileid: "131898152"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "134366832"
 ---
-# <a name="an-overview-of-the-github-actions-integration-in-visual-studio"></a>GitHub Actions tümleştirmesi ile ilgili genel Visual Studio
+# <a name="an-overview-of-the-github-actions-integration-in-visual-studio"></a>Visual Studio GitHub eylemleri tümleştirmesine genel bakış
 
-[GitHub Actions,](https://github.com/features/actions) GitHub tarafından sunulan Sürekli Tümleştirme / Sürekli Teslim (CI/CD) çözümüdür. Kodunuzu GitHub.com'da ücretsiz olarak barındırabilir ve kod değişiklikleri GitHub uygulamanızı otomatik olarak derlemek, test etmek ve dağıtmak için GitHub Actions'ı kullanabilirsiniz.
+[GitHub eylemler](https://github.com/features/actions) , GitHub tarafından sunulan sürekli tümleştirme/sürekli teslim (cı/CD) çözümüdür. kodunuzu GitHub. com ' da ücretsiz olarak barındırabilirsiniz ve kod değişiklikleri yapıldığında uygulamanızı otomatik olarak oluşturmak, test etmek ve dağıtmak için GitHub eylemleri kullanabilirsiniz.
 
-## <a name="visual-studio-generates-working-github-action-workflows-for-you"></a>Visual Studio sizin için GitHub eylem iş akışları üretir
+## <a name="visual-studio-generates-working-github-action-workflows-for-you"></a>Visual Studio, sizin için çalışan GitHub eylem iş akışları oluşturuyor
 
-Kod tabanınız GitHub.com'da barındırılırsa ve dağıtım hedefiniz Visual Studio'nin desteklediği bir Azure barındırma hizmeti ise, otomatik olarak GitHub Actions'ı depolama alanınız için yapılandırmanız sunulur.
+kod tabanınız GitHub. com ' da barındırılıyorsa ve dağıtım hedefiniz Visual Studio tarafından desteklenen bir Azure barındırma hizmetidir, deponuzda GitHub eylemlerini yapılandırmak için otomatik olarak sunulacaktır.
 
-![CI/CD yayımlama seçeneğini gösteren ekran görüntüsü.](./media/github-actions-deployment-mode.png)
+![CI/CD Yayımla seçeneğini gösteren ekran görüntüsü.](./media/github-actions-deployment-mode.png)
 
-Visual Studio uygulama gizli dizilerinizi sizin için işerek süreci de basitleştiriyor. 
+Visual Studio ayrıca uygulama gizli dizilerini sizin için işleyerek işlemi basitleştirir.
 
-Kullanmaya başlayın projenize sağ tıklar ve Çözüm Gezgini menüsünde **Yayımla'yı** seçerek bu seçeneği belirleyin. Öğretici için bkz. Visual Studio tarafından oluşturulan GitHub Actions iş [akışlarını kullanarak uygulamanızı Azure'a Visual Studio.](../deployment/azure-deployment-using-github-actions.md)
+Çözüm Gezgini ' de projenize sağ tıklayıp bağlam menüsünden **Yayımla** ' yı seçerek başlayın. öğretici için, bkz. [Visual Studio tarafından oluşturulan GitHub eylemleri iş akışlarını kullanarak uygulamanızı Azure 'a dağıtma](../deployment/azure-deployment-using-github-actions.md).
 
-## <a name="how-do-i-get-my-project-on-githubcom"></a>Nasıl yaparım? projemi GitHub.com'a mı alasınız?
+## <a name="how-do-i-get-my-project-on-githubcom"></a>Nasıl yaparım? projem GitHub. com ' da mi al?
 
-Bkz. [yeni bir Git deposu oluşturma.](../version-control/git-with-visual-studio.md#create-a-new-git-repository)
+Bkz. [Yeni bir git deposu oluşturma](../version-control/git-with-visual-studio.md?view=vs-2019&preserve-view=true#create-a-new-git-repository-in-visual-studio-2019).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[GitHub Eylemler ve .NET](/dotnet/devops/github-actions-overview)
+[GitHub eylemleri ve .net](/dotnet/devops/github-actions-overview)

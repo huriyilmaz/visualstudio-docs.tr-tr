@@ -6,7 +6,7 @@ keywords: ''
 author: anandmeg
 ms.author: meghaanand
 manager: jmartens
-ms.date: 08/10/2021
+ms.date: 10/12/2021
 ms.topic: reference
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -16,12 +16,12 @@ ms.assetid: b99298df-0280-47fc-af73-44cd7a8ac553
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: 047e59d2b2e41e006c6b128b1c2616a610bbdada
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 0a060a33f55f9248c71abe834a19789eca48b3b9
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122055861"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "134366909"
 ---
 # <a name="visual-studio-build-tools-component-directory"></a>Visual Studio Derleme Araçları bileşen dizini
 
@@ -37,13 +37,23 @@ El ile yükleyiciyi kullanarak bu bileşenleri yüklemek için [Visual Studio I�
 
 ::: moniker-end
 
-::: moniker range=">= vs-2019"
+::: moniker range="vs-2019"
 
 [!INCLUDE[workloads-components-header-2019_md](includes/workloads-components-header-2019_md.md)]
 
 El ile yükleyiciyi kullanarak bu bileşenleri yüklemek için [Visual Studio Için derleme araçlarını](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019)indirip çalıştırın.
 
 [!INCLUDE[Visual Studio Build Tools 2019](includes/vs-2019/workload-component-id-vs-build-tools.md)]
+
+::: moniker-end
+
+::: moniker range=">= vs-2022"
+
+[!INCLUDE[workloads-components-header-2022_md](includes/workloads-components-header-2022.md)]
+
+El ile yükleyiciyi kullanarak bu bileşenleri yüklemek için [Visual Studio Için derleme araçlarını](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2022)indirip çalıştırın.
+
+[!INCLUDE[Visual Studio Build Tools 2022](includes/vs-2022/workload-component-id-vs-build-tools.md)]
 
 ::: moniker-end
 

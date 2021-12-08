@@ -6,7 +6,7 @@ keywords: ''
 author: anandmeg
 ms.author: meghaanand
 manager: jmartens
-ms.date: 08/10/2021
+ms.date: 10/12/2021
 ms.topic: reference
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -16,12 +16,12 @@ ms.assetid: be73e3af-d87b-4d14-bd08-2e4bda074fb3
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: 707d8effa4a1b0c87d2f3eea9fdb0069cacaaaa2
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 3ea5da8b0515fb9fc23757869dfa65db637d0b53
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122077907"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "134366766"
 ---
 # <a name="visual-studio-enterprise-component-directory"></a>Visual Studio Enterprise bileşeni dizini
 
@@ -35,11 +35,19 @@ ms.locfileid: "122077907"
 
 ::: moniker-end
 
-::: moniker range=">= vs-2019"
+::: moniker range="vs-2019"
 
 [!INCLUDE[workloads-components-header-2019_md](includes/workloads-components-header-2019_md.md)]
 
 [!include[Visual Studio Community 2019](includes/vs-2019/workload-component-id-vs-enterprise.md)]
+
+::: moniker-end
+
+::: moniker range=">= vs-2022"
+
+[!INCLUDE[workloads-components-header-2022_md](includes/workloads-components-header-2022.md)]
+
+[!include[Visual Studio Community 2022](includes/vs-2022/workload-component-id-vs-enterprise.md)]
 
 ::: moniker-end
 

@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: a68e4a5bf7b46c45aaf7061e1b994621d975a371
-ms.sourcegitcommit: 65a1b6aae8387735f05a83b45e1a6865e9805e1f
+ms.openlocfilehash: 11cc124fa3f8601ffb6d3ea621ab9bb709b60246
+ms.sourcegitcommit: 64d6c5cf93984bbb22812577af17128cd2239f79
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2021
-ms.locfileid: "129339580"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "134366936"
 ---
 # <a name="learn-about-solution-explorer"></a>Çözüm Gezgini hakkında bilgi edinin
 
@@ -43,7 +43,7 @@ Araç penceresi aşağıdaki UI (Kullanıcı arabirimi) öğelerini içerir:
 - **Project**, projenizi yönetebileceğiniz bir düğüm
 - Çözüm & proje bağımlılıklarınızı yönetebileceğiniz **Bağımlılıklar düğümü**
 - Programınızı veya uygulamanızı görüntüleyebileceğiniz, düzenleyebileceğiniz ve yönetebileceğiniz **program düğümü**(uygulama)
-- ekip ile projelerde işbirliği yapmak için Visual Studio içinde git & GitHub kullanabileceğiniz **[git değişiklikleri sekmesi](../version-control/git-with-visual-studio.md?view=vs-2019&preserve-view=true#git-changes-window)**
+- ekip ile projelerde işbirliği yapmak için Visual Studio içinde git & GitHub kullanabileceğiniz **[git değişiklikleri sekmesi](../version-control/git-with-visual-studio.md?view=vs-2019&preserve-view=true#git-changes-window-in-visual-studio-2019)**
 
 > [!TIP]
 > Çözüm Gezgini araç penceresini görmüyorsanız,   >  **Çözüm Gezgini** görünüm ' ü kullanarak veya **Ctrl** + **Alt** + **L** tuşlarına basarak Visual Studio menü çubuğundan açabilirsiniz.
