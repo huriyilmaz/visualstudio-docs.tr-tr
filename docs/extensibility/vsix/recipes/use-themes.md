@@ -9,16 +9,16 @@ manager: pchapman
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-sdk
 ms.custom: cookbook
-ms.openlocfilehash: 1a33a6557d8f42a33f32faea38880cd95efcc70b
-ms.sourcegitcommit: a149b3a034bb555ad217656c0ec8bc1672b1e215
+ms.openlocfilehash: 1a99d49615a51f4bbbf7372ef15795b178dd6a88
+ms.sourcegitcommit: ba40c6208b2cb27d047fec4fa2c83c6be4f9ee5a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "133516692"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "134463499"
 ---
-# <a name="matching-visual-studio-themes-in-visual-studio-extensions"></a>Visual Studio uzantılarında Visual Studio temalarını eşleştirme
+# <a name="matching-visual-studio-themes-in-visual-studio-extensions"></a>Visual Studio uzantılarında Visual Studio eşleştirme
 
-WPF kullanarak herhangi bir özel kullanıcı arabirimi 7.000.000'den fazla kullanıcı arabirimi Visual Studio. Bu şekilde kullanıcı arabiriminiz yerel gibi Visual Studio. Yoksa, araç pencereniz ve iletişim kutularınız Açık temada aşağıdaki gibi görünür:
+WPF kullanarak herhangi bir özel kullanıcı arabirimi 7.000.000 ABD Visual Studio. Bu şekilde kullanıcı arabiriminiz yerel gibi Visual Studio. Yoksa, araç pencereniz ve iletişim kutularınız Açık temada aşağıdaki gibi görünür:
 
 :::image type="content" source="../media/theming-light-none.png" alt-text="Açık temada temasız kullanıcı arabirimi.":::
 
@@ -75,11 +75,11 @@ Hem araç seti hem de platform ve özniteliği için içe aktarılan ad alanlar�
 İşte bu kadar kolay. İletişim kutusu pencereniz artık farklı renkler ve Visual Studio kullanılarak renkle gösterilir.
 
 ## <a name="get-the-source-code"></a>Kaynak kodunu alma
-Bu uzantının kaynak kodunu [Toolkit test projesinde Community bulabilirsiniz.](https://github.com/VsixCommunity/Community.VisualStudio.Toolkit/tree/master/test/VSSDK.TestExtension)
+Bu uzantının kaynak kodunu [Toolkit test projesinde Community bulabilirsiniz.](https://github.com/VsixCommunity/Community.VisualStudio.Toolkit/tree/master/demo/VSSDK.TestExtension)
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 Bu kaynaklara sahip Visual Studio hakkında daha fazla bilgi.
 
-* [Visual Studio için renkler ve stil Visual Studio](../../ux-guidelines/colors-and-styling-for-visual-studio.md)
+* [Visual Studio için renkler ve stil](../../ux-guidelines/colors-and-styling-for-visual-studio.md)
 * [Visual Studio için paylaşılan renkler](../../ux-guidelines/shared-colors-for-visual-studio.md)
 * [Renk değeri başvurusu](../../ux-guidelines/color-value-reference-for-visual-studio.md)

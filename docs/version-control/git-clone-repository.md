@@ -2,19 +2,19 @@
 title: Visual Studio bir depoyu kopyalama
 titleSuffix: ''
 description: Git veya Azure DevOps kullanarak Visual Studio bir depoyu kopyalayın.
-ms.date: 11/10/2021
+ms.date: 12/08/2021
 ms.topic: how-to
 author: TerryGLee
 ms.author: tglee
 ms.manager: jmartens
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.openlocfilehash: 15c5bc68302006e314219a3d7fcf3381d441eb50
-ms.sourcegitcommit: dc12d3d0ca2ec3601cb9de7c22e61ecf22c7c514
+ms.openlocfilehash: 9cf37c2130b8df72a8543a696e45b0f186916e94
+ms.sourcegitcommit: ba40c6208b2cb27d047fec4fa2c83c6be4f9ee5a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "132264045"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "134463461"
 ---
 # <a name="clone-a-repo-in-visual-studio"></a>Visual Studio bir depoyu kopyalama
 
@@ -30,6 +30,8 @@ Visual Studio, bir GitHub deposunun veya Azure DevOps deposunun doğrudan ıde '
 
     > [!NOTE]
     > Daha önce **Git** menüsüyle etkileşim kurmadıysa kopya **deposu** yerine **kopya** ' ı görebilirsiniz. Öyleyse, **Kopyala**' yı seçin.
+    >
+    > **Git** , menü çubuğunda değilse, **Araçlar**  >  **Seçenekler**  >  **kaynak denetimi**  >  **eklentisi seçimi**' ne gidin ve ardından **geçerli kaynak denetimi eklentisi** açılan listesinden **Git** ' i seçin.
 
 1. **Depoyu Kopyala** penceresinde, **BIR GIT deposu URL 'Si girin** bölümünde **Depo konumu kutusuna depo** bilgilerinizi ekleyin.
 
@@ -97,4 +99,4 @@ Yolculuğa devam etmek için [depo oluşturma](git-create-repository.md) sayfas�
 - [Öğretici: bir depodan bir proje açın](../get-started/tutorial-open-project-from-repo.md)
 - [Visual Studio’da GitHub hesaplarıyla çalışma](../ide/work-with-github-accounts.md)
 - [Birden çok kullanıcı hesabıyla çalışma](../ide/work-with-multiple-user-accounts.md)
-- [Visual Studio’da oturum açma](../ide/signing-in-to-visual-studio.md)
+- [Visual Studio oturum açın](../ide/signing-in-to-visual-studio.md)
