@@ -7,12 +7,13 @@ ms.author: tglee
 manager: jmartens
 ms.technology: vs-ide-designers
 ms.topic: how-to
-ms.openlocfilehash: 9dbe397ad9453c834b2614b326d2c4965f3fac34
-ms.sourcegitcommit: a98fa8a8362525f67824ce52b7e71757f10f1362
+ms.custon: contperf-fy22q2
+ms.openlocfilehash: 582f1046da0a493959acfa8fc59eaac77e80e751
+ms.sourcegitcommit: 99e0146dfe742f6d1955b9415a89c3d1b8afe4e1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2021
-ms.locfileid: "132736493"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "134553849"
 ---
 # <a name="disable-dpi-awareness-to-address-scaling-issues-with-windows-forms-designer-in-visual-studio"></a>Visual Studio Windows Form Tasarımcısı ölçeklendirme sorunlarını gidermek için dpı tanımayı devre dışı bırakın
 

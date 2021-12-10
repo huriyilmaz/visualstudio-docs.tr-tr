@@ -1,7 +1,7 @@
 ---
 title: Yanıt dosyası ile yükleme işlemini otomatikleştirme
 description: Uygulama yüklemenizi otomatikleştirmenize yardımcı olacak bir JSON yanıt dosyası Visual Studio öğrenin
-ms.date: 11/23/2021
+ms.date: 12/7/2021
 ms.topic: conceptual
 helpviewer_keywords:
 - response file
@@ -15,19 +15,19 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: c3630257019227298285e32cb640dfec4f40b0a1
-ms.sourcegitcommit: 7a300823cf1bd3355be03bde561cf2777bc09eae
+ms.openlocfilehash: 922cc8f150b68489578e3f713e08f59507f5d5e4
+ms.sourcegitcommit: 99e0146dfe742f6d1955b9415a89c3d1b8afe4e1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/07/2021
-ms.locfileid: "133978114"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "134553901"
 ---
 # <a name="programmatically-configure-default-settings-using-a-response-file"></a>Program aracılığıyla yanıt dosyası kullanarak varsayılan ayarları yapılandırma
 
-Yanıt Visual Studio dosyası, içeriği komut satırı parametrelerini ve bağımsız değişkenlerini yansıtan bir [JSON](http://json-schema.org/) dosyasıdır. Yanıt dosyası, ürünün ilk yüklemesi sırasında ayarları başlatmak için kullanılır. 
+Yanıt Visual Studio dosyası, içeriği komut satırı parametrelerini ve bağımsız değişkenlerini yansıtan bir [JSON](http://json-schema.org/) dosyasıdır. Yanıt dosyası, ürünün istemciye ilk yüklenmesi sırasında istemci ayarlarını başlatmak için kullanılır. 
 
 ## <a name="automate-installation"></a>Yüklemeyi otomatikleştirme
-Dağıtım yapan Visual Studio, aşağıdaki örnekte olduğu gibi `--in` parametresini kullanarak bir yanıt dosyası belirtebilirsiniz:
+Aşağıdaki örnekte Visual Studio dağıtan yöneticiler parametresini kullanarak bir yanıt `--in` dosyası belirtebilirsiniz:
 
 ```shell
 vs_enterprise.exe --in customInstall.json
@@ -114,7 +114,7 @@ Bir düzen oluşturulduğunda veya güncelleştiren bir response.template.json d
 
 ::: moniker range="vs-2017"
 
-Aşağıdaki dosya örneği, birkaç ortak iş yükünü ve bileşeni dahil etmek, hem İngilizce hem de Fransızca kullanıcı arabirimi dillerini dahil etmek ve güncelleştirme konumunun düzeni geri işaret etmek üzere yapılandırılması için bir Visual Studio Enterprise istemci yüklemesi `response.json` başlatacak. Visual Studio 2017 için, istemcide güncelleştirme konumu (channelURI) ayarlanacaksa daha sonra değiştirilemez.
+Aşağıdaki dosya örneği, hem İngilizce hem de Fransızca kullanıcı arabirimi dillerini dahil etmek ve güncelleştirme konumunun düzeni geri işaret etmek üzere yapılandırılması için birkaç ortak iş yükü ve bileşeni içerecek şekilde bir Visual Studio Enterprise istemci yüklemesi `response.json` başlatacak. Visual Studio 2017 için, istemcide güncelleştirme konumu (channelURI) ayarlanacaksa daha sonra değiştirilemez.
 
 ```Example response.json
 {
@@ -151,7 +151,7 @@ Aşağıdaki dosya örneği, birkaç ortak iş yükünü ve bileşeni dahil etme
 
 ::: moniker range="=vs-2019"
 
-Aşağıdaki dosya örneği, birkaç ortak iş yükü ve bileşeni seçmek, hem İngilizce hem de Fransızca kullanıcı arabirimi dillerini seçmek ve güncelleştirme konumunun düzeni geri işaret etmek üzere yapılandırılması için bir Visual Studio Enterprise istemcisi yüklemesi `response.json` başlatacak. Visual Studio 2019 için güncelleştirme konumunun (channelURI) yalnızca ilk yükleme sırasında yapılandırılanana ve  en son yükleyicide işlevselliği kullanmadıkça gerçek sonrasında değiştirilemez. Yapılandırma hakkında [bilgi için bkz.](/visualstudio/install/set-defaults-for-enterprise-deployments.md#configuring-source-location-for-updates) Visual Studio dağıtımları için varsayılanları ayarlama.
+Aşağıdaki dosya örneği, birkaç ortak iş yükü ve bileşeni seçmek, hem İngilizce hem de Fransızca kullanıcı arabirimi dillerini seçmek ve güncelleştirme konumunun düzeni geri işaret etmek üzere yapılandırılması için bir Visual Studio Enterprise istemcisi yüklemesi `response.json` başlatacak. Visual Studio 2019 için güncelleştirme konumunun (channelURI) yalnızca ilk yükleme sırasında yapılandırılanana ve  en son yükleyicide işlevselliği kullanmadıkça gerçek sonrasında değiştirilemez. Bu yapılandırma [hakkında bilgi için Visual Studio'nin](/visualstudio/install/set-defaults-for-enterprise-deployments.md#configuring-source-location-for-updates) kurumsal dağıtımları için varsayılanları ayarla ve Düzeninizi her zaman içerecek şekilde yapılandırma ve en son yükleyiciyi sağlama'ya bakın. [](/visualstudio/install/create-a-network-installation-of-visual-studio#configure-the-layout-to-always-include-and-provide-the-latest-installer)  
 
 ```Example response.json
 {
@@ -223,11 +223,11 @@ Aşağıdaki dosya örneği, birkaç ortak iş yükü ve bileşeni seçmek, hem 
 ::: moniker-end
 
 ## <a name="troubleshooting"></a>Sorun giderme
-Visual Studio önyükleyicisi bir dosyayla eşleştirilirken hata verirken bir sorunla karşılaştınız, daha fazla bilgi için bkz. Visual Studio sayfasını yükleme veya kullanma sırasında ağ ile ilgili `response.json` hataları giderme. [](../install/troubleshooting-network-related-errors-in-visual-studio.md#error-failed-to-parse-id-from-parent-process)
+Visual Studio önyükleyicisi bir dosyayla eşleştirilirken hata verirken bir sorunla karşılaştınız, daha fazla bilgi için bkz. Visual Studio yükleme veya kullanma sırasında ağ ile `response.json` [ilgili](../install/troubleshooting-network-related-errors-in-visual-studio.md#error-failed-to-parse-id-from-parent-process) hataları giderme.
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 * [Visual Studio Yöneticileri Kılavuzu](https://aka.ms/vs/admin/guide)
 * [Visual Studio iş yükü ve bileşen kimlikleri](workload-and-component-ids.md)
-* [Ağ ile ilgili sorunları gidermek için ağ yükleme veya Visual Studio](troubleshooting-network-related-errors-in-visual-studio.md)
+* [Ağ ile ilgili sorunları gidermek için ağ Visual Studio](troubleshooting-network-related-errors-in-visual-studio.md)

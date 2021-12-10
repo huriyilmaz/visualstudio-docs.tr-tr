@@ -2,7 +2,7 @@
 title: Bir. runsettings dosyası ile birim testlerini yapılandırma
 description: komut satırından, ıde 'den veya bir derleme iş akışında çalıştırılan birim testlerini yapılandırmak için Visual Studio. runsettings dosyasını nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
-ms.date: 07/15/2020
+ms.date: 12/06/2021
 ms.topic: conceptual
 ms.author: mikejo
 manager: jmartens
@@ -10,12 +10,12 @@ ms.technology: vs-ide-test
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 7fde253ed4bb24c31e8c93b8ce3a5e4290c142ba
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: ffb8a5544b52b292b2228d33253e42f32fc0e28b
+ms.sourcegitcommit: 99e0146dfe742f6d1955b9415a89c3d1b8afe4e1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122026830"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "134553961"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>*. Runsettings* dosyasını kullanarak birim testlerini yapılandırma
 
@@ -92,20 +92,20 @@ Visual Studio 2019 sürüm 16,4 ve sonraki sürümlerde bir çalıştırma ayarl
 
 - **Araç** > **seçeneklerini** seçin > **Test** > **Otomatik Algıla runsettings dosyaları**
 
-   ![Visual Studio 2019 ' de runsettings dosya seçeneğini otomatik algıla](media/vs-2019/auto-detect-runsettings-tools-window.png)
+   ![Visual Studio içindeki runsettings dosya seçeneğini otomatik algıla](media/auto-detect-runsettings-tools-window.png)
 
 - **Test** > **yapılandır çalıştırmasını seçin Ayarlar** > **runsettings dosyalarını otomatik algıla**
 
-   ![Visual Studio 2019 ' de runsettings dosya menüsünü otomatik algıla](media/vs-2019/auto-detect-runsettings-menu.png)
+   ![Visual Studio içindeki runsettings Dosya menüsünü otomatik algıla](media/auto-detect-runsettings-menu.png)
 
 #### <a name="manually-select-the-run-settings-file"></a>Çalışma ayarları dosyasını el ile seçin
 
 ıde 'de **Test** > **yapılandır çalıştır** ' ı seçin Ayarlar > **çözüm genelindeki runsettings dosyasını** seçin ve ardından *. runsettings* dosyasını seçin.
 
-   - Bu dosya, varsa çözüm kökündeki *. runsettings* dosyasını geçersiz kılar ve tüm testler üzerinde uygulanır.
-   - Bu dosya seçimi yalnızca yerel olarak devam ettirir.
+- Bu dosya, varsa çözüm kökündeki *. runsettings* dosyasını geçersiz kılar ve tüm testler üzerinde uygulanır.
+- Bu dosya seçimi yalnızca yerel olarak devam ettirir.
 
-![Visual Studio 2019 ' de çözüm genelinde özel runsettings dosya menüsünü seçin](media/vs-2019/select-solution-settings-file.png)
+![Visual Studio ' de çözüm genelinde çalıştırılabilir çalışma ayarları Dosya menüsünü seçin](media/select-solution-settings-file.png)
 
 #### <a name="set-a-build-property"></a>Yapı özelliği ayarla
 
@@ -445,11 +445,11 @@ Varsayılan bir değere sahip olduğundan, dosyanın her bir öğesi isteğe ba�
 
 ## <a name="specify-environment-variables-in-the-runsettings-file"></a>*. Runsettings* dosyasında ortam değişkenlerini belirtme
 
-Ortam değişkenleri, test ana bilgisayarıyla doğrudan etkileşime girebilen *. runsettings* dosyasında ayarlanabilir. *. Runsettings* dosyasında ortam değişkenlerinin belirtilmesi, *DOTNET_ROOT* gibi ortam değişkenlerinin ayarlanmasını gerektiren önemsiz olmayan projeleri desteklemek için gereklidir. Bu değişkenler, test ana bilgisayarı işlemini oluşturma sırasında ayarlanır ve konakta kullanılabilir.
+Ortam değişkenleri, test ana bilgisayarıyla doğrudan etkileşim kuracak şekilde *.runsettings* dosyasından ayarlandırabilirsiniz. *.runsettings dosyasında ortam değişkenlerini* belirtmek, ortamı gibi ortam değişkenlerini ayarlamayı gerektiren önemsiz projeleri desteklemek için *DOTNET_ROOT.* Bu değişkenler, test ana bilgisayarı işlemi sırasında ayarlanır ve konakta kullanılabilir.
 
 ### <a name="example"></a>Örnek
 
-Aşağıdaki kod, ortam değişkenlerini geçiren örnek bir *. runsettings* dosyasıdır:
+Aşağıdaki kod, ortam değişkenlerini geçen örnek bir *.runsettings* dosyasıdır:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -465,10 +465,10 @@ Aşağıdaki kod, ortam değişkenlerini geçiren örnek bir *. runsettings* dos
 </RunSettings>
 ```
 
-**RunConfiguration** düğümü bir **EnvironmentVariables** düğümü içermelidir. Bir ortam değişkeni, öğe adı ve değeri olarak belirtilebilir.
+**RunConfiguration düğümü** bir **EnvironmentVariables düğümü içermeli.** Ortam değişkeni, öğe adı ve değeri olarak belirtilebilir.
 
 > [!NOTE]
-> Bu ortam değişkenleri, test ana bilgisayarı başlatıldığında her zaman ayarlanması gerektiğinden, testlerin her zaman ayrı bir işlemde çalışması gerekir. Bunun için, test ana bilgisayarının her zaman çağrılması için ortam değişkenleri olduğunda */ınısolation* bayrağı ayarlanır.
+> Bu ortam değişkenleri, test ana bilgisayarı başlatılana kadar her zaman ayar gerektiği için testler her zaman ayrı bir işlemde çalıştırmalıdır. Bunun için, ortam değişkenleri olduğunda test ana bilgisayarının her zaman çağrılacak şekilde */InIsolation* bayrağı ayarlanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
