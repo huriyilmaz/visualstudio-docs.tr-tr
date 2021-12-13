@@ -10,12 +10,12 @@ ms.technology: vs-python
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 1846e7795fe1f6223ad852041f9a5a2b58a7aae7
-ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
+ms.openlocfilehash: 10863a36380d42797c482eb50d0c6291fbb0faad
+ms.sourcegitcommit: 0f2af2f1a8cf0a481fd8f673accf3aebf2e262c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "129972264"
+ms.lasthandoff: 12/13/2021
+ms.locfileid: "134714419"
 ---
 # <a name="quickstart-clone-a-repository-of-python-code-in-visual-studio"></a>Hızlı başlangıç: Visual Studio Python kodu deposunu kopyalama
 
@@ -33,7 +33,9 @@ ms.locfileid: "129972264"
 
     ![bir depoyu Azure Repos, GitHub ve kopyalamayı gösteren takım gezgini penceresi](media/team-explorer.png)
 
-1. **Yerel Git depoları** altında, **Kopyala** komutunu seçin, sonra `https://github.com/gregmalcolm/python_koans` URL alanına girin, kopyalanmış dosyalar Için bir klasör girin ve **Kopyala** düğmesini seçin.
+1. **Yerel Git depoları**' nın altında, **Kopyala** komutunu seçin, sonra `https://github.com/gregmalcolm/python_koans` URL alanına girin.
+
+1. Kopyalanmış dosyalar için bir klasör girin ve **Kopyala** düğmesini seçin.
 
     > [!Tip]
     > **Takım Gezgini** içinde belirttiğiniz klasör klonlanan dosyaları almak için tam klasördür. Komutun aksine `git clone` , **Takım Gezgini** bir kopyanın oluşturulması, otomatik olarak deponun adı ile bir alt klasör oluşturmaz.
@@ -44,13 +46,20 @@ ms.locfileid: "129972264"
 
     ![Takım Gezgini penceresi, bir kopyadan yeni bir proje oluşturma](media/team-explorer-new-project.png)
 
-1. görüntülenen **yeni Project** iletişim kutusunda **Python** diline gidin (veya "Python" üzerinde arama yapın), **var olan python kodundan** seçim yapın, proje için bir ad belirleyin, **konumu** depoyla aynı klasöre ayarlayın ve **tamam**' ı seçin. Görüntülenen sihirbazda **son**' u seçin.
+1. görüntülenen **yeni Project** iletişim kutusunda **Python** diline gidin (veya "Python" üzerinde arama yapın), **var olan python kodundan** seçim yapın. 
+
+1. Proje için bir ad belirtin, **konumu** depoyla aynı klasöre ayarlayın ve **Tamam**' ı seçin.
+
+1. Görüntülenen sihirbazda **son**' u seçin.
 
 1. Menüden **Görünüm**  >  **Çözüm Gezgini** seçin.
 
-1. **Çözüm Gezgini**' de, **python3** düğümünü genişletin, **contemplate_koans. Kopyala**' ya sağ tıklayın ve **başlangıç dosyası olarak ayarla**' yı seçin. bu adım, projeyi çalıştırırken hangi dosyayı kullanması gerektiğini Visual Studio söyler.
+1. **Çözüm Gezgini**, **python3** düğümünü genişletin, **contemplate_koans. Kopyala** öğesine sağ tıklayın.
 
-1. menüden   >  **koans özelliklerini** Project seçin, **genel** sekmesini seçin ve **çalışma dizinini** "python3" olarak ayarlayın. bu adım gereklidir çünkü varsayılan olarak Visual Studio, çalışma dizinini başlangıç dosyasının konumu yerine proje köküne (*python3 \ contemplate_koans. kopyala*), ancak proje özelliklerinde de görebileceğiniz şekilde ayarlar. Program kodu çalışma klasöründeki bir dosya *koans.txt* arar, bu nedenle bu değeri değiştirmeden bir çalışma zamanı hatası görürsünüz.
+1. **Başlangıç dosyası olarak ayarla**' yı seçin.
+bu adım, projeyi çalıştırırken hangi dosyayı kullanması gerektiğini Visual Studio söyler.
+
+1. menüden   >  **koans özelliklerini** Project seçin, **genel** sekmesini seçin ve **çalışma dizinini** "python3" olarak ayarlayın. bu adım, varsayılan olarak Visual Studio çalışma dizinini proje köküne ayarlayan için gereklidir. Visual Studio, proje özelliklerinde de görebileceğiniz *python3 \ contemplate_koans. kopyala* içindeki başlangıç dosyasının konumunu yapmaz. Program kodu çalışma klasöründeki bir dosya *koans.txt* arar, bu nedenle bu değeri değiştirmeden bir çalışma zamanı hatası görürsünüz.
 
     ![Python projesi için çalışma dizinini ayarlama](media/projects-set-working-directory.png)
 
@@ -60,7 +69,7 @@ ms.locfileid: "129972264"
 
     ![Python koans programından ilk çıkış](media/koans-output.png)
 
-1. *Python3/koans/about_asserts. kopyala* **Çözüm Gezgini** ' yı açın ve dosyaya çift tıklayın. Satır numaralarının düzenleyicide varsayılan olarak görünmediğine dikkat edin. Bunu değiştirmek için **Araçlar**  >  **Seçenekler**' i seçin, iletişim kutusunun alt kısmındaki **tüm ayarları göster** ' i seçin, sonra **metin Düzenleyicisi**  >  **Python**  >  **genel** ' e gidin ve **satır numaraları**' nı seçin:
+1. *Python3/koans/about_asserts. kopyala* **Çözüm Gezgini** ' yı açın ve dosyaya çift tıklayın. Varsayılan olarak, satır numaraları düzenleyicide görünmez. Bunu değiştirmek için **Araçlar**  >  **Seçenekler**' i seçin, iletişim kutusunun alt kısmındaki **tüm ayarları göster** ' i seçin, sonra **metin Düzenleyicisi**  >  **Python**  >  **genel** ' e gidin ve **satır numaraları**' nı seçin:
 
     ![Python dosyaları için satır numarası açılıyor](media/options-general-line-numbers.png)
 
@@ -70,7 +79,7 @@ ms.locfileid: "129972264"
     self.assertTrue(True) # This should be True
     ```
 
-1. Programı yeniden çalıştırın. Visual Studio hatalar hakkında sizi uyaralıyorsa, kodu çalıştırmaya devam etmek için **evet** ile yanıtlayın. Ardından ilk çekin başarılı olduğunu ve programın bir sonraki Koa 'da durmasını görürsünüz. Hataları ve programı dilediğiniz gibi düzeltmeye devam edin.
+1. Programı yeniden çalıştırın. Visual Studio hatalar hakkında sizi uyaralıyorsa, kodu çalıştırmaya devam etmek için **evet** ile yanıtlayın. Programın ilk denetim üzerinden geçireceğini ve sonraki Koa 'da durmasını görürsünüz. Hataları düzeltmeye devam edin ve programı istediğiniz şekilde yeniden çalıştırın.
 
 > [!Important]
 > Bu hızlı başlangıçta, GitHub *python_koans* deposunun doğrudan bir kopyasını oluşturdunuz. Böyle bir depo, yazar tarafından doğrudan değişikliklerden korunur, bu nedenle değişiklikleri depoya kaydetmeye çalışmak başarısız olur. pratikte, geliştiriciler böyle bir depoyu kendi GitHub hesabına çatalla, orada değişiklik yapıp, ardından bu değişiklikleri orijinal depoya göndermek için çekme istekleri oluşturacak. Kendi çatalınız olduğunda, daha önce kullanılan özgün depo URL 'si yerine URL 'sini kullanın.
@@ -82,6 +91,6 @@ ms.locfileid: "129972264"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Mevcut bir Python yorumlayıcısını el ile tanımla](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)
-- [Windows üzerinde Visual Studio Python desteği nasıl yüklenir](installing-python-support-in-visual-studio.md)
-- [Konum yüklemeleri](installing-python-support-in-visual-studio.md#install-locations)
+- [Mevcut bir Python yorumlayıcısını](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment) 
+ el ile tanımla [Windows üzerinde Visual Studio Python desteğini yükler](installing-python-support-in-visual-studio.md#how-to-install-python-support-in-visual-studio-on-windows)
+- [Python araçları yüklemesi dizini](installing-python-support-in-visual-studio.md#install-locations)

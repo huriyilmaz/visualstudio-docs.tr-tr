@@ -1,7 +1,7 @@
 ---
 title: Python Visual Studio öğretici adım 5, paket yüklemesi
 titleSuffix: ''
-description: bir python ortamında paketlerin yönetilmesi için Visual Studio özelliklerini gösteren, Visual Studio python özelliklerine yönelik temel bir izlenecek yolun 5. adımı.
+description: 5. adım, bir python ortamındaki paketleri yönetmek için Visual Studio ve Visual Studio özellikleri içindeki python yeteneklerini göstermek için temel bir adım adım değildir.
 ms.date: 03/09/2020
 ms.topic: tutorial
 author: rjmolyneaux
@@ -11,12 +11,12 @@ ms.technology: vs-python
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: df5f7a4bff771b271b3916974e29e07c934adac3
-ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
+ms.openlocfilehash: 8e651320fe10def51a58a479aec413bca0b37945
+ms.sourcegitcommit: 0f2af2f1a8cf0a481fd8f673accf3aebf2e262c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "129969119"
+ms.lasthandoff: 12/13/2021
+ms.locfileid: "134714348"
 ---
 # <a name="step-5-install-packages-in-your-python-environment"></a>5. Adım: Python ortamınıza paket yüklemeyi
 
@@ -26,20 +26,38 @@ Python geliştirici topluluğu, kendi projeleriniz ile birleştirebilmeniz için
 
 ## <a name="view-environments"></a>Ortamları görüntüleme
 
-1.   >  **diğer Windows**  >  **Python ortamlarını** görüntüle menü komutunu seçin. **Python ortamları** penceresi **Çözüm Gezgini** için bir eş olarak açılır ve size sunulan farklı ortamları gösterir. liste, Visual Studio yükleyicisini ve ayrı olarak yüklediğiniz ortamları gösterir. Bu, genel, sanal ve Conda ortamlarını içerir. Kalın olan ortam, yeni projeler için kullanılan varsayılan ortamdır. ortamlarla çalışma hakkında daha fazla bilgi için bkz. [Visual Studio ortamlarında Python ortamları oluşturma ve yönetme](managing-python-environments-in-visual-studio.md).
+1.   >  **diğer Windows**  >  **Python ortamlarını** görüntüle menü komutunu seçin. **Python ortamları** penceresi **Çözüm Gezgini** için bir eş olarak açılır.
 
-   ![Python ortamları penceresi](media/environments/environments-default-view-2019.png)
+   Python ortamları penceresinde kullanabileceğiniz farklı ortamlar gösterilir. liste, Visual Studio yükleyicisini kullanarak yüklediğiniz ortamları ve ayrı olarak yüklediğiniz ortamları gösterir. Bu ortamlar genel, sanal ve Conda ortamlarını içerir. Kalın olan ortam, yeni projeler için kullanılan varsayılan ortamdır. ortamlarla çalışma hakkında daha fazla bilgi için bkz. [Visual Studio ortamlarında Python ortamları oluşturma ve yönetme](managing-python-environments-in-visual-studio.md).
+
+   :::moniker range=">=vs-2022"
+   ![Python ortamları penceresi-2022](media/environments/environments-default-view-2022.png)
+   :::moniker-end
+
+   :::moniker range="<=vs-2019"
+   ![Python ortamları penceresi-2019](media/environments/environments-default-view-2019.png)
+   :::moniker-end
 
    > [!NOTE]
-   > Ayrıca, Çözüm Gezgini penceresini seçerek ve **CTRL + K, CTRL + '** klavye kısayolunu kullanarak Python ortamları penceresini açabilirsiniz. Kısayol işe yaramazsa ve menüde Python ortamları penceresini bulamıyorsanız, Python iş yükünü yüklemiş olmanız mümkün değildir. python 'un nasıl yükleneceğine ilişkin yönergeler için bkz. [Visual Studio python desteğini yüklemeyi](installing-python-support-in-visual-studio.md) öğrenin.
+   > Ayrıca, Çözüm Gezgini penceresinden **Python ortamları** penceresini açmak için **CTRL + K, CTRL + '** klavye kısayolunu da kullanabilirsiniz. Kısayol işe yaramazsa ve menüde Python ortamları penceresini bulamıyorsanız, Python iş yükünü yüklememiş olabilirsiniz. python 'un nasıl yükleneceğine ilişkin yönergeler için bkz. [Visual Studio python desteğini nasıl yükleyeceğiniz Windows](installing-python-support-in-visual-studio.md#how-to-install-python-support-in-visual-studio-on-windows) .
 
-2. Ortamın **genel bakış** sekmesi, ortamın yükleme klasörü ve yorumlayıcıları ile birlikte bu ortam için **etkileşimli** bir pencereye hızlı erişim sağlar. Örneğin **etkileşimli pencere aç** ' ı seçin ve bu ortam için **etkileşimli** bir pencere Visual Studio görüntülenir.
+   Bir Python projesi açıkken, **Çözüm Gezgini** **Python ortamları** penceresini açabilirsiniz. **Python ortamları** ' na sağ tıklayın ve **Tüm Python ortamlarını görüntüle**' yi seçin.
 
-3. şimdi, yeni Project **dosya** içeren yeni bir proje oluşturun  >    >  , **Python uygulama** şablonu ' nu seçin. Görüntülenen kod dosyasında, önceki öğretici adımları gibi bir kosinüs dalgası oluşturan aşağıdaki kodu yapıştırın, yalnızca bu kez grafik çizilir. Alternatif olarak, önceden oluşturduğunuz projeyi kullanabilir ve kodu değiştirebilirsiniz.
+   :::moniker range="vs-2022"
+   ![Python ortamları-2022](media/environments/environments-view-all-2022.png)
+   :::moniker-end
+
+   :::moniker range="<=vs-2019"
+   ![Python ortamları-2019](media/environments/environments-view-all-2019.png)
+   :::moniker-end
+
+1. şimdi, yeni Project **dosya** içeren yeni bir proje oluşturun  >    >  , **Python uygulama** şablonu ' nu seçin.
+
+1. Görüntülenen kod dosyasında, önceki öğretici adımları gibi bir kosinüs dalgası oluşturan aşağıdaki kodu yapıştırın, yalnızca bu kez grafik çizilir. Daha önce oluşturduğunuz projeyi de kullanabilir ve kodu değiştirebilirsiniz.
 
     ```python
     from math import radians
-    import numpy as np     # installed with matplotlib
+    import numpy as np # installed with matplotlib
     import matplotlib.pyplot as plt
 
     def main():
@@ -50,38 +68,73 @@ Python geliştirici topluluğu, kendi projeleriniz ile birleştirebilmeniz için
     main()
     ```
 
-4. Bir Python projesi açıkken, **Python** ortamları penceresini sağ tıklayıp Çözüm Gezgini **Tüm Python ortamlarını görüntüle** ' yi seçerek de açabilirsiniz.
+1. Düzenleyici penceresinde, `numpy` ve `matplotlib` içeri aktarma deyimlerinin üzerine gelin. Çözümlenmediğini fark edeceksiniz. İçeri aktarma deyimlerini çözümlemek için paketleri varsayılan genel ortama yüklersiniz.
+   :::moniker range=">=vs-2022"
+   ![Çözümlenmemiş paket içeri aktarması-2022](media/packages-unresolved-import-2022.png)
+   :::moniker-end
 
-   ![Ortam](media/environments/environments-view-all-2019.png)
+   :::moniker range="<=vs-2019"
+    ![Çözümlenmemiş paket içeri aktarma](media/packages-unresolved-import.png)
+   :::moniker-end
 
-5. Düzenleyici penceresine baktığınızda, `numpy` ve `matplotlib` Not alma deyimlerinin üzerine geldiğinizde çözümlenmediğini fark edersiniz. Bunun nedeni, paketlerin varsayılan genel ortama yüklenmediği bir ortamdır.
+1. Python ortamları penceresindeki **genel bakış** sekmesi, bu ortam için **etkileşimli** bir pencereye ve ortamın yükleme klasörüne ve yorumlayıcılara hızlı erişim sağlar. **Paketler** sekmesi genel bakış sekmesinin altında bulunabilir.
 
-   ![Çözümlenmemiş paket içeri aktarma](media/packages-unresolved-import.png)
+    Örneğin **etkileşimli pencere aç** ' ı seçin ve bu ortam için **etkileşimli bir pencere** Visual Studio görüntülenir.
+
+1. Python ortamları penceresindeki **paketler** sekmesi, ortamda yüklü olan tüm paketleri listeler.
 
 ## <a name="install-packages-using-the-python-environments-window"></a>Python ortamları penceresini kullanarak paket yükler
 
-1. Python ortamları penceresinde, yeni Python projeleri için varsayılan ortamı seçin ve **paketler** sekmesini seçin. Ardından, ortamda yüklü olan paketlerin bir listesini görürsünüz.
+Python **ortamı** penceresinde Python paketlerini yüklemek için aşağıdaki adımlara bakın.
 
-   ![Bir ortama yüklenen paketler](media/environments/environments-installed-packages-2019.png)
+   :::moniker range=">=vs-2022"
+   [Paketleri bir ortama yükler](media/environments/install-python-packages-2022.gif)
+   :::moniker-end
 
-2. `matplotlib`Öğesini arama alanına girerek ve sonra **komutu Çalıştır: PIP install Matplotlib** seçeneğini belirleyerek yüklemeyi seçin. Bunun `matplotlib` yanı sıra bağımlı olduğu paketleri (Bu durumda `numpy` ) yükler.
+1. **Python ortamları** penceresinde, yeni Python projeleri için varsayılan ortamı seçin.
 
-   ![Ortama Matplotlib yükleme](media/environments/environments-add-matplotlib-2019.png)
+1. **Paketler** sekmesini seçin.
 
-5. İstenirse yükseltme onayı.
+   :::moniker range="vs-2022"
+   ![Bir ortama yüklenen paketler-2022](media/environments/environments-installed-packages-2022.png)
+   :::moniker-end
 
-6. Paket yüklendikten sonra, **Python ortamları** penceresinde görünür. Paketin sağ tarafındaki **X** onu kaldırır.
+   :::moniker range="<=vs-2019"
+   ![Bir ortama yüklenen paketler-2019](media/environments/environments-installed-packages-2019.png)
+   :::moniker-end
 
-   ![Ortamda Matplotlib yükleme işleminin tamamlanması](media/environments/environments-add-matplotlib2-2019.png)
+1. `matplotlib`Yüklemek için arama alanına girin `matplotlib` .
 
-   > [!NOTE]
+1. **Çalıştır komutunu seçin: PIP install Matplotlib** seçeneği.
+      Bu seçenek `matplotlib` , ve bağımlı olduğu tüm paketleri (Bu durumda, içerir `numpy` ) yüklenir.
+
+   :::moniker range="vs-2022"
+    ![Matplotlib 'yi, paketler sekmesinde ortam-2022 yükleme](media/environments/environments-add-matplotlib-2022.png)
+   :::moniker-end
+   :::moniker range="<=vs-2019"
+   ![Matplotlib 'yi, paketler sekmesinde ortam-2019 yükleme](media/environments/environments-add-matplotlib-2019.png)
+   :::moniker-end
+
+1. İstenirse yükseltme onayı.
+
+1. Paket yüklendikten sonra, **Python ortamları** penceresinde görünür. Paketin sağ tarafındaki **X** onu kaldırır.
+
+   :::moniker range="vs-2022"
+   ![Ortama Matplotlib yükleme-2022](media/environments/environments-add-matplotlib2-2022.png)
+   :::moniker-end
+
+   :::moniker range="<=vs-2019"
+   ![Ortama Matplotlib yükleme-2019](media/environments/environments-add-matplotlib2-2019.png)
+   :::moniker-end
+
+    > [!NOTE]
    > Visual Studio, yeni yüklenen paket için ıntellisense veritabanını oluşturmakta olduğunu göstermek için ortamın altında küçük bir ilerleme çubuğu görünür. **IntelliSense** sekmesinde daha ayrıntılı bilgiler de gösterilmektedir. Bu veritabanı tamamlanana kadar, otomatik tamamlama ve söz dizimi denetimi gibi IntelliSense özelliklerinin bu pakete yönelik düzenleyicide etkin olmayacak olduğunu unutmayın.
-   >
+
    > Visual Studio 2017 sürüm 15,6 ve üzeri, ıntellisense ile çalışmaya yönelik farklı ve daha hızlı bir yöntem kullanır ve **ıntellisense** sekmesinden bu etkiye bir ileti görüntüler.
 
 ## <a name="run-the-program"></a>Programı çalıştırma
 
-1. Artık [Matplotlib](https://matplotlib.org/) yüklendiğinden, çıktıyı görmek için programı (**F5**) veya hata ayıklayıcı olmadan (**CTRL** + **F5**) çalıştırın:
+`matplotlib` [Matplotlib](https://matplotlib.org/)yükledikten sonra, çıktıyı görmek için programı (**F5**) veya hata ayıklayıcı olmadan çalıştırın (**CTRL** + **F5**):
 
    ![Matplotlib örneği çıkışı](media/environments/environments-add-matplotlib3.png)
 

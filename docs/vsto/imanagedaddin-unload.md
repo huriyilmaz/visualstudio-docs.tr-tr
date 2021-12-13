@@ -1,8 +1,8 @@
 ---
 title: IManagedAddin::Unload
-description: Yönetilen bir eklenti VSTO önce çağrılır.
+description: yönetilen bir VSTO eklentisi kaldırılmadan hemen önce çağırılır.
 ms.date: 02/02/2017
-ms.topic: interface
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: f877150a747984d0d04f779b16338d04fd55f1ba
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 7c25da9bf5465ef25ba580cc5cb3ed2487ccde29
+ms.sourcegitcommit: 0f2af2f1a8cf0a481fd8f673accf3aebf2e262c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126633846"
+ms.lasthandoff: 12/13/2021
+ms.locfileid: "134713622"
 ---
 # <a name="imanagedaddinunload"></a>IManagedAddin::Unload
-  Yönetilen bir eklenti VSTO önce çağrılır.
+  yönetilen bir VSTO eklentisi kaldırılmadan hemen önce çağırılır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -31,10 +31,10 @@ HRESULT Unload();
 ```
 
 ## <a name="return-value"></a>Döndürülen değer
- Yöntemin başarıyla tamamlandıktan sonra tamamlandıktan sonra bir HRESULT değeri.
+ Metodun başarıyla tamamlanıp tamamlanmadığını gösteren bir HRESULT değeri.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, geçerli sürümler tarafından çağrıl Microsoft Office. Bu yöntem gelecekte kullanılmak üzere ayrılmıştır.
+ Bu yöntem, geçerli Microsoft Office sürümleri tarafından çağrılmıyor. Bu yöntem gelecekte kullanılmak üzere ayrılmıştır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IManagedAddin arabirimi](../vsto/imanagedaddin-interface.md)

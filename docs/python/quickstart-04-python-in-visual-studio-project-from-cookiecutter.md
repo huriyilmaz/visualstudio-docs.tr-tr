@@ -10,16 +10,16 @@ ms.technology: vs-python
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: c124610bab413b59ec2dc00798f8bc63b7221eb5
-ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
+ms.openlocfilehash: 7325e16558435ab1603e9e29ff1f0606956fbd2f
+ms.sourcegitcommit: 0f2af2f1a8cf0a481fd8f673accf3aebf2e262c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "129968351"
+ms.lasthandoff: 12/13/2021
+ms.locfileid: "134713687"
 ---
 # <a name="quickstart-create-a-project-from-a-cookiecutter-template"></a>Hızlı Başlangıç: Cookiecutter şablonundan proje oluşturma
 
-Visual Studio'da [Python](installing-python-support-in-visual-studio.md)desteğini yüklediniz mi, bir Cookiecutter şablonundan yeni bir proje oluşturmak kolaydır ve bu şablonda yayımlanmış olan birçok proje GitHub. [Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) şablonları, giriş şablonu seçeneklerini bulmak ve proje ve dosya oluşturmak için bir grafik kullanıcı arabirimi sağlar. Visual Studio 2017 ve sonraki sürümlere dahil edilir ve önceki sürümlerde ayrı Visual Studio.
+Visual Studio'da [Python](installing-python-support-in-visual-studio.md)desteğini yüklediniz, bir Cookiecutter şablonundan yeni bir proje oluşturmak kolaydır ve bu şablonda yayımlanmış olan birçok proje GitHub. [Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) şablonları, giriş şablonu seçeneklerini bulmak ve proje ve dosya oluşturmak için bir grafik kullanıcı arabirimi sağlar. Visual Studio 2017 ve sonraki sürümlere dahil edilir ve önceki sürümlerde ayrı Visual Studio.
 
 1. Bu hızlı başlangıçta ilk olarak burada gösterilen Cookiecutter şablonu için gerekli Python paketlerini içeren Anaconda3 Python dağıtımını yükleyin. Uygulama yükleyicisini Visual Studio, Değiştir'i **seçin,** sağ tarafta **Python** geliştirme seçeneklerini genişletin ve **Anaconda3'ü** (32 bit veya 64 bit) seçin. Yüklemenin İnternet hızınıza bağlı olarak biraz zaman alsa da gerekli paketleri yüklemenin en kolay yolu olduğunu unutmayın.
 
@@ -27,13 +27,13 @@ Visual Studio'da [Python](installing-python-support-in-visual-studio.md)desteği
 
 1.   >    >  **Cookiecutter'dan Dosya Yeni'yi seçin.** Bu komut, şablonlarda Visual Studio bir pencere açar.
 
-    ![Cookiecutter Project yeni bir uygulama](media/projects-from-cookiecutter1.png)
+    ![Cookiecutter Project yeni uygulama](media/projects-from-cookiecutter1.png)
 
-1. **Microsoft/python-sklearn-classifier-cookiecutter şablonunu** seçtikten sonra Sonraki'yi **seçin.** (Belirli bir şablonu ilk kez kullanırsanız işlem birkaç dakika sürebilir çünkü Visual Studio Python paketleri yüklenir.)
+1. **Microsoft/python-sklearn-classifier-cookiecutter şablonunu** seçtikten sonra Sonraki'yi **seçin.** (Belirli bir şablonu ilk kez kullanıyorsanız işlem birkaç dakika sürebilir, Visual Studio Python paketlerini yükleyebilirsiniz.)
 
 1. Sonraki adımda, Yeni proje için Oluştur alanında  bir konum ayarlayın ve ardından Oluştur ve Aç'ı **Project.**
 
-    ![Cookiecutter kullanarak ikinci adım, proje özelliklerini ayarlama](media/projects-from-cookiecutter2.png)
+    ![Cookiecutter kullanarak proje özelliklerini ayarlama ikinci adım](media/projects-from-cookiecutter2.png)
 
 1. İşlem tamamlandığında Şablon kullanarak dosyalar başarıyla **oluşturuldu... iletisiyle karşılanır.** Proje otomatik olarak Çözüm Gezgini açılır.
 
@@ -49,6 +49,6 @@ Visual Studio'da [Python](installing-python-support-in-visual-studio.md)desteği
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Cookiecutter uzantısını kullanma](using-python-cookiecutter-templates.md)
-- [Mevcut Python yorumlayıcıyı el ile tanımlama](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)
-- [Visual Studio 2015 ve önceki sürümlerde Python desteğini yükleme](installing-python-support-in-visual-studio.md)
-- [Yükleme konumları](installing-python-support-in-visual-studio.md#install-locations)
+- [Mevcut Python yorumlayıcıyı el ile tanımlama](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment) 
+ [Visual Studio'da Python desteğini Windows](installing-python-support-in-visual-studio.md#how-to-install-python-support-in-visual-studio-on-windows)
+- [Python araçları yükleme dizini](installing-python-support-in-visual-studio.md#install-locations)
