@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-test
 ms.workload:
 - multiple
-ms.openlocfilehash: 95dc8d9424c0881304e3812cfed79b2e87c91f70
-ms.sourcegitcommit: a149b3a034bb555ad217656c0ec8bc1672b1e215
+ms.openlocfilehash: a0252a0a2bc7ee84a8f32a75ab5c0a0b1da992aa
+ms.sourcegitcommit: 5178819f49bb92995bca5c90c90e5fc5a1e04681
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "133514718"
+ms.lasthandoff: 12/14/2021
+ms.locfileid: "134938262"
 ---
 # <a name="create-unit-test-method-stubs-from-code"></a>Koddan birim testi yöntemi saplamaları oluşturma
 
@@ -25,7 +25,7 @@ Birim **Testleri Oluştur komutu** birim testi yöntemi saplamaları oluşturur.
 
 ::: moniker range="vs-2017"
 > [!NOTE]
-> Birim **Testleri Oluştur menü** komutu yalnızca .NET Core veya .NET Framework'yi .NET Framework C# kodu için .NET Standard.
+> Birim **Testleri Oluştur menü** komutu yalnızca .NET Framework 'i (.NET Core veya .NET Standard) hedef alan C# kodu için kullanılabilir.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 > [!NOTE]
@@ -67,11 +67,11 @@ NUnit veya xUnit için birim testlerini otomatik olarak oluşturmak için Market
 
 ## <a name="when-should-i-use-this-feature"></a>Bu özelliği ne zaman kullan gerekir?
 
-Birim testleri oluşturmanız gereken her durumda, ancak özellikle çok az test kapsamına sahip veya hiç belgesi olan mevcut kodu test ediyorsanız bu özelliği kullanın. Başka bir deyişle, sınırlı veya mevcut olmayan kod belirtimi vardır. Kodun gözlemlenen davranışını ifade [etmek için Akıllı](https://devblogs.microsoft.com/devops/introducing-smart-unit-tests/) birim testlerinde olduğu gibi etkili bir yaklaşım benimser.
+Birim testleri oluşturmanız gereken her durumda, ancak özellikle çok az test kapsamına sahip veya hiç belgesi olan mevcut kodu test ediyorsanız bu özelliği kullanın. Başka bir deyişle, sınırlı veya mevcut olmayan kod belirtimi vardır. Kodun gözlemlenen davranışını ifade etmek için [IntelliTest'e](generate-unit-tests-for-your-code-with-intellitest.md) benzer bir yaklaşım benimser.
 
 Ancak, bir geliştirici bazı kodlar yazarak başladığında ve ardından birim testlerini önyüklemek için bunu kullandığında bu özellik de aynı şekilde geçerlidir. Kod akışı içinde geliştirici, belirli bir kod parçası için hızla bir birim testi yöntemi saplama (uygun bir test sınıfı ve uygun bir test projesi ile) oluşturmak istiyor olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- ["Birim Testleri Oluştur" ile birim testi yöntemi saplamaları oluşturma](https://devblogs.microsoft.com/devops/creating-unit-test-method-stubs-with-create-unit-tests/)
-- [Birim testi blog gönderileri](https://devblogs.microsoft.com/devops/?s=unit+testing)
+- [IntelliTest’i kullanmaya başlama](generate-unit-tests-for-your-code-with-intellitest.md)
+- [Birim testi blog gönderileri](https://devblogs.microsoft.com/search?query=unit+testing)
