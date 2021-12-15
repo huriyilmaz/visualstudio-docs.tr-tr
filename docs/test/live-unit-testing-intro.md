@@ -1,6 +1,6 @@
 ---
 title: Giriş Live Unit Testing
-description: Live Unit Testing avantajları ve projelerinizi birim testi yaparken nasıl kullanacağınızı öğrenin.
+description: Projenizin avantajlarını Live Unit Testing ve projelerinizi birim testi sırasında nasıl kullanabileceğinizi öğrenin.
 ms.date: 09/11/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,37 +11,33 @@ manager: jmartens
 ms.technology: vs-ide-test
 ms.workload:
 - dotnet
-ms.openlocfilehash: c2b18f6443d6460350683e0f4feb53ebd8ccff5a
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: b3b12da9425de6852fb855ae1442b32d5e52a8e6
+ms.sourcegitcommit: 04fb8ba0f7ea73ba17baa88f10563c8600e7fd7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126628095"
+ms.lasthandoff: 12/15/2021
+ms.locfileid: "135121775"
 ---
 # <a name="live-unit-testing-overview"></a>Live Unit Testing genel bakış
 
-Live Unit Testing, kod değişiklikleri yaptığınızda birim testlerinizi otomatik olarak ve gerçek zamanlı olarak yürütür. Bu, daha fazla güvenle yeniden düzenleme ve kod değiştirme olanağı sağlar. Live Unit Testing, değişikliklerinizin gerileme oluşturmadığından emin olmak için kodunuzu düzenlerken, etkilenen tüm testleri otomatik olarak yürütür.
+Live Unit Testing değişiklikleri yaptığınız sırada birim testlerinizi otomatik olarak ve gerçek zamanlı olarak yürütür. Bu, kodu daha güvenle yeniden düzenlemenizi ve değiştirmenizi sağlar. Live Unit Testing değişikliklerinizin regresyona neden olmasını sağlamak için kodunuzu düzenlerken tüm etkiyi alan testleri otomatik olarak yürütür.
 
-Live Unit Testing, birim testlerinizin kodunuzu yeterince kapsamadığını gösterir. Kod kapsamını gerçek zamanlı olarak grafiksel olarak gösterir. Her bir kod satırını kapsayan ve hangi satırların herhangi bir birim testi kapsamında olmadığını bir bakışta görebilirsiniz.
+Live Unit Testing, birim testlerinin kodunuzu yeterli bir şekilde kapsıyor olup olmadığını gösterir. Kod kapsamı grafik olarak gerçek zamanlı olarak anlattır. Her kod satırı için kaç test olduğunu ve hangi satırların hiçbir birim testi kapsamında olmadığını bir bakışta görebilirsiniz.
 
-bir veya daha fazla birim testi projesi içeren bir çözümünüz varsa,   >    >  Visual Studio ' deki en üst düzey menü çubuğundan test Live Unit Testing **başlat** ' ı seçerek Live Unit Testing etkinleştirebilirsiniz.
+Bir veya daha fazla birim testi projesi içeren bir çözümünüz varsa, Live Unit Testing'daki üst düzey menü çubuğundan **Test** Live Unit Testing  >    >  **Başlat'ı** seçerek Visual Studio.
 
 > [!NOTE]
-> Live Unit Testing yalnızca Visual Studio Enterprise sürümünde kullanılabilir ve yalnızca .net sürümünde desteklenir.
+> Live Unit Testing sürümü yalnızca Visual Studio Enterprise ve yalnızca .NET'te de kullanılabilir.
 
-Live Unit Testing hakkında daha fazla bilgi edinmek için:
+Daha fazla bilgi edinmek için Live Unit Testing:
 
-- Tanıtım öğreticisi deneyin: [Live Unit Testing kullanmaya başlayın](live-unit-testing-start.md).
+- Giriş niteliğindeki öğreticiyi deneyin: [Kullanmaya başlayın ile Live Unit Testing.](live-unit-testing-start.md)
 
-- ayrıntılı belgeleri okuyun: [Live Unit Testing Visual Studio Enterprise Edition ile kullanın](live-unit-testing.md).
+- Ayrıntılı belgeleri okuyun: [Live Unit Testing Visual Studio Enterprise Sürümünü kullanın.](live-unit-testing.md)
 
-- Live Unit Testing yenilikleri ve ipuçları ile teknikleri öğrenmek için [LIVE UNIT TESTING SSS](live-unit-testing-faq.yml) makalesini okuyun.
-
-- Live Unit Testing ve özelliklerine genel bir bakış için Channel 9 videosunu izleyin.</p>
-
-   > [!VIDEO https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T105/player]
+- Hem [Live Unit Testing tekniklerinin](live-unit-testing-faq.yml) yanı sıra Live Unit Testing hakkında bilgi edinmek için Live Unit Testing SSS bölümünü okuyun.
 
 ## <a name="related-resources"></a>İlgili kaynaklar
 
 - [Kod testi araçları](https://visualstudio.microsoft.com/vs/testing-tools/)
-- [Kodunuzun birim testi](unit-test-your-code.md)
+- [Kodunuzu birim testi](unit-test-your-code.md)

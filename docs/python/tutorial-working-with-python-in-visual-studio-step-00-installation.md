@@ -2,22 +2,22 @@
 title: Visual Studio eğitim adım 0, yükleme
 titleSuffix: ''
 description: Visual Studio 'de Python ile çalışmaya yönelik temel bir izlenecek yolun 0. adımı (yükleme önkoşulları).
-ms.date: 09/14/2021
+ms.date: 12/11/2021
+ms.custom: devdivchpfy22, vs-acquisition
 ms.topic: tutorial
 author: rjmolyneaux
 ms.author: rmolyneaux
 manager: jmartens
 ms.technology: vs-python
-ms.custom: vs-acquisition
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: f02fc5c537bbbdaa80b40f989014c14e36aacd46
-ms.sourcegitcommit: 0f2af2f1a8cf0a481fd8f673accf3aebf2e262c8
+ms.openlocfilehash: ab21d1939a79b3065dd27449d58ce72e4001005d
+ms.sourcegitcommit: 04fb8ba0f7ea73ba17baa88f10563c8600e7fd7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/13/2021
-ms.locfileid: "134714821"
+ms.lasthandoff: 12/15/2021
+ms.locfileid: "135121520"
 ---
 # <a name="install-python-support-in-visual-studio"></a>Visual Studio’da Python desteğini yükleme
 
