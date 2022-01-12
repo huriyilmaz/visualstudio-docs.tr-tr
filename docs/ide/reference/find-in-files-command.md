@@ -2,7 +2,7 @@
 title: Dosyalarda Bul Komutu
 description: Bul ve Değiştir penceresinin dosyalarda bul sekmesinde bulunan bazı seçenekleri kullanarak Bul komutu ve dosyaları nasıl arayacağını öğrenin.
 ms.custom: SEO-VS-2020
-ms.date: 11/04/2016
+ms.date: 01/11/2022
 ms.topic: reference
 f1_keywords:
 - edit.findinfiles
@@ -16,12 +16,13 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 3ccc2bb3a6d324d64fb2332326ae083fc84a3db6
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+monikerRange: <=vs-2019
+ms.openlocfilehash: 8d419df0ddb35ffa83669c5ca597f762e04be76f
+ms.sourcegitcommit: 56ffe075ea321809a5b0e6bdc12cf3323b3482ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126725730"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135958842"
 ---
 # <a name="find-in-files-command"></a>Dosyalarda Bul Komutu
 **Bul ve Değiştir** penceresinin **dosyalarda bul** sekmesinde bulunan seçeneklerin bir alt kümesini kullanarak dosyaları arayın.
@@ -92,5 +93,5 @@ bu örnek, "Visual Studio projelerim" klasöründe bulunan tüm. cls dosyaların
 - [Dosyalarda Bul](../../ide/find-in-files.md)
 - [Komut penceresi](../../ide/reference/command-window.md)
 - [Bul/komut kutusu](../../ide/find-command-box.md)
-- [Visual Studio Komut](../../ide/reference/visual-studio-commands.md)
+- [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)
