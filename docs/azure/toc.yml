@@ -21,8 +21,8 @@
   items:
     - name: Bağlı hizmetlere genel bakış
       href: overview-connected-services.md
-    - name: Azure Active Directory (AD) ekleme
-      href: /azure/active-directory/develop/vs-active-directory-add-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
+    - name: Azure Active Directory ekleme (Azure AD)
+      href: vs-active-directory-add-connected-service.md
     - name: Azure Uygulaması İçgörüleri ekleme
       href: azure-app-insights-add-connected-service.md
     - name: Redis için Azure Cache ekleme
@@ -124,6 +124,18 @@
           href: /azure/vs-azure-tools-storage-explorer-relnotes?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
         - name: Depolama Gezgini erişilebilirliği
           href: /azure/vs-azure-tools-storage-explorer-accessibility?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
+- name: Azure Active Directory çalışın
+  items:
+    - name: .NET MVC projelerini kullanmaya başlama
+      href: vs-active-directory-dotnet-getting-started.md
+    - name: .NET MVC projeme ne oldu?
+      href: vs-active-directory-dotnet-what-happened.md
+    - name: .NET WebAPI projelerini kullanmaya başlama
+      href: vs-active-directory-webapi-getting-started.md
+    - name: WebAPI projeme ne oldu?
+      href: vs-active-directory-webapi-what-happened.md
+    - name: Kimlik doğrulaması sırasında hataları tanılama
+      href: vs-active-directory-error.md
 - name: Cloud Explorer
   items:
     - name: Sunucu Gezgini'ni kullanarak depolama kaynaklarına göz atma ve bu kaynakları yönetme

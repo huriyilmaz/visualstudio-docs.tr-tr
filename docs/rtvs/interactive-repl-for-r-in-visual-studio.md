@@ -4,18 +4,18 @@ description: Düzenleyici pencereleriyle tümleştirilmiş R inVisual Studio iç
 ms.date: 06/28/2017
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
-author: kraigb
-ms.author: kraigb
+author: ghogen
+ms.author: ghogen
 manager: jmartens
 ms.technology: vs-rtvs
 ms.workload:
 - data-science
-ms.openlocfilehash: bc00c97029daabc6b13a08f9a40a47cd612cbc7c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: a942b59b06aebc079aaab220ff79be2868ed7974
+ms.sourcegitcommit: dcecc0ed37b5e976b5dc83c5128ba5ecc8bc04b1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122076002"
+ms.lasthandoff: 01/04/2022
+ms.locfileid: "135750570"
 ---
 # <a name="work-with-the-r-interactive-window"></a>R etkileşimli penceresiyle çalışma
 
@@ -36,7 +36,7 @@ Geçerli R kodu yazmak ve **satırın** sonuna Enter tuşuna basmak kodu şu sat
 
 Tek **satırlı** girişin herhangi bir yerinde Enter tuşuna bask o satırı da çalıştırır.
 
-REPL'de önceki tüm giriş ve çıkışlar salt okunur olup değiştirilemez. Ancak istediğiniz zaman pencerede metinleri seçerek kopyalayıp yapıştırabilirsiniz. Yapıştıran kod satır satır girildi gibi çalışır.
+REPL'de önceki tüm giriş ve çıkışlar salt okunur olur ve değiştirilemez. Ancak istediğiniz zaman pencerede metinleri seçerek kopyalayıp yapıştırabilirsiniz. Yapıştıran kod satır satır girildi gibi çalışır.
 
 Başka bir ifade yazmaya başladığınızda ve **Enter** tuşuna basladığınızda RTVS, deyimin ne zaman devam edeceğini bilir ve sol tarafta + istemi ve uygun girintiyi girerek çok satırlı moda girer. RTVS ayraçları, köşeli ayraçları ve küme ayraçlarını da tamamlar:
 
@@ -48,23 +48,23 @@ Bu çok satırlı **modda, Enter** anahtarı kod bloğu yalnızca bloğun sonuna
 
 Araç çubuğundaki etkileşimli pencere şöyledir:
 
-![Etkileşimli penceresi çubuğuyla görüntüleme](media/repl-window.png)
+![Etkileşimli penceresi araç çubuğuyla görüntüleme](media/repl-window.png)
 
-Araç çubuğu komutları aşağıdaki gibidir ve çoğu klavye eşdeğerlerine sahiptir ve R Araçları Oturumu ve **R Araçları** Çalışma Dizini menülerinde de kullanılabilir  >     >   (veya not edilen şekilde):
+Araç çubuğu komutları aşağıdaki gibidir; bunların çoğu klavye eşdeğerlerine sahiptir ve R Araçları Oturumu ve **R Araçları** Çalışma Dizini menülerinde de kullanılabilir  >     >   (veya not edilen şekilde):
 
-| Düğme | Komut | Tuş bileşimi | Açıklama |
+| Düğme | Komut | Tuş bileşimi | Description |
 | --- | --- | --- | --- |
-| ![Sıfırla düğmesi](media/repl-toolbar-01-reset.png) | Sıfırla | **Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **F10** | Etkileşimli pencere oturumunu sıfırlar ve tüm değişkenleri ve geçmişi temizler. |
-| ![Düğmeyi temizle](media/repl-toolbar-02-clear.png) | Temizle | **Ctrl tuşunu basılı tutarak** + **L** | Etkileşimli pencerede gösterilen çıkışı temizler; oturum değişkenlerini veya geçmişini etkilemez. |
+| ![Sıfırla düğmesi](media/repl-toolbar-01-reset.png) | Sıfırla | **Ctrl** + **Üstkrkt** + **F10** | Etkileşimli pencere oturumunu sıfırlar ve tüm değişkenleri ve geçmişi temizler. |
+| ![Düğmeyi temizle](media/repl-toolbar-02-clear.png) | Temizle | **Ctrl** + **L** | Etkileşimli pencerede gösterilen çıkışı temizler; oturum değişkenlerini veya geçmişini etkilemez. |
 | ![Geçmiş düğmeleri](media/repl-toolbar-03-history.png) | Önceki Geçmiş Komutu<br/>Sonraki Geçmiş Komutu | **Yukarı,** **Aşağı**<br/>**Alt** + **Yukarı,** **Alt** + **Aşağı** | Çok satırlı kod bloklarının belirli davranışlarıyla geçmişi kaydırarak. Bkz. [Geçmiş.](#history) |
 | ![Çalışma alanını yükle düğmesi](media/repl-toolbar-04-load-workspace.png) | Çalışma Alanını Yükleme | yok | Daha önce kaydedilen bir çalışma alanını yükler (bkz. [Çalışma alanları ve oturumlar.](#workspaces-and-sessions) |
 | ![Çalışma alanını farklı kaydet düğmesi](media/repl-toolbar-05-save-workspace-as.png)| Çalışma Alanını Farklı Kaydet | yok | Oturumun geçerli durumunu çalışma alanı olarak kaydeder (bkz. Çalışma [alanları ve oturumlar.](#workspaces-and-sessions) |
-| ![Kaynak R betiği düğmesi](media/repl-toolbar-06-source-r-script.png) | Kaynak R Betiği | **Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **S** | Şu `source` anda etkin olan R betiğiyle Visual Studio düzenleyicide kod çalıştıran çağrıları.  Bu düğme yalnızca bir R dosyası düzenleyicide açık Visual Studio görünür. |
-| ![Yankı düğmesiyle kaynak R betiği](media/repl-toolbar-07-source-r-script-with-echo.png) | Echo ile Kaynak R Betiği | **Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **Enter tarak** | Kaynak R Betiği ile aynı ama betiğin içeriğini etkileşimli pencerede görüntüler. |
+| ![Kaynak R betiği düğmesi](media/repl-toolbar-06-source-r-script.png) | Kaynak R Betiği | **Ctrl** + **Üstkrkt** + **S** | Şu `source` anda etkin olan R betiğiyle Visual Studio düzenleyicide kod çalıştıran çağrıları.  Bu düğme yalnızca bir R dosyası düzenleyicide açık Visual Studio görünür. |
+| ![Yankı düğmesiyle kaynak R betiği](media/repl-toolbar-07-source-r-script-with-echo.png) | Echo ile Kaynak R Betiği | **Ctrl** + **Üstkrkt** + **Girin** | Kaynak R Betiği ile aynı ama betiğin içeriğini etkileşimli pencerede görüntüler. |
 | ![R düğmesini kesme](media/repl-toolbar-08-interrupt-r.png)| R'yi kesintiye uğratma | **Esc** | Etkileşimli pencerede, bu bölümün başındaki ekran görüntüsünde yer alan döngü gibi çalışan `while` tüm kodu durdurur. |
 | ![Hata ayıklayıcı ekle düğmesi](media/repl-toolbar-09b-attach-debugger.png)| Hata Ayıklayıcı ekleme | yok | Ayrıca Hata **Ayıklama'ya Ekle**  >  **komutu R Etkileşim** kullanılabilir. |
-| ![Çalışma dizinini kaynak dosya konumu olarak ayarla düğmesi](media/repl-toolbar-10-set-working-directory-source.png)| Çalışma Dizini'nin Kaynak Dosya Konumu olarak ayarlayın | **Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **E** | Çalışma dizinini etkileşimli pencereye yüklenen en son kaynak dosya olarak ayarlar `source` (kullanarak). Bkz. [Çalışma dizini.](#working-directory) |
-| ![Çalışma dizinini proje konumu olarak ayarla düğmesi](media/repl-toolbar-11-set-working-directory-to-project.png) | Çalışma Dizini'Project ayarlama | **Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **P** | Çalışma dizinini, çalışma dizininde yüklü olan projenin kök dizinine Visual Studio. Bkz. [Çalışma dizini.](#working-directory) |
+| ![Çalışma dizinini kaynak dosya konumu olarak ayarla düğmesi](media/repl-toolbar-10-set-working-directory-source.png)| Çalışma Dizini'nin Kaynak Dosya Konumu olarak ayarlayın | **Ctrl** + **Üstkrkt** + **E** | Çalışma dizinini etkileşimli pencereye yüklenen en son kaynak dosya olarak ayarlar `source` (kullanarak). Bkz. [Çalışma dizini.](#working-directory) |
+| ![Çalışma dizinini proje konumu olarak ayarla düğmesi](media/repl-toolbar-11-set-working-directory-to-project.png) | Çalışma Dizini'Project Ayarlama | **Ctrl** + **Üstkrkt** + **P** | Çalışma dizinini, çalışma dizininde yüklü olan projenin kök dizinine Visual Studio. Bkz. [Çalışma dizini.](#working-directory) |
 | (Metin alanı) | Çalışma Dizini'yi seçin | yok | Çalışma dizini için doğrudan giriş alanı. Bkz. [Çalışma dizini.](#working-directory) |
 
 ## <a name="workspaces-and-sessions"></a>Çalışma alanları ve oturumlar
@@ -85,17 +85,17 @@ Geliştiriciler genellikle etkileşimli bir oturumda çalışma dizinini değiş
 
 ## <a name="history"></a>Geçmiş
 
-Etkileşimli pencerede, bir düzenleyiciden gönderilen satırları içeren her satır REPL'nin geçmişinde korunur. Daha sonra, büyük olasılıkla komut satırına alışkın olduğunuz için Yukarı ve Aşağı ok tuşlarıyla geçmiş arasında gezinebilirsiniz.
+Etkileşimli pencereye girdiğiniz her satıra, bir düzenleyiciden gönderilen satırlar dahil, REPL 'un geçmişinde korunur. Daha sonra, komut satırına alışkın olduğunuz gibi yukarı ve aşağı ok tuşlarıyla geçmiş üzerinden gezinebilirsiniz.
 
-Farklardan biri, geçerli satıra yazmaya başladığınızda ve Yukarı'ya basıyorsanız, o satırı henüz çalıştırmamış olsa bile bu geçerli satırın geçmişiniz içinde korunmasıdır.
+Tek fark, geçerli satırda yazmaya başladığınızda ve üzerine basarsanız, o satırı henüz çalıştırmadığınız takdirde bile geçerli satırın geçmişinizde korunduğu bir farklılık olur.
 
-Etkileşimli pencerede geçmiş, satırlara yayılan diğer kod bloğu deyimleriyle de akıllı bir şekilde çalışır. Yukarı ve Aşağı ok tuşlarıyla geçmişin üzerinden geçerek, çok satırlı kod blokları bir bütün olarak alınır ve geçerli giriş olarak gösterilir. Bu noktada ok tuşları, üst veya alta ulaşılana kadar kod bloğunda satır satır geziner. Kod bloğun en üstünde yukarı ok, geçmişte yer alan önceki öğeyi; alt satırda aşağı ok sonraki öğeyi almaya devam ediyor.
+Etkileşimli penceredeki geçmiş Ayrıca, satırları kapsayan diğer kod bloğunun deyimleriyle sorunsuz bir şekilde çalışabilir. Yukarı ve aşağı ok tuşlarıyla geçmiş aracılığıyla geçiş yaparken, çok satırlı kod blokları bir bütün birim olarak alınır ve geçerli girdi olarak gösterilir. Bu noktada, ok tuşları, üst veya alt sınıra ulaşana kadar bu kod bloğu satırına satıra göre gider. Kod bloğunun en üstünde, yukarı ok geçmişteki bir önceki öğeyi alır; alt satırda aşağı ok bir sonraki öğeyi alır.
 
-Bu davranış, bir Yukarı ok ve **Enter** tuş vuruşu bileşimiyle tarihteki son öğeyi yeniden çalıştırmanın tipik bir durumuna uyum sağlar ve doğal olarak yukarı ok tuşuna basarak çok satırlı bir kod bloğunu düzenlemeye olanak sağlar.
+Bu davranış, geçmişteki son öğeyi bir yukarı ok ile yeniden çalıştırmak ve tuş vuruşu kombinasyonunu **girerken** , doğal olarak çok satırlı bir kod bloğunun düzenlenmesine Izin verirken yukarı oka basarak bir kez daha
 
-Çok satırlı kod bloklarına gezinmeyi önlemek için araç çubuğu düğmelerini veya **Alt** Yukarı ve Alt Aşağı düğmelerini kullanın ve bu tür tüm bloklar +  tek satır olarak  - kabul edilir.
+Çok satırlı kod bloklarına gidilmemek için, araç çubuğu düğmelerini veya **alt** + ve **alt****alt tuşunu kullanın** - ve tüm bloklar tek bir satır olarak değerlendirilir.
 
-Geçmiş özelliklerini yaşamanın en kolay yolu etkileşimli pencerede bunları kendiniz denemektir. Aşağıdaki kod birkaç uygun tek ve çok satırlı deyim sağlar. Bununla birlikte, uygun geçmişi oluşturmak için her deyimle ayrı ayrı copy-paste kullanın. (Ayrıca kodu ayrı bir kod dosyasına yapıştırabilir ve ardından satırları **Ctrl** tuşuyla etkileşimli pencereye gönderebilirsiniz + **girin.)**
+Geçmiş özelliklerini çalıştırmanın en kolay yolu, bunları etkileşimli pencerede kendiniz denemaktır. Aşağıdaki kod, birkaç uygun tek ve çok satırlı deyimler sağlar. Her deyimle birlikte, uygun geçmişi oluşturmak için Kopyala seçeneğini kullanın. (Ayrıca, kodu ayrı bir kod dosyasına yapıştırabilirsiniz ve sonra **CTRL** + + ile çizgileri etkileşimli pencereye gönderebilirsiniz. **Girin**.)
 
 ```R
 3 + 3

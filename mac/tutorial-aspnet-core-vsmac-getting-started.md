@@ -3,17 +3,18 @@ title: Mac için Visual Studio’da ASP.NET Core kullanmaya başlama
 titleSuffix: ''
 ms.custom: SEO-VS-2020
 description: bu belge Mac için Visual Studio ASP.NET Core nasıl başlayacağınız hakkında video öğreticileri içerir.
-author: sayedihashimi
-ms.author: sayedha
+author: jmatthiesen
+ms.author: jomatthi
+manager: dominicn
 ms.date: 10/18/2019
 ms.assetid: 591b21ee-8c3f-446b-9505-7d41bfc86701
-ms.topic: tutorial
-ms.openlocfilehash: 75f0e634a870c80084337292f5ee932dee1cff8e
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.topic: how-to
+ms.openlocfilehash: 035c25d5c3cbb6eef06c39534dd38c6025eb0de1
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126725961"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135803576"
 ---
 # <a name="tutorial-getting-started-with-aspnet-core-in-visual-studio-for-mac"></a>öğretici: Mac için Visual Studio ASP.NET Core kullanmaya başlama
 

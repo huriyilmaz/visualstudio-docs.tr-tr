@@ -4,18 +4,18 @@ description: Uzak R çalışma alanlarını ayarlama ve çalışma alanlarından
 ms.date: 12/04/2017
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
-author: kraigb
-ms.author: kraigb
+author: ghogen
+ms.author: ghogen
 manager: jmartens
 ms.technology: vs-rtvs
 ms.workload:
 - data-science
-ms.openlocfilehash: 03065c6cc2b7c9bf65bde4c4d55250b28fe9213c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 6f140381ee9dfa6c9ed58d7a5213f0c67f596a7e
+ms.sourcegitcommit: dcecc0ed37b5e976b5dc83c5128ba5ecc8bc04b1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122060524"
+ms.lasthandoff: 01/04/2022
+ms.locfileid: "135750562"
 ---
 # <a name="set-up-remote-workspaces"></a>Uzak çalışma alanlarını ayarlama
 
@@ -117,7 +117,7 @@ Otomatik olarak imzalanan bir sertifikayı kendiniz yapmak için:
 
 ### <a name="configure-rtvs-daemon"></a>RTVS daemon'larını yapılandırma
 
-SSL sertifika dosyası yolu (PFX yolu) *üzerinde /etc/rtvs/rtvsd.config.jsayar gerekir.* ve `X509CertificateFile` `X509CertificatePassword` dosyasını sırasıyla dosya yolu ve parola ile güncelleştirin.
+SSL sertifika dosyası yolu (PFX'in yolu) */etc/rtvs/rtvsd.config.json içinde ayar gerekir.* ve `X509CertificateFile` `X509CertificatePassword` dosyasını sırasıyla dosya yolu ve parola ile güncelleştirin.
 
 ```json
 {
@@ -150,12 +150,12 @@ R kodunu çalıştırmak için uzak bilgisayarda aşağıdaki gibi bir R yorumla
     - *%PROGRAMFILES%\Visual Studio için R Araçları\1.0 \\* içinde bir klasör oluşturun ve gerekli tüm ikili dosyaları kopyalayın.
     - Otomatik `RHostBrokerService` olarak başlayacak şekilde yükleyin ve `RUserProfileService` yapılandırabilirsiniz.
     - Hizmeti otomatik `seclogon` olarak başlayacak şekilde yapılandırma.
-    - Varsayılan *Microsoft.R.Host.exe* *5444Microsoft.R.Host.Broker.exe* güvenlik duvarı gelen kurallarına güvenlik duvarı ekleme ve güvenlik duvarı ekleme.
+    - Varsayılan *Microsoft.R.Host.exe* *Microsoft.R.Host.Broker.exe* 5444'te güvenlik duvarı gelen kurallarına güvenlik duvarı ve güvenlik duvarı kuralları ekleyin.
 
 Bilgisayar yeniden başlatıldığında R hizmetleri otomatik olarak başlatılır:
 
 - **R Konak Aracısı Hizmeti,** R kodunun bilgisayarda Visual Studio ve işlem arasındaki tüm HTTPS trafiğini işler.
-- **R Kullanıcı Profili Hizmeti,** kullanıcı profili oluşturmayla ilgili Windows bir bileşendir. Yeni bir kullanıcı R sunucusu bilgisayarda ilk kez oturum açtığında hizmet çağrılır.
+- **R Kullanıcı Profili Hizmeti,** kullanıcı profili oluşturma işlemi Windows ayrıcalıklı bir bileşendir. Yeni bir kullanıcı R sunucusu bilgisayarda ilk kez oturum açtığında hizmet çağrılır.
 
 Bu hizmetleri hizmetler yönetim konsolunda (*compmgmt.msc ) görüyorsunuz.*
 
@@ -178,7 +178,7 @@ Uzak bilgisayarda çalışan R hizmetleriyle kullanıcı hesapları oluşturman�
 
 1. Kullanıcı hesapları: Uzak bilgisayara erişen her kullanıcı için hesaplar oluşturun. Standart (ayrıcalıklı olmayan) yerel kullanıcı hesapları oluşturabilir veya R sunucusu bilgisayarınızı etki alanınıza ekleyebilir ve güvenlik grubuna uygun güvenlik gruplarını `Users` ekebilirsiniz.
 
-1. Güvenlik duvarı kuralları: Varsayılan olarak, `R Host Broker` TCP bağlantı noktası 5444'te dinler. Bu nedenle, hem gelen Windows giden trafik için etkin güvenlik duvarı kuralları olduğundan emin olun (paketleri ve benzer senaryoları yüklemek için giden gereklidir).  R hizmetleri yükleyicisi, yerleşik güvenlik duvarı için bu kuralları Windows ayarlar. Ancak üçüncü taraf güvenlik duvarı kullanıyorsanız el ile 5444 bağlantı noktasını `R Host Broker` açın.
+1. Güvenlik duvarı kuralları: Varsayılan olarak, `R Host Broker` TCP bağlantı noktası 5444'te dinler. Bu nedenle, hem gelen Windows giden trafik için etkin güvenlik duvarı kuralları olduğundan emin olun (paketleri ve benzer senaryoları yüklemek için giden gereklidir).  R hizmetleri yükleyicisi, yerleşik güvenlik duvarı için bu Windows ayarlar. Ancak üçüncü taraf güvenlik duvarı kullanıyorsanız el ile 5444 bağlantı noktasını `R Host Broker` açın.
 
 1. Azure yapılandırması: Uzak bilgisayarınız Azure'da bir sanal makine ise, Azure ağı içinde gelen trafik için de 5444 bağlantı noktasını açın. Bu bağlantı noktası, güvenlik duvarının Windows açar. Ayrıntılar için Azure [belgelerinde Ağ güvenlik grubu ile ağ](/azure/virtual-network/virtual-networks-nsg) trafiğini filtreleme'ye bakın.
 
@@ -186,7 +186,7 @@ Uzak bilgisayarda çalışan R hizmetleriyle kullanıcı hesapları oluşturman�
 
     Ancak sertifikanızı İnternet'e yönelik bir sunucuya (Azure VM gibi) yüklüyorsanız, İnternet'e yönelik bir sunucunun FQDN'si hiçbir zaman NETBIOS adıyla aynı olduğundan, tam etki alanı adını (FQDN) kullanın.
 
-    FQDN 'yi kullanmak için, R Services 'ın yüklü olduğu yere gidin (varsayılan olarak,*Visual Studio \ 1,0 için uzak hizmet* ), *Microsoft.R.Host.Broker.Config.js* dosyayı bir metin düzenleyicisinde açın ve içeriğini aşağıdaki gibi değiştirerek sunucunuzun FQDN 'sine her şeyi ekleyerek, örneğin `foo.westus.cloudapp.azure.com` :
+    FQDN 'yi kullanmak için, R Services 'ın yüklü olduğu yere gidin (varsayılan olarak *Visual Studio \ 1,0 için bir% PROGRAM files%\r Remote Service* ), *Microsoft.R.Host.Broker.Config. json* dosyasını bir metin düzenleyicisinde açın ve, aşağıdaki gibi, CN 'yi sunucunuzun FQDN 'sine atayarak aşağıdaki şekilde değiştirin `foo.westus.cloudapp.azure.com` :
 
     ```json
     {

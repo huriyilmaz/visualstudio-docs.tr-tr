@@ -10,12 +10,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e8284fdb084ea681afd1adc10e718c5096ce323
-ms.sourcegitcommit: aff49629012f4d5fa07c75ea0ca5bf53d28aa173
+ms.openlocfilehash: d0244789c56bedf24f3efaa20df5d2c41be9ae9d
+ms.sourcegitcommit: d38d1b083322019663fec7d1d85a4cda456aadca
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "131662714"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "135534123"
 ---
 # <a name="features-of-visual-studio"></a>Visual Studio özellikleri
 
@@ -170,7 +170,7 @@ tüm ayrıntılar için, Visual Studio sayfasında [Git deneyimine](../version-c
 
 ::: moniker range="vs-2019"
 
-Visual Studio 2019 kullanarak bir projeyi GitHub deposundan açtığınızda, sahip olduğunuz sürüme göre değişir. özellikle, sürüm [**16,8**](/visualstudio/releases/2019/release-notes/) veya sonraki bir sürümü yüklediyseniz, kullanabileceğiniz Visual Studio yeni, daha tam tümleşik bir [Git deneyimi](../ide/git-with-visual-studio.md) vardır. daha fazla bilgi için bkz. [sürüm denetimi belgeleri sayfası Visual Studio](../version-control/index.yml) .
+Visual Studio 2019 kullanarak bir projeyi GitHub deposundan açtığınızda, sahip olduğunuz sürüme göre değişir. özellikle, sürüm [**16,8**](/visualstudio/releases/2019/release-notes/) veya sonraki bir sürümü yüklediyseniz, kullanabileceğiniz Visual Studio yeni, daha tam tümleşik bir [Git deneyimi](../version-control/git-with-visual-studio.md) vardır. daha fazla bilgi için bkz. [sürüm denetimi belgeleri sayfası Visual Studio](../version-control/index.yml) .
 
 ayrıca, Visual Studio kullanarak Git veya Azure DevOps deposuna bağlanma hakkında adım adım bir öğretici için, bir depoyu bir [depodan açma sayfasından bir proje açın](../get-started/tutorial-open-project-from-repo.md?view=vs-2019&preserve-view=true) .
 
@@ -180,37 +180,37 @@ ayrıca, Visual Studio kullanarak Git veya Azure DevOps deposuna bağlanma hakk�
 
 **Takım Gezgini** kullanarak Visual Studio git depolarını yönetme hakkında daha fazla bilgi için bkz. [git ile çalışmaya başlama ve Azure Repos](/azure/devops/repos/git/gitquickstart?tabs=visual-studio). Visual Studio yerleşik kaynak denetimi özellikleri hakkında daha fazla bilgi edinmek için Visual Studio blog gönderisine [Git özellikleri](https://devblogs.microsoft.com/devops/new-git-features-in-visual-studio-2017/) ' ne bakın.
 
-[Azure DevOps Services](/azure/devops/index) , yazılım planlayabilen, barındıran, otomatikleştiren ve dağıtan ve takım işbirliğini destekleyen bir bulut tabanlı hizmetler paketidir. DevOps Services hem GitHub dağıtılmış sürüm denetimi hem de Team Foundation Sürüm Denetimi (tfvc) merkezi sürüm denetimini destekler. DevOps Services sürüm denetimi sistemlerinde depolanan kod için sürekli derleme ve yayın (cı/CD) işlem hatları sağlar. DevOps Services ayrıca Scrum, cmmı ve çevik geliştirme yöntemlerini destekler. projenizdeki hata ve iş öğeleriyle birlikte kodu yönetmek için DevOps Services kullanabilirsiniz.
+[Azure DevOps Services](/azure/devops/index) , yazılım planlayabilen, barındıran, otomatikleştiren ve dağıtan ve takım işbirliğini destekleyen bir bulut tabanlı hizmetler paketidir. DevOps Services hem GitHub dağıtılmış sürüm denetimi hem de Team Foundation Sürüm Denetimi (tfvc) merkezi sürüm denetimini destekler. DevOps Services sürüm denetimi sistemlerinde depolanan kod için sürekli derleme ve yayın (cı/CD) işlem hatları sağlar. DevOps Services Scrum, CMMI ve Çevik geliştirme yöntemlerini de destekler. Projenize DevOps Services ve iş öğeleriyle birlikte kodu yönetmek için DevOps Services'i kullanabilirsiniz.
 
-Team Foundation Server (TFS), Visual Studio için uygulama yaşam döngüsü yönetim merkezdir. Geliştirme işlemiyle ilgili herkesin tek bir çözüm kullanarak katılmasını sağlar. TFS, heterojen takımları ve projeleri yönetmek için yararlıdır.
+Team Foundation Server (TFS), uygulama yaşam döngüsü yönetim merkezidir Visual Studio. Geliştirme sürecine dahil olan herkesin tek bir çözüm kullanarak katılmalarını sağlar. TFS, heterojen ekipleri ve projeleri yönetmek için de yararlıdır.
 
-Visual Studio **Takım Gezgini** penceresi aracılığıyla Azure DevOps kuruluşa veya ağınızdaki Team Foundation Server bağlanabilirsiniz. **Takım Gezgini** penceresinden, kaynak denetimi içine veya dışına kodu denetleyebilir, iş öğelerini yönetebilir, yapıları başlatabilir ve takım odalarına ve çalışma alanlarına erişebilirsiniz. **Takım Gezgini** açmak için arama kutusunu kullanın veya Takım Gezgini **görüntüle**' yi seçin  >  .
+Visual Studio Azure DevOps veya ağ Team Foundation Server bir kuruluşa **Takım Gezgini** bağlanabilirsiniz. Bu **Takım Gezgini** kodu kaynak denetimine veya kaynak denetiminden çıkarabilirsiniz, iş öğelerini yönetebilir, derlemeleri başlatabilir ve takım odalarına ve çalışma alanlarına erişebilirsiniz. Bir **Takım Gezgini** açmak için arama kutusunu kullanın veya Görünüm'Takım Gezgini.   >  
 
-Aşağıdaki görüntüde, Azure DevOps Services barındırılan bir çözüme yönelik **Takım Gezgini** penceresi gösterilmektedir.
+Aşağıdaki görüntüde, **Takım Gezgini** içinde barındırılan bir çözüme Azure DevOps Services.
 
-![bir projeye bağlı Visual Studio Takım Gezgini penceresinin ekran görüntüsü.](../ide/media/vs2017_teamexplorer_devops.png)
+![Projeye bağlı Visual Studio Takım Gezgini penceresinin ekran görüntüsü.](../ide/media/vs2017_teamexplorer_devops.png)
 
-Azure DevOps, Visual Studio için bir uygulama yaşam döngüsü yönetim merkezdir. Azure DevOps, geliştirme süreciyle ilgili herkesin tek bir çözüm kullanarak katılmasını sağlar. Azure DevOps, heterojen takımları ve projeleri yönetmek için de kullanışlıdır.
+Azure DevOps, yönetim için bir uygulama yaşam döngüsü Visual Studio. Azure DevOps geliştirme sürecine dahil olan herkesin tek bir çözüm kullanarak katılmalarına olanak sağlar. Azure DevOps, heterojen ekipleri ve projeleri yönetmek için de yararlıdır.
 
-Visual Studio **Takım Gezgini** penceresi aracılığıyla ağınızdaki bir Azure DevOps kuruluşa veya Azure DevOps Server bağlanabilirsiniz. **Takım Gezgini** penceresinden, kaynak denetimi içine veya dışına kodu denetleyebilir, iş öğelerini yönetebilir, yapıları başlatabilir ve takım odalarına ve çalışma alanlarına erişebilirsiniz. **Takım Gezgini** açmak için arama kutusunu kullanın veya Takım Gezgini **görüntüle**' yi seçin  >  .
+Bir kuruluşa Azure DevOps veya Azure DevOps Server ağ Takım Gezgini **penceresinden** Visual Studio. Bu **Takım Gezgini** kodu kaynak denetimine veya kaynak denetiminden çıkarabilirsiniz, iş öğelerini yönetebilir, derlemeleri başlatabilir ve takım odalarına ve çalışma alanlarına erişebilirsiniz. Bir **Takım Gezgini** açmak için arama kutusunu kullanın veya Görünüm'Takım Gezgini.   >  
 
-Ayrıca, geliştiricilerin sürüm denetimine işaret eden kodu oluşturmak için yapı işleminizi otomatikleştirebilir. Örneğin, gecelik bir veya daha fazla proje veya belirli bir kod iade edildiğinde her zaman bir veya daha fazla proje oluşturabilirsiniz. Daha fazla bilgi için bkz. [Azure Pipelines](/azure/devops/pipelines/index?view=vsts&preserve-view=true).
+Ayrıca, geliştiricilerin sürüm denetimine iade etmek için derleme sürecinizi otomatikleştirebilirsiniz. Örneğin, her gece bir veya daha fazla proje ya da belirli bir kod her iade edilirken derlemek için bir veya daha fazla proje ebilirsiniz. Daha fazla bilgi için [bkz. Azure Pipelines.](/azure/devops/pipelines/index?view=vsts&preserve-view=true)
 
 ::: moniker-end
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- Visual Studio tam işlevselliğe sahip değilse, ekleyebilirsiniz. iş akışınıza ve stilinize göre ıde 'yi kişiselleştirin, Visual Studio ile tümleşik olmayan dış araçlar için destek ekleyin ve üretkenliğinizi artırmak için mevcut işlevleri değiştirin. Visual Studio genişletilebilirlik araçlarının (VS sdk) en son sürümü için bkz. [Visual Studio SDK](../extensibility/visual-studio-sdk.md).
+- Bu Visual Studio tam olarak ihtiyacınız olan işleve sahip değilse, eklemek için kullanabilirsiniz. İş akışınıza ve stilinize göre IDE'yi kişiselleştirin, Visual Studio ile tümleştirilemeyen dış araçlar için destek ekleyin ve üretkenliğinizi artırmak için mevcut işlevselliğinizi değiştirebilirsiniz. Visual Studio Genişletilebilirlik Araçları'nın (VS SDK) en son sürümü için [bkz. Visual Studio SDK.](../extensibility/visual-studio-sdk.md)
 
-- kendi kod çözümleyicileri ve kod oluşturucuları yazmak için .NET Compiler Platform *roslyn* ' i kullanabilirsiniz. [Roslyn](https://github.com/dotnet/Roslyn)'de ihtiyacınız olan her şeyi bulun.
+- Kendi kod çözümleyicilerinizi ve .NET Compiler Platform oluşturucularınızı yazmak için *.NET Compiler Platform Roslyn'i* kullanabilirsiniz. [Roslyn'de](https://github.com/dotnet/Roslyn)ihtiyacınız olan her şeyi bulun.
 
-- Microsoft geliştiricileri ve Visual Studio geliştirme topluluğu tarafından oluşturulan Visual Studio için [mevcut uzantıları](https://marketplace.visualstudio.com/vs) bulun.
+- Microsoft [geliştiricileri ve Visual Studio](https://marketplace.visualstudio.com/vs) için mevcut uzantıları bulun Visual Studio topluluğu.
 
-- Visual Studio genişletme hakkında daha fazla bilgi için bkz. [genişletme Visual Studio ıde](https://visualstudio.microsoft.com/vs/extend/).
+- IDE'leri genişletme hakkında daha Visual Studio için [bkz. IDE'Visual Studio genişletme.](https://visualstudio.microsoft.com/vs/extend/)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio IDE 'ye Genel Bakış](../get-started/visual-studio-ide.md)
+- [Visual Studio IDE'ye genel bakış](../get-started/visual-studio-ide.md)
 - [Visual Studio 2017’deki yenilikler](../ide/whats-new-visual-studio-2017.md)
-- [Visual Studio 2019 ' deki yenilikler](../ide/whats-new-visual-studio-2019.md)
-- [Visual Studio 2022 ' deki yenilikler](whats-new-visual-studio-2022.md)
+- [Visual Studio 2019'daki yeniler](../ide/whats-new-visual-studio-2019.md)
+- [Visual Studio 2022'de yapılan yeniler](whats-new-visual-studio-2022.md)

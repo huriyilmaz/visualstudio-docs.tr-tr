@@ -1,6 +1,6 @@
 ---
 title: UWP Uygulamaları'da JavaScript Bellek Kullanımını analiz | Microsoft Docs
-description: JavaScript kullanarak bellek kullanımını anlamanıza ve UWP uygulamalarınıza bellek sızıntıları bulmanıza yardımcı olmak için JavaScript bellek çözümleyicisi'nin nasıl Windows olduğunu öğrenin.
+description: JavaScript kullanarak bellek kullanımını anlamanıza ve UWP uygulamalarınıza bellek sızıntıları bulmanıza yardımcı olmak için JavaScript bellek Windows nasıl kullanılabilir olduğunu öğrenin.
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -22,15 +22,15 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: f84517ad817706333cad4ea823f2a5994de10945
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: b40e548d78f6076bf219ea31a19379886a5a2941
+ms.sourcegitcommit: fc874be3fe4637a23997b4ef2d99a2ee9a499581
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122107582"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "135516796"
 ---
 # <a name="analyze-javascript-memory-usage-in-uwp-apps"></a>UWP uygulamalarına JavaScript bellek kullanımını analiz etme
-JavaScript bellek çözümleyicisi, Visual Studio kullanımı anlamanıza ve JavaScript kullanarak uygulamalar için yerleşik UWP uygulamalarınıza bellek sızıntılarını bu Windows yardımcı olmak için Windows kullanılabilir. Desteklenen uygulamalar, Universal Windows Apps uygulamalarını içerir.
+JavaScript bellek çözümleyicisi, Visual Studio kullanımı anlamanıza ve JavaScript kullanarak uygulamalar için yerleşik UWP uygulamalarınıza bellek sızıntılarını bu Windows için kullanılabilir. Desteklenen uygulamalar, Universal Windows Apps uygulamalarını içerir.
 
  JavaScript bellek çözümleyicisi şunları sizin için yapar:
 
@@ -42,16 +42,16 @@ JavaScript bellek çözümleyicisi, Visual Studio kullanımı anlamanıza ve Jav
 
 - JavaScript yığın verisinde eyleme edilemez bilgileri azaltma.
 
-     Doğrudan uygulama kodunda oluşturulmamış nesneler otomatik olarak filtrelenir. Verileri nesne adına göre de filtreleyebilirsiniz.
+     Doğrudan uygulama kodunda oluşturulmamış nesneler otomatik olarak filtrelenir. Verileri nesne adına göre de filtreleebilirsiniz.
 
 ## <a name="run-the-javascript-memory-analyzer"></a>JavaScript bellek çözümleyiciyi çalıştırma
- Bellek çözümleyicisi, çalışan bir UWP uygulaması açık olduğunda bellek çözümleyicisi Visual Studio.
+ Çalışan bir UWP uygulaması açık olduğunda bellek çözümleyicisi'ne Visual Studio.
 
 #### <a name="to-run-the-memory-analyzer"></a>Bellek çözümleyiciyi çalıştırmak için
 
 1. Visual Studio'yu açın.
 
-2. Uygulamayı yerel makineden Visual Studio Standart araç çubuğundaki Hata Ayıklamayı  Başlat listesinde projenizin hata ayıklama hedefini seçin: **Yerel** Makine veya **Cihaz.** 
+2. Uygulamayı yerel makineden Visual Studio Standart araç çubuğundaki  Hata Ayıklamayı  Başlat listesinde projenizin hata ayıklama hedefini **seçin:** **Yerel** Makine veya Cihaz .
 
 3. Menü çubuğunda Hata **ayıkla'Performans Profili Oluşturucu.**  >  
 
@@ -84,7 +84,7 @@ JavaScript bellek çözümleyicisi, Visual Studio kullanımı anlamanıza ve Jav
 ## <a name="check-memory-usage"></a>Bellek kullanımını denetleme
  JavaScript bellek çözümleyicisinde farklı görünümler kullanarak bellek sızıntılarını belirlemeye çalışabilirsiniz. Uygulamanın bellek sızdırıyor olduğunu zaten biliyorsanız bkz. Önerilen [iş akışı için bellek](#isolate-a-memory-leak) sızıntısını yalıtma.
 
- Bir uygulamanın bellek sızıntılarını belirlemeye yardımcı olmak için aşağıdaki görünümleri kullanın:
+ Bir uygulamada bellek sızıntılarını belirlemeye yardımcı olmak için aşağıdaki görünümleri kullanın:
 
 - [Canlı bellek kullanımı özetini görüntüleme.](#view-live-memory-usage-summary) Bellek kullanımında ani artışları veya belirli eylemlerin neden olduğu bellek kullanımını sürekli artırmak için bellek kullanım grafiğini kullanın. Yığının anlık görüntülerini almak için canlı bellek kullanım özeti görünümünü kullanın. Anlık görüntüler, bellek kullanım grafı altında bir koleksiyon olarak görünür.
 
@@ -101,7 +101,7 @@ JavaScript bellek çözümleyicisi, Visual Studio kullanımı anlamanıza ve Jav
 - [Anlık görüntü farkını görüntüleme.](#view-a-snapshot-diff) Anlık görüntüler arasındaki fark değerlerini gösterir. Bu görünümler, nesne boyutu ve nesne sayıları arasındaki farkları gösterir.
 
 ## <a name="isolate-a-memory-leak"></a>Bellek sızıntısını yalıtma
- Bu adımlar, JavaScript bellek çözümleyicisi'nin daha verimli bir şekilde kullanımına yardımcı olacak bir iş akışı sağlar. Bu adımlar, uygulamanıza bellek sızıntısı olduğunu şüpheleniyorsanız yararlı olabilir. Çalışan bir uygulamada bellek sızıntısı tanımlama işlemi boyunca size yol belirten bir öğretici için bkz. Adım adım: Bellek sızıntısı bulma [(JavaScript)](javascript-memory.md).
+ Bu adımlar, JavaScript bellek çözümleyicisi'nin daha verimli bir şekilde kullanımına yardımcı olacak bir iş akışı sağlar. Bu adımlar, uygulamanın bellek sızıntısına sahip olduğunu şüpheleniyorsanız yararlı olabilir. Çalışan bir uygulamada bellek sızıntısı tanımlama işlemi boyunca size yol belirten bir öğretici için bkz. Adım adım: Bellek sızıntısı bulma [(JavaScript)](javascript-memory.md).
 
 1. Uygulamayı Visual Studio.
 
@@ -149,14 +149,14 @@ JavaScript bellek çözümleyicisi, Visual Studio kullanımı anlamanıza ve Jav
 
 12. Bellek kullanımı sorunlarını tanımlamaya **yardımcı** olmak için aşağıdaki Kapsam filtresi seçeneklerine birini belirleyin:
 
-    - **Snapshot #2'dan kalan nesneler.**
+    - **Snapshot #2'den kalan nesneler.**
 
-    - **Snapshot #2 ve #3**
+    - **Anlık Görüntü 2 ve 3 arasına eklenen nesneler**
 
     > [!TIP]
     > Bellek sızıntılarını araştırmak için önceki anlık görüntüden kalan nesnelerin filtrelenmiş görünümünü kullanın. Örneğin, fark nesnesi sayısı +205 / -195 ise, bu görünüm geriye kalan 10 nesneyi gösterir ve bunlar büyük olasılıkla bellek sızıntıları için adaydır.
 
-     Aşağıdaki çizimde, Snapshot #2'dan kalan nesnelerin değişiklik #2.
+     Aşağıdaki çizimde Snapshot 2'den kalan nesnelerin değişiklik görünümü gösterilmiştir.
 
      ![Türleri gösteren anlık görüntü fark görünümü](../profiling/media/js_mem_snapshot_diff.png "JS_Mem_Snapshot_Diff")
 
@@ -164,100 +164,100 @@ JavaScript bellek çözümleyicisi, Visual Studio kullanımı anlamanıza ve Jav
 
 13. Fark görünümlerinde nesnelerinin kökünün genel nesneye kökün hangileri olduğunu görmek için, bu nesnelerin çöp toplamasını önleyen bir nesnenin kısayol menüsünü açın ve köklerde göster görünümünü **seçin.** Genel nesneye kök verili tek bir nesne (veya birkaç nesne) tarafından başvurıldıkları için çok sayıda nesne bellekte korunabilirsiniz.
 
-14. Üzerinde kalan nesneler görünümünde çok fazla nesne varsa, Bellek sızıntısının oluştuğu süreyi daha fazla yalıtmaya çalışın ve ardından üç anlık görüntüyü yeniden alın. Bellek sızıntısını daha iyi yalıtmak için [kaynak kodu bellek kullanım verileriyle ilişkilendir](#associate-source-code-with-memory-usage-data)' i kullanın, [kaynak kodu bellek kullanım verileriyle ilişkilendirin](#associate-source-code-with-memory-usage-data)ve bellek Çözümleyicisi 'nde bulunan diğer bellek kullanım verileriyle ilişkilendirin.
+14. Geriye kalan nesnelerin görünümünde çok fazla nesne varsa, bellek sızıntısının oluştuğu dönemi daha fazla yalıtmaya ve ardından üç anlık görüntüyü yeniden deneyin. Bellek sızıntısını daha fazla yalıtmak için [](#associate-source-code-with-memory-usage-data)Kaynak kodu bellek kullanım verileriyle [ilişkilendirme,](#associate-source-code-with-memory-usage-data)Kaynak kodu bellek kullanım verileriyle ilişkilendirme ve bellek çözümleyicisinde kullanılabilen diğer bellek kullanım verileri kullanın.
 
-## <a name="view-live-memory-usage-summary"></a>Canlı bellek kullanım özetini görüntüle
- Canlı bellek kullanım Özeti Görünümü, çalışan uygulama için bir bellek kullanımı grafiği ve tüm anlık görüntü Özeti kutucuklarının bir koleksiyonu sağlar. Bu görünümde anlık görüntü alma, Özet bilgileri çözümleme ve diğer görünümlere gitme gibi temel görevleri gerçekleştirebilirsiniz. Veri toplamayı durdurduğunuzda, bellek grafiği kaybolur ve yalnızca [anlık görüntü Özeti](#view-a-snapshot-summary) görünümünü görürsünüz.
+## <a name="view-live-memory-usage-summary"></a>Canlı bellek kullanımı özetini görüntüleme
+ Canlı bellek kullanımı özet görünümü, çalışan uygulama için bir bellek kullanım grafiği ve tüm anlık görüntü özet kutucuklarının bir koleksiyonu sağlar. Bu görünümde anlık görüntü alma, özet bilgilerini analiz etme ve diğer görünümlere gezinme gibi temel görevleri gerçekleştirebilirsiniz. Veri toplamayı durduran bellek grafiği gider ve yalnızca Anlık görüntü [özeti görüntüleme görünümünü](#view-a-snapshot-summary) görebilirsiniz.
 
- Bellek grafiğinde, Özel baytlar, yerel bellek ve JavaScript yığını dahil olmak üzere uygulamanın işlem belleğinin canlı bir görünümü gösterilir. Bellek grafiği, işlem belleğinin kaydırılabilir bir görünümüdür. Şu şekilde görünür:
+ Bellek grafiği, uygulamanın işlem belleğinin özel baytlar, yerel bellek ve JavaScript yığınını içeren canlı bir görünümünü gösterir. Bellek grafiği, işlem belleğinin kaydırılabilir bir görünümüdir. Şu şekilde görünür:
 
- ![JavaScript bellek Çözümleyicisi bellek grafiği](../profiling/media/js_mem_memory_graph.png "JS_Mem_Memory_Graph")
+ ![JavaScript Bellek Çözümleyicisi bellek grafiği](../profiling/media/js_mem_memory_graph.png "JS_Mem_Memory_Graph")
 
- Uygulama kodunuza Kullanıcı işaretleri eklediyseniz (bkz. [kaynak kodu bellek kullanım verileriyle ilişkilendir](#associate-source-code-with-memory-usage-data)), kod bölümünün ne zaman ulaşılamadığını göstermek için bellek kullanımı grafiğinde ters bir üçgen görünür.
+ Uygulama kodunuz için kullanıcı işaretleri eklediysanız (bkz. Kaynak kodu bellek kullanım verileriyle [ilişkilendirme)](#associate-source-code-with-memory-usage-data)bellek kullanım grafı içinde kodun bu bölümüne ulaşıldıklarına işaret etmek için ters bir üçgen görünür.
 
- Bellek grafiğinde gösterilen bazı bellek JavaScript çalışma zamanı tarafından ayrılır. Uygulamanızda bu bellek kullanımını kontrol edebilirsiniz. Grafikte gösterilen bellek kullanımı, ilk anlık görüntüinizi alırken artar ve sonra her ek anlık görüntü için en az düzeyde en düşük oranda artar.
+ Bellek grafı içinde gösterilen belleğin bazıları JavaScript çalışma zamanı tarafından ayrılır. Bu bellek kullanımını uygulamanıza ek olarak denetlemeniz gerekir. Grafikte gösterilen bellek kullanımı, ilk anlık görüntünizi alırsanız artar ve ardından her ek anlık görüntü için en düşük düzeyde artar.
 
 ## <a name="view-a-snapshot-summary"></a>Anlık görüntü özetini görüntüleme
- Uygulamanızın bellek kullanımının geçerli durumunun bir anlık görüntüsünü almak için bellek grafiğindeki **yığın anlık görüntüsünü Al** ' ı seçin. Hem canlı bellek kullanımı özetinde (uygulama çalışırken) hem de anlık görüntü özetinin (uygulama durdurulduğunda) görüntülenen bir anlık görüntü Özet kutucuğu, JavaScript yığını ve daha ayrıntılı bilgi bağlantıları hakkında bilgi sağlar. İki veya daha fazla anlık görüntü alırsanız bir anlık görüntü, verilerini önceki anlık görüntüye göre karşılaştıran ek bilgiler sağlar.
+ Uygulamanın bellek kullanımının geçerli durumunun anlık görüntüsünü almak için bellek **grafiğinden** Yığın Anlık Görüntüsü Al'ı seçin. Hem canlı bellek kullanım özetini (uygulama çalışırken) hem de anlık görüntü özetini (uygulama durdurulurken) görünen anlık görüntü özeti kutucuğu, JavaScript yığını hakkında bilgi ve daha ayrıntılı bilgiler için bağlantılar sağlar. İki veya daha fazla anlık görüntü alırsanız anlık görüntü, verilerini önceki anlık görüntüyle karşılaştıran ek bilgiler sağlar.
 
 > [!NOTE]
-> JavaScript bellek Çözümleyicisi, her anlık görüntüden önce bir çöp toplamayı zorlar. Bu, çalıştırmalar arasında daha tutarlı sonuçlar sağlanmasına yardımcı olur.
+> JavaScript bellek çözümleyicisi her anlık görüntüden önce bir çöp toplamaya güç sağlar. Bu, çalıştırmalar arasında daha tutarlı sonuçlar elde etmek için yardımcı olur.
 
- Birden çok anlık görüntü aldığınızda bir anlık görüntü Özeti örneği aşağıda verilmiştir.
+ Burada, birden çok anlık görüntü alırken bir anlık görüntü özeti örneği yer alır.
 
- ![Anlık görüntü Özeti](../profiling/media/js_mem_snapshot_summary.png "JS_Mem_Snapshot_Summary")
+ ![Anlık görüntü özeti](../profiling/media/js_mem_snapshot_summary.png "JS_Mem_Snapshot_Summary")
 
- Anlık görüntü Özeti şunları içerir:
+ Anlık görüntü özeti şunları içerir:
 
 - Anlık görüntü başlığı ve zaman damgası.
 
-- Olası sorun sayısı (mavi bilgi simgesiyle işaretlenir). Bu sayı varsa, DOM 'a eklenmemiş düğümler gibi olası bellek sorunlarını tanımlar. Count, olası sorunları vurgulamak için sorun türüne göre sıralanan anlık görüntünün türler görünümüne bağlanır. Bir araç ipucu sorunun açıklamasını gösterir.
+- Olası sorunlar sayısı (mavi bilgi simgesiyle işaretlenmiştir). Bu sayı varsa DOM'ya bağlı olmayan düğümler gibi olası bellek sorunlarını tanımlar. Sayı, olası sorunları vurgulamak için sorun türüne göre sıralanmış anlık görüntü Türleri görünümüne bağlantı sağlar. Sorunun açıklamasını gösteren bir araç ipucu.
 
-- Yığın boyutu. Bu sayı, DOM öğelerini ve JavaScript çalışma zamanı altyapısının JavaScript yığınına eklediği nesneleri içerir. Yığın boyutu anlık görüntünün türler görünümüne bağlanır.
+- Yığın boyutu. Bu sayı, JavaScript çalışma zamanı altyapısının JavaScript yığınına ekleyen DOM öğelerini ve nesnelerini içerir. Yığın boyutu, anlık görüntü türleri görünümüne bağlantı sağlar.
 
-- Fark yığın boyutu. Bu değer, geçerli anlık görüntünün yığın boyutu ve önceki anlık görüntünün yığın boyutu arasındaki farkı gösterir. Bellek artışı varsa, bu değerin sonunda kırmızı yukarı ok, bir bellek azalması olursa yeşil aşağı ok gelir. Yığın boyutu anlık görüntüler arasında değişmemişse, metin olarak bir sayı değil **hiçbir değişiklik olmadığını** görürsünüz. İlk anlık görüntü için metin **temelini** görürsünüz. Fark yığın boyutu, anlık görüntü farkı türleri görünümüne bağlanır.
+- Diferansiyel yığın boyutu. Bu değer, geçerli anlık görüntüyü yığın boyutuyla önceki anlık görüntüye göre yığın boyutu arasındaki farkı gösterir. Bellek artışı varsa değere kırmızı yukarı ok, bellek azaldığı zaman ise yeşil aşağı ok gelir. Anlık görüntüler arasında yığın boyutu değişmemişse sayı yerine **Değişiklik** yok metnini görüyorsunuz. İlk anlık görüntü için Temel metnini **görüntülersiniz.** Değişiklik yığını boyutu, anlık görüntü farklarının Türler görünümüne bağlantı sağlar.
 
-- Nesne sayısı. Bu sayı yalnızca uygulamanızda oluşturulan nesneleri gösterir ve JavaScript çalışma zamanı tarafından oluşturulan yerleşik nesneleri filtreler. Nesne sayısı, anlık görüntü ayrıntılarının türler görünümüne bağlanır.
+- Nesne sayısı. Bu sayı yalnızca uygulamanıza oluşturulan nesneleri gösterir ve JavaScript çalışma zamanı tarafından oluşturulan yerleşik nesneleri filtreler. Nesne sayısı, anlık görüntü ayrıntılarının Türler görünümüne bağlantı sağlar.
 
-- Türev nesne sayısı. Bu iki değeri gösterir: ilk değer, önceki anlık görüntüden bu yana eklenen yeni nesne sayısıdır; İkinci değer ise önceki anlık görüntüden bu yana kaldırılan nesne sayısıdır. Örneğin, çizim, 1.859 nesnelerinin eklendiğini ve 1.733 nesnelerinin anlık görüntü #1 bu yana kaldırıldığını gösterir. Toplam nesne sayısı artmışsa ve bu bilgiler azaldıysa yeşil aşağı ok, bu bilgilerin ardından kırmızı bir ok ile izlenir. Nesne sayısı değiştirilmediyse, bir sayı yerine **hiçbir değişiklik olmadığını** görürsünüz. İlk anlık görüntü için metin **temelini** görürsünüz. Fark nesnesi sayısı, anlık görüntü farkı türleri görünümüne bağlanır.
+- Değişiklik nesnesi sayısı. Bu iki değer gösterir: İlk değer, önceki anlık görüntüden bu yana eklenen yeni nesne sayısıdır; ikinci değer ise önceki anlık görüntüden bu yana kaldırılan nesne sayısıdır. Örneğin çizimde 1.859 nesne eklenmiştir ve Snapshot #1'den sonra 1.733 nesne kaldırılmıştır. Bu bilgiler, toplam nesne sayısı artmışsa kırmızı bir yukarı ok veya azaldığı zaman yeşil bir aşağı ok ile takip eder. Nesne sayısı değişmemişse sayı yerine Değişiklik **yok** metninin olduğunu görüyorsunuz. İlk anlık görüntü için Temel metnini **görüntülersiniz.** Değişiklik nesnesi sayısı, anlık görüntü farklarının Türler görünümüne bağlantı sağlar.
 
-- Anlık görüntünün alındığı sırada ekranın ekran görüntüsü.
+- Anlık görüntü alınırken ekranın ekran görüntüsü.
 
-## <a name="view-snapshot-details"></a>Anlık görüntü ayrıntılarını görüntüle
- Anlık görüntü ayrıntıları görünümlerinde her anlık görüntü için bellek kullanımı hakkında ayrıntılı bilgi görüntüleyebilirsiniz.
+## <a name="view-snapshot-details"></a>Anlık görüntü ayrıntılarını görüntüleme
+ Her anlık görüntü için bellek kullanımı hakkında ayrıntılı bilgileri anlık görüntü ayrıntıları görünümlerde görüntüebilirsiniz.
 
- Anlık görüntü Özeti görünümünden anlık görüntü ayrıntılarını görmek için bir bağlantı seçin. Örneğin, yığın boyutu bağlantısı, varsayılan olarak açılan türler görünümü ile anlık görüntü ayrıntılarını açar.
+ Anlık görüntü özet görünümünden anlık görüntü ayrıntılarını görmek için bir bağlantı seçin. Örneğin, yığın boyutu bağlantısı varsayılan olarak Türler görünümü açık olarak anlık görüntü ayrıntılarını açar.
 
- Bu çizimde, bellek kullanımı verileri korunan boyuta göre sıralandığında, türler görünümü bir anlık görüntü ayrıntısı halinde gösterilmektedir.
+ Bu çizimde, bellek kullanım verileri, boyuta göre sıralanmış şekilde bir anlık görüntü ayrıntısı içinde Türler görünümü gösterilmiştir.
 
  ![Olası sorunları gösteren anlık görüntü ayrıntıları görünümü](../profiling/media/js_mem_snapshot_details.png "JS_Mem_Snapshot_Details")
 
- Anlık görüntü ayrıntıları görünümünde, araç çubuğundan bir seçenek belirleyerek, bellek kullanım verilerini türe, köke veya kaya göre gözden geçirebilirsiniz:
+ Anlık görüntü ayrıntıları görünümünde, araç çubuğundan bir seçenek seçerek bellek kullanım verilerini türe, köke veya hakime göre gözden geçirebilirsiniz:
 
-- **Türler**. Nesne türüne göre gruplandırılan, yığındaki nesnelerin örnek sayısını ve toplam boyutunu gösterir. Varsayılan olarak, bunlar örnek sayısına göre sıralanır.
-
-  > [!TIP]
-  > Genellikle, nesne yığınındaki türlerin fark görünümleri, Bellek Sızıntısını belirlemek için en yararlı görünümlerdir; Bu görünümler, sol nesnelerin belirlenmesini sağlamaya yardımcı olmak için bir **kapsam** filtresi sağlar.
-
-- **Kökler**. Kök nesnelerden alt başvurular aracılığıyla nesnelerin hiyerarşik bir görünümünü gösterir. Varsayılan olarak, alt düğümler, en üst kısımdaki şekilde tutulan boyut sütununa göre sıralanır.
-
-- **Dominators**'lar. Yığındaki nesnelerin bir listesini gösterir ve diğer nesnelere özel başvuruları vardır. Icılar, korunan boyuta göre sıralanır.
+- **Türler.** Yığındaki nesnelerin örnek sayısını ve toplam boyutunu nesne türüne göre grup halinde gösterir. Varsayılan olarak, bunlar örnek sayısına göre sıralanmış.
 
   > [!TIP]
-  > Bellekten bir Dominatör kaldırdığınızda, nesnenin koruduğunu tüm belleği geri kazanabilirsiniz. Bir çok uygulama için, tüm nesne başvuru zincirini araştırabilmeniz için, kasa 'lar görünümü tutulan bellek boyutlarının açıklanmasına yardımcı olabilir.
+  > Genellikle, nesne yığınında türlerin fark görünümleri bir bellek sızıntısı tanımlamak için en yararlı görünümlerdir; Bu görünümler, kalan **nesneleri** tanımlamaya yardımcı olacak bir Kapsam filtresi sağlar.
 
-  Üç görünüm de dahil benzer değer türlerini gösterir:
+- **Kökler.** Alt başvurular aracılığıyla kök nesnelerden nesnelerin hiyerarşik görünümünü gösterir. Varsayılan olarak, alt düğümler en üstte en büyük olan, eldeki boyut sütununa göre sıralanmış.
 
-- **Tanımlayıcı (ler)**. Nesneyi en iyi tanımlayan ad. Örneğin, HTML öğeleri için, varsa, anlık görüntü ayrıntıları KIMLIK öznitelik değerini gösterir.
+- **Dominators**. Yığındaki diğer nesnelere özel başvuruları olan nesnelerin listesini gösterir. Dominators, eldeki boyuta göre sıralanmış.
 
-- **Yazın**. Nesne türü (örneğin, HTML bağlantı öğesi veya div öğesi).
+  > [!TIP]
+  > Bir dominator'ı bellekten kaldırarak nesnenin sahip olduğu tüm belleği geri elde edersiniz. Birkaç uygulama için, tam nesne başvuru zincirini araştırabilirsiniz çünkü Dominators görünümü, eldeki bellek boyutlarının netleştirmeye yardımcı olabilir.
 
-- **Boyut**. Başvurulan nesnelerin boyutunu içermeyen nesne boyutu.
+  Üç görünüm de aşağıdakiler dahil benzer değer türlerini gösterir:
 
-- **Korunan boyut**. Nesne boyutu ve diğer üst öğeleri olmayan tüm alt nesnelerin boyutu. Pratik amaçlar için, bu, nesne tarafından tutulan bellek miktarıdır, bu yüzden, belirtilen bellek miktarını geri kazanmak için nesneyi silerseniz.
+- **Tanımlayıcılar.** Nesneyi en iyi tanımlayan ad. Örneğin, HTML öğeleri için anlık görüntü ayrıntıları kullanılırsa ID özniteliği değerini gösterir.
 
-- **Sayı**. Nesne örneklerinin sayısı. Bu değer yalnızca türler görünümünde görünür.
+- **yazın.** Nesne türü (örneğin, HTML bağlantı öğesi veya div öğesi).
+
+- **Boyut**. Başvurulan nesnelerin boyutunu dahil değil nesne boyutu.
+
+- **Boyutu korunur.** Nesne boyutu ve başka bir alt verisi olan tüm alt nesnelerin boyutu. Pratik amacıyla, bu nesne tarafından elde tutulan bellek miktarıdır, bu nedenle nesneyi silersanız belirtilen bellek miktarını geri elde edersiniz.
+
+- **Sayı:**. Nesne örneği sayısı. Bu değer yalnızca Türler görünümünde görünür.
 
 ## <a name="view-a-snapshot-diff"></a>Anlık görüntü farkını görüntüleme
- JavaScript bellek Çözümleyicisi 'nde anlık görüntü fark görünümlerinde önceki anlık görüntüye karşı bir anlık görüntüyü karşılaştırabilirsiniz.
+ JavaScript bellek çözümleyicisinde, anlık görüntü fark görünümlerini önceki anlık görüntüyle karşılaştırabilirsiniz.
 
- Anlık görüntü Özeti görünümünde, iki veya daha fazla anlık görüntü alındıktan sonra değişiklik yığını boyutunu veya türev nesne sayısı bağlantılarını seçerek fark anlık görüntü ayrıntılarını görüntüleyebilirsiniz.
+ Anlık görüntü özet görünümünde, iki veya daha fazla anlık görüntü alındıktan sonra değişiklik yığını boyutunu veya değişiklik nesne sayısı bağlantılarını seçerek değişiklik anlık görüntüsü ayrıntılarını görüntüebilirsiniz.
 
- Türler, kökler ve dominiler hakkında fark bilgilerini görüntüleyebilirsiniz. Anlık görüntü farkı, iki anlık görüntü arasında yığına eklenen nesneler gibi bilgileri gösterir.
+ Türler, kökler ve dominatörler hakkında değişiklik bilgilerini görüntüabilirsiniz. Anlık görüntü farkı, iki anlık görüntü arasında yığına eklenen nesneler gibi bilgileri gösterir.
 
- Bu çizimde, bir anlık görüntü farkı olarak türler görünümü gösterilmektedir.
+ Bu çizimde, bir anlık görüntü farkını gösteren Türler görünümü gösterilmiştir.
 
  ![Türleri gösteren anlık görüntü fark görünümü](../profiling/media/js_mem_snapshot_diff.png "JS_Mem_Snapshot_Diff")
 
- Anlık görüntü farkı penceresinde, Deleyiciler, türler ve kökler görünümleri [anlık görüntü ayrıntılarını görüntüle](#view-snapshot-details) penceresinde olduğu gibidir. Anlık görüntü farkı, bu ek değerlerle anlık görüntü ayrıntılarıyla aynı bilgileri gösterir:
+ Anlık görüntü fark penceresinde Dominators, Types ve Roots görünümleri Anlık görüntü ayrıntılarını görüntüle [penceresindekiyle](#view-snapshot-details) aynıdır. Anlık görüntü fark, anlık görüntü ayrıntılarıyla aynı bilgileri şu ek değerlerle gösterir:
 
-- **Boyut farkı**. Başvurulan nesnelerin boyutunu dahil etmez, geçerli anlık görüntüdeki nesnenin boyutu ve önceki anlık görüntüdeki boyutu arasındaki fark.
+- **Boyut farkları.** Başvurulan nesnelerin boyutu dahil değil, geçerli anlık görüntüdeki nesnenin boyutu ile önceki anlık görüntüdeki boyutu arasındaki fark.
 
-- **Tutulan boyut farkı**. Geçerli anlık görüntüdeki nesnenin elde tutulmuş boyutu ve önceki anlık görüntüdeki korunan boyutu arasındaki fark. Tutulan boyut, nesne boyutunu ve diğer üst öğeleri olmayan tüm alt nesnelerinin boyutunu içerir. Pratik amaçlarla, korunan boyut, nesne tarafından tutulan bellek miktarıdır, bu nedenle belirtilen bellek miktarını geri kazanmak için nesneyi silerseniz.
+- **Eldeki boyut farkını korur.** Geçerli anlık görüntüde nesnenin elde tutma boyutu ile önceki anlık görüntüde elde tutma boyutu arasındaki fark. Eldeki boyut, nesne boyutunun yanı sıra başka bir alt adı olan tüm alt nesnelerinin boyutunu içerir. Pratik amacıyla, eldeki boyut nesne tarafından elde tutulan bellek miktarıdır, bu nedenle nesneyi silersanız belirtilen bellek miktarını geri alısınız.
 
-  Anlık görüntüler arasındaki fark bilgilerini filtrelemek için, fark görünümlerinin en üstündeki **kapsam** filtrelerinden birini seçin.
+  Anlık görüntüler arasındaki değişiklik bilgilerini filtrelemek için değişiklik **görünümlerinin en** üstünde yer alan Kapsam filtrelerinden birini seçin.
 
-- **Anlık görüntüden kalan nesneler # \<number>**. Bu filtre, yığına eklenen ve taban çizgisi anlık görüntüsüne ve önceki anlık görüntüye kıyasla yığından kaldırılan nesneler arasındaki farkı gösterir. Örneğin, anlık görüntü Özeti nesne sayımında + 205/-195 ' i gösteriyorsa bu filtre, eklenen ancak kaldırılmayan on nesneyi gösterir.
+- **Snapshot # içinde \<number> kalan nesneler.** Bu filtre, temel anlık görüntü ve önceki anlık görüntüye kıyasla yığına eklenen ve yığından kaldırılan nesneler arasındaki farkı gösterir. Örneğin, anlık görüntü özeti nesne sayısı içinde +205 / -195 gösteriyorsa, bu filtre size eklenen ancak kaldırılan on nesneyi gösterir.
 
   > [!TIP]
   > Bu filtrede en yararlı bilgileri göstermek için [Bellek sızıntısını ayırma](#isolate-a-memory-leak)bölümünde açıklanan adımları izleyin.
@@ -355,15 +355,13 @@ if (performance && performance.mark) {
 
 - Bir bellek sorununun nedeni tanımlanmayı zorlaştırıyorsa, özellikle de görünümde görünen diğer nesnelerin çoğuna başvurular içerebilen bir nesne (ya da birkaç nesne) tanımlamasına yardımcı olmak için çeşitli görünümleri (örneğin, Deleyiciler ve türler) kullanın.
 
-- Kullanıcı yeni bir sayfaya gezindikten sonra, bellek sorunlarının yaygın bir nedeni olan, yanlışlıkla bellekte saklanan nesneleri arayın. Örnek:
+- Kullanıcı yeni bir sayfaya gezindikten sonra, bellek sorunlarının yaygın bir nedeni olan, yanlışlıkla bellekte saklanan nesneleri arayın. Örneğin:
 
   - URL 'nin yanlış kullanımı [. CreateObjectUrl](https://developer.mozilla.org/docs/Web/API/URL/createObjectURL) işlevi bu soruna neden olabilir.
 
   - Bazı nesneler `dispose` , kullanım için bir yöntem ve öneriler sağlayabilir. Örneğin, `dispose` listenin yöntemini çağırıp bir sayfadan uzaklaşmanız durumunda bir [WinJS. Binding. List](/previous-versions/windows/apps/hh700774\(v\=win.10\)) çağrısı yapmanız gerekir `createFiltered` .
 
   - Bir veya daha fazla olay dinleyicisini kaldırmanız gerekebilir. Daha fazla bilgi için bkz. [DOM olay dinleyicilerini görüntüleme](../debugger/quickstart-debug-html-and-css.md).
-
-- [Bu videonun](https://channel9.msdn.com/Events/Build/2013/3-316) , JavaScript bellek Çözümleyicisi hakkında Build 2013 konferansında ikinci bölümünü izleyin.
 
 - [UWP uygulamalarında belleği yönetme](/archive/msdn-magazine/2012/windows-8-special-issue/javascript-managing-memory-in-windows-store-apps)makalesini okuyun.
 

@@ -17,12 +17,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: be1dcdd4f0ca75f57992ff00d8bf3b3c1501b6ec
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: aee0d27701e2c170fffe85f871cb792045bed28b
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122101602"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135805877"
 ---
 # <a name="build-devenvexe"></a>/Build (devenv.exe)
 
@@ -38,7 +38,7 @@ devenv SolutionName /Build [SolnConfigName [/Project ProjName [/ProjectConfig Pr
 
 - *SolutionName*
 
-  Gereklidir. Çözüm dosyasının tam yolu ve adı.
+  Gereklidir. Çözümün dizinine göre çözüm dosyasının yolu ve adı.
 
 - *SolnConfigName*
 

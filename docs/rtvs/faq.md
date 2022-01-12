@@ -1,118 +1,118 @@
 ---
 title: Visual Studio için R Araçları SSS
-description: Visual Studio 'de R hakkında sık sorulan sorular.
+description: R ile ilgili sık sorulan sorular Visual Studio.
 ms.date: 12/04/2017
 ms.prod: visual-studio-dev15
 ms.topic: reference
-author: kraigb
-ms.author: kraigb
+author: ghogen
+ms.author: ghogen
 manager: jmartens
 ms.technology: vs-rtvs
 ms.workload:
 - data-science
-ms.openlocfilehash: 9d49c6b8d52fd047a109f2f470c97adafb457810
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: a4d1da80034faf5ba1cf67cf3994677f01bbf27c
+ms.sourcegitcommit: dcecc0ed37b5e976b5dc83c5128ba5ecc8bc04b1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126628263"
+ms.lasthandoff: 01/04/2022
+ms.locfileid: "135750528"
 ---
 # <a name="frequently-asked-questions"></a>Sık sorulan sorular
 
 ## <a name="visual-studio-support"></a>Visual Studio desteği
 
-**Ç. RTVS OS X veya Linux üzerinde çalışıyor mu?**
+**S. RTVS OS X veya Linux üzerinde çalışır mı?**
 
-A. rtvs, şu anda Visual Studio en üstünde oluşturulmuştur, bu da yalnızca Windows bir uygulama. Microsoft Visual Studio Code ve Mac için Visual Studio desteğini araştırmaktadır. [Rtvs sorun #1295](https://github.com/Microsoft/RTVS/issues/1295)bakın.
+A. RTVS şu anda yalnızca Visual Studio bir uygulama olan Windows üzerine inşa edilmiştir. Microsoft, Visual Studio Code ve Mac için Visual Studio. RTVS [sorunu #1295'e bakın.](https://github.com/Microsoft/RTVS/issues/1295)
 
-**Ç. rtvs Visual Studio Express sürümleriyle çalışır mi?**
+**S. RTVS, Visual Studio Express çalışır mı?**
 
 A. Hayır.
 
-**Ç. rtvs ile Visual Studio uzantıları kullanabilir miyim?**
+**S. RTVS ile Visual Studio kullanabilir miyim?**
 
-A. Elbette. İşte, R ile çalışan insanlar için popüler olan birkaç özellik aşağıda verilmiştir.
+A. Elbette. Aslında R ile çalışan kişiler için popüler olan birkaç şey burada verİler.
 
-- [VIM anahtar bağlamaları için Vsvım](https://marketplace.visualstudio.com/items?itemName=JaredParMSFT.VsVim)
+- [Vim anahtar bağlamaları için VsVim](https://marketplace.visualstudio.com/items?itemName=JaredParMSFT.VsVim)
 - [GitHub](https://marketplace.visualstudio.com/items?itemName=GitHub.GitHubExtensionforVisualStudio)
-- [Canlı önizleme özellikli markın Düzenleyicisi](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor)
+- [Canlı önizleme ile Markdown düzenleyicisi](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor)
 
-daha fazla bilgi edinmek için [Visual Studio marketi](https://marketplace.visualstudio.com/) 'ne bakın.
+Daha fazla [Visual Studio markete](https://marketplace.visualstudio.com/) bakın.
 
-**Ç. rtvs Visual Studio olduğundan, R 'nin C#, C++ ve diğer Microsoft dilleriyle kolayca kullanılabileceği anlamına gelir.**
+**S. RTVS Visual Studio, R'nin C#, C++ ve diğer Microsoft dilleriyle kolayca kullanılalabiliyor olduğu anlamına mı geliyor?**
 
-A. Hayır. RTVS, R kodu geliştirmeye yönelik bir araçtır ve standart yerel R yorumlayıcıları kullanır. R ve diğer diller arasında birlikte çalışma şu anda desteklenmiyor.
+A. Hayır. RTVS, R kodu geliştirmeye yönelik bir araçtır ve standart yerel R yorumlayıcılarını kullanır. R ve diğer diller arasında birlikte çalışma şu anda desteklenmiyor.
 
-**Ç. RTVS, Ingilizce olmayan bir yerel ayarla çalışır mı?**
+**S. RTVS, İngilizce olmayan bir yerel dille çalışır mı?**
 
-A. RTVS 'nin 1,0 sürümü yalnızca Ingilizce 'dir. 1,1 sürümü Visual Studio kendisi olan aynı dil kümesine yerelleştirilir. bu sırada, [Visual Studio 2015 için ingilizce dil paketini](https://www.microsoft.com/download/details.aspx?id=48157)kullanın veya Visual Studio 2017 ' de, yükleyiciyi çalıştırın ve **dil paketleri** sekmesinde ingilizce ' yi seçin.
+A. RTVS'nin 1.0 sürümü yalnızca İngilizcedir. 1.1 sürümü, kendi diliyle aynı dil Visual Studio yerelleştirilmiş olur. Bu arada, [Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48157)için İngilizce dil paketini kullanın veya Visual Studio 2017'de yükleyiciyi çalıştırın ve Dil Paketleri sekmesinde İngilizce'yi seçin. 
 
 ![Visual Studio 2017 için uluslararası ayarlar](media/FAQ-international-settings.png)
 
-**Ç. gerçekten geçerli Visual Studio ayarlarımı beğendiniz, ancak yeni veri bilimi ayarlarını denemek istiyorum. Ne yapmam gerekir?**
+**S. Geçerli uygulama ayarlarımı Visual Studio, ancak yeni Veri Bilimi ayarlarını denemek istiyorum. Ne yapabilirim?**
 
-A. **araç**  >  **içeri ve dışarı aktarma Ayarlar** araçları kullanarak geçerli Visual Studio ayarlarınızı kaydedin, sonra veri bilimi ayarlarına geçin. kaydedilen ayarları geri yüklemek için **içeri aktar ve dışarı aktar Ayarlar** komutunu yeniden kullanın.
+A. Araçlar İçeri ve Dışarı Visual Studio'ı kullanarak **geçerli** Ayarlar ayarlarınızı  >  **kaydedin** ve ardından Veri Bilimi ayarlarına geçiş yapın. Kaydedilen ayarları geri yüklemek için İçeri ve Dışarı **Aktarma Ayarlar** kullanın.
 
-**Ç. Visual Studio projem bir ağ paylaşımında depolayabilirim miyim?**
+**S. Visual Studio projemi bir ağ paylaşımında depolar musunuz?**
 
-A. hayır, Visual Studio bir ağ paylaşımından proje yüklemeyi desteklemez.
+A. Hayır, Visual Studio ağ paylaşımından proje yüklenmesini desteklemez.
 
-## <a name="r-interpretersintegration"></a>R yorumlayıcıları/tümleştirmesi
+## <a name="r-interpretersintegration"></a>R yorumlayıcıları/tümleştirme
 
-**Ç. Hangi R yorumlayıcılarla birlikte çalışır?**
+**S. RTVS hangi R yorumlayıcıları ile çalışır?**
 
-A. [cran R](https://cran.r-project.org/), [Microsoft R Client ve Microsoft Machine Learning Server](/machine-learning-server/)
+A. [CRAN R,](https://cran.r-project.org/) [Microsoft R Client ve Microsoft Machine Learning Server](/machine-learning-server/)
 
-**Ç. Bu yorumlayıcıları nereden indirebilirim?**
+**S. Bu yorumlayıcıları nereden indirebilirim?**
 
-A. Bkz. [yükleme](installing-r-tools-for-visual-studio.md).
+A. Bkz. [Yükleme.](installing-r-tools-for-visual-studio.md)
 
-Soru **Microsoft R Server nedir?**
+S **Ne Microsoft R Server?**
 
-A. R Server [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server)eski adıdır.
+A. R Server, [Microsoft Machine Learning Server.](/machine-learning-server/what-is-machine-learning-server)
 
-**Ç. RTVS, R 'nin 32 bitlik sürümleriyle çalışır mi?**
+**S. RTVS, R'nin 32 bit sürümleriyle çalışır mı?**
 
-A. Hayır, RTVS yalnızca Windows 64 bit sürümlerinde çalışan R 'nin 64 bitlik sürümlerini destekler.
+A. Hayır, RTVS yalnızca 64 bit R sürümünün 64 bit sürümlerde çalışan R sürümünü Windows.
 
-**Ç. RTVS, kaynak denetimi sistemimde çalışıyor mu?**
+**S. RTVS kaynak denetim sistemim ile çalışıyor mu?**
 
-A. Evet, Visual Studio ile tümleştirilmiş herhangi bir kaynak denetimi sistemini kullanabilirsiniz.
+A. Evet, kaynak denetimiyle tümleştirilmiş herhangi bir kaynak denetim sistemini Visual Studio.
 
-**Ç. Bir RTVS projesi için önerilen *. gitignore* ayarları nelerdir?**
+**S. RTVS projesi için *önerilen .gitignore* ayarları nedir?**
 
-A. GitHub, önerilen *. gitignore* dosyaları deposunu saklar. Burada görebilirsiniz: [R. gitignore](https://github.com/github/gitignore/blob/master/R.gitignore)
+A. GitHub önerilen *.gitignore dosyalarının deposunu bulundurur.* Burada bunu görebilir: [R .gitignore](https://github.com/github/gitignore/blob/master/R.gitignore)
 
 ## <a name="remote-services"></a>Uzak hizmetler
 
-S. **Visual Studio uzak hizmetler nedir?**
+S. **Visual Studio'da Uzak Hizmetler nedir?**
 
-A. Visual Studio için uzak R hizmetleri, Windows veya Linux makinesi ayarlamanıza ve sonra rtvs 'den buna bağlanmanızı sağlar. Bkz. [uzak çalışma alanlarını ayarlama](setting-up-remote-r-workspaces.md).
+A. Visual Studio için Uzak R Hizmetleri, Windows veya Linux makinesi ayarlamanıza ve ardından RTVS'den bu makineye bağlanmanıza olanak sağlar. Bkz. [Uzak çalışma alanlarını ayarlama.](setting-up-remote-r-workspaces.md)
 
-S. **RTVS Microsoft Machine Learning Server 'ye bağlanabilir mi?**
+S. **RTVS, Microsoft Machine Learning Server?**
 
-A. hayır, Microsoft ML Server farklı bir teknolojidir ve rtvs 'nin gerektirdiği şekilde aynı bağlantı mekanizmasına sahip değildir.
+A. Hayır, Microsoft ML Server farklı bir teknoloji olduğundan ve RTVS için gereken bağlantı mekanizmasını sağlamaz.
 
-S. **Azure 'da Veri Bilimi VM'si görüntüsü kullanılarak oluşturulan bir sanal makineye RTVS bağlanabilir mi?**
+S. **RTVS, Azure'da sanal makine görüntüsü kullanılarak Veri Bilimi VM'si vm'ye bağlanıyor mu?**
 
-A. Yes [Veri Bilimi VM'si-Windows 2016](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/) görüntüsü Visual Studio için uzak R hizmetleriyle önceden yüklenmiş olarak gelir.
+A. Evet; Veri Bilimi VM'si [- Windows 2016 görüntüsü, 2016](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/) için Uzak R Hizmetleri'ne önceden Visual Studio.
 
-S, **R 'nin yüklü olduğu uzak bir makineye RTVS bağlanabilir mi?**
+S, **RTVS R yüklü bir uzak makineye bağlanıyor mu?**
 
-R kodunu uzak bir makinede yürütmek için, bazı hizmetin istekleri dinlemesi, kodun alınması ve sonuçların istemci makinesine geri gönderilmesi gerekir. Bu, Visual Studio için uzak R hizmetlerinden hangileridir. Bkz. [uzak çalışma alanlarını ayarlama](setting-up-remote-r-workspaces.md).
+Uzak makinede R kodu yürütmek için istekleri dinleyen, kod alan ve sonuçları istemci makinesine geri gönderen bir hizmet olması gerekir. Uzak R Hizmetleri bu Visual Studio yapar. Bkz. [Uzak çalışma alanlarını ayarlama.](setting-up-remote-r-workspaces.md)
 
-S. **Uzak oturum nedir?**
+S. **Uzak Oturum nedir?**
 
-A. Machine Learning Server belgelerinde [uzak sunucuda yürütme](/machine-learning-server/r/how-to-execute-code-remotely) başlıklı makaleye bakın.
+A. Uzak sunucuda yürütme [makalesine bakın ve](/machine-learning-server/r/how-to-execute-code-remotely) Machine Learning Server bakın.
 
 ## <a name="rtvs-development-and-features"></a>RTVS geliştirme ve özellikleri
 
-**Q. feature X eksik, ancak RStudio şunu içeriyor!**
+**S. X özelliği eksik, ancak RStudio'da var!**
 
-A. RStudio, birçok yıl boyunca geliştirmede olan R için harika ve yetişkinlere yönelik bir IDE 'dir. RTVS, başarılı olması gereken tüm kritik özelliklere sahip olacak şekilde arar. [GitHub](https://github.com/Microsoft/RTVS/issues/)sorunları girerek gelecekteki çalışmanın önceliklerini belirlemeye yardımcı olun.
+A. RStudio, uzun yıllardır geliştirme aşamasında olan R için harika ve olgun bir IDE'dir. RTVS, başarılı olmak için ihtiyacınız olan tüm kritik özelliklere sahip olmak için arama yapmaktır. sorunlarını dosyalama ile gelecekteki çalışma önceliklerini belirlemeye [yardımcı GitHub.](https://github.com/Microsoft/RTVS/issues/)
 
-**Ç. RTVS 'ye katkıda bulunabilir miyim?**
+**S. RTVS'ye katkıda olabilir miyim?**
 
-A. Kesinlikle! Kaynak kodu [GitHub](https://github.com/microsoft/RTVS)üzerinde bulunur. Zaten dosyalananlara hata ve açıklama göndermek için sorun izleyicisini kullanın.
+A. Kesinlikle! Kaynak kodu, üzerinde [GitHub.](https://github.com/microsoft/RTVS) Hataları göndermek ve önceden dosyalandırmış olanlar hakkında yorum yapmak için sorun izleyicisini kullanın.
 
-Ayrıca, bu belgeye katkıda bulunmak için &mdash; herhangi bir sayfanın sağ üst kısmındaki **Düzenle** komutunu seçmeniz yeterlidir. Belgeler hakkındaki yorumlara Ayrıca, herhangi bir sayfanın en altına ekleyebileceğiniz hoş geldiniz.
+Ayrıca bu belgelere katkıda bulunmak için herhangi bir sayfanın sağ üst köşesindeki Düzenle &mdash; komutunu seçmeniz de gerekir.  Herhangi bir sayfanın en altına ek olarak belgelere yönelik yorumlar da abilirsiniz.

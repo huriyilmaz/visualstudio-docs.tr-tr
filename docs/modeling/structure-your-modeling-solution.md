@@ -10,20 +10,20 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 4937ad4322d7aed06890c138d70c66a577540153
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 1e58bd037b699b4dcb4fc5eef15c11fa2567b7a6
+ms.sourcegitcommit: fc874be3fe4637a23997b4ef2d99a2ee9a499581
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126637406"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "135517791"
 ---
 # <a name="structure-your-modeling-solution"></a>Modelleme çözümünüzün yapısını oluşturma
 
-Bir geliştirme projesinde modelleri etkili bir şekilde kullanmak için ekip üyelerinin projenin farklı bölümlerinin modelleri üzerinde aynı anda çalışması gerekir. Bu konu, uygulamayı genel katman diyagramında yer alan katmanlara karşılık gelen farklı parçalara bölmeye ilişkin bir düzen önerir.
+Bir geliştirme projesinde modelleri etkili bir şekilde kullanmak için ekip üyelerinin projenin farklı bölümlerinin modelleri üzerinde aynı anda çalışabilecek olması gerekir. Bu konu, uygulamayı genel katman diyagramında yer alan katmanlara karşılık gelen farklı parçalara bölmeye ilişkin bir düzen önerir.
 
-Bir projeyi veya alt projeyi hızla başlatmak için, seçtiğiniz proje yapısını izleyen bir proje şablonuna sahip olmak yararlıdır. Bu konu başlığında, böyle bir şablonun nasıl oluşturul ve nasıl kullanılası açıklanmıştır.
+Bir projeyi veya alt projeyi hızla başlatmak için, seçtiğiniz proje yapısını izleyen bir proje şablonuna sahip olmak yararlıdır. Bu konu başlığında, böyle bir şablonun nasıl oluşturularak kullanılası açıklanmıştır.
 
-Bu konu başlığında, birkaç ekip üyesi gerektirecek kadar büyük bir proje üzerinde çalıştığın ve belki de birkaç ekibin olduğu varsayıldı. Projenin kodu ve modelleri gibi bir kaynak denetim sisteminde [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)] depolanır. En azından bazı ekip üyeleri Visual Studio geliştirmek için bu bilgileri kullanır ve diğer ekip üyeleri modelleri diğer Visual Studio sınar.
+Bu konu başlığında, birkaç ekip üyesi gerektirecek kadar büyük bir proje üzerinde çalıştığın ve belki de birkaç ekibin olduğu varsayıldı. Projenin kodu ve modelleri gibi bir kaynak denetim sisteminde [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)] depolanır. En azından bazı ekip üyeleri Visual Studio geliştirmek için bu modeli kullanır ve diğer ekip üyeleri modelleri diğer Visual Studio sınar.
 
 Her araç ve modelleme özelliğini Visual Studio sürümlerini görmek için bkz. Mimari ve modelleme [araçları için sürüm desteği.](../modeling/analyze-and-model-your-architecture.md#VersionSupport)
 
@@ -43,9 +43,9 @@ Orta veya büyük bir projede ekibin yapısı uygulamanın yapısına dayalıdı
 
    Bu çözümler, katmanların kodunu geliştirmek için kullanılacaktır.
 
-5. Katmanların tasarımlarını ve tüm katmanlar için ortak olan kavramları temsil eden modeller oluşturun. Modelleri, Mimari çözümünden tüm modellerin ve ilgili modellerin her katmandan görüle bir şekilde düzenleyebilirsiniz.
+5. Katmanların tasarımlarını ve tüm katmanlar için ortak olan kavramları temsil eden modeller oluşturun. Modelleri, mimari çözümünden tüm modellerin ve ilgili modellerin her katmandan görüle bir şekilde düzenleyebilirsiniz.
 
-   Bunu aşağıdaki yordamlardan birini kullanarak yapabilirsiniz. İlk alternatif, her katman için ayrı bir modelleme projesi, ikinci alternatif ise katmanlar arasında paylaşılan tek bir modelleme projesi oluşturur.
+   Bunu aşağıdaki yordamlardan birini kullanarak yapabilirsiniz. İlk alternatif, her katman için ayrı bir modelleme projesi, ikincisi ise katmanlar arasında paylaşılan tek bir modelleme projesi oluşturur.
 
 #### <a name="use-a-separate-modeling-project-for-each-layer"></a>Her katman için ayrı bir modelleme projesi kullanma
 
@@ -67,23 +67,23 @@ Orta veya büyük bir projede ekibin yapısı uygulamanın yapısına dayalıdı
 
 4. Mimari çözümünde, tüm katmanların gereksinimlerini ve tasarım modellerini düzenlemek için Visual Studio.
 
-   Her katman çözümünde, modele başvuran bu katman için kodu geliştirin. Modeli güncelleştirmek için aynı bilgisayarı kullanmadan geliştirmeyi yapmak için içerik kullanıyorsanız, modeli okuyabilir ve model oluşturamazken Visual Studio sürümlerini kullanarak kod geliştirebilirsiniz. Ayrıca bu sürümlerde modelden kod da oluşturabilirsiniz.
+   Her katman çözümünde, modele başvuran bu katman için kodu geliştirin. Modeli güncelleştirmek için aynı bilgisayarı kullanmadan geliştirmeyi yapmak için içerik kullanıyorsanız, modeli okuyabilir ve model oluşturamazsınız Visual Studio sürümlerini kullanarak kod geliştirebilirsiniz. Ayrıca bu sürümlerde modelden kod da üretebilirsiniz.
 
-   Bu yöntem, katman modellerini aynı anda düzende bulunduran geliştiricilerin herhangi bir girişime neden olacağını garanti eder.
+   Bu yöntem, katman modellerini aynı anda düzende bulunduran geliştiricilerin müdahaleye neden olacağını garanti eder.
 
-   Ancak modeller ayrı olduğundan genel kavramlara başvurmak zordur. Her modelin, diğer katmanlara ve mimariye bağımlı olduğu öğelerin kendi kopyasına sahip olması gerekir. Her katmanda bağımlılık diyagramı, Mimari bağımlılık diyagramıyla eşit olarak tutulmalıdır. Bu öğeler değişirken eşitlemeyi sürdürmek zordur, ancak bunu gerçekleştirmek için araçlar geliştirebilirsiniz.
+   Ancak modeller ayrı olduğundan genel kavramlara başvurmak zordur. Her modelin, diğer katmanlara ve mimariye bağımlı olduğu öğelerin kendi kopyasına sahip olması gerekir. Her katmanda bağımlılık diyagramı, Mimari bağımlılık diyagramı ile eşit tutulmalıdır. Bu öğeler değişirken eşitlemeyi sürdürmek zordur, ancak bunu gerçekleştirmek için araçlar geliştirebilirsiniz.
 
 #### <a name="use-a-separate-package-for-each-layer"></a>Her katman için ayrı bir paket kullanma
 
-1. Her katmanın çözümünde Mimari modelleme projesini ekleyin. Bu **Çözüm Gezgini,** çözüm düğümüne sağ tıklayın, Ekle'nin üzerine **gelin** ve ardından Mevcut uygulama **Project.** Tek modelleme projesine artık her çözümden erişilebilir: Mimari projesi ve her katman için geliştirme projesi.
+1. Her katmanın çözümünde Mimari modelleme projesini ekleyin. Bu **Çözüm Gezgini,** çözüm düğümüne sağ tıklayın, Ekle'nin üzerine **gelin** ve ardından Mevcut **Uygulama'Project.** Tek modelleme projesine artık her çözümden erişilebilir: Mimari projesi ve her katman için geliştirme projesi.
 
-2. Paylaşılan modelde her katman için bir paket oluşturun: Çözüm Gezgini projesini seçin. **UML Model Gezgini'nde,** model kök düğümüne sağ tıklayın, Ekle'nin üzerine **gelin ve** ardından Paketle'ye **tıklayın.**
+2. Paylaşılan modelde her katman için bir paket oluşturun: Çözüm Gezgini **projesini** seçin. **UML Model Gezgini'nde,** model kök düğümüne sağ tıklayın, Ekle'nin üzerine **gelin ve** ardından Paketle'ye **tıklayın.**
 
    Her paket, ilgili katmanın gereksinimlerini ve tasarımını açıklayan diyagramlar içerir.
 
 3. Gerekirse, her katmanın iç yapısı için yerel bağımlılık diyagramları ekleyin.
 
-   Bu yöntem, her katmanın tasarım öğelerinin, bağlı olduğu katmanlara ve ortak mimariye doğrudan başvurarak bunu sağlar.
+   Bu yöntem, her bir katmanın tasarım öğelerinin, bağlı olduğu katmanlara ve ortak mimariye doğrudan başvurur.
 
    Farklı paketlerde eşzamanlı çalışma bazı çakışmalara neden olsa da, paketler ayrı dosyalarda depolandığı için bunların yönetimi oldukça kolaydır.
 
@@ -101,13 +101,9 @@ Uygulamada, tüm çözümlerinizi aynı anda Visual Studio proje ilerledikçe bu
 
 3. Dosya menüsünde **Şablonu** **VSIX Olarak Dışarı Aktar'a tıklayın.**
 
-   **VSIX Olarak Şablonu Dışarı Aktarma Sihirbazı** açılır.
+   **ŞABLONU VSIX Olarak Dışarı Aktarma Sihirbazı** açılır.
 
-4. Sihirbazda verilen yönergeleri izleyerek şablona eklemek istediğiniz projeleri seçin, şablon için bir ad ve açıklama girin ve bir çıkış konumu belirtin.
-
-## <a name="watch-a-video"></a>Nasıl yapılacağını görmek için
-
-[Modellerinizi düzenleme ve yönetme](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-9-organizing-and-managing-your-models)
+4. Sihirbazda verilen yönergeleri izleyerek, şablona eklemek istediğiniz projeleri seçin, şablon için bir ad ve açıklama girin ve bir çıkış konumu belirtin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

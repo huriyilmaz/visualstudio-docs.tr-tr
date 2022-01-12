@@ -1,16 +1,18 @@
 ---
 title: .NET Core desteği
-description: Bu belge, Mac için Visual Studio'de .NET Core Sürümleri desteğini kapsar Mac için Visual Studio
-author: sayedihashimi
-ms.author: sayedha
+description: Bu belge, Mac için Visual Studio'daki .NET Core Sürümleri desteğini Mac için Visual Studio
+author: jmatthiesen
+ms.author: jomatthi
+manager: dominicn
 ms.date: 01/08/2020
+ms.topic: how-to
 ms.assetid: 8B8CEBE8-00DA-4AD1-8193-77F58B57F244
-ms.openlocfilehash: a04d15fc2fc768c2d6896396df5dc0f134d1720b
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: f17849e74890c5b69ca6044336bd11d8a48afefc
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126725502"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135806657"
 ---
 # <a name="net-core-support"></a>.NET Core Desteği
 
@@ -27,7 +29,7 @@ Aşağıdaki tabloda, uygulamanın kararlı ve önizleme sürümleri tarafından
 |v5.0 | | | | | |✔︎|
 
 > [!IMPORTANT]
-> Uygulamanın önizleme .NET Core SDK sürümleri desteklenmiyor; lütfen yayımlanan sürüme güncelleştirin. 8.4 Mac için Visual Studio yüklenirken, .NET Core v3.1'in yayımlanan sürümü yüklenir.
+> Uygulamanın önizleme .NET Core SDK desteklenmiyor; lütfen yayımlanan sürüme güncelleştirin. 8.4 Mac için Visual Studio yüklenirken, .NET Core v3.1'in yayımlanan sürümü yüklenir.
 
 > [!IMPORTANT]
 > Daha önce .NET Core v2.2.1xx ve Mac için Visual Studio 8.0 kullanıyorsanız, yukarıdaki tabloda listelenen şekilde desteklenen bir .NET Core sürümüne el ile güncelleştirmeniz gerekir. [2.1.700 veya](https://dotnet.microsoft.com/download/dotnet-core/2.1) [2.2.300 önerilir](https://dotnet.microsoft.com/download/dotnet-core/2.2)
@@ -37,4 +39,4 @@ Aşağıdaki tabloda, uygulamanın kararlı ve önizleme sürümleri tarafından
 * Yükleyiciyle varsayılan olarak .NET Core v2.1.701 (8.1 için v2.1.700) yüklenir.
 * .NET Core'un başka bir sürümünü indirmek için [dotnet sayfasını ziyaret edin.](https://dotnet.microsoft.com/download/dotnet-core)
 * .NET Core 3.0 kullanılırken, varsayılan olarak C# sürüm 8 kullanılır. .NET Core 2.x kullanılırken C# 7.3 varsayılandır. Daha [fazla bilgi için bkz. C#](/dotnet/csharp/language-reference/configure-language-version) dili sürümü.
-* Bir önizleme sürümünü yükleme hakkında daha fazla Mac için Visual Studio için Önizleme [Sürümü Yükleme kılavuzuna](./install-preview.md) bakın.
+* Bir sürümün önizleme sürümünü yükleme hakkında Mac için Visual Studio için Önizleme [Sürümü Yükleme kılavuzuna](./install-preview.md) bakın.

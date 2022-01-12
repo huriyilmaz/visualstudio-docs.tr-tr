@@ -4,18 +4,18 @@ description: Visual Studio için R Araçları 2017 (RTVS); IntelliSense, hata ay
 ms.date: 11/13/2017
 ms.prod: visual-studio-dev15
 ms.topic: overview
-author: kraigb
-ms.author: kraigb
+author: ghogen
+ms.author: ghogen
 manager: jmartens
 ms.technology: vs-rtvs
 ms.workload:
 - data-science
-ms.openlocfilehash: 33502f988ca8e0db61337d2272c467be85201f06
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 5d96e6cad10fbd5f5c9b0ddff8e5399af1dd005f
+ms.sourcegitcommit: dcecc0ed37b5e976b5dc83c5128ba5ecc8bc04b1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126626864"
+ms.lasthandoff: 01/04/2022
+ms.locfileid: "135751085"
 ---
 # <a name="work-with-r-in-visual-studio"></a>Visual Studio’da R ile çalışma
 

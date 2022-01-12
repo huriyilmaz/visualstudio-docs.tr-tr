@@ -1,16 +1,18 @@
 ---
 title: Yeni projeler ve çözümler oluşturma
 description: bu makalede Mac için Visual Studio ' de projelerin ve çözümlerin nasıl oluşturulacağı açıklanmaktadır
-author: heiligerdankgesang
-ms.author: dominicn
+author: jmatthiesen
+ms.author: jomatthi
+manager: dominicn
 ms.date: 11/06/2020
+ms.topic: how-to
 ms.assetid: 5880BB10-0A12-47E2-8A82-7A2D59C4D579
-ms.openlocfilehash: 7ee9b23f9ede12a353f6c6fdc0f578d7f78a772c
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: b3ebd7a3b403577d4db7fac6b7ce56b0eeb9f6ce
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126633569"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135806228"
 ---
 # <a name="create-a-new-project"></a>Yeni bir Project oluştur
 

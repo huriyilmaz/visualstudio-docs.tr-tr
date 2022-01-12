@@ -1,16 +1,18 @@
 ---
 title: Derleme Sistemini Özelleştirme
 description: bu makale, Mac için Visual Studio tarafından kullanılan MSBuild derleme sistemine kısa bir giriş niteliğindedir
-author: heiligerdankgesang
-ms.author: dominicn
+author: jmatthiesen
+ms.author: jomatthi
+manager: dominicn
 ms.date: 09/19/2019
+ms.topic: conceptual
 ms.assetid: 6958B102-8527-4B40-BC65-3505DB63F9D3
-ms.openlocfilehash: 0c511c448136210038f1034321a2828e5153add1
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.openlocfilehash: b8521a3f962950999c77301fe5034b21536696d3
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123964770"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135803212"
 ---
 # <a name="customizing-the-build-system"></a>Yapı sistemini özelleştirme
 
@@ -101,5 +103,5 @@ Bunlar bir PropertyGroup kullanılarak ayarlanırlar ve herhangi bir sayıda öz
 
 daha ayrıntılı bilgi edinmek için aşağıdaki kaynaklar kullanılabilir MSBuild:
 
-* [MSBuild Bakýþ](/visualstudio/msbuild/msbuild)
-* [MSBuild Tiren](/visualstudio/msbuild/msbuild-concepts)
+* [MSBuild genel bakış](/visualstudio/msbuild/msbuild)
+* [MSBuild kavramlar](/visualstudio/msbuild/msbuild-concepts)

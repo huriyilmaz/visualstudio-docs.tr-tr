@@ -1,6 +1,6 @@
 ---
-title: Roslyn çözümleyicilerine Başlarken | Microsoft Docs
-description: Visual Studio 'de Roslyn çözümleyicilerine başlamak için bu kaynakları kullanın; bir öğretici ve birkaç örnek içerir.
+title: Başlarken Çözümleyicileri ile | Microsoft Docs
+description: Bu kaynakları kullanarak bir öğretici ve birkaç örnek içeren Visual Studio roslyn çözümleyicilerini kullanmaya başlama.
 ms.custom: SEO-VS-2020
 ms.date: 04/02/2018
 ms.topic: conceptual
@@ -11,31 +11,31 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: f61eedca093e0fa9f86eb6e78dccca4aabd21827
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: d3ced34fdf54c6177aec9a500b9782a8a116d25d
+ms.sourcegitcommit: fc874be3fe4637a23997b4ef2d99a2ee9a499581
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122087138"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "135517716"
 ---
-# <a name="get-started-with-roslyn-analyzers"></a>Roslyn Çözümleyicileri ile çalışmaya başlama
+# <a name="get-started-with-roslyn-analyzers"></a>Kullanmaya başlayın çözümleyicileri ile birlikte
 
-canlı, proje tabanlı kod çözümleyicileri Visual Studio, apı yazarları, NuGet paketlerinin bir parçası olarak etki alanına özgü kod analizini sevk edebilir. bu çözümleyiciler .NET Compiler Platform (kod-adı "roslyn") tarafından korunduğundan, satırı bitirmeden (sorunları çözmek için kodunuzu derlemek için daha fazla beklememeniz gerekmez) kodunuzda uyarı üretebilirler. çözümleyiciler, kodunuzu hemen temizleyebilmeniz için Visual Studio ampul istemi aracılığıyla otomatik bir kod düzeltmesini de yüzeylere açabilir.
+Api yazarları, Visual Studio'daki canlı, proje tabanlı kod çözümleyicileri ile etki alanına özgü kod analizini kendi NuGet gönderebilirsiniz. Bu çözümleyiciler .NET Compiler Platform (kod adı "Roslyn") olduğundan, siz satırı tamamlayana kadar bile siz yazarak kodunda uyarılar üretebilirler (artık sorunları bulmak için kodunuzu derlemek için beklemenize gerek yoktur). Çözümleyiciler ayrıca kodunuzu hemen temizlemenize izin Visual Studio ampul istemi aracılığıyla otomatik bir kod düzeltmesi ortaya çıkarabilir.
 
 ## <a name="get-started"></a>başlarken
 
-[Roslyn çözümleyicilerine genel bakış](../code-quality/roslyn-analyzers-overview.md)
+[Roslyn çözümleyicilere genel bakış](../code-quality/roslyn-analyzers-overview.md)
 
-[Öğretici: ilk çözümleyicinizi ve kod düzeltmesini yazma](/dotnet/csharp/roslyn-sdk/tutorials/how-to-write-csharp-analyzer-code-fix)
+[Öğretici: İlk çözümleyicinizi ve kod düzeltmenizi yazma](/dotnet/csharp/roslyn-sdk/tutorials/how-to-write-csharp-analyzer-code-fix)
 
-[Kod düzeltmeleri ekleme Izlenecek yol: çözümleyici sorunları için kullanıcılara düzeltmeler sağlama](/archive/msdn-magazine/2015/february/csharp-adding-a-code-fix-to-your-roslyn-analyzer)
+[Kod düzeltmeleri ekleme Adım adım kılavuz: Çözümleyici sorunları için kullanıcılara düzeltmeler sağlama](/archive/msdn-magazine/2015/february/csharp-adding-a-code-fix-to-your-roslyn-analyzer)
 
-[Gerçek dünya Roslyn Çözümleyicisi](../extensibility/roslyn-analyzers-and-code-aware-library-for-immutablearrays.md) ve ayrıca [konuşabilirsiniz](https://channel9.msdn.com/events/Build/2015/3-725)
+[Gerçek dünya Roslyn çözümleyicisi](../extensibility/roslyn-analyzers-and-code-aware-library-for-immutablearrays.md)
 
-[GitHub birçok örnek, üç tür çözümleyiciler halinde gruplandırılır](https://github.com/dotnet/roslyn/blob/master/docs/analyzers/Analyzer%20Samples.md)
+[Üç çözümleyici GitHub gruplara göre kümeler üzerinde birkaç örnek](https://github.com/dotnet/roslyn/blob/master/docs/analyzers/Analyzer%20Samples.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET derleyicisi platform paketi sürüm başvurusu](roslyn-version-support.md)
+- [.NET derleyici platform paketi sürüm başvurusu](roslyn-version-support.md)
 - [GitHub OSS sitesinde daha fazla belge](https://github.com/dotnet/roslyn/tree/master/docs/analyzers)
-- [Roslyn Çözümleyicileri ile uygulanan FxCop kuralları](../code-quality/fxcop-rule-port-status.md)
+- [Roslyn çözümleyicileriyle uygulanan FxCop kuralları](../code-quality/fxcop-rule-port-status.md)

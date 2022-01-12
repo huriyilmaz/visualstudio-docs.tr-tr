@@ -4,8 +4,6 @@ description: OLE/COM Nesne Görüntüleyicisi gibi COM programlarını test etme
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.com
 dev_langs:
 - CSharp
 - VB
@@ -24,12 +22,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: d4f35cc78c94db0925d3682a06cc27d30770f68a
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: aa158dcec5db39f7b4a98b3ccf31be610579b68d
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126630896"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135803017"
 ---
 # <a name="com-debugging-tools"></a>COM Hata Ayıklama Araçları
 

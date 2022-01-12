@@ -1,8 +1,8 @@
 ---
 title: Bul ve Değiştir, Ortam, Seçenekler İletişim Kutusu
-description: İleti kutularını ve bulma ve değiştirme işlemiyle ilgili diğer özellikleri kontrol etmek için Ortam bölümündeki Bul ve Değiştir sayfasını kullanmayı öğrenin.
+description: İleti kutularını ve bulma ve değiştirme işleminin diğer yönlerini denetlemek için ortam bölümündeki bul ve Değiştir sayfasını nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
-ms.date: 11/04/2016
+ms.date: 12/16/2021
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.FindReplace
@@ -17,45 +17,62 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 62b3568ca76c5aa9f66e4ea8f457e82db2316465
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: d999364cff0a868917eb204443f327d19f975781
+ms.sourcegitcommit: d3578c384959f1b76dd06fb4b5d075fb052f8c69
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126725733"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "135374851"
 ---
 # <a name="find-and-replace-environment-options-dialog-box"></a>Bul ve Değiştir, Ortam, Seçenekler İletişim Kutusu
 
-İleti kutularını ve bulma **ve değiştirme** işlemiyle ilgili diğer özellikleri kontrol etmek için Seçenekler iletişim kutusunun bu sayfasını kullanın. Araçlar menüsünde Seçenekler'e tıklayarak, **Ortam'ı genişleterek** ve ardından **Bul** ve Değiştir'e tıklayarak bu **iletişim kutusuna erişebilirsiniz.**  Bu sayfa listede görünmüyorsa, Seçenekler iletişim kutusunda Tüm ayarları **göster'i** seçin. 
+İleti kutularını ve bulma ve değiştirme işleminin diğer yönlerini denetlemek için **Seçenekler** iletişim kutusunun bu sayfasını kullanın. **Seçenekler**' i ve ardından **Bul ve Değiştir** **' i** seçerek bu iletişim kutusuna **Araçlar** menüsünden erişebilirsiniz.
 
-## <a name="uielement-list"></a>UIElement Listesi
+**Bilgilendirici iletileri görüntüle**
 
-**Bilgilendirme iletilerini görüntüleme**
+**Her zaman bu iletiyi göster** seçeneğini içeren bilgilendirici iletileri bul ve Değiştir seçeneklerini görüntülemek için bu seçeneği belirleyin. Örneğin, "bul 'un başlangıç noktasına ulaşıldı." iletisini görüntülememayı seçtiyseniz, bu seçeneği belirlediğinizde bul ve Değiştir kullandığınızda bu bilgi iletisinin yeniden görüntülenmesine neden olur.
 
-Bu iletiyi her zaman göster seçeneğinin olduğu tüm Bul ve Değiştir bilgi iletilerini **görüntülemek için bu seçeneği** belirleyin. Örneğin, "Bul aramanın başlangıç noktasına ulaştı" iletisi görüntülenmezse, bu seçeneğin işaretleniyorsa Bul ve Değiştir'i kullanarak bu bilgilendirme iletisi yeniden görünür.
+Bul ve Değiştir için herhangi bir bilgilendirici ileti görmek istemiyorsanız, bu seçeneği temizleyin.
 
-Bul ve Değiştir için bilgi iletilerini görmek istemiyorsanız bu seçeneğin temizlemesini seçin.
-
-Bilgi iletilerini bul ve Değiştir gibi bazı iletilerde bu  iletiyi her zaman  göster seçeneğini temizleseniz, Bilgi iletilerini görüntüle onay kutusu doldurulmuş gibi görünür ancak seçilmez.  tüm isteğe bağlı **Bul ve Değiştir iletilerini geri** yüklemek için bu seçeneği temizle ve sonra yeniden seçin.
+**Bu Iletiyi her zaman göster** , ancak tümünü değil, bilgilendirici iletileri **Bul ve Değiştir** onay kutusunu temizlerseniz, **bilgi iletilerini görüntüle** onay kutusu doldurulmuş ancak seçilmemiş olarak görünür. Tüm isteğe bağlı **Bul ve Değiştir** iletilerini geri yüklemek için bu seçeneği temizleyin ve yeniden seçin.
 
 > [!NOTE]
-> Bu seçenek, Bu iletiyi **her zaman göster** seçeneğini göstermeyen Bul ve Değiştir bilgi **iletilerini** etkilemez.
+> Bu seçenek, **her zaman bu iletiyi göster** seçeneğini görüntülemezken bilgi iletilerini **Bul ve Değiştir** seçeneklerini etkilemez.
 
-**Uyarı iletilerini görüntüleme**
+**Uyarı iletilerini görüntüle**
 
-Bu iletiyi her zaman göster seçeneğinin olduğu tüm Uyarı bul ve Değiştir iletilerini **görüntülemek için bu seçeneği** belirleyin. Örneğin, şu anda düzenleme için  açık olan dosyalarda değişiklik yapmaya çalışırken görüntülenen Tüm Değiştir uyarı iletisi görüntülenmezse, Bu seçeneğin değiştirilmesi, TümLerini Değiştir'i denerek bu uyarı iletisi yeniden görüntülenmeye neden olur.
+**Her zaman bu iletiyi göster** seçeneğini içeren tüm uyarı bul ve Değiştir iletilerini görüntülemek için bu seçeneği belirleyin. Örneğin, şu anda düzenlenmek üzere açılmayan dosyalarda değişiklik yapmaya çalıştığınızda görüntülenen **Tüm** uyarı iletisini görüntülememayı seçtiyseniz, bu seçeneğin belirlenmesi, tümünü değiştirmeyi denediğinizde bu uyarı iletisinin yeniden görüntülenmesine neden olur.
 
-Bul ve Değiştir için herhangi bir uyarı iletileri görmek istemiyorsanız bu seçeneği silin.
+Bul ve Değiştir için herhangi bir uyarı iletisi görmek istemiyorsanız, bu seçeneği temizleyin.
 
-Uyarı iletilerini bul ve Değiştir gibi bazı iletilerde bu  iletiyi her zaman  göster seçeneğini temizleseniz Uyarı iletilerini görüntüle onay kutusu doldurulmuş gibi görünür ancak seçilmez.  tüm isteğe bağlı **Bul ve Değiştir iletilerini geri** yüklemek için bu seçeneği temizle ve sonra yeniden seçin.
+**Bu Iletiyi her zaman göster** , ancak tümünü değil, uyarı iletilerini **Bul ve Değiştir** onay kutusunu temizlerseniz, **uyarı iletilerini görüntüle** onay kutusu doldurulmuş ancak seçilmemiş olarak görünür. Tüm isteğe bağlı **Bul ve Değiştir** iletilerini geri yüklemek için bu seçeneği temizleyin ve yeniden seçin.
 
 > [!NOTE]
-> Bu seçenek, Bu iletiyi **her zaman göster** seçeneğini göstermeyen Bul ve Değiştir uyarı **iletilerini** etkilemez.
+> Bu seçenek, **her zaman bu iletiyi göster** seçeneğini görüntülemezken **Bul ve Değiştir** uyarı iletilerini etkilemez.
 
-**Bul'ı düzenleyiciden metinle otomatik olarak doldurmak**
+**Düzenleyiciden metinle ilgili metni otomatik olarak doldur**
 
-Düzenle menüsünden Bul ve Değiştir penceresinin herhangi bir görünümünü  seçerek metni geçerli düzenleyicinin  ekleme noktasının herhangi bir tarafına yapıştırmak için bu **seçeneği** belirleyin. Önceki aramada yer alan son arama desenini Find what string (Hangi dizeyi bul) olarak kullanmak **için bu seçeneğin temizini** kullanın.
+**Düzenleme** menüsünden **Bul ve Değiştir** penceresinin herhangi bir görünümünü seçtiğinizde, geçerli düzenleyicinin ekleme noktasının herhangi bir tarafına ait metni **neye göre bul** alanına yapıştırmak için bu seçeneği belirleyin. Bu seçeneği, önceki aramadan aranan dizeyi **bul** olarak kullanmak için temizleyin.
+
+**Aramayı seçimle otomatik olarak sınırla**
+
+Arama kapsamını yalnızca seçtiğiniz koda ayarlamak istediğinizde bu seçeneği belirleyin.
+
+Yalnızca seçtiğiniz kodu aramak istemiyorsanız, bu seçeneği temizleyin.
+
+**Tüm başvuruları bul araç penceresinde düzenleyici arka planını kullan**
+
+**Tüm başvuruları bul** araç penceresinin düzenleyiciyle aynı arka plan rengini kullanmasını istiyorsanız bu seçeneği belirleyin. Koyu bir arka plan rengiyle Koyu tema veya özel bir tema kullanırsanız bu yararlı olur. temalar hakkında daha fazla bilgi için Visual Studio sayfada [yazı tiplerini, renkleri ve temaları değiştirme](../how-to-change-fonts-and-colors-in-visual-studio.md) bölümüne bakın.
+
+::: moniker range=">=vs-2019"
+
+**Arama sonuçlarını varsayılan olarak tut**
+
+Her aramadan sonra **sonuçları tut** düğmesini seçmek yerine tüm arama sonuçlarınızı varsayılan olarak saklamayı tercih ediyorsanız bu seçeneği belirleyin. Bu işlevsellik hakkında daha fazla bilgi için [dosyaları bul](../find-in-files.md#keep-results) sayfasında "sonuçları sakla" bölümüne bakın.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Metin Bulma ve Değiştirme](../../ide/finding-and-replacing-text.md)
+- [Metin bul ve Değiştir](../finding-and-replacing-text.md)
+- [Dosyalarda Bul](../find-in-files.md)

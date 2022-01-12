@@ -11,12 +11,12 @@ author: mikejo5000
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: d3646f4a3e839f4bf522c691e3f4c152ee16c270
-ms.sourcegitcommit: 263703af9c4840e0e0876aa99df6dd7455c43519
+ms.openlocfilehash: 9c8e941a024162e35ec6a5067078a07d4d1c4fae
+ms.sourcegitcommit: fc874be3fe4637a23997b4ef2d99a2ee9a499581
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2021
-ms.locfileid: "133387438"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "135516770"
 ---
 # <a name="use-shims-to-isolate-your-app-for-unit-testing"></a>Birim testi için uygulamanızı yalıtmak üzere dolgular kullanma
 
@@ -98,7 +98,7 @@ Her dolgu bağlamını doğru bir şekilde atmak önemlidir. Bir Thumb kuralı o
 
 ### <a name="write-a-test-with-shims"></a>Dolgular ile test yazma
 
-Test kodunuzda, taklit etmek istediğiniz yöntem için bir *deturu* ekleyin. Örnek:
+Test kodunuzda, taklit etmek istediğiniz yöntem için bir *deturu* ekleyin. Örneğin:
 
 ```csharp
 [TestClass]
@@ -390,13 +390,13 @@ Sonlandırıcılar Fakes desteklenmez.
 
 ### <a name="private-methods"></a>Özel Yöntemler
 
-Kod Fakes oluşturucu, özel yöntemler için yalnızca imzada görünür türlere sahip olan, yani parametre türleri ve dönüş türü görünür olan dolgu özellikleri oluşturur.
+Fakes kod oluşturucu, imzada yalnızca görünür türleri olan, diğer bir deyişle, parametre türleri ve dönüş türü görünür olan özel yöntemler için dolgu özellikleri oluşturur.
 
 ### <a name="binding-interfaces"></a>Bağlama arabirimleri
 
-Dolgulu bir tür bir arabirim uygulayan kod oluşturucu, aynı anda bu arabirimden tüm üyeleri bağlamaya olanak sağlayan bir yöntem yayır.
+Bir shimmed türü bir arabirim uygularsa, kod Oluşturucu bu arabirimin tüm üyelerini aynı anda bağlamasını sağlayan bir yöntemi yayar.
 
-Örneğin, uygulayan bir `MyClass` sınıf `IEnumerable<int>` verildi:
+Örneğin, aşağıdakileri uygulayan bir sınıf verilmiştir `MyClass` `IEnumerable<int>` :
 
 ```csharp
 public class MyClass : IEnumerable<int> {
@@ -407,7 +407,7 @@ public class MyClass : IEnumerable<int> {
 }
 ```
 
-Bind yöntemini çağırarak `IEnumerable<int>` MyClass'daki uygulamalarını dolgu olarak kullanabilirsiniz:
+`IEnumerable<int>`Bağlama yöntemini çağırarak MyClass içindeki uygulamasının uygulamalarını dolgusu yapabilirsiniz:
 
 ```csharp
 // unit test code
@@ -415,7 +415,7 @@ var shimMyClass = new ShimMyClass();
 shimMyClass.Bind(new List<int> { 1, 2, 3 });
 ```
 
-Oluşturulan ShimMyClass tür yapısı aşağıdaki koda benzer:
+ShimMyClass 'in oluşturulan tür yapısı aşağıdaki koda benzer:
 
 ```csharp
 // Fakes generated code
@@ -428,11 +428,11 @@ public class ShimMyClass : ShimBase<MyClass> {
 
 ## <a name="change-the-default-behavior"></a>Varsayılan davranışı değiştirme
 
-Oluşturulan her dolgu türü, özelliği aracılığıyla `IShimBehavior` arabirimin bir örneğini `ShimBase<T>.InstanceBehavior` tutar. Davranış, bir istemci açıkça dolgul olmayan bir örnek üyesi çağıran her durumda kullanılır.
+Oluşturulan her dolgu türü `IShimBehavior` , özelliği aracılığıyla bir arabirimin örneğini barındırır `ShimBase<T>.InstanceBehavior` . Bu davranış, istemci açıkça shimmed olmayan bir örnek üyesini her çağırdığında kullanılır.
 
-Davranış açıkça ayarlanmazsa, statik özelliği tarafından döndürülen örneği `ShimBehaviors.Current` kullanır. Varsayılan olarak, bu özellik özel durum döndüren bir davranış `NotImplementedException` döndürür.
+Davranış açıkça ayarlanmamışsa, statik özelliği tarafından döndürülen örneği kullanır `ShimBehaviors.Current` . Varsayılan olarak, bu özellik özel durum oluşturan bir davranış döndürür `NotImplementedException` .
 
-Bu davranış herhangi bir dolgu örneğinde özelliği `InstanceBehavior` ayar tarafından herhangi bir zamanda değiştirilebilir. Örneğin, aşağıdaki kod parçacığı dolgu değerini hiçbir şey yapacak veya dönüş türünün varsayılan değerini döndüren bir davranış olarak değiştirir; diğer bir `default(T)` ifade:
+Bu davranış herhangi bir `InstanceBehavior` Dolgu örneği üzerinde özelliği ayarlanarak herhangi bir zamanda değiştirilebilir. Örneğin, aşağıdaki kod parçacığı, Shim öğesini hiçbir şey yapan veya dönüş türünün varsayılan değerini döndüren bir davranışa değiştirir — diğer bir deyişle `default(T)` :
 
 ```csharp
 // unit test code
@@ -441,7 +441,7 @@ var shim = new ShimMyClass();
 shim.InstanceBehavior = ShimBehaviors.DefaultValue;
 ```
 
-Bu davranış, statik özelliği ayarlandırarak özelliğin açıkça ayarlanmaması nedeniyle tüm dolgu örnekleri `InstanceBehavior` için genel olarak da `ShimBehaviors.Current` değiştirilebilir:
+Bu davranış, `InstanceBehavior` özelliği statik özelliği ayarlanarak açıkça ayarlanmayan tüm shimmed örnekleri için genel olarak da değiştirilebilir `ShimBehaviors.Current` :
 
 ```csharp
 // unit test code
@@ -450,9 +450,9 @@ Bu davranış, statik özelliği ayarlandırarak özelliğin açıkça ayarlanma
 ShimBehaviors.Current = ShimBehaviors.DefaultValue;
 ```
 
-## <a name="detect-environment-accesses"></a>Ortam erişimini algılama
+## <a name="detect-environment-accesses"></a>Ortam erişimlerini Algıla
 
-Davranışı ilgili dolgu türünün statik özelliğine ataarak belirli bir türe ait statik yöntemler de dahil olmak üzere tüm üyelere bir `ShimBehaviors.NotImplemented` `Behavior` davranış eklemek mümkündür:
+Belirli bir türün statik yöntemler de dahil olmak üzere tüm üyelere, `ShimBehaviors.NotImplemented` davranışı ilgili Dolgu türünün statik özelliğine atayarak bir davranış eklemek mümkündür `Behavior` :
 
 ```csharp
 // unit test code
@@ -464,13 +464,13 @@ ShimMyClass.BehaveAsNotImplemented();
 
 ## <a name="concurrency"></a>Eşzamanlılık
 
-Dolgu türleri AppDomain'deki tüm iş parçacıkları için geçerlidir ve iş parçacığı benzitesi yoktur. Eşzamanlılığı destekleyen bir test çalıştırıcısı kullanmayı planlıyorsanız bu önemli bir gerçektir. Dolgu türlerini içeren testler eşzamanlı olarak çalıştıramaz. Bu özellik, çalışma zamanı tarafından Fakes uygulanmaz.
+Dolgu türleri, AppDomain içindeki tüm iş parçacıkları için geçerlidir ve iş parçacığı benzeşimine sahip değildir. Eşzamanlılık destekleyen bir Test Çalıştırıcısı kullanmayı planlıyorsanız bu önemli bir olgu değildir. Dolgu türlerini içeren testler aynı anda çalıştırılamaz. bu özellik Fakes çalışma zamanı tarafından zorlanmaz.
 
-## <a name="call-the-original-method-from-the-shim-method"></a>dolgu yönteminden özgün yöntemi çağırma
+## <a name="call-the-original-method-from-the-shim-method"></a>Dolgu yönteminden özgün yöntemi çağırın
 
-Imagine yöntemine geçirilen dosya adını doğruladikten sonra metni dosya sistemine yazmak istediğinize emin olun. Bu durumda, dolgu yönteminin ortasında özgün yöntemi çağırarak.
+yönteme geçilen dosya adı doğrulandıktan sonra metni dosya sistemine yazmak istediğiniz Imagine. Bu durumda, orijinal yöntemi dolgu yönteminin ortasında çağıraöğreneceksiniz.
 
-Bu sorunu çözmek için ilk yaklaşım, aşağıdaki kodda olduğu gibi ve temsilci kullanarak özgün `ShimsContext.ExecuteWithoutShims()` yönteme yapılan bir çağrıyı sarmaktır:
+Bu sorunu çözmeye yönelik ilk yaklaşım, `ShimsContext.ExecuteWithoutShims()` aşağıdaki kodda olduğu gibi, bir temsilciyi kullanarak özgün yönteme bir çağrıyı sarmalıdır:
 
 ```csharp
 // unit test code
@@ -484,7 +484,7 @@ ShimFile.WriteAllTextStringString = (fileName, content) => {
 };
 ```
 
-Başka bir yaklaşım da dolgu değerini null olarak ayarlamak, özgün yöntemi çağırarak dolguları geri yüklemektir.
+Başka bir yaklaşım, dolgunun değerini null olarak ayarlamak, özgün yöntemi çağırmak ve dolgunun geri yüklenmesi.
 
 ```csharp
 // unit test code
@@ -507,9 +507,9 @@ shim = (fileName, content) => {
 ShimFile.WriteAllTextStringString = shim;
 ```
 
-## <a name="systemenvironment"></a>System.Environment
+## <a name="systemenvironment"></a>System. Environment
 
-<xref:System.Environment?displayProperty=fullName>dolgusunu eklemek için, Assembly öğesi sonrasında mscorlib.fakes dosyasına aşağıdaki **içeriği** ekleyin:
+Dolgusu için <xref:System.Environment?displayProperty=fullName> , **derleme** öğesinden sonra mscorlib. Fakes dosyasına aşağıdaki içeriği ekleyin:
 
 ```xml
 <ShimGeneration>
@@ -517,7 +517,7 @@ ShimFile.WriteAllTextStringString = shim;
 </ShimGeneration>
 ```
 
-Çözümü yeniden oluşturmanın ardından sınıfındaki yöntemler ve özellikler <xref:System.Environment?displayProperty=fullName> dolguyla kullanılabilir, örneğin:
+Çözümü yeniden oluşturduktan sonra, sınıftaki Yöntemler ve Özellikler <xref:System.Environment?displayProperty=fullName> shimmed olarak mevcuttur, örneğin:
 
 ```csharp
 System.Fakes.ShimEnvironment.GetCommandLineArgsGet = ...
@@ -525,9 +525,9 @@ System.Fakes.ShimEnvironment.GetCommandLineArgsGet = ...
 
 ## <a name="limitations"></a>Sınırlamalar
 
-Dolgular, .NET temel sınıf kitaplığı **mscorlib** ve System  .NET Framework ve .NET Core veya .NET 5.0 ve sonraki bir sürümün **System.Runtime'larında** tüm türlerde kullanılamaz.
+dolgu, .net Core veya .net 5,0 ve sonraki sürümlerde **system. Runtime** içindeki .net temel sınıf kitaplığından **mscorlib** ve .NET Framework **sistem** tüm türlerinde kullanılamaz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Microsoft Fakes ile test edilen kodu yalıtma](../test/isolating-code-under-test-with-microsoft-fakes.md)
-- [Peter Provost'un blogu: Visual Studio 2012 dolguları](http://www.peterprovost.org/blog/2012/04/25/visual-studio-11-fakes-part-2)
+- [Peter provost 'ın blogu: Visual Studio 2012 dolgular](http://www.peterprovost.org/blog/2012/04/25/visual-studio-11-fakes-part-2)

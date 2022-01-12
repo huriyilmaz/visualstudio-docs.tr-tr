@@ -14,12 +14,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 8df6d40f7c5226a75fa5e2f818423b61a41ce99b
-ms.sourcegitcommit: 2281b4f1f8737f263c0d7e55e00b5ec81517327d
+ms.openlocfilehash: f31ca4a18332f7d06dc24ea201b30926c32c6d9d
+ms.sourcegitcommit: d38d1b083322019663fec7d1d85a4cda456aadca
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "133108659"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "135533987"
 ---
 # <a name="install-certificates-required-for-visual-studio-offline-installation"></a>Çevrimdışı yükleme için Visual Studio sertifikaları yükleme
 
@@ -51,9 +51,9 @@ Bir ağ düzeni [veya yerel](../install/create-a-network-installation-of-visual-
 
 En son kök sertifikalara sahip çevrimdışı makinelere sahip kuruluşlar için, [](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11)) bir yönetici Güvenilen Kökleri Ve Izin Verilmeyen Sertifikaları Yapılandırma sayfasındaki yönergeleri kullanarak bunları güncelleştirebilirsiniz.
 
-### <a name="option-3---install-certificates-as-part-of-a-scripted-deployment-of-visual-studio"></a>3. Seçenek - Sertifikalar için betik dağıtımı kapsamında Visual Studio
+### <a name="option-3---install-certificates-as-part-of-a-scripted-deployment-of-visual-studio"></a>3. Seçenek - Sertifikalar için betik dağıtımı kapsamında sertifika Visual Studio
 
-İstemci iş istasyonlarına çevrimdışı ortamda Visual Studio betik yazıyorsanız şu adımları izlemalısınız:
+İstemci iş istasyonlarına çevrimdışı bir Visual Studio dağıtım betiği yazıyorsanız şu adımları izlemalısınız:
 
 1. Sertifika Yöneticisi [Aracı'nı](/dotnet/framework/tools/certmgr-exe-certificate-manager-tool) (certmgr.exe) ağ düzenine veya yerel önbellek yükleme konuma kopyalayın. Certmgr.exe bir parçası olarak Windows, ancak Windows [SDK'sı kapsamında kullanılabilir.](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
 
@@ -117,7 +117,7 @@ Sertifika adları Verilenler **sütunlarında yer alıyorsa,** bunların yüklü
 
 ## <a name="install-visual-studio"></a>Visual Studio'yu yükleme
 
-Sertifikaları istemci makinesine yükledikten sonra, yerel önbellekten Visual Studio veya ağ düzeni [](/visualstudio/install/create-a-network-installation-of-visual-studio#install-visual-studio-onto-a-client-machine-from-a-network-installation) paylaşımından Visual Studio istemci makinesine dağıtmaya hazır olursanız. [](../install/create-an-offline-installation-of-visual-studio.md#step-3---install-visual-studio-from-the-local-cache)
+Sertifikaları istemci makinesine yükledikten sonra, yerel önbellekten Visual Studio veya ağ [düzeni](../install/create-an-offline-installation-of-visual-studio.md#step-3---install-visual-studio-from-the-local-cache) [](create-a-network-installation-of-visual-studio.md#install-visual-studio-onto-a-client-machine-from-a-network-installation) paylaşımından Visual Studio istemci makinesine dağıtmaya hazır olursanız.
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 

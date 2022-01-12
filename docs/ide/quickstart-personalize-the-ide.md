@@ -10,20 +10,20 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 48ac5ca7d1d1ce236ff51cff57ee9a152761d371
-ms.sourcegitcommit: 5af130d3ff64b71d415819e42f4f2efb2ae36a6a
+ms.openlocfilehash: 175b1ca7fc4bbe5194734d36e777a99a2c4c9e65
+ms.sourcegitcommit: 3972b1af15930a73d79482e798154f0417a68593
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "133117555"
+ms.lasthandoff: 12/30/2021
+ms.locfileid: "135649820"
 ---
 # <a name="how-to-personalize-the-visual-studio-ide-and-the-editor"></a>Nasılürür: Visual Studio IDE'leri ve düzenleyiciyi kişiselleştirme
 
 ::: moniker range="vs-2022"
 
-Bu nasıl yapılan makalesinde, renk temasının Visual Studio özelleştirdik. Ardından, kod düzenleyicisinde iki farklı metin türü için renkleri özelleştirin.
+Bu nasıl yapılan makalesinde, renk temasını Visual Studio özelleştirdik. Ardından, kod düzenleyicisinde iki farklı metin türü için renkleri özelleştirin.
 
-Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/downloads) ücretsiz yükleyin.
+Henüz yüklemedıysanız Visual Studio yüklemek [için Visual Studio](https://visualstudio.microsoft.com/downloads) indirmeler sayfasına gidin.
 
 ## <a name="set-the-color-theme-for-the-ide"></a>IDE için renk temasını ayarlama
 
@@ -33,7 +33,7 @@ Visual Studio kullanıcı arabirimi için varsayılan renk teması **Koyu'dır.*
 
 1. Seçenekler listesinde Ortam **Genel'i** > **seçin.**
 
-1. Renk **teması listesinde** varsayılan Koyu tema, Mavi  **tema** ve Mavi (Ek Karşıtlık) teması ile Açık tema arasında **seçim** seçin.  Ya da Sistemi **kullan ayarını seçerek** bu ayarın Windows seçebilirsiniz.
+1. Renk **teması listesinde** varsayılan Koyu tema, Mavi **tema,** **Mavi** **(Ek** Karşıtlık) teması ve Açık tema arasında **seçim** seçin. Veya Sistem ayarını **kullan seçeneğini kullanarak,** bu ayarın Windows seçebilirsiniz.
 
    :::image type="content" source="media/vs-2022/fonts-colors-theme.png" alt-text="Renk temasını değiştirebilirsiniz Seçenekler iletişim kutusunun ekran görüntüsü.":::
 
@@ -47,9 +47,9 @@ Visual Studio kullanıcı arabirimi için varsayılan renk teması **Koyu'dır.*
 
 ::: moniker range="vs-2019"
 
-Bu nasıl yapılan makalesinde, mavi Visual Studio renk temasını koyu temaya özelleştirdik. Ardından, kod düzenleyicisinde iki farklı metin türü için renkleri özelleştirin.
+Bu nasıl yapılan makalesinde, Visual Studio renk temasını koyu temaya özelleştirdik. Ardından, kod düzenleyicisinde iki farklı metin türü için renkleri özelleştirin.
 
-Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/downloads) ücretsiz yükleyin.
+Henüz yüklemedıysanız Visual Studio yüklemek [için Visual Studio](https://visualstudio.microsoft.com/downloads) indirmeler sayfasına gidin.
 
 ## <a name="set-the-color-theme-for-the-ide"></a>IDE için renk temasını ayarlama
 
@@ -61,7 +61,7 @@ Visual Studio kullanıcı arabirimi için varsayılan renk teması **Mavi'dir.**
 
    Geliştirme ortamının (IDE) Visual Studio renk teması Koyu olarak **değişir.**
 
-   ![Visual Studio temada 2019'da](media/vs-2019/dark-theme.png)
+   ![Visual Studio 2019'da koyu tema](media/vs-2019/dark-theme.png)
 
 > [!TIP]
 > Visual Studio Market'te Visual Studio **Tema Tasarımcısı'Visual Studio** [oluşturabilirsiniz.](https://marketplace.visualstudio.com/items?itemName=ms-madsk.ColorThemeDesigner)
@@ -70,9 +70,9 @@ Visual Studio kullanıcı arabirimi için varsayılan renk teması **Mavi'dir.**
 
 ::: moniker range="vs-2017"
 
-Bu nasıl yapılan makalesinde, mavi Visual Studio renk temasını koyu temaya özelleştirdik. Ardından, kod düzenleyicisinde iki farklı metin türü için renkleri özelleştirin.
+Bu nasıl yapılan makalesinde, Visual Studio renk temasını koyu temaya özelleştirdik. Ardından, kod düzenleyicisinde iki farklı metin türü için renkleri özelleştirin.
 
-Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ücretsiz yükleyin.
+Henüz yüklemedıysanız Visual Studio yüklemek [için Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) indirmeler sayfasına gidin.
 
 ## <a name="set-the-color-theme-for-the-ide"></a>IDE için renk temasını ayarlama
 
@@ -149,7 +149,7 @@ Visual Studio kullanıcı arabirimi için varsayılan renk teması **Mavi'dir.**
 
    ![Yeni yazı tipi renkleri ile XML dosyası](media/quickstart-personalize-xml-file-new-colors.png)
 
-Visual Studio'da renkleri özelleştirmenin yalnızca birkaç Visual Studio. Seçenekleri gerçekten kendi özelleştirmenizi yapmak için [](../ide/reference/fonts-and-colors-environment-options-dialog-box.md) Seçenekler iletişim kutusundaki diğer özelleştirme seçeneklerini Visual Studio umuyoruz.
+Visual Studio'daki renkleri özelleştirmenin yalnızca birkaç Visual Studio. Seçenekleri gerçekten kendi özelleştirmenizi yapmak için [](../ide/reference/fonts-and-colors-environment-options-dialog-box.md) Seçenekler iletişim kutusundaki diğer özelleştirme seçeneklerini Visual Studio umuyoruz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

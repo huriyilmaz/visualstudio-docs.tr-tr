@@ -10,12 +10,12 @@ ms.technology: vs-ide-test
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: b422efc8e3f8e6ec9c39b02089e22c5eab6ed3cc
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 221ca6dd18b8ec20087cb1683c0bd5d9ab7bf09c
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122083940"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135802938"
 ---
 # <a name="customize-code-coverage-analysis"></a>Kod kapsamı analizini özelleştirme
 
@@ -31,13 +31,13 @@ Test kodunu kod kapsamı sonuçlarından dışlamak ve yalnızca uygulama kodunu
 
 Kod kapsamı özelleştirmek için şu adımları izleyin:
 
-1. Çözümünüze bir çalıştırma ayarları dosyası ekleyin. Bu **Çözüm Gezgini,** çözüm kısayol menüsünde Yeni Öğe   >  **Ekle'yi ve** **ARDıNDAN XML Dosyası'yı seçin.** Dosyayı *CodeCoverage.runsettings gibi bir adla kaydedin.*
+1. Çözümünüze bir çalıştırma ayarları dosyası ekleyin. Bu **Çözüm Gezgini,** çözüm çözümlü kısayol menüsünde Yeni Öğe  >  **Ekle'yi ve** **ARDıNDAN XML Dosyası'yı seçin.** Dosyayı *CodeCoverage.runsettings gibi bir adla kaydedin.*
 
 2. Bu makalenin sonundaki örnek dosyadan içeriği ekleyin ve ardından aşağıdaki bölümlerde açıklandığı gibi ihtiyaçlarınıza göre özelleştirin.
 
 ::: moniker range="vs-2017"
 
-3. Çalıştırma ayarları dosyasını seçmek için Test menüsünde Test ve **Test** Ayarlar  >  **Dosya'Ayarlar seçin.** Komut satırına test çalıştırmaya bir çalıştırma ayarları dosyası belirtmek için [bkz. Birim testlerini yapılandırma.](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md#specify-a-run-settings-file-from-the-command-line)
+3. Çalıştırma ayarları dosyasını seçmek için Test menüsünde  **Test** ve Test Ayarlar  >  **Seç'i Ayarlar seçin.** Komut satırına test çalıştırmaya bir çalıştırma ayarları dosyası belirtmek için [bkz. Birim testlerini yapılandırma.](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md#specify-a-run-settings-file-from-the-command-line)
 
 ::: moniker-end
 
@@ -116,6 +116,13 @@ Aşağıdaki tabloda, derlemelerin ve üyelerin kod kapsamına dahil edilmesi ve
 | Kaynak | Öğeleri tanımlandığı kaynak dosyanın yol adına göre eşler. |
 | Öznitelik | Belirtilen özniteliğine sahip öğelerle eşler. Özniteliğin tam adını belirtin, örneğin `<Attribute>^System\.Diagnostics\.DebuggerHiddenAttribute$</Attribute>` .<br/><br/>özniteliğini dışlarsanız, , , ve otomatik uygulanan özellikler gibi dil özelliklerini kullanan <xref:System.Runtime.CompilerServices.CompilerGeneratedAttribute> `async` `await` `yield return` kod, kod kapsamı analizinin dışındadır. Gerçek anlamda oluşturulan kodu hariç tutmak için yalnızca özniteliğini hariç <xref:System.CodeDom.Compiler.GeneratedCodeAttribute> tutabilirsiniz. |
 | İşlev | Yordamları, işlevleri veya yöntemleri parametre listesi de dahil olmak üzere tam adla eşler. Normal bir ifade kullanarak adın bir bölümünü de [eşlersiniz.](#regular-expressions)<br/><br/>Örnekler:<br/><br/>`Fabrikam.Math.LocalMath.SquareRoot(double);` (C#)<br/><br/>`Fabrikam::Math::LocalMath::SquareRoot(double)` (C++) |
+
+::: moniker range=">=vs-2022"
+### <a name="code-coverage-formats"></a>Kod kapsamı biçimleri
+Varsayılan olarak kod kapsamı toplanır ve bir dosyaya `.coverage` kaydedilir. Kapsamı Xml ve Cobertura gibi diğer biçimleri kullanarak da toplayabilirsiniz. Farklı biçimler farklı düzenleyicilerde ve işlem hatlarında yararlı olabilir. Runsettings dosyanız içinde DataCollector yapılandırma bölümüne veya ekleyerek bunu `<Format>Cobertura</Format>` `<Format>Xml</Format>` [runsettings içinde etkinleştirebilirsiniz.](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md#codecoverage-data-collector) Bu biçim, aşağıdaki kod kapsamı sonuçları penceresinde Visual Studio Enterprise.
+
+Runsettings dosyasında belirterek veya bir parametrede belirterek komut satırına farklı biçimler de belirtebilirsiniz. Örneğin, dotnet komut satırı `dotnet test --collect:"Code Coverage;Format=Cobertura"` kullanır. Vstest için `vstest.console.exe /collect:"Code Coverage;Format=Cobertura"` kullanın. Collect parametresi runsettings içinde belirtilen biçimi geçersiz kılar.
+::: moniker-end
 
 ### <a name="regular-expressions"></a>Normal ifadeler
 

@@ -1,23 +1,23 @@
 ---
-title: Visual Studio için R Araçları'a hoş geldiniz
+title: Visual Studio için R Araçları
 description: Uygulama yüklemesi yapan geliştiriciler için özet Visual Studio için R Araçları.
 ms.date: 01/24/2018
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
-author: kraigb
-ms.author: kraigb
+author: ghogen
+ms.author: ghogen
 manager: jmartens
 ms.technology: vs-rtvs
 ms.workload:
 - data-science
-ms.openlocfilehash: 91c8a3941039242a575bce7e60cbcb3b9e4f4d2c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 7433e602967686d8d920496a8e5d86471c4f68bc
+ms.sourcegitcommit: dcecc0ed37b5e976b5dc83c5128ba5ecc8bc04b1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122054294"
+ms.lasthandoff: 01/04/2022
+ms.locfileid: "135751064"
 ---
-# <a name="welcome-to-r-tools-for-visual-studio"></a>Visual Studio için R Araçları'a hoş geldiniz
+# <a name="welcome-to-r-tools-for-visual-studio"></a>Visual Studio için R Araçları
 
 (RTVS) Visual Studio için R Araçları teşekkür ederiz! Bu sayfayı kontrol edin ve Kaynaklar altındaki bağlantıları kullanarak bize ne düşünmesi hakkında bilgi [edinebilirsiniz.](#resources)
 
@@ -33,7 +33,7 @@ ms.locfileid: "122054294"
 
 ## <a name="microsoft-r-distributions"></a>Microsoft R dağıtımları
 
-RTVS, cran R ve Microsoft R dağıtımlarını destekler. R'nin sürümü de 2016'SQL Server dağıtılır. Aşağıdaki bağlantılar, farklı Microsoft R dağıtımları hakkında daha fazla bilgi sağlar:
+RTVS, 2016'da dağıtılan R sürümü de dahil olmak üzere CRAN R ve Microsoft R SQL Server destekler. Aşağıdaki bağlantılar, farklı Microsoft R dağıtımları hakkında daha fazla bilgi sağlar:
 
 - [Microsoft R Open](https://mran.microsoft.com/download/)
 - [Microsoft R Client](/machine-learning-server/r-client/what-is-microsoft-r-client)

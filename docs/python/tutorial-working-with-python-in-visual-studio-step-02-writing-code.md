@@ -2,7 +2,8 @@
 title: Visual Studio öğreticide Python adım 2, kodu yazma ve çalıştırma
 titleSuffix: ''
 description: kod düzenle ve proje çalıştırma dahil Visual Studio Python özelliklerine yönelik temel bir izlenecek adım 2.
-ms.date: 01/28/2019
+ms.custom: devdivchpfy22
+ms.date: 12/20/2021
 ms.topic: tutorial
 author: rjmolyneaux
 ms.author: rmolyneaux
@@ -11,18 +12,18 @@ ms.technology: vs-python
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 5ff322fd80fd6d1b616e125ba4551b53abe28da1
-ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
+ms.openlocfilehash: 7b0ca19485b297ae3e1b9733fb67939286bfc6c8
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "129968063"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135805838"
 ---
 # <a name="step-2-write-and-run-code"></a>2. Adım: kodu yazma ve çalıştırma
 
 **Önceki adım: [Yeni bir Python projesi oluşturma](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)**
 
-Proje dosyalarını yönettiğiniz **Çözüm Gezgini** , genellikle, kaynak kodu gibi dosyaların *içeriğiyle* çalıştığınız yerde *Düzenleyici* pencere olur. Düzenleyici, programlama dili de dahil olmak üzere düzenlemekte olduğunuz dosya türünün bağlamsal olarak farkındadır ve IntelliSense kullanarak söz dizimi renklendirme ve otomatik tamamlama gibi özellikler sunar.
+Proje dosyalarını yönettiğiniz **Çözüm Gezgini** , genellikle, kaynak kodu gibi dosyaların *içeriğiyle* çalıştığınız yerde *Düzenleyici* pencere olur. Düzenleyici, programlama dili de dahil olmak üzere düzenlemekte olduğunuz dosyanın türüne (dosya uzantısına göre) bağlamsal olarak ve IntelliSense kullanarak söz dizimi renklendirme ve otomatik tamamlama gibi bu dile uygun özellikler sunar.
 
 1. yeni bir "Python uygulaması" projesi oluşturduktan sonra, Visual Studio düzenleyicide *PythonApplication1.py* adlı varsayılan bir boş dosya açıktır.
 
@@ -49,7 +50,7 @@ Proje dosyalarını yönettiğiniz **Çözüm Gezgini** , genellikle, kaynak kod
 
 1. **CTRL** + **F5** tuşuna basarak veya hata ayıklama menüsü öğesi olmadan **Hata Ayıkla**  >  **Başlat** ' ı seçerek bu noktaya yazdığınız kodu çalıştırın. kodunuzda hatalar varsa sizi uyarır Visual Studio.
 
-1. Programı çalıştırdığınızda, komut satırından *PythonApplication1.py* Ile bir Python yorumlayıcı çalıştırdığınız gibi, sonuçları görüntüleyen bir konsol penceresi görüntülenir. pencereyi kapatmak ve Visual Studio düzenleyicisine dönmek için bir tuşa basın.
+1. Programı çalıştırdığınızda, komut satırından *PythonApplication1.py* Ile bir Python yorumlayıcı çalıştırdığınız gibi, sonuçları görüntüleyen bir konsol penceresi görünür. pencereyi kapatmak ve Visual Studio düzenleyicisine dönmek için herhangi bir tuşa basın.
 
     ![Programın ilk çalışması için çıkış](media/vs-getting-started-python-07-output.png)
 
@@ -67,7 +68,7 @@ Proje dosyalarını yönettiğiniz **Çözüm Gezgini** , genellikle, kaynak kod
 
     ![Modül üyelerini gösteren ıntellsense](media/vs-getting-started-python-10-import3.png)
 
-1. `sin`, `cos` , Ve üyelerini içeri aktararak, `radians` her biri için kullanılabilir otomatik tamamlamayı yaşıyorsanız. İşiniz bittiğinde, kodunuzun aşağıdaki gibi görünmesi gerekir:
+1. `sin`, `cos` , Ve üyelerini içeri aktararak, `radians` her biri için kullanılabilir olan yaşıyorsanız. İşiniz bittiğinde, kodunuzun aşağıdaki gibi görünmesi gerekir:
 
     ```python
     import sys

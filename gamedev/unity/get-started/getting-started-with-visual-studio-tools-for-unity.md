@@ -1,7 +1,7 @@
 ---
-title: 'Hızlı Başlangıç: Yapılandırma & yükleme Unity için Visual Studio Araçları'
-description: Platformlar arası geliştirme için Unity ve Visual Studio bağlamayı öğrenin.
-ms.date: 11/17/2021
+title: 'hızlı başlangıç: ınstall & configure Unity için Visual Studio Araçları'
+description: platformlar arası geliştirme için Unity ve Visual Studio bağlamayı öğrenin.
+ms.date: 12/10/2021
 ms.technology: vs-unity-tools
 ms.prod: visual-studio-dev16
 ms.topic: quickstart
@@ -12,92 +12,123 @@ manager: crdun
 ms.workload:
 - unity
 zone_pivot_groups: platform
-ms.openlocfilehash: a27ec6f2fa0cd9ffc6eb3e62b7de4b7a2adaee0a
-ms.sourcegitcommit: dd66ab447c6f33de525f9429de1f912dd538a6d5
+ms.openlocfilehash: 67e0893ad5fd0329a9542ecec5991f8ae641df02
+ms.sourcegitcommit: 2a4744fb312396d36086dd59fd55ab741ae8e106
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2021
-ms.locfileid: "132773167"
+ms.lasthandoff: 12/28/2021
+ms.locfileid: "135575976"
 ---
-# <a name="quickstart-configure-visual-studio-for-cross-platform-development-with-unity"></a>Hızlı Başlangıç: Unity Visual Studio platformlar arası geliştirme için yapılandırma
+# <a name="quickstart-configure-visual-studio-for-cross-platform-development-with-unity"></a>hızlı başlangıç: Unity ile platformlar arası geliştirme için Visual Studio yapılandırma
 
-Bu hızlı başlangıçta, Unity için Visual Studio Araçları uzantısını yükleme ve Unity ile platformlar arası oyunlar ve uygulamalar geliştirmek için yapılandırmayı öğrenirsiniz.  Bu Unity için Visual Studio Araçları ücretsizdir ve C# yazmak ve hata ayıklamak için destek sağlar. Uzantıların [neler dahil olduğunu tam](./visual-studio-tools-for-unity.md) bir liste için Unity araçlarına genel bakış'ı ziyaret edin.
+bu hızlı başlangıçta, Unity için Visual Studio Araçları uzantısını yüklemeyi ve Unity ile platformlar arası oyunlar ve uygulamalar geliştirmeye yönelik yapılandırmayı öğreneceksiniz.  Unity için Visual Studio Araçları uzantısı ücretsizdir ve C# ve daha fazlasını yazmak ve hatalarını ayıklamak için destek sağlar. Uzantıların neleri içerdiğine ilişkin tüm liste için [Unity 'ye genel bakış araçlarını](./visual-studio-tools-for-unity.md) ziyaret edin.
 
 > [!NOTE]
-> Unity Visual Studio Code & için Unity Ile [Unity Geliştirme VS Code ziyaret edin.](https://code.visualstudio.com/docs/other/unity)
+> unity & Visual Studio Code için [VS Code belgelerindeki unity geliştirmeyi](https://code.visualstudio.com/docs/other/unity)ziyaret edin.
 
-## <a name="prerequisites"></a>Önkoşullar
-
-+ Bu kılavuzda Unity Hub programını kullanarak Unity'i zaten yüklemişsinizdir. Unity'ye yeni başladıysanız önce [Unity Essentials öğrenme yolunu](https://learn.unity.com/pathway/unity-essentials) tamamlar.
-
-## <a name="install-visual-studio-tools-for-unity"></a>Yükleme Unity için Visual Studio Araçları
+## <a name="install-visual-studio-and-unity"></a>Visual Studio ve Unity 'yi yükleyip
 
 :::zone pivot="windows"
 
-1. [Yükleme Visual Studio indirin](/visualstudio/install/install-visual-studio)veya zaten yüklüyse çalıştırın.
-2. İstediğiniz **sürüm** için Değiştir (zaten yüklüyse) veya **Yükle** (yeni yüklemeler için) seçeneğine Visual Studio.
-3. İş Yükleri **sekmesinde Oyun** bölümüne kaydırın **ve** Unity ile oyun geliştirme **iş yükünü** seçin.
+1. [Visual Studio yükleyicisini indirin](/visualstudio/install/install-visual-studio.md)veya zaten yüklüyse açın.
+2. İstediğiniz Visual Studio sürümünüz için **Değiştir** (zaten yüklüyse) veya **yükleme** (yeni yüklemeler için) öğesini seçin.
+3. **Iş yükleri** sekmesini seçin ve ardından Unity iş yüküyle **oyun geliştirmeyi** seçin.    
+4. Unity zaten yüklü değilse, yükleyicinin Isteğe bağlı bölümünde Unity hub onay kutusunu seçin.
+5. Yüklemeyi gerçekleştirmek için **Değiştir** veya **Yükleme ' yi** seçin.
 
-    ![Yükleyicide Unity iş yükü kutusuyla oyun geliştirme](../media/vs/unity-workload.png)
+![Yükleyicideki Unity iş yükü ile oyun geliştirme 'nın ekran görüntüsü](../media/vs/unity-workload.png)
+
+Visual Studio, yükleme işlemini tamamladıktan sonra Unity kurulumuna hazırsınız demektir.
+
+1. Unity için Visual Studio Araçları yüklemesi sırasında yüklenen Unity Hub 'ını açın.
+1. Unity hub penceresinin sol tarafında, **yüklemeler** sekmesini seçin.
+1. **Ekle** düğmesini seçin.
+1. Unity sürümü Ekle penceresinde, bir Unity sürümünü yüklemek için seçin.
+1. Yüklemeye devam etmek için **İleri ' yi** seçin.
+1. **Yüklemeye modüller ekleme** adımından **bitti**' yi seçin.
+
+>[!NOTE]
+>zaten 2022 Visual Studio yüklediyseniz, Microsoft Visual Studio Community 2019 seçeneğinin seçimini kaldırabilirsiniz.
+
+Unity hub, arka planda Unity yüklemeye devam edecektir. Bu tamamlandığında, **Projeler** sekmesini seçerek ve **Yeni** düğmesini seçerek yeni bir proje oluşturabilirsiniz.
+
+>[!TIP]
+>Projeler, Visual Studio değil Unity Düzenleyicisi kullanılarak oluşturulur.
 
 :::zone-end
 :::zone pivot="macos"
 
-Unity araçları, Mac için Visual Studio yüklemesine dahildir ve ayrı yükleme adımları gerekmez. Bunu Oyun Geliştirme menüsünde **Mac için Visual Studio > uzantıları > doğruabilirsiniz.** **unity Mac için Visual Studio araçları** etkinleştirilmelidir.
+> [!NOTE]
+> bu yükleme kılavuzu Mac için Visual Studio içindir. Visual Studio Code kullanıyorsanız, lütfen [VS Code belgeler ile Unity geliştirmeyi](https://code.visualstudio.com/docs/other/unity)ziyaret edin.
 
-![Unity için Mac için Visual Studio'nin etkin olduğunu gösteren Uzantı Yöneticisi görünümü](../media/vsm/unity-workload.png)
+Unity için Mac için Visual Studio araçları, Mac için Visual Studio yüklemesine dahildir ve ayrı yükleme adımları gerekli değildir. bunu, **Mac için Visual Studio > uzantıları > oyun geliştirme** menüsünde doğrulayabilirsiniz. **Unity için Mac için Visual Studio araçları** etkinleştirilmelidir.
+
+![Unity için Mac için Visual Studio araçları gösteren uzantı yöneticisi görünümünün ekran görüntüsü](../media/vsm/unity-workload.png)
+
+:::zone-end
+
+## <a name="configure-unity-to-use-visual-studio"></a>Unity 'yi Visual Studio kullanacak şekilde yapılandırma
+
+varsayılan olarak, Unity zaten bir betik düzenleyicisi olarak Visual Studio veya Mac için Visual Studio kullanacak şekilde yapılandırılmalıdır. bunu veya dış betik düzenleyicisini Unity düzenleyicisinden Visual Studio belirli bir sürümüne değiştirebilirsiniz.
+
+:::zone pivot="windows"
+
+1. Unity düzenleyicisinde **> tercihlerini Düzenle** menüsünü seçin.
+2. Sol tarafta **dış araçlar** sekmesini seçin.
+
+    ![Windows 'daki Unity düzenleyicisinde dış araçlar tercihi menüsünün ekran görüntüsü](../media/vs/preferences-external-tools.png)
+
+### <a name="install-or-update-the-visual-studio-editor-package"></a>Visual Studio düzenleyicisi paketini yükler veya güncelleştirir
+
+Unity sürümleri 2020 ve daha yeni sürümlerde, Visual Studio gibi en iyi deneyim ile çalışma için ayrı bir Unity paketi gerekir. Bu, varsayılan olarak dahil edilmelidir, ancak bu pakete, dilediğiniz zaman güncelleyebilir güncelleştirmeler yayınlarız.
+
+1. Unity düzenleyicisinde **Windows > Paket Yöneticisi** menüsünü seçin.
+1. **Visual Studio düzenleyicisi** paketini seçin.
+1. Yeni bir sürüm varsa **Güncelleştir** düğmesini seçin.
+
+![Windows üzerinde Unity düzenleyicisinde Paket Yöneticisi penceresinin ekran görüntüsü](../media/vs/unity-package-manager.png)
+
+### <a name="add-a-version-of-visual-studio-that-is-not-listed"></a>listelenmeyen Visual Studio bir sürümünü ekleyin
+listelenmemiş ve özel bir dizinde yüklü olan Visual Studio diğer sürümlerini seçmek mümkündür.
+
+1. Açılan listeden **araştır...** seçeneğini belirleyin.
+2. Visual Studio yükleme dizininizin içindeki **Common7/ıde** dizinine gidin ve **devenv.exe**' i seçin. Ardından **Aç**' a tıklayın.
+3. Yalnızca Unity 2019 ve üzeri için **Düzenleyici iliştirme** onay kutusunun seçili olduğundan emin olun.
+4. Yapılandırma işlemini gerçekleştirmek için **Tercihler** iletişim kutusunu kapatın.
+
+:::zone-end
+:::zone pivot="macos"
+
+1. Unity Düzenleyicisi 'nde **unity > tercihleri** menüsünü seçin.
+2. Sol tarafta **dış araçlar** sekmesini seçin.
+3. **dış betik düzenleyicisi** açılır listesini kullanmak, farklı Mac için Visual Studio yüklemelerini seçmek için bir yol sağlar.
+
+    ![MacOS 'ta Unity düzenleyicisinde dış araçlar tercihi menüsünün ekran görüntüsü](../media/vsm/preferences-external-tools.png)
+
+4. Yapılandırma işlemini gerçekleştirmek için **Tercihler** iletişim kutusunu kapatın.
 
 :::zone-end
 
 ## <a name="check-for-updates"></a>Güncelleştirmeleri denetle
 
-En son hata düzeltmelerini, Visual Studio ve Unity Mac için Visual Studio güncel tutmanın ve güncelleştirmenin güncelliğini sürdürmenizi öneririz. Bu, Unity sürümlerinin güncelleştirilsini gerektirmez.
+en son hata düzeltmeleri, özellikler ve Unity desteği için Visual Studio ve Mac için Visual Studio güncel tutmanız önerilir. Bu, Unity sürümlerinin güncelleştirilmesini gerektirmez.
 
 :::zone pivot="windows"
 
-1. Güncelleştirmeleri **Denetleme > Yardım Menüsüne** tıklayın.
+1. **Güncelleştirmeler Için yardım > denetle** menüsüne tıklayın.
 
-    ![Visual Studio 2019'da Güncelleştirmeleri Denetleme menüsü](../media/vs/check-for-updates.png)
+    ![Visual Studio 2019 ' de güncelleştirmeleri denetle menüsünün ekran görüntüsü](../media/vs/check-for-updates.png)    
 
-2. Kullanılabilir bir güncelleştirme varsa, Visual Studio Yükleyicisi sürümü gösterir. Güncelleştir **düğmesine** tıklayın.
+2. kullanılabilir bir güncelleştirme varsa Visual Studio Yükleyicisi yeni bir sürüm gösterir. **Güncelleştir** düğmesine tıklayın.
 
 :::zone-end
 :::zone pivot="macos"
 
-1. Güncelleştirmeleri **Mac için Visual Studio >... menüsüne** tıklayın ve güncelleştirme iletişim **Visual Studio** açın.
-2. Kullanılabilir bir güncelleştirme varsa Yükle **düğmesine** tıklayın.
-
-:::zone-end
-
-## <a name="configure-unity-to-use-visual-studio"></a>Unity'yi Visual Studio
-
-Varsayılan olarak Unity, betik düzenleyicisi olarak Visual Studio Mac için Visual Studio zaten yapılandırılmıştır. Bunu onaylayabilir veya Unity Düzenleyicisi'nde dış betik düzenleyicisini belirli bir Visual Studio sürümüyle değiştirebilirsiniz.
-
-:::zone pivot="windows"
-
-1. Unity Düzenleyicisi'nde, **Tercihler menüsünü > seçin.**
-2. Sol **tarafta Dış** Araçlar sekmesini seçin.
-3. Dış **Betik Düzenleyicisi** açılan listesi, uygulamanın farklı yüklemelerini seçmenin bir Visual Studio. Listede olmayan bir sürüm eklemek için açılan listeden **Gözat...** 'a da tıkabilirsiniz.
-
-    ![Windows'daki Unity Düzenleyicisi'nde Dış Araçlar tercih Windows](../media/vs/preferences-external-tools.png)
-
-4. Gözat... **seçildiyse,** uygulama yükleme dizininizin içindeki **Common7/IDE** dizinine Visual Studio ve **devenv.exe.** Ardından **Aç'a tıklayın.**
-5. Dış Visual Studio Düzenleyicisi listesinde bu onay kutusu **seçildikten** sonra Düzenleyici Ekleme **onay kutusunun** seçili olduğunu onaylayın.
-6. Yapılandırma **işlemini tamamlamak için** Tercihler iletişim kutusunu kapatın.
-
-:::zone-end
-:::zone pivot="macos"
-
-1. Unity Düzenleyicisi'nde Unity > **menüsünü** seçin.
-2. Sol **tarafta Dış** Araçlar sekmesini seçin.
-3. Dış **Betik Düzenleyicisi** açılan listesi, uygulamanın farklı yüklemelerini seçmenin bir Visual Studio. Listede olmayan bir sürüm eklemek için açılan listeden **Gözat...** 'a da tıkabilirsiniz.
-
-    ![macOS'ta Unity Düzenleyicisi'nde Dış Araçlar tercih menüsü](../media/vsm/preferences-external-tools.png)
-
-4. Yapılandırma **işlemini tamamlamak için** Tercihler iletişim kutusunu kapatın.
+1. **Visual Studio güncelleştirme** iletişim kutusunu açmak için **güncelleştirmeleri denetle... menüsünü Mac için Visual Studio >** tıklayın.
+2. Kullanılabilir bir güncelleştirme varsa, **Install** düğmesine tıklayın.
 
 :::zone-end
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu uzantının tümleştirme ve üretkenlik özellikleri hakkında bilgi edinmek ve Unity geliştirmesi için [Visual Studio hata ayıklayıcısını kullanmayı öğrenin.](using-visual-studio-tools-for-unity.md)
+bu uzantının [tümleştirme ve üretkenlik özellikleri hakkında bilgi edinin ve Unity geliştirme için Visual Studio hata ayıklayıcı 'yı nasıl kullanacağınızı](using-visual-studio-tools-for-unity.md)öğrenin.

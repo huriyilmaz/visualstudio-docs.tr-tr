@@ -9,161 +9,159 @@ ms.author: tglee
 ms.manager: jmartens
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.openlocfilehash: 2c1679fa7558eb7e241fe62b1df30e33d5ba6ef5
-ms.sourcegitcommit: dc12d3d0ca2ec3601cb9de7c22e61ecf22c7c514
+ms.openlocfilehash: c95a6883031294121b6df1e6b160ef5afde823fc
+ms.sourcegitcommit: d38d1b083322019663fec7d1d85a4cda456aadca
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "132264025"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "135534072"
 ---
 # <a name="manage-git-repositories-in-visual-studio"></a>Visual Studio Git depolarını yönetme
 
-Git deposu penceresi, git deponuzu yönetmenize ve takımınızın üzerinde çalıştığı en güncel kalacaklarına odaklanmanıza yardımcı olan tam ekran git deneyimi sağlar. Örneğin, yürütmeleri Cherry-Pick sıfırlamanız, geri döndürmeniz ya da yalnızca yürütme geçmişinizi temizlemeniz gerekebilir. Git deposu penceresi, Dallarınızı görselleştirmek ve yönetmek için de harika bir yerdir.
+**Git deposu** penceresi, git deponuzu yönetmenize ve takımınızın projeleriyle güncel kalmanıza yardımcı olan tam ekran git deneyimi sağlar. Örneğin, yürütmeleri sıfırlamanız, geri döndürmeniz veya tek tek seçmeniz ya da yalnızca yürütme geçmişinizi temizlemeniz gerekebilir. **Git deposu** penceresi, Dallarınızı görselleştirmek ve yönetmek için de harika bir yerdir.
 
 ## <a name="change-the-last-commit-amend"></a>Son işlemeyi değiştirme (düzeltme)
 
-Son yürütmeyi güncelleştirmek git tarafından düzeltme olarak adlandırılır ve çok yaygın bir kullanım durumdur. Bazen yalnızca COMMIT iletinizi güncelleştirmeniz veya bir son dakika değişikliği eklemeniz gerekebilir.
+Son yürütmeyi güncelleştirmek git 'te *Düzeltme* olarak adlandırılır ve bu, yaygın olarak kullanılan bir kullanım durumdur. Bazen yalnızca COMMIT iletinizi güncelleştirmeniz veya bir son dakika değişikliği eklemeniz gerekebilir.
 
-Komut satırında aşağıdaki komutu kullanarak bir işlemeyi değiştirebilirsiniz:
+Komut satırında aşağıdaki komutu kullanarak bir işlemeyi düzeltebilirsiniz:
 
 ```bash
 git commit --amend
 ```
 
-Git deposu penceresi, tamamlama iletinizi güncelleştirmeyi kolaylaştırır. Son işlemenin kayıt ayrıntılarını açmak için çift tıklayın ve ardından tamamlama iletisinin yanındaki **Düzenle** seçeneğine tıklayın.
+**Git deposu** penceresi, tamamlama iletinizi güncelleştirmeyi kolaylaştırır. Son kaydın kayıt ayrıntılarını çift tıklayarak açın ve ardından, tamamlama iletisinin yanındaki **Düzenle** seçeneğini belirleyin.
 
-:::image type="content" source="media/vs-2022/git-repository-edit-commit.png" alt-text="Bir kayıt iletisini düzenleme ekran görüntüsü." lightbox="media/vs-2022/git-repository-edit-commit.png":::
+:::image type="content" source="media/vs-2022/git-repository-edit-commit.png" alt-text="Bir tamamlama iletisini düzenlemenin ekran görüntüsü." lightbox="media/vs-2022/git-repository-edit-commit.png":::
 
-Kayıt iletinizi düzenledikten sonra, **Düzeltme**' ye tıklayın.
+Kayıt iletinizi düzenlemenizi bitirdiğinizde, Değiştir ' **i seçin.**
 
-:::image type="content" source="media/vs-2022/git-repository-amend-commit.png" alt-text="Değişiklik d ' ye tıklayarak düzenlenmiş iletiyi kaydetme ekran görüntüsü." lightbox="media/vs-2022/git-repository-amend-commit.png":::
+:::image type="content" source="media/vs-2022/git-repository-amend-commit.png" alt-text="Değiştirilmiş bir iletinin kayıt ekran görüntüsü Değiştir ' i seçin." lightbox="media/vs-2022/git-repository-amend-commit.png":::
 
-Son işlemenizden kod değişiklikleri eklemeniz gerekiyorsa, bunu yapmak için git değişiklikler penceresini kullanarak, **düzeltme onay kutusunu** işaretleyip yaptığınız değişiklikleri gerçekleştirebilirsiniz.
+Son yürütmeniz için kod değişiklikleri eklemeniz gerekiyorsa, bunu **Git değişiklikleri** penceresinde yapabilirsiniz. Değiştir onay **kutusunu seçin** ve ardından değişikliklerinizi kaydedin.
 
-:::image type="content" source="media/vs-2022/git-changes-amend-commit.png" alt-text="Git değişiklikleri penceresini kullanarak düzeltme kodu değişikliklerinin ekran görüntüsü." lightbox="media/vs-2022/git-changes-amend-commit.png":::
+:::image type="content" source="media/vs-2022/git-changes-amend-commit.png" alt-text="Git değişiklikleri penceresini kullanarak kod değişikliklerinin düzeltme görüntüsü." lightbox="media/vs-2022/git-changes-amend-commit.png":::
 
-> [!TIP]
-> Düzeltme ve geri yazma geçmişi hakkında daha fazla bilgi edinmek için aşağıdaki bağlantıyı kullanın: [Git araçları-yeniden yazma geçmişi](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History)
+Düzeltme hakkında daha fazla bilgi için bkz. git araçları-git Web sitesinde [yeniden yazma geçmişi](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History) .
 
 ## <a name="merge-commits-squash"></a>İşlemeleri birleştir (Squash)
 
-Bir işleme serisini birleştirmek için git, yürütmelerin tek bir işleme içinde bekletilmesine yönelik bir seçenek sunar. Bu, sık gerçekleştirilen işlemeler yaptığınızda ve uzak bir depoya göndermeden önce temizlemek istediğiniz uzun bir işleme listesi ile sona erdirmek için yararlı olabilir.
+Bir işleme serisini birleştirmek için git, yürütmelerin tek bir işleme içinde bekletilmesine yönelik bir seçenek sunar. Bu seçenek, bir uzak depoya göndermeden önce, temizlemek istediğiniz uzun bir yürütme listesi ile sık yapılan yürütmeler yaparsanız ve bu seçeneği yararlı olabilir.
 
-Komut satırında aşağıdaki komutu kullanarak iki işlemeyi ele alabilirsiniz:
+Aşağıdaki komutu kullanarak komut satırında iki işlemeyi ele alabilirsiniz:
 
 ```bash
 git rebase -i HEAD~2
 ```
 
-Ardından, aşağıda gösterildiği gibi, kaydetme iletisini **sıkıştırarak**, kaydetmek ve güncelleştirmek için **çekmeyi** güncelleştirin:
+Ardından `pick` `squash` , kaydetme iletisini güncelleştirin, kaydedin ve güncelleştirin.
 
-:::image type="content" source="media/vs-2022/git-repository-squash-cmd.png" alt-text="Squash için güncelleştirme çekmenin ekran görüntüsü." lightbox="media/vs-2022/git-repository-squash-cmd.png":::
+:::image type="content" source="media/vs-2022/git-repository-squash-cmd.png" alt-text="Hazırlama için çekmeyi güncelleştirme ekran görüntüsü." lightbox="media/vs-2022/git-repository-squash-cmd.png":::
 
-Visual Studio yürütmeleri birleştirmek için **Ctrl** tuşunu kullanın ve birleştirmek istediğiniz işlemeleri çoklu seçin. Ardından, sağ tıklayın ve **Squash yürütmelerini** seçin. Visual Studio, kayıt iletilerinizi otomatik olarak birleştirir, ancak bazen güncelleştirilmiş bir ileti sağlanması daha iyidir. Kayıt iletinizi gözden geçirdikten ve güncelleştirdiğinizde, **Squash düğmesine** tıklayın.
+Visual Studio yürütmeleri birleştirmek için, birleştirmek istediğiniz birden çok işlemeyi seçmek üzere **Ctrl** tuşunu kullanın. Ardından sağ tıklayıp **Squash yürütmelerini** seçin. Visual Studio, kayıt iletilerinizi otomatik olarak birleştirir, ancak bazen güncelleştirilmiş bir ileti sağlamak daha iyidir. Kayıt iletinizi gözden geçirdikten ve güncelleştirdikten sonra, **Squash** düğmesini seçin.
 
-:::image type="content" source="media/vs-2022/git-repository-squash-visual-studio.png" alt-text="Visual Studio 'de sıkıştırarak yürütmelerinin ekran görüntüsü." lightbox="media/vs-2022/git-repository-squash-visual-studio.png":::
+:::image type="content" source="media/vs-2022/git-repository-squash-visual-studio.png" alt-text="Visual Studio yürütmelerin ekran görüntüsü." lightbox="media/vs-2022/git-repository-squash-visual-studio.png":::
 
-> [!TIP]
-> Aşağıdaki bağlantıyı kullanarak squash ve yeniden yazma geçmişi hakkında daha fazla bilgi edinebilirsiniz: [Git araçları-yeniden yazma geçmişi](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History)
+Ele alma hakkında daha fazla bilgi edinmek için git [araçları-git Web sitesinde yeniden yazma geçmişi](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History) bölümüne bakın.
 
 ## <a name="merge-and-rebase-branches"></a>Dalları birleştirin ve yeniden temellendir
 
-Farklı özelliklerle çalışmak için git dalları kullanıyorsanız, bir noktada diğer dallara tanıtılan güncelleştirmeleri dahil etmeniz gerekir. Bu, özellik dalınızda çalışmaya devam ederken veya özellik dalınızda çalışmayı bitirdiğinizde ve farklı bir dala ekleyerek değişikliklerinizi tutmanız gerektiğinde gerçekleşebilir. Git 'de, dalları birleştirerek veya yeniden temelleyerek bunu yapabilirsiniz.
+Farklı özelliklerle çalışmak için git dalları kullanıyorsanız, bazı durumlarda diğer dallara sunulan güncelleştirmeleri dahil etmeniz gerekir. Özellik dalınızda çalışmaya devam ediyorsanız bu durum ortaya çıkabilir. Ayrıca, özellik dalınızda çalışmayı bitirdiğinizde ve farklı bir dala ekleyerek değişikliklerinizi tutmanız gerektiğinde de gerçekleşebilir. Git 'te, dalları birleştirerek veya yeniden temelleyerek bu güncelleştirmeleri dahil edebilirsiniz.
 
-Ana dalı komut satırındaki New_Feature dalına birleştirmek için aşağıdaki komutları kullanın:
+> [!NOTE]
+> Aşağıdaki yönergeler, bir özellik dalı için örnek adı olarak *New_Feature* kullanır. Bunu kendi dalınızın adıyla değiştirin.
+
+Ana dalı komut satırındaki özellik dalınızla birleştirmek için aşağıdaki komutları kullanın:
 
 ```bash
 git checkout New_Feature
 git merge main
 ```
 
-Visual Studio aynı yapmak için dal listesinde çift tıklayarak New_Feature dalı kullanıma alın. Ardından ana öğesine sağ tıklayın ve ' **Ana ' öğesini ' New_Feature ' Içine Birleştir** ' i seçin
+Visual Studio aynı yapmak için, dal listesinde çift tıklayarak özellik dalına göz atın. Sonra **ana** ' a sağ tıklayın ve ' **ana ' ' New_Feature ' içine Birleştir**' i seçin.
 
-:::image type="content" source="media/vs-2022/git-repository-merge-ui.png" alt-text="Visual Studio içindeki birleştirme dallarının ekran görüntüsü.":::
+:::image type="content" source="media/vs-2022/git-repository-merge-ui.png" alt-text="Visual Studio dal birleştirme ekran görüntüsü.":::
 
-Ana dalı komut satırındaki New_Feature dalına yeniden temellendirmeye yönelik olarak, aşağıdaki komutları kullanın:
+Komut satırında, ana dalı Özellik dalınızla yeniden temellendirmeye yönelik olarak, aşağıdaki komutları kullanın:
 
 ```bash
 git checkout New_Feature
 git rebase main
 ```
 
-Visual Studio aynı yapmak için dal listesinde çift tıklayarak New_Feature dalı kullanıma alın. Ardından Main 'e sağ tıklayın ve ' **New_Feature ' öğesini ' Main ' üzerine yeniden temellendir** seçin
+Visual Studio aynı yapmak için, dal listesinde çift tıklayarak özellik dalına göz atın. Ardından **Main** öğesine sağ tıklayın ve ' **New_Feature ' öğesini ' Main ' üzerinde yeniden temellendir**' ı seçin.
 
 :::image type="content" source="media/vs-2022/git-repository-rebase-ui.png" alt-text="Visual Studio dalların yeniden temellendirmesinin ekran görüntüsü.":::
 
-> [!TIP]
-> Genel olarak birleştirme, yeniden temellendirme ve dallanma hakkında daha fazla bilgi edinmek için aşağıdaki bağlantıyı kullanın: [Git dallandırma](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)
+Genel olarak birleştirme, yeniden alma ve dallandırma hakkında daha fazla bilgi edinmek için git Web sitesinde [Git dallandırma](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell) bölümüne bakın.
 
 ## <a name="copy-commits-cherry-pick"></a>İşlemeleri kopyalama (tek tek seçme)
 
-Tek tek seçme kullanarak yürütmeleri bir daldan diğerine kopyalama. Birleştirme veya yeniden temellendirmenin aksine, tek tek seçim, daldaki tüm değişiklikler yerine yalnızca seçtiğiniz yürütmelerden değişiklikleri getirir. Tek tek seçme, bu yaygın sorunların üstesinden gelmenin harika bir yoludur:
+Tek tek seçme seçeneğini kullanarak yürütmeleri bir daldan diğerine kopyalayın. Birleştirme veya yeniden temellendirmenin aksine, tek tek seçme, bir daldaki tüm değişiklikler yerine yalnızca seçtiğiniz işlemelerin yaptığı değişiklikleri getirir. Tek tek seçme, bu yaygın sorunların üstesinden gelmenin harika bir yoludur:
 
-- Yanlışlıkla yanlış dala yürütülüyor. Tek tek-değişiklikleri doğru dala göre seçin ve ardından özgün dalı önceki işlemeye sıfırlayın.
+- Yanlışlıkla yanlış dala yürütülüyor. Tek tek-değişiklikleri doğru dala kadar seçin ve ardından özgün dalı önceki işlemeye sıfırlayın.
 - Bir özellik dalında yapılan bir işleme kümesini kullanıma alarak bunları ana dalınızla daha erken birleştirmeniz gerekir.
 - Dalınızı yeniden temellendirmeden, ana daldan belirli yürütmelerde taşıma.
 
-Komut satırını kullanarak bir işlemeden değişiklikleri geçerli dalınıza kopyalamak için aşağıdaki komutları kullanın:
+Komut satırını kullanarak bir işlemeden değişiklikleri geçerli dalınıza kopyalamak için aşağıdaki komutu kullanın:
 
 ```bash
 git cherry-pick 7599e530
 ```
 
-Visual Studio aynı yapmak için, tek bir tıklama ile seçerek bir yürütmeyi seçmek istediğiniz dalı önizleyin. Ardından hedeflenen işlemeye sağ tıklayın ve **tek tek Seç**' i seçin.
+Visual Studio aynı yapmak için, tek bir tıklama ile seçerek bir yürütmeyi seçmek istediğiniz dalı önizleyin. Ardından hedeflenen işlemeye sağ tıklayıp **tek tek** Seç ' i seçin.
 
 :::image type="content" source="media/vs-2022/git-repository-cherry-pick-ui.png" alt-text="Visual Studio ' de tek tek seçme ekran görüntüsü." lightbox="media/vs-2022/git-repository-cherry-pick-ui.png":::
 
-işlem tamamlandıktan sonra, Visual Studio başarılı bir ileti ve seçtiğiniz işleme giden bölümünde gösterilir.
+işlem tamamlandığında, Visual Studio başarılı bir ileti gösterir. Seçtiğiniz kayıt **giden** bölümünde görüntülenir.
 
-> [!TIP]
-> Aşağıdaki bağlantıyı kullanarak tek tek seçme işlemeleri hakkında daha fazla bilgi edinebilirsiniz: [Git tek tek seçme](https://git-scm.com/docs/git-cherry-pick)
+Tek tek çekme işlemleri hakkında daha fazla bilgi edinmek için, [tek tek seçme komutuna git Web sayfasına](https://git-scm.com/docs/git-cherry-pick)bakın.
 
 ## <a name="revert-changes"></a>Değişiklikleri dön
 
-Paylaşılan dallara gönderilen işlemeler üzerinde yapılan değişiklikleri geri almak için geri çevir ' i kullanın. Geri çevir komutu, önceki bir yürütmede yapılan değişiklikleri geri alan yeni bir kayıt oluşturur. Alma, depo geçmişini yeniden yazıp başkalarıyla çalışırken kullanımı güvenli hale getirir.
+Paylaşılan dallara gönderilen işlemeler üzerinde yapılan değişiklikleri geri almak için geri al komutunu kullanın. Geri çevir komutu, önceki bir yürütmede yapılan değişiklikleri geri alan yeni bir kayıt oluşturur. Bu komut, diğer kişilerle çalışırken kullanımını güvenli hale getiren depo geçmişini yeniden yazmaz.
 
-Komut satırını kullanarak bir işlemede yapılan değişiklikleri dönüştürmek için aşağıdaki komutları kullanın:
+Bir yürütmede yapılan değişiklikleri komut satırını kullanarak dönüştürmek için aşağıdaki komutları kullanın. Örnek KIMLIĞI, dalınızdaki gerçek bir kaydetmenin KIMLIĞIYLE değiştirin.
 
 ```bash
 git revert 53333305
 git commit
 ```
 
-Bu komutlar, kayıt 53333305 ' de yapılan değişiklikleri geri alacak ve dalda yeni bir işlem oluşturur. Commit_id konumundaki özgün tamamlama hala git geçmişinde. Visual Studio aynı yapmak için, vermek istediğiniz yürütmeye sağ tıklayın ve bağlam menüsünden **çevir** ' i seçin. eyleminizi onaylayıp işlem tamamlandıktan sonra, Visual Studio başarılı bir ileti gösterir ve giden bölümünde yeni bir işleme gösterilir.
+Önceki örnekte, komutlar, kayıt 53333305 ' de yapılan değişiklikleri geri alır ve dalda yeni bir işlem oluşturur. Özgün tamamlama hala git geçmişinde. Visual Studio aynı yapmak için, vermek istediğiniz yürütmeye sağ tıklayın ve ardından **çevir**' i seçin. eyleminizi doğruladıktan ve işlem tamamlandıktan sonra, Visual Studio başarılı bir ileti görüntüler ve **giden** bölümünde yeni bir işleme görüntülenir.
 
-:::image type="content" source="media/vs-2022/git-repository-revert-ui.png" alt-text="Visual Studio ' ın döndürüleceği ekran görüntüsü." lightbox="media/vs-2022/git-repository-revert-ui.png":::
+:::image type="content" source="media/vs-2022/git-repository-revert-ui.png" alt-text="Visual Studio geri döndürmesinin ekran görüntüsü." lightbox="media/vs-2022/git-repository-revert-ui.png":::
 
-Geri döndürültiğimiz yürütmenin değişikliklerinin geri döndürüldüğünü onaylamak için yeni işlemeye tıklayın.
+Geri döndürülen yürütmenin değişikliklerinin geri döndürüldüğünü onaylamak için yeni yürütmeyi seçin.
 
-:::image type="content" source="media/vs-2022/git-repository-revert-confirmation.png" alt-text="Döndürmeyi Onayla işleminin ekran görüntüsü." lightbox="media/vs-2022/git-repository-revert-confirmation.png":::
+:::image type="content" source="media/vs-2022/git-repository-revert-confirmation.png" alt-text="Bir döndürmeyi onaylama işleminin ekran görüntüsü." lightbox="media/vs-2022/git-repository-revert-confirmation.png":::
 
-> [!TIP]
-> Değişiklikleri geri alma hakkında daha fazla bilgi edinmek için aşağıdaki bağlantıyı kullanın: [Git geri döndürme](https://git-scm.com/docs/git-revert)
+Değişiklikleri geri alma hakkında daha fazla bilgi edinmek için [geri çevir komutuna git Web sayfasına](https://git-scm.com/docs/git-revert)bakın.
 
 ## <a name="reset-a-branch-to-a-previous-state"></a>Bir dalı önceki durumuna sıfırlama
 
-Yerel deponuzdaki bir dalı önceki bir kaydetmenin içeriğine geri getirmek için Sıfırla ' yı kullanın. Bu, dalınızı sıfırlarken yapılan işlemeden bu yana tüm değişiklikleri atacak.
-> [!WARNING]
-> Başkalarıyla paylaşılan dallarda sıfırlama kullanmayın. Bunun yerine döndürmeyi kullanın.
+Yerel deponuzdaki bir dalı önceki bir kaydetmenin içeriğine geri getirmek için reset komutunu kullanın. Bu eylem, dalınızı sıfırlarken yaptığınız işlemeden bu yana gerçekleşen tüm değişiklikleri atar.
 
-Komut satırını kullanarak bir dalı önceki bir duruma sıfırlamak için aşağıdaki komutu kullanın:
+> [!WARNING]
+> Diğer insanların işini silebileceğinden paylaşılan dalları sıfırlamadınız. Bunun yerine, döndürülüyor komutunu kullanın.
+
+Komut satırını kullanarak bir dalı önceki bir duruma sıfırlamak için aşağıdaki komutu kullanın. Örnek KIMLIĞI, dalınızdaki gerçek bir kaydetmenin KIMLIĞIYLE değiştirin.
 
 ```bash
 git reset --hard 53333305
 ```
 
-Komutun **--sabit** bölümü git 'in dosyaları önceki yürütmenin durumuna sıfırlamasını ve hazırlanan değişiklikleri atmasını söyler. Visual Studio aynı yapmak için, dalınızı sıfırlamak istediğiniz yürütmeye sağ tıklayın ve bağlam menüsünden **değişiklikleri sıfırla > sil (--hard)** öğesini seçin.
+`--hard`Komutun bölümü git 'in dosyaları önceki yürütmenin durumuna sıfırlamasını ve hazırlanan değişiklikleri atmasını söyler. Visual Studio aynı yapmak için, dalınızı sıfırlamak istediğiniz yürütmeye sağ tıklayın ve sonra silme değişikliklerini **sıfırla**' yı  >  **(--hard)** seçin.
 
-:::image type="content" source="media/vs-2022/git-repository-reset-ui.png" alt-text="Visual Studio bir dalı sıfırlayın." lightbox="media/vs-2022/git-repository-reset-ui.png":::
+:::image type="content" source="media/vs-2022/git-repository-reset-ui.png" alt-text="Visual Studio bir dalı sıfırlamayı gösteren ekran görüntüsü." lightbox="media/vs-2022/git-repository-reset-ui.png":::
 
-> [!TIP]
-> Dalları sıfırlama hakkında daha fazla bilgi edinmek için aşağıdaki bağlantıyı kullanın: [Git Reset](https://git-scm.com/docs/git-reset)
+Dalları sıfırlama hakkında daha fazla bilgi edinmek için, [Reset komutu Için git Web sayfasına](https://git-scm.com/docs/git-reset)bakın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-yolculuğa devam etmek için [Visual Studio sayfada birleştirme çakışmalarını çözümle](git-resolve-conflicts.md) ' yi ziyaret edin.
+Yolculuğa devam etmek için bkz. [Visual Studio birleştirme çakışmalarını çözün](git-resolve-conflicts.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio git deneyimi](../ide/git-with-visual-studio.md)
-- [Visual Studio & GitHub: birlikte daha iyi](https://visualstudio.microsoft.com/vs/github/)
+- [Visual Studio git deneyimi](git-with-visual-studio.md)
+- [Visual Studio ve GitHub: birlikte daha iyi](https://visualstudio.microsoft.com/vs/github/)

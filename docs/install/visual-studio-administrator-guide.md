@@ -16,12 +16,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: f8c0cd1465bc3ac47f4be63ff6fb44da5595e425
-ms.sourcegitcommit: 7a300823cf1bd3355be03bde561cf2777bc09eae
+ms.openlocfilehash: e22cbc20ddd6c6d16a8cfc17a71bcb3fd47d45e6
+ms.sourcegitcommit: d38d1b083322019663fec7d1d85a4cda456aadca
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/07/2021
-ms.locfileid: "133978062"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "135533980"
 ---
 # <a name="visual-studio-administrator-guide"></a>Visual Studio yönetici kılavuzu
 
@@ -55,7 +55,7 @@ Kuruluş genelinde Visual Studio dağıtmadan önce, tamamlanması gereken birka
 
 * Güvenlik ve uyumluluk ihtiyaçlarına karar verin.
 
-  Şirketinizin bir özellik kümesi üzerinde daha uzun süre kalması ama yine de düzenli bakım güvenlik güncelleştirmeleri almak istiyorsa, bir bakım temeli kullanmayı planlamanız gerekir. Daha fazla bilgi ***için, Visual Studio*** ürün yaşam döngüsü ve bakım sayfasının Enterprise ve [Professional](/visualstudio/releases/2019/servicing-vs2019#support-options-for-enterprise-and-professional-customers) müşterileri için destek seçeneklerinin yanı sıra bakım temeli sayfasındaki [Güncelleştirme Visual Studio](update-servicing-baseline.md) bölümüne bakın.
+  Şirketinizin bir özellik kümesi üzerinde daha uzun süre kalması ama yine de düzenli bakım güvenlik güncelleştirmeleri almak istiyorsa, bir bakım temeli kullanmayı planlamanız gerekir. Daha fazla bilgi ***için, Visual Studio*** ürün yaşam döngüsü ve bakım [](/visualstudio/releases/2019/servicing-vs2019#support-options-for-enterprise-and-professional-customers) sayfasının Enterprise ve Professional müşterileri için destek seçeneklerinin yanı sıra bakım temeli sayfasındaki [Güncelleştirme Visual Studio](update-servicing-baseline.md) bölümüne bakın.
   
 ::: moniker-end
 
@@ -63,21 +63,21 @@ Kuruluş genelinde Visual Studio dağıtmadan önce, tamamlanması gereken birka
 
 * Güvenlik ve uyumluluk ihtiyaçlarına karar verin.
 
-  Şirketinizin bir özellik kümesi üzerinde daha uzun süre kalması ama yine de düzenli bakım güvenlik güncelleştirmeleri almak istiyorsa, bir bakım temeli kullanmayı planlamanız gerekir. Daha fazla bilgi ***için, Visual Studio*** ürün yaşam döngüsü ve bakım sayfasının Enterprise ve [Professional](/visualstudio/releases/2022/servicing-vs2022#enterprise-professional-and-build-tools-editions-support) müşterileri için destek seçeneklerinin yanı sıra bakım temeli sayfasındaki [Güncelleştirme Visual Studio](update-servicing-baseline.md) bölümüne bakın.
+  Şirketinizin bir özellik kümesi üzerinde daha uzun süre kalması ama yine de düzenli bakım güvenlik güncelleştirmeleri almak istiyorsa, bir bakım temeli kullanmayı planlamanız gerekir. Daha fazla bilgi ***için, Visual Studio*** ürün yaşam döngüsü ve bakım [](/visualstudio/releases/2022/servicing-vs2022#enterprise-professional-and-build-tools-editions-support) sayfasının Enterprise ve Professional müşterileri için destek seçeneklerinin yanı sıra bakım temeli sayfasındaki [Güncelleştirme Visual Studio](update-servicing-baseline.md) bölümüne bakın.
   
 ::: moniker-end  
 
 * Güncelleştirme modeline karar verin.
 
-  Tek tek istemci makinelerinin [ürün güncelleştirmelerini nereden almak istiyorsunuz?](/visualstudio/install/update-a-network-installation-of-visual-studio) Özellikle, istemcinin güncelleştirmeleri şirket genelindeki bir ağ düzeninden mi yoksa İnternet'den mi [almak istediğinize](/visualstudio/install/create-a-network-installation-of-visual-studio) karar verin.
+  Tek tek istemci makinelerinin [ürün güncelleştirmelerini nereden almak istiyorsunuz?](update-a-network-installation-of-visual-studio.md) Özellikle, istemcinin güncelleştirmeleri şirket genelindeki bir ağ düzeninden mi yoksa İnternet'den mi [almak istediğinize](create-a-network-installation-of-visual-studio.md) karar verin.
   
   Ayrıca tek tek kullanıcıların kendi istemcilerini güncelleştirip güncelleştirelerine veya bir yöneticinin istemcileri program aracılığıyla güncelleştirmesini isteyip istemediklerine de karar verebilirsiniz. Güncelleştirmeyi başlatan kişinin makinede yönetici ayrıcalıklarına sahip olması gerekir. Bu kararların, istemci makinede özgün yükleme öncesinden önce almaları en iyisidir. 
 
-  [Visual Studio'nin](/visualstudio/install/create-a-network-installation-of-visual-studio#update-or-modify-your-layout) bir ağ düzenini en son ürün güncelleştirmeleriyle güncelleştirebilirsiniz; böylece hem Visual Studio'nin en son güncelleştirmesi için bir yükleme noktası olarak hem de istemci iş istasyonlarına dağıtılmış olan yüklemeleri korumak için kullanılabilir. 
+  [Visual Studio'nin](create-a-network-installation-of-visual-studio.md#update-or-modify-your-layout) bir ağ düzenini en son ürün güncelleştirmeleriyle güncelleştirebilirsiniz; böylece hem Visual Studio'ın en son güncelleştirmesi için bir yükleme noktası olarak hem de istemci iş istasyonlarına dağıtılmış olan yüklemeleri korumak için kullanılabilir. 
 
-  Kurumsal dağıtım araçlarını kullanan kuruluşlar, Visual Studio Kataloğu ve Windows Server Update Services Microsoft Update güncelleştirmelerinin mevcut olması avantajını kullanabilir. Daha fazla bilgi için [bkz. Yönetici güncelleştirmelerini etkinleştirme](/visualstudio/install/enabling-administrator-updates) [ve Yönetici güncelleştirmelerini uygulama.](/visualstudio/install/applying-administrator-updates)
+  Kurumsal dağıtım araçlarını kullanan kuruluşlar, Visual Studio Kataloğu'Microsoft Update Sunucu Güncelleştirme Hizmetleri'Windows güncelleştirmelerinin mevcut olması avantajını kullanabilir. Daha fazla bilgi için [bkz. Yönetici güncelleştirmelerini etkinleştirme](enabling-administrator-updates.md) [ve Yönetici güncelleştirmelerini uygulama.](applying-administrator-updates.md)
 
-  İnternet'e bağlı olan bilgisayarlar için, istemciyi program aracılığıyla güncelleştirebilirsiniz ve [İnternet](/visualstudio/install/update-a-network-installation-of-visual-studio#programatically-update-a-client-that-doesnt-have-internet-access)erişimini önlenebilir veya en az Visual Studio kullanarak istemciyi [güncelleştirebilirsiniz.](update-minimal-layout.md) 
+  İnternet'e bağlı olan bilgisayarlar için, istemciyi program aracılığıyla güncelleştirebilirsiniz ve [İnternet](update-a-network-installation-of-visual-studio.md#programatically-update-a-client-that-doesnt-have-internet-access)erişimini önlenebilir veya en az Visual Studio kullanarak istemciyi [güncelleştirebilirsiniz.](update-minimal-layout.md) 
 
 * Hangi iş [yüklerine ve bileşenlere ihtiyaç olduğuna](workload-and-component-ids.md) karar verin.
 
@@ -93,11 +93,11 @@ Kuruluş genelinde Visual Studio dağıtmadan önce, tamamlanması gereken birka
 
 ## <a name="step-2---build-an-installation-script"></a>2. Adım - Yükleme betiği oluşturma
 
-* Bir ağ düzeninden istemci [makinesine komut satırı](use-command-line-parameters-to-install-visual-studio.md) [Visual Studio komut satırı parametrelerini kullanan bir yükleme betiği derleme.](/visualstudio/install/create-a-network-installation-of-visual-studio#install-visual-studio-onto-a-client-machine-from-a-network-installation)
+* Bir ağ düzeninden istemci [makinesine komut satırı](use-command-line-parameters-to-install-visual-studio.md) [Visual Studio komut satırı parametrelerini kullanan bir yükleme betiği derleme.](create-a-network-installation-of-visual-studio.md#install-visual-studio-onto-a-client-machine-from-a-network-installation)
 
 * (İsteğe bağlı) [Kullanıcıların yazılımı ayrı olarak etkinleştirmesi](automatically-apply-product-keys-when-deploying-visual-studio.md) gerekmay için yükleme betiği kapsamında bir toplu lisans ürün anahtarı uygulama.
 
-* (İsteğe bağlı) [Visual Studio'nin](set-defaults-for-enterprise-deployments.md) dağıtımını ve davranışını etkileyen, diğer sürümler veya örneklerle paylaşılan bazı paketlerin nerede yüklü olduğu, paketlerin nerede ve önbelleğe alınıp alınıp alınacağı, yönetici güncelleştirmelerinin nasıl etkinleştirilmesi gerektiği, hangi güncelleştirme kanallarının kullanılabilir olduğu ve istemciye nasıl sunacağı ve bildirimlerin nasıl görüntülediği veya görünme şekli gibi, Visual Studio'nin dağıtımını ve davranışını etkileyen kayıt defteri ilkeleri ayarlayın.
+* (İsteğe bağlı) [Visual Studio'nin](set-defaults-for-enterprise-deployments.md) dağıtımını ve davranışını etkileyen, diğer sürümler veya örneklerle paylaşılan bazı paketlerin nerede yüklü olduğu, paketlerin nerede ve önbelleğe alınıp alınacağı, yönetici güncelleştirmelerinin nasıl etkinleştirilmesi gerektiği, hangi güncelleştirme kanallarının kullanılabilir olduğu ve istemciye nasıl sunuldukları ve bildirimlerin nasıl görüntülediği ya da görünme şekli gibi, Visual Studio'nin dağıtımını ve davranışını etkileyen kayıt defteri ilkeleri ayarlayın.
 
 * (İsteğe bağlı) Kümeyi grup ilkesi. Ayrıca, tek [tek bilgisayarlarda Visual Studio geri bildirimlerini devre dışı bırakmak için yapılandırmayı](../ide/visual-studio-experience-improvement-program.md) da yapılandırabilirsiniz.
 
@@ -105,13 +105,13 @@ Kuruluş genelinde Visual Studio dağıtmadan önce, tamamlanması gereken birka
 
 Betiğinizi hedef geliştirici iş istasyonlarınıza yürütmek için tercih edilen dağıtım teknolojinizi kullanın.  
 
-* [Ağ düzeninizi istenen sürümle güncelleştirin Visual Studio](/visualstudio/install/create-a-network-installation-of-visual-studio#update-or-modify-your-layout)
+* [Ağ düzeninizi istenen sürümle güncelleştirin Visual Studio](create-a-network-installation-of-visual-studio.md#update-or-modify-your-layout)
 
-* [İstemci makinenizi en son güncelleştirmelerle yenileyin](/visualstudio/install/update-a-network-installation-of-visual-studio) Visual Studio.
+* [İstemci makinenizi en son güncelleştirmelerle yenileyin](update-a-network-installation-of-visual-studio.md) Visual Studio.
 
 * Windows Server Update Services Visual Studio den veya Microsoft Update Kataloğu'System Center Configuration Manager. Daha fazla [bilgi için Bkz.](applying-administrator-updates.md) Yönetici güncelleştirmelerini uygulama. 
 
-## <a name="step-4---optional-use-visual-studio-tools-to-verify-installation"></a>4. Adım - (İsteğe bağlı) Visual Studio doğrulama araçları kullanma
+## <a name="step-4---optional-use-visual-studio-tools-to-verify-installation"></a>4. Adım - (İsteğe bağlı) Visual Studio doğrulama araçlarını kullanma
 
 İstemci makinelerde yüklü örnekleri [algılamanıza ve yönetmenize yardımcı Visual Studio çeşitli](tools-for-managing-visual-studio-instances.md) araçlarımız vardır.
 
@@ -119,7 +119,7 @@ Betiğinizi hedef geliştirici iş istasyonlarınıza yürütmek için tercih ed
 
 ## <a name="advanced-configuration"></a>Gelişmiş yapılandırma
 
-Varsayılan olarak, Visual Studio, F1 hata listesinden ve kod bağlantılarından Bing özel tür eklemeye olanak sağlar. İlkeye Visual Studio kayıt defteri anahtarının değerini değiştirerek arama mekanizmasını herhangi bir özel kullanıcı türü dahil etmek üzere devre dışı bırakmak üzere yapılandırmayı yapılandırarak şunları yapabilirsiniz:
+Varsayılan olarak, Visual Studio, F1 hata listesinden ve kod bağlantılarından Bing özel tür eklemeye olanak sağlar. İlkeye Visual Studio kayıt defteri anahtarının değerini değiştirerek arama mekanizmasını devre dışı bırakmak için özel kullanıcı türlerini dahil etmek üzere yapılandırmayı yapılandırmış olursunuz:
 
 **"PutCustomTypeInBingSearch" DWORD 0**
 
@@ -131,7 +131,7 @@ Kayıt defteri, özel kayıt `Software\Microsoft\VisualStudio\16.0_{InstanceId}\
 
 ## <a name="advanced-configuration"></a>Gelişmiş yapılandırma
 
-Varsayılan olarak, Visual Studio, F1 hata listesinden ve kod bağlantılarından Bing özel tür eklemeye olanak sağlar. İlkeye Visual Studio kayıt defteri anahtarının değerini değiştirerek arama mekanizmasını herhangi bir özel kullanıcı türü dahil etmek üzere devre dışı bırakmak üzere yapılandırmayı yapılandırarak şunları yapabilirsiniz:
+Varsayılan olarak, Visual Studio, F1 hata listesinden ve kod bağlantılarından Bing özel tür eklemeye olanak sağlar. İlkeye Visual Studio kayıt defteri anahtarının değerini değiştirerek arama mekanizmasını devre dışı bırakmak için özel kullanıcı türlerini dahil etmek üzere yapılandırmayı yapılandırmış olursunuz:
 
 **"PutCustomTypeInBingSearch" DWORD 0**
 

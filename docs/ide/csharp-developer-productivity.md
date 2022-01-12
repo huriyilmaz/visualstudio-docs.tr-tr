@@ -1,6 +1,6 @@
 ---
-title: .NET geliştirme için üretkenliğinizi artırın
-description: Daha iyi .NET kodu daha hızlı yazmanıza yardımcı olacak gezinti, kod analizi, birim testi ve diğer özelliklere genel bakış.
+title: .NET geliştirmesi için üretkenliğinizi artırın
+description: Daha hızlı .NET kodu yazmanıza yardımcı olmak için gezinti, kod analizi, birim testi ve diğer özelliklere genel bakış.
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
@@ -11,144 +11,144 @@ helpviewer_keywords:
 - editor
 ms.workload:
 - dotnet
-ms.openlocfilehash: 094469cdbd41d57e4742023e8b99cc2b5a7c5daf
-ms.sourcegitcommit: 541871db9065c4fb1b21c24f980c563991b183c7
+ms.openlocfilehash: b1ef2f5c9280f6c58f60f8ebdda0cd0de6b8a7d9
+ms.sourcegitcommit: d38d1b083322019663fec7d1d85a4cda456aadca
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "129431685"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "135533902"
 ---
-# <a name="visual-studio-productivity-guide-for-c-developers"></a>C# geliştiricileri için Visual Studio üretkenlik kılavuzu
+# <a name="visual-studio-productivity-guide-for-c-developers"></a>Visual Studio C# geliştiricileri için üretkenlik kılavuzu
 
-Visual Studio geliştiricilerin her zamankinden daha üretken olmasını nasıl sağlayacağınızı öğrenin. Ön derlenmiş derlemelere gezinti, yazarken değişken adı önerileri, **Test Gezgini**'nde bir hiyerarşi görünümü, + bir akıllı **özel durum Yardımcısı**, kod stili yapılandırma ve zorlama ve birçok yeniden düzenlemeler ve kod düzeltmesi gibi performans ve üretkenlik geliştirmelerinden yararlanın...
+Geliştiricilerin Visual Studio daha üretken hale nasıl getirir? Dosya/tür/üye/sembol bildirimlerine gitmek için, akıllı bir Özel Durum Yardımcısı, kod stili yapılandırma ve zorlama, birçok yeniden düzenleme ve kod düzeltmesi için, kod stili önerileri, **Test** Gezgini'nde hiyerarşi-görünümü , Tüme Git **(Ctrl** + **T)** gibi performans ve üretkenlik geliştirmelerinden faydalanın. 
 
-## <a name="im-used-to-keyboard-shortcuts-from-a-different-editor"></a>Farklı bir düzenleyiciden klavye kısayolları için kullandım
+## <a name="im-used-to-keyboard-shortcuts-from-a-different-editor"></a>Farklı bir düzenleyiciden klavye kısayollarına alışabilirsiniz
 
 ::: moniker range="vs-2017"
 
-**Visual Studio 2017 sürüm 15,8 ' de yeni**
+**Visual Studio 2017 sürüm 15.8'de yeni**
 
 ::: moniker-end
 
-başka bir ıde veya kodlama ortamından geliyorsanız, klavye düzeninizi *Visual Studio Code* veya *ReSharper (Visual Studio)* olarak değiştirebilirsiniz:
+Başka bir IDE veya kodlama ortamından geliyorsanız, klavye  düzeninizi Visual Studio Code *veya ReSharper (Visual Studio) olarak değiştirebilirsiniz:*
 
-![Visual Studio klavye şemaları](../ide/media/VS2017Guide-Keyboard.png)
+![Visual Studio'de Klavye Düzenleri](../ide/media/VS2017Guide-Keyboard.png)
 
-Bazı uzantılar da klavye şemaları sunmaktadır:
+Bazı uzantılar da klavye düzenleri sağlar:
 
-- [Visual Studio için kısayol tuşları (ReSharper/ıntellij)](https://marketplace.visualstudio.com/items?itemName=JustinClareburtMSFT.HotKeys)
-- [Emacs öykünmesi](https://marketplace.visualstudio.com/items?itemName=JustinClareburtMSFT.EmacsEmulation)
-- [Vsvım](https://marketplace.visualstudio.com/items?itemName=JaredParMSFT.VsVim)
+- [Visual Studio için HotKeys (ReSharper/IntelliJ)](https://marketplace.visualstudio.com/items?itemName=JustinClareburtMSFT.HotKeys)
+- [Emacs Öykünmesi](https://marketplace.visualstudio.com/items?itemName=JustinClareburtMSFT.EmacsEmulation)
+- [VSVim](https://marketplace.visualstudio.com/items?itemName=JaredParMSFT.VsVim)
 
-aşağıda popüler Visual Studio kısayollar verilmiştir:
+Aşağıdakiler popüler Visual Studio kısayollardır:
 
-| Kısayol (tüm profiller) | Komut | Açıklama |
+| Kısayol (Tüm Profiller) | Komut | Açıklama |
 |-|-|-|
-| **CTRL** + **T** | Tümüne git | Herhangi bir dosya, tür, üye veya sembol bildirimine gidin |
-| **F12** (Ayrıca **CTRL**+ + **tıklama**) | Tanıma Git | Simgenin tanımlandığı yere gitme |
-| **CTRL** + **F12** | Uygulamaya git | Temel bir türden veya Üyeden çeşitli uygulamalarına gitme |
-| **SHIFT** + **F12** | Tüm Başvuruları Bul | Tüm sembol veya değişmez başvuruları gör |
-| **Alt** + **Giriş sayfası** | Temele Git | Devralma zincirinde gezin |
-| **CTRL** + **.** (Ayrıca **alt** + C# profilinde **girin** ) | Hızlı Eylemler ve Yeniden Düzenlemeler | İmlecin konumunda veya kod seçiminde kod düzeltmelerinin, kod oluşturma eylemlerinin, yeniden düzenlemeler veya diğer hızlı eylemlerin kullanılabildiğini görün |
-| **CTRL** + **D** | Yinelenen satır | imlecin bulunduğu kod satırını çoğaltır ( **Visual Studio 2017 sürüm 15,6** ve üzeri sürümlerde kullanılabilir) |
-| **SHIFT** + **Alt**+**+**/**-** | Genişlet/sözleşme seçimi | düzenleyicideki geçerli seçimi genişletir veya sözleşmelerini ( **Visual Studio 2017 sürüm 15,5** ve üzeri sürümlerde mevcuttur) |
-| **SHIFT**  +  **Alt**  +  **.** | Sonraki eşleşen giriş Işaretini Ekle | geçerli seçimle eşleşen bir sonraki konuma bir seçim ve giriş işareti ekler ( **Visual Studio 2017 sürüm 15,8** ve üzeri sürümlerde kullanılabilir) |
-| **CTRL** + **Soru-cevap** | Arayın | tüm Visual Studio ayarlarını ara |
-| **F5** | Hata ayıklamayı Başlat | Uygulamanızda hata ayıklamayı başlatma |
-| **CTRL** + **F5** | Hata ayıklama olmadan Çalıştır | Uygulamanızı hata ayıklama olmadan yerel olarak çalıştırma |
-| **CTRL** + **K**,**d** (varsayılan profil) veya **CTRL** + **E**,**D** (C# profili) | Belgeyi Biçimlendir | Yeni satır, Aralık ve girintileme ayarlarınıza göre dosyanızdaki biçimlendirme ihlallerini temizler |
-| **CTRL** + **\\** ,**CTRL** + **E** (varsayılan profil) veya **CTRL** + **W**,**E** (C# profili) | Hata Listesi görüntüle | Belge, proje veya çözümünüzdeki tüm hataları görün |
-| **Alt**  +  **PgUp/PgDn** | Sonraki/önceki soruna git | belgenizde ( **Visual Studio 2017 sürüm 15,8** ve üzeri sürümlerde bulunan) önceki/sonraki hataya, uyarıya ve önerisine atlayın. |
-| **CTRL** + **K**,**/** | Tek satır yorum/açıklama kaldır | Bu komut, seçiminizin zaten açıklama eklenmiş olmasına bağlı olarak tek satırlık yorum ekler veya kaldırır |
-| **CTRL** + **SHIFT**+**/** | Değiştirme bloğu açıklaması/Açıklama | Bu komut, seçtiğiniz seçeneğe bağlı olarak blok açıklamalarını ekler veya kaldırır |
+| **Ctrl** + **T** | Tamam'a git | Herhangi bir dosyaya, türe, üyeye veya sembol bildirimine gidin |
+| **F12** **(ayrıca Ctrl** + **tuşuna basın)** | Tanıma Git | Sembolün tanımlandığı yere gidin |
+| **Ctrl** + **F12** | Uygulamaya Git | Temel tür veya üyeden çeşitli uygulamalarına gidin |
+| **Üstkrkt** + **F12** | Tüm Başvuruları Bul | Tüm simge veya değişmez başvurulara bakın |
+| **Alt** + **Ev** | Temele Git | Devralma zincirinde gezinme |
+| **Ctrl** + **.** (ayrıca **Alt** +  C# Profili'ne girin) | Hızlı Eylemler ve Yeniden Düzenlemeler | İmleç konumunuz veya kod seçiminiz üzerinde hangi kod düzeltmelerini, kod oluşturma eylemlerini, yeniden düzenlemelerini veya diğer hızlı eylemlerin kullanılabilir olduğunu görme |
+| **Ctrl** + **D** | Yinelenen satır | İmlecin içinde olduğu kod satırı yineler **(Visual Studio 2017 sürüm 15.6** ve sonraki sürümlerde kullanılabilir) |
+| **Üstkrkt** + **Alt**+**+**/**-** | Genişlet/Sözleşme seçimi | Düzenleyicide geçerli seçimi genişleter veya sözleşmeler **(Visual Studio 2017 sürüm 15.5** ve sonraki sürümlerde kullanılabilir) |
+| **Üstkrkt**  +  **Alt**  +  **.** | Sonraki Eşleşen Caret Ekle | Geçerli seçimle eşleşen bir sonraki konuma bir seçim ve dikkat Visual Studio **2017 sürüm 15.8** ve sonraki sürümlerde kullanılabilir) |
+| **Ctrl** + **S** | Arayın | Tüm Visual Studio ara |
+| **F5** | Hata Ayıklamayı Başlat | Uygulamanıza hata ayıklamaya başlama |
+| **Ctrl** + **F5** | Hata Ayıklama olmadan çalıştırma | Hata ayıklama olmadan yerel olarak uygulama çalıştırma |
+| **Ctrl** + **K,****D** (Varsayılan Profil) veya **Ctrl** + **E**,**D** (C# Profili) | Belgeyi Biçimlendir | Dosyanız için yeni satır, aralık ve girinti ayarlarına göre biçimlendirme ihlallerini temizler |
+| **Ctrl** + **\\** ,**Ctrl** + **E** (Varsayılan Profil) veya **Ctrl** + **W**,**E** (C# Profili) | Hata Listesini Görüntüleme | Belgeniz, projeniz veya çözümünüzle ilgili tüm hataları görme |
+| **Alt**  +  **PgUp/PgDn** | Sonraki/Önceki Soruna Git | Belgenizin önceki/sonraki hata, uyarı ve öneriye atlayın **(Visual Studio 2017 sürüm 15.8** ve sonraki sürümlerde kullanılabilir) |
+| **Ctrl** + **K**,**/** | Tek satırlı açıklamayı açıp/açıklamayı geri alma | Bu komut, seçiminize zaten açıklama ekli olup olmadığınıza bağlı olarak tek satırlık bir açıklama ekler veya kaldırır |
+| **Ctrl** + **Üstkrkt**+**/** | Blok açıklamalarını açıp kapat/açıklamayı geri alma | Bu komut, seçtiğinize bağlı olarak blok açıklamalarını ekler veya kaldırır |
 
 > [!NOTE]
-> bazı uzantılar, varsayılan Visual Studio keybindings bağlantısını çözer. yukarıdaki komutları kullanmak için, **araçlar**  >  **içeri aktar ve dışarı aktar Ayarlar**  >  **tüm ayarları** veya **araç**  >  **seçenekleri**  >  **klavye**  >  **sıfırlaması**' na giderek keybindings ' ı Visual Studio varsayılanlarına geri yükleyin.
+> Bazı uzantılar varsayılan anahtar bağlamalarını Visual Studio bağlamayı geri aldı. Yukarıdaki komutları kullanmak için Araçlar İçeri ve Dışarı Aktarma Visual Studio'a gidip tuş bağlamalarınızı varsayılan ayarlarınıza geri Ayarlar Tüm ayarları sıfırla veya Araçlar Seçenekleri Klavye Sıfırlama'ya  >    >     >    >    >  **gidin.**
 
-Klavye kısayolları ve komutları hakkında daha fazla bilgi için bkz. [üretkenlik kısayolları](../ide/productivity-shortcuts.md) ve [popüler klavye kısayolları](default-keyboard-shortcuts-in-visual-studio.md).
+Klavye kısayolları ve komutları hakkında daha fazla bilgi için [bkz. Üretkenlik kısayolları ve](../ide/productivity-shortcuts.md) [Popüler klavye kısayolları.](default-keyboard-shortcuts-in-visual-studio.md)
 
-## <a name="navigate-quickly-to-files-or-types"></a>Dosyalara veya türlere hızlıca git
+## <a name="navigate-quickly-to-files-or-types"></a>Dosyalara veya türlere hızla gidin
 
-Visual Studio **tümüne git** (**Ctrl** + **T**) adlı bir özellik vardır. **Tümüne git** , herhangi bir dosyaya, türe, üyeye veya sembol bildirimine hızlı bir şekilde gitmenizi sağlar.
+Visual Studio Git **(** **Ctrl** T ) adlı bir özelliği + **vardır.** **Tüm Sayfalara Git** özelliği herhangi bir dosyaya, türe, üyeye veya sembol bildirimine hızlıca atlamanız için olanak sağlar.
 
-- Bu arama çubuğunun konumunu değiştirin veya **dişli** simgesini kullanarak canlı gezinti önizlemeyi kapatın.
-- Sonuçları gibi sözdizimi kullanarak filtreleyin `t mytype` .
-- Aramanızın kapsamını yalnızca geçerli belge olarak yapın.
-- Camel büyük/küçük harf eşleştirme desteklenir.
+- Dişli simgesini kullanarak bu arama çubuğunun konumunu değiştirebilir veya canlı gezinti önizlemesini **kapatabilirsiniz.**
+- Gibi söz dizimi kullanarak sonuçları `t mytype` filtrele.
+- Aramanızı yalnızca geçerli belgeyle kapsamına ekleyin.
+- Büyük/büyük harf eşleştirmesi de destekler.
 
-![Visual Studio ' de tümüne git](../ide/media/VS2017Guide-go-to-all.png)
+![Visual Studio'de Tüm'e Visual Studio](../ide/media/VS2017Guide-go-to-all.png)
 
-## <a name="enforce-code-style-rules"></a>Kod stili kurallarını zorla
+## <a name="enforce-code-style-rules"></a>Kod stili kurallarını zorlama
 
-Kodlama kurallarını birlikte kullanmak ve kaynak ile seyahat etmek için bir EditorConfig dosyası kullanabilirsiniz.
+Kodlama kurallarınızı kodlamak ve kaynakla birlikte yolculuk yapmak için editorConfig dosyasını kullanabilirsiniz.
 
-![Visual Studio 'de kod stili zorlama](../ide/media/VSGuide_CodeStyle.png)
+![Visual Studio'de kod stili zorlama](../ide/media/VSGuide_CodeStyle.png)
 
-- Varsayılan bir veya ekleyin. Yeni öğe Ekle seçeneğini belirleyerek projenize net stil editorconfig dosyası **ekleyin**  >  . **Yeni öğe Ekle** iletişim kutusunda, "editorconfig" ifadesini aratın. **Editorconfig dosyası** öğe şablonlarından birini seçin ve ardından **Ekle**' yi seçin.
+- Varsayılan veya ekleyin. Yeni Öğe Ekle'yi seçerek NET stili EditorConfig **dosyasını**  >  **projenize ekleyin.** Yeni Öğe **Ekle iletişim** kutusunda "editorconfig" araması yazın. editorconfig Dosya öğesi **şablonlarından birini** ve ardından Ekle'yi **seçin.**
 
-   ![Visual Studio 'de EditorConfig öğe şablonları](media/editorconfig-item-templates.png)
-
-::: moniker range=">=vs-2019"
-
-- **Araçlar** Seçenekler  >  > **metin Düzenleyicisi** > **C#** > **kod stili** içindeki kod stili ayarlarınıza göre otomatik olarak bir. editorconfig dosyası oluşturun.
-
-   ![VS 2019 ' deki ayarlardan. editorconfig dosyası oluştur](media/vs-2019/generate-editorconfig-file.png)
-
-::: moniker-end
-
-- Visual Studio için ıntellicode 'un [kod çıkarımı özelliği](/visualstudio/intellicode/code-style-inference) , mevcut koddan kod stillerinizi kodlar. Daha sonra, kod stili tercihleriniz zaten tanımlanmış boş olmayan bir EditorConfig dosyası oluşturur.
-
-- Bir kod stili kuralının önem düzeyini doğrudan düzenleyici aracılığıyla yapılandırın. Şu anda bir. editorconfig dosyanız yoksa, sizin için bir tane oluşturulur. İmlecinizi hata, uyarı veya öneriye yerleştirin ve **CTRL** yazın + **.** Hızlı Eylemler ve yeniden düzenlemeler menüsünü açmak için. **Sorunları Yapılandır veya gizle**' yi seçin. Daha sonra kuralı seçin ve bu kural için yapılandırmak istediğiniz önem derecesini seçin. Bu, mevcut EditorConfig dosyanızı kuralın yeni önem derecesiyle güncelleştirir.
-
-   ![Bir kod stili kuralının önem düzeyini doğrudan düzenleyicide yapılandırma](../ide/media/configure-severity-level.png)
-
-[.Net kodlama kuralı seçenekleri](/dotnet/fundamentals/code-analysis/code-style-rule-options) belgelerine göz atın ve bu da tüm editorconfig dosyasına bir örnek içerir.
+   ![Visual Studio'de EditorConfig öğe şablonları](media/editorconfig-item-templates.png)
 
 ::: moniker range=">=vs-2019"
 
-## <a name="code-cleanup"></a>Kod temizleme
+- Araçlar Seçenekler Metin Düzenleyici  C# Kod Stili'nde kod stili ayarlarınıza göre otomatik olarak bir *.editorconfig* dosyası >  >  >  > **oluşturun.**
 
-Visual Studio, kod **temizleme** özelliği aracılığıyla kod stili tercihleri de dahil olmak üzere kod dosyanız için isteğe bağlı biçimlendirme sağlar. Kod temizlemeyi çalıştırmak için düzenleyicinin altındaki Broom simgesine tıklayın veya **CTRL** + **K**, **CTRL** + **E** tuşlarına basın.
-
-![Visual Studio 2019 ' de kod temizleme düğmesi](media/execute-code-cleanup.png)
-
-Ayrıca, tüm proje veya çözümünüz genelinde kod temizleme işlemini de çalıştırabilirsiniz. **Çözüm Gezgini**' de proje veya çözüm adına sağ tıklayın, **Çözümle ve kod temizleme**' yi seçin ve ardından **kod temizlemeyi Çalıştır**' ı seçin.
-
-![Project veya çözüm genelinde kod temizlemeyi çalıştır](media/run-code-cleanup-project-solution.png)
-
-Dosyanızı boşluk, girintiler, et cetera için biçimlendirmeye ek olarak, **kod temizleme** de seçili kod stilleri uygular. Her kod stili için tercihleriniz, proje için bir tane varsa veya **Seçenekler** iletişim kutusundaki [kod stili ayarlarından](code-styles-and-code-cleanup.md#code-styles-in-the-options-dialog-box) , [editorconfig dosyasından](code-styles-and-code-cleanup.md#code-styles-in-editorconfig-files)okunurdur.
+   ![VS 2019'da ayarlardan .editorconfig dosyası oluşturma](media/vs-2019/generate-editorconfig-file.png)
 
 ::: moniker-end
 
-## <a name="refactorings-and-code-fixes"></a>Yeniden düzenlemeler ve kod düzeltmeleri
+- [IntelliCode'daki kod](/visualstudio/intellicode/code-style-inference) çıkarma özelliği Visual Studio kod stillerinizi mevcut koddan çıkartır. Ardından kod stili tercihleriniz önceden tanımlanmış boş olmayan bir EditorConfig dosyası oluşturur.
 
-Visual Studio, çok sayıda yeniden düzenlemeler, kod oluşturma eylemi ve kod düzeltmesiyle birlikte gelir. Red dalgalı çizgiler hataları, yeşil dalgalı çizgiler uyarıları temsil eder ve üç gri noktayla kod önerilerini temsil eder. Ampul veya screwsürücü simgesine tıklayarak veya **CTRL** tuşuna basarak kod düzeltmelere erişebilirsiniz + **.** veya **alt** + **girin**. Her bir onarım, düzeltmesinin nasıl çalıştığına ilişkin canlı bir kod farkı gösteren bir önizleme penceresiyle birlikte gelir.
+- Bir kod stili kuralının önem derecelerini doğrudan düzenleyici aracılığıyla yapılandırma. Şu anda bir .editorconfig dosyanız yoksa sizin için bir tane oluşturulur. İmlecinizi hata, uyarı veya öneri üzerine yerleştirerek **Ctrl tuşlarına** + **basın.** hızlı eylemler ve yeniden düzenleme menüsünü açın. Sorunları **Yapılandır veya Bastır'ı seçin.** Daha sonra kuralı seçin ve bu kural için yapılandırmak istediğiniz önem derecesini seçin. Bu, mevcut EditorConfig dosyanızı kuralın yeni önem derecesiyle güncelleştirir.
 
-Popüler hızlı düzeltmeler ve yeniden düzenlemeler şunları içerir:
+   ![Doğrudan düzenleyicide bir kod stili kuralının önem derecelerini yapılandırma](../ide/media/configure-severity-level.png)
+
+Tam bir [EditorConfig dosyası örneği de içeren .NET](/dotnet/fundamentals/code-analysis/code-style-rule-options) kodlama kuralı seçenekleri belgelerine göz atabilirsiniz.
+
+::: moniker range=">=vs-2019"
+
+## <a name="code-cleanup"></a>Kod Temizleme
+
+Visual Studio, Kod Temizleme özelliği aracılığıyla kod stili tercihleri de dahil olmak üzere kod dosyanız için isteğe **bağlı biçimlendirme** sağlar. Kod Temizleme'yi çalıştırmak için düzenleyicinin alt kısmında bulunan süpürge simgesine tıklayın veya **Ctrl** + **K**, **Ctrl** + **E tuşlarına basın.**
+
+![Visual Studio 2019'da Kod Temizleme düğmesi](media/execute-code-cleanup.png)
+
+Ayrıca tüm projeniz veya çözümünüz genelinde kod temizleme de çalıştırabilirsiniz. Çözüm Gezgini proje veya çözüm adına **sağ tıklayın, Analiz ve Kod Temizleme'yi** **seçin** ve ardından Kod Temizlemeyi **Çalıştır'ı seçin.**
+
+![Kod Temizlemeyi Tüm Project Çözümü Çalıştırma](media/run-code-cleanup-project-solution.png)
+
+Kod Temizleme, dosyanızı boşluklar, girintiler ve cetera için biçimlendirmeye ek **olarak** seçili kod stillerini de uygular. Her kod stiline yönelik tercihleriniz [EditorConfig](code-styles-and-code-cleanup.md#code-styles-in-editorconfig-files)dosyasından , proje için varsa [](code-styles-and-code-cleanup.md#code-styles-in-the-options-dialog-box) veya Seçenekler iletişim kutusundaki kod stili **ayarlarından** okunur.
+
+::: moniker-end
+
+## <a name="refactorings-and-code-fixes"></a>Yeniden düzenleme ve kod düzeltmeleri
+
+Visual Studio çok sayıda yeniden düzenleme, kod oluşturma eylemi ve kod düzeltmeleri ile birlikte gelir. Kırmızı geçişler hataları, yeşil geçişler uyarıları, üç gri nokta ise kod önerilerini temsil eder. Ampule veya tornavida simgesine tıklayarak veya Ctrl tuşlarına basarak kod **düzeltmelerine erişebilirsiniz.** +  veya **Alt** + **Enter.** Her düzeltme, düzeltmenin nasıl çalıştığını gösteren bir canlı kod farkını gösteren bir önizleme penceresiyle birlikte gelir.
+
+Popüler hızlı düzeltmeler ve yeniden düzenlemelerde şunlar yer almaktadır:
 
 - Rename
 - Ayıklama Yöntemi
-- Yöntem Imzasını Değiştir
-- Oluşturucu oluştur
-- Oluşturma yöntemi
-- Türü dosyaya taşı
-- Null-Check Ekle
+- Yöntem İmzasını Değiştirme
+- Oluşturucu Oluşturma
+- Generate Metodu
+- Türü Dosyaya Taşıma
+- Yeni Null-Check
 - Parametre Ekle
-- Gereksiz kullanımları kaldır
-- LINQ sorgusuna veya LINQ yöntemine foreach döngüsü
-- Üyeleri çekme
+- Gereksiz Kullanımı Kaldırma
+- LINQ Sorgusuna veya LINQ yöntemine Foreach Döngüsü
+- Üyeleri Yukarı Çekme
 
-Daha fazla bilgi için bkz. [kod oluşturma özellikleri](code-generation-in-visual-studio.md).
+Daha fazla bilgi için [bkz. kod oluşturma özellikleri.](code-generation-in-visual-studio.md)
 
-Kod sorunlarını işaretlemek için [FxCop çözümleyicileri yükleyebilirsiniz](../code-quality/install-fxcop-analyzers.md) . Ya da [Roslyn çözümleyicilerine](https://github.com/dotnet/roslyn/blob/master/docs/wiki/Getting-Started-Writing-a-Custom-Analyzer-&-Code-Fix.md)sahip kendi yeniden düzenleme veya kod düzeltmesini yazın.
+Kod sorunlarını [bayrakla belirlemek için FxCop](../code-quality/install-net-analyzers.md) çözümleyicilerini yükleyebilirsiniz. Veya Roslyn çözümleyicileri ile kendi yeniden düzenleme [veya kod düzeltmenizi yazın.](https://github.com/dotnet/roslyn/blob/master/docs/wiki/Getting-Started-Writing-a-Custom-Analyzer-&-Code-Fix.md)
 
-Birçok topluluk üyesi, ek kod İncelemeleri ekleyen ücretsiz uzantılar yazdı:
+Topluluk üyelerinden birkaçı ek kod incelemeleri ek olarak ücretsiz uzantılar yazdı:
 
 ::: moniker range="vs-2017"
 
 - [Roslynator](https://marketplace.visualstudio.com/items?itemName=josefpihrt.Roslynator2017)
 - [Visual Studio için SonarLint](https://marketplace.visualstudio.com/items?itemName=SonarSource.SonarLintforVisualStudio2017)
-- [Stylecopçözümleyiciler](https://www.nuget.org/packages/stylecop.analyzers/)
+- [StyleCopAnalyzers](https://www.nuget.org/packages/stylecop.analyzers/)
 - [CodeCracker](https://www.nuget.org/packages/codecracker.CSharp/)
 
 ::: moniker-end
@@ -157,95 +157,95 @@ Birçok topluluk üyesi, ek kod İncelemeleri ekleyen ücretsiz uzantılar yazd�
 
 - [Roslynator](https://marketplace.visualstudio.com/items?itemName=josefpihrt.Roslynator2019)
 - [Visual Studio için SonarLint](https://marketplace.visualstudio.com/items?itemName=SonarSource.SonarLintforVisualStudio2019)
-- [Stylecopçözümleyiciler](https://www.nuget.org/packages/stylecop.analyzers/)
+- [StyleCopAnalyzers](https://www.nuget.org/packages/stylecop.analyzers/)
 - [CodeCracker](https://www.nuget.org/packages/codecracker.CSharp/)
 
 ::: moniker-end
 
-![Visual Studio yeniden düzenlemeler](../ide/media/VSGuide_CodeAnalysis.png)
+![Visual Studio'de yeniden Visual Studio](../ide/media/VSGuide_CodeAnalysis.png)
 
-## <a name="find-usages-go-to-implementation-and-navigate-to-decompiled-assemblies"></a>Kullanımlar bulun, uygulamaya gidin ve derlenmiş derlemelere gidin
+## <a name="find-usages-go-to-implementation-and-navigate-to-decompiled-assemblies"></a>Kullanımları Bulma, Uygulamaya Gitme ve Koda Bağlı Derlemelere Gitme
 
-Visual Studio kodunuzda arama ve [gezinmenize](../ide/navigating-code.md)yardımcı olacak birçok özellik vardır.
+Visual Studio aramanıza ve kodunda gezinmenize yardımcı olacak [birçok özellik vardır.](../ide/navigating-code.md)
 
-| Özellik | Kısayol | Ayrıntılar/geliştirmeler |
+| Özellik | Kısayol | Ayrıntılar/Geliştirmeler |
 |- | - | -|
-| Tüm Başvuruları Bul | **SHIFT** + **F12**| Sonuçlar renklendirilir ve okuma veya yazma gibi proje, tanım ve başvuru türüne göre gruplanabilir. Ayrıca "kilitle" sonuçlarını da kullanabilirsiniz. |
-| Uygulamaya git | **CTRL** + **F12** | `override`Geçersiz kılınan üyeye gitmek için anahtar sözcüğü üzerinde go to Definition kullanabilirsiniz |
-| Tanıma Git | **F12** veya **CTRL** + **tıklama**| Tanıma gitmek için tıklarken **CTRL** tuşuna basın |
-| Tanıma Göz At | **Alt** + **F12** | Bir tanım için satır içi görünüm |
-| Yapı görselleştiricisi | Köşeli ayraçlar arasında gri, noktalı çizgiler | Kod yapınızı görmek için üzerine gelin |
-| Ayrıştırılmış derlemelere gezinti | **F12** veya **CTRL** + **tıklama** | Özelliği etkinleştirerek dış kaynak (ılspy ile derlenen) bölümüne gidin: **Araçlar**  >  **Seçenekler**  >  **metin düzenleyici**  >  **C#**  >  **Gelişmiş**,  >  **ayrıştırılmış kaynaklara gezinmeyi etkinleştirir**. |
+| Tüm Başvuruları Bul | **Üstkrkt** + **F12**| Sonuçlar renklendirmelidir ve okuma veya yazma gibi projeye, tanıma ve başvuru türüne göre gruplandırabilir. Ayrıca sonuçları "kilitler"siniz. |
+| Uygulamaya Git | **Ctrl** + **F12** | Geçersiz kılınan üyeye gitmek için `override` anahtar sözcüğü üzerinde Tanıma Git'i kullanabilirsiniz |
+| Tanıma Git | **F12 veya** **Ctrl Tıklama** + | Tanıma **gitmek için tıklarken Ctrl** tuşuna basın |
+| Tanıma Göz At | **Alt** + **F12** | Tanımın satır içi görünümü |
+| Yapı Görselleştirici | Küme ayraçları arasında gri, noktalı çizgiler | Kod yapınızı görmek için üzerine gelin |
+| Koda bağlı derlemelere gezinti | **F12 veya** **Ctrl Tıklama** +  | Özelliği etkinleştirerek dış kaynak (ILSpy ile kaynak koda alınan) gidin: **Araçlar** Seçenekler Metin Düzenleyici C# Gelişmiş Kaynak koda sahip  >    >    >    >    >  **kaynaklara gezinmeyi etkinleştirin.** |
 
-![Tümüne git ve tüm başvuruları bul](../ide/media/VSIDE_Productivity_Navigation.png)
+![Tüm Başvurulara Git ve Tüm Başvuruları Bul](../ide/media/VSIDE_Productivity_Navigation.png)
 
 ## <a name="improved-intellisense"></a>Geliştirilmiş IntelliSense
 
-yalnızca alfabetik bir liste yerine [bağlam kullanan kod tamamlamalar](/visualstudio/intellicode/intellicode-visual-studio) almak için Visual Studio için ıntellicode kullanın. Ayrıca, kendi etki alanına özgü kitaplıklarınızı temel alarak [özel bir IntelliSense modeli](/visualstudio/intellicode/custom-model-faq) de eğitebilirsiniz.
+Yalnızca alfabetik bir Visual Studio yerine [bağlam kullanan kod](/visualstudio/intellicode/intellicode-visual-studio) tamamlamaları almak için IntelliCode kullanın. Ayrıca, etki alanına özgü kitaplıklarınızı temel alan özel bir [IntelliSense](/visualstudio/intellicode/custom-model-faq) modeli de eğitebilirsiniz.
 
 ## <a name="unit-testing"></a>Birim testi
 
-Visual Studio 2017 ' den başlayarak, test deneyiminde birçok iyileştirme vardır. MSTest v1, MSTest v2, NUnit veya XUnit test çerçeveleri ile test edebilirsiniz.
+2017'Visual Studio başlayarak, test deneyiminde çok sayıda geliştirme vardır. MSTest v1, MSTest v2, NUnit veya XUnit test çerçeveleriyle test etmek için.
 
-- **Test Gezgini** test keşfi hızlıdır.
+- **Test Gezgini** test bulma hızlıdır.
 
-- Testleri **Test Gezgini** 'nde *hiyerarşik sıralamaya* göre düzenleyin.
+- Test **Gezgini'nde testlerinizi** *hiyerarşik sıralama ile düzenleme.*
 
-   ![Visual Studio metin Gezgini için hiyerarşi görünümü](../ide/media/VSGuide_Testing.png)
+   ![Visual Studio'de Metin Gezgini için hiyerarşi görünümü](../ide/media/VSGuide_Testing.png)
 
-- [Canlı birim testi](../test/live-unit-testing.md) , kod değişikliklerinden etkilenen testleri sürekli çalıştırır ve testlerinizin durumunu bilmenizi sağlamak için satır içi düzenleyici simgelerini güncelleştirir. Canlı test kümesinden belirli testleri veya test projelerini dahil edin veya hariç tutun. (yalnızca Visual Studio Enterprise edition.)
+- [Canlı birim testi,](../test/live-unit-testing.md) kod değişikliklerinizin etkisinde olan testleri sürekli çalıştırır ve testlerin durumunu size haber verme amacıyla satır içi düzenleyici simgelerini günceller. Belirli testleri veya test projelerini canlı test kümenize dahil etmek veya hariç tutmak. (Visual Studio Enterprise sürümü.)
 
 ## <a name="debugging"></a>Hata Ayıklama
 
-Visual Studio hata ayıklama özellikleri şunlardır:
+Bir Visual Studio hata ayıklama özelliği şunlardır:
 
 ::: moniker range=">=vs-2019"
 
-- **İzleme**, **oto** ve **Yerel öğeler** pencerelerinde dize arama özelliği.
-- *' A tıklayarak* bir kod satırının yanına gelin, görüntülenen yeşil ' oynat ' simgesine basın ve bu satıra ulaşana kadar programınızı çalıştırın.
-- En önemli bilgileri iletişim kutusunda en üst düzeyde (örneğin, bir değişken) yerleştiren **özel durum Yardımcısı** `null` `NullReferenceException` .
-- Önceki kesme noktalarına veya adımlara geri dönmenizi ve uygulamanın geçmişte bulunduğu durumu görüntülemenizi sağlayan [hata ayıklama işlemini geri](../debugger/view-historical-application-state.md)alabilirsiniz.
-- Bir özel durum oluştuğunda canlı bir Web uygulamasının durumunu araştırmanıza olanak tanıyan [anlık görüntü hata ayıklaması](/azure/application-insights/app-insights-snapshot-debugger)(Azure 'da olmalıdır).
+- İzleme, Otomatikler ve Yereller **pencerelerinde bir** dize **arama** özelliği.
+- *bir kod satırına* gelmenize olanak sağlayan 'play' simgesine tıklamak için çalıştırın, görüntülenen yeşil 'oynat' simgesine tıklayın ve programınızı bu satıra ulaşana kadar çalıştırın.
+- en **önemli bilgileri** iletişim kutusuna en üst düzeye (örneğin, hangi değişkenin içinde olduğunu) koyan Özel Durum `null` `NullReferenceException` Yardımcısı.
+- [Önceki kesme noktalarına](../debugger/view-historical-application-state.md)veya adımlara geri dönmenizi ve uygulamanın geçmişte olduğu gibi durumunu görüntülemenizi sağlayan hata ayıklamayı geri adımlama.
+- [Bir özel durumun](/azure/application-insights/app-insights-snapshot-debugger)(Azure'da olması gerekir) atıldığı anda canlı bir web uygulamasının durumunu araştırmanız için anlık görüntü hata ayıklama.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-- *' A tıklayarak* bir kod satırının yanına gelin, görüntülenen yeşil ' oynat ' simgesine basın ve bu satıra ulaşana kadar programınızı çalıştırın.
-- En önemli bilgileri iletişim kutusunda en üst düzeyde (örneğin, bir değişken) yerleştiren **özel durum Yardımcısı** `null` `NullReferenceException` .
-- Önceki kesme noktalarına veya adımlara geri dönmenizi ve uygulamanın geçmişte bulunduğu durumu görüntülemenizi sağlayan [hata ayıklama işlemini geri](../debugger/view-historical-application-state.md)alabilirsiniz.
-- Bir özel durum oluştuğunda canlı bir Web uygulamasının durumunu araştırmanıza olanak tanıyan [anlık görüntü hata ayıklaması](/azure/application-insights/app-insights-snapshot-debugger)(Azure 'da olmalıdır).
+- *bir kod satırına* gelmenize olanak sağlayan 'play' simgesine tıklamak için çalıştırın, görüntülenen yeşil 'oynat' simgesine tıklayın ve programınızı bu satıra ulaşana kadar çalıştırın.
+- en **önemli bilgileri** iletişim kutusuna en üst düzeye (örneğin, hangi değişkenin içinde olduğunu) koyan Özel Durum `null` `NullReferenceException` Yardımcısı.
+- [Önceki kesme noktalarına](../debugger/view-historical-application-state.md)veya adımlara geri dönmenizi ve uygulamanın geçmişte olduğu gibi durumunu görüntülemenizi sağlayan hata ayıklamayı geri adımlama.
+- [Bir özel durumun](/azure/application-insights/app-insights-snapshot-debugger)(Azure'da olması gerekir) atıldığı anda canlı bir web uygulamasının durumunu araştırmanız için anlık görüntü hata ayıklama.
 
 ::: moniker-end
 
-![Visual Studio özel durum Yardımcısı](../ide/media/VSGuide_Debugging.png)
+![Visual Studio'de Özel Durum Visual Studio](../ide/media/VSGuide_Debugging.png)
 
 ## <a name="version-control"></a>Sürüm denetimi
 
-Visual Studio ' de kodunuzu depolamak ve güncelleştirmek için git veya TFVC kullanabilirsiniz.
+Git veya TFVC kullanarak kodunuzu depolar ve güncelleştirebilirsiniz Visual Studio.
 
 ::: moniker range=">=vs-2019"
 
-- Visual Studio çıkmadan çekme isteklerini oluşturmak, gözden geçirmek, kullanıma almak ve çalıştırmak için [Visual Studio için çekme isteklerini](https://marketplace.visualstudio.com/items?itemName=vsideversioncontrolmsft.pr4vs) yükler.
+- Çekme isteklerini [oluşturmak, gözden geçirmek, Visual Studio](https://marketplace.visualstudio.com/items?itemName=vsideversioncontrolmsft.pr4vs) ve çalışmadan çalıştırmak için çekme isteklerini Visual Studio.
 
 ::: moniker-end
 
-- [Takım Gezgini](reference/team-explorer-reference.md) 'de yerel değişikliklerinizi düzenleyin ve bekleyen işlemeler ve değişiklikleri izlemek için durum çubuğunu kullanın.
+- Yerel değişikliklerinizi yerel [Takım Gezgini](reference/team-explorer-reference.md) ve bekleyen işlemeleri ve değişiklikleri izlemek için durum çubuğunu kullanın.
 
-- [Visual Studio uzantısı için sürekli teslim araçlarıyla](https://marketplace.visualstudio.com/items?itemName=VSIDEDevOpsMSFT.ContinuousDeliveryToolsforVisualStudio) Visual Studio içindeki ASP.NET projeleriniz için sürekli tümleştirme ve dağıtım ayarlayın.
+- ASP.NET uzantısı için Sürekli teslim araçlarıyla Visual Studio projeleriniz için [sürekli tümleştirme ve teslim Visual Studio](https://marketplace.visualstudio.com/items?itemName=VSIDEDevOpsMSFT.ContinuousDeliveryToolsforVisualStudio) ayarlayın.
 
-![Visual Studio kaynak denetimi](../ide/media/VSIDE_Productivity_SourceControl.png)
+![Visual Studio'de kaynak denetimi](../ide/media/VSIDE_Productivity_SourceControl.png)
 
-## <a name="what-other-features-should-i-know-about"></a>Ne öğrenmek gerekir?
+## <a name="what-other-features-should-i-know-about"></a>Hangi diğer özellikler hakkında bilgim olmalı?
 
-Kod yazmayı daha verimli hale getirmek için düzenleyici ve üretkenlik özelliklerinin bir listesi aşağıda verilmiştir. Varsayılan olarak kapalı olduklarından bazı özelliklerin etkinleştirilmesi gerekebilir (bunlar makinenizde dizin oluşturabilir, controversıal veya şu anda deneysel).
+Burada, kod yazmayı daha verimli hale getirirken düzenleyici ve üretkenlik özelliklerinin bir listesi ve ardından yer almaktadır. Bazı özelliklerin varsayılan olarak kapalı olması (makinenize göre dizin oluşturması, tartışmalı olması veya şu anda deneysel olması) nedeniyle etkinleştirilmesi gerekir.
 
-| Özellik | Ayrıntılar | Nasıl etkinleştirilir |
+| Özellik | Ayrıntılar | Etkinleştirme |
 |-|-|-|
-| Dosyayı Çözüm Gezgini bul | **Çözüm Gezgini** 'de etkin dosyayı vurgular | **Araçlar**  >  **Seçenekler**  >  **Projeler ve çözümler**  >  **Çözüm Gezgini etkin öğeyi izle** |
-| başvuru derlemelerindeki ve NuGet paketlerindeki türler için using 'ler ekleyin | başvurulmayan bir tür için NuGet paketini yüklemek üzere kod düzeltmesinin bulunduğu bir hata ampul gösterir | **Araçlar**  >  **Seçenekler**  >  **Metin düzenleyici**  >  **C#**  >  **Gelişmiş**  >  **başvuru derlemelerindeki türler için kullanımlar önerin** ve **NuGet paketlerindeki türler için kullanımlar** önerin |
-| Tam çözüm analizini etkinleştirme | **Hata listesi** çözümünüzdeki tüm hataları görün | **Araçlar**  >  **Seçenekler**  >  **Metin düzenleyici**  >  **C#**  >  **Gelişmiş**  >  **Tam çözüm analizini etkinleştir** |
-| Derlenmekte olan kaynaklara gezinmeyi etkinleştir | Dış kaynaklardaki türlerde/üyelerde tanıma git 'e izin ver ve Yöntem gövdelerini göstermek için ılspy kaynak koda dönüştürücü kullanın | **Araçlar**  >  **Seçenekler**  >  **Metin düzenleyici**  >  **C#**  >  **Gelişmiş**  >  **Derlenmekte olan kaynaklara gezinmeyi etkinleştir** |
-| Tamamlama/öneri modu | IntelliSense 'de tamamlama davranışını değiştirir. IntelliJ arka planlarına sahip geliştiriciler burada varsayılan olmayan bir ayar kullanmaya eğilimlidir. | **Menü**  >  **Düzenle**  >  **IntelliSense**  >  **Tamamlama modunu aç** |
-| [CodeLens](../ide/find-code-changes-and-other-history-with-codelens.md) | Düzenleyicide kod başvuru bilgilerini ve değişiklik geçmişini görüntüler. (kaynak denetimi codelens göstergeleri Visual Studio Community sürümünde kullanılamaz.) | **Araçlar**  >  **Seçenekler**  >  **Metin düzenleyici**  >  **Tüm diller**  >  **CodeLens** |
-| [Kod parçacıkları](../ide/visual-csharp-code-snippets.md) | Ortak ortak kod saplamaya yardımcı olma | Bir kod parçacığı adı yazın ve **Tab** tuşuna iki kez basın. |
+| dosyalarda dosya Çözüm Gezgini | Dosyanın içinde etkin dosyayı **Çözüm Gezgini** | **Araçları**  >  **Seçenekler**  >  **Projeler ve Çözümler**  >  **Etkin Öğeyi Çözüm Gezgini** |
+| Başvuru derlemelerinde ve uygulama paketlerinde türler için NuGet ekleme | Bir hata ampulü ve kod düzeltmesi ile bir NuGet türü için bir paket yüklemesini gösterir | **Araçları**  >  **Seçenekler**  >  **Metin Düzenleyici**  >  **C#**  >  **Gelişmiş**  >  **Başvuru derlemelerinde türler için kullanma önerin ve** **Paketlerde türler için NuGet önerin** |
+| Tam çözüm analizini etkinleştirme | Hata Listesinde çözümünüzle ilgili tüm **hataları görme** | **Araçları**  >  **Seçenekler**  >  **Metin Düzenleyici**  >  **C#**  >  **Gelişmiş**  >  **Tam çözüm analizini etkinleştirme** |
+| Kaynaklarda gezinmeyi etkinleştirme | Dış kaynaklardan gelen türlerde/üyelerde Tanıma Git'e izin verme ve yöntem gövdelerini göstermek için ILSpy decompiler kullanma | **Araçları**  >  **Seçenekler**  >  **Metin Düzenleyici**  >  **C#**  >  **Gelişmiş**  >  **Kaynaklarda gezinmeyi etkinleştirme** |
+| Tamamlama/Öneri Modu | IntelliSense'te tamamlanma davranışını değiştirir. IntelliJ arka plan bilgilerine sahip geliştiriciler burada varsayılan olmayan bir ayar kullanma eğilimindedir. | **Menü**  >  **Düzenle**  >  **Intellisense**  >  **Tamamlama Modunu Değiştir** |
+| [CodeLens](../ide/find-code-changes-and-other-history-with-codelens.md) | Düzenleyicide kod başvuru bilgilerini ve değişiklik geçmişini görüntüler. (CodeLens kaynak denetimi göstergeleri, kod Visual Studio Community kullanılamaz.) | **Araçları**  >  **Seçenekler**  >  **Metin Düzenleyici**  >  **Tüm Diller**  >  **CodeLens** |
+| [Kod parçacıkları](../ide/visual-csharp-code-snippets.md) | Ortak ortak kodun saplama yardımı | Bir kod parçacığı adı yazın ve Sekme **tuşuna iki kez** basın. |

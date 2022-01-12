@@ -31,12 +31,12 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d71be4e4bdf57616078b35a3fddcc0907ea3e5d
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: c2c9a458c1955e999196574ed4fd9a174241f66a
+ms.sourcegitcommit: fc874be3fe4637a23997b4ef2d99a2ee9a499581
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122047939"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "135517293"
 ---
 # <a name="map-methods-on-the-call-stack-while-debugging-in-visual-studio"></a>Visual Studio'da hata ayıklarken çağrı yığınında eşleştirme yöntemleri
 
@@ -58,11 +58,9 @@ Hata ayıklama sırasında çağrı yığınını görsel olarak takip etmek iç
 
 ::: moniker-end
 
-- Visual C#, Visual Basic, C++, JavaScript veya X++ gibi hata ayıklayabilirsiniz
+- Visual C#, Visual Basic, C++, JavaScript veya X++ gibi hata ayıklayabilirsiniz kod
 
   Bkz.
-
-- [Video: Kod Eşlemesi hata ayıklayıcısı tümleştirmesi ile görsel olarak hata ayıklama (Channel 9)](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012Debug-visually-with-Code-Map-debugger-integration)
 
 - [Çağrı yığınını eşleme](#MapStack)
 
@@ -106,7 +104,7 @@ Hata ayıklama sırasında çağrı yığınını görsel olarak takip etmek iç
 
 ## <a name="add-related-code-to-the-map"></a><a name="AddRelatedCode"></a> Haritaya ilgili kod ekleme
 
- Artık bir haritamız var. Sırada ne var? C# veya Visual Basic çalışıyorsanız, kodda neler olduğunu izlemek için alanlar, özellikler ve diğer yöntemler gibi öğeler ekleyin.
+ Artık bir haritamız var. Sırada ne var? C# veya Visual Basic kodda neler olduğunu izlemek için alanlar, özellikler ve diğer yöntemler gibi öğeler ekleyin.
 
  Kod tanımını görmek için bir yönteme çift tıklayın veya yöntemin kısayol menüsünü kullanın. (Klavye: Haritada yöntemini seçin ve **F12 tuşuna basın)**
 
@@ -143,7 +141,7 @@ Hata ayıklama sırasında çağrı yığınını görsel olarak takip etmek iç
 
  ![Kod haritasında yığın çağrısı yapmak için yeni yöntem çağrısı ekleme](../debugger/media/debuggermap_addnewcallforrepaint.png)
 
-## <a name="q--a"></a><a name="QA"></a> Soru & A
+## <a name="q--a"></a><a name="QA"></a> Soru& A
 
 - **Tüm çağrılar haritada görünmez. Neden?**
 
@@ -179,7 +177,7 @@ Hata ayıklama sırasında çağrı yığınını görsel olarak takip etmek iç
 
    ![Çağrı yığını kod haritasını başkalarla paylaşma](../debugger/media/debuggermap_sharewithothers.png)
 
-- **Nasıl yaparım? yeni çağrı yığınlarını otomatik olarak eklemesini durduracak mısınız?**
+- **Nasıl yaparım? otomatik olarak yeni çağrı yığınları eklemesini durduracak mısınız?**
 
    Harita ![ araç &#45; kod haritasında çağrı yığınını otomatik olarak ](../debugger/media/debuggermap_automaticupdateicon.gif) göster'i seçin. Geçerli çağrı yığınını el ile haritaya eklemek için **Ctrl Shift tuşlarına**  +    +  **`** basın.
 

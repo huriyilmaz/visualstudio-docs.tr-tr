@@ -4,18 +4,18 @@ description: özellikler, proje komutları ve şablonlar dahil Visual Studio bir
 ms.date: 06/29/2017
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
-author: kraigb
-ms.author: kraigb
+author: ghogen
+ms.author: ghogen
 manager: jmartens
 ms.technology: vs-rtvs
 ms.workload:
 - data-science
-ms.openlocfilehash: 4fd62b1641a9da10484d31e5f2eb212a09cbce12
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 3a961a6d0d7ce52f4c513f988f7537550006039c
+ms.sourcegitcommit: dcecc0ed37b5e976b5dc83c5128ba5ecc8bc04b1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122060654"
+ms.lasthandoff: 01/04/2022
+ms.locfileid: "135750489"
 ---
 # <a name="create-r-projects-in-visual-studio"></a>Visual Studio R projeleri oluşturma
 
@@ -83,38 +83,38 @@ Visual Studio projeler, sağ tıklama menüsü ve **Project** menüsü aracılı
 | Çalışma dizinini burada ayarla | R Etkileşim pencerenin çalışma dizinini proje klasörüne ayarlar ve bu da bir proje içindeki herhangi bir alt klasörde kullanılabilir. |
 | Içeren klasörü aç | seçili dosyanın konumunda Windows gezginini açar. |
 | R betiği Ekle | Yeni bir oluşturur ve açar *. R* dosyası varsayılan bir ada sahiptir.   >  Oluşturmak için **Yeni öğe** Ekle komutunu da kullanabilirsiniz *. R* dosyalarının yanı sıra diğer birçok dosya türünü de vardır. Bkz. [R-özel öğe şablonları](#r-specific-item-templates). |
-| R Markdown Ekle | Yeni *. RMD* belgesi oluşturur ve varsayılan adla açar. Ayrıca,   >  **Yeni öğe** Ekle komutunu da *. RMD* dosyalarının yanı sıra diğer birçok dosya türünü oluşturmak için de kullanabilirsiniz. Bkz. [R-özel öğe şablonları](#r-specific-item-templates).  |
-| Saklı yordamları Yayımla | R betiklerinizde bulunan saklı yordamları yayımlamak için bir işlem başlatır. bkz. [SQL Server saklı yordamlarla çalışma](integrating-sql-server-with-r.md#work-with-sql-server-stored-procedures). |
+| R Markdown Ekle | Varsayılan adla *yeni .rmd* belgesi oluşturur ve açar. .rmd **dosyaları** ve bir dizi diğer dosya türü oluşturmak için Yeni Öğe  >   Ekle komutunu da kullanabilirsiniz.  Bkz. [R'ye özgü öğe şablonları.](#r-specific-item-templates)  |
+| Saklı Yordamları Yayımlama | R betikleri içinde yer alan saklı yordamları yayımlamak için bir işlem başlatır. Bkz. [Saklı yordamlarla SQL Server çalışma.](integrating-sql-server-with-r.md#work-with-sql-server-stored-procedures) |
 
-## <a name="r-specific-item-templates"></a>R 'e özgü öğe şablonları
+## <a name="r-specific-item-templates"></a>R'ye özgü öğe şablonları
 
-RTVS, belirli dosya türleri için bir dizi şablon içerir. bir R projesine sağ tıklayıp   >  **yeni öğe** ekle ' yi seçerek, yeni   >  **öğe ekle**' yi Project seçerek veya **dosya**  >  **yeni**  >  **dosya** ' yı kullanarak ve **R** sekmesini seçerek şablonlara erişebilirsiniz. Bir şablonu keşfetmenin en iyi yolu, yeni bir proje oluşturmak ve her türde dosya eklemek.
+RTVS, belirli dosya türleri için bir dizi şablon içerir. Şablonlara erişmek için bir R projesine sağ tıklar ve Yeni Öğe Ekle'yi seçersiniz. Project Ekle'yi veya Dosya Yeni Dosya'ya tıklar ve R sekmesini  >     >     >    >   seçersiniz.  Şablonu keşfetmenin en iyi yolu yeni bir proje oluşturmak ve her türde dosya eklemektir.
 
 > [!Note]
->   >  **Yeni öğe** Ekle komutu ayrıca tabloda listelenmeyen genel dosya türlerini görüntüler; **Dosya**  >  **Yeni**  >  **Dosya** , bu türler **genel** sekmesinde yer alır.
+> Yeni **Öğe** Ekle komutları tabloda listelenmiyor genel dosya türlerini de görüntüler; Dosya Yeni Dosya ile bu türler Genel sekmesinde yer  >     >    >   alır. 
 
-| Dosya türü | Açıklama |
+| Dosya Türü | Description |
 | --- | --- |
-| R Betiği | R komut satırına girilebilecek aynı komutları içeren bir metin dosyası. |
-| R Markdown | [R Markdown](rmarkdown-with-r-in-visual-studio.md) bir belge içeren dosya. |
+| R Betiği | R komut satırına girilebilir aynı komutları içeren bir metin dosyası. |
+| R Markdown | Bir belgeyi içeren [R Markdown.](rmarkdown-with-r-in-visual-studio.md) |
 | R Ayarlar | R uygulama ayarlarını tutan bir dosya. |
-| R belgeleri | Yalnızca ad, diğer ad ve başlık alanlarını içeren bir genel R belge dosyası. |
-| R belgeleri (Işlev) | Bir işlevi açıklama içeren çok sayıda alanı içeren R belge dosyası. |
-| R belgeleri (veri kümesi) | Bir veri kümesini tanımlamak için açıklamaları olan çok sayıda alan içeren R belge dosyası. |
-| SQL Sorgulayamadı | Boş bir *. SQL* dosyası. bkz. [SQL Server ve R ile çalışma](integrating-sql-server-with-r.md). |
-| R ile saklı yordam | alt SQL sorgu ve alt saklı yordam şablon dosyası içeren bir R dosyası. bkz. [SQL Server ve R ile çalışma](integrating-sql-server-with-r.md). |
+| R Belgeleri | Yalnızca ad, diğer ad ve başlık alanlarını içeren genel bir R belge dosyası. |
+| R Belgeleri (İşlev) | bir işlevi açıklama içeren birçok alan içeren bir R belge dosyası. |
+| R Belgeleri (Veri Kümesi) | Bir veri kümesine açıklama içeren birçok alan içeren bir R belge dosyası. |
+| SQL Sorgu | Boş bir *.sql* dosyası. Bkz. [SQL Server ve R ile çalışma.](integrating-sql-server-with-r.md) |
+| R ile Saklı Yordam | Sorgu ve alt saklı SQL şablon dosyası olan bir R dosyası. Bkz. [SQL Server ve R ile çalışma.](integrating-sql-server-with-r.md) |
 
-## <a name="use-multiple-project-types-in-visual-studio"></a>Visual Studio birden çok proje türü kullanma
+## <a name="use-multiple-project-types-in-visual-studio"></a>Visual Studio'de birden çok proje türü Visual Studio
 
-Visual Studio Çözümler, ilgili projeleri tek bir mantıksal yerde toplayıp yönetmek için uygun bir yer sağlar. Çözümler, kodunuzu organize etmenize ve takımlar içinde işbirliğini kolaylaştırır.
+Visual Studio Çözümleri, ilgili projeleri tek bir mantıksal yerde toplamak ve yönetmek için uygun bir yer sağlar. Çözümler kodunuzun düzenli tutmaya yardımcı olur ve ekipler içinde işbirliğini kolaylaştırır.
 
-aşağıdaki örnekte çözüm, r ve Azure Machine Learning kullanılarak oluşturulmuş bir model ve bir python/scikit-öğren projesi, yoğun hesaplama çalışması için modüller içeren bir C++ projesi, veri yönetimi için bir SQL projesi ve sonucu yayımlayan web sitesi için bir Python/şişe projesi içerir:
+Aşağıdaki örnekte çözüm R ve Azure Machine Learning kullanılarak derlenmiş bir modele, Python/scikit-learn projesine, yoğun işlem çalışmasına ait modülleri içeren bir C++ projesine, veri yönetimi için SQL projesine ve sonucu yayımlayan web sitesi için Python/Bottle projesine sahip bir R projesi içerir:
 
-![Visual Studio Bir çözümde birden çok ilgili projeyi gösteren Çözüm Gezgini](media/projects-polyglot.png)
+![Visual Studio Çözüm Gezgini ilgili birden çok proje gösteren bir çözüm](media/projects-polyglot.png)
 
-Kalın ile vurgulanan proje, çözüm için "başlangıç" projem dir; değiştirmek için, farklı bir projeye sağ tıklayın ve **Başlangıç projesi olarak ayarla**' yı seçin.
+Kalın yazıyla vurgulanan proje, çözümün "başlangıç" projesidir; değiştirmek için farklı bir projeye sağ tıklayın ve Başlangıç projesi olarak **ayarla'yı seçin.**
 
 > [!Note]
-> Mevcut olduğunda, (Python için [C++ uzantısı oluşturma](../python/working-with-c-cpp-python-in-visual-studio.md)) bir açık R-C#/c + + dil tümleştirmesi yoktur.  Ancak, R için C# ve C++ köprülerini sağlayan kitaplıklar mevcuttur.
+> Şu anda açık R ile C#/C++ dil tümleştirmesi mevcut değildir (Python için olduğu gibi bkz. Python için [C++ uzantısı oluşturma).](../python/working-with-c-cpp-python-in-visual-studio.md)  Ancak R için C# ve C++ köprüleri sağlayan kitaplıklar vardır.
 
-Projeleri ve çözümleri genel olarak yönetme hakkında daha fazla bilgi için, bkz. [Visual Studio çözümler ve projeler](../ide/solutions-and-projects-in-visual-studio.md).
+Projeleri ve çözümleri genel olarak yönetme hakkında daha fazla bilgi için [bkz.](../ide/solutions-and-projects-in-visual-studio.md)Visual Studio.

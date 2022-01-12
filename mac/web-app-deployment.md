@@ -1,17 +1,18 @@
 ---
 title: ASP.NET Core Web uygulaması dağıtımı
 description: Mac için Visual Studio ASP.NET Core Web uygulaması dağıtımı hakkında bilgiler.
-ms.topic: overview
-author: sayedihashimi
-ms.author: sayedha
+ms.topic: how-to
+author: jmatthiesen
+ms.author: jomatthi
+manager: dominicn
 ms.date: 01/25/2019
 ms.assetid: d746292d-0570-424a-bf43-e16ab85bbf0d
-ms.openlocfilehash: 98169016921df5397fafb5a77c214357c18a0ae8
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: dbf03f84aa4c5a4d5b75e644d037a00d6b1fcb63
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126725946"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135803485"
 ---
 # <a name="aspnet-core-web-app-deployment"></a>ASP.NET Core Web uygulaması dağıtımı
 

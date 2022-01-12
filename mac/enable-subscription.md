@@ -1,16 +1,18 @@
 ---
 title: Aboneliği Etkinleştirme
 description: bu makalede, Mac için Visual Studio içindeki aboneliğinizi etkinleştirmek ve özellikleri açmak için Microsoft hesabı nasıl kullanılacağı açıklanmaktadır
-author: heiligerdankgesang
-ms.author: dominicn
+author: jmatthiesen
+ms.author: jomatthi
+manager: dominicn
 ms.date: 01/21/2020
+ms.topic: how-to
 ms.assetid: 898DFEB8-5757-4CCE-8AD2-8BC7706F5855
-ms.openlocfilehash: 23c0266ad64f26438a11cdddb0bc9ee416507d0d
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.openlocfilehash: 509941453dc1f061968027cf80cb1415947ff6da
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123964774"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135806098"
 ---
 # <a name="enable-subscription"></a>Aboneliği Etkinleştirme
 

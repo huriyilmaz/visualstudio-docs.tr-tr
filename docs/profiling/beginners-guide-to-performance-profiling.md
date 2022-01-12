@@ -3,8 +3,6 @@ title: Uygulamalarınızda CPU kullanımını ölçme
 description: Hata ayıklayıcı ile tümleşik tanılama araçlarını kullanarak uygulamanızdaki CPU performans sorunlarını çözümleyin.
 ms.date: 04/03/2021
 ms.topic: tutorial
-f1_keywords:
-- vs.performance.wizard.intropage
 helpviewer_keywords:
 - Profiling Tools, quick start
 - Diagnostics Tools, CPU Usage
@@ -17,12 +15,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 77186503ad40a5aed3d95e276d58be0b407e1692
-ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
+ms.openlocfilehash: 4e5829dd05711599d5e9ec6e720539ddb79a3d95
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "129968845"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135806163"
 ---
 # <a name="measure-application-performance-by-analyzing-cpu-usage"></a>CPU kullanımını çözümleyerek uygulama performansını ölçme
 
@@ -53,7 +51,7 @@ Bu öğreticide şunları yapacaksınız:
 
 4. Araç çubuğundaki **araçları seç** ayarı Ile **CPU kullanımı**, [bellek kullanımı](../profiling/Memory-Usage.md)veya her ikisinin de görüntülenip görüntülenmeyeceğini seçebilirsiniz. Visual Studio Enterprise çalıştırıyorsanız, **araç**  >  **seçenekleri**  >  **ıntellitrace**' de ıntellitrace ' i etkinleştirebilir veya devre dışı bırakabilirsiniz.
 
-     ![Tanılama araçlarını göster](../profiling/media/diag-tools-select-tool.png "DiagToolsSelectTool")
+     ![Tanılama araçlarını göster](../profiling/media/diag-tools-select-tool.png "Diagaraçları selecttool")
 
      Temel olarak CPU kullanımına bakıyoruz, bu nedenle **CPU kullanımının** etkinleştirildiğinden emin olun (varsayılan olarak etkindir).
 
@@ -69,7 +67,7 @@ Bu öğreticide şunları yapacaksınız:
 
 7. Hata ayıklayıcı duraklatıldığında, CPU kullanım verilerinin toplanmasını etkinleştirin ve ardından **CPU kullanımı** sekmesini açın.
 
-     ![Tanılama araçları CPU profilini oluşturmayı etkinleştirir](../profiling/media/diag-tools-enable-cpu-profiling.png "DiagToolsEnableCPUProfiling")
+     ![Tanılama araçları CPU profilini oluşturmayı etkinleştirir](../profiling/media/diag-tools-enable-cpu-profiling.png "Diagtoolsenablecpuprofil oluşturma")
 
      **CPU profilini kaydet**' i seçtiğinizde Visual Studio işlevlerinizi kaydetmeye başlar ve ne kadar süre sürer. Bu toplanan verileri yalnızca, uygulamanız bir kesme noktasında durdurulduğunda görüntüleyebilirsiniz.
 
@@ -87,7 +85,7 @@ Bu öğreticide şunları yapacaksınız:
 
 9. Analiz etmek için daha belirli bir kod bölgesi seçmek istiyorsanız, CPU zaman çizelgesinde bir bölge seçin (profil oluşturma verilerini gösteren bir bölge olmalıdır).
 
-     ![Tanılama araçları bir zaman dilimi seçme](../profiling/media/diag-tools-select-time-segment.png "DiagToolsSelectTimeSegment")
+     ![Tanılama araçları bir zaman dilimi seçme](../profiling/media/diag-tools-select-time-segment.png "Diagaraçları Selecttimesegment")
 
      Bu noktada, verileri çözümlemeye başlayabilirsiniz.
 
@@ -109,7 +107,7 @@ CPU kullanımı altındaki işlevlerin listesini inceleyerek, en çok iş yapan 
 
     Bir işleve çift tıkladığınızda, **çağıran/çağrılan** görünümü sol bölmede açılır.
 
-    ![Tanılama araçları çağıran çağrılan görünümü](../profiling/media/diag-tools-caller-callee.png "DiagToolsCallerCallee")
+    ![Tanılama araçları çağıran çağrılan görünümü](../profiling/media/diag-tools-caller-callee.png "Diagtoolscallerçağrılan")
 
     Bu görünümde, seçilen işlev başlıkta ve **geçerli işlev** kutusunda (getnumber, bu örnekte) görüntülenir. Geçerli işlevi çağıran işlev, sol tarafta **çağırma işlevleri** altında gösterilir ve geçerli işlev tarafından çağrılan işlevler sağ taraftaki **çağrılan işlevler** kutusunda gösterilir. (Geçerli işlevi değiştirmek için iki kutuyu da seçebilirsiniz.)
 
@@ -160,18 +158,18 @@ Dış kod, System ve Framework bileşenlerinde yazdığınız kod tarafından y�
 
 Dış kodun çağrı yollarını görüntülemek istiyorsanız, **filtre görünümü** listesinden **dış kodu göster** ' i seçin ve ardından **Uygula**' yı seçin.
 
-![Filtre görünümü ' ne ve ardından dış kodu göster ' i seçin](../profiling/media/diag-tools-show-external-code.png "DiagToolsShowExternalCode")
+![Filtre görünümü ' ne ve ardından dış kodu göster ' i seçin](../profiling/media/diag-tools-show-external-code.png "Diagaraçları Showexternalcode")
 
 Çok sayıda dış kod çağrı zincirinin derin iç içe geçmiş olduğunu unutmayın. böylece, Işlev adı sütununun genişliği, bilgisayar izlemelerinin en büyük bir bütün boyutunu aşabilirler. Bu durumda, işlev adları **[...]** olarak gösterilir.
 
 Aradığınız düğümü bulmak için arama kutusunu kullanın, ardından verileri görünüme getirmek için yatay kaydırma çubuğunu kullanın.
 
 > [!TIP]
-> Windows işlevleri çağıran harici kodu profilleriniz varsa en güncel olduğundan emin olmanız gerekir. *pdb* dosyaları. Bu dosyalar olmadan rapor görünümleriniz, Windows zor olan işlev adlarını listelemektedir. Size gereken dosyalara sahip olduğundan emin olmak için bkz. Hata ayıklayıcısında sembol [(.pdb)](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)ve kaynak dosyaları belirtme.
+> Windows işlevleri çağıran harici kodu profilleriniz varsa en güncel olduğundan emin olmanız gerekir.*pdb* dosyaları. bu dosyalar olmadan rapor görünümleriniz, şifreli ve anlaşılması zor Windows işlev adlarını listeler. İhtiyacınız olan dosyalara sahip olduğunuzdan emin olmak hakkında daha fazla bilgi için bkz. [hata ayıklayıcıda sembol (. pdb) ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu öğreticide CPU kullanım verilerini toplamayı ve analiz etme hakkında bilgi edinebilirsiniz. Profil oluşturma araçlarına [ilk bakış adımlarını](../profiling/profiling-feature-tour.md)tamamladınız, uygulamalarınız için bellek kullanımını analiz etme adımlarını hızlı bir şekilde incelemeniz iyi olabilir.
+Bu öğreticide, CPU kullanım verilerini nasıl toplayacağınızı ve analiz edeceğinizi öğrendiniz. [Profil oluşturma araçlarındaki ilk görünümü](../profiling/profiling-feature-tour.md)zaten tamamladıysanız, uygulamalarınızda bellek kullanımını çözümleme hakkında hızlı bir bakış almak isteyebilirsiniz.
 
 > [!div class="nextstepaction"]
 > [Visual Studio’da bellek kullanımının profilini oluşturma](../profiling/memory-usage.md)

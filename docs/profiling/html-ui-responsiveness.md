@@ -1,6 +1,6 @@
 ---
-title: UWP uygulamalarında HTML UI yanıt hızını çözümleme | Microsoft Docs
-description: evrensel Windows uygulamaları için kullanılabilen bir performans aracı olan uı yanıtlama hızı profil oluşturucuyu kullanarak uygulamalarınızda performans sorunlarını yalıtmaya nasıl ayıracağınızı öğrenin.
+title: UWP Uygulamaları'da HTML kullanıcı arabirimi yanıt hızını analiz | Microsoft Docs
+description: Universal Windows Apps için kullanılabilen bir performans aracı olan UI Yanıt Verme Hızı ProfilLeyici'yi kullanarak uygulamalarınız için performans sorunlarını yalıtma hakkında Windows öğrenin.
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -19,126 +19,126 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - uwp
-ms.openlocfilehash: ff601ac5c2ff72cf1f309c42671c0a0802e3e796
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: f8b03cdea1c79f9ebb3258e4b412e795ba2e1578
+ms.sourcegitcommit: fc874be3fe4637a23997b4ef2d99a2ee9a499581
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126635705"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "135517607"
 ---
-# <a name="analyze-html-ui-responsiveness-in-universal-windows-apps"></a>evrensel Windows uygulamalarında HTML uı yanıt hızını çözümleme
-bu konuda, evrensel Windows uygulamaları için kullanılabilen bir performans aracı olan uı yanıtlama hızı profil oluşturucusu kullanılarak uygulamalarınızda performans sorunlarının nasıl yalıtılacağı açıklanmaktadır.
+# <a name="analyze-html-ui-responsiveness-in-universal-windows-apps"></a>Universal Windows Apps'te HTML kullanıcı arabirimi yanıt Windows analiz etme
+Bu konu başlığında, Universal Windows Apps için kullanılabilen bir performans aracı olan KULLANıCı Arabirimi Yanıt Hızı ProfilLeyicisi'nin kullanılarak uygulamalarınız için performans sorunlarının nasıl yalıt Windows açıklanmıştır.
 
- UI yanıtlama hızı Profil Oluşturucusu, genellikle bu belirtilerle oluşan Kullanıcı Arabirimi yanıt verme sorunları veya platform tarafı etkileri gibi sorunları ayırmanıza yardımcı olabilir:
+ UI Yanıt Hızı ProfilLeyicisi, kullanıcı arabirimi yanıt verme sorunları veya genellikle bu belirtilerle oluşan platform tarafı etkileri gibi sorunları yalıtmanıza yardımcı olabilir:
 
-- Kullanıcı arabiriminde yanıt verme olmaması. UI iş parçacığı engellenmişse uygulamanın yanıt vermesi yavaş olabilir. UI iş parçacığını engelleyebilen bazı şeyler, aşırı zaman uyumlu JavaScript kodu, aşırı CSS düzeni veya CSS hesaplama işi, zaman uyumlu XHR istekleri, çöp toplama, aşırı boyama süreleri veya işlemci yoğunluklu JavaScript kodu içerir.
+- Kullanıcı arabiriminde yanıt hızının olmaması. Kullanıcı arabirimi iş parçacığı engellenmişse uygulamanın yavaş yanıt verme hızı düşük olabilir. Ui iş parçacığını engel altına alan bazı şeyler arasında aşırı zaman uyumlu JavaScript kodu, aşırı CSS düzeni veya CSS hesaplama işi, zaman uyumlu XHR istekleri, çöp toplama, aşırı boya süreleri veya işlemci yoğun JavaScript kodu yer almaktadır.
 
-- Uygulama veya sayfa için yavaş yükleme süresi. Bu, genellikle kaynakları yüklerken geçen aşırı sürenin oluşmasına neden olur.
+- Uygulama veya sayfa için yavaş yükleme süresi. Bu durum genellikle kaynakların yüklenmesine aşırı zaman harcanma neden olur.
 
-- Beklenenden daha az sıklıkta olan görsel güncelleştirmeler. Bu durum, Kullanıcı arabirimi iş parçacığı kesintisiz kare hızını korumak için çok meşgulse oluşur. Örneğin, Kullanıcı arabirimi iş parçacığı meşgulse, çerçeveler bırakılmış olabilir. Ağ istekleri, görüntü kod çözme ve boyar gibi bazı UI olmayan iş parçacıkları, görsel güncelleştirme sıklığını da sınırlayabilir. (Kullanıcı arabirimi iş parçacığında boyama yapılmaz.)
+- Beklenenden daha az sıklıkta olan görsel güncelleştirmeler. Ui iş parçacığı düzgün bir kare hızı korunacak kadar meşgulse bu durum oluşur. Örneğin, kullanıcı arabirimi iş parçacığı meşgulse kareler bırakılır. Ağ istekleri, görüntü kodunu çözme ve boyalar gibi kullanıcı arabirimi olmayan bazı iş parçacığı, görsel güncelleştirmelerin sıklığını da sınırlıyor olabilir. (Tüm tablolar kullanıcı arabirimi iş parçacığında gerçekleştirilecek değildir.)
 
-## <a name="run-the-html-ui-responsiveness-tool"></a>HTML UI yanıt verme aracı 'nı çalıştırın
- Visual Studio 'de açık çalışan bir UWP uygulamanız varsa, HTML UI yanıtlama hızı aracını kullanabilirsiniz.
+## <a name="run-the-html-ui-responsiveness-tool"></a>HTML Kullanıcı Arabirimi Yanıt Hızı aracını çalıştırma
+ Html UI Yanıt Hızı aracını, çalışan bir UWP uygulaması açık olduğunda, html kullanıcı arabirimi yanıt verme Visual Studio.
 
-1. uygulamayı Visual Studio çalıştırıyorsanız, **standart** araç çubuğunda, **hata ayıklamayı başlat** listesinde, **yerel makine** veya **cihaz** gibi bir dağıtım hedefi seçin.
+1. Uygulamayı yerel makineden Visual Studio, **Standart** araç çubuğunda, Hata Ayıklamayı Başlat listesinde Yerel Makine veya Cihaz gibi bir **dağıtım** hedefi **seçin.** 
 
-2. **Hata Ayıkla** menüsünde, performans profili **Oluşturucu**' yı seçin.
+2. Hata **Ayıkla menüsünde** **Performans Profili Oluşturucu.**
 
-     Profil oluşturucunun analiz hedefini değiştirmek istiyorsanız **hedefi Değiştir**' i seçin.
+     Profil oluşturma için analiz hedefini değiştirmek için Hedefi **Değiştir'i seçin.**
 
-     ![Değişiklik Analizi hedefi](../profiling/media/js_tools_target.png "JS_Tools_Target")
+     ![Değişiklik analizi hedefi](../profiling/media/js_tools_target.png "JS_Tools_Target")
 
      Analiz hedefi için aşağıdaki seçenekler kullanılabilir:
 
-    - **Başlangıç Project**. Geçerli başlangıç projesini analiz etmek için bu seçeneği belirleyin. Uygulamayı uzak bir makinede veya cihazda çalıştırıyorsanız, varsayılan değer olan bu ayarı kullanmanız gerekir.
+    - **Başlangıç Project.** Geçerli başlangıç projesini analiz etmek için bu seçeneği belirleyin. Uygulamayı uzak bir makinede veya cihazda çalıştırarak varsayılan değer olan bu ayarı kullanabilirsiniz.
 
-    - **Uygulama çalıştırılıyor**. Çalışan uygulamalar listesinden bir UWP uygulaması seçmek için bu seçeneği belirleyin. Uygulamayı uzak bir makinede veya cihazda çalıştırırken bu seçeneği kullanamazsınız.
+    - **Çalışan Uygulama**. Çalışan uygulamalar listesinden bir UWP uygulaması seçmek için bu seçeneği belirleyin. Uygulamayı uzak bir makinede veya cihazda çalıştırarak bu seçeneği kullanaabilirsiniz.
 
-         Bu seçeneği, kaynak koduna erişiminiz olmadığında bilgisayarınızda çalışan uygulamaların performansını çözümlemek için kullanabilirsiniz.
+         Kaynak koduna erişiminizin olmadığınız bilgisayarınızda çalışan uygulamaların performansını analiz etmek için bu seçeneği kullanabilirsiniz.
 
-    - **Yüklü uygulama**. Çözümlemek istediğiniz yüklü bir uygulamayı seçmek için bu seçeneği belirleyin. Uygulamayı uzak bir makinede veya cihazda çalıştırırken bu seçeneği kullanamazsınız.
+    - **Yüklü Uygulama**. Analiz etmek istediğiniz yüklü bir uygulamayı seçmek için bu seçeneği belirleyin. Uygulamayı uzak bir makinede veya cihazda çalıştırarak bu seçeneği kullanaabilirsiniz.
 
-         Bu seçeneği, kaynak koduna erişiminiz olmadığında bilgisayarınıza yüklediğiniz uygulamaların performansını çözümlemek için kullanabilirsiniz. Bu seçenek ayrıca, yalnızca kendi uygulama geliştirmeniz dışındaki tüm uygulamaların performansını çözümlemek istediğinizde yararlı olabilir.
+         Kaynak koduna erişiminizin olmadığınız bilgisayarınızda yüklü olan uygulamaların performansını analiz etmek için bu seçeneği kullanabilirsiniz. Bu seçenek, yalnızca kendi uygulama geliştirmenizin dışında herhangi bir uygulamanın performansını analiz etmek istediğiniz zaman da yararlı olabilir.
 
-3. **Kullanılabilir araçlar**' dan **HTML UI yanıtlama hızı**' nı seçin ve ardından **Başlat**' ı seçin.
+3. Kullanılabilir **Araçlar'dan** **HTML KULLANıCı Arabirimi Yanıt Hızı'ı ve** ardından Başlat'ı **seçin.**
 
-4. uı yanıtlama hızı profil oluşturucuyu başlattığınızda, bir kullanıcı hesabı denetim penceresi Visual Studio ETW Collector.exe çalıştırmak için izninizi isteyebilir. **Evet**' i seçin.
+4. Kullanıcı Arabirimi Yanıt Hızı ProfilLeyicisi'ne başsanız, bir Kullanıcı Hesabı Denetimi penceresi ETW yanıt Visual Studio çalıştırma Collector.exe. **Evet'i seçin.**
 
-     İlgili performans senaryosunu test etmek için uygulamayla etkileşime geçin. Ayrıntılı bir iş akışı için bkz. [UI yanıtlama hızı sorununu yalıtma](#Workflow) ve [bir görsel işleme sorununu yalıtma](#IsolateVisualThroughput).
+     İlgili performans senaryosunu test etmek için uygulamayla etkileşime geçme. Ayrıntılı bir iş akışı için [bkz. Kullanıcı arabirimi yanıt verme sorununu yalıtma](#Workflow) [ve Görsel aktarım hızı sorununu yalıtma.](#IsolateVisualThroughput)
 
-5. Alt + Tab tuşlarına basarak Visual Studio geçin.
+5. Alt+Visual Studio tuşlarına basarak geçiş yapın.
 
-6. Uygulamanın profilini oluşturmayı durdurmak ve profil oluşturucunun topladığı verileri görüntülemek için, **toplamayı durdur**' u seçin.
+6. Uygulamanın profilini oluşturmayı durdurmak ve profil oluşturmanın toplanmış olduğu verileri görüntülemek için Koleksiyonu **durdur'a tıklayın.**
 
-## <a name="isolate-an-issue"></a>Bir sorunu yalıtmak
- Aşağıdaki bölümde, performans sorunlarını yalıtmanıza yardımcı olacak öneriler sunulmaktadır. Örnek performans testi uygulaması kullanarak performans sorunlarını belirleme ve çözme hakkında adım adım bir açıklama için bkz. [Izlenecek yol: UI yanıt hızını geliştirme (HTML)](html-ui-responsiveness.md).
+## <a name="isolate-an-issue"></a>Sorunu yalıtma
+ Aşağıdaki bölümde performans sorunlarını yalıtmanıza yardımcı olacak öneriler yer almaktadır. Örnek bir performans testi uygulaması kullanarak performans sorunlarını belirleme ve düzeltmeye ilişkin adım adım bir açıklama için bkz. Adım adım kılavuz: Kullanıcı arabirimi yanıt hızını [geliştirme (HTML)](html-ui-responsiveness.md).
 
-### <a name="isolate-a-ui-responsiveness-problem"></a><a name="Workflow"></a> UI yanıtlama hızı sorununu yalıtma
- Bu adımlar, UI yanıtlama hızı profil oluşturucuyu daha verimli bir şekilde kullanmanıza yardımcı olabilecek önerilen bir iş akışı sağlar:
+### <a name="isolate-a-ui-responsiveness-problem"></a><a name="Workflow"></a> Kullanıcı arabirimi yanıt verme sorununu yalıtma
+ Bu adımlar, KULLANıCı Arabirimi Yanıt Hızı ProfilLeyicisi'nin daha verimli bir şekilde kullanımına yardımcı olacak önerilen bir iş akışı sağlar:
 
-1. Uygulamanızı Visual Studio açın.
+1. Uygulamayı Visual Studio.
 
-2. Uygulamanızı UI yanıtlama hızı sorunları için test edin. ( **CTRL** + tuşuna basın **F5 tuşuna** basarak uygulamanızı hata ayıklamadan başlatın.)
+2. Kullanıcı arabirimi yanıt verme sorunları için uygulamalarınızı test edin. **(Ctrl tuşuna basın** + **F5** hata ayıklama olmadan uygulama başlatmak için.)
 
-     Bir sorun bulursanız, sorunun gerçekleştiği zaman çerçevesini daraltmaya veya davranışa neden olan Tetikleyicileri belirlemeyi denemek için teste devam edin.
+     Bir sorun bulursanız, sorunun oluştuğu zaman çerçevesini daraltmayı veya davranışa neden olan tetikleyicileri tanımlamayı denemek için test etmeye devam etme.
 
-3. Visual Studio geçin ( **Alt** + **sekmeye** basın) ve uygulamanızı durdurun (**shıft** + **F5**).
+3. Geçiş Visual Studio **(Alt** + **Sekmesi'ne basın)** ve uygulamayı durdurun (**Shift** + **F5**).
 
-4. İsteğe bağlı olarak, [analiz Için Mark Code](#ProfileMark)' u kullanarak kodunuza Kullanıcı işaretleri ekleyin.
+4. İsteğe bağlı olarak, çözümleme için Kodu işaretle'yi [kullanarak kodunuza kullanıcı işaretleri ekleyin.](#ProfileMark)
 
     > [!TIP]
-    > Kullanıcı işaretleri, profil oluşturucu verilerini görüntülerken yanıt verme sorununu belirlemenize yardımcı olabilir. Örneğin, bir yanıt verme sorununa neden olan kod bölümünün başlangıcına ve sonuna bir kullanıcı işareti ekleyebilirsiniz.
+    > Kullanıcı işaretleri, profil oluşturma verilerini görüntülerken yanıt verme sorununu tanımlamanıza yardımcı olabilir. Örneğin, bir kod bölümünün başına ve sonuna yanıt verme sorununa neden olan bir kullanıcı işareti eklersiniz.
 
-5. Önceki bölümdeki yönergeleri izleyerek UI yanıt verme profil oluşturucuyu çalıştırın.
+5. Önceki bölümde verilen yönergeleri izleyerek Kullanıcı Arabirimi Yanıt Hızı Profili Oluşturma'sı çalıştırın.
 
-6. Uygulamayı, UI yanıtlama hızı sorunu ile sonuçlanan duruma getirin.
+6. Uygulamayı kullanıcı arabirimi yanıt verme sorunuyla sonuçlanmış durumuna alın.
 
-7. Visual Studio geçin (Alt + Tab tuşlarına basın) ve uı yanıtlama hızı profil oluşturucunun profil oluşturucu sekmesinde **toplamayı durdur** ' ı seçin.
+7. Kullanıcı arabirimi Visual Studio (Alt+Sekme tuşlarına  basın) ve Ui Responsiveness Profiler'ın profilleyici sekmesinde Koleksiyonu durdur'u seçin.
 
-8. Kullanıcı işaretlerini eklediyseniz profil oluşturucunun [Tanılama oturumu zaman çizelgesini görüntüle](#Ruler) ' de görünür. Aşağıdaki çizimde, kodunuzda belirli bir işlemi belirtmek için kullanılan tek bir kullanıcı işareti gösterilmektedir.
+8. Kullanıcı işaretleri eklediyebilirsiniz, profilleyicinin [Tanılama oturumu zaman çizelgesini görüntüle'de](#Ruler) görünür. Aşağıdaki çizimde, kodunda belirli bir işlemi belirtmek için kullanılan tek bir kullanıcı işareti gösterilmiştir.
 
-     ![Bir kullanıcı işareti gösteren tanılama cetveli](../profiling/media/js_htmlvizprofiler_usermark.png "JS_HTMLVizProfiler_UserMark")
+     ![Kullanıcı işaretini gösteren Tanılama Cetveli](../profiling/media/js_htmlvizprofiler_usermark.png "JS_HTMLVizProfiler_UserMark")
 
-9. Kullanıcı işaretlerini, uygulama yaşam döngüsü olaylarını veya grafiklerde görünen verileri kullanarak zaman çizelgesinde ve profil oluşturucu grafiklerde ilgilendiğiniz bir alanı belirler. Grafiklerde verileri analiz etmenize ve kullanmanıza yardımcı olacak bazı yönergeler aşağıda verilmiştir:
+9. Kullanıcı işaretlerini, uygulama yaşam döngüsü olaylarını veya grafiklerde görünen verileri kullanarak zaman çizelgesi ve profil oluşturma grafları ile ilgili bir ilgi alanı belirleme. Graflarda verileri analiz etmenize ve kullanmanıza yardımcı olacak bazı yönergeler:
 
-    - Analiz, uygulama yaşam döngüsü olayları ve bu olaylar için ilişkili zaman çizelgesi ve diğer grafiklerde bulunan verilerin zaman çizelgesi için bir [işaret kodu](#ProfileMark)görüntülemek üzere [Tanılama oturumu zaman çizelgesini görüntüle](#Ruler) ' yi kullanın.
+    - Kodu [analiz, uygulama yaşam](#Ruler) [](#ProfileMark)döngüsü olayları ve bu olaylarla ilişkili zaman çizelgesini ve diğer grafiklerde yer alan verilere yönelik zaman çizelgesini görüntülemek için Tanılama oturumu zaman çizelgesini görüntüle'sini kullanın.
 
-    - CPU etkinliği hakkındaki genel bilgileri ve belirli bir süre içinde işlem yaptığı iş türünü görüntülemek için [CPU kullanımı grafiğini](#CPUUtilization) kullanın. Aşırı CPU etkinliğinin süreleri, yanıt verme ve kayıp çerçevelerinin oluşmasına neden olabilir.
+    - CPU etkinliği [hakkında genel](#CPUUtilization) bilgileri ve belirli bir süre boyunca işlemektedir iş türünü görüntülemek için CPU kullanım grafiğini kullanın. Aşırı CPU etkinliği dönemlerinin yanıt verme sorunlarına ve bırakılan karelere neden olma olasılığı daha fazladır.
 
-    - Bir oyun veya zengin medya uygulaması geliştiriyorsanız, çerçeve hızının bırakılmakta olduğu zaman aralıklarını belirlemek için [Görsel aktarım hızını (fps) görüntüle](#VisualThroughput) ' yi kullanın.
+    - Bir oyun veya zengin medya uygulaması geliştiriyorsanız, kare hızının düşmesine neden olan zaman aralıklarını belirlemek için Görsel aktarım hızını [görüntüle (FPS)](#VisualThroughput) kullanın.
 
-10. Grafiğin bir bölümüne tıklayıp işaretçiyi sürükleyerek seçim yapın (ya da sekme tuşunu ve ok tuşlarını kullanarak), grafiklerinden birinde ilgilendiğiniz alanı seçin. Bir seçim yaparak bir zaman aralığı seçtiğinizde, profil oluşturucunun alt bölmesindeki zaman çizelgesi ayrıntıları grafı yalnızca seçilen zaman dilimini gösterecek şekilde değişir.
+10. Grafın bir parçasına tıklayarak ve işaretçiyi sürükleyerek (veya Sekme tuşu ve ok tuşlarını kullanarak) grafiklerden birinin ilgi alanı seçin. Seçim yaparak bir zaman dönemi seçtiğiniz zaman çizelgesi ayrıntıları grafiği, profil oluşturmanın alt bölmesindeki yalnızca seçilen zaman dilimini gösterecek şekilde değişir.
 
-     Aşağıdaki çizimde, bir ilgilendiğiniz ilgi alanına sahip CPU kullanımı grafı gösterilmektedir.
+     Aşağıdaki çizimde, ilgi alanı vurgulanmış CPU kullanım grafiği gösterilir.
 
      ![CPU kullanım grafiği](../profiling/media/js_htmlvizprof_cpu_util.png "JS_HTMLVizProf_CPU_Util")
 
-11. Çok sık çalışan veya tamamlanacak çok fazla zaman alan olaylar hakkında ayrıntılı bilgi almak için [zaman çizelgesini görüntüle ayrıntılarını](#TimelineDetails) kullanın. Örneğin, aşağıdakileri arayın:
+11. Çok sık [çalışan veya](#TimelineDetails) tamamlanması çok fazla zaman alan olaylar hakkında ayrıntılı bilgi almak için Zaman çizelgesi ayrıntılarını görüntüle'ye tıklayın. Örneğin, aşağıdakilere bakın:
 
-    - Olay dinleyicileri, zamanlayıcılar ve animasyon çerçevesi geri çağırmaları. Belirli bir olaya bağlı olarak, girilen veriler değiştirilen DOM öğelerinin KIMLIĞINI, değiştirilen CSS özelliklerinin adını, kaynak konumun bağlantısını ve ilişkili olay veya geri arama işlevinin adını içerebilir.
+    - Olay dinleyicileri, süreerler ve animasyon çerçevesi geri çağırmaları. Belirli bir etkinliğe bağlı olarak, sağlanan veriler değiştirilen DOM öğelerinin kimliğini, değiştirilen CSS özelliklerinin adını, kaynak konumun bağlantısını ve ilişkili olay ya da geri çağırma işlevinin adını içerebilir.
 
-    - Öğesine yapılan çağrılar gibi işleme öğeleri ile sonuçlanan düzen veya betik olayları `window.getComputedStyles` . Olayın ilişkili DOM öğesi sağlanır.
+    - için çağrılar gibi öğeleri işlemeye neden olan düzen veya betik `window.getComputedStyles` olayları. Olay için ilişkili DOM öğesi sağlanır.
 
-    - HTML Ayrıştırma olayları için komut dosyası değerlendirmeleri gibi, uygulama tarafından yüklenen sayfalar veya URL kaynakları. Dosya adı veya kaynak sağlanır.
+    - Html ayrıştırma olayları için betik değerlendirmeleri gibi uygulama tarafından yüklenen sayfalar veya URL kaynakları. Dosya adı veya kaynağı sağlanır.
 
-    - [Profil Oluşturucu olay başvurusunda](#profiler-event-reference)belirtilen diğer olaylar.
+    - Profil oluşturma olay [başvurusunda belirtilen diğer olaylar.](#profiler-event-reference)
 
     > [!TIP]
-    > Profiler 'daki kullanılabilir bilgilerin çoğu zaman çizelgesi ayrıntıları grafiğinde görüntülenir.
+    > Profilleyicide kullanılabilir bilgilerin çoğu zaman çizelgesi ayrıntıları grafiğinde görünür.
 
-12. CPU kullanımı veya görsel aktarım hızı (FPS) grafiğinde seçili bir alanla, daha ayrıntılı bilgi edinmek için **Yakınlaştır** ' ı (düğme veya bağlam menüsü) seçin. Grafik için zaman çizelgesi yalnızca seçili zaman dilimini gösterecek şekilde değişir.
+12. CPU kullanımı veya görsel aktarım hızı (GRAPH) grafiğinde bir alan seçiliyken daha ayrıntılı bilgi almak için Yakınlaştır **'ı** (düğme veya bağlam menüsü) seçin. Grafiğin zaman çizelgesi yalnızca seçilen zaman dilimini gösterecek şekilde değişir.
 
-13. Yakınlaştırıldığında, CPU kullanımı veya görsel işleme grafiğinin bir kısmını seçin. Bir seçim yaptığınızda, profil oluşturucunun alt bölmesindeki zaman çizelgesi ayrıntıları grafı yalnızca seçilen zaman dilimini gösterecek şekilde değişir.
+13. Yakınlaştırıldıklarında CPU kullanımı veya görsel aktarım hızı grafiğinin bir bölümünü seçin. Seçim yaptığınız zaman çizelgesinde, profil oluşturmanın alt bölmesindeki zaman çizelgesi ayrıntıları grafiği yalnızca seçilen zaman dilimini gösterecek şekilde değişir.
 
 ### <a name="isolate-a-visual-throughput-problem"></a><a name="IsolateVisualThroughput"></a> Görsel aktarım hızı sorununu yalıtma
- Aşırı CPU kullanımının süreleri, düşük veya tutarsız kare oranlarına neden olabilir. Zengin medya uygulamaları ve oyunları geliştirirseniz, görsel verimlilik grafiği CPU kullanımı grafiğinden daha önemli veriler sağlayabilir.
+ Aşırı CPU kullanımı dönemleri düşük veya tutarsız kare hızları ile sonuçlandırabilirsiniz. Zengin medya uygulamaları ve oyunlar geliştirirsiniz, görsel aktarım hızı grafiği CPU kullanım grafiğinden daha önemli veriler sağlar.
 
- Bir görsel işleme sorununu yalıtmak için, önceki bölümde açıklanan adımları izleyin, ancak temel veri noktalarından biri olarak görsel üretilen iş grafiğini kullanın.
+ Bir görsel aktarım hızı sorununu yalıtmak için önceki bölümde açıklanan adımları izleyin, ancak önemli veri noktalarından biri olarak görsel aktarım hızı grafiğini kullanın.
 
-### <a name="mark-code-for-analysis"></a><a name="ProfileMark"></a> Kodu analiz için işaretle
- Grafiklerde görüntülenen verilerle ilişkili uygulama kodu bölümünü yalıtmak için uygulamanıza bir işlev çağrısı ekleyebilirsiniz. böylece, profil oluşturucunun, zaman çizelgesinde işlevin yürütüldüğü sırada bir kullanıcı işareti (ters üçgen) eklemesini sağlar. Eklediğiniz herhangi bir kullanıcı işareti, CPU kullanımı grafiğinin, görsel verimlilik grafiğinin ve zaman çizelgesi ayrıntıları grafiğinin zaman çizelgesinde görüntülenir.
+### <a name="mark-code-for-analysis"></a><a name="ProfileMark"></a> Kodu analiz için işaretleme
+ Graflarda görünen verilerle ilişkili uygulama kodunun bir bölümünü yalıtmak için uygulamanıza, işlev yürütülürken zaman çizelgesinde profilleyiciye kullanıcı işareti (ters üçgen) eklemesini talimatı olan bir işlev çağrısı ekleyebilirsiniz. Ekley istediğiniz kullanıcı işareti CPU kullanım grafiği, görsel aktarım hızı grafiği ve zaman çizelgesi ayrıntıları grafiği için zaman çizelgesinde görünür.
 
- Kullanıcı işareti eklemek için, uygulamanıza aşağıdaki kodu ekleyin. Bu örnek, olayın açıklaması olarak "veri alma" kullanır.
+ Kullanıcı işareti eklemek için aşağıdaki kodu uygulamanıza ekleyin. Bu örnekte olayın açıklaması olarak "veri alma" kullanılır.
 
 ```javascript
 if (performance && performance.mark) {
@@ -147,16 +147,16 @@ if (performance && performance.mark) {
 
 ```
 
- Fare işaretçisini Kullanıcı işaretinin üzerine getirdiğinizde, olayın açıklaması bir araç ipucu olarak görüntülenir. İhtiyaç duyduğunuz kadar çok kullanıcı işareti ekleyebilirsiniz.
+ Fare işaretçisini kullanıcı işaretinin üzerine geri kalanınız sırasında olayın açıklaması bir araç ipucu olarak görünür. Gereken sayıda kullanıcı işareti ekleme.
 
 > [!NOTE]
-> `console.timeStamp`bir Chrome komutu, kullanıcı işareti olarak da görünür.
+> `console.timeStamp`, bir Chrome komutu, kullanıcı işareti olarak da görünür.
 
- Aşağıdaki çizimde, tek bir kullanıcı işareti ve onun araç ipucuyla birlikte tanılama cetveli gösterilmektedir.
+ Aşağıdaki çizimde tek bir kullanıcı işareti ve araç ipucu ile tanılama cetveli gösterilmiştir.
 
- ![Bir kullanıcı işareti gösteren tanılama cetveli](../profiling/media/js_htmlvizprofiler_usermark.png "JS_HTMLVizProfiler_UserMark")
+ ![Kullanıcı işaretini gösteren Tanılama Cetveli](../profiling/media/js_htmlvizprofiler_usermark.png "JS_HTMLVizProfiler_UserMark")
 
- Ayrıca, iki kullanıcı işareti arasında geçen süreyi göstermek için zaman çizelgesi ayrıntıları görünümünde araç tarafından oluşturulan olaylar oluşturabilirsiniz. Aşağıdaki kod, ikinci bir kullanıcı işareti ve iki Kullanıcı işaretinin yürütülmesi arasında geçen sürenin ölçüsünü ekler (önceki kod ilk Kullanıcı işaretini gösterir).
+ İki kullanıcı işareti arasında geçen süreyi göstermek için zaman çizelgesi ayrıntıları görünümünde araç tarafından oluşturulan olaylar da oluşturabilirsiniz. Aşağıdaki kod ikinci bir kullanıcı işareti ve iki kullanıcı işaretinin yürütülmesi arasında geçen sürenin ölçümlerini ekler (yukarıdaki kod ilk kullanıcı işaretini gösterir).
 
 ```javascript
 if (performance.mark && performance.measure) {
@@ -340,8 +340,8 @@ if (performance.mark && performance.measure) {
 |Mutasyon gözlemcisi|Betik Oluşturma|Bir veya daha fazla gözlemlenen DOM öğesi değiştirilmiştir ve bu da bir değiştirici ile ilgili geri aramanın yürütülmesine neden olur.|
 |Betik değerlendirmesi|Betik Oluşturma|DOM 'da yeni bir BETIK öğesi bulundu ve betiği ayrıştırmak ve yürütmek için bir girişimde bulunuldu.|
 |Zamanlayıcı|Betik Oluşturma|Zamanlanmış bir zamanlayıcı süresi geçti ve bu, ilişkili geri çağırma işlevinin yürütülmesine neden oldu.|
-|Windows Çalışma zamanı zaman uyumsuz geri çağırma işlevi|Betik Oluşturma|bir geri çağırma işlevini tetikleyen zaman uyumsuz bir işlem `Promise` , Windows Çalışma Zamanı nesnesi tarafından tamamlandı.|
-|Windows Çalışma zamanı olayı|Betik Oluşturma|bir Windows Çalışma Zamanı nesnesinde gerçekleşen bir olay kayıtlı bir dinleyiciyi tetikledi.|
+|zaman uyumsuz geri çağırma işlevini Windows Çalışma Zamanı|Betik Oluşturma|bir geri çağırma işlevini tetikleyen zaman uyumsuz bir işlem `Promise` , Windows Çalışma Zamanı nesnesi tarafından tamamlandı.|
+|Windows Çalışma Zamanı olayı|Betik Oluşturma|bir Windows Çalışma Zamanı nesnesinde gerçekleşen bir olay kayıtlı bir dinleyiciyi tetikledi.|
 |Atık toplama|GC|Artık kullanımda olmayan nesneler için bellek toplanırken harcanan zaman.|
 |CSS hesaplama|Stil oluşturma|DOM 'da, etkilenen tüm öğelerin stil özelliklerinin yeniden hesaplanmasını gerektiren değişiklikler yapıldı.|
 |Layout|Stil oluşturma|DOM 'da, etkilenen tüm öğelerin boyutunun ve/veya konumunun yeniden hesaplanmasını gerektiren değişiklikler yapıldı.|
@@ -352,8 +352,6 @@ if (performance.mark && performance.measure) {
 |Kullanıcı ölçümü|Yok|Yöntemi kullanılarak uygulamaya özel bir senaryo ölçüldü `performance.measure` . Bu, kodu çözümlemek için kullanılan araç tarafından oluşturulan bir olaydır.|
 
 ## <a name="additional-information"></a>Ek bilgiler
-
-- UI yanıtlama hızı Profil Oluşturucusu hakkında [Bu videoyu](https://channel9.msdn.com/Events/Build/2013/3-316) Build 2013 konferansında izleyin.
 
 - JavaScript kullanarak Windows için derlenmiş UWP uygulamalarına yönelik performans ipuçlarını okuyun. Daha fazla bilgi için bkz. [JavaScript kullanarak UWP uygulamaları için En Iyi performans uygulamaları](/previous-versions/windows/apps/hh465194\(v\=win.10\)).
 

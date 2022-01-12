@@ -4,14 +4,13 @@ description: Mac için Visual Studio, kullanıcıların hem verimlilik hem de ae
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 11/06/2020
-ms.assetid: F7C2A28C-0759-4E0D-A28E-B72D5AB73DB6
 ms.custom: video
-ms.openlocfilehash: 05fd1091a279a085c2a727eb36cbc56fcb201057
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.openlocfilehash: 1f05471615285675d41c447315aa75aae203c515
+ms.sourcegitcommit: fc874be3fe4637a23997b4ef2d99a2ee9a499581
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123964740"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "135517582"
 ---
 # <a name="customizing-the-ide"></a>IDE’yi Özelleştirme
 
@@ -132,7 +131,7 @@ Tek bir açık Düzenleyiciye dönmek için **> Düzenleyicisi sütunları > 1 s
 
 ## <a name="related-video"></a>İlgili video
 
-> [!Video https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Visual-Studio-for-Mac-Customize-the-Look-and-Feel/player]
+> [!Video https://docs.microsoft.com/shows/Visual-Studio-Toolbox/Visual-Studio-for-Mac-Customize-the-Look-and-Feel/player]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -4,18 +4,18 @@ description: proje oluşturma, etkileşimli pencere, kod düzenlemesi ve hata ay
 ms.date: 06/29/2017
 ms.prod: visual-studio-dev15
 ms.topic: tutorial
-author: kraigb
-ms.author: kraigb
+author: ghogen
+ms.author: ghogen
 manager: jmartens
 ms.technology: vs-rtvs
 ms.workload:
 - data-science
-ms.openlocfilehash: 26a7c3ed6db4ceda5128bee93c607e45a0db3ef0
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 87d7a60c8b90bd0271d83db7d7f3afdd6dd9e956
+ms.sourcegitcommit: dcecc0ed37b5e976b5dc83c5128ba5ecc8bc04b1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126626865"
+ms.lasthandoff: 01/04/2022
+ms.locfileid: "135750842"
 ---
 # <a name="get-started-with-r-tools-for-visual-studio"></a>Visual Studio için R Araçları kullanmaya başlayın
 

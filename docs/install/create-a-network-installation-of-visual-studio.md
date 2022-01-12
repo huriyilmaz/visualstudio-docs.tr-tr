@@ -1,6 +1,6 @@
 ---
 title: Ağ tabanlı yükleme oluşturma
-description: Bir kuruluş içinde uygulama dağıtmak için ağ yükleme noktası Visual Studio öğrenin.
+description: Bir kuruluş içinde sanal ağ dağıtımı için ağ Visual Studio noktası oluşturma hakkında bilgi öğrenin.
 ms.date: 12/7/2021
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,30 +14,32 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 493d39ce7da5009681d33f8d00315d21f22d78e0
-ms.sourcegitcommit: 99e0146dfe742f6d1955b9415a89c3d1b8afe4e1
+ms.openlocfilehash: 71d9713f9f3253b326442804f4f53ff6fcae7b3f
+ms.sourcegitcommit: d38d1b083322019663fec7d1d85a4cda456aadca
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "134553862"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "135534275"
 ---
 # <a name="create-maintain-and-deploy-a-network-installation-of-visual-studio"></a>Ağ yüklemesi oluşturma, bakımını ve dağıtma Visual Studio
 
-Bazen kuruluş yöneticisi, istemci iş istasyonlarına dağıtılabilir Visual Studio içeren bir ağ yükleme noktası oluşturmak ister. Bu, istemci makinelerinin sınırlı izinlere veya sınırlı İnternet erişimine sahip olduğu ya da bir kuruluşun geliştirici araç kümesine yönelik belirli bir sürümü standart hale getirttir istediği senaryoları kolaylaştırmaktır. Bir yöneticinin Visual Studio bir ağ paylaşımında  depolanmış bir ağ düzeni (dosya önbelleği) oluşturması ve korumasını sağlamak için bu verileri tasarladık. Ağ düzeni, hem ilk yükleme Visual Studio sonraki ürün güncelleştirmeleri için gereken tüm uygulama dosyalarını içerir.
+Bazen kuruluş yöneticisi, istemci iş istasyonlarına dağıtılabilir Visual Studio dosyaları içeren bir ağ yükleme noktası oluşturmak ister. Bu, istemci makinelerinin sınırlı izinlere veya sınırlı İnternet erişimine sahip olduğu ya da bir kuruluşun geliştirici araç kümesine yönelik belirli bir sürümü standart hale getirttir istediği senaryoları kolaylaştırmaktır. Bir yöneticinin Visual Studio bir ağ paylaşımında depolanmış bir ağ düzeni (dosya önbelleği) oluşturması ve korumasını sağlamak için bu verileri tasarladık.  Ağ düzeni, hem ilk yükleme Visual Studio sonraki ürün güncelleştirmeleri için gereken tüm uygulama dosyalarını içerir.
 
 Bu web sayfasında çok fazla bilgi vardır ve aşağıdaki bölümlerde gruplanmıştır:
+
 - [**Başlamadan önce:**](#before-you-get-started)plan yapmayı planlayınca göz önünde bulundurulması gereken ipuçlarını ve diğer önemli konuları vurgular.
 - [**Doğru önyükleyiciyi alın:**](#download-the-visual-studio-bootstrapper-to-create-the-network-layout)kullanabileceğiniz çeşitli önyükleyicileri nerede bulup ayırt etmek için rehberlik.
 - [**Ağ düzenini oluşturma:**](#create-the-network-layout)Doğru ürün içeriği, kanal ayarları ve yükleyicinin sürümüyle düzenin nasıl oluşturularak bir ağ paylaşımına nasıl kopyalanacakları açıklanacak. 
 - [**Ağ düzenini güncelleştirin,**](#update-or-modify-your-layout)değiştirin ve bakımını yapın: düzeninizin en iyi şekilde korunmasına ilişkin bilgiler; düzenin ürün sürümünü, ürün içeriğini, kanal ayarlarını, yükleyici sürümünü ve klasör boyutunu güncelleştirme. 
-- [**Düzeni istemci makinelere yükleme:**](#install-visual-studio-onto-a-client-machine-from-a-network-installation)Varsayılan olarak hangi iş yüklerinin ve bileşenlerin yükll olduğu ve istemcinin güncelleştirmeleri nerede araması gerektiği gibi istemci varsayılan ayarlarının nasıl yapılandırıldığından emin olun. Ayrıca, istemci makinelere _ilk Visual Studio_ yüklemesini de içerir. Başlangıçta bir _düzenden yüklenmiş_ istemci makinelerini güncelleştirmeyle ilgili rehberlik ve bilgiler, ayrı bir güncelleştirmenin ağ tabanlı yüklemesi [Visual Studio](/visualstudio/install/update-a-network-installation-of-visual-studio) ele alındı.
+- [**Düzeni istemci makinelere yükleme:**](#install-visual-studio-onto-a-client-machine-from-a-network-installation)Varsayılan olarak hangi iş yüklerinin ve bileşenlerin yükll olduğu ve istemcinin güncelleştirmeleri nerede araması gerektiği gibi istemci varsayılan ayarlarının nasıl yapılandırıldığından emin olun. Ayrıca, istemci makinelere _ilk Visual Studio_ yüklemesini de içerir. Başlangıçta bir _düzenden yüklenmiş_ olan istemci makinelerini güncelleştirmeyle ilgili rehberlik ve bilgiler, ayrı bir güncelleştirmenin ağ tabanlı yüklemesi [Visual Studio](update-a-network-installation-of-visual-studio.md) ele alındı.
 - [**Yardım ve Destek:**](#get-support-for-your-network-layout)Yardım istemek için nereye
 
 ## <a name="before-you-get-started"></a>Başlamadan önce
+
 Başlamadan önce plan yapmak ve farkında olmak için birkaç önemli şey vardır.  
 ::: moniker range="vs-2017"
 
-- **Klasör Yönetimi:** Kurum içinde birden fazla Visual Studio sürümünüz varsa (örneğin, Visual Studio 2017 Professional ve Visual Studio 2017 Enterprise), her sürüm için ayrı bir ağ yükleme noktası oluşturmanız gerekir. Ayrıca, istemcinin Visual Studio ve kaldırma işlevlerinin düzgün şekilde çalışması için özgün uygulama yükleme düzeni ve sonraki tüm ürün güncelleştirmelerinin aynı ağ dizininde yer alıyor olması gerekir. Son olarak, bazı kuruluşlar 80 karakterlik sınırlamaya çözüm olarak [](/windows/win32/fileio/symbolic-links) sembolik bağlantıları başarıyla kullansa da düzen yolu 80 karakterden az olmalıdır. 
+- **Klasör Yönetimi:** Kurum içinde birden çok Visual Studio sürümünüz varsa (örneğin, Visual Studio 2017 Professional ve Visual Studio 2017 Enterprise), her sürüm için ayrı bir ağ yükleme noktası oluşturmanız gerekir. Ayrıca, özgün Visual Studio yükleme düzeni ve sonraki tüm ürün güncelleştirmeleri, istemcinin onarım ve kaldırma işlevlerinin düzgün şekilde çalışması için aynı ağ dizininde olmalıdır. Son olarak, bazı kuruluşlar 80 karakterlik sınırlamaya çözüm olarak [](/windows/win32/fileio/symbolic-links) sembolik bağlantıları başarıyla kullansa da düzen yolu 80 karakterden az olmalıdır. 
 - **Güncelleştirmeleri Planlama:** İlk istemci yüklemesini öncesinde istemci makinelerinizin ürün güncelleştirmelerini _nasıl alalı_ olduğuna karar ver. Bu, istemcinizin güncelleştirme konumu yapılandırmasının doğru şekilde ayar olduğundan emin olmak için gereklidir. Seçenekleriniz, istemcilerin güncelleştirmeleri ağ düzeni konumdan veya Microsoft tarafından barındırılan internetteki sunuculardan aldırmalarını içerir. İstemci düzenden yüklendikten sonra, istemcinin güncelleştirme konumu yapılandırması kilitlenir ve değiştirilemez. 
 
 ::: moniker-end
@@ -50,7 +52,7 @@ Başlamadan önce plan yapmak ve farkında olmak için birkaç önemli şey vard
  > [!IMPORTANT]
  > Yalnızca Visual Studio 2019 işlevselliğini kullanırken düzen yönetimiyle ilgili aşağıdaki sınırlama vardır: İstemci düzenden yüklendikten sonra istemcinin güncelleştirme konumu kilitlenir ve değiştirilemez. Bu durum, istemcilerinizin onarım ve kaldırma işlevlerini korurken düzeninden güncelleştirmeleri almalarını amaçladıysanız, sonraki  tüm ürün güncelleştirmelerini istemcilerinin yükıldığı özgün düzen klasörüne koymanız gerektiğini ifade eder. Başka bir deyişle, temel Visual Studio 2019 özelliği, bir  istemcinin bir düzen konumdan özgün yükleme yapma yeteneğini desteklemez ve ardından bu istemcinin farklı bir düzen konumdan ürün güncelleştirmesi almalarını sağlar. 
  > 
- > Ürün güncelleştirme konumunun sabit olduğu ve ürün güncelleştirmelerinin özgün yükleme düzeniyle aynı  düzen klasöründe olması gereken bu sınırlama, 2022'de Visual Studio. 2022 Visual Studio de güncelleştirmeler için istemcinin kaynak konumunu eaily olarak değiştirebilirsiniz. Visual Studio 2019 düzenlerinizi yönetmek ve ürünün 2019 sürümündeki sınırlamayı ortadan kaldırmak için Visual Studio ürün ailesinin tüm _modern_ sürümlerini yöneten en son (Visual Studio 2022) yükleyicisini dahil etmek ve kullanmak mümkün hale geldi. Aşağıdaki Düzeni her [zaman içerecek şekilde yapılandırma ve en son yükleyiciyi sağlama bölümünde](#configure-the-layout-to-always-include-and-provide-the-latest-installer) bunun nasıl etkinleştirildikleri açıklanmıştır.
+ > Ürün güncelleştirme konumunun sabit olduğu ve ürün güncelleştirmelerinin özgün yükleme düzeniyle aynı  düzen klasöründe olması gereken bu sınırlama, 2022'de Visual Studio. 2022'Visual Studio güncelleştirmeler için istemcinin kaynak konumunu eaily olarak değiştirebilirsiniz. Visual Studio ürün ailesinin tüm _modern_ sürümlerini yöneten en son (Visual Studio 2022) yükleyicisini dahil etmek ve kullanmak için Visual Studio 2019 düzenlerinizi yönetmenizi ve ürünün 2019 sürümündeki sınırlamayı ortadan kaldırmanızı mümkün hale getiriyoruz. Aşağıdaki Düzeni her [zaman içerecek şekilde yapılandırma ve en son yükleyiciyi sağlama bölümünde](#configure-the-layout-to-always-include-and-provide-the-latest-installer) bunun nasıl etkinleştirildikleri açıklanmıştır.
  
 ::: moniker-end
 
@@ -63,7 +65,7 @@ Başlamadan önce plan yapmak ve farkında olmak için birkaç önemli şey vard
 
 ## <a name="download-the-visual-studio-bootstrapper-to-create-the-network-layout"></a>Ağ Visual Studio oluşturmak için önyükleyiciyi indirin
 
-Visual Studio sürümünün önyükleyiciyi indirin ve düzenin kaynak konumu olarak hizmet vermek istediğiniz dizine kopyalayın. Önyükleyici, diğer düzen işlemlerini oluşturmak, güncelleştirmek ve gerçekleştirmek için kullanabileceğiniz yürütülebilir dosyadır.
+Istediğiniz sürüme Visual Studio önyükleyiciyi indirin ve düzenin kaynak konumu olarak hizmet vermek istediğiniz dizine kopyalayın. Önyükleyici, diğer düzen işlemlerini oluşturmak, güncelleştirmek ve gerçekleştirmek için kullanabileceğiniz yürütülebilir dosyadır.
 
 ::: moniker range="vs-2017"
 
@@ -83,13 +85,13 @@ Desteklenen diğer önyükleyiciler vs_feedbackclient.exe, vs_teamexplorer.exe, 
 
 Aşağıda listelenen önyükleyiciler, ne zaman çalıştırsanız çalıştırın Visual Studio 2019'un en son güvenli sürümünü her zaman yükleyebilir. Alternatif olarak, bir düzeni belirli bir Visual Studio 2019 sürümüne oluşturmak veya güncelleştirmek için, her bakım sürümü için sabit sürüm önyükleyicilerinin bağlantılarını içeren [Visual Studio 2019](/visualstudio/releases/2019/history#installing-an-earlier-release) Sürümler sayfasına gidin ve istediğiniz sürümü indirin. Bunu, düzenin kaynak konumu olarak hizmet vermek istediğiniz dizine kopyalayın.
 
-| Sürüm                    | Önyükleyici                                                                                                                                                                                                                           |
-|----------------------------|---------------------------------------------------------------------------|
-| Visual Studio 2019 Enterprise sürüm 16.11   | [vs_enterprise.exe](https://aka.ms/vs/16/release/vs_enterprise.exe) |
+| Sürüm                                       | Önyükleyici                                                            |
+|-----------------------------------------------|-------------------------------------------------------------------------|
+| Visual Studio 2019 Enterprise sürüm 16.11   | [vs_enterprise.exe](https://aka.ms/vs/16/release/vs_enterprise.exe)     |
 | Visual Studio 2019 Professional sürüm 16.11 | [vs_professional.exe](https://aka.ms/vs/16/release/vs_professional.exe) |
-| Visual Studio 2019 Derleme Araçları sürüm 16.11 | [vs_buildtools.exe](https://aka.ms/vs/16/release/vs_buildtools.exe) |
+| Visual Studio 2019 Derleme Araçları sürüm 16.11  | [vs_buildtools.exe](https://aka.ms/vs/16/release/vs_buildtools.exe)     |
 
-Desteklenen diğer önyükleyiciler arasında [vs_teamexplorer.exe](https://aka.ms/vs/16/release/vs_TeamExplorer.exe), [vs_testagent.exe](https://aka.ms/vs/16/release/vs_TestAgent.exe)ve [vs_testcontroller.exe. ](https://aka.ms/vs/16/release/vs_TestController.exe)
+Desteklenen diğer önyükleyiciler arasında [vs_teamexplorer.exe, ](https://aka.ms/vs/16/release/vs_TeamExplorer.exe) [vs_testagent.exe](https://aka.ms/vs/16/release/vs_TestAgent.exe)ve [vs_testcontroller.exe. ](https://aka.ms/vs/16/release/vs_TestController.exe)
 
 ::: moniker-end
 
@@ -108,21 +110,21 @@ Aşağıda listelenen önyükleyiciler, ne zaman çalıştırsanız çalıştır
 ::: moniker range="vs-2017"
 
 >[!TIP]
->Daha önce bir önyükleyici dosyası indirdiy ve hangi sürümün olduğunu doğrulamak için aşağıdaki gibi bir dosya yükleyebilirsiniz. Bu Windows' Dosya Gezgini açın, önyükleyici dosyasına sağ tıklayın, Özellikler'i **seçin,** **Ayrıntılar sekmesini** seçin ve ardından Ürün sürüm **numarasını** görüntüleyin. Bu slası bir sürümle Visual Studio için [bkz. Visual Studio numaraları ve yayın tarihleri.](visual-studio-build-numbers-and-release-dates.md)
+>Daha önce bir önyükleyici dosyası indirdiy ve hangi sürümün olduğunu doğrulamak için aşağıdaki gibi bir dosya yükleyebilirsiniz. Bu Windows' Dosya Gezgini açın, önyükleyici dosyasına sağ tıklayın, Özellikler'i **seçin,** **Ayrıntılar sekmesini seçin** ve ardından Ürün sürüm **numarasını** görüntüleyin. Bu slanın bir yayın sürümüyle Visual Studio için [bkz. Visual Studio numaraları ve yayın tarihleri.](visual-studio-build-numbers-and-release-dates.md)
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
 >[!TIP]
->Daha önce bir önyükleyici dosyası indirdiy ve hangi sürümün olduğunu doğrulamak için aşağıdaki gibi bir dosya yükleyebilirsiniz. Bu Windows' Dosya Gezgini açın, önyükleyici dosyasına sağ tıklayın, Özellikler'i **seçin,** **Ayrıntılar sekmesini** seçin ve ardından Ürün sürüm **numarasını** görüntüleyin. Bu sayıyla bir Visual Studio eşleşmesi için Visual Studio [2019 Sürümler](/visualstudio/releases/2019/history) sayfasının en altındaki tabloya bakın.
+>Daha önce bir önyükleyici dosyası indirdiy ve hangi sürümün olduğunu doğrulamak için aşağıdaki gibi bir dosya yükleyebilirsiniz. Bu Windows' Dosya Gezgini açın, önyükleyici dosyasına sağ tıklayın, Özellikler'i **seçin,** **Ayrıntılar sekmesini seçin** ve ardından Ürün sürüm **numarasını** görüntüleyin. Bu sayıyla bir Visual Studio eşleşmesi için Visual Studio [2019](/visualstudio/releases/2019/history) Yayın sayfasının en altındaki tabloya bakın.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2022"
 
 >[!TIP]
->Daha önce bir önyükleyici dosyası indirdiy ve hangi sürümün yüklen kuracaklarını doğrulamak için aşağıdaki şekilde devam edin. Bu Windows, Dosya Gezgini dosyasını açın, önyükleyici dosyasına sağ  tıklayın, Özellikler'i seçin ve ardından Ayrıntılar **sekmesini** seçin. Ürün **sürümü** alanı, [önyükleyicinin](/visualstudio/releases/2022/vs2022-release-rhythm) yükleyecek kanalı ve sürümü açıklar. Sürüm numarası her zaman "belirtilenin en son bakım sürümü" olarak okunması ve kanalın açıkça belirtilmemişse Geçerli olduğu varsayılır. Bu nedenle, LTSC 17.0 Ürün sürümüne sahip bir önyükleyici, 17.0 LTSC kanalında kullanılabilen en son 17.0.x bakım sürümünü yükleyecek. Yalnızca Visual Studio 2022 sürümünün Geçerli kanala Visual Studio 2022'nin en son bakım sürümünü yükley olduğunu söyleyen bir Ürün sürümüne sahip bir önyükleyici.
+>Daha önce bir önyükleyici dosyası indirdiy ve hangi sürümün yüklen kuracaklarını doğrulamak için aşağıdaki şekilde devam edin. Bu Windows, Dosya Gezgini dosyasını açın, önyükleyici dosyasına sağ tıklayın, Özellikler'i **ve** ardından Ayrıntılar **sekmesini** seçin. Ürün **sürümü** alanı, [önyükleyicinin](/visualstudio/releases/2022/vs2022-release-rhythm) yükleyecek kanalı ve sürümü açıklar. Sürüm numarası her zaman "belirtilenin en son bakım sürümü" olarak okunması ve kanalın açıkça belirtilmemişse Geçerli olduğu varsayılır. Bu nedenle, LTSC 17.0 Ürün sürümüne sahip bir önyükleyici, 17.0 LTSC kanalında kullanılabilen en son 17.0.x bakım sürümünü yükleyecek. Yalnızca Visual Studio 2022 sürümünün Geçerli kanala Visual Studio 2022'nin en son bakım sürümünü yükley olduğunu söyleyen bir Ürün sürümüne sahip bir önyükleyici.
 
 ::: moniker-end
 
@@ -132,7 +134,7 @@ Bu adımı tamamlamak için bir İnternet bağlantınız olması gerekir.
 
 Yönetici ayrıcalıklarıyla bir komut istemi açın, önyükleyiciyi indirdiğiniz dizine gidin ve ağ düzeninizi oluşturmak ve korumak için [Visual Studio](use-command-line-parameters-to-install-visual-studio.md) sayfasını yüklemek için komut satırı parametrelerini kullanma sayfasında tanımlandığı gibi önyükleyicinin parametrelerini kullanın. İlk düzen oluşturmanın yaygın örnekleri aşağıda ve yükleme sayfasındaki komut satırı [parametre Visual Studio gösterilmiştir.](command-line-parameter-examples.md)  
 
-Tek dil yereli için tam bir başlangıç düzeni için yaklaşık 35 GB disk alanı ve Visual Studio Community için 45 GB Visual Studio Enterprise. Ek [dil yerelleri için](/visualstudio/install/use-command-line-parameters-to-install-visual-studio#list-of-language-locales) her biri yaklaşık yarım GB gerekir. 
+Tek dil yereli için tam bir başlangıç düzeni için yaklaşık 35 GB disk alanı ve Visual Studio Community için 45 GB Visual Studio Enterprise. Ek [dil yerelleri için](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales) her biri yaklaşık yarım GB gerekir. 
  
 Önerilen yaklaşım, ağ sunucusundaki düzen dizininde Visual Studio Enterprise tüm dillerle ve tüm iş yükleriyle bir başlangıç düzeni oluşturmaktır. Böylece, istemcileriniz ürün tekliflerinin tamamına erişecek. Ağ düzeninin tam Visual Studio oluşturmak için, ağ düzenini barındırmayı planlayan makineden aşağıdakini çalıştırın:
 
@@ -141,7 +143,8 @@ Tek dil yereli için tam bir başlangıç düzeni için yaklaşık 35 GB disk al
 ::: moniker range=">=vs-2022"
 
 ### <a name="ensure-your-layout-has-the-correct-channel"></a>Düzeninizin doğru kanala sahip olduğundan emin olun
-Ağ düzeninin doğru kanalı temel alarak olduğundan [](/visualstudio/releases/2022/vs2022-release-rhythm)emin olmak önemlidir. Bu, [](/visualstudio/install/applying-administrator-updates)yöneticinin güncelleştirme ölçütlerinden biri olduğundan kuruluş genelinde dağıtıldıysa, hangi istemci örneklerinin güncelleştirileceği belirlemek için kullanın. Örneğin, düzeniniz VisualStudio.17.Release.LTSC.17.0 kanalını temel alacak şekilde yapılandırılmışsa ve istemcileriniz Microsoft tarafından barındırılan sunuculardan güncelleştirme alacak şekilde yapılandırılmışsa, 17.0 LTSC kanalında kullanılabilir hale gelen tüm güvenlik güncelleştirmeleri bu düzenden yüklenmiş veya güncelleştirilmiş istemciler tarafından kullanılabilir. 
+
+Ağ düzeninin doğru kanalı temel alarak olduğundan [](/visualstudio/releases/2022/vs2022-release-rhythm)emin olmak önemlidir. Bu, [](applying-administrator-updates.md)yöneticinin güncelleştirme ölçütlerinden biri olduğundan kuruluş genelinde dağıtıldıysa, hangi istemci örneklerinin güncelleştirileceği belirlemek için kullanın. Örneğin, düzeniniz VisualStudio.17.Release.LTSC.17.0 kanalını temel alacak şekilde yapılandırılmışsa ve istemcileriniz Microsoft tarafından barındırılan sunuculardan güncelleştirme alacak şekilde yapılandırılmışsa, 17.0 LTSC kanalında kullanılabilir hale gelen tüm güvenlik güncelleştirmeleri bu düzenden yüklenmiş veya güncelleştirilmiş istemciler tarafından kullanılabilir. 
 
 Yukarıda listelenen önyükleyiciler Geçerli kanalı temel almaktadır. LTSC kanallarından birini temel alan bir düzen oluşturmak [için, Visual Studio 2022](/visualstudio/releases/2022/release-history#release-dates-and-build-numbers) Yayın Geçmişi sayfasından doğru kanalın önyükleyicisini edinmeniz, bunu düzen klasörünüze kopyalamanız ve bunu kullanarak düzeni oluşturmanız veya güncelleştirmeniz gerekir. 
 
@@ -195,7 +198,7 @@ Burada özel kısmi düzen oluşturmayla ilgili birkaç örnek verilmiştir.
 Her zaman düzeninize en son Visual Studio ve istemcilerinize dağıtmanızı öneririz. Böylece, ürünün sonraki sürümlerinde kullanılabilir hale gelen yeni özelliklere ve işlevlere erişebilirsiniz. Örneğin, Visual Studio 2022 Yükleyicisini Visual Studio 2019 düzenlerinize dağıtırsanız, Visual Studio 2019 istemcileriniz bu düzeni temel alarak güncelleştirmeler için kaynak konumunu değiştirebilir. Bu işlevin yararlı olduğu senaryo, bir düzenden yüklemek ancak güncelleştirmelerin başka bir düzenden geliyor olmasıdır. En son yükleyiciyi kullanarak kapatma _da dahil_ olmak üzere daha fazla ayrıntı aşağıda [açıklanmıştır](#configure-the-layout-to-always-include-and-provide-the-latest-installer)
 
  > [!IMPORTANT]
- > Bu en son yükleyiciyi kullanma özelliği yalnızca Visual Studio 2022'nin ilk kez gönderildikten sonra Visual Studio 2019 önyükleyicileri tarafından kullanılabilir. Bu nedenle vs_enterprise.exe örnekteki örnek, 10 Kasım  2021'den sonra gönderilen bir sürüme sahip olması gerekir. 
+ > Bu en son yükleyiciyi kullanma özelliği yalnızca Visual Studio 2022'den sonra ilk kez Visual Studio 2019 önyükleyicileri tarafından kullanılabilir. Bu nedenle vs_enterprise.exe örnek, 10 Kasım 2021'den sonra gönderilen bir sürüme sahip olması gerekir.  
 
 * Kullanılabilir en son ve en büyük yükleyiciyi kullanan ürünün tamamının düzenini oluşturmak için şu sayfayı çalıştırın:
     ```shell
@@ -215,12 +218,14 @@ xcopy /e c:\VSLayout \\server\share\layoutdirectory
 > [!IMPORTANT]
 > Bir hatayı önlemek için ağ paylaşımında tam düzen yol 80 karakterden az olduğundan emin olun. Ya da bazı kuruluşlar 80 [karakterlik sınırlamaya](/windows/win32/fileio/symbolic-links) çözüm olarak sembolik bağlantıları başarıyla kullanmıştır.
 
-## <a name="update-or-modify-your-layout"></a>Düzeninizi güncelleştirme veya değiştirme 
+## <a name="update-or-modify-your-layout"></a>Düzeninizi güncelleştirme veya değiştirme
+
 Visual Studio'nin ağ düzenini en son ürün güncelleştirmeleriyle güncelleştirebilirsiniz. Böylece istemci iş istasyonlarının hem yükleme noktası olarak hem de güncelleştirme kaynağı olarak en son sürümünü al Visual Studio. Özellikle istemcilerinizin düzenden güncelleştirmeleri almalarını sağlamak için düzeninizi düzenli aralıklarla güncelleştirmek en iyi uygulamadır. Bu bölümde en yaygın veya kullanışlı düzen bakım işlemleri açıkmektedir.
 
 Bir dosya paylaşımında düzen barındırırsanız, düzenin özel bir kopyasını güncelleştirmek (örneğin, c:\VSLayout) ve ardından, tüm güncelleştirilmiş içerik indirildikten sonra bunu dosya paylaşımınıza kopyalayın (örneğin, \\ \server\products\VS). Bunu yapmasanız, düzeni güncelleştirirken Kurulum'u çalıştıran tüm kullanıcıların henüz tamamen güncelleştirilmediklerinden düzenden içerikte eşleşmezlik elde etme şansı daha fazladır.
 
 ### <a name="update-the-layout-to-the-most-current-version-of-the-product"></a>Düzeni ürünün en güncel sürümüne güncelleştirin
+
 Microsoft, işlev veya güvenlik sorunlarını düzeltmek için sıklıkla ürünün güncelleştirilmiş sürümlerini yayımlar. Yeni istemci yüklemelerinin her zaman en son sürümü aldıracak şekilde, düzeninizi ürünün en son sürümüyle güncelleştirmenizi öneririz. ayrıca istemcileriniz düzenden güncelleştirme alacak şekilde yapılandırıldıklarından düzeninizi güncel tutmak da çok önemlidir. 
 
 İlk düzeni oluşturma sırasında, düzenin yapılandırma dosyasına hangi iş yüklerinin ve dillerin dahil olduğu gibi belirtilen seçenekler kaydedilir. Daha sonra bu düzeni ürünün daha yeni bir sürümüne güncelleştirmek istediğinizde, ilk düzen oluşturma sırasında kullanılan seçenekleri yeniden belirtmenize gerek yoktur. Düzen güncelleştirme komutları, kaydedilen düzen ayarlarını otomatik olarak kullanır. 
@@ -244,6 +249,7 @@ vs_enterprise.exe --layout c:\VSLayout --passive
 ```
 
 ### <a name="update-the-layout-to-a-specific-version-of-the-product"></a>Düzeni ürünün belirli bir sürümüne güncelleştirme
+
 Bazen düzeninizi ürünün belirli bir _sürümüne güncelleştirmek istiyor olabilirsiniz._  Örneğin, düzeninizin, kuruluşu standart hale getirerek bakım temel çizgisinin en son güvenli sürümüyle eşleşmesini sağlamak istiyor olabilirsiniz. Bu işlemi şöyle yapabilirsiniz:
 
 ::: moniker range="vs-2019"
@@ -258,7 +264,7 @@ Bazen düzeninizi ürünün belirli bir _sürümüne güncelleştirmek istiyor o
 
 ::: moniker-end
 
-Düzeninizi belirli **[bir sürüme](applying-administrator-updates.md)** güncelleştirmek için yönetici güncelleştirmesini kullanabilirsiniz. Yönetici **Güncelleştirmesini almak** için Microsoft Update [Kataloğu'Microsoft Update](https://catalog.update.microsoft.com)gidin, düzeninizi güncelleştirmek istediğiniz güncelleştirmeyi arayın.  Uygulamayı _update.exe_ barındıran bilgisayara indirin, bu bilgisayarda bir komut istemi açın ve aşağıdaki gibi bir komut çalıştırın:
+Düzeninizi belirli **[bir sürüme](applying-administrator-updates.md)** güncelleştirmek için yönetici güncelleştirmesini kullanabilirsiniz. Yönetici **Güncelleştirmesini almak** için, Microsoft Update [Kataloğu'ne](https://catalog.update.microsoft.com)gidin, düzeninizi güncelleştirmek istediğiniz güncelleştirmeyi arayın.  Uygulamayı _update.exe_ barındıran bilgisayara indirin, bu bilgisayarda bir komut istemi açın ve aşağıdaki gibi bir komut çalıştırın:
 
 ```shell
 visualstudioupdate-17.0.0to17.0.1.exe layout --layoutPath c:\VSLayout
@@ -311,14 +317,17 @@ Yükleyici daha yeni bir _sürümün_ parçası olarak kabul edilirse bile, düz
 ::: moniker range="vs-2019"
 
 >[!TIP]
->İstemcinizin Visual Studio [2019](/visualstudio/install/update-visual-studio#configure-source-location-of-updates)yüklemesinde güncelleştirmelerin bulunduğu konumu değiştirmek için istemci  makinenize en son Visual Studio 2022 yükleyicisini alasınız. Bunu yapmanın bir yolu, Visual Studio 2022 yükleyicisini aşağıda açıklanan parametreleri kullanarak Visual Studio 2019 düzenlerinize dahil etmektir. En son yükleyiciyi kullanma özelliği yalnızca Visual Studio 2022 ilk kez gönderildikten sonra Visual Studio 2019 önyükleyicileri tarafından kullanılabilir. Bu nedenle, aşağıdaki örnekteki vs_enterprise.exe 10 Kasım 2021 ' _den sonra_ gelen bir sürüm olmalıdır. 
+>İstemcinizin Visual Studio [2019](update-visual-studio.md#configure-source-location-of-updates)yüklemesi güncelleştirmeleri aray bulunduğu konumu değiştirmek için  istemci makinenize en son Visual Studio 2022 yükleyicisini alasınız. Bunu yapmak için aşağıdaki parametreleri kullanarak Visual Studio 2022 yükleyicisini Visual Studio 2019 düzenlerinize dahil edebilirsiniz. En son yükleyiciyi kullanma özelliği yalnızca ilk olarak Visual Studio 2022'den sonra Visual Studio 2019 önyükleyicileri tarafından kullanılabilir. Bu nedenle, aşağıdaki örnekteki vs_enterprise.exe 10 Kasım 2021 ' _den sonra_ gelen bir sürüm olmalıdır. 
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
 Düzeninizi, en son yükleyiciyi dahil etmek ve sağlamak üzere etkinleştirmenin iki yolu vardır:
+
 - `--useLatestInstaller`Düzeni oluştururken veya güncelleştirirken, yükleyiciyi önyükleyici olarak geçirebilirsiniz. Bu, düzenin kök dizininde bulunan Layout. json dosyasında bir ayarın ayarlanmasına neden olur. Bu, düzeni güncelleştirme ve en son ve en büyük yükleyiciyi kullanacak şekilde yapılandırma hakkında bir örnektir.  
+
+
    ```shell
    vs_enterprise.exe --layout C:\VSLayout --useLatestInstaller
    ```
@@ -340,7 +349,7 @@ Düzeninizi, en son yükleyiciyi dahil etmek ve sağlamak üzere etkinleştirmen
 
 Layout. json dosyasında bu ayarı program aracılığıyla kaldırmanın bir yolu yoktur. bu nedenle, mizanpajınızı Microsoft 'un kullanılabilir olduğu en son yükleyiciyi kullanmayı _durdurmasını_ istiyorsanız (büyük olasılıkla en son yükleyiciden daha eski olan), düzen. json dosyasını düzenlemeniz ve ayarı kaldırmanız yeterlidir `"UseLatestInstaller": true` . 
 
-Bu `"UseLatestInstaller": true` ayarı, düzenin Response. json dosyasında de bulabilirsiniz, ancak burada yok sayılır. [Yanıt. JSON dosyası, istemci bir düzenden yüklediğinde veya bir düzeninden güncelleştirme yaparken  varsayılan yapılandırma seçeneklerini ayarlamak için kullanılır](/visualstudio/install/automated-installation-with-response-file). Bu `"useLatestInstaller": true` ayar, _Düzen_ içeriğinin en son yükleyiciyi içerdiğinden emin olmak için kullanılır, böylece istemci makineleri düzenden en son yükleyiciyi elde edebilir.   
+Bu `"UseLatestInstaller": true` ayarı, düzenin Response. json dosyasında de bulabilirsiniz, ancak burada yok sayılır. [Yanıt. JSON dosyası, istemci bir düzenden yüklediğinde veya bir düzeninden güncelleştirme yaparken  varsayılan yapılandırma seçeneklerini ayarlamak için kullanılır](automated-installation-with-response-file.md). Bu `"useLatestInstaller": true` ayar, _Düzen_ içeriğinin en son yükleyiciyi içerdiğinden emin olmak için kullanılır, böylece istemci makineleri düzenden en son yükleyiciyi elde edebilir.
 
 ::: moniker-end
 
@@ -406,10 +415,10 @@ yöneticiler, yükleme komut dosyasının bir parçası olarak istemci iş istas
 
 ### <a name="install-on-a-client-that-doesnt-have-internet-access"></a>İnternet erişimi olmayan bir istemciye yüklemesi
 
-Bir düzenden yüklerken, yüklenen içerik varsayılan olarak düzenden alınır. ancak, mizanpajda olmayan bir bileşeni seçerseniz ve [istemci güncelleştirmeler için Microsoft tarafından barındırılan sunuculara bakmak üzere yapılandırılmışsa](/visualstudio/install/automated-installation-with-response-file), yükleyici Visual Studio paketlerini internetten edinmeye çalışacaktır. Visual Studio kurulum 'un, düzeninizde bulunmayan web 'den içerik yüklemeye çalışmasını engellemek istiyorsanız, `--noWeb` seçeneğini kullanın. `--noWeb`Kullanılıyorsa ve mizanpajda yüklenmek üzere seçilen içerik eksikse, kurulum başarısız olur.
+Bir düzenden yüklerken, yüklenen içerik varsayılan olarak düzenden alınır. ancak, mizanpajda olmayan bir bileşeni seçerseniz ve [istemci güncelleştirmeler için Microsoft tarafından barındırılan sunuculara bakmak üzere yapılandırılmışsa](automated-installation-with-response-file.md), yükleyici Visual Studio paketlerini internetten edinmeye çalışacaktır. Visual Studio kurulum 'un, düzeninizde bulunmayan web 'den içerik yüklemeye çalışmasını engellemek istiyorsanız, `--noWeb` seçeneğini kullanın. `--noWeb`Kullanılıyorsa ve mizanpajda yüklenmek üzere seçilen içerik eksikse, kurulum başarısız olur.
 
 > [!IMPORTANT]
-> bu `--noWeb` seçenek, istemci, güncelleştirmeler için Microsoft tarafından barındırılan sunuculara bakmak üzere yapılandırılmışsa, internet 'e bağlı bir istemci makinesindeki Visual Studio yükleyiciyi güncelleştirmeleri _denetlemesinin_ durdurmaz. Bunun yerine, `--noWeb` yalnızca istemcinin ürün paketlerini indirmelerini önler. daha fazla bilgi için, [bir ağ düzeninden yüklenmiş Visual Studio istemcisini güncelleştirme](/visualstudio/install/update-a-network-installation-of-visual-studio) sayfasına bakın.
+> bu `--noWeb` seçenek, istemci, güncelleştirmeler için Microsoft tarafından barındırılan sunuculara bakmak üzere yapılandırılmışsa, internet 'e bağlı bir istemci makinesindeki Visual Studio yükleyiciyi güncelleştirmeleri _denetlemesinin_ durdurmaz. Bunun yerine, `--noWeb` yalnızca istemcinin ürün paketlerini indirmelerini önler. daha fazla bilgi için, [bir ağ düzeninden yüklenmiş Visual Studio istemcisini güncelleştirme](update-a-network-installation-of-visual-studio.md) sayfasına bakın.
 
 ::: moniker range=">=vs-2019"
 
@@ -420,6 +429,7 @@ Bir düzenden yüklerken, yüklenen içerik varsayılan olarak düzenden alını
 ### <a name="configure-initial-client-installation-defaults-for-this-layout"></a>Bu düzen için ilk istemci Yükleme varsayılanlarını Yapılandır
 
 Ürün istemci makinesine başlangıçta yüklendiğinde kullanılan varsayılan değerleri ayarlamak için Düzen klasöründeki bazı dosyaları değiştirebilirsiniz. Ortak yapılandırma seçenekleri şunlardır:
+
 - İlk yüklemesi sırasında **Varsayılan olarak hangi iş yüklerini, bileşenleri veya dilleri seçeceğini yapılandırabilme** . 
 - **İstemcinin güncelleştirmelerin nereden alacağını** belirtme özelliği.  Seçenekler, yönetici denetimli ağ düzeni konumundan veya Internet 'teki Microsoft tarafından barındırılan sunuculardan (varsayılan olarak) bulunur.
 
@@ -429,13 +439,13 @@ düzen için varsayılan istemci ayarlarını özelleştirme ve yapılandırma h
 
 ::: moniker range=">=vs-2019"
 
-Ayrıca, gibi diğer kurumsal dağıtım davranışlarını da denetleyebilirsiniz. 
+Diğer kurumsal dağıtım davranışlarını da denetleyebilirsiniz, örneğin:
 
-- Yönetici güncelleştirmelerinin etkinleştirilmesi ve bunların nasıl uygulanması gerektiği 
+- Yönetici güncelleştirmelerinin etkinleştirilmesi ve bunların nasıl uygulanması gerektiği.
 - hangi güncelleştirme kanalları kullanılabilir ve ağ düzenlerinin güncelleştirme Ayarlar iletişim kutusunda istemci makinelerde görünme şekli.
 - Paylaşılan paketlerin yüklendiği yer.
 - Paketlerin önbelleğe alınıp alınmayacağı.
-- Bildirimlerin görünme veya görünme şekli
+- Bildirimlerin görünme veya görünme şekli.
 
 ek ayrıntılar için [Visual Studio kurumsal dağıtımlarına yönelik varsayılanları ayarlama](set-defaults-for-enterprise-deployments.md) bölümüne bakın.
 
@@ -455,7 +465,7 @@ Parametresini kullandıysanız, `--wait` işlem sonucuna bağlı olarak, `%ERROR
 
 ### <a name="get-support-for-your-network-layout"></a>Ağ düzeniniz için destek alın
 
-Ağ düzeninizle ilgili bir sorunla karşılaşırsanız, bunun hakkında bilgi sahibi olmak istiyoruz. bize söylemek için en iyi yol, hem Visual Studio Yükleyicisi hem de Visual Studio ıde 'de görüntülenen [sorun bildir](/visualstudio/ide/how-to-report-a-problem-with-visual-studio) aracını kullanmaktır. bt yöneticisiyseniz ve yüklü Visual Studio yoksa, [**buraya buraya, yönetici geri bildirimi**](https://aka.ms/vs/admin/guide)gönderebilirsiniz. Bu aracı kullandığınızda, bu sorunu tanılamanıza ve gidermenize yardımcı olabilecek [vs Collect aracından](https://aka.ms/vscollect) günlükleri gönderebiliyorsanız çok yararlı olacaktır.
+Ağ düzeninizle ilgili bir sorunla karşılaşırsanız, bunun hakkında bilgi sahibi olmak istiyoruz. bize söylemek için en iyi yol, hem Visual Studio Yükleyicisi hem de Visual Studio ıde 'de görüntülenen [sorun bildir](../ide/how-to-report-a-problem-with-visual-studio.md) aracını kullanmaktır. bt yöneticisiyseniz ve yüklü Visual Studio yoksa, [**buraya buraya, yönetici geri bildirimi**](https://aka.ms/vs/admin/guide)gönderebilirsiniz. Bu aracı kullandığınızda, bu sorunu tanılamanıza ve gidermenize yardımcı olabilecek [vs Collect aracından](https://aka.ms/vscollect) günlükleri gönderebiliyorsanız çok yararlı olacaktır.
 
 Ayrıca, yükleme ile ilgili sorunlar için bir [**yükleme sohbeti**](https://visualstudio.microsoft.com/vs/support/#talktous) (yalnızca İngilizce) için destek seçeneği sunuyoruz.
 

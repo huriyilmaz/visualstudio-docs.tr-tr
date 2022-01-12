@@ -4,19 +4,19 @@ description: R için Docker kapsayıcılarını ayarlama ve Visual Studio ile bu
 ms.date: 12/04/2017
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
-author: kraigb
-ms.author: kraigb
+author: ghogen
+ms.author: ghogen
 ms.reviewer: karthiknadig
 manager: jmartens
 ms.technology: vs-rtvs
 ms.workload:
 - data-science
-ms.openlocfilehash: 4b19e604b052e6f573ff6d07e0830cf4d0af8c37
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: ec8b1ec02e14e54e5f43d893481de37a1e0cb074
+ms.sourcegitcommit: dcecc0ed37b5e976b5dc83c5128ba5ecc8bc04b1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122060472"
+ms.lasthandoff: 01/04/2022
+ms.locfileid: "135750869"
 ---
 # <a name="use-docker-containers-with-r-tools-for-visual-studio"></a>Visual Studio için R Araçları ile docker kapsayıcıları kullanma
 
@@ -36,7 +36,7 @@ ms.locfileid: "122060472"
 
     ![Kapsayıcı oluştururken kapsayıcı adı ve kimlik bilgilerini girme](media/containers-window-create-fill.png)
 
-1. RTVS 'nin görüntüyü oluşturması biraz zaman alabilir. Visual Studio 'daki **çıkış** penceresinde ilerleme durumu gösterilir, ancak uzun görüntü indirmeleri sırasında çok fazla gerçekleşmeyebilir; hasta olacak şekilde hazırlıklı olun. Görüntü oluşturulduktan sonra RTVS kapsayıcıyı başlatır ve **kapsayıcı** penceresinde görünür. Sağ taraftaki denetim kapsayıcıyı durdurur, kaldırır veya yeniden başlatır.
+1. RTVS 'nin görüntüyü oluşturması biraz zaman alabilir. Visual Studio 'daki **çıkış** penceresinde ilerleme durumu gösterilir, ancak uzun görüntü indirmeleri sırasında çok fazla gerçekleşmeyebilir; hasta olması için hazırlıklı olun. Görüntü oluşturulduktan sonra RTVS kapsayıcıyı başlatır ve **kapsayıcı** penceresinde görünür. Sağ taraftaki denetim kapsayıcıyı durdurur, kaldırır veya yeniden başlatır.
 
     ![Tamamlanmış kapsayıcıyı gösteren kapsayıcılar penceresi](media/containers-window-created.png)
 

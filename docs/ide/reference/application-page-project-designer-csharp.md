@@ -16,12 +16,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - dotnet
-ms.openlocfilehash: 66b882c90343910836295923e7ec5efd73f67eeb
-ms.sourcegitcommit: 215680b355cf613bfa125cf6b864c8bb5f2c71a5
+ms.openlocfilehash: 355f7feb87d1221d05fbe6c21643760de1dd1499
+ms.sourcegitcommit: d3578c384959f1b76dd06fb4b5d075fb052f8c69
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "132454041"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "135375001"
 ---
 # <a name="application-page-project-designer-c"></a>Uygulama Sayfası, Proje Tasarımcısı (C#)
 
@@ -122,9 +122,9 @@ Simge oluşturma hakkında daha fazla bilgi için bkz. [simgeler Için görünt�
 
 **Bildirim**
 
-uygulama, kullanıcı hesabı denetimi (UAC) altında Windows Vista 'da çalıştırıldığında bir bildirim oluşturma seçeneği belirler. Bu seçenek aşağıdaki değerlere sahip olabilir:
+uygulama, kullanıcı hesabı denetimi (UAC) altında Windows üzerinde çalışırken bir bildirim oluşturma seçeneği belirler. Bu seçenek aşağıdaki değerlere sahip olabilir:
 
-- **Bildirimi varsayılan ayarlarla ekleyin**. , uygulamanın yürütülebilir dosyasında güvenlik bilgilerini eklemek ve bunu belirtmek için olan Windows Vista 'da Visual Studio çalıştığı tipik yolu destekler `requestedExecutionLevel` `AsInvoker` . Bu varsayılan seçenektir.
+- **Bildirimi varsayılan ayarlarla ekleyin**. , Visual Studio Windows üzerinde çalıştığı tipik yolu destekler, bu da uygulamanın yürütülebilir dosyasındaki güvenlik bilgilerini eklemek ve bunu belirtmek anlamına gelir `requestedExecutionLevel` `AsInvoker` . Bu varsayılan seçenektir.
 
 - **Bildirim olmadan uygulama oluşturun**. Bu yöntem *sanallaştırma* olarak bilinir. Önceki uygulamalarla uyumluluk için bu seçeneği kullanın.
 

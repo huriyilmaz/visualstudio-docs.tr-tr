@@ -4,18 +4,18 @@ description: Çizim pencerelerini kullanarak R programlarından Visual Studio ç
 ms.date: 06/29/2017
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
-author: kraigb
-ms.author: kraigb
+author: ghogen
+ms.author: ghogen
 manager: jmartens
 ms.technology: vs-rtvs
 ms.workload:
 - data-science
-ms.openlocfilehash: 150bc0a1fb78c58ecc9e086cf20a25e32243215b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 1a11c0330f8bee99ad8350c07fd90befd1fefa51
+ms.sourcegitcommit: dcecc0ed37b5e976b5dc83c5128ba5ecc8bc04b1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122060511"
+ms.lasthandoff: 01/04/2022
+ms.locfileid: "135751052"
 ---
 # <a name="create-visual-data-plots-with-r"></a>R ile görsel veri çizimleri oluşturma
 
@@ -28,7 +28,7 @@ ms.locfileid: "122060511"
         ![video için film kamerası simgesi](../install/media/video-icon.png "Nasıl yapılacağını görmek için")
     :::column-end:::
     :::column:::
-        [R (2m 02s)](https://www.youtube.com/watch?v=ZTbKmz5RSgY) ile çizim youtube.com bir video (video) izleyin.
+        [R (2 youtube.com 02 sn)](https://www.youtube.com/watch?v=ZTbKmz5RSgY) ile çizimle ilgili bir video (video) izleyin.
     :::column-end:::
 :::row-end:::
 
@@ -44,7 +44,7 @@ Teknik olarak, R komutları çıkışlarını bir R grafik cihazına işler; çi
 
 Çizim oluşturmak için "etkin" çizim penceresini kullanır ve önceki çizimleri çizim geçmişine kaydederek (bkz. [Çizim geçmişi).](#plot-history) Örneğin, girin `plot(100:1)` ve ilk çizim bir aşağı doğruyla değiştirilir.
 
-Diğer tüm pencerelerde olduğu Visual Studio. çizim penceresi özelleştirilmiş düzenleri destekler [(bkz. Visual Studio.](../ide/customizing-window-layouts-in-visual-studio.md). Çizim pencereleri, bağımsız yeniden boyutlandırma için Visual Studio çerçeve içinde farklı konumlara yerleştirılabilir, bu çerçeve içinde yeniden boyutlandırılabilir veya tamamen çerçeveden çekılabilir.
+Diğer tüm pencerelerde olduğu Visual Studio. çizim penceresi özelleştirilmiş düzenleri destekler [(bkz. Visual Studio.](../ide/customizing-window-layouts-in-visual-studio.md). Çizim pencereleri, çerçevenin içindeki farklı konumlara Visual Studio, bu çerçeve içinde yeniden boyutlandırılabilir veya bağımsız yeniden boyutlandırma için tamamen çerçeveden çekebilirsiniz.
 
 Çizim penceresini yeniden boyutlandırmak, en iyi kaliteli görüntüyü sağlamak için çizimi her zaman yeniden işler. Genellikle sonraki bölümde açıklanan komutları kullanarak çizimi bir dosyaya veya panoya aktarmadan önce çizimi yeniden boyutlandırmak istersiniz.
 
@@ -67,7 +67,7 @@ Diğer tüm pencerelerde olduğu Visual Studio. çizim penceresi özelleştirilm
 
 ## <a name="multiple-plot-windows"></a>Birden çok çizim pencereleri
 
-Veri bilimcileri genellikle birçok farklı veri kümesinden çok sayıda çizimle birlikte çalışmalarından dolayı RTVS, çok sayıda bağımsız çizim pencereleri oluşturmanıza olanak sağlar. Daha sonra bu pencereleri, bu çerçevenin içinde veya Visual Studio tamamen aynı şekilde ayarlayabilirsiniz. (Pencereleri [yerleştirme ve yeniden boyutlandırma hakkında Visual Studio](../ide/customizing-window-layouts-in-visual-studio.md) için bkz. Visual Studio pencere düzenlerini özelleştirme.)
+Veri bilimcileri genellikle birçok farklı veri kümesinden çok sayıda çizimle birlikte çalışmalarından dolayı RTVS, çok sayıda bağımsız çizim pencereleri oluşturmanıza olanak sağlar. Daha sonra bu pencereleri, aynı çerçevenin içinde veya Visual Studio şekilde ayarlayabilirsiniz. (Pencereleri [yerleştirme ve yeniden boyutlandırma hakkında Visual Studio](../ide/customizing-window-layouts-in-visual-studio.md) için bkz. Visual Studio pencere düzenlerini özelleştirme.)
 
 Araç çubuğu düğmesini veya **R** Araçları Çizimleri Yeni Çizim Penceresi'yi  >  **kullanarak yeni bir** çizim penceresi  >  **oluşturabilirsiniz.** Yeni çizim penceresi, yeni *çizimlerin* işlenecek olduğu etkin pencere olur. Etkin pencereyi değiştirmek için bu pencereye geçişin ve Çizim **Penceresini** Etkinleştir araç çubuğu düğmesini veya **R Araçları** ÇizimLeri Çizimi Etkinleştir  >    >  **Penceresini seçin.**
 

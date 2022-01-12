@@ -1,7 +1,7 @@
 ---
 title: Unity için Visual Studio Araçları | Microsoft Docs
 description: Unity ile platformlar arası oyunlar ve uygulamalar geliştirmenize yardımcı olan ücretsiz bir Visual Studio uzantısı olan Unity için Visual Studio Araçları hakkında genel bakışı okuyun.
-ms.date: 10/25/2019
+ms.date: 12/10/2021
 ms.technology: vs-unity-tools
 ms.prod: visual-studio-dev16
 ms.topic: overview
@@ -11,32 +11,81 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: fb0d3499c0988e309845108b18973658d1515074
-ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
+zone_pivot_groups: platform
+ms.openlocfilehash: 6512154e53c1ac1e77071e1aac01e09e90cbc120
+ms.sourcegitcommit: 2a4744fb312396d36086dd59fd55ab741ae8e106
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "129967593"
+ms.lasthandoff: 12/28/2021
+ms.locfileid: "135575921"
 ---
 # <a name="visual-studio-tools-for-unity"></a>Unity için Visual Studio Araçları
-![Unity için Visual Studio Araçları](../media/hero.png)
+![Oyun çalmak için bir bilgisayarın, oyun denetleyicisinin ve simgelerinin ekran görüntüsü.](../media/hero.png)
 
 ## <a name="overview"></a>Genel Bakış
-Unity için Visual Studio Araçları, Unity ile platformlar arası oyunlar ve uygulamalar geliştirmek için güçlü bir araca Visual Studio etkinleştiren ücretsiz bir Visual Studio uzantısıdır.
+Unity için Visual Studio Araçları, unity C# betikleri yazmayı ve hata ayıklamayı geliştiren ve unity projeleriyle çalışan zengin bir özellik kümesi içerir.
 
-Unity Düzenleyicisi oyun dünyasını bir araya getirmek için harika olsa da kodunuzu bu konuma yazamıyoruz. Unity için Visual Studio Araçları ile, C# kullanarak Unity projeniz için düzenleyici ve oyun betikleri oluşturmak üzere Visual Studio tanıdık kod düzenleme, hata ayıklama ve üretkenlik özelliklerini kullanabilir ve Visual Studio güçlü hata ayıklama yeteneklerini kullanarak bunları hata ayıklaması yapabilirsiniz.
+* Unity projeleri için ayarlanmış bir hata ayıklayıcı kullanarak kodu sorun giderme, İnceleme ve araştırma.
+* Unity 'ye özgü IntelliSense kod tamamlama ile Unity betiklerini hızlıca bulun ve yazın.
+* Unity belgelerine hızlıca erişerek yazdığınız kod hakkında daha fazla bilgi edinin.
+* Unity betikleri için en iyi yöntemleri izleyen yeniden düzenleme seçenekleriyle daha iyi bir kod yazın.
+* Unity altyapısının, ileti işlevleri ve varlık kullanımları için CodeLens ipuçlarıyla kodunuzu nasıl çağırıyor olduğunu belirleme.
+* Çok [daha fazla](#features).
 
-ancak Unity için Visual Studio Araçları bundan daha fazla. Ayrıca Unity Düzenleyicisi ile derin bir tümleştirme de vardır, böylece basit görevler gerçekleştirmeye daha az zaman geçireceğiz, Unity 'ye özgü üretkenlik iyileştirmeleri sağlar ve Unity belgelerini parmaklarınızın altına yerleştirir.
+## <a name="available-for-windows-and-macos"></a>Windows ve macos için kullanılabilir
+:::zone pivot="windows"
+Unity için Visual Studio Araçları ücretsiz olarak kullanılabilir ve Visual Studio 2017 Community, Professional ve Enterprise ve daha yeni bir sürümü destekler. [Visual Studio en son sürümünü indirip kullanmanızı öneririz.](https://visualstudio.microsoft.com/downloads/)
+:::zone-end
+:::zone pivot="macos"
+Unity için Visual Studio Araçları ücretsiz olarak kullanılabilir ve her Mac için Visual Studio 2017 ve daha yeni yüklemesinde bulunabilir. [Mac için Visual Studio en son sürümünü indirip kullanmanızı öneririz.](https://visualstudio.microsoft.com/downloads/)
+:::zone-end
 
-### <a name="compatible-with-visual-studio-community-on-windows-and-macos-and-bundled-with-unity"></a>Windows ve macos üzerinde Visual Studio Community uyumlu ve Unity ile paketlenmiş
-Visual Studio ve Mac için Visual Studio Community ücretsiz olarak kullanılabilir ve Unity yüklemeleri ile paketlenmiştir. yükleme ve kurulum hakkında daha fazla bilgi için Unity için Visual Studio Araçları [kullanmaya başlama belgelerini](getting-started-with-visual-studio-tools-for-unity.md) ziyaret edin.
+[Unity için araçları kullanmaya](getting-started-with-visual-studio-tools-for-unity.md) başlarken Unity için Visual Studio Araçları ziyaret edin. Yükleme ve kurulum hakkında daha fazla bilgi için.
 
-## <a name="intellisense-for-unity-messages"></a>Unity iletileri için IntelliSense
-IntelliSense kod tamamlama, parametreleri de dahil olmak üzere [UNITY API iletilerini uygulamayı](using-visual-studio-tools-for-unity.md#intellisense-for-unity-api-messages) hızlı ve kolay hale getirir `OnCollisionEnter` .
+### <a name="supported-unity-versions"></a>Desteklenen Unity sürümleri
+#### <a name="visual-studio-editor-unity-package"></a>Visual Studio düzenleyicisi Unity paketi
+unity 2020,1 ve üzeri, Visual Studio ve Mac için Visual Studio gibi harici düzenleyici araçları için unity paketi gerektirir. [Bu değişiklikler hakkında daha fazla bilgi edinmek Için Unity blog gönderisine bakın.](https://unity.com/releases/2020-1/programmer-tools#verified-ide-packages-now-include-visual-studio)
 
-![Onçarpışsionenter gösteren IntelliSense iletişim kutusu](../media/vs/intellisense-example.png)
+[başlarken bölümü](getting-started-with-visual-studio-tools-for-unity.md) Visual Studio düzenleyicisi paketinin yapılandırması hakkında daha fazla bilgi içerir.
 
-## <a name="superior-debugging"></a>Üstün hata ayıklama
+Visual Studio düzenleyicisi paketinin en son sürümü önerilir.
+
+:::zone pivot="windows"
+
+|Visual Studio  |Minimum Unity sürümü|En düşük paket sürümü|
+|---------------|---------------------|-----------------------|
+|2022           |Unity 2019,4         |Visual Studio düzenleyicisi 2.0.11|
+|2019           |Unity 2017,4         |Visual Studio düzenleyicisi 2.0.0|
+|2017           |Önerilmez      |Yok
+:::zone-end
+:::zone pivot="macos"
+
+|Mac için Visual Studio |Minimum Unity sürümü|En düşük paket sürümü|
+|---------------|---------------------|-----------------------|
+|2022           |Unity 2019,4         |Visual Studio düzenleyicisi 2.0.11|
+|2019           |Unity 2017,4         |Visual Studio düzenleyicisi 2.0.0|
+|2017           |Önerilmez      |Yok
+:::zone-end
+
+## <a name="features"></a>Özellikler
+### <a name="unity-event-functions"></a>Unity olay Işlevleri
+`Start` `Update` `OnCollisionEnter` IntelliSense tarafından desteklenen otomatik Tamam önerilerini kullanarak birkaç tuş vuruşu gibi Unity olay işlevlerini hızla ve doğru şekilde ekleyin. 
+
+:::zone pivot="windows"
+![Onçarpışsionenter gösteren IntelliSense iletişim kutusunun ekran görüntüsü.](../media/vs/intellisense-example.png)
+:::zone-end
+:::zone pivot="macos"
+⌘ + SHIFT + d kullanarak birden çok Unity olay Işlevi ve yorumları için kod oluşturun.
+:::zone-end
+
+Hızlı çözüm önerileri ile el ile eklenen olay Işlevlerinde parametre hatalarını hızlıca düzeltin.
+
+:::zone pivot="windows"
+:::zone-end
+:::zone pivot="macos"
+:::zone-end
+
+### <a name="high-performance-debugger"></a>Yüksek performanslı hata ayıklayıcı
 Unity için Visual Studio Araçları, Visual Studio beklemeniz gereken güçlü [hata ayıklama](using-visual-studio-tools-for-unity.md#unity-debugging) özelliklerini destekler:
 
 * Koşullu kesme noktaları da dahil olmak üzere kesme noktaları ayarlayın.
@@ -44,27 +93,57 @@ Unity için Visual Studio Araçları, Visual Studio beklemeniz gereken güçlü 
 * Değişkenlerin ve bağımsız değişkenlerin değerini inceleyin ve değiştirin.
 * Karmaşık nesneler ve veri yapıları hakkında detaya gidin.
 
-![Bir kesme noktasında durdurulan değişkenleri İnceleme](../media/vs/debugging-inspecting.png)
+![bir kesme noktasında durdurulan Visual Studio ekran görüntüsü, değişkenleri inceliyor.](../media/vs/debugging-inspecting.png)
 
-## <a name="integrated-suggestions-for-best-practices-and-performance-insights"></a>En iyi uygulamalar ve Performans öngörüleri için tümleşik öneriler
+### <a name="quick-fixes-and-refactoring-suggestions"></a>Hızlı düzeltmeler ve yeniden düzenleme önerileri
 Visual Studio Unity projelerinin derinlemesine anlaşılmasına sahip en iyi uygulamaları yakalayan daha iyi bir kod yazın.
 
-![CompareTag ile VS yeniden düzenleme dizesi karşılaştırması](../media/vs/unity-diagnostics.png)
+![comparetag ile dize karşılaştırmayı yeniden düzenleme Visual Studio ekran görüntüsü.](../media/vs/unity-diagnostics.png)
 
-## <a name="codelens-support-for-unity-scripts-and-messages"></a>Unity betikleri ve iletileri için CodeLens desteği
-Unity betikleri ve ileti işlevleri, Unity tarafından sağlanmaları ve kodunuzun neleri olduğunu daha kolay bir şekilde tanımanıza olanak tanımak için ipuçları ile donatılmış bir şeydir.
+:::zone pivot="windows"
+### <a name="codelens-hints"></a>CodeLens ipuçları
+Unity varlıklarından örtük çağrılar gösteren CodeLens ipuçlarından yararlanarak kodun nerede çağrıldığını belirler. Örtük çağrıların listesini görmek için ipucunu seçin. Belirli bir çağrının seçilmesi, doğrudan Unity düzenleyicideki nesnesine gider.
 
- ![Unity betiği ve Unity Iletisi için CodeLens ipuçlarını gösteren yeni betik](../media/vs/codelens-support.png)
+Her Unity olay Işlevine yönelik ipuçlarıyla kodunuzu Unity yöntemlerinden hızlıca ayırt edin.
 
-> [!NOTE]
-> codelens desteği Visual Studio 2019 ' de mevcuttur.
+ ![Unity betiği ve Unity Iletisi için CodeLens ipuçlarını gösteren yeni betiğin ekran görüntüsü.](../media/vs/codelens-support.png)
+:::zone-end
 
-## <a name="optimized-view-of-all-your-scripts-to-match-unity"></a>Unity ile eşleşecek tüm betiklerinizin en iyi duruma getirilmiş görünümü
-Unity Project Explorer (UPE), proje dosyalarını standart Çözüm Gezgini üzerinde görüntülemenin alternatif bir yoludur. UPE, gösterilen dosyaları filtreler ve bunları Unity ile eşleşen bir hiyerarşide gösterir (Visual Studio 2019 ' de **> Unity Project gezgini** ' ni görüntüleyin).
+:::zone pivot="windows"
+### <a name="unity-project-explorer"></a>Unity Project gezgini
+Proje dosyalarını Unity düzenleyicisinde hiyerarşi penceresiyle eşleşen bir şekilde görüntüleyin.
 
-![Unity Project gezgini](../media/vs/unity-project-explorer.png)
+![Unity Project Explorer 'ın ekran görüntüsü.](../media/vs/unity-project-explorer.png)
+:::zone-end
+:::zone pivot="macos"
+### <a name="unity-project-view"></a>Unity proje görünümü
+Mac için Visual Studio, proje dosyalarını Unity düzenleyicideki hiyerarşi penceresiyle eşleşen bir şekilde otomatik olarak görüntüler.
 
-> [!NOTE]
-> Unity Project gezgini Visual Studio 2019 ' de kullanılabilir. Mac için Visual Studio, Çözüm Bölmesi Unity projeleri için varsayılan olarak benzer davranışa sahiptir-ek bir görünüm gerekmez.
+:::zone-end
 
-* [Unity için Visual Studio Araçları kullanmaya başlayın](getting-started-with-visual-studio-tools-for-unity.md)
+### <a name="unity-documentation"></a>Unity belgeleri
+Kod incelenirken Unity belgelerini doğrudan araç ipuçlarında görüntüleyin.
+
+:::zone pivot="windows"
+![Araç ipuçlarında Unity belgelerinin ekran görüntüsü.](../media/vs/visual-studio-tools-unity-documentation-tooltips.png)
+:::zone-end
+:::zone pivot="macos"
+
+:::zone-end
+
+Bir sınıf veya yöntem adını vurgulayarak ve sonra yardım > Unity API başvurusu menü öğesini seçerek Unity belgelerini hızlıca arayın.
+
+### <a name="support-for-shaders"></a>Gölgelendiriciler için destek
+Gölgelendirici dosyaları için sözdizimi vurgulama ve otomatik tamamlanma. 
+
+### <a name="support-for-assembly-definition-files"></a>Derleme tanımı dosyaları için destek
+Unity birleştirici tanımı (. asmdef) dosyalarını anahtar sözcük renklendirme ve tamamlarla birlikte Visual Studio doğrudan düzenleyin.
+
+:::zone pivot="macos"
+### <a name="run-and-debug-unit-tests"></a>Birim testlerini çalıştırma ve hata ayıklama
+birim testlerini doğrudan Mac için Visual Studio yazma, çalıştırma ve hata ayıklama.
+
+:::zone-end
+
+### <a name="automatically-refresh-unity-assets"></a>Unity varlıklarını otomatik olarak Yenile
+Unity ve Visual Studio arasında daha az zaman harcaın ve geriye doğru geçiş yapın. Dosyalar kaydedildiğinde koddaki değişiklikler Unity 'de otomatik olarak güncelleştirilir.

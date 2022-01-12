@@ -20,12 +20,12 @@ manager: jmartens
 ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 201a6f3d03c478fafd62c17b298d31e20de33ce1
-ms.sourcegitcommit: 7a820b7698a8dcf076eb36e3d766fb0751f56bb1
+ms.openlocfilehash: 0a67d9754ddb86890af66f4ed4b578cd44baf3bf
+ms.sourcegitcommit: d38d1b083322019663fec7d1d85a4cda456aadca
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "131127071"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "135534313"
 ---
 # <a name="deploy-your-app-to-a-folder-iis-azure-or-another-destination"></a>Uygulamanızı bir klasöre, IIS 'ye, Azure 'a veya başka bir hedefe dağıtın
 
@@ -100,8 +100,8 @@ Bir App Service bir [fiyatlandırma katmanı veya](/azure/app-service/azure-web-
 > Kendi veri merkezinizde veya diğer şirket içi bilgisayarlarınızda Azure App Service kullanmak istiyorsanız, [Azure Stack](https://azure.microsoft.com/overview/azure-stack/)kullanarak bunu yapabilirsiniz.
 
 App Service yayımlama hakkında daha fazla bilgi için bkz.:
-- [Hızlı başlangıç-Azure App Service yayımlama](quickstart-deploy-to-azure.md)
-- [hızlı başlangıç-ASP.NET Core Linux 'ta yayımlayın](quickstart-deploy-to-linux.md).
+- [Hızlı başlangıç-Azure App Service yayımlama](quickstart-deploy-aspnet-web-app.md)
+- [hızlı başlangıç-ASP.NET Core Linux 'ta yayımlayın](quickstart-deploy-aspnet-web-app.md).
 - [Azure App Service için ASP.NET Core uygulaması yayımlama](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)
 - [Azure App Service ve ııs 'de ASP.NET Core sorunlarını giderin](/aspnet/core/test/troubleshoot-azure-iis).
 
@@ -169,7 +169,7 @@ Herhangi bir nedenle (örneğin, makine erişimi) Azure App Service veya Azure s
 - Yalnızca bir yerel test dağıtımına ihtiyacınız vardır.
 - Uygulama dosyalarını başka bir dağıtım hedefine göndermeden önce bir şekilde incelemek ve potansiyel olarak değiştirmek istiyorsunuz.
 
-Daha fazla bilgi için bkz. [hızlı başlangıç-yerel bir klasöre dağıtma](quickstart-deploy-to-local-folder.md).
+Daha fazla bilgi için bkz. [hızlı başlangıç-yerel bir klasöre dağıtma](quickstart-deploy-aspnet-web-app.md).
 ::: moniker range=">=vs-2019"
 ClickOnce kullanarak .net Windows uygulaması dağıtma hakkında daha fazla bilgi için bkz. [ClickOnce kullanarak .net Windows uygulaması dağıtma](quickstart-deploy-using-clickonce-folder.md).
 ::: moniker-end
@@ -218,7 +218,7 @@ Visual Studio ' de istediğiniz sayıda ııs web sunucusu dağıtım profili ol
 - Visual Studio içinde kullandıklarınızdan farklı kimlik bilgilerini veya doğrudan Azure hesaplarınıza bağlı olanları kullanarak dağıtım yapmak isteyebilirsiniz.
 - Her dağıtım sırasında hedeften dosya silmek istiyorsunuz.
 
-Daha fazla bilgi için bkz. [hızlı başlangıç-bir Web sitesine dağıtma](quickstart-deploy-to-a-web-site.md).
+Daha fazla bilgi için bkz. [hızlı başlangıç-bir Web sitesine dağıtma](quickstart-deploy-aspnet-web-app.md).
 
 ııs 'de sorun giderme ASP.NET Core konusunda yardım için bkz. [Azure App Service ve ııs 'de ASP.NET Core sorunlarını giderme](/aspnet/core/test/troubleshoot-azure-iis).
 

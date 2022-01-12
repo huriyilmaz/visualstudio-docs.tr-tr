@@ -1,89 +1,92 @@
 ---
-title: Mac için Visual Studio bir güvenlik duvarı veya ara sunucu ile yükleyip kullanma
+title: Güvenlik duvarı veya Mac için Visual Studio sunucusuyla yükleme ve kullanma
 titleSuffix: ''
-description: bu belge, güvenlik duvarınızda bir kurumsal ortamda çalışmak üzere Mac için Visual Studio (ve Xamarin dahil iş yükleri) izin vermek için izin verilmesi gereken ana bilgisayarların bir listesini sağlar.
+description: Bu belge, şirket ortamında çalışma izni vermek için güvenlik duvarınıza izin Mac için Visual Studio konakların (ve Xamarin dahil olmak üzere iş yüklerinin) listesini sağlar.
 ms.assetid: 79C0F1A3-0C13-4E55-A820-1138A4082B77
-author: heiligerdankgesang
-ms.author: dominicn
-ms.date: 09/18/2019
-ms.openlocfilehash: 25a4597c8d523b63e7ceb0cf8b5eff71af58071a
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+author: jmatthiesen
+ms.author: jomatthi
+manager: dominicn
+ms.topic: reference
+ms.date: 01/10/2022
+ms.openlocfilehash: 5baa1c16960e0501731d337b4f4d3112f9374cdc
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123964777"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135806384"
 ---
-# <a name="install-and-use-visual-studio-for-mac-behind-a-firewall-or-proxy-server"></a>bir güvenlik duvarı veya proxy sunucusu arkasında Mac için Visual Studio yükleyip kullanma
+# <a name="install-and-use-visual-studio-for-mac-behind-a-firewall-or-proxy-server"></a>Güvenlik duvarı veya Mac için Visual Studio sunucusu arkasında yükleme ve kullanma
 
-siz veya kuruluşunuz bir güvenlik duvarı veya ara sunucu gibi güvenlik önlemleri kullanıyorsa, Mac için Visual Studio ve Azure hizmetlerini yükleyip kullandığınızda en iyi deneyimlere sahip olmanız için, açmak isteyebileceğiniz bir "izin verilenler listesine" ve bağlantı noktalarına ve protokollere eklemek isteyebileceğiniz etki alanları vardır.
+Siz veya kuruluşta güvenlik duvarı veya ara sunucu gibi güvenlik önlemleri kullanıyorsanız, Mac için Visual Studio ve Azure Hizmetleri'nin yükleme ve kullanma deneyimine sahip olmak için bir "izin ver listesine" eklemek istediğiniz etki alanları ve açmak istediğiniz bağlantı noktaları ve protokoller vardır.
 
-- [**Mac için Visual Studio yüklemek**](#install-visual-studio-for-mac): bu tablolar, Mac için Visual Studio tüm özelliklerine ve iş yüklerine erişebilmek için bağlantı kurulmasına izin veren etki alanlarını içerir.
+- [**Yükleme Mac için Visual Studio:**](#install-visual-studio-for-mac)Bu tablolar, kullanıcıların tüm özelliklerine ve iş yüklerine erişiminizin olması için bağlantı izni ver Mac için Visual Studio.
 
-- [**Mac için Visual Studio kullan**](#use-visual-studio-for-mac): bu tablolar, ilgili özelliklere erişebilmeniz için bağlantıya izin veren etki alanlarını içerir.
+- [**Şu Mac için Visual Studio**](#use-visual-studio-for-mac)kullanın: Bu tablolar, ilgili özelliklere erişiminiz olması için bağlantı izni ver gereken etki alanlarını içerir.
 
 ## <a name="install-visual-studio-for-mac"></a>Mac için Visual Studio’yu yükleyin
 
-Mac için Visual Studio yükleyicisi çeşitli etki alanlarından indirir ve sunucuları indirdiğinden, yapılandırmalarında güvenilir olarak eklemek isteyebileceğiniz etki alanları ve url 'ler aşağıda verilmiştir.
+Mac için Visual Studio Yükleyicisi çeşitli etki alanlarından ve indirme sunucularından indirdiği için, yapılandırmalarınıza güvenilen olarak eklemek istediğiniz etki alanları ve URL'ler burada ve ardından gelir.
 
 ### <a name="microsoft-domains"></a>Microsoft etki alanları
 
-| Etki alanı| Amaç |
+| Domain| Amaç |
 | ----------------------------------- |---------------------------|
-| *.live.com| Kimlik bilgisi yönetimi |
-| app.vssps.visualstudio.com| Yükleyici meta verileri|
-| vortex.data.microsoft.com | Kilitlenme ve hata raporlama |
-| az667904.vo.msecnd.net| Kilitlenme ve hata raporlama |
-| xamarin.com | Yükleyici meta verileri|
-| xampubdl.blob.core.windows.net| Yükleyici paketleri|
-| download.visualstudio.microsoft.com | Yükleyici paketleri|
-| xamarin.azureedge.net | Yükleyici paketleri|
-| developer.xamarin.com | Yükleyici paketleri|
-| static.xamarin.com | Yükleyici paketleri|
-| dl.xamarin.com | Yükleyici paketleri|
-| dc.services.visualstudio.com| Kilitlenme raporlaması |
+| *.live.com| Kimlik Bilgisi Yönetimi |
+| app.vssps.visualstudio.com| Yükleyici Meta Verileri|
+| nw-umwatson.events.data.microsoft.com | Kilitlenme ve Hata Raporlama | 
+| vortex.data.microsoft.com | Kilitlenme ve Hata Raporlama |
+| az667904.vo.msecnd.net| Kilitlenme ve Hata Raporlama |
+| xamarin.com | Yükleyici Meta Verileri|
+| xampubdl.blob.core.windows.net| Yükleyici Paketleri|
+| download.visualstudio.microsoft.com | Yükleyici Paketleri|
+| xamarin.azureedge.net | Yükleyici Paketleri|
+| developer.xamarin.com | Yükleyici Paketleri|
+| static.xamarin.com | Yükleyici Paketleri|
+| dl.xamarin.com | Yükleyici Paketleri|
+| dc.services.visualstudio.com| Kilitlenme Raporlaması |
 
 ### <a name="third-party-domains"></a>Üçüncü taraf etki alanları
 
-| Etki alanı| Amaç |
+| Domain| Amaç |
 | --------------------------|-------------------------|
 | dl.google.com | Android SDK |
 | download.oracle.com | Java SDK|
-| api.apple-cloudkit.com| Apple güvenlik hizmetleri |
+| api.apple-cloudkit.com| Apple Güvenlik Hizmetleri |
 
 ## <a name="use-visual-studio-for-mac"></a>Mac için Visual Studio’yu kullanma
 
-proxy veya güvenlik duvarının arkasında Mac için Visual Studio ihtiyacınız olan her özelliğe erişiminizin olduğundan emin olmak için, izin verilen erişim listesine aşağıdaki etki alanlarını ve bağlantı noktalarını eklemeniz önerilir.
+Bir ara sunucu veya güvenlik duvarının arkasındayken Mac için Visual Studio tüm özelliklere erişiminiz olduğundan emin olmak için, izin verilen erişim listesine aşağıdaki etki alanlarını ve bağlantı noktalarını eklemenizi öneririz.
 
 ### <a name="general"></a>Genel
 
-| Etki alanı | Bağlantı noktaları|Amaç|
+| Domain | Bağlantı noktaları|Amaç|
 | ----------------------|------------------|------------------|
-| go.microsoft.com | 80/443|Microsoft URL çözümlemesi |
-| vsstartpage.blob.core.windows.net| 80/443| Başlangıç sayfası verileri|
-| software.xamarin.com |  80/443|Güncelleştirici hizmeti|
+| go.microsoft.com | 80/443|Microsoft URL Çözümlemesi |
+| vsstartpage.blob.core.windows.net| 80/443| Başlangıç Sayfası Verileri|
+| software.xamarin.com |  80/443|Güncelleştiren Hizmeti|
 | addins.monodevelop.com | 80/443| Uzantı Hizmetleri |
-| visualstudio-devdiv-c2s.msedge.net | 80/443| Deneysel özellik ve bildirimler |
-| targetednotifications.azurewebsites.net|  80/443| Yalnızca belirli makine/kullanım senaryosu türleri için geçerli olan bir listeye yönelik genel bildirim listesini filtrelemek için kullanılır|
+| visualstudio-devdiv-c2s.msedge.net | 80/443| Deneysel Özellik ve Bildirimler |
+| targetednotifications.azurewebsites.net|  80/443| Bildirimlerin genel listesini yalnızca belirli makine türleri/kullanım senaryoları için geçerli olan bir listeye filtrelemek için kullanılır|
 
 ### <a name="identity"></a>Kimlik
 
-| Etki alanı | Bağlantı noktaları|Amaç|
+| Domain | Bağlantı noktaları|Amaç|
 | ----------------------|------------------|------------------|
 | login.microsoftonline.com | 80/443| Kimlik Sağlayıcı|
 | secure.aadcdn.microsoftonline-p.com | 80/443|Kimlik Sağlayıcı|
-| dc.services.visualstudio.com| 80/443|Kilitlenme raporlaması|
-| management.azure.com|80/443| Azure Hizmetleri API 'SI |
+| dc.services.visualstudio.com| 80/443|Kilitlenme Raporlaması|
+| management.azure.com|80/443| Azure Hizmetleri API'si |
 
 ### <a name="nuget"></a>NuGet
 
-| Etki alanı | Bağlantı noktaları|Amaç|
+| Domain | Bağlantı noktaları|Amaç|
 | ----------------------|------------------|------------------|
 | api.nuget.org | 80/443|NuGet API|
 | secure.aadcdn.microsoftonline-p.com |80/443| Kimlik Sağlayıcı|
 
 ### <a name="android-projects"></a>Android projeleri
 
-| Etki alanı| Amaç|
+| Domain| Amaç|
 | ------------------------------------|------------------------------------|
 | time.android.com| Android Emulator için saat sunucusu |
 | connectivitycheck.gstatic.com | Android Emulator için bağlantı|

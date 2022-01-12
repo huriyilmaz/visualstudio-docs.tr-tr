@@ -8,12 +8,12 @@ ms.author: tglee
 author: TerryGLee
 ms.manager: jmartens
 monikerRange: <=vs-2019
-ms.openlocfilehash: a318f033d010d50fb379e3d1ca8cec34d6cb2fbc
-ms.sourcegitcommit: 00451b7258ab86e259d0fe787669330b61efa8e5
+ms.openlocfilehash: ae62b14b49ae5a5d210d32355dc91d5d05e1139c
+ms.sourcegitcommit: d38d1b083322019663fec7d1d85a4cda456aadca
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "132364962"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "135534010"
 ---
 # <a name="connect-to-projects-in-team-explorer"></a>Ekip Gezgini'nde projelere bağlanma
 
@@ -124,13 +124,13 @@ Bir projeye bağlanmak için:
    ![Takım Gezgini bir projeye Bağlan](media/team-explorer/connect-project.png "Takım Gezgini-Visual Studio Project seçeneğine Bağlan.")
 
 > [!TIP]
-> Bir depodan bir proje açmak isterseniz, bkz. bir [depodan bir proje açma](../get-started/tutorial-open-project-from-repo-visual-studio-2017.md). yeni bir proje oluşturmak veya bir projeye kullanıcı eklemek istiyorsanız, bkz. [proje oluşturma (Azure DevOps)](/azure/devops/organizations/projects/create-project) ve [kullanıcıları projeye veya takıma ekleme (Azure DevOps)](/azure/devops/organizations/security/add-users-team-project).
+> Bir depodan bir proje açmak isterseniz, bkz. bir [depodan bir proje açma](/visualstudio/get-started/tutorial-open-project-from-repo?view=vs-2017&preserve-view=true). yeni bir proje oluşturmak veya bir projeye kullanıcı eklemek istiyorsanız, bkz. [proje oluşturma (Azure DevOps)](/azure/devops/organizations/projects/create-project) ve [kullanıcıları projeye veya takıma ekleme (Azure DevOps)](/azure/devops/organizations/security/add-users-team-project).
 
 ::: moniker-end
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Git ve Takım Gezgini yan yana karşılaştırın](git-team-explorer-feature-comparison.md)
+- [Git ve Takım Gezgini yan yana karşılaştırın](../version-control/git-team-explorer-feature-comparison.md)
 - [sürüm denetimi belgelerini Visual Studio](../version-control/index.yml)
 - [Takım Gezgini başvurusu](reference/team-explorer-reference.md)
 - [bir projeye Bağlan (Azure DevOps)](/azure/devops/organizations/projects/connect-to-projects)

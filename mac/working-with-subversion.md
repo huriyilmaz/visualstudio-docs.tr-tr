@@ -3,14 +3,16 @@ title: Subversion ile çalışma
 description: Mac için Visual Studio ' de merkezi sürüm denetim sistemi olarak alt sürümle nasıl çalışacağınızı öğrenin.
 author: jmatthiesen
 ms.author: jomatthi
+manager: dominicn
 ms.date: 05/06/2018
+ms.topic: how-to
 ms.assetid: 2400ED9C-6236-4C0A-A3AB-9D7CBE1F0CF4
-ms.openlocfilehash: 512432a7210999e1d432494ec67bb2bf7a0e6a11
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.openlocfilehash: 55018e3203d1f0d7d74f0fbc12f0666a729c8313
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123964791"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135803498"
 ---
 # <a name="working-with-subversion"></a>Subversion ile çalışma
 

@@ -1,6 +1,6 @@
 ---
 title: IntelliTrace tek başına toplayıcıyı kullanma | Microsoft Docs
-description: IntelliTrace tek başına toplayıcıyı kullanarak hedef sistemi yüklemeden Visual Studio ve hedef sistemin ortamını değiştirmeden veri toplayın.
+description: IntelliTrace tek başına toplayıcıyı kullanarak verileri yüklemeden Visual Studio ve hedef sistemin ortamını değiştirmeden toplayın.
 ms.custom: SEO-VS-2020
 ms.date: 07/30/2019
 ms.topic: conceptual
@@ -15,21 +15,19 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: f91f9692ab0cd6c9b8cc4cbaf9cdc44cd4d12ad5
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 52e47d27419c278256c873bf67f45db9fbe5e5a7
+ms.sourcegitcommit: fc874be3fe4637a23997b4ef2d99a2ee9a499581
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126725878"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "135516562"
 ---
 # <a name="using-the-intellitrace-stand-alone-collector-c-visual-basic"></a>IntelliTrace tek başına toplayıcıyı kullanma (C#, Visual Basic)
 
 IntelliTrace tek başına toplayıcısı, hedef makineye uygulama yüklemeden ve hedef sistemin ortamını değiştirmeden üretim sunucularında veya diğer ortamlarda uygulamalarınız için Visual Studio **IntelliTrace** tanılama verilerini toplamanızı sağlar. IntelliTrace tek başına toplayıcı web, SharePoint, WPF ve Windows Forms uygulamaları üzerinde çalışır. Veri toplamayı tamamlayarak toplayıcıyı silebilir ve kaldırabilirsiniz.
 
- IntelliTrace'i uygulamalı olarak izleyin: Hata ayıklama için [üretimde IntelliTrace](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Collecting-and-analyzing-data-in-production) verilerini toplama ve analiz etme (Channel 9 videosu)
-
 > [!NOTE]
-> İzleme modundaki uzak makinelerde çalışan web ve SharePoint uygulamaları için de aynı IntelliTrace **Microsoft Monitoring Agent** **toplayabilirsiniz.**
+> İzleme modundaki uzak makinelerde çalışan web ve SharePoint uygulamaları için aynı IntelliTrace **Microsoft Monitoring Agent** **da toplayabilirsiniz.**
 >
 > Aracıyı İzleme modunda çalıştırarak IntelliTrace verisinde performansla ilgili olayları **toplayabilirsiniz.** **İzleme** modunun, İzleme modundan veya **IntelliTrace** tek başına toplayıcıdan daha az performans etkisi vardır.  Microsoft Monitoring Agent, hedef sistemin ortamını yüklenirken değiştirmez. Bkz. [Microsoft Monitoring Agent.](../debugger/using-the-microsoft-monitoring-agent.md)
 > IntelliTrace tek başına toplayıcısı İşlem Anlık Görüntülerini desteklemez.
@@ -41,7 +39,7 @@ IntelliTrace tek başına toplayıcısı, hedef makineye uygulama yüklemeden ve
 - Visual Studio Enterprise bir geliştirme Professional veya Community üzerinde .iTrace dosyalarını açmak için bir geliştirme bilgisayarına veya başka bir bilgisayara yükleme (ancak bu sürümler değil)
 
   > [!NOTE]
-  > Sembol (.pdb) dosyalarınızı kaydetmeyi emin olun. IntelliTrace ile hata ayıklamak ve kodda adım adım yol yapmak için eşleşen kaynak dosyalarına ve sembol dosyalarına sahip olmak gerekir. Bkz. [Dağıtımdan sonra sorunları tanılama.](../debugger/diagnose-problems-after-deployment.md)
+  > Sembol (.pdb) dosyalarınızı kaydetmeyi emin olun. IntelliTrace ile hata ayıklamak ve kodda adım adım bilgi için eşleşen kaynak dosyalarına ve sembol dosyalarına sahip olmak gerekir. Bkz. [Dağıtımdan sonra sorunları tanılama.](../debugger/diagnose-problems-after-deployment.md)
 
   **SSS**
 
@@ -55,7 +53,7 @@ IntelliTrace tek başına toplayıcısı, hedef makineye uygulama yüklemeden ve
 
 ## <a name="what-apps-work-with-the-collector"></a><a name="WhatApps"></a> Toplayıcıyla hangi uygulamalar çalışır?
 
-- ASP.NET Internet Information Services (IIS) sürüm 7.0, 7.5, 8.0, 12.0 ve 16.0'da barındırılan web uygulamaları
+- ASP.NET (IIS) Internet Information Services 7.0, 7.5, 8.0, 12.0 ve 16.0'da barındırılan web uygulamaları
 
 - SharePoint 2010 ve SharePoint 2013 uygulamaları
 
@@ -71,11 +69,11 @@ IntelliTrace tek başına toplayıcısı, hedef makineye uygulama yüklemeden ve
 
 4. [.iTrace dosya dizini için izinleri ayarlama](#BKMK_Create_and_Configure_a_Log_File_Directory)
 
-5. [Web uygulamasından veya web uygulamasından SharePoint toplama](#BKMK_Collect_Data_from_IIS_Application_Pools)
+5. [Web uygulamasından veya SharePoint toplama](#BKMK_Collect_Data_from_IIS_Application_Pools)
 
      -veya-
 
-     [Yönetilen bir uygulamadan veri toplama](#BKMK_Collect_Data_from_Executables)
+     [Yönetilen bir uygulamanın verilerini toplama](#BKMK_Collect_Data_from_Executables)
 
 6. [.iTrace dosyasını Visual Studio Enterprise](#BKMK_View_IntelliTrace_Log_Files)
 
@@ -89,13 +87,13 @@ IntelliTrace tek başına toplayıcısı, hedef makineye uygulama yüklemeden ve
 
      1. uygulamanın **IntelliTraceCollector.exe** İndir'i **seçin.**
 
-     2. Dosyayı IntelliTraceCollector.exe toplayıcı dizinine kaydedin, örneğin: **C:\IntelliTraceCollector**
+     2. Dosyayı IntelliTraceCollector.exe dizine kaydedin, örneğin: **C:\IntelliTraceCollector**
 
      3. IntelliTraceCollector.exe. Bu, IntelliTraceCollection.cab ayıklar.
 
         \- veya -
 
-   - **Visual Studio klasörüne gidin:**
+   - **Visual Studio klasörünü açın:**
 
      1. Toplayıcının IntelliTraceCollection.cab klasördeki dosyaları kopyalayın, örneğin:
 
@@ -124,21 +122,21 @@ IntelliTrace tek başına toplayıcısı, hedef makineye uygulama yüklemeden ve
 
 1. Uygulamanın sunucusunda yönetici olarak bir komut istemi penceresi açın.
 
-2. Sunucu yöneticisine toplayıcı Windows tam izinleri vermek için Windows **icacls** komutunu kullanın. Örnek:
+2. Sunucu yöneticisine toplayıcı Windows tam izinleri vermek için Windows **icacls** komutunu kullanın. Örneğin:
 
      `icacls "C:\IntelliTraceCollector" /grant "` *\<Domain\AdministratorID>* `":F`
 
-3. Web uygulaması veya uygulama için veri SharePoint için:
+3. Bir Web uygulaması veya uygulama için veri SharePoint için:
 
     1. Toplayıcı dizininde IntelliTrace PowerShell cmdlet'lerini çalıştıracak kişiye tam izinleri verin.
 
-         Örnek:
+         Örneğin:
 
          `icacls "C:\IntelliTraceCollector" /grant "` *\<Domain\UserID>* `":F`
 
-    2. Web uygulaması için uygulama havuzuna veya uygulamanın SharePoint ve yürütme izinlerini toplayıcı dizinine verin.
+    2. Web uygulaması için uygulama havuzuna veya uygulamanın toplayıcı SharePoint okuma ve yürütme izinlerini verin.
 
-         Örnek:
+         Örneğin:
 
         - DefaultAppPool uygulama **havuzunda bir** Web uygulaması için:
 
@@ -150,7 +148,7 @@ IntelliTrace tek başına toplayıcısı, hedef makineye uygulama yüklemeden ve
 
 ## <a name="install-intellitrace-powershell-cmdlets-to-collect-data-for-web-apps-or-sharepoint-applications"></a><a name="BKMK_Set_up_the_IntelliTrace_PowerShell_commandlets"></a>Web uygulamaları veya web uygulamaları için veri toplamak için IntelliTrace PowerShell cmdlet'SharePoint yükleme
 
-1. Uygulamanın sunucusunda PowerShell'in etkinleştirildiğinden emin olun. Windows Server'Windows çoğu sürümde, bu özelliği Sunucu Yöneticisi  ekebilirsiniz.
+1. Uygulamanın sunucusunda PowerShell'in etkinleştirildiğinden emin olun. Windows Server'Windows çoğu sürümde, bu özelliği Sunucu Yöneticisi **aracına** ebilirsiniz.
 
      ![PowerShell'i Sunucu Yöneticisi](../debugger/media/intellitrace_servermanager_addpowershell.png "INTELLITRACE_ServerManager_AddPowerShell")
 
@@ -158,17 +156,17 @@ IntelliTrace tek başına toplayıcısı, hedef makineye uygulama yüklemeden ve
 
     1. Yönetici olarak bir PowerShell komut penceresi açın.
 
-        1. Başlat, **Tüm** **Programlar,** **Donatılar** ve **Windows PowerShell.**
+        1. Başlat, **Tüm** Programlar, **Donatılar** **ve** **Windows PowerShell.**
 
         2. Aşağıdaki adımlardan birini seçin:
 
-            - 64 bit işletim sistemlerinde, öğesinin kısayol menüsünü **Windows PowerShell.** Yönetici olarak **çalıştır'ı seçin.**
+            - 64 bit işletim sistemlerinde, komutu için kısayol menüsünü **Windows PowerShell.** Yönetici olarak **çalıştır'ı seçin.**
 
             - 32 bit işletim sistemlerinde, Windows PowerShell **(x86) için kısayol menüsünü açın.** Yönetici olarak **çalıştır'ı seçin.**
 
-    2. PowerShell komut penceresinde **Import-Module** komutunu kullanarak içeri aktarın **Microsoft.VisualStudio.IntelliTrace.PowerShell.dll.**
+    2. PowerShell komut penceresinde **import-Module** komutunu kullanarak komutunu **Microsoft.VisualStudio.IntelliTrace.PowerShell.dll.**
 
-         Örnek:
+         Örneğin:
 
          `Import-Module "C:\IntelliTraceCollector\Microsoft.VisualStudio.IntelliTrace.PowerShell.dll"`
 
@@ -181,12 +179,12 @@ IntelliTrace tek başına toplayıcısı, hedef makineye uygulama yüklemeden ve
    >   - .iTrace dosyalarını ve toplayıcı dosyalarını aynı yere koyabilirsiniz. Ancak, bir Web uygulamanız veya SharePoint, burasının uygulamayı barındıran dizinin dışında olduğundan emin olun.
    >
    > [!IMPORTANT]
-   > - .iTrace dosya dizinini yalnızca toplayıcıyla çalışması gereken kimliklerle kısıtlar. IntelliTrace, yöntem parametrelerine veya dönüş değerlerine geçen tüm verileri kaydedeyene kadar bir .iTrace dosyası kullanıcılardan, veritabanlarından, diğer kaynak konumlardan ve bağlantı dizelerinden alınan veriler gibi hassas bilgiler içerebilir.
+   > - .iTrace dosya dizinini yalnızca toplayıcıyla çalışması gereken kimliklerle kısıtlar. IntelliTrace yöntem parametrelerine veya dönüş değerlerine geçen tüm verileri kaydedeyene kadar bir .iTrace dosyası kullanıcılardan, veritabanlarından, diğer kaynak konumlardan ve bağlantı dizelerinden alınan veriler gibi hassas bilgiler içerebilir.
    >   - .iTrace dosyalarını açanların hassas verileri görüntüleme yetkisine sahip olduğundan emin olun. .iTrace dosyalarını paylaştığınızda dikkatli olun. Diğer kişilerin erişimi olması gerekirse, dosyaları güvenli bir paylaşılan konuma kopyalayın.
 
 2. Bir Web uygulaması veya SharePoint için uygulama havuzuna .iTrace dosya dizininde tam izinler verin. Windows **icacls** komutunu veya Windows Explorer'ı (veya Dosya Gezgini) kullanabilirsiniz.
 
-    Örnek:
+    Örneğin:
 
    - Windows **icacls komutuyla izinleri ayarlamak** için:
 
@@ -200,7 +198,7 @@ IntelliTrace tek başına toplayıcısı, hedef makineye uygulama yüklemeden ve
 
        -veya-
 
-   - Windows gezgini (veya dosya gezgini) ile izinleri ayarlamak için:
+   - Windows Explorer (veya Dosya Gezgini) ile izinleri ayarlamak için:
 
      1. . İTrace dosya dizini için **özellikleri** açın.
 
@@ -229,7 +227,7 @@ IntelliTrace tek başına toplayıcısı, hedef makineye uygulama yüklemeden ve
 
      `Start-IntelliTraceCollection "SharePoint - 80" "C:\IntelliTraceCollector\collection_plan.ASP.NET.default.xml" "C:\IntelliTraceLogFiles"`
 
-    |Ad|Açıklama|
+    |Adı|Açıklama|
     |-|-|
     |*ApplicationPool*|Uygulamanızın çalıştırıldığı uygulama havuzunun adı|
     |*PathToCollectionPlan*|Toplayıcı için ayarları yapılandıran bir .xml dosyası olan koleksiyon planının yolu.<br /><br /> Toplayıcıyla birlikte gelen bir plan belirtebilirsiniz. aşağıdaki planlar Web uygulamaları ve SharePoint uygulamaları için çalışır:<br /><br /> -collection_plan.ASP.NET.default.xml<br />     yalnızca ıntellitrace olayları ve özel durumlar, veritabanı çağrıları ve Web sunucusu istekleri dahil SharePoint olayları toplar.<br />-collection_plan.ASP.NET.trace.xml<br />     İşlev çağrılarını ve collection_plan.ASP.NET.default.xml tüm verileri toplar. Bu plan, ayrıntılı analiz için uygundur, ancak uygulamanızın collection_plan.ASP.NET.default.xml daha fazla yavaşlamasına neden olabilir.<br /><br /> Uygulamanızı yavaşlatmayı önlemek için, bu planları özelleştirin veya kendi planınızı oluşturun. Güvenlik için, tüm özel planları toplayıcı dosyalarıyla aynı güvenli konuma yerleştirin. Bkz. [IntelliTrace koleksiyon planları oluşturma ve özelleştirme](https://devblogs.microsoft.com/devops/modifying-an-intellitrace-collection-plan-for-the-stand-alone-collector/) ve [uygulamamı yavaşlatmadan en çok veriyi edinme nasıl yaparım?.](#Minimizing) **Note:**  Varsayılan olarak,. iTrace dosyasının en büyük boyutu 100 MB 'tır. . İTrace dosyası bu sınıra ulaştığında, toplayıcı yeni girişler için alan oluşturmak üzere dosyanın en eski girdilerini siler. Bu sınırı değiştirmek için koleksiyon planının `MaximumLogFileSize` özniteliğini düzenleyin. <br /><br /> *Bu koleksiyon planlarının yerelleştirilmiş sürümlerini nereden bulabilirim?*<br /><br /> Yerelleştirilmiş planları toplayıcı alt klasörlerinde bulabilirsiniz.|
@@ -268,7 +266,7 @@ IntelliTrace tek başına toplayıcısı, hedef makineye uygulama yüklemeden ve
 
      `C:IntelliTraceCollectorIntelliTraceSC.exe launch /cp:"C:IntelliTraceCollectorcollection_plan.ASP.NET.default.xml" /f:"C:IntelliTraceLogFilesMyApp.itrace" "C:MyAppMyApp.exe"`
 
-    |Ad|Açıklama|
+    |Adı|Açıklama|
     |-|-|
     |*FullPathToIntelliTraceCollectorExecutable*|Toplayıcı yürütülebilir dosyasının tam yolu, IntelliTraceSC.exe|
     |*PathToCollectionPlan*|Toplayıcı için ayarları yapılandıran bir .xml dosyası olan koleksiyon planının yolu.<br /><br /> Toplayıcıyla birlikte gelen bir plan belirtebilirsiniz. Aşağıdaki planlar yönetilen uygulamalar için çalışır:<br /><br /> -collection_plan.ASP.NET.default.xml<br />     Yalnızca özel durumlar, veritabanı çağrıları ve Web sunucusu istekleri dahil olmak üzere IntelliTrace olaylarını toplar.<br />-collection_plan.ASP.NET.trace.xml<br />     İşlev çağrılarını ve collection_plan.ASP.NET.default.xml tüm verileri toplar. Bu plan, ayrıntılı analiz için uygundur, ancak uygulamanızın collection_plan.ASP.NET.default.xml daha fazla yavaşlamasına neden olabilir.<br /><br /> Uygulamanızı yavaşlatmayı önlemek için, bu planları özelleştirin veya kendi planınızı oluşturun. Güvenlik için, tüm özel planları toplayıcı dosyalarıyla aynı güvenli konuma yerleştirin. Bkz. [IntelliTrace koleksiyon planları oluşturma ve özelleştirme](https://devblogs.microsoft.com/devops/modifying-an-intellitrace-collection-plan-for-the-stand-alone-collector/) ve [uygulamamı yavaşlatmadan en çok veriyi edinme nasıl yaparım?.](#Minimizing) **Note:**  Varsayılan olarak,. iTrace dosyasının en büyük boyutu 100 MB 'tır. . İTrace dosyası bu sınıra ulaştığında, toplayıcı yeni girişler için alan oluşturmak üzere dosyanın en eski girdilerini siler. Bu sınırı değiştirmek için koleksiyon planının `MaximumLogFileSize` özniteliğini düzenleyin. <br /><br /> *Bu koleksiyon planlarının yerelleştirilmiş sürümlerini nereden bulabilirim?*<br /><br /> Yerelleştirilmiş planları toplayıcı alt klasörlerinde bulabilirsiniz.|
@@ -403,5 +401,3 @@ Visual Studio Enterprise bir IntelliTrace hata ayıklama oturumundan IntelliTrac
 ### <a name="forums"></a>Forumlar
  [Visual Studio Hata Ayıklayıcısı](https://social.msdn.microsoft.com/Forums/en-US/home)
 
-### <a name="videos"></a>Videolar
- [Channel 9 videosu: IntelliTrace verilerini toplama ve analiz etme](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Collecting-and-analyzing-data-in-production)

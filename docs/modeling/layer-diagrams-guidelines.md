@@ -15,16 +15,16 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 69d32acfb5f21250ca0a4edc296bd0221da205cf
-ms.sourcegitcommit: 7a820b7698a8dcf076eb36e3d766fb0751f56bb1
+ms.openlocfilehash: 1382fd249b04d75a50fd6bf0bf7c8fb6e759897e
+ms.sourcegitcommit: fc874be3fe4637a23997b4ef2d99a2ee9a499581
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "131127162"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "135517153"
 ---
 # <a name="dependency-diagrams-guidelines"></a>Bağımlılık diyagramları: yönergeler
 
-Visual Studio ' de *bağımlılık diyagramları* oluşturarak uygulamanızın mimarisini yüksek düzeyde tanıtın. Kodunuzu bir bağımlılık diyagramı ile doğrulayarak kodunuzun bu tasarımla tutarlı kalmasını sağlayın. Yapı sürecinizdeki katman doğrulamasını da dahil edebilirsiniz. Bkz. [Channel 9 videosu: bağımlılık diyagramlarını kullanarak mimarinizi tasarlama ve doğrulama](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Using-layer-diagrams-to-design-and-validate-your-architecture).
+Visual Studio ' de *bağımlılık diyagramları* oluşturarak uygulamanızın mimarisini yüksek düzeyde tanıtın. Kodunuzu bir bağımlılık diyagramı ile doğrulayarak kodunuzun bu tasarımla tutarlı kalmasını sağlayın. Yapı sürecinizdeki katman doğrulamasını da dahil edebilirsiniz.
 
 hangi Visual Studio sürümlerinin bu özelliği desteklediğini görmek için bkz. [mimari ve modelleme araçları için sürüm desteği](../modeling/analyze-and-model-your-architecture.md#VersionSupport).
 
@@ -118,21 +118,21 @@ Sisteminizde veya amaçlanan mimaride yapmayı planladığınız değişiklikler
 
 Değişiklikleri yeniden düzenleme, uygulamanın davranışını etkilemeyen geliştirmelerdir, ancak gelecekte değiştirilmesini ve genişletmeyi daha kolay hale getirmeye yardımcı olur. İyi yapılandırılmış kod, bağımlılık diyagramına soyutlamak kolay bir tasarıma sahiptir.
 
-Örneğin, kodda her ad alanı için bir katman oluşturur ve ardından bağımlılıkların tersine mühendisliklerini oluşturursanız, katmanlar arasında en az bir tek yollu bağımlılık kümesi olması gerekir. Katmanlarınız olarak sınıfları veya yöntemleri kullanarak daha ayrıntılı bir diyagram oluşturmanız, sonucun da aynı özelliklere sahip olması gerekir.
+Örneğin, koddaki her ad alanı için bir katman oluşturur ve ardından bağımlılıklara ters mühendislik yaparsanız katmanlar arasında tek yönlü bir bağımlılık kümesi olmalıdır. Katmanlarınız olarak sınıfları veya yöntemleri kullanarak daha ayrıntılı bir diyagram oluşturmanız, sonucun da aynı özelliklere sahip olması gerekir.
 
 Böyle bir durum yoksa, kodun ömrü boyunca değişmesi daha zor olur ve bağımlılık diyagramlarını kullanarak doğrulama için daha az uygun olur.
 
 ## <a name="design-new-areas-of-your-application"></a><a name="NewAreas"></a> Uygulamanıza yeni alanlar tasarlama
 
-Yeni bir proje veya yeni bir projede yeni bir alan geliştirmeye başlarız, kodu geliştirmeye başlamadan önce ana bileşenlerin belirlenmesine yardımcı olmak için katmanlar ve bağımlılıklar çizebilirsiniz.
+Yeni bir proje veya yeni bir projede yeni bir alan geliştirmeye başlarız, kodu geliştirmeye başlamadan önce ana bileşenleri tanımlamaya yardımcı olmak için katmanlar ve bağımlılıklar çizebilirsiniz.
 
-- **Mümkünse bağımlılık diyagramlarınızda** tanımlanabilir mimari desenleri gösterme. Örneğin, bir masaüstü uygulamasını açıklayan bağımlılık diyagramı Sunu, Etki Alanı Mantığı ve Veri Deposu gibi katmanlar içerebilir. Uygulama içindeki tek bir özelliği kapsayan bağımlılık diyagramında Model, Görünüm ve Denetleyici gibi katmanlar olabilir.
+- **Mümkünse bağımlılık diyagramlarınızda** tanımlanabilir mimari desenleri gösterme. Örneğin, bir masaüstü uygulamasını açıklayan bağımlılık diyagramı Sunu, Etki Alanı Mantığı ve Veri Deposu gibi katmanları içerebilir. Uygulama içindeki tek bir özelliği kapsayan bağımlılık diyagramında Model, Görünüm ve Denetleyici gibi katmanlar olabilir.
 
 - **Ad alanı, sınıf veya bileşen gibi** her katman için bir kod yapıt oluşturun. Bu, kodu takip etme ve kod yapıtlarını katmanlara bağlamayı kolaylaştırır. Her yapıyı oluşturur oluşturmaz uygun katmana bağlamanız gerekir.
 
-- **Çoğu sınıfı ve diğer yapıtları** katmanlara bağlamanız gerek yok çünkü bunlar zaten katmanlara bağlı olan ad alanları gibi daha büyük yapıtlar içinde yer almaktadır.
+- **Çoğu sınıfı ve diğer yapıtları** katmanlara bağlamanız gerek yok çünkü bunlar katmanlara zaten bağlı olan ad alanları gibi daha büyük yapıtların içinde yer almaktadır.
 
-- **Yeni bir özellik için yeni bir diyagram oluşturun.** Genellikle, uygulamanın tamamını açıklayan bir veya daha fazla bağımlılık diyagramı olur. Uygulama içinde yeni bir özellik tasarıyorsanız mevcut diyagramlara ekleme veya mevcut diyagramları değiştirme. Bunun yerine, kodun yeni bölümlerini yansıtan kendi diyagramınızı oluşturun. Yeni diyagramda yer alan katmanlar, yeni özellik için sunu, etki alanı mantığı ve veritabanı katmanlarını içerebilir.
+- **Yeni bir özellik için yeni bir diyagram oluşturun.** Genellikle, uygulamanın tamamını açıklayan bir veya daha fazla bağımlılık diyagramı olur. Uygulama içinde yeni bir özellik tasarıyorsanız mevcut diyagramlara ekleme veya mevcut diyagramları değiştirme. Bunun yerine, kodun yeni bölümlerini yansıtan kendi diyagramınızı oluşturun. Yeni diyagramda yer alan katmanlar, yeni özelliğin sunu, etki alanı mantığı ve veritabanı katmanlarını içerebilir.
 
      Uygulamayı derlemek için kodunuz hem genel diyagramda hem de daha ayrıntılı özellik diyagramınızda doğrulanır.
 
@@ -158,7 +158,7 @@ Bkz.
 
 ## <a name="update-the-code-to-conform-to-the-new-architecture"></a><a name="UpdateCode"></a> Kodu yeni mimariye uygun olacak şekilde güncelleştirme
 
-Genellikle, güncelleştirilmiş bağımlılık diyagramına karşı kodu ilk kez doğrulayan hatalar görüntülenir. Bu hataların çeşitli nedenleri olabilir:
+Genellikle, kodu güncelleştirilmiş bağımlılık diyagramına göre ilk kez doğrulayan hatalar görüntülenir. Bu hataların çeşitli nedenleri olabilir:
 
 - Yapı yanlış katmana atanmış. Bu durumda, yapıyı taşıyın.
 
@@ -167,13 +167,13 @@ Genellikle, güncelleştirilmiş bağımlılık diyagramına karşı kodu ilk ke
 Bu hataları çözmek için doğrulama sırasında daha fazla hata görünmeyene kadar kodu güncelleştirin. Bu genellikle bir iterative işlemdir. Bu hatalar hakkında daha fazla bilgi için [bkz. Bağımlılık diyagramları ile kodu doğrulama.](../modeling/validate-code-with-layer-diagrams.md)
 
 > [!NOTE]
-> Kodu geliştirirken veya yeniden düzenlemeye devam ettikçe, bağımlılık diyagramına bağlantı için yeni yapıtlara sahip olabilirsiniz. Ancak, örneğin, mevcut ad alanlarını temsil eden katmanlarınız olduğunda ve yeni kod bu ad alanlarına yalnızca daha fazla malzeme eklerse, bu gerekli değildir.
+> Kodu geliştirirken veya yeniden düzenlemeye devam ettikçe, bağımlılık diyagramına bağlantı için yeni yapıtlar edinebilirsiniz. Ancak, mevcut ad alanlarını temsil eden katmanlarınız olduğunda ve yeni kod yalnızca bu ad alanlarına daha fazla malzeme eklerse, bu gerekli değildir.
 
 Geliştirme işlemi sırasında, doğrulama esnasında bildirilen çakışmaların bazılarını gizlemek isteyebilirsiniz. Örneğin, zaten çözdüğünüz veya özel senaryonuzla ilgili olmayan hataları gizlemek isteyebilirsiniz. Bir hatayı bastırdıysanız, Team Foundation'da bir iş öğesini günlüğe kayıt etmek iyi bir uygulamadır. Bu görevi gerçekleştirmek için [bkz. Bağımlılık diyagramları ile kodu doğrulama.](../modeling/validate-code-with-layer-diagrams.md)
 
 ## <a name="include-layer-validation-in-the-build-process"></a><a name="BuildValidation"></a> Derleme sürecine katman doğrulaması ekleme
 
-Kodda gelecekte yapılan değişikliklerin bağımlılık diyagramlarına uygun olduğundan emin olmak için çözüme standart derleme işlemi için katman doğrulamayı dahil etmek gerekir. Diğer ekip üyeleri çözümü her derlemesinde, kodda ve bağımlılık diyagramındaki bağımlılıklar arasındaki farklar derleme hataları olarak rapor eder. Derleme sürecine katman doğrulaması ekleme hakkında daha fazla bilgi için [bkz. Bağımlılık diyagramları ile kodu doğrulama.](../modeling/validate-code-with-layer-diagrams.md)
+Kodda gelecekte yapılan değişikliklerin bağımlılık diyagramlarına uygun olduğundan emin olmak için çözüme standart derleme işlemi için katman doğrulamayı dahil etmek gerekir. Diğer ekip üyeleri çözümü her derlemesinde, kod ve bağımlılık diyagramındaki bağımlılıklar arasındaki farklar derleme hataları olarak rapor eder. Derleme sürecine katman doğrulaması ekleme hakkında daha fazla bilgi için [bkz. Bağımlılık diyagramları ile kodu doğrulama.](../modeling/validate-code-with-layer-diagrams.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

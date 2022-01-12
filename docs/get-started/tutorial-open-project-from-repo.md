@@ -14,12 +14,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e3bfa52a14eb58750ab31daaf6c694c3d3036df9
-ms.sourcegitcommit: 263703af9c4840e0e0876aa99df6dd7455c43519
+ms.openlocfilehash: 619a9cacfdf272bb6b76e0115b90edddf2c73180
+ms.sourcegitcommit: d38d1b083322019663fec7d1d85a4cda456aadca
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2021
-ms.locfileid: "133387272"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "135534170"
 ---
 # <a name="tutorial-open-a-project-from-a-repo"></a>Öğretici: bir depodan bir proje açın
 
@@ -134,7 +134,7 @@ Azure DevOps bir depoyu Visual Studio kullanarak nasıl gözataöğreneceksiniz.
 
 ## <a name="open-a-project-from-a-github-repo-with-visual-studio-2019"></a>Visual Studio 2019 ile GitHub deposundan proje açma
 
-Visual Studio kullanarak bir projeyi GitHub deposundan açtığınızda, sahip olduğunuz sürüme göre değişir. özellikle, sürüm Visual Studio 2019 [**sürüm 16,8**](/visualstudio/releases/2019/release-notes-history) veya sonraki bir sürümünü yüklediyseniz, Visual Studio kullanabileceğiniz yeni, daha kapsamlı bir tam olarak tümleşik [Git deneyimi](../ide/git-with-visual-studio.md) mevcuttur.
+Visual Studio kullanarak bir projeyi GitHub deposundan açtığınızda, sahip olduğunuz sürüme göre değişir. özellikle, sürüm Visual Studio 2019 [**sürüm 16,8**](/visualstudio/releases/2019/release-notes-history) veya sonraki bir sürümünü yüklediyseniz, Visual Studio kullanabileceğiniz yeni, daha kapsamlı bir tam olarak tümleşik [Git deneyimi](../version-control/git-with-visual-studio.md) mevcuttur.
 
 ancak, hangi sürümü yüklediğinizden bağımsız olarak bir projeyi Visual Studio GitHub deposundan her zaman açabilirsiniz.
 
@@ -229,7 +229,7 @@ işte Visual Studio 2019 [**sürüm 16,7**](/visualstudio/releases/2019/release-
 
 ## <a name="browse-to-an-azure-devops-repo-with-visual-studio-2019"></a>Visual Studio 2019 ile Azure DevOps depoya gidin
 
-Visual Studio 2019 kullanarak bir Azure DevOps deposuna gözatıp klonladığınızda gördüğünüz özellikler, sahip olduğunuz sürüme bağlıdır. özellikle, sürüm [**16,8**](/visualstudio/releases/2019/release-notes-history) veya sonraki bir sürümü yüklediyseniz, kullanıcı arabirimini Visual Studio Visual Studio yeni, daha fazla tümleşik [Git deneyimine](../ide/git-with-visual-studio.md) uyum sağlayacak şekilde değiştirdik.
+Visual Studio 2019 kullanarak bir Azure DevOps deposuna gözatıp klonladığınızda gördüğünüz özellikler, sahip olduğunuz sürüme bağlıdır. özellikle, sürüm [**16,8**](/visualstudio/releases/2019/release-notes-history) veya sonraki bir sürümü yüklediyseniz, kullanıcı arabirimini Visual Studio Visual Studio yeni, daha fazla tümleşik [Git deneyimine](../version-control/git-with-visual-studio.md) uyum sağlayacak şekilde değiştirdik.
 
 ancak hangi sürümü yüklediğinizden bağımsız olarak, Visual Studio Azure DevOps depoya her zaman gidebilirsiniz ve kopyalayabilirsiniz.
 
@@ -384,8 +384,8 @@ Aşağıdaki dile özgü öğreticilerden herhangi birine daha fazla bilgi alabi
 
 ::: moniker range="<=vs-2019"
 
-- [Visual Studio git deneyimi](../ide/git-with-visual-studio.md)
-- [Git ve Takım Gezgini yan yana karşılaştırın](../ide/git-team-explorer-feature-comparison.md)
+- [Visual Studio git deneyimi](../version-control/git-with-visual-studio.md)
+- [Git ve Takım Gezgini yan yana karşılaştırın](../version-control/git-team-explorer-feature-comparison.md)
 - [Microsoft Learn: Visual Studio Git ve GitHub kullanmaya başlama](/learn/modules/visual-studio-github-push/)
 - [Microsoft Learn: Azure DevOps kullanmaya başlama](/learn/modules/get-started-with-devops/)
 - [Azure DevOps Services: Azure Repos ve Visual Studio kullanmaya başlayın](/azure/devops/repos/git/gitquickstart/)

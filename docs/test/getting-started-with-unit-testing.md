@@ -1,8 +1,8 @@
 ---
 title: Birim testini kullanmaya başlama
-description: Kod Visual Studio korumak ve müşterilerinizden önce hataları ve hataları bulmak için birim testlerini tanımlamak ve çalıştırmak için Visual Studio'i kullanın.
+description: Kod Visual Studio korumak ve müşterilerinizden önce hataları ve hataları bulmak için birim testleri tanımlamak ve çalıştırmak için Visual Studio kullanın.
 ms.custom: SEO-VS-2020
-ms.date: 08/10/2021
+ms.date: 12/16/2021
 ms.topic: tutorial
 helpviewer_keywords:
 - unit testing, create unit test plans
@@ -12,16 +12,16 @@ manager: jmartens
 ms.technology: vs-ide-test
 ms.workload:
 - multiple
-ms.openlocfilehash: 2465deef6d8b4c93b9e72d38bf548a001373f9e3
-ms.sourcegitcommit: e6aeefef5b659a56e6e433d155bfd269c46bceb0
+ms.openlocfilehash: 88bf2b8abe3356070550133ce788d4b9a339127f
+ms.sourcegitcommit: d3578c384959f1b76dd06fb4b5d075fb052f8c69
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "122603612"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "135375164"
 ---
 # <a name="get-started-with-unit-testing"></a>Birim testini kullanmaya başlama
 
-Kod Visual Studio korumak, kod kapsamı sağlamak ve müşterilerinizden önce hataları ve hataları bulmak için birim testleri tanımlamak ve çalıştırmak için Visual Studio kullanın. Kodunuzun düzgün çalıştığından emin olmak için birim testlerinizi sık sık çalıştırın.
+Kod Visual Studio korumak, kod kapsamından emin olmak ve müşterilerinizden önce hataları ve hataları bulmak için birim testleri tanımlamak ve çalıştırmak için Visual Studio kullanın. Kodunuzun düzgün çalıştığından emin olmak için birim testlerinizi sık sık çalıştırın.
 
 Bu makalede kod C# ve C++ kullanır, çizimler C# dilindedir, ancak kavramlar ve özellikler .NET dilleri, C++, Python, JavaScript ve TypeScript için geçerlidir.
 
@@ -31,12 +31,12 @@ Bu bölümde, birim testi projesinin nasıl oluşturularak ilgili açıklama yer
 
 1. Test etmek istediğiniz projeyi Visual Studio.
 
-   Örnek bir birim testinin amacı doğrultusunda, bu makale **HelloWorld** ( C# içinde **HelloWorldCore)** adlı basit bir "Merhaba Dünya" C# veya C++ Konsol projesini test ediyor. Böyle bir projenin örnek kodu aşağıdaki gibidir:
+   Örnek bir birim testinin amacı doğrultusunda, bu makale HelloWorld adlı basit bir "Merhaba Dünya" C# veya C++ Konsol **projesini test ediyor.** Böyle bir projenin örnek kodu aşağıdaki gibidir:
 
    ### <a name="net"></a>[.NET](#tab/dotnet)
    ```csharp
-   namespace HelloWorldCore
-
+   namespace HelloWorld
+   {
       public class Program
       {
          public static void Main()
@@ -44,6 +44,7 @@ Bu bölümde, birim testi projesinin nasıl oluşturularak ilgili açıklama yer
             Console.WriteLine("Hello World!");
          }
       }
+   }
    ```
 
    ### <a name="c"></a>[C++](#tab/cpp)
@@ -62,7 +63,7 @@ Bu bölümde, birim testi projesinin nasıl oluşturularak ilgili açıklama yer
 1. Yeni proje iletişim kutusunda, kullanmak üzere birim testi projesini bulun.
 
    ::: moniker range=">=vs-2019"
-   MSTest (C#) veya Yerel Birim Testi projesi (C++) gibi kullanmak istediğiniz **test** çerçevesine yönelik bir birim testi proje şablonu bulmak için arama kutusuna **test** yazın ve seçin.
+   **MSTest** (C#) veya Yerel Birim Testi projesi (C++) gibi kullanmak istediğiniz **test** çerçevesine yönelik bir birim testi proje şablonu bulmak için arama kutusuna **test** yazın ve seçin.
    ::: moniker-end
    ::: moniker range="vs-2017"
    Yüklü **düğümünü** genişletin, test projeniz için kullanmak istediğiniz dili seçin ve ardından Test'i **seçin.**
@@ -75,7 +76,14 @@ Bu bölümde, birim testi projesinin nasıl oluşturularak ilgili açıklama yer
 
    Aşağıdaki çizimde. .NET'te desteklenen bir MSTest birim testi gösterilmiştir.
 
-   ::: moniker range=">=vs-2019"
+   ::: moniker range=">=vs-2022"
+
+   ![Visual Studio 2022'de birim testi proje şablonu](media/vs-2022/add-new-test-project.png)
+
+   **Sonraki'ye** tıklayın, test projesi için bir ad seçin ve ardından Oluştur'a **tıklayın.**
+
+   ::: moniker-end
+   ::: moniker range="vs-2019"
 
    ![Visual Studio 2019'da birim testi proje şablonu](media/vs-2019/add-new-test-project.png)
 
@@ -85,7 +93,7 @@ Bu bölümde, birim testi projesinin nasıl oluşturularak ilgili açıklama yer
 
    ::: moniker range="vs-2017"
 
-   ![Visual Studio 2019'da birim testi proje şablonu](media/mstest-test-project-template.png)
+   ![Visual Studio 2017'de birim testi proje şablonu](media/mstest-test-project-template.png)
 
    Test projesi için HelloWorldTests gibi bir ad seçin ve ardından Tamam'a **tıklayın.**
 
@@ -93,13 +101,23 @@ Bu bölümde, birim testi projesinin nasıl oluşturularak ilgili açıklama yer
 
    Proje çözümünüze eklenir.
 
+   ::: moniker range=">=vs-2022"
+   ![Çözüm Gezgini'de birim testi projesi](media/vs-2022/solution-explorer.png)
+   ::: moniker-end
+   ::: moniker range="<=vs-2019"
    ![Çözüm Gezgini'de birim testi projesi](media/vs-2019/solution-explorer.png)
+   ::: moniker-end
 
 1. Birim testi projesinde, Başvurular veya Bağımlılıklar'a sağ tıklar ve  ardından Başvuru  Ekle veya Başvuru Ekle'yi seçerek test etmek istediğiniz projeye bir **Project ekleyin.** 
 
 1. Test etmek istediğiniz kodu içeren projeyi seçin ve Tamam'a **tıklayın.**
 
+   ::: moniker range=">=vs-2022"
+   ![Projeye proje başvurusu Visual Studio](media/vs-2022/reference-manager.png)
+   ::: moniker-end
+   ::: moniker range="<=vs-2019"
    ![Projeye proje başvurusu Visual Studio](media/vs-2019/reference-manager.png)
+   ::: moniker-end
 
 1. Birim testi yöntemine kod ekleyin.
 
@@ -124,7 +142,7 @@ Bu bölümde, birim testi projesinin nasıl oluşturularak ilgili açıklama yer
             using (var sw = new StringWriter())
             {
                Console.SetOut(sw);
-               HelloWorldCore.Program.Main();
+               HelloWorld.Program.Main();
 
                var result = sw.ToString().Trim();
                Assert.AreEqual(Expected, result);
@@ -157,7 +175,7 @@ Bu bölümde, birim testi projesinin nasıl oluşturularak ilgili açıklama yer
             using (var sw = new StringWriter())
             {
                Console.SetOut(sw);
-               HelloWorldCore.Program.Main();
+               HelloWorld.Program.Main();
 
                var result = sw.ToString().Trim();
                Assert.AreEqual(Expected, result);
@@ -185,7 +203,7 @@ Bu bölümde, birim testi projesinin nasıl oluşturularak ilgili açıklama yer
                 using (var sw = new StringWriter())
                 {
                     Console.SetOut(sw);
-                    HelloWorldCore.Program.Main();
+                    HelloWorld.Program.Main();
     
                     var result = sw.ToString().Trim();
                     Assert.Equal(Expected, result);
@@ -248,11 +266,21 @@ Bu bölümde, birim testi projesinin nasıl oluşturularak ilgili açıklama yer
 
 1. Birim testlerinizi çalıştırmak için Hepsini **Çalıştır'a tıklayın** (veya **Ctrl**  +  **R**, **V tuşlarına basın).**
 
+   ::: moniker range=">=vs-2022"
+   ![Test Gezgini ile birim testleri çalıştırma](media/vs-2022/test-explorer-run-all.png)
+   ::: moniker-end
+   ::: moniker range="<=vs-2019"
    ![Test Gezgini ile birim testleri çalıştırma](media/vs-2019/test-explorer-run-all.png)
+   ::: moniker-end
 
    Testler tamamlandıktan sonra yeşil onay işareti testin başarılı olduğunu gösterir. Kırmızı "x" simgesi testin başarısız olduğunu gösterir.
 
+   ::: moniker range=">=vs-2022"
+   ![Test Gezgini'nde birim testi sonuçlarını gözden geçirme](media/vs-2022/unit-test-passed.png)
+   ::: moniker-end
+   ::: moniker range="<=vs-2019"
    ![Test Gezgini'nde birim testi sonuçlarını gözden geçirme](media/vs-2019/unit-test-passed.png)
+   ::: moniker-end
 
 > [!TIP]
 > Yerleşik test [çerçevesinden](../test/run-unit-tests-with-test-explorer.md) (MSTest) veya üçüncü taraf test çerçevelerinden birim testleri çalıştırmak için Test Gezgini'ni kullanabilirsiniz. Testleri kategorilere gruplandırabilir, test listesini filtrenin ve testlerin çalma listelerini oluşturabilir, kaydedebilir ve çalıştırabilirsiniz. Ayrıca testlerde hata ayıklar, test performansını ve kod kapsamayı analiz edersiniz.
@@ -272,67 +300,93 @@ Visual Studio 2017 veya sonraki bir yıl içinde MSTest, xUnit veya NUnit test �
 
    ::: moniker-end
 
-   ::: moniker range=">=vs-2019"
+   ::: moniker range="vs-2019"
 
    ![Visual Studio 2019'da canlı birim testlerini başlatma](media/vs-2019/start-live-unit-testing.png)
 
    ::: moniker-end
 
+   ::: moniker range=">=vs-2022"
+
+   ![Visual Studio 2022'de canlı birim testlerini başlatma](media/vs-2022/start-live-unit-testing.png)
+
+   ::: moniker-end
+
 1. Kod yazıp düzenlerken kod düzenleyicisi penceresinde testlerin sonuçlarını görüntüleme.
 
+   ::: moniker range="<=vs-2019"
    ![Testlerin sonuçlarını görüntüleme](media/vs-2019/live-unit-testing-results.png)
+   ::: moniker-end
+   ::: moniker range=">=vs-2022"
+   ![Testlerin sonuçlarını görüntüleme](media/vs-2022/live-unit-testing-results.png)
+   ::: moniker-end
 
 1. Bir test sonucu göstergesine tıklar ve bu yöntemin üzerinde yer alan testlerin adları gibi daha fazla bilgi elde edin.
 
+   ::: moniker range="<=vs-2019"
    ![Test sonucu göstergelerini seçme](media/vs-2019/live-unit-testing-details.png)
+   ::: moniker-end
+   ::: moniker range=">=vs-2022"
+   ![Test sonucu göstergelerini seçme](media/vs-2022/live-unit-testing-details.png)
+   ::: moniker-end
 
 Canlı birim testi hakkında daha fazla bilgi için bkz. [Canlı birim testi.](../test/live-unit-testing-intro.md)
 
 ## <a name="use-a-third-party-test-framework"></a>Üçüncü taraf test çerçevesi kullanma
 
-Programlama dilinize bağlı Visual Studio NUnit, Boost veya Google C++ Test Çerçevesi gibi üçüncü taraf test çerçevelerini kullanarak birim testlerini Visual Studio'de çalıştırarak birim testleri çalıştırın. Üçüncü taraf çerçeve kullanmak için:
+Programlama dilinize bağlı Visual Studio NUnit, Boost veya Google C++ Test Çerçevesi gibi üçüncü taraf test çerçevelerini kullanarak birim testlerini Visual Studio'de çalıştırarak birim testlerini çalıştırın. Üçüncü taraf çerçeve kullanmak için:
 
 - Tercih **NuGet Paket Yöneticisi** çerçeveye NuGet paketini yüklemek için NuGet paketini kullanın.
 
 - (.NET) 2017 Visual Studio 14.6 sürümünden başlayarak, Visual Studio NUnit ve xUnit test çerçeveleri için önceden yapılandırılmış test projesi şablonları içerir. Şablonlar, desteği etkinleştirmek için gerekli NuGet paketleri de içerir.
 
-- (C++) 2017 Visual Studio ve sonraki sürümlerde Google C++ Test Çerçevesi gibi bazı çerçeveler zaten dahil edildi. Daha fazla bilgi için [bkz. C/C++ için birim testleri yazma Visual Studio.](../test/writing-unit-tests-for-c-cpp.md)
+- (C++) 2017 Visual Studio ve sonraki sürümlerde Google C++ Test Çerçevesi gibi bazı çerçeveler zaten dahil edildi. Daha fazla bilgi için [bkz. C/C++ için](../test/writing-unit-tests-for-c-cpp.md)birim testleri yazma Visual Studio.
 
 Birim testi projesi eklemek için:
 
 1. Test etmek istediğiniz kodu içeren çözümü açın.
 
-2. içinde çözüme sağ tıklayın ve **Çözüm Gezgini** **Ekle'yi**  >  **Project.**
+2. içinde çözüme sağ tıklayın ve **Çözüm Gezgini**   >  **Ekle'yi Project.**
 
 3. Bir birim testi proje şablonu seçin.
 
    Bu örnekte [NUnit'i seçin](https://nunit.org/)
 
-   ::: moniker range=">=vs-2019"
+   ::: moniker range=">=vs-2022"
+   ![Visual Studio 2022'de NUnit test projesi şablonu](media/vs-2022/nunit-test-project-template.png)
+   ::: moniker-end
 
+   ::: moniker range="vs-2019"
    ![Visual Studio 2019'da NUnit test projesi şablonu](media/vs-2019/nunit-test-project-template.png)
 
-   **Sonraki'ne** tıklayın, projeyi olarak ad girin ve ardından Oluştur'a **tıklayın.**
-
+   **Sonraki'ye** tıklayın, projeyi olarak ad girin ve ardından Oluştur'a **tıklayın.**
    ::: moniker-end
 
    ::: moniker range="vs-2017"
-
-   Projeyi bir adla ve ardından **Tamam'a** tıklar ve projeyi oluşturun.
-
+   Projeye bir ad ve ardından **tamam'a** tıklar ve projeyi oluşturun.
    ::: moniker-end
 
    Proje şablonu NUnit ve NUnit3TestAdapter'a NuGet başvurularını içerir.
 
+   ::: moniker range=">=vs-2022"
+   ![NUnit NuGet bağımlılıkları Çözüm Gezgini](media/vs-2022/nunit-nuget-dependencies.png)
+   ::: moniker-end
+   ::: moniker range="<=vs-2019"
    ![NUnit NuGet bağımlılıkları Çözüm Gezgini](media/vs-2019/nunit-nuget-dependencies.png)
+   ::: moniker-end
 
 4. Test projesinden test etmek istediğiniz kodu içeren projeye bir başvuru ekleyin.
 
-   içinde projeye sağ tıklayın ve **Çözüm Gezgini** **Ekle'yi**  >  **seçin.** (Başvurular veya Bağımlılıklar düğümünün sağ tıklama **menüsünden de** **başvuru ekleyebilirsiniz.)**
+   içinde projeye sağ tıklayın ve **Çözüm Gezgini** **Ekle'yi**  >  **seçin.** (Ayrıca, Başvurular veya Bağımlılıklar düğümünün sağ tıklama **menüsünden de** **başvuru ekleyebilirsiniz.)**
 
 5. Test yönteminize kod ekleyin.
 
+   ::: moniker range=">=vs-2022"
+   ![Birim testi kod dosyanıza kod ekleme](media/vs-2022/unit-test-method.png)
+   ::: moniker-end
+   ::: moniker range="<=vs-2019"
    ![Birim testi kod dosyanıza kod ekleme](media/vs-2019/unit-test-method.png)
+   ::: moniker-end
 
 6. **Testi** Test Gezgini'nde çalıştırın veya test koduna sağ tıklar ve Testleri Çalıştır 'ı (veya **Ctrl** R ,   +   **T) seçin.**
 

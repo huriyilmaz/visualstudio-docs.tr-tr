@@ -20,12 +20,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - uwp
-ms.openlocfilehash: 32e12e8646b25adff81c217626de6cacee724600
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 6cccfa30b1f9bd076644cb6ef6ee17af42b7cfc6
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126627969"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135805851"
 ---
 # <a name="debug-html-and-css-in-uwp-apps-in-visual-studio"></a>Visual Studio 'de UWP uygulamalarında HTML ve CSS hatalarını ayıklama
 
@@ -207,7 +207,7 @@ Aşağıdaki yordamda, DOM Gezgini 'ni kullanarak bir uygulamada etkileşimli ol
 
     - cihaz ayarlarınıza bağlı olarak 255px (konum) ve 255px (Margin) veya benzer değerler.
 
-      Aşağıdaki çizimde, 100px fark ve kenar boşluğu ile bir öykünücü kullanıyorsanız **Düzen** sekmesinin nasıl göründüğü gösterilmektedir.
+      Aşağıdaki çizimde, 100 piksel fark ve kenar boşluğu ile bir öykünücü kullanıyorsanız **Düzen** sekmesinin nasıl göründüğü gösterilmektedir.
 
       ![DOM Gezgini Düzen sekmesi](../debugger/media/js_dom_explorer_layout.png "JS_DOM_Explorer_Layout")
 
@@ -242,20 +242,20 @@ Uygulamada hata ayıklarken DOM öğelerini üç şekilde seçebilirsiniz:
 
 - JavaScript `select` Konsol komutlarından biri olan [komutunu kullanarak.](../debugger/javascript-console-commands.md?view=vs-2017&preserve-view=true)
 
-  Öğeleri seçmek için DOM Gezgini ve fare işaretçisini bir öğenin üzerine geri kalanına eklemek için DOM Gezgini penceresini kullanırsanız, ilgili öğe çalışan uygulamada vurgulanır. Öğeyi seçmek için DOM Gezgini tıklamalı veya öğeleri vurgulamak ve seçmek için ok tuşlarını kullanabilirsiniz. Öğe seç düğmesini kullanarak DOM Gezgini öğeleri **de seçebilirsiniz.** Aşağıdaki çizimde Öğe **Seç düğmesi gösterilmiştir.**
+  Öğeleri seçmek DOM Gezgini ve fare işaretçisini bir öğenin üzerine geri kalanına eklemek için DOM Gezgini penceresini kullanırsanız, ilgili öğe çalışan uygulamada vurgulanır. Öğeleri seçmek için DOM Gezgini öğeye tıklamalı veya öğeleri vurgulamak ve seçmek için ok tuşlarını kullanabilirsiniz. Öğe seç düğmesini kullanarak DOM Gezgini öğeleri **de seçebilirsiniz.** Aşağıdaki çizimde Öğe **Seç düğmesi gösterilmiştir.**
 
   ![Dosyada Öğe Düğmesini DOM Gezgini](../debugger/media/js_dom_select_element_button.png "JS_DOM_Select_Element_Button")
 
-  Öğe **seç'e** tıklarsanız (veya Ctrl+B tuşlarına bassanız), çalışan uygulamada öğeye tıklayarak öğe DOM Gezgini şekilde seçim modunu değiştirir. Tek tıklamadan sonra mod normal seçim moduna döner. Öğe **seç'e** tıklarsanız, uygulama ön plana gelir ve imleç yeni seçim modunu yansıtacak şekilde değişir. Özetlenen öğeye tıklarken, DOM Gezgini öğe seçili olarak ön plana geri döner.
+  Öğe **seç'e** tıklarsanız (veya Ctrl+B tuşlarına bassanız), çalışan uygulamada öğe seçerek öğe DOM Gezgini şekilde seçim modunu değiştirir. Tek tıklamadan sonra mod normal seçim moduna döner. Öğe **seç'e** tıklarsanız, uygulama ön plana gelir ve imleç yeni seçim modunu yansıtacak şekilde değişir. Özetlenen öğeye tıklarken DOM Gezgini öğe seçili olarak ön plana geri döner.
 
-  Öğe **Seç'i seçmeden** önce, Web sayfası vurgularını görüntüle düğmesini seçerek çalışan uygulamanın öğelerinin **vurgulup vurgulanamayrı belirtebilirsiniz.** Aşağıdaki çizimde bu düğme gösterilmiştir. Vurgular varsayılan olarak görüntülenir.
+  Öğe **Seç'i seçmeden** önce, Web sayfası vurgularını görüntüle düğmesini seçerek çalışan uygulamanın öğelerinin vurgulup **vurgulanamayrı belirtebilirsiniz.** Aşağıdaki çizimde bu düğme gösterilmiştir. Vurgular varsayılan olarak görüntülenir.
 
   ![Web sayfası vurgularını görüntüle düğmesi](../debugger/media/js_dom_display_highlights_button.png "JS_DOM_Display_Highlights_Button")
 
-  Öğeleri vurgulamayı seçerseniz, Simülatör'de üzerine gelinen öğeler vurgulanır. Vurgulanan öğelerin renkleri, vurgulanan öğelerin Düzen sekmesinde **görünen** kutu modeliyle DOM Gezgini.
+  Öğeleri vurgulamayı seçerseniz, Simülatör'de üzerine gelmenizi istediğiniz öğeler vurgulanır. Vurgulanan öğelerin renkleri, DOM Gezgini'nin **Düzen sekmesinde** görüntülenen kutu modeliyle DOM Gezgini.
 
 > [!NOTE]
-> Öğelerin üzerine gelerek vurgulama, yalnızca Windows Phone Emulator.
+> Öğelerin üzerine gelindiğinde vurgulanan öğeler yalnızca Windows Phone Emulator.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -265,4 +265,4 @@ Uygulamada hata ayıklarken DOM öğelerini üç şekilde seçebilirsiniz:
 - [Klavye kısayolları](../debugger/keyboard-shortcuts-html-and-javascript.md?view=vs-2017&preserve-view=true)
 - [JavaScript Konsolu komutları](../debugger/javascript-console-commands.md?view=vs-2017&preserve-view=true)
 - [HTML, CSS ve JavaScript'te hata ayıklama örnek kodu](../debugger/debug-html-css-and-javascript-sample-code.md)
-- [Ürün Desteği ve Erişilebilirlik](/previous-versions/tzbxw1af(v=vs.120))
+- [Ürün Desteği ve Erişilebilirliği](/previous-versions/tzbxw1af(v=vs.120))

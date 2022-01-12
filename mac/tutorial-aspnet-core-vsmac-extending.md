@@ -2,17 +2,18 @@
 title: mevcut bir ASP.NET Core web uygulamasını genişletme
 description: bu belgede eshoponweb örnek ASP.NET Core uygulamasının nasıl genişletileceğini gösteren video öğreticileri yer almaktadır.
 ms.custom: SEO-VS-2020
-author: sayedihashimi
-ms.author: sayedha
+author: jmatthiesen
+ms.author: jomatthi
+manager: dominicn
 ms.date: 10/18/2019
 ms.assetid: 047f5e36-f38e-4bf6-a1c5-3fde32978b7d
-ms.topic: tutorial
-ms.openlocfilehash: d2813f70a497df9057f312f561504639b4e1afcd
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.topic: how-to
+ms.openlocfilehash: f9724488c1ab0916a15a5259e2994e16d4180e56
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126725960"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135806566"
 ---
 # <a name="tutorial-extending-an-existing-aspnet-core-web-application"></a>öğretici: mevcut bir ASP.NET Core web uygulamasını genişletme
 

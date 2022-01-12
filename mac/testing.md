@@ -6,14 +6,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - testing tools [Visual Studio for Mac]
 - unit tests [Visual Studio for Mac]
-ms.author: jomatthi
 author: jmatthiesen
-ms.openlocfilehash: 3956c3158fd4ec1ad32b76882ac3f9d4cf1ea9bf
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.author: jomatthi
+manager: dominicn
+ms.openlocfilehash: 750653e66a04ce6777258d17e2056b408c2e5773
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126725973"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135805734"
 ---
 # <a name="testing-tools-in-visual-studio-for-mac"></a>Mac için Visual Studio 'de test araçları
 

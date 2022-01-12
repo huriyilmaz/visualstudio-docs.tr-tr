@@ -6,17 +6,17 @@ ms.date: 5/5/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - asynchronous, async, profiling
-author: esteban-herrera
-ms.author: esherrer
-manager: AndSter
+author: mikejo5000
+ms.author: mikejo
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f6d688706fbc26013badea2beb06a534bbf5932245879dfbaede609a325434d8
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 95281a4b72a23309dd1e00add68dde7bd8efb90b
+ms.sourcegitcommit: dcecc0ed37b5e976b5dc83c5128ba5ecc8bc04b1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121427319"
+ms.lasthandoff: 01/04/2022
+ms.locfileid: "135751092"
 ---
 # <a name="analyze-performance-of-net-asynchronous-code"></a>.NET zaman uyumsuz kodunun performansını çözümleme
 

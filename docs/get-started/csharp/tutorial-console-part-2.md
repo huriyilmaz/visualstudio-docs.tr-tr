@@ -1,6 +1,6 @@
 ---
 title: 'Öğretici 2: C# konsol uygulamanızı genişletme'
-description: adım adım Visual Studio bir C# konsol uygulaması geliştirmeyi öğrenin.
+description: Bir C# konsol uygulaması geliştirmeyi Visual Studio adım adım öğrenin.
 ms.custom: vs-acquisition, get-started
 ms.date: 09/14/2021
 ms.technology: vs-ide-general
@@ -16,75 +16,75 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: aba8cfeabad2bec1dbcc2b6c4ae5447b0eedec76
-ms.sourcegitcommit: a1c18c491e310b00a43e76a911f778e643cd8f8d
+ms.openlocfilehash: 2fe1d32542c10a324f3c258e0fb1a8070d15015d
+ms.sourcegitcommit: aa5e295b9e3fc8e287f3ae2b6224f41e7d4ee833
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "132995152"
+ms.lasthandoff: 12/21/2021
+ms.locfileid: "135437296"
 ---
-# <a name="tutorial-extend-c-console-app-and-debug-in-visual-studio-part-2-of-2"></a>öğretici: Visual Studio 'de C# konsol uygulamasını ve hata ayıklamayı genişletme (bölüm 2/2)
+# <a name="tutorial-extend-c-console-app-and-debug-in-visual-studio-part-2-of-2"></a>Öğretici: Visual Studio'da C# konsol uygulamasını ve hata ayıklamayı genişletme (2. bölüm)
 
-bu öğretici serisinin 2. bölümünde, günlük geliştirme için ihtiyaç duyduğunuz Visual Studio derleme ve hata ayıklama özellikleri hakkında biraz daha ayrıntılı bilgi sahibiz. Bu özellikler birden çok projenin yönetilmesini, hata ayıklamayı ve üçüncü taraf paketlerine başvurmayı içerir. [bu öğreticinin 1. bölümünde](tutorial-console.md)oluşturduğunuz C# konsol uygulamasını çalıştırın ve Visual Studio tümleşik geliştirme ortamının (ıde) bazı özelliklerini keşfedebilirsiniz. Bu öğretici, iki bölümden oluşan bir öğretici serisinin 2. parçasıdır.
+Bu öğretici serisinin 2. bölümünde, günlük geliştirme için ihtiyaç Visual Studio oluşturma ve hata ayıklama özellikleri hakkında biraz daha derine inersiniz. Bu özellikler birden çok proje yönetmeyi, hata ayıklamayı ve üçüncü taraf paketlerine başvuruyu içerir. Bu öğreticinin [1.](tutorial-console.md)Bölümünde oluşturduğunuz C# konsol uygulamasını çalıştıracak ve tümleşik geliştirme ortamının (IDE) Visual Studio özelliklerini keşfedersiniz. Bu öğretici, iki bölümden bir öğretici serisinin 2. bölümü.
 
 Bu öğreticide şunları yaptınız:
 
 > [!div class="checklist"]
 > * İkinci bir proje ekleyin.
-> * Başvuru kitaplıkları ve paket Ekle.
-> * Daha fazla hata ayıklama yapın.
-> * Tamamlanan kodunuzu inceleyin.
+> * Kitaplıklara başvurun ve paket ekleyin.
+> * Daha fazla hata ayıklaması yapma.
+> * Tamamlanan kodunuzu inceleme.
 
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Bu makalede çalışmak için şu hesap makinesi uygulamalarından birini kullanabilirsiniz:
+Bu makalede çalışmak için şu Hesaplayıcı uygulamalarını kullanabilirsiniz:
 
-- [Bu öğreticinin 1. bölümünde hesap makinesi konsol uygulaması](tutorial-console.md).
-- [Vs-öğreticisi-Samples](https://github.com/MicrosoftDocs/vs-tutorial-samples)deposunda C# Hesaplayıcı uygulaması. Başlamak için [depodan uygulamayı açın](../tutorial-open-project-from-repo.md).
+- Bu [öğreticinin 1. bölümünde yer alan Hesaplayıcı konsol uygulaması.](tutorial-console.md)
+- [vs-tutorial-samples(vs-tutorial-samples) ifadesinde](https://github.com/MicrosoftDocs/vs-tutorial-samples)C# Hesaplayıcısı uygulaması. Çalışmaya başlama [için, uygulamayı repodan açın.](../tutorial-open-project-from-repo.md)
 
-## <a name="add-another-project"></a>Başka proje ekleme
+## <a name="add-another-project"></a>Başka bir proje ekleme
 
-Gerçek dünyada kod, bir çözümde birlikte çalışan projeler içerir. Hesaplayıcı uygulamanıza, bazı Hesaplayıcı işlevleri sağlayan bir sınıf kitaplığı projesi ekleyebilirsiniz.
+Gerçek dünya kodu, bir çözümde birlikte çalışan projeleri içerir. Hesap makinesi uygulamanıza bazı hesaplayıcı işlevleri sağlayan bir sınıf kitaplığı projesi ekleyebilirsiniz.
 
-Visual Studio,   >    >  yeni bir proje eklemek için menü komut dosyasını **yeni Project** ekle ' yi kullanın. Bağlam menüsünden bir proje eklemek için **Çözüm Gezgini** ' de çözüme sağ tıklayabilirsiniz.
+Bu Visual Studio, yeni bir proje eklemek için **Dosya**  >    >  **Yeni Project** Ekle menü komutunu kullanın. Bağlam menüsünden proje eklemek için  Çözüm Gezgini sağ tıklar.
 
 ::: moniker range="vs-2019"
-1. **Çözüm Gezgini**, çözüm düğümüne sağ tıklayın ve  > **yeni Project** ekle ' yi seçin.
+1. Bu **Çözüm Gezgini,** çözüm düğümüne sağ tıklayın ve Yeni **Ekle'yi Project.** > 
 
-1. **Yeni Proje Ekle** penceresinde, arama kutusuna *sınıf kitaplığı* yazın. C# **sınıf kitaplığı** proje şablonunu seçin ve ardından **İleri**' yi seçin.
+1. Yeni **proje ekle penceresinde,** Ara *kutusuna sınıf* kitaplığı yazın. C# Sınıf kitaplığı **proje şablonunu** ve ardından Sonraki'yi **seçin.**
 
-   ![Sınıf kitaplığı proje şablonu seçiminin ekran görüntüsü.](media/vs-2019/calculator2-add-project-dark.png)
+   ![Sınıf Kitaplığı proje şablonu seçiminin ekran görüntüsü.](media/vs-2019/calculator2-add-project-dark.png)
 
-1. **Yeni projenizi yapılandırın** ekranında, *hesaplatorlibrary* proje adını yazın ve ardından **İleri**' yi seçin.
+1. Yeni **projenizi yapılandır ekranında** *CalculatorLibrary* proje adını yazın ve ardından Sonraki'yi **seçin.**
    
-1. İstendiğinde .NET 3,1 ' i seçin. Visual Studio yeni projeyi oluşturur ve çözüme ekler.
+1. Soruldu olarak .NET 3.1'i seçin. Visual Studio yeni projeyi oluşturur ve çözüme ekler.
 
-   ![Hesaplatorlibrary sınıf kitaplığı projesi eklenen Çözüm Gezgini ekran görüntüsü.](media/vs-2019/calculator2-solution-explorer-with-class-library-dark2.png)
+   ![CalculatorLibrary sınıf Çözüm Gezgini projesinin ekli olduğu uygulamanın ekran görüntüsü.](media/vs-2019/calculator2-solution-explorer-with-class-library-dark2.png)
 
-1. *Class1. cs* dosyasını *hesaplatorlibrary. cs* olarak yeniden adlandırın. Dosyayı yeniden adlandırmak için **Çözüm Gezgini** adı ' na sağ tıklayıp **Yeniden Adlandır**' ı seçin, adı seçin ve **F2** tuşuna basabilir ya da adı seçip, ardından yazmak için yeniden tıklayabilirsiniz.
+1. *Class1.cs dosyasını* *CalculatorLibrary.cs olarak yeniden adlandırır.* Dosyayı yeniden adlandırmak için, dosyanın  Çözüm Gezgini tıklar ve Yeniden Adlandır'ı **seçebilir,** adı seçin ve **F2** tuşuna basın veya adı seçerek yeniden tıklarsınız.
 
-   Bir ileti, dosyadaki başvuruları yeniden adlandırmak isteyip istemediğinizi sorabilir `Class1` . Daha sonraki bir adımda kodu değiştirdiğinizden, yanıt sizin için önemlidir.
+   Dosyada başvurularını yeniden adlandırmak isteyip istemediklerine bir `Class1` ileti sorabilir. Nasıl yanıt attığın önemli değildir çünkü kodu gelecekteki bir adımda değiştireceğiz.
 
-1. Şimdi bir proje başvurusu ekleyin, bu nedenle ilk proje yeni sınıf kitaplığının sunduğu API 'Leri kullanabilir. **hesaplayıcı** projesindeki **bağımlılıklar** düğümüne sağ tıklayın ve **Project başvuru ekle**' yi seçin.
+1. Şimdi bir proje başvurusu ekleyin, böylece ilk proje yeni sınıf kitaplığının ortaya çıkar olduğu API'leri kullanabilir. Hesaplayıcı projesinde **Bağımlılıklar düğümüne** sağ **tıklayın ve Başvuru** **ekle'Project seçin.**
 
-   ![Project başvuru ekle menü öğesinin ekran görüntüsü.](media/vs-2019/calculator2-add-project-reference-dark.png)
+   ![Başvuru Ekle menü Project ekran görüntüsü.](media/vs-2019/calculator2-add-project-reference-dark.png)
 
-   **Başvuru Yöneticisi** iletişim kutusu görüntülenir. Bu iletişim kutusunda, projelerinize gereken diğer projelere, derlemelere ve COM DLL 'Lerine başvurular ekleyebilirsiniz.
+   Başvuru **Yöneticisi iletişim** kutusu görüntülenir. Bu iletişim kutusunda, projelerinize gereken diğer projelere, derlemelere ve COM URL'lerine başvurular eklemek için kullanabilirsiniz.
 
-1. **Başvuru Yöneticisi** iletişim kutusunda, **Hesaplayıt kitaplığı** projesinin onay kutusunu seçin ve ardından **Tamam**' ı seçin.
+1. Başvuru **Yöneticisi iletişim** kutusunda **CalculatorLibrary** projesi onay kutusunu ve ardından Tamam'ı **seçin.**
 
    ![Başvuru Yöneticisi iletişim kutusunun ekran görüntüsü.](media/vs-2019/calculator2-ref-manager-dark.png)
 
-   Proje başvurusu **Çözüm Gezgini** Içindeki bir **Projeler** düğümü altında görüntülenir.
+   Proje başvurusu, içinde bir **Projeler** düğümü altında **Çözüm Gezgini.**
 
    ![Proje başvurusuyla Çözüm Gezgini ekran görüntüsü.](media/vs-2019/calculator2-solution-explorer-with-project-reference-dark2.png)
 
-1. *Program. cs*' de, `Calculator` sınıfı ve tüm kodunu seçin ve **CTRL** + **X** tuşlarına basarak kesin. Ardından, *hesap \ kitaplık. cs*' de kodu `CalculatorLibrary` ad alanına yapıştırın.
+1. *Program.cs'de* `Calculator` sınıfını ve tüm kodunu seçin ve **Ctrl** + **X tuşlarına basarak** kesin. Ardından *CalculatorLibrary.cs içinde* kodu ad alanına `CalculatorLibrary` yapıştırın.
    
-   Ayrıca `public` , onu kitaplığın dışına çıkarmak Için Hesaplayıcı sınıfından önce ekleyin.
+   Ayrıca Hesap `public` makinesi sınıfının öncesini de ekleyin ve bunu kitaplığın dışından ortaya çıkarır.
 
-   *Hesaplatorlibrary. cs* artık aşağıdaki koda benzemelidir:
+   *CalculatorLibrary.cs* artık aşağıdaki koda benzer:
 
    ```csharp
    using System;
@@ -126,21 +126,21 @@ Visual Studio,   >    >  yeni bir proje eklemek için menü komut dosyasını **
     }
    ```
 
-1. *Program. cs* de bir başvuruya sahiptir, ancak çağrının çözümlenmediğini bildiren bir hata oluştu `Calculator.DoOperation` . Çünkü bu `CalculatorLibrary` , farklı bir ad alanında yer alan. Tam nitelikli bir başvuru için, bu `CalculatorLibrary` ad alanını `Calculator.DoOperation` çağrıya ekleyebilirsiniz:
+1. *Program.cs'nin* de bir başvurusu vardır, ancak çağrının `Calculator.DoOperation` çözümlene olmadığını söyleyen bir hata vardır. Bunun nedeni farklı `CalculatorLibrary` bir ad alanı içinde yer alan bir ad alanıdır. Tam başvuru için ad alanını `CalculatorLibrary` çağrısına `Calculator.DoOperation` ebilirsiniz:
 
    ```csharp
    result = CalculatorLibrary.Calculator.DoOperation(cleanNum1, cleanNum2, op);
    ```
 
-   Ya da `using` dosyanın başlangıcına bir yönerge eklemeyi deneyebilirsiniz:
+   Veya dosyanın başına `using` bir yönerge eklemeyi denemeyebilirsiniz:
 
    ```csharp
    using CalculatorLibrary;
    ```
 
-   Yönergesini eklemek, `using` `CalculatorLibrary` çağıran siteden ad alanını kaldırmanızı sağlamalıdır, ancak şimdi bir belirsizlik var. `Calculator`Sınıf `CalculatorLibrary` veya `Calculator` ad alanı mı?
+   yönergesi eklenmiştir, ancak şimdi bir belirsizlik `using` `CalculatorLibrary` vardır çağrı sitesinden ad alanını kaldırmanıza izin ver. sınıfı `Calculator` içinde mi yoksa ad alanı `CalculatorLibrary` `Calculator` mı?
    
-   Belirsizliği çözmek için, ad alanını `Calculator` `CalculatorProgram` *program. cs* içinde olarak değiştirin.
+   Belirsizlik sorununu çözmek için Program.cs içinde ad alanını `Calculator` `CalculatorProgram` 'den olarak *yeniden adlandırabilirsiniz.*
 
    ```csharp
    namespace CalculatorProgram
@@ -148,43 +148,43 @@ Visual Studio,   >    >  yeni bir proje eklemek için menü komut dosyasını **
 
 ::: moniker-end
 ::: moniker range=">=vs-2022"
-1. **Çözüm Gezgini**, çözüm düğümüne sağ tıklayın ve  > **yeni Project** ekle ' yi seçin.
+1. Bu **Çözüm Gezgini,** çözüm düğümüne sağ tıklayın ve Yeni **Ekle'yi Project.** > 
 
-1. **Yeni Proje Ekle** penceresinde, arama kutusuna *sınıf kitaplığı* yazın. C# **sınıf kitaplığı** proje şablonunu seçin ve ardından **İleri**' yi seçin.
+1. Yeni **proje ekle penceresinde,** Ara *kutusuna sınıf* kitaplığı yazın. C# Sınıf kitaplığı **proje şablonunu** ve ardından Sonraki'yi **seçin.**
 
-   ![Sınıf kitaplığı proje şablonu seçiminin ekran görüntüsü.](media/vs-2022/calculator-add-project.png)
+   ![Sınıf Kitaplığı proje şablonu seçiminin ekran görüntüsü.](media/vs-2022/calculator-add-project.png)
 
-1. **Yeni projenizi yapılandırın** ekranında, *hesaplatorlibrary* proje adını yazın ve ardından **İleri**' yi seçin.
+1. Yeni **projenizi yapılandır ekranında** *CalculatorLibrary* proje adını yazın ve ardından Sonraki'yi **seçin.**
    
-1. **Ek bilgi** ekranında, .net 6,0 seçilidir. **Oluştur**’u seçin.
+1. Ek **bilgiler ekranında** .NET 6.0 seçilidir. **Oluştur**’u seçin.
    
    Visual Studio yeni projeyi oluşturur ve çözüme ekler.
    
-   ![Hesaplatorlibrary sınıf kitaplığı projesi eklenen Çözüm Gezgini ekran görüntüsü.](media/vs-2022/calculator-solution-explorer-with-class-library.png)
+   ![CalculatorLibrary sınıf Çözüm Gezgini projesinin ekli olduğu uygulamanın ekran görüntüsü.](media/vs-2022/calculator-solution-explorer-with-class-library.png)
 
-1. *Class1. cs* dosyasını *hesaplatorlibrary. cs* olarak yeniden adlandırın. Dosyayı yeniden adlandırmak için **Çözüm Gezgini** adı ' na sağ tıklayıp **Yeniden Adlandır**' ı seçin, adı seçin ve **F2** tuşuna basabilir ya da adı seçip, ardından yazmak için yeniden tıklayabilirsiniz.
+1. *Class1.cs dosyasını* *CalculatorLibrary.cs olarak yeniden adlandırır.* Dosyayı yeniden adlandırmak için, dosyanın  Çözüm Gezgini tıklar ve Yeniden Adlandır'ı **seçebilir,** adı seçin ve **F2** tuşuna basın veya adı seçerek yeniden tıklarsınız.
 
-   Bir ileti, dosyadaki başvuruları yeniden adlandırmak isteyip istemediğinizi sorabilir `Class1` . Daha sonraki bir adımda kodu değiştirdiğinizden, yanıt sizin için önemlidir.
+   Dosyada başvurularını yeniden adlandırmak isteyip istemediklerine bir `Class1` ileti sorabilir. Nasıl yanıt attığın önemli değildir çünkü kodu gelecekteki bir adımda değiştireceğiz.
 
-1. Şimdi bir proje başvurusu ekleyin, bu nedenle ilk proje yeni sınıf kitaplığının sunduğu API 'Leri kullanabilir. **hesaplayıcı** projesindeki **bağımlılıklar** düğümüne sağ tıklayın ve **Project başvuru ekle**' yi seçin.
+1. Şimdi bir proje başvurusu ekleyin, böylece ilk proje yeni sınıf kitaplığının ortaya çıkar olduğu API'leri kullanabilir. Hesaplayıcı projesinde **Bağımlılıklar düğümüne** sağ **tıklayın ve Başvuru** **ekle'Project seçin.**
 
-   ![Project başvuru ekle menü öğesinin ekran görüntüsü.](media/vs-2022/calculator-add-project-reference.png)
+   ![Başvuru Ekle menü Project ekran görüntüsü.](media/vs-2022/calculator-add-project-reference.png)
 
-   **Başvuru Yöneticisi** iletişim kutusu görüntülenir. Bu iletişim kutusunda, projelerinize gereken diğer projelere, derlemelere ve COM DLL 'Lerine başvurular ekleyebilirsiniz.
+   Başvuru **Yöneticisi iletişim** kutusu görüntülenir. Bu iletişim kutusunda, projelerinize gereken diğer projelere, derlemelere ve COM URL'lerine başvurular eklemek için kullanabilirsiniz.
 
-1. **Başvuru Yöneticisi** iletişim kutusunda, **Hesaplayıt kitaplığı** projesinin onay kutusunu seçin ve ardından **Tamam**' ı seçin.
+1. Başvuru **Yöneticisi iletişim** kutusunda **CalculatorLibrary** projesi onay kutusunu ve ardından Tamam'ı **seçin.**
 
    ![Başvuru Yöneticisi iletişim kutusunun ekran görüntüsü.](media/vs-2022/calculator-reference-manager.png)
 
-   Proje başvurusu **Çözüm Gezgini** Içindeki bir **Projeler** düğümü altında görüntülenir.
+   Proje başvurusu, içinde bir **Projeler** düğümü altında **Çözüm Gezgini.**
 
    ![Proje başvurusuyla Çözüm Gezgini ekran görüntüsü.](media/vs-2022/calculator-solution-explorer-with-project-reference.png)
 
-1. *Program. cs*' de, `Calculator` sınıfı ve tüm kodunu seçin ve **CTRL** + **X** tuşlarına basarak kesin. Ardından, *hesap \ kitaplık. cs*' de kodu `CalculatorLibrary` ad alanına yapıştırın.
+1. *Program.cs'de* `Calculator` sınıfını ve tüm kodunu seçin ve **Ctrl** + **X tuşlarına basarak** kesin. Ardından *CalculatorLibrary.cs içinde* kodu ad alanına `CalculatorLibrary` yapıştırın.
    
-   Ayrıca `public` , onu kitaplığın dışına çıkarmak Için Hesaplayıcı sınıfından önce ekleyin.
+   Ayrıca Hesap `public` makinesi sınıfının öncesini de ekleyin ve bunu kitaplığın dışından ortaya çıkarır.
 
-   *Hesaplatorlibrary. cs* artık aşağıdaki koda benzemelidir:
+   *CalculatorLibrary.cs* artık aşağıdaki koda benzer:
 
    ```csharp
    using System;
@@ -226,41 +226,41 @@ Visual Studio,   >    >  yeni bir proje eklemek için menü komut dosyasını **
     }
    ```
 
-1. *Program. cs* de bir başvuruya sahiptir, ancak çağrının çözümlenmediğini bildiren bir hata oluştu `Calculator.DoOperation` . Çünkü bu `CalculatorLibrary` , farklı bir ad alanında yer alan. Tam nitelikli bir başvuru için, bu `CalculatorLibrary` ad alanını `Calculator.DoOperation` çağrıya ekleyebilirsiniz:
+1. *Program.cs'nin* de bir başvurusu vardır, ancak çağrının `Calculator.DoOperation` çözümlene olmadığını söyleyen bir hata vardır. Bunun nedeni farklı `CalculatorLibrary` bir ad alanı içinde yer alan bir ad alanıdır. Tam başvuru için ad alanını `CalculatorLibrary` çağrısına `Calculator.DoOperation` ebilirsiniz:
 
    ```csharp
    result = CalculatorLibrary.Calculator.DoOperation(cleanNum1, cleanNum2, op);
    ```
 
-   Ya da `using` dosyanın başlangıcına bir yönerge eklemeyi deneyebilirsiniz:
+   Veya dosyanın başına `using` bir yönerge eklemeyi denemeyebilirsiniz:
 
    ```csharp
    using CalculatorLibrary;
    ```
 
-   Yönergesini eklemek, `using` `CalculatorLibrary` çağıran siteden ad alanını kaldırmanızı sağlamalıdır, ancak şimdi bir belirsizlik var. `Calculator`Sınıf `CalculatorLibrary` veya `Calculator` ad alanı mı?
+   yönergesi eklenmiştir, ancak şimdi bir belirsizlik `using` `CalculatorLibrary` vardır çağrı sitesinden ad alanını kaldırmanıza izin ver. sınıfı `Calculator` içinde mi yoksa ad alanı `CalculatorLibrary` `Calculator` mı?
    
-   Belirsizliği çözümlemek için, ad alanını `Calculator` `CalculatorProgram` hem *program. cs* hem de *hesaplatorlibrary. cs* olarak olarak değiştirin.
+   Belirsizlik sorununu çözmek için ad alanını hem Program.cs hem de `Calculator` `CalculatorProgram` *CalculatorLibrary.cs* içinde olarak yeniden adlandırabilirsiniz. 
 
    ```csharp
    namespace CalculatorProgram
    ```
 ::: moniker-end
 
-## <a name="reference-net-libraries-write-to-a-log"></a>Başvuru .NET kitaplıkları: bir günlüğe yazma
+## <a name="reference-net-libraries-write-to-a-log"></a>Başvuru .NET kitaplıkları: Günlüğe yazma
 
-.NET `Trace` sınıfını, tüm işlemlerin günlüğünü eklemek ve bir metin dosyasına yazmak için kullanabilirsiniz. `Trace`Sınıfı, temel yazdırma hata ayıklama teknikleri için de kullanışlıdır. `Trace`Sınıfı içinde bulunur `System.Diagnostics` ve `System.IO` gibi sınıfları kullanır `StreamWriter` .
+Tüm işlemlerin günlüğünü eklemek ve bir metin dosyasına yazmak için .NET `Trace` sınıfını kullanabilirsiniz. sınıfı, `Trace` temel yazdırma hata ayıklama teknikleri için de kullanışlıdır. sınıfı `Trace` içindedir `System.Diagnostics` ve gibi sınıfları `System.IO` `StreamWriter` kullanır.
 
-1. , `using` *Hesaplakitaplığı. cs*' nin en üstündeki yönergeleri ekleyerek başlayın:
+1. `using` *CalculatorLibrary.cs'nin* en üstüne yönergelerini ekleyerek başlayalım:
 
    ```csharp
    using System.IO;
    using System.Diagnostics;
    ```
 
-1. Sınıfının bu kullanımı, `Trace` bir FILESTREAM ile ilişkilenme sınıfı için bir başvuruya sahip olmalıdır. Bu gereksinim, hesap makinesinin bir nesne olarak daha iyi çalışacağı anlamına gelir; bu nedenle, `Calculator` *Hesaplayılibrary. cs* içindeki sınıfın başlangıcına bir Oluşturucu ekleyin.
+1. Sınıfın bu `Trace` kullanımı, bir dosya akışıyla ilişkilendiren sınıfı için bir başvuru tutmalı. Bu gereksinim hesaplayıcının nesne olarak daha iyi çalıştığını gösterir, bu nedenle `Calculator` *CalculatorLibrary.cs* içinde sınıfının başına bir oluşturucu ekleyin.
 
-   `static`Statik `DoOperation` yöntemi bir üye yöntemi olarak değiştirmek için anahtar sözcüğünü de kaldırın.
+   Statik yöntemi üye `static` yöntemi olarak değiştirmek için anahtar `DoOperation` sözcüğünü de kaldırın.
 
    ```csharp
    public Calculator()
@@ -276,7 +276,7 @@ Visual Studio,   >    >  yeni bir proje eklemek için menü komut dosyasını **
       {
    ```
 
-1. Her hesaplamaya günlük çıktısı ekleyin. `DoOperation` Şimdi aşağıdaki kod gibi görünmelidir:
+1. Her hesaplamaya günlük çıkışı ekleyin. `DoOperation` şimdi aşağıdaki kod gibi görünüyor olması gerekir:
 
    ```csharp
    public double DoOperation(double num1, double num2, string op)
@@ -314,13 +314,13 @@ Visual Studio,   >    >  yeni bir proje eklemek için menü komut dosyasını **
     }
    ```
 
-1. *Program. cs*' ye geri döndüğünüzde, kırmızı dalgalı alt çizgi artık statik çağrıyı işaretler. Hatayı onarmak için, `calculator` döngüden hemen önce aşağıdaki kod satırını ekleyerek bir değişken oluşturun `while (!endApp)` :
+1. *Program.cs'ye* geri dön, kırmızı dalgalı alt çizgi artık statik çağrıyı bayraklar. Hatayı düzeltmek için, `calculator` döngüden hemen önce aşağıdaki kod satırı ekleyerek bir değişken `while (!endApp)` oluşturun:
 
    ```csharp
    Calculator calculator = new Calculator();
    ```
 
-   Ayrıca, `DoOperation` çağrı sitesini küçük harfli adlı nesneye başvuracak şekilde değiştirin `calculator` . Kod artık statik yönteme yapılan bir çağrı yerine üye çağrısıdır.
+   Ayrıca küçük `DoOperation` harfle adlandırılmış nesneye başvurarak çağrı `calculator` sitesini de değiştirebilirsiniz. Kod artık statik yönteme yapılan bir çağrı yerine üye çağrısıdır.
 
    ```csharp
    result = calculator.DoOperation(cleanNum1, cleanNum2, op);
@@ -328,7 +328,7 @@ Visual Studio,   >    >  yeni bir proje eklemek için menü komut dosyasını **
 
 1. Uygulamayı tekrar çalıştırın. Bitirin, Hesap makinesi proje  düğümüne sağ tıklayın ve hesaplayıcıda Klasör **Aç'ı Dosya Gezgini.**
 
-1. Bu Dosya Gezgini *bin/Debug/* altındaki output klasörüne gidin ve *calculator.log dosyasını* açın. Çıkış aşağıdakine benzer olmalıdır:
+1. Bu Dosya Gezgini *bin/Debug/* altındaki çıkış klasörüne gidin ve *calculator.log dosyasını* açın. Çıkış aşağıdakine benzer olmalıdır:
 
     ```output
     Starting Calculator Log
@@ -484,9 +484,9 @@ namespace CalculatorProgram
 
 ## <a name="add-a-nuget-package-write-to-a-json-file"></a>Bir NuGet Paketi Ekleme: JSON dosyasına yazma
 
-Nesne verilerini depolamaya yönelik popüler ve taşınabilir bir biçim olan JSON'daki işlemlerin çıkışını yapmak *için, Newtonsoft.Json* NuGet başvurabilirsiniz. NuGet paketleri.NET sınıf kitaplıkları için birincil dağıtım yöntemidir.
+Nesne verilerini depolamaya yönelik popüler ve taşınabilir bir biçim olan JSON'daki işlemlerin çıkışını yapmak *için, Newtonsoft.Json* NuGet başvurabilirsiniz. NuGet, .NET sınıf kitaplıkları için birincil dağıtım yöntemidir.
 
-1. Bu **Çözüm Gezgini** **CalculatorLibrary** projesi için **Bağımlılıklar** düğümüne sağ tıklayın ve Paket **Yönetimi'ni NuGet seçin.**
+1. Bu **Çözüm Gezgini** **CalculatorLibrary** projesi için **Bağımlılıklar** düğümüne sağ tıklayın ve Paket Paketlerini **Yönet'NuGet seçin.**
 
    ::: moniker range="vs-2019"
    ![Kısayol menüsündeki NuGet Paketlerini Yönet'in ekran görüntüsü.](media/vs-2019/calculator2-manage-nuget-packages-dark2.png)
@@ -689,7 +689,7 @@ Ardından, hata ayıklayıcısında her bir deyimde adımlama olarak adlandırı
 
    sınıfındaki `DoOperation` yöntemine `Calculator` girdiniz.
 
-1. Program akışınıza hiyerarşik bir bakış elde etmek için Çağrı Yığını **penceresine** bakın. Kapalı ise Çağrı Yığınında **Hata Ayıkla'Windows'yi**  >    >   seçerek açın.
+1. Program akışınıza hiyerarşik bir bakış elde etmek için Çağrı Yığını **penceresine** bakın. Kapalı ise Çağrı Yığınında **Hata Ayıkla'Windows'ı**  >    >   seçerek açın.
 
    ![Çağrı yığınının ekran görüntüsü](media/vs-2019/calculator-2-debug-call-stack.png)
 

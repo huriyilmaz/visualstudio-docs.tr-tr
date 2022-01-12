@@ -13,12 +13,12 @@ author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 monikerRange: '>= vs-2022'
-ms.openlocfilehash: 9b4ff4d4f0e345cd9cb69c98355d929f6209da09
-ms.sourcegitcommit: d63ba1eff845d41ca095efb14b499ea96c4b6eba
+ms.openlocfilehash: 71942cfa38d0f072c6acd851253d57ad2fb4d51b
+ms.sourcegitcommit: d3578c384959f1b76dd06fb4b5d075fb052f8c69
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "129561080"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "135374825"
 ---
 # <a name="javascript-and-typescript-in-visual-studio-2022"></a>Visual Studio 2022 ' de JavaScript ve TypeScript
 
@@ -47,8 +47,8 @@ TypeScript SDK Visual Studio 2022 ' de kullanımdan kaldırılmıştır. SDK 'y�
 > [!TIP] 
 > Visual Studio 2022 ' de geliştirilen projeler için, farklı platformlar ve ortamlarda daha fazla taşınabilirlik sağlamak üzere typescript NuGet veya typescript npm paketini kullanmanızı öneririz. daha fazla bilgi için bkz. [NuGet kullanarak typescript kodunu derleme](../javascript/compile-typescript-code-nuget.md)   ve [tsc kullanarak typescript kodunu derleme](../javascript/compile-typescript-code-npm.md). 
 
-## <a name="project-templates"></a>Project Şablondan 
+## <a name="project-templates"></a>Project şablonları 
 
 Visual Studio 2022 ' den başlayarak, Visual Studio ' de tek başına Angular, React ve vue projeleri oluşturmanıza olanak sağlayan yeni bir JavaScript/TypeScript proje türü (. esproj) vardır. Bu ön uç projeleri, yerel makinenize yüklediğiniz Framework CLı araçları kullanılarak oluşturulur, bu nedenle şablonun sürümü size bağlıdır.  
 
-bu yeni projelerde, JavaScript ve TypeScript birim testlerini çalıştırabilir, ASP.NET Core apı projelerini kolayca ekleyip bağlanabilir ve npm yöneticisini kullanarak npm modüllerinizi indirebilirsiniz. Kullanmaya başlamak için hızlı başlangıç ve öğreticilerden bazılarına göz atın. Daha fazla bilgi edinmek istiyorsanız, bu [blog gönderisini](https://devblogs.microsoft.com/visualstudio/the-new-javascript-typescript-experience-in-vs-2022-preview-3/)okuyun.
+bu yeni projelerde, JavaScript ve TypeScript birim testlerini çalıştırabilir, ASP.NET Core apı projelerini kolayca ekleyip bağlanabilir ve npm yöneticisini kullanarak npm modüllerinizi indirebilirsiniz. Kullanmaya başlamak için hızlı başlangıç ve öğreticilerden bazılarına göz atın. daha fazla bilgi için bkz. [Visual Studio öğreticileri | JavaScript ve TypeScript](/visualstudio/javascript).

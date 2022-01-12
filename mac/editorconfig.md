@@ -1,18 +1,19 @@
 ---
 title: EditorConfig
 description: Mac için Visual Studio içinde tutarlı proje kodlama stillerini etkinleştirmek için bir editorconfig dosyası kullanma.
-author: cobey
-ms.author: cobey
+author: jmatthiesen
+ms.author: jomatthi
+manager: dominicn
 ms.date: 05/06/2018
 ms.technology: vs-ide-install
 ms.assetid: 26A0DE31-2FBF-4E1B-99FB-083111AA1680
-ms.topic: how-to
-ms.openlocfilehash: c7269b4272fb8ed2c73dbe9f57e94da071dc623e
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.topic: reference
+ms.openlocfilehash: f4dc3ad88ebbc5d9ec5879a4bb06dd7c611aa59c
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123964773"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135806137"
 ---
 # <a name="creating-and-editing-a-custom-editorconfig-file"></a>Özel bir EditorConfig dosyası oluşturma ve düzenleniyor
 
@@ -53,7 +54,7 @@ EditorConfig, C# ' de [kodlama kurallarını](/visualstudio/ide/editorconfig-cod
 
     ![Çözüm penceresinde görünen çözüm öğesi](media/editorconfig-image1a.png)
 
-4. Dosyayı düzenleyin. Örnek:
+4. Dosyayı düzenleyin. Örneğin:
 
     ```EditorConfig
     # This file is the top-most EditorConfig file

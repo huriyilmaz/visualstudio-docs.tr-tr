@@ -1,46 +1,47 @@
 ---
-title: Mac için Visual Studio Lerine
-description: bu makalede, Xamarin mobil uygulamaları, ASP.NET Core ve Mac için Visual Studio oyunları dahil olmak üzere için kullanılabilen çeşitli iş yükleri açıklanmaktadır.
+title: Mac için Visual Studio İş Yükleri
+description: Bu makalede Xamarin mobil uygulamaları, ASP.NET Core ve Oyunlar için Unity dahil olmak üzere Mac için Visual Studio iş yükleri açıklanmıştır.
 ms.topic: overview
-author: therealjohn
-ms.author: johmil
+author: jmatthiesen
+ms.author: jomatthi
+manager: dominicn
 ms.date: 06/18/2019
 ms.assetid: DDC39599-8C5D-4CB9-8DA5-229E085384CA
-ms.openlocfilehash: b4c5b460670a438b1aeaeb11cd8ae540b39cf9b7
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.openlocfilehash: 47a47a70e9a38fdcb12b49837f9686f09c24613c
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123964778"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135806514"
 ---
-# <a name="visual-studio-for-mac-workloads"></a>Mac için Visual Studio Lerine
+# <a name="visual-studio-for-mac-workloads"></a>Mac için Visual Studio İş Yükleri
 
-Mac için Visual Studio, aşağıdaki uygulama türlerini geliştirmeye yönelik iş yükleri ile önceden yüklenmiş olarak gelir:
+Mac için Visual Studio, aşağıdaki uygulama türlerini geliştirmek için önceden yüklenmiş iş yükleriyle birlikte gelir:
 
-* Android, iOS, tvOS ve watchOS için Xamarin kullanarak .NET ile platformlar arası mobil uygulamalar
+* Android, iOS, tvOS ve watchOS için Xamarin kullanan .NET ile platformlar arası mobil uygulamalar
 * Mac masaüstü uygulamaları
-* .NET Core Uygulamaları
+* .NET Core uygulamaları
 * ASP.NET Core Web uygulamaları
 * Platformlar arası Unity oyunları
 
 ## <a name="mobile-applications-with-xamarin"></a>Xamarin ile mobil uygulamalar
 
-[Xamarin](xamarin.md) , Android, IOS, tvOS, watchOS ve Mac masaüstü uygulamaları için .NET ile platformlar arası mobil uygulamalar oluşturmanıza olanak tanır.
+[Xamarin;](xamarin.md) Android, iOS, tvOS, watchOS ve Mac masaüstü uygulamaları için .NET ile platformlar arası mobil uygulamalar oluşturmanıza olanak sağlar.
 
-Mac için Visual Studio 'de xamarin kullanma hakkında daha fazla bilgi için [xamarin geliştirici merkezi](https://developer.xamarin.com/) ' ne bakın ve mobil uygulamalar [uygulamalı laboratuvarına](https://github.com/Microsoft/vs4mac-labs/tree/master/Mobile/Getting-Started)göz atın.
+Xamarin'i Mac için Visual Studio için [Xamarin Geliştirici](https://developer.xamarin.com/) Merkezi'ne bakın ve Mobil uygulamalar [uygulamalı laboratuvarına bakın.](https://github.com/Microsoft/vs4mac-labs/tree/master/Mobile/Getting-Started)
 
 ## <a name="mac-desktop-applications"></a>Mac masaüstü uygulamaları
 
-Kod ve Kullanıcı arabirimini diğer platformlarla paylaşan uygulamalar oluşturmak için Cocoa Kullanıcı arabirimi çerçevesini ve [Mac 'Te Xamarin. Forms](/xamarin/xamarin-forms/platform/other/mac) [ile Mac uygulamaları oluşturabilirsiniz.](/xamarin/mac/)
+Cocoa kullanıcı arabirimi çerçevesini [kullanarak Xamarin.Mac](/xamarin/mac/) ile Mac uygulamaları ve diğer platformlarla kod ve kullanıcı arabirimi paylaşımında olan uygulamalar oluşturmak için [Mac'te Xamarin.Forms'u](/xamarin/xamarin-forms/platform/other/mac) kullanabilirsiniz.
 
-## <a name="net-core-applications"></a>.NET Core Uygulamaları
+## <a name="net-core-applications"></a>.NET Core uygulamaları
 
-.NET Core kullanma hakkında daha fazla bilgi için [belgelerine](/dotnet/core/)bakın.
+.NET Core kullanma hakkında daha fazla bilgi için belgelerine [bakın.](/dotnet/core/)
 
 ## <a name="aspnet-core-web-applications"></a>ASP.NET Core Web Uygulamaları
 
-Mac için Visual Studio ASP.NET Core kullanmaya başlama hakkında daha fazla bilgi için, [ASP.NET Core](asp-net-core.md) kullanmaya başlama kılavuzuna bakın veya ASP.NET Core web apps [uygulamalı laboratuvarına](https://github.com/Microsoft/vs4mac-labs/tree/master/Web/Getting-Started)göz atın.
+Mac için Visual Studio'de ASP.NET Core kullanmaya başlama hakkında bilgi için Başlarken ASP.NET Core [](asp-net-core.md) kılavuzuna bakın veya ASP.NET Core web uygulamaları uygulamalı [laboratuvarına göz atabilirsiniz.](https://github.com/Microsoft/vs4mac-labs/tree/master/Web/Getting-Started)
 
 ## <a name="unity-game-development"></a>Unity oyun geliştirme
 
-Unity ile Oyunlar oluşturmaya başlamak için, [kurulum sayfasına](setup-vsmac-tools-unity.md) ve [Unity araçlarını kullanmaya yönelik kılavuza](using-vsmac-tools-unity.md)bakın veya Unity [uygulamalı laboratuvarına](https://github.com/Microsoft/vs4mac-labs/tree/master/Unity/Getting-Started)göz atın.
+Unity ile oyun oluşturmak için Kurulum [sayfasına](setup-vsmac-tools-unity.md) ve Unity Araçlarını kullanma kılavuzuna bakın veya [Unity](using-vsmac-tools-unity.md)uygulamalı [laboratuvarına göz atın.](https://github.com/Microsoft/vs4mac-labs/tree/master/Unity/Getting-Started)

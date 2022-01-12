@@ -6,17 +6,17 @@ ms.date: 5/5/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - database, profiling
-author: esteban-herrera
-ms.author: esherrer
-manager: AndSter
+author: mikejo5000
+ms.author: mikejo
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 758fad160bad89b5e8a4305bf4757302b05732e1
-ms.sourcegitcommit: 42aec4a2ea6dec67dbe4c93bcf0fa1116a4b93d9
+ms.openlocfilehash: adbab5bf4710716b43a86f50faedb281ee181ab8
+ms.sourcegitcommit: dcecc0ed37b5e976b5dc83c5128ba5ecc8bc04b1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2021
-ms.locfileid: "122981092"
+ms.lasthandoff: 01/04/2022
+ms.locfileid: "135751108"
 ---
 # <a name="analyze-database-performance-using-the-database-tool"></a>Veritabanı aracını kullanarak veritabanı performansını çözümleme
 

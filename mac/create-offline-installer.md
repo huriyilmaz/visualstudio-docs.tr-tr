@@ -1,23 +1,25 @@
 ---
-title: Çevrimdışı Yükleyici Oluşturma
-description: Windows için bir çevrimdışı yükleyici Mac için Visual Studio.
+title: Çevrimdışı yükleyici oluşturma
+description: Mac için Visual Studio için Windows çevrimdışı bir yükleyici oluşturmayı öğrenin.
 ms.custom: SEO-VS-2020
-author: heiligerdankgesang
-ms.author: dominicn
+author: jmatthiesen
+ms.author: jomatthi
+manager: dominicn
 ms.date: 11/06/2018
 ms.technology: vs-ide-install
+ms.topic: how-to
 ms.assetid: 5CA4B8C1-2D01-46EA-A6B2-8573B324509B
-ms.openlocfilehash: 741f642ef4e68513406b3aebfeaa4faea30a6f40cfcd976b32b52f872df912d0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a0095bfeb013bca13e18c96c63c88e06cb6d1c1c
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121266291"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135803186"
 ---
-# <a name="create-an-offline-installer-for-visual-studio-for-mac"></a>Mac için Visual Studio için Çevrimdışı Yükleyici oluşturma
+# <a name="create-an-offline-installer-for-visual-studio-for-mac"></a>Mac için Visual Studio için çevrimdışı yükleyici oluşturma
 
 > [!IMPORTANT]
-> Çevrimdışı yükleyici özelliğinin gelecekteki sürümleri için bir Mac için Visual Studio.
+> Mac için Visual Studio gelecek sürümleri için çevrimdışı bir yükleyici özelliği planlanmaktadır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

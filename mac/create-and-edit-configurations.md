@@ -7,12 +7,12 @@ ms.date: 09/18/2019
 ms.assetid: CC1B72D6-12FF-4CCC-A9D4-00F2DC14589F
 ms.custom: video
 ms.topic: how-to
-ms.openlocfilehash: eb3ceed624e3bbba67564bb8f7c359841c0e496d
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.openlocfilehash: edd1a9710deb7336a5b9eabcebacbd352a38bbe1
+ms.sourcegitcommit: fc874be3fe4637a23997b4ef2d99a2ee9a499581
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123964766"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "135517252"
 ---
 # <a name="creating-and-editing-build-configurations"></a>Derleme yapılandırmalarını oluşturma ve düzenleme
 
@@ -57,7 +57,7 @@ Yapılandırmayı oluşturduktan sonra, yapılandırmanıza  uygun özellikleri 
 
 ## <a name="renaming-a-build-configuration"></a>Derleme yapılandırmasını yeniden oluşturma
 
-Yapılandırmayı yeniden adlandırmak için Yapılandırma listesinden Yapılandırma listesinden Yapılandırmalar veya Çözüm **Seçenekleri'nde >** Yapılandırmalar Project a giderek yapılandırmayı seçin:
+Yapılandırmayı yeniden adlandırmak için Yapılandırma listesinden Yapılandırma listesinden, Yapılandırmalar veya Çözüm **Seçenekleri'nde >** Yapılandırmaları Project seçin:
 
 ![yapılandırma listesi](media/create-and-edit-configurations-image4.png)
 
@@ -69,7 +69,7 @@ Ardından onaylamak **için Tamam'a** tıklayın.
 
 ## <a name="related-video"></a>İlgili Video
 
-> [!Video https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Visual-Studio-for-Mac-Launch-Multiple-Projects/player]
+> [!Video https://docs.microsoft.com/shows/Visual-Studio-Toolbox/Visual-Studio-for-Mac-Launch-Multiple-Projects/player]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

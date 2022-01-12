@@ -1,7 +1,7 @@
 ---
-title: Unity için Visual Studio Araçları kullanma | Microsoft Docs
-description: Unity için Visual Studio Araçları tümleştirme ve üretkenlik özelliklerini kullanmayı öğrenin. ayrıca, Unity geliştirmesi için Visual Studio hata ayıklayıcıyı kullanın.
-ms.date: 07/03/2018
+title: Unity için Visual Studio Araçları | Microsoft Docs
+description: Unity için Visual Studio Araçları tümleştirme ve üretkenlik özelliklerini kullanmayı öğrenin. Unity geliştirmesi için Visual Studio hata ayıklayıcısını da kullanın.
+ms.date: 12/10/2021
 ms.technology: vs-unity-tools
 ms.prod: visual-studio-dev16
 ms.topic: how-to
@@ -12,224 +12,243 @@ manager: crdun
 ms.workload:
 - unity
 zone_pivot_groups: platform
-ms.openlocfilehash: 08ad9bb1161b12ecc5cb588e3e37d0b9d318cacd
-ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
+ms.openlocfilehash: 157972a9f32ffe362c706b8eddaac923abaf47a2
+ms.sourcegitcommit: 2a4744fb312396d36086dd59fd55ab741ae8e106
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "129967697"
+ms.lasthandoff: 12/28/2021
+ms.locfileid: "135575958"
 ---
 # <a name="use-visual-studio-tools-for-unity"></a>Unity için Visual Studio Araçları’nı Kullanma
 
-bu bölümde Unity için Visual Studio Araçları tümleştirme ve üretkenlik özelliklerini kullanmayı ve Unity geliştirme için Visual Studio hata ayıklayıcıyı kullanmayı öğreneceksiniz.
+Bu bölümde, Unity için Visual Studio Araçları'nin tümleştirme ve üretkenlik özelliklerini kullanmayı ve Unity geliştirmesi için Visual Studio hata ayıklayıcısını kullanmayı öğrenirsiniz.
 
-## <a name="open-unity-scripts-in-visual-studio"></a>Unity betiklerini Visual Studio açın
+## <a name="open-unity-scripts-in-visual-studio"></a>Unity betiklerini Visual Studio
 
-Visual Studio [unity için dış düzenleyici olarak](getting-started-with-visual-studio-tools-for-unity.md#configure-unity-to-use-visual-studio)ayarlandıktan sonra, unity düzenleyiciden bir betiğe çift tıklanması otomatik olarak başlatılır veya Visual Studio ve seçilen betiği açar.
+Bu Visual Studio Unity için dış düzenleyici olarak ayarlanacaksa, [Unity](getting-started-with-visual-studio-tools-for-unity.md#configure-unity-to-use-visual-studio)düzenleyicisinden bir betiği çift tıklamak otomatik olarak başlatılır veya Visual Studio ve seçilen betiği açar.
 
-alternatif olarak, Unity 'de **C# Project menüsünü aç > varlıkları** seçerek kaynak düzenleyicide açık betik olmadan Visual Studio açabilirsiniz.
+Alternatif olarak, Unity'de Visual Studio **C#** Aç menüsünü seçerek kaynak düzenleyicide açık betik > betik Project açabilirsiniz.
 
 :::zone pivot="windows"
-![Visual Studio C# projesi açın](../media/vs/vstu-open-csharp-project.png)
+![C# projesini Visual Studio.](../media/vs/vstu-open-csharp-project.png)
 :::zone-end
 :::zone pivot="macos"
-![Mac için Visual Studio C# projesi açın](../media/vsm/vstu-open-csharp-project.png)
+![C# projesini Mac için Visual Studio.](../media/vsm/vstu-open-csharp-project.png)
 :::zone-end
 
-## <a name="unity-documentation-access"></a>Unity belge erişimi
+## <a name="unity-documentation-access"></a>Unity belgelerine erişim
 
-Unity betik belgelerine hızla Visual Studio erişebilirsiniz. apı belgelerini yerel olarak bulamazsa Unity için Visual Studio Araçları çevrimiçi bulmaya çalışır.
+Unity betik belgelerine hızlı bir şekilde erişmek için Visual Studio. Api Unity için Visual Studio Araçları yerel olarak bulamazsanız, çevrimiçi bulmaya dener.
 
 :::zone pivot="windows"
-- Visual Studio, imleci, hakkında bilgi edinmek istediğiniz Unity apı 'sinin üzerine getirin veya yerleştirin, sonra **ctrl** + **Alt** + **M**, **ctrl** + **H** tuşlarına basın
-- KeyBinding yerine, **yardım > UNITY API başvurusu** menüsünü de kullanabilirsiniz.
-![Visual Studio 'da Unity API başvuru menüsü](../media/vs/help-unity-documentation.png)
+- Bu Visual Studio, imleci öğrenmek istediğiniz Unity API'sini vurgulayın veya üzerine yerleştirin, **ardından Ctrl** + **Alt** + **M**, **Ctrl** H tuşlarına + **basın**
+- Ayrıca tuş bağlama yerine **> Unity API Başvurusu** menüsünü de kullanabilirsiniz.
+
+![Visual Studio'da Unity API Başvurusu menüsünün ekran görüntüsü.](../media/vs/help-unity-documentation.png)
 :::zone-end
 :::zone pivot="macos"
-- Mac için Visual Studio, imleci, hakkında bilgi edinmek istediğiniz Unity apı 'sinin üzerine getirin veya yerleştirin, sonra **Cmd** + **'** tuşuna basın
-- KeyBinding yerine, **yardım > UNITY API başvurusu** menüsünü de kullanabilirsiniz.
-![Mac için Visual Studio 'da Unity apı başvuru menüsü](../media/vsm/help-unity-documentation.png)
+- Bu Mac için Visual Studio, imleci öğrenmek istediğiniz Unity API'sini vurgulayın veya üzerine yerleştirerek **Cmd'ye** + **basın**
+- Ayrıca tuş bağlama yerine **> Unity API Başvurusu** menüsünü de kullanabilirsiniz.
+
+![Mac için Visual Studio'de Unity API Başvurusu menüsünün ekran görüntüsü.](../media/vsm/help-unity-documentation.png)
 :::zone-end
 
-## <a name="intellisense-for-unity-api-messages"></a>Unity API Iletileri için IntelliSense
+## <a name="intellisense-for-unity-api-messages"></a>Unity API İletileri için IntelliSense
 
-IntelliSense kod tamamlama, tek davranış betiklerine Unity API iletilerinin uygulanmasını kolaylaştırır ve Unity API 'sini öğrenmeye yardımcı olur. Unity iletileri için IntelliSense 'i kullanmak için:
+Intellisense kod tamamlama, MonoBehaviour betikleri içinde Unity API iletilerinin uygulanmasını kolaylaştırır ve Unity API'sini öğrenme konusunda yardımcı olur. Unity iletileri için IntelliSense kullanmak için:
 
-1. İmleci, ' den türetilen bir sınıfın gövdesinin içine yeni bir satıra yerleştirin `MonoBehaviour` .
+1. İmleci, sınıfından türeten bir sınıfın gövdesinin içindeki yeni bir satıra `MonoBehaviour` yerleştirebilirsiniz.
 
-2. Bir Unity iletisinin adını yazmaya başlayın, örneğin `OnTriggerEnter` .
+2. Gibi bir Unity iletinin adını yazmaya `OnTriggerEnter` başlayın.
 
-3. "**Ontri**" harfleri yazıldıktan sonra, bir IntelliSense önerisi listesi görüntülenir.
+3. **"ontri**" harfleri yazıldıktan sonra IntelliSense önerilerinin listesi görüntülenir.
 
 :::zone pivot="windows"
 
-![Visual Studio içinde IntelliSense kullanma](../media/vs/intellisense-example.png)  
+![IntelliSense'i Visual Studio.](../media/vs/intellisense-example.png)  
 
 :::zone-end
 
-4. Listedeki seçim üç şekilde değiştirilebilir:
+4. Liste seçimi üç şekilde değiştirilebilir:
 
-    - **Yukarı** ve **aşağı** ok tuşlarıyla.
+    - Yukarı **ve Aşağı** **ok tuşlarıyla.**
 
-    - İstenen öğenin üzerine fareyle tıklanarak.
+    - fareyle istenen öğenin üzerine tıklayarak.
 
-    - İstenen öğenin adını yazmaya devam edin.
+    - İstenen öğenin adını yazarak.
 
-5. IntelliSense, gerekli parametreler dahil olmak üzere seçili Unity iletisini ekleyebilir:
+5. IntelliSense, gerekli parametreler de dahil olmak üzere seçili Unity iletiyi ekler:
 
-    - **Sekmesine** basarak.
+    - Sekme tuşuna **basarak.**
 
-    - **ENTER** tuşuna basarak.
+    - Enter tuşuna **basarak.**
 
-    - Seçili öğeye çift tıklayarak.
+    - Seçilen öğeye çift tıklayarak.
 
 :::zone pivot="windows"
 
-![Visual Studio içinde IntelliSense 'ten Unity iletisi ekleme](../media/vs/vstu-intellisense2.png)
+![Visual Studio'de IntelliSense'den Unity ekle Visual Studio.](../media/vs/vstu-intellisense2.png)
 
 :::zone-end
 
-## <a name="unity-monobehavior-scripting-wizard"></a>Unity MonoBehavior betik Sihirbazı
+## <a name="unity-monobehavior-scripting-wizard"></a>Unity MonoBehavior betik oluşturma sihirbazı
 
-Tek davranış Sihirbazı ' nı kullanarak tüm Unity API yöntemlerinin bir listesini görüntüleyebilir ve boş bir tanımı hızlıca uygulayabilirsiniz. Bu özellik özellikle, **Yöntem açıklamalarını oluştur** seçeneği etkinken, Unity API 'sinde nelerin kullanılabildiğini öğrenseniz yararlı olur.
+MonoBehavior sihirbazını kullanarak tüm Unity API yöntemlerinin listesini ekleyebilirsiniz ve hızlı bir şekilde boş bir tanım gerçekleştirebilirsiniz. Özellikle Yöntem açıklamalarını oluştur **seçeneği** etkinleştirildiğinde bu özellik, Unity API'sinde nelerin kullanılabilir olduğunu öğrenmeye devam ediyorsanız yararlıdır.
 
-MonoBehavior sihirbazıyla boş MonoBehavior yöntemi tanımları oluşturmak için:
+MonoBehavior sihirbazıyla boş MonoBehavior yöntem tanımları oluşturmak için:
 
-1. Visual Studio, imleci, yöntemlerin eklenmesini istediğiniz yere konumlandırın, sonra  +  + monobehavior sihirbazını başlatmak için Ctrl shıft **e** tuşlarına basın. Mac için Visual Studio ' de **Cmd** + **Shift** + **e** tuşlarına basın.
+1. Bu Visual Studio, imleci yöntemlerin eklenmesini istediğiniz konuma getirin ve **ardından** +  + MonoBehavior sihirbazını başlatmak için Ctrl Shift **M** tuşlarına basın. Bu Mac için Visual Studio **Cmd** Shift M +  + **tuşuna basın.**
 
-2. **Betik yöntemleri oluştur** penceresinde, eklemek istediğiniz her yöntemin adının yanındaki onay kutusunu işaretleyin.
+2. Betik **yöntemleri oluştur penceresinde,** eklemek istediğiniz her yöntemin adının yanındaki onay kutusunu işaretleyin.
 
-3. İstediğiniz sürümü seçmek için **Framework sürümü** açılan listesini kullanın.
+3. İstediğiniz sürümü **seçmek** için Framework sürümü açılan listesinden seçim yapmak.
 
-4. Varsayılan olarak, Yöntemler İmlecin konumuna eklenir. Alternatif olarak, **ekleme noktası** açılır listesinin değerini istediğiniz konuma değiştirerek, sınıfınıza zaten uygulanmış herhangi bir yöntemden sonra bunları eklemeyi seçebilirsiniz.
+4. Yöntemler varsayılan olarak imlecin bulunduğu konuma eklenir. Alternatif olarak, Ekleme noktası açılan listesinden değerini istediğiniz konuma değiştirerek bunları sınıfınıza  zaten uygulanmış herhangi bir yöntemden sonra eklemeyi seçebilirsiniz.
 
-5. Sihirbazın seçtiğiniz yöntemlere yorum oluşturmasını istiyorsanız, **Yöntem açıklamaları oluştur** onay kutusunu işaretleyin. Bu yorumlar, yöntemin ne zaman çağrıldığını ve genel sorumlulukların ne zaman olduğunu anlamanıza yardımcı olmak için tasarlanmıştır.
+5. Sihirbazın seçtiğiniz yöntemler için açıklama oluşturması için Yöntem açıklaması oluştur **onay kutusunu** işaretleyin. Bu açıklamalar, yöntemin ne zaman çağrıldısını ve genel sorumluluklarının ne olduğunu anlamanıza yardımcı olmak için amaçlıdır.
 
-6. Sihirbazdan çıkmak için **Tamam** düğmesini seçin ve yöntemleri kodunuza ekleyin.
+6. Sihirbazdan **çıkmak** ve yöntemleri kodunuza eklemek için Tamam düğmesini seçin.
 
 :::zone pivot="windows"
 
-![Visual Studio içindeki MonoBehavior Sihirbazı iletişim kutusu.](../media/vs/vstu-monobehavior-wizard.png)
+![Visual Studio'da monobehavior sihirbazı iletişim kutusunun ekran görüntüsü.](../media/vs/vstu-monobehavior-wizard.png)
 :::zone-end
 :::zone pivot="macos"
 
-![Mac için Visual Studio içindeki monobehavior sihirbazı iletişim kutusu.](../media/vsm/vstu-monobehavior-wizard.png)
+![Mac için Visual Studio'da monobehavior sihirbazı iletişim kutusunun ekran Mac için Visual Studio.](../media/vsm/vstu-monobehavior-wizard.png)
 :::zone-end   
 
-## <a name="unity-project-explorer"></a>Unity Project gezgini
-unity Project gezgini, unity düzenleyiciyle aynı şekilde tüm unity proje dosyalarınızı ve dizinlerinizi gösterir. bu, Unity betiklerinizde, bunları projeler ve Visual Studio tarafından oluşturulan bir çözüm olarak düzenleyen normal Visual Studio Çözüm Gezgini ile gezinmeden farklıdır.
+## <a name="unity-project-explorer"></a>Unity Project Gezgini
+Unity Project Gezgini tüm Unity proje dosyalarınızı ve dizinlerinizi Unity Düzenleyicisi'nde olduğu gibi gösterir. Bu, Unity betiklerinizi projelerde ve Visual Studio Çözüm Gezgini oluşturulan bir çözümde düzenleyen normal komut dosyalarıyla gezinmekten Visual Studio.
 
 :::zone pivot="windows"
-- ana Visual Studio menüsünde **görünüm > Unity Project gezgini**' ni seçin. klavye kısayolu: **Alt** + **Shift** + **E** 
- ![ , Unity Project gezgin penceresini görüntüleyin.](../media/vs/unity-project-explorer.png)
+- Ana menü Visual Studio Unity > **Gezgini'ni Project seçin.** Klavye kısayolu: **Alt** + **Shift** + **E**
+
+![Unity Project Gezgini penceresinin ekran görüntüsü.](../media/vs/unity-project-explorer.png)
 :::zone-end
 :::zone pivot="macos"
-- Mac için Visual Studio, bir Unity projesi açıldığında Çözüm Bölmesi otomatik olarak bu şekilde davranır.
+- Bu Mac için Visual Studio, Çözüm Bölmesi Unity projesi açıldığında otomatik olarak bu şekilde davranır.
 :::zone-end
-## <a name="unity-debugging"></a>Unity hata ayıklaması
+## <a name="unity-debugging"></a>Unity hata ayıklama
 
-Unity için Visual Studio Araçları, Visual Studio güçlü hata ayıklayıcısını kullanarak Unity projeniz için hem düzenleyici hem de oyun betiklerinin hatalarını ayıklamanıza olanak tanır.
+Unity için Visual Studio Araçları, Unity projenizin güçlü hata ayıklayıcısını kullanarak hem düzenleyici hem de Visual Studio betikleri hata ayıklamanıza olanak sağlar.
 
 ### <a name="debug-in-the-unity-editor"></a>Unity düzenleyicisinde hata ayıklama
 
-#### <a name="start-debugging"></a>Hata ayıklamayı Başlat
+#### <a name="start-debugging"></a>Hata ayıklamayı başlatma
 :::zone pivot="windows"
 
-1. unity **'ye ekle** etiketli **oynat** düğmesine tıklayarak unity 'ye Visual Studio Bağlan veya **F5** klavye kısayolunu kullanın.
-![Visual Studio içinde oynat ' ı tıklatın](../media/vs/vstu-play-button.png)
+1. Bağlan Visual Studio Unity'ye Ekle etiketli **Oynat** düğmesine tıklayarak **Unity'ye** tıklayın veya F5 klavye **kısayolunu kullanın.**
+
+![Visual Studio'da Unity'ye Ekle düğmesinin ekran görüntüsü.](../media/vs/vstu-play-button.png)
 
 :::zone-end
 :::zone pivot="macos"
 
-1. **oynat** düğmesine tıklayarak Unity 'ye Visual Studio Bağlan veya **Command + Return** ya da **F5** yazın.
-![Mac için Visual Studio içinde oynat ' ı tıklatın](../media/vsm/using-vsmac-tools-unity-image5.png)
+1. Bağlan Visual Studio Düğmesine tıklayarak **Unity'ye** tıklayın veya Komut **+ Dönüş veya** **F5 yazın.**
+
+![Mac için Visual Studio'daki Oynat düğmesinin ekran görüntüsü.](../media/vsm/using-vsmac-tools-unity-image5.png)
 
 :::zone-end
 
-2. Unity 'ye geçin ve oyunu düzenleyicide çalıştırmak için **Yürüt** düğmesine tıklayın.
-:::zone pivot="windows"
-![Windows için Unity 'de oynat ' a tıklayın](../media/vs/vstu-unity-play-button.png)
-:::zone-end
-:::zone pivot="macos"
-![MacOS 'ta Unity 'de Yürüt ' e tıklayın](../media/vsm/using-vsmac-tools-unity-image6.png)
-:::zone-end
-
-3. oyun, Visual Studio bağlı durumdayken Unity düzenleyicisinde çalışırken, karşılaştığı herhangi bir kesme noktası oyunun yürütülmesini duraklatır ve oyunun Visual Studio kesme noktasına isabet ettiği kod satırını getirir.
-
-#### <a name="stop-debugging"></a>Hata ayıklamayı Durdur
+2. Unity'ye geçiş yapmak **ve oynat** düğmesine tıklayarak oyunu düzenleyicide çalıştırın.
 
 :::zone pivot="windows"
-
-Visual Studio **durdur** düğmesine tıklayın veya klavye kısayolunun **shıft + F5** tuşlarını kullanın.
-![Visual Studio Durdur ' a tıklayın](../media/vs/vstu-stop-debugger.png)
-
+![Windows'da Unity'de Oynat düğmesinin ekran görüntüsü.](../media/vs/vstu-unity-play-button.png)
 :::zone-end
 :::zone pivot="macos"
-
-Mac için Visual Studio **durdur** düğmesine tıklayın veya **shıft + Command + Return** tuşlarına basın.
-![Mac için Visual Studio durdur ' a tıklayın](../media/vsm/using-vsmac-tools-unity-image7.png)
-
+![macOS üzerinde Unity'de Oynat düğmesinin ekran görüntüsü.](../media/vsm/using-vsmac-tools-unity-image6.png)
 :::zone-end
 
-Visual Studio 'de hata ayıklama hakkında daha fazla bilgi için bkz. [Visual Studio hata ayıklayıcısına](/visualstudio/debugger/debugger-feature-tour)bakın.
+3. Oyun Visual Studio'a bağlıyken Unity düzenleyicisinde çalışırken, karşılaşılan tüm kesme noktaları oyunun yürütülmesini duraklatacak ve oyunun kesme noktasıyla karşılaştığı kod hattını Visual Studio.
 
-#### <a name="attach-to-unity-and-play"></a>Unity 'ye Ekle ve Yürüt
-
-Ek kolaylık sağlamak için Unity 'ye **Ekle** düğmesini, **Unity ve Play moduna eklemek** için değiştirebilirsiniz.
+#### <a name="stop-debugging"></a>Hata ayıklamayı durdurma
 
 :::zone pivot="windows"
 
-1. **Unity 'ye Ekle** düğmesinin yanındaki küçük **aşağı oka** tıklayın.
-2. **Unity 'ye Ekle ve açılır menüden Oynat ' ı** seçin.
-   ![Visual Studio iliştirme ve yürütme](../media/vs/vstu-attach-and-play.png)
+Visual Studio'da Durdur düğmesine tıklayın veya Shift + F5 klavye **kısayolunu kullanın.** 
 
-Oynat düğmesi, **Unity 'ye Ekle ve Yürüt** şeklinde etiketlenmiş hale gelir. bu düğmeye tıkladığınızda veya klavye kısayolunun **F5** 'i kullanmak artık Unity düzenleyicisine otomatik olarak geçer ve Visual Studio hata ayıklayıcıyı eklemenin yanı sıra oyunu düzenleyicide çalıştırır.
+![Visual Studio'daki Durdur düğmesinin ekran görüntüsü.](../media/vs/vstu-stop-debugger.png)
 
 :::zone-end
 :::zone pivot="macos"
-unity 'nin hata ayıklamasının başlaması ve unity düzenleyicisi 'nin yürütülmesi, **unity 'ye ekle ve çalıştır** yapılandırması seçilerek Mac için Visual Studio doğrudan tek bir adımda tamamlanabilir.
 
-![Unity 'ye ekle ve Mac için Visual Studio oynat ' ı seçin](../media/vsm/using-vsmac-tools-unity-image8.png)
+Mac için Visual Studio'da Durdur düğmesine tıklayın veya **Shift + Komut + Return tuşlarına basın.** 
+
+![Mac için Visual Studio'daki Durdur düğmesinin ekran görüntüsü.](../media/vsm/using-vsmac-tools-unity-image7.png)
+
+:::zone-end
+
+Uygulama içinde hata ayıklama hakkında daha fazla Visual Studio için bkz. Hata Ayıklayıcısı'nda hata [ayıklamaya Visual Studio belgeler.](/visualstudio/debugger/debugger-feature-tour).
+
+#### <a name="attach-to-unity-and-play"></a>Unity ve Play'e ekleme
+
+Daha fazla kolaylık sağlamak için Unity'ye **Ekle düğmesini Unity'ye** **Ekle ve Oynat moduna değiştirebilirsiniz.**
+
+:::zone pivot="windows"
+
+1. Unity'ye **Ekle düğmesinin** yanındaki **küçük aşağı oka** tıklayın.
+2. Açılan **menüden Unity'ye Ekle** ve Oynat'ı seçin.
+
+   ![Visual Studio'daki Ekle ve oynat düğmesinin ekran Visual Studio.](../media/vs/vstu-attach-and-play.png)
+
+Oynat düğmesi Unity'ye Ekle **ve Oynat olarak etiketlenmiş olur.** Bu düğmeye tıklarsanız veya **F5** klavye kısayolunu kullanarak artık otomatik olarak Unity düzenleyicisine geçiş yapılır ve hata ayıklayıcının ek olarak oyun düzenleyicide Visual Studio çalışır.
+
+:::zone-end
+:::zone pivot="macos"
+Unity'ye Ekle ve Oynat yapılandırması seçerek hata ayıklamayı başlatma ve Unity düzenleyicisini Mac için Visual Studio doğrudan tek bir adımda **tamamlanır.**
+
+![Mac için Visual Studio'da Unity'ye Ekle ve Oynat düğmesinin ekran görüntüsü.](../media/vsm/using-vsmac-tools-unity-image8.png)
 :::zone-end
 
 > [!NOTE]
-> **Unity 'ye Ekle ve Çalıştır** yapılandırmasını kullanarak hata ayıklamaya başladıysanız, **Durdur** düğmesi de Unity düzenleyicisini durdurur.
+> Unity'ye Ekle ve Oynat **yapılandırmasını kullanarak** hata ayıklamaya başladıysanız, Durdur **düğmesi** Unity Düzenleyicisi'ni de durdurur.
 
-### <a name="debug-unity-player-builds&quot;></a>Unity oynatıcı Derlemeleriyle hata ayıkla
+### <a name="debug-unity-player-builds"></a>Unity oynatıcı derlemeleri için hata ayıklama
 
-Visual Studio Unity oynatıcıların geliştirme Derlemeleriyle ilgili hata ayıklaması yapabilirsiniz.
+Unity oyuncularının geliştirme derlemelerinin hata ayıklaması için Visual Studio.
 
-#### <a name=&quot;enable-script-debugging-in-a-unity-player&quot;></a>Unity Player 'da betik hata ayıklamasını etkinleştirme
+#### <a name="enable-script-debugging-in-a-unity-player"></a>Unity oynatıcıda betik hata ayıklamayı etkinleştirme
 
-1. Unity 'de, derleme Ayarlar **dosya > build Ayarlar**' i seçerek açın.
-2. derleme Ayarlar penceresinde, **geliştirme derlemesi** ve **betik hata ayıklama** onay kutularını işaretleyin.
+1. Unity'de Dosya ve Derleme Ayarlar'yi **seçerek Derleme >'Ayarlar.**
+2. Derleme derlemesi Ayarlar Geliştirme **Derlemesi ve Betik Hata** **Ayıklama onay** kutularını işaretleyin.
 
-   ![Hata ayıklama için Unity derleme ayarlarını yapılandırın.](../media/vs/vstu-debugging-build-settings.png &quot;vstu_debugging_build_settings")
+   ![Hata ayıklama için Unity derleme ayarlarının ekran görüntüsü.](../media/vs/vstu-debugging-build-settings.png "vstu_debugging_build_settings")
 
-#### <a name="select-a-unity-instance-to-attach-the-debugger-to"></a>Hata ayıklayıcıyı iliştirmek için bir Unity örneği seçin
+#### <a name="select-a-unity-instance-to-attach-the-debugger-to"></a>Hata ayıklayıcıyı eklemek için bir Unity örneği seçin
 
 :::zone pivot="windows"
 
-- Visual Studio, ana menüdeki **hata ayıkla > Unity hata ayıklayıcı ekle**' yi seçin.
+- Bu Visual Studio ana menüden Unity Hata Ayıklayıcısını **Ekle'> Ayıkla'ya tıklayın.**
 
-   ![Unity hata ayıklayıcısını iliştirin.](../media/vs/vstu-debugging-attach-unity-debugger.png "vstu_debugging_attach_unity_debugger")
+   ![Visual Studio'da Unity Hata AyıklamaSı Ekleme Penceresinin ekran görüntüsü.](../media/vs/vstu-debugging-attach-unity-debugger.png "vstu_debugging_attach_unity_debugger")
 
-   **Unity örneği Seç** iletişim kutusu, bağlandığınız her Unity örneğiyle ilgili bazı bilgileri görüntüler.
+   **Unity Örneği Seç iletişim** kutusunda bağlanabilirsiniz her Unity örneği hakkında bazı bilgiler görüntülenir.
 
-   ![Bağlanılacak Unity örneğini seçin.](../media/vs/vstu-attach-debugger.png "vstu_connection_to_unity")
+   ![Windows'da Bağlanmak için Unity örneği seçme penceresinin ekran Visual Studio.](../media/vs/vstu-attach-debugger.png "vstu_connection_to_unity")
 
-   **Project**
+   **Project** Unity'nin bu örneğinde çalışan Unity projesinin adı.
 
-   Unity 'nin bu örneğinde çalışan Unity projesinin adı.
+   **Makine** Unity'nin bu örneğinin üzerinde çalıştır olduğu bilgisayarın veya cihazın adı.
 
-   **Makine** Bu Unity örneğinin üzerinde çalıştığı bilgisayarın veya cihazın adı.
-
-   Unity 'in bu örneği Unity Düzenleyicisi 'nin bir parçası olarak çalışıyorsa, **tür** **Düzenleyici** ; Bu Unity örneği tek başına bir oynatıcı ise **oynatıcı** .
+   **Türü** Unity'nin bu örneği Unity Düzenleyicisi'nin bir parçası olarak çalışıyorsa düzenleyici; Unity'nin bu örneği tek başına bir oyuncu ise oynatıcı.
 
    **Bağlantı noktası** Bu Unity örneğinin iletişim kurduğu UDP yuvasının bağlantı noktası numarası.
 
 > [!IMPORTANT]
 > Unity için Visual Studio Araçları ve Unity örneği bir UDP ağ yuvası üzerinden iletişim kurduğundan, güvenlik duvarınız buna izin vermek için kural gerekebilir. Gerekirse, bir istem görebilirsiniz, bu durumda, VSTU ve Unity 'nin iletişim kurabilmesi için bağlantıyı yetkilendirmeniz gerekir.
+
+#### <a name="selecting-a-unity-instance-that-doesnt-appear-in-the-list"></a>Listede görünmeyen bir Unity örneği seçme
+
+Listede görünmeyen, bilinen bir Unity oynatıcı varsa, Unity örneği Seç penceresinde **IP giriş** düğmesini kullanabilirsiniz. Hata ayıklayıcıya bağlanmak için çalışan Unity oynatıcının IP adresini ve bağlantı noktasını girin.
+
+Her seferinde IP ve bağlantı noktasını girmeden bu oyuncunun hata ayıklamaya devam etmesini kolaylaştırmak için, **araçlar > seçenekler > Unity > Genel** menüsündeki **hata ayıklama hedeflerini kullan** ayarını etkinleştirin.
+
+![Kaydedilen hata ayıklama hedeflerini kullan ayarının ekran görüntüsü.](../media/vs/visual-studio-tools-unity-use-saved-debug-targets.png)
+
+Visual Studio, kayıtlı hata ayıklama hedeflerini Unity 'ye ekle düğmesine bir seçenek olarak gösterir.
+
+![Kaydedilen hata ayıklama hedefi ayarının ekran görüntüsü.](../media/vs/visual-studio-tools-unity-saved-target.png)
 
 :::zone-end
 :::zone pivot="macos"
@@ -253,7 +272,7 @@ Burada açıklanan senaryo kaynak koda sahip olduğunuzu varsayar. Yani, kendi b
 
 1. mevcut DLL projenizi Unity için Visual Studio Araçları tarafından oluşturulan Visual Studio çözümüne ekleyin. Daha az yaygın olarak, Unity projenizde kod bileşenleri içeren yeni bir yönetilen DLL projesi başlatıyorsunuz olabilirsiniz; bu durumda, bunun yerine Visual Studio çözümüne yeni bir yönetilen DLL projesi ekleyebilirsiniz.
 
-   ![Varolan DLL projenizi çözüme ekleyin.](../media/vs/vstu-debugging-dll-add-existing.png "vstu_debugging_dll_add_existing")
+   ![> var olan öğe Ekle menüsünün ekran görüntüsü.](../media/vs/vstu-debugging-dll-add-existing.png "vstu_debugging_dll_add_existing")
 
    her iki Unity için Visual Studio Araçları durumda da, proje başvurusunu ve çözüm dosyalarını yeniden oluşturmak zorunda olsa bile, bu adımları yalnızca bir kez gerçekleştirmeniz gerekir.
 
@@ -262,7 +281,7 @@ Burada açıklanan senaryo kaynak koda sahip olduğunuzu varsayar. Yani, kendi b
 > [!NOTE]
 > Yalnızca Unity 'nin eski çalışma zamanını kullanıyorsanız, şunlar gereklidir. Yeni Unity çalışma zamanını kullanıyorsanız, bu adanmış 3,5 profillerini artık kullanmanız gerekmez. Unity sürümünüz ile uyumlu bir .NET 4. x profili kullanın.
 
-   ![DLL 'nin hedef çerçevesini Unity çerçevesi olarak ayarlayın.](../media/vs/vstu-debugging-dll-target-framework.png "vstu_debugging_dll_target_framework")
+   ![Visual Studio bir proje için seçme hedef çerçevesinin ekran görüntüsü.](../media/vs/vstu-debugging-dll-target-framework.png "vstu_debugging_dll_target_framework")
 
 3. DLL 'yi Unity projenizin varlık klasörüne kopyalayın. Unity 'de varlıklar, çalışma zamanında yüklenebilmeleri için paketlenmiş ve Unity uygulamanız ile birlikte dağıtılan dosyalardır. Dll 'Ler çalışma zamanında bağlı olduğundan, dll 'Ler varlık olarak dağıtılmalıdır. Bir varlık olarak dağıtılması için Unity Düzenleyicisi, dll 'Lerin Unity projenizdeki varlıklar klasörünün içine yerleştirilmesi gerekir. Bunu iki şekilde yapabilirsiniz:
 

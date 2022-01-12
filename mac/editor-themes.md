@@ -1,17 +1,18 @@
 ---
 title: Düzenleyici Temaları
 description: bu makalede, düzenleyicinin temasının nasıl düzenleneceği veya kendi Mac için Visual Studio nasıl ekleneceği açıklanmaktadır
-author: cobey
-ms.author: cobey
+author: jmatthiesen
+ms.author: jomatthi
+manager: dominicn
 ms.date: 11/06/2018
 ms.assetid: 4C1B7952-CD45-4132-AD6B-01CF993D83F8
-ms.topic: how-to
-ms.openlocfilehash: 490ec4f5763ba7ba5be6bf9099dcd608a3712fa1
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.topic: reference
+ms.openlocfilehash: 070463bf0ad0def259c397c262f6b8090db0fecb
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123964775"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135806111"
 ---
 # <a name="editor-themes"></a>Düzenleyici temaları
 

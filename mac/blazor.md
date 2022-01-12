@@ -1,8 +1,9 @@
 ---
-title: Web Blazor uygulamaları oluşturma
-description: BlazorASP.NET Core'daki ASP.NET Core hakkında bilgi Mac için Visual Studio.
-author: jongalloway
-ms.author: jogallow
+title: BlazorWeb uygulamaları oluşturma
+description: BlazorMac için Visual Studio ASP.NET Core uygulamalarda destek hakkında bilgi sağlar.
+author: jmatthiesen
+ms.author: jomatthi
+manager: dominicn
 ms.date: 08/31/2020
 ms.technology: vs-ide-general
 ms.assetid: D2717D3A-9225-40A8-8155-7D0143B2CA60
@@ -10,125 +11,125 @@ no-loc:
 - Blazor
 - Blazor WebAssembly
 ms.topic: how-to
-ms.openlocfilehash: 30e9a62e8bf0364a76cbd43995cbb77c1a5bd0c4
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: d6214e67c924f66d3892d337ed9cc02df60d88ed
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126725993"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135806683"
 ---
-# <a name="create-blazor-web-apps"></a>Web Blazor uygulamaları oluşturma
+# <a name="create-blazor-web-apps"></a>BlazorWeb uygulamaları oluşturma
 
-Bu kılavuz, ilk web uygulamanızı oluşturmaya giriş Blazor sunar. Daha ayrıntılı rehberlik için bkz. [ASP.NET Core. Blazor ](/aspnet/core/blazor/index)
+Bu kılavuzda, ilk Web uygulamanızı oluşturmaya yönelik bir giriş sunulmaktadır Blazor . Daha ayrıntılı bilgi için bkz. [tanıtım ASP.NET Core Blazor ](/aspnet/core/blazor/index).
 
-BlazorASP.NET Core iki farklı barındırma seçeneği destekler; Blazor WebAssembly(WASM) veya Blazor Sunucu. Mac için Visual Studio iki barındırma modeli de destekler. Mac için Visual Studio 8.4+ Blazor Sunucu'Mac için Visual Studio 8.6+ her ikisini de destekler. Barındırma modelleri hakkında daha Blazor fazla bilgi için [bkz. ASP.NET Core barındırma Blazor modelleri. ](/aspnet/core/blazor/hosting-models?view=aspnetcore-3.1&preserve-view=true) Mac için Visual Studio projelerinde hata ayıklama Blazor WebAssembly desteği, v8.8'in Önizleme yayınlarında kullanılabilir (Güncelleştirmeleri **Denetleme... menüsündeki Önizleme güncelleştirme kanalı** üzerinden Visual Studio > kullanılabilir).
+ASP.NET Core Blazor iki farklı barındırma seçeneğini destekler; Blazor WebAssembly (ıstream) veya Blazor Server. Mac için Visual Studio hem barındırma modellerini destekler. Mac için Visual Studio 8.4 + destekler Blazor sunucu ve Mac için Visual Studio 8.6 + her ikisini de destekler. barındırma modelleriyle ilgili daha fazla bilgi için Blazor bkz. [ASP.NET Core Blazor barındırma modelleri ](/aspnet/core/blazor/hosting-models?view=aspnetcore-3.1&preserve-view=true). Blazor WebAssemblyMac için Visual Studio ' deki projelerin hata ayıklama desteği, v 8.8 'in önizleme sürümünde (Visual Studio > güncelleştirme kanalı aracılığıyla kullanılabilir) kullanılabilir ( **güncelleştirmeleri denetle...** menüsü).
 
-Nedir? Blazor Blazor , .NET ile etkileşimli istemci tarafı web kullanıcı arabirimi oluşturmak için bir çerçevedir ve web geliştiricilerine aşağıdaki avantajları sunar:
+Nedir Blazor ? Blazor , Web geliştiricilerine aşağıdaki avantajları sunan, .NET ile etkileşimli istemci tarafı Web Kullanıcı arabirimi oluşturmaya yönelik bir çerçevedir:
 
-* JavaScript yerine C# ile kod yazın.
-* .NET kitaplıklarının mevcut .NET ekosistemini kullanabilirsiniz.
-* Uygulama mantığını sunucu ve istemci arasında paylaşın.
-* avantajından faydalanma. NET'in performansı, güvenilirliği ve güvenliği.
-* PC, Linux ve macOS Visual Studio daha verimli bir şekilde çalışma.
-* Kararlı, özellik bakımından zengin ve kullanımı kolay ortak bir dil, çerçeve ve araç kümesi üzerinde derleme.
+* JavaScript yerine C# dilinde kod yazın.
+* .NET kitaplıklarının mevcut .NET ekosisteminden yararlanın.
+* Sunucu ve istemci arasında uygulama mantığını paylaşma.
+* Avantajı. NET ' in performans, güvenilirlik ve güvenlik.
+* PC, Linux ve macos 'ta Visual Studio üretken olun.
+* Kararlı, özellik açısından zengin ve kullanımı kolay olan ortak diller, çerçeveler ve araçlar kümesi oluşturun.
 
-## <a name="create-a-new-blazor-webassembly-project"></a>Yeni proje Blazor WebAssembly oluşturma
-1. Başlangıç Penceresinde **Yeni'yi** **seçerek** yeni bir proje oluşturun:
+## <a name="create-a-new-blazor-webassembly-project"></a>Yeni bir Blazor WebAssembly proje oluştur
+1. Yeni bir proje oluşturmak için **Başlangıç penceresinde** **Yeni** ' yi seçin:
 
-   ![Mac için Visual Studio Yeni seçim vurgulanmış Başlangıç Penceresi](media/blazor-new-project.png)
+   ![yeni seçim vurgulanmış şekilde başlangıç penceresi Mac için Visual Studio](media/blazor-new-project.png)
 
-1. Yeni **Project** iletişim kutusunda **.NET Core** Uygulama Uygulaması'ni seçin ve Sonraki: Yeni Project iletişim kutusunun ekran >  > **Blazor WebAssembly**  ![ görüntüsü: Blazor WebAssembly Uygulama, ASP.NET Core altında Uygulama bölmesinde vurgulanmış ve Sonraki düğmesi seçilmiş.](media/blazor-wasm-project-template.png)
+1. **yeni Project** iletişim kutusunda, **.net Core** > **uygulama** > **Blazor WebAssembly uygulaması** ' nı seçin ve **ileri ' yi** seçin ![ . yeni Project iletişim kutusunun ekran görüntüsü::: no-loc (Blazor webassembly)::: uygulama bölmesinde, ASP.NET Core ve sonraki düğme seçili olarak vurgulanır.](media/blazor-wasm-project-template.png)
 
-1. Hedef çerçeve olarak .NET Core 3.1'i ve ardından Sonraki'yi **seçin.** 
-   ![Yeni Blazor WebAssembly Hedef Çerçeve 'nin .NET Core 3.1 olarak seçili olduğu uygulama iletişim kutusunu yapılandırma](media/blazor-wasm-select-target-framework.png)
+1. Hedef çerçeve olarak .NET Core 3,1 ' i seçin ve ardından **İleri**' yi seçin. 
+   ![New::: No-Loc (Blazor WebAssembly)::: Target Framework ile birlikte .NET Core 3,1 için seçili olan uygulama iletişim kutusunu yapılandırın](media/blazor-wasm-select-target-framework.png)
 
-1. Projeniz için bir ad seçin ve istenirse Git desteği ekleyin. Projeyi oluşturmak için **Oluştur**'u seçin.
-    ![Yeni Blazor WebAssembly Uygulama iletişim kutusu, Ad alanına Project yapılandırma](media/blazor-wasm-name-project.png)
+1. Projeniz için bir ad seçin ve isterseniz git desteği ekleyin. Projeyi oluşturmak için **Oluştur**'u seçin.
+    ![new::: no-loc (Blazor webassembly)::: Project Name girerken uygulama iletişim kutusunun görüntülendiğini yapılandırın](media/blazor-wasm-name-project.png)
 
-   Mac için Visual Studio kod düzeni penceresinde projenizi açar.
+   Mac için Visual Studio, projenizi kod düzeni penceresinde açar.
 
-1. Uygulamayı **çalıştırmak için** Hata Ayıklama Olmadan  >  **Başlat'ı** seçin.
+1.   >  Uygulamayı çalıştırmak için **hata ayıklama olmadan başlatmayı** Çalıştır ' ı seçin.
 
-   Visual Studio [Kestrel'i](/aspnet/core/fundamentals/servers/kestrel)başlatır, için bir tarayıcı açar `https://localhost:5001` ve web Blazor uygulamanızı görüntüler.
+   Visual Studio, [Kestrel](/aspnet/core/fundamentals/servers/kestrel)başlatır, için bir tarayıcı açar `https://localhost:5001` ve Blazor web uygulamanızı görüntüler.
 
-   ![Blazor Microsoft Edge](media/blazor-new-app-in-edge.png)
+   ![::: No-Loc (Blazor)::: Microsoft Edge Web App](media/blazor-new-app-in-edge.png)
 
-## <a name="creating-a-new-blazor-server-project"></a>Yeni sunucu Blazor projesi oluşturma
+## <a name="creating-a-new-blazor-server-project"></a>Yeni bir Blazor sunucu projesi oluşturma
 
-1. Başlangıç Penceresinde **Yeni'yi** **seçerek** yeni bir proje oluşturun:
+1. Yeni bir proje oluşturmak için **Başlangıç penceresinde** **Yeni** ' yi seçin:
 
-   ![Mac için Visual Studio Yeni seçim vurgulanmış Başlangıç Penceresi](media/blazor-new-project.png)
-1. Yeni **Project** iletişim kutusunda **.NET Core** Uygulama Sunucusu Uygulaması'ni seçin ve Sonraki: Yeni Project iletişim kutusunun ekran >  > **Blazor**  ![ görüntüsü: Blazor ASP.NET Core altındaki Uygulama bölmesinde Sunucu Uygulaması vurgulanmış ve Sonraki düğmesi seçilmiş.](media/blazor-project-template.png)
+   ![yeni seçim vurgulanmış şekilde başlangıç penceresi Mac için Visual Studio](media/blazor-new-project.png)
+1. **yeni Project** iletişim kutusunda, **.net Core** > **app** > **Blazor Server uygulaması** ' nı seçin ve **ardından ileri ' yi** seçin: ![ yeni Project iletişim kutusunun ekran görüntüsü::: no-loc (Blazor)::: sunucu uygulaması, ASP.NET Core ve sonraki düğmesi seçili olarak uygulama bölmesinde vurgulanır.](media/blazor-project-template.png)
 
-1. Hedef çerçeve olarak .NET Core 3.1'i ve ardından Sonraki'yi **seçin.** 
-   ![Yeni Blazor Hedef Çerçeve 'nin .NET Core 3.1 olarak seçili olduğu Sunucu Uygulaması iletişim kutusunu yapılandırma](media/blazor-select-target-framework.png)
+1. Hedef çerçeve olarak .NET Core 3,1 ' i seçin ve ardından **İleri**' yi seçin. 
+   ![New::: No-Loc (Blazor)::: .NET Core 3,1 ' a seçili hedef Framework ile birlikte görüntülenecek sunucu uygulaması iletişim kutusunu yapılandırın](media/blazor-select-target-framework.png)
 
-1. Projeniz için bir ad seçin ve istenirse Git desteği ekleyin. Projeyi oluşturmak için **Oluştur**'u seçin.
-   ![Yeni Blazor Sunucu Uygulaması iletişim kutusu, Ad alanına Project yapılandırma](media/blazor-name-project.png)
+1. Projeniz için bir ad seçin ve isterseniz git desteği ekleyin. Projeyi oluşturmak için **Oluştur**'u seçin.
+   ![yeni::: no-loc (Blazor)::: sunucu uygulaması iletişim kutusunun Project adı girilirken görüntülendiğini yapılandırın](media/blazor-name-project.png)
 
-   Mac için Visual Studio kod düzeni penceresinde projenizi açar.
-1. Uygulamayı **çalıştırmak için** Hata Ayıklama Olmadan  >  **Başlat'ı** seçin.
+   Mac için Visual Studio, projenizi kod düzeni penceresinde açar.
+1.   >  Uygulamayı çalıştırmak için **hata ayıklama olmadan başlatmayı** Çalıştır ' ı seçin.
 
-   Visual Studio [Kestrel'i](/aspnet/core/fundamentals/servers/kestrel)başlatır, için bir tarayıcı açar `https://localhost:5001` ve web Blazor uygulamanızı görüntüler.
+   Visual Studio, [Kestrel](/aspnet/core/fundamentals/servers/kestrel)başlatır, için bir tarayıcı açar `https://localhost:5001` ve Blazor web uygulamanızı görüntüler.
 
-   ![Blazor Microsoft Edge](media/blazor-new-app-in-edge.png)
+   ![::: No-Loc (Blazor)::: Microsoft Edge Web App](media/blazor-new-app-in-edge.png)
 
-## <a name="blazor-support-in-visual-studio-for-mac"></a>BlazorMac için Visual Studio'de destek
+## <a name="blazor-support-in-visual-studio-for-mac"></a>BlazorMac için Visual Studio desteği
 
-Mac için Visual Studio (sürüm 8.4'den başlayarak) yeni sunucu projeleri oluşturmanıza yardımcı olacak yeni Blazor özellikler içerir. Ayrıca, projelerin inşası, çalıştırması ve hata ayıklaması gibi beklediğiniz standart desteği Blazor de sağlar. Bu Mac için Visual Studio oluşturma, oluşturma ve çalıştırma için 8.6 Blazor WebAssembly desteği eklendi.
+Mac için Visual Studio (sürüm 8,4 ' den başlayarak) yeni sunucu projeleri oluşturmanıza yardımcı olacak yeni özellikler içerir Blazor . Ayrıca, proje oluşturma, çalıştırma ve hata ayıklama gibi bir standart destek sağlar Blazor . oluşturma, oluşturma ve çalıştırma için Mac için Visual Studio 8,6 desteği Blazor WebAssembly eklenmiştir.
 
-Yukarıdaki kılavuzda, Sunucu Uygulaması proje şablonunun yeni bir Sunucu Uygulaması veya Uygulama projesi oluşturmanıza nasıl Blazor Blazor yardımcı olduğunu Blazor WebAssembly gördük. Şimdi proje geliştirmeyi desteklemek için Mac için Visual Studio bazı ek özelliklere Blazor göz at bakalım.
+Yukarıdaki izlenecek yolda, Blazor sunucu uygulaması proje şablonunun yeni bir Blazor sunucu uygulaması veya uygulama projesi oluşturmanıza nasıl yardımcı olduğunu gördük Blazor WebAssembly . Mac için Visual Studio, proje geliştirmeyi desteklemek için bazı ek özelliklere göz atalım Blazor .
 
-### <a name="editor-support-for-razor-files"></a>*.razor* dosyaları için düzenleyici desteği
-Mac için Visual Studio . razor dosyalarını düzenleme desteği içerir. Bu, uygulama oluştururken kullanmakta olacağınız dosyaların Blazor çoğunluğunu içerir. Mac için Visual Studio, projede bildirilen Razor bileşenleri için tamamlamalar da dahil olmak üzere .razor dosyalarınız için tam renklendirme ve tamamlama desteği sağlar.
+### <a name="editor-support-for-razor-files"></a>*. Razor* dosyaları için düzenleyici desteği
+Mac için Visual Studio,. razor dosyalarının düzenlenmesine yönelik destek içerir. uygulamalar oluştururken kullanacağınız dosyaların çoğunluğu Blazor . Mac için Visual Studio, projede belirtilen razor bileşenleri için tamamlama dahil olmak üzere. razor dosyalarınız için tam renklendirme ve tamamlama desteği sağlar.
 
-![Mac için Visual Studio için IntelliSense'i gösteren bir düzenleyici penceresi: ::no-loc(Blazor):::](media/blazor-intellisense.png)
+![ıntellisense 'i gösteren Mac için Visual Studio düzenleyicisi penceresi::: no-loc (Blazor):::](media/blazor-intellisense.png)
 
-### <a name="publishing-blazor-applications-to-azure-app-service"></a>Uygulamaları Blazor Azure App Service
-Ayrıca uygulamaları doğrudan Blazor Azure App Service. Azure'da çalıştırılacak bir Azure hesabınız yoksa, burada her zaman 12 ay boyunca ücretsiz popüler hizmetler, 200 ABD doları ücretsiz Azure kredisi ve her zaman ücretsiz 25'in üzerinde hizmetle birlikte gelen ücretsiz bir hesap için Blazor kaydolabilirsiniz. [](https://azure.microsoft.com/free)
+### <a name="publishing-blazor-applications-to-azure-app-service"></a>BlazorUygulamaları Azure App Service yayımlama
+Ayrıca, Blazor uygulamaları doğrudan Azure App Service için de yayımlayabilirsiniz. Uygulamanızı Azure 'da çalıştırmak için bir Azure hesabınız yoksa Blazor , burada 12 aylık ücretsiz hizmetler $200, ücretsiz Azure kredileri ve 25 ' ten fazla ücretsiz hizmet ile birlikte gelen ücretsiz [bir ücretsiz hizmet için](https://azure.microsoft.com/free) de her zaman ücretsiz kaydolabilirsiniz.
 
-![Mac için Visual Studio Azure yayımlama deneyimini gösteren uygulama](media/blazor-azure-publish.png)
+![Azure yayımlama deneyimini gösteren Mac için Visual Studio](media/blazor-azure-publish.png)
 
 ## <a name="project-anatomy"></a>Proje anatomisi
 
-Blazor web uygulamaları varsayılan olarak birkaç dizin ve dosya içerir. Başlarken şu ana bilgi sahibi olmak için ihtiyacınız olan temeller:
+Blazor Web uygulamaları, varsayılan olarak birkaç dizin ve dosya içerir. Başlarken şu ana kadar tanıdık yapmanız gerekenler şunlardır:
 
 ### <a name="pages-folder"></a>Sayfalar klasörü
 
-Bu klasör, projenin *.razor* dosya uzantısını kullanan web sayfalarını içerir.
+Bu klasör, bir projenin *. Razor* dosya uzantısını kullanan Web sayfalarını içerir.
 
 ### <a name="shared-folder"></a>Paylaşılan klasör
 
-Bu klasör paylaşılan bileşenleri içerir ve *.razor uzantısını da* kullanır. Bunun, uygulama genelinde ortak düzeni tanımlamak için kullanılan *MainLayout.razor'ı* da içerir. Ayrıca tüm sayfalarda *kullanılan paylaşılan NavMenu.razor* bileşenini de içerir. Yeniden kullanılabilir bileşenler oluşturuyorsanız, bunlar Paylaşılan **klasörüne** gider.
+Bu klasör, *. Razor* uzantısını kullanarak da paylaşılan bileşenleri içerir. Bunun, uygulama genelinde ortak düzeni tanımlamak için kullanılan *mainlayout. Razor* içerdiğini görürsünüz. Ayrıca, tüm sayfalarda kullanılan paylaşılan *Navmenu. Razor* bileşenini de içerir. Yeniden kullanılabilir bileşenler oluşturuyorsanız, **paylaşılan** klasöre gider.
 
 ### <a name="app-settings"></a>Uygulama ayarları
 
-*appSettings.json dosyası* bağlantı dizeleri gibi yapılandırma verilerini içerir.
+*AppSettings. JSON* dosyası bağlantı dizeleri gibi yapılandırma verilerini içerir.
 
-Yapılandırma hakkında daha fazla bilgi için [bkz. yapılandırma ASP.NET.](/aspnet/core/fundamentals/configuration/index)
+yapılandırma hakkında daha fazla bilgi için [ASP.NET kılavuzundaki yapılandırma](/aspnet/core/fundamentals/configuration/index)bölümüne bakın.
 
-### <a name="wwwroot-folder"></a>wwwroot klasörü
+### <a name="wwwroot-folder"></a>Wwwroot klasörü
 
-Bu klasör HTML, JavaScript ve CSS dosyaları gibi statik dosyaları içerir. Daha fazla bilgi için [bkz. ASP.NET Core.](/aspnet/core/fundamentals/static-files)
+Bu klasör HTML, JavaScript ve CSS dosyaları gibi statik dosyaları içerir. Daha fazla bilgi için [ASP.NET Core Içindeki statik dosyalar](/aspnet/core/fundamentals/static-files)bölümüne bakın.
 
 ### <a name="programcs"></a>Program.cs
 
-Bu dosya, programın giriş noktasını içerir. Daha fazla bilgi için [bkz. ASP.NET Core Web Ana Bilgisayarı.](/aspnet/core/fundamentals/host/web-host)
+Bu dosya, program için giriş noktasını içerir. daha fazla bilgi için bkz. [ASP.NET Core Web Host](/aspnet/core/fundamentals/host/web-host).
 
-### <a name="blazor-server-app-specific-files"></a>Blazor Sunucu Uygulamasına özgü dosyalar
+### <a name="blazor-server-app-specific-files"></a>Blazor Sunucu uygulamaya özgü dosyalar
 #### <a name="app-settings"></a>Uygulama ayarları
 
-*appSettings.json dosyası* bağlantı dizeleri gibi yapılandırma verilerini içerir.
+*AppSettings. JSON* dosyası bağlantı dizeleri gibi yapılandırma verilerini içerir.
 
-Yapılandırma hakkında daha fazla bilgi için [bkz. yapılandırma ASP.NET.](/aspnet/core/fundamentals/configuration/index)
+yapılandırma hakkında daha fazla bilgi için [ASP.NET kılavuzundaki yapılandırma](/aspnet/core/fundamentals/configuration/index)bölümüne bakın.
 
 #### <a name="startupcs"></a>Startup.cs
 
-Bu dosya, uygulamanın tanımlama bilgileri için onay isteyip istemesi gibi uygulama davranışını yapılandıran kodu içerir. Daha fazla bilgi için [bkz. ASP.NET Core.](/aspnet/core/fundamentals/startup)
+Bu dosya, uygulamanın tanımlama bilgileri için izin gerektirip gerektirmediğini belirtir gibi uygulama davranışını yapılandıran kodu içerir. Daha fazla bilgi için [ASP.NET Core uygulamasında uygulama başlatma](/aspnet/core/fundamentals/startup)bölümüne bakın.
 
 ## <a name="summary"></a>Özet
-Bu öğreticide, Mac için Visual Studio'de yeni bir Sunucu Uygulaması veya Uygulama oluşturma hakkında bilgi edindi ve uygulama oluşturmanıza yardımcı olmak için Mac için Visual Studio özellikler hakkında Blazor Blazor WebAssembly bilgi Blazor edindi.
+bu öğreticide, Mac için Visual Studio yeni bir Blazor sunucu uygulaması veya Blazor WebAssembly uygulaması oluşturmayı ve Mac için Visual Studio sunduğu ve uygulamalar oluşturmanıza yardımcı olan özelliklerden bazıları hakkında bilgi edindiniz Blazor .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-Web uygulaması oluşturma hakkında daha kapsamlı bir Blazor kılavuz için [bkz. ASP.NET Core. Blazor ](/aspnet/core/blazor/index)
+Web uygulamaları oluşturmaya yönelik daha kapsamlı bir kılavuz için Blazor bkz. [tanıtım ASP.NET Core Blazor ](/aspnet/core/blazor/index).

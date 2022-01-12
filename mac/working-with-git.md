@@ -6,12 +6,12 @@ ms.author: jomatthi
 ms.date: 11/09/2020
 ms.assetid: 852B6A9D-AEFA-4EF4-A5DD-94A506019D20
 ms.custom: video
-ms.openlocfilehash: dc865ec593f53149d9c004f252015def32325d18
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.openlocfilehash: 67dd3ead2e0f6b33f5260299e844c02b2756ddac
+ms.sourcegitcommit: fc874be3fe4637a23997b4ef2d99a2ee9a499581
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123964798"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "135516718"
 ---
 # <a name="working-with-git"></a>Git ile çalışma
 
@@ -99,7 +99,7 @@ Değişikliklerinizi kaydettikten sonra, diğer kullanıcıların bunları görm
 
 ## <a name="related-video"></a>İlgili video
 
-> [!Video https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Visual-Studio-for-Mac-Manage-Projects-with-Git/player]
+> [!Video https://docs.microsoft.com/shows/Visual-Studio-Toolbox/Visual-Studio-for-Mac-Manage-Projects-with-Git/player]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,59 +1,61 @@
 ---
-title: Windows kullanıcılar için Mac için Visual Studio
-description: Windows işletim sisteminde Visual Studio kullanmayla ilgili tanıdık geliştiriciler için Mac için Visual Studio tanıtım.
-author: heiligerdankgesang
-ms.author: dominicn
+title: Mac için Visual Studio kullanıcılar Windows için
+description: İşletim sisteminde Mac için Visual Studio kullanmayı bilen geliştiriciler için Visual Studio giriş Windows giriş.
+author: jmatthiesen
+ms.author: jomatthi
+manager: dominicn
 ms.date: 11/09/2021
+ms.topic: reference
 ms.assetid: 61CB6883-08CE-470F-8599-6F7570DB756E
-ms.openlocfilehash: c6a98e8314bfdb9c838db3dc36afbec004755d2b
-ms.sourcegitcommit: 4efdab6a579b31927c42531bb3f7fdd92890e4ac
+ms.openlocfilehash: fd91724081594c2c88a9ad5d104bd3ebd8ba60f6
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/26/2021
-ms.locfileid: "130350995"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135806553"
 ---
-# <a name="visual-studio-for-mac-for-windows-users"></a>Windows kullanıcılar için Mac için Visual Studio
+# <a name="visual-studio-for-mac-for-windows-users"></a>Mac için Visual Studio kullanıcılar Windows için
 
-Bir işletim sisteminden diğerine geçiş yapmak çok fazla olabilir. Platformlar arası uygulamalarda, kullanıcı arabiriminden menü öğelerinin kategorilere ayrılması arasında genellikle daha hafif farklılıklar vardır. burada Windows için Mac için Visual Studio ve Visual Studio arasındaki en yaygın farklılıkları öğreneceksiniz. Ayrıca macOS ve Windows arasında birkaç farklı kural öğreneceksiniz.
+Bir işletim sisteminden diğerine yapılanlar göz korkutucu olabilir. Platformlar arası uygulamalarda genellikle kullanıcı arabiriminden menü öğelerinin kategorilere ayırması arasında küçük farklar vardır. Burada, Mac için Visual Studio ile Visual Studio arasındaki en yaygın farkları Windows. Ayrıca macOS ile macOS ve Windows.
 
 ## <a name="keyboard-shortcuts"></a>Klavye kısayolları
 
-Geliştirici olarak, sizin görevleriniz ve gezinileriniz için klavyeyi kullanmaya alışkın olursunuz. klavyedeki bazı anahtarlar, mac ve Windows bilgisayarlar arasında ortaktır. Kopyalama ve yapıştırma gibi klavye eylemlerinin aynı anahtar birleşimlerini kullanmasını düşünmeye yönelik bir anlayışın. Bu her zaman durum değildir. neyse ki, Windows Visual Studio Mac için Visual Studio içindeki anahtar bağlamalarınızı değiştirebilirsiniz.
+Geliştiriciler olarak birçoğu, görevleriniz ve gezintiniz için klavyeyi kullanmaya alışabilirsiniz. Klavyede bazı tuşlar Mac'ler ve Windows ortaktır. Kopyalama ve yapıştırma gibi klavye eylemlerinin aynı tuş birleşimlerini kullanabileceğini düşünebilirsiniz. Bu her zaman böyle değildir. Neyse ki, Mac için Visual Studio'daki anahtar bağlamalarınızı, Visual Studio ile Windows.
 
-Mac için Visual Studio ilk kez çalıştırdığınızda klavye kısayolları seçim penceresini görürsünüz: ![ tuş bağlamaları penceresi](media/ide-tour-2019-keyboard-shortcut.png)
+İlk kez Mac için Visual Studio klavye kısayolları seçim penceresi: Tuş bağlamaları ![ penceresini görebilirsiniz](media/ide-tour-2019-keyboard-shortcut.png)
 
-Anahtar bağlamalarını daha sonra değiştirmek istiyorsanız, bu ayarı Tercihler: ![ anahtar bağlamaları tercihlerinde bulabilirsiniz](media/customizing-the-ide-image10a.png)
+Anahtar bağlamalarını daha sonra değiştirmek için tercihler: Anahtar bağlamaları ![ tercihleri ayarını bulabilirsiniz](media/customizing-the-ide-image10a.png)
 
-MacOS 'un Windows için farklı sistem genelinde kısayollar kullandığını unutmamak önemlidir. anahtar bağlama tercihlerini değiştirmek, Mac için Visual Studio tanıdık Windows kısayollarını kullanmanıza olanak tanır. Ancak, macOS 'un diğer alanlarında macOS kısayollarıyla ilgili bilgi sahibi olmanız gerekir.
+MacOS'un bu özel durum için sistem genelinde farklı kısayollar Windows. Anahtar bağlama tercihlerini değiştirmek, bu kısayollarda tanıdık Windows kullanmanızı Mac için Visual Studio. Ancak, macOS'un diğer alanlarında macOS kısayolları hakkında bilgi sahibi olmak gerekir.
 
-MacOS komutu (⌘) değiştirici tuşu genellikle Windows içindeki denetim anahtarının yerini alabilir. Aşağıda bazı örnekler ve diğer yaygın olarak kullanılan kısayollar verilmiştir:
+macOS Komutu (⌘) değiştirici anahtarı genellikle Windows. Aşağıda bazı örnekler ve yaygın olarak kullanılan diğer kısayollar verilmiştir:
 
-|Görev                   |Windows Kısayol         |macOS kısayolu      |
+|Görev                   |Windows Kısayolu         |macOS Kısayolu      |
 |-----------------------|-------------------------|--------------------|
 |Kopyala                   |`Ctrl + C`               |`⌘ + C`             |
 |Yapıştır                  |`Ctrl + V`               |`⌘ + V`             |
 |Kes                    |`Ctrl + X`               |`⌘ + X`             |
 |Geri Al                   |`Ctrl + Z`               |`⌘ + Z`             |
 |Yinele                   |`Ctrl + Shift + Z`       |`⌘ + Shift + Z`     |
-|İmleci sağ Sil |`Delete`                 |`fn + Backspace`    |
-|Kelimeyi Sil            |`Ctrl + Delete`          |`fn + ⌥ + Backspace`|
+|İmleci silme |`Delete`                 |`fn + Backspace`    |
+|Sözcüğü silme            |`Ctrl + Delete`          |`fn + ⌥ + Backspace`|
 
 > [!TIP]
-> [Apple Support Web sitesinde](https://support.apple.com/en-us/HT201236)MacOS kısayollarının kapsamlı bir listesini bulabilirsiniz.
+> MacOS kısayollarının kapsamlı listesini Apple Destek web [sitesinde bulabilirsiniz.](https://support.apple.com/en-us/HT201236)
 
 ## <a name="menus"></a>Menüler
 
-MacOS menüleri Windows menülerinden farklı şekilde düzenlenmiştir. Mac için Visual Studio özel durum değildir. En yaygın menü seçeneklerinden bazılarını buradan bulabilirsiniz:
+macOS'daki menüler, Windows. Mac için Visual Studio özel durum değildir. En yaygın menü seçeneklerine buradan bakabilirsiniz:
 
 |Görev                   |Visual Studio (Windows)                                              |Mac için Visual Studio                |
 |-----------------------|---------------------------------------------------------------------|-------------------------------------|
-|Tercihler (Seçenekler)  |Araçlar > seçenekleri...                                                   |Visual Studio > tercihleri...       |
-|Uzantıları             |Uzantılar > uzantıları yönetme                                       |> uzantıları Visual Studio...        |
-|Düzenler                |Pencere > pencere düzeni uygula > [Düzen Seç]                       |> düzeni görüntüleme > [Düzen Seç]               |
-|Güncelleştirmeler                |Güncelleştirme > için yardım denetimi                                             |güncelleştirmeleri denetlemek > Visual Studio... |
-|NuGet Paket Yöneticisi  |araçlar > NuGet Paket Yöneticisi > NuGet paketleri veya çözümü yönet... |NuGet paketlerini yönetmek > Project...   |
-|Araç bul             |Düzenle > bul ve Değiştir > [araç seçin]                              |Arama > [Araç seçme]               |
-|Visual Studio Hakkında    |Microsoft Visual Studio hakkında yardım >                                 |Visual Studio hakkında > Visual Studio  
+|Tercihler (Seçenekler)  |Araçlar > Seçenekleri...                                                   |Visual Studio > Tercihleri...       |
+|Uzantıları             |Uzantıları Yönetme > Uzantıları                                       |Visual Studio > Uzantıları...        |
+|Düzenler                |Pencere > Düzeni Uygula ve > [Düzeni seç]                       |Görünüm > Düzeni > [Düzen seç]               |
+|Güncelleştirmeler                |Güncelleştirmeler > Yardım                                             |Visual Studio > Güncelleştirmeleri Denetleme... |
+|NuGet Paket Yöneticisi  |Araçlar > NuGet Paket Yöneticisi > Paketleri NuGet Çözümü Yönetme... |Project > Paketlerini NuGet...   |
+|Araçları bulma             |Dosya > Düzenle ve Değiştir > [Araç seçme]                              |Arama > [Araç seçme]               |
+|Visual Studio Hakkında    |Yardım > Hakkında Microsoft Visual Studio                                 |Visual Studio > Hakkında Visual Studio  
 
 > [!NOTE]
-> [ıde turundan](ide-tour.md) Mac için Visual Studio en yaygın özelliklere genel bakış bulabilirsiniz
+> IDE Turu'Mac için Visual Studio en yaygın özelliklere genel [bir bakış bulabilirsiniz](ide-tour.md)

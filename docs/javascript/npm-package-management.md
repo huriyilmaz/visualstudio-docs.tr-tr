@@ -1,7 +1,7 @@
 ---
 title: npm paketlerini yönetme
 description: Visual Studio, Node.js paket yöneticisini (npm) kullanarak paketleri yönetmenize yardımcı olur.
-ms.date: 10/1/2021
+ms.date: 12/20/2021
 ms.topic: how-to
 ms.devlang: javascript
 author: mikejo5000
@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 8669d048554f8d2e2bc8455cd1d7ff88dbeb1249
-ms.sourcegitcommit: ac681e983f3b217c3fd9d2a31e3a3ddcc4dd3546
+ms.openlocfilehash: 5f6c21f0ec4d972bf09c9c291e128c9517dbdfc1
+ms.sourcegitcommit: aa5e295b9e3fc8e287f3ae2b6224f41e7d4ee833
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/09/2021
-ms.locfileid: "132041841"
+ms.lasthandoff: 12/21/2021
+ms.locfileid: "135437279"
 ---
 # <a name="manage-npm-packages-in-visual-studio"></a>Visual Studio NPM paketlerini yönetme
 
@@ -56,7 +56,8 @@ Ardından, NPM paketlerini arayabilir, bir tane seçebilir ve **paketi Kur**' u 
 
 ## <a name="nodejs-projects"></a>Node.js projeleri
 
-Node.js projeleri için aşağıdaki görevleri gerçekleştirebilirsiniz:
+Node.js projeler (. njsproj) için aşağıdaki görevleri gerçekleştirebilirsiniz:
+
 * [Paketleri Çözüm Gezgini 'dan yükler](#npmInstallWindow)
 * [Yüklü paketleri Çözüm Gezgini yönetin](#solutionExplorer)
 * [`.npm`Node.js etkileşimli penceresinde komutunu kullanın](#interactive)
@@ -78,7 +79,7 @@ Node.js projeleri için NPM paketlerini yüklemenin en kolay yolu NPM paketi yü
 
 Bu pencerede bir paket arayabilir, Seçenekler belirtebilir ve yükleyebilirsiniz.
 
-![Yeni NPM paketleri Kur iletişim kutusunun ekran görüntüsü. Azure 2.2.1-Preview paketi seçilidir ve bu pakete ilişkin ayrıntılar ve seçenekler gösterilir.](../javascript/media/search-package.png)
+![Yeni NPM paketleri Kur iletişim kutusunun ekran görüntüsü.](../javascript/media/search-package.png)
 
 * **Bağımlılık türü** - **Standart**, **geliştirme** ve **isteğe bağlı** paketler arasında tercih edin. Standart, paketin bir çalışma zamanı bağımlılığı olduğunu belirtir ancak geliştirme sırasında paketin yalnızca geliştirme sırasında gerekli olduğunu belirtir.
 * **Package. JSON öğesine ekleyin** -önerilir. Bu yapılandırılabilir seçeneği kullanım dışıdır.
@@ -142,7 +143,7 @@ Penceresinde, bir paket yüklemek için aşağıdaki gibi komutları kullanabili
  > [!Tip]
  > Projeniz bir Package. JSON dosyası içermiyorsa, `.npm init -y` varsayılan girdilerle yeni bir Package. JSON dosyası oluşturmak için kullanın.
 
- ## <a name="aspnet-core-projects"></a>ASP.NET Core projeleri
+## <a name="aspnet-core-projects"></a>ASP.NET Core projeleri
 
 ASP.NET Core projeleri gibi projeler için, projenizde npm desteğini tümleştirebilir ve npm kullanarak paketleri yükleyebilirsiniz.
 * [Bir projeye NPM desteği ekleme](#npmAdd)
@@ -159,7 +160,7 @@ Projeniz zaten bir *Package. JSON* dosyası içermiyorsa, projeye bir *Package. 
 
    NPM Node.js gerektiriyor.
 
-1. *Package. JSON* dosyasını eklemek için Çözüm Gezgini ' de projeye sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin (veya **CTRL**  +  **+ SHIFT** tuşuna basın  +  ). **NPM yapılandırma dosyasını** seçin, varsayılan adı kullanın ve **Ekle**' ye tıklayın.
+1. *Package. JSON* dosyasını eklemek için Çözüm Gezgini ' de projeye sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin (veya **CTRL**  +  **+ SHIFT** tuşuna basın  +  ). NPM dosyasını bulmak için arama kutusunu kullanın, **NPM yapılandırma dosyasını** seçin, varsayılan adı kullanın ve **Ekle**' ye tıklayın.
 
    ![Projenize Package. JSON ekleyin](../javascript/media/npm-add-package-json.png)
 
@@ -181,7 +182,7 @@ dosyayı kaydettiğinizde Visual Studio, paketi Çözüm Gezgini içindeki **Dep
 
 ### <a name="install-packages-using-packagejson-aspnet-core"></a><a name="npmInstallPackage"></a>Package. JSON (ASP.NET Core) kullanarak paket yükler
 
-NPM 'nin dahil olduğu projeler için kullanarak NPM paketlerini yapılandırabilirsiniz `package.json` . Çözüm Gezgini NPM düğümüne sağ tıklayın ve **Package. JSON öğesini aç**' ı seçin.
+NPM 'nin dahil olduğu projeler için kullanarak NPM paketlerini yapılandırabilirsiniz `package.json` . Doğrudan açın `package.json` ya da Çözüm Gezgini NPM düğümüne sağ tıklayıp **Package. JSON öğesini aç**' ı seçin.
 
 ![NPM düğümü seçili Çözüm Gezgini ekran görüntüsü. Sağ tıklama bağlam menüsü açık ve paket aç. JSON seçilidir.](../javascript/media/npm-add-package.png)
 

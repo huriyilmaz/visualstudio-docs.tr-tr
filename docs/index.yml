@@ -37,7 +37,7 @@ productDirectory:
       links:
         - url: /visualstudio/mac
           text: Mac için Visual Studio 2019 (geçerli)
-        - url: /visualstudio/mac/?view=vsmac-2017&preserve-view=true
+        - url: /previous-versions/visualstudio/mac/
           text: Mac için Visual Studio 2017
         - url: /visualstudio/releasenotes/vs2019-mac-relnotes
           text: Sürüm notları

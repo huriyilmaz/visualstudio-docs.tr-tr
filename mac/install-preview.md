@@ -1,18 +1,19 @@
 ---
 title: Önizleme veya güncelleştirme yükler
 description: Mac için Visual Studio 2019 önizlemeleri de dahil olmak üzere Mac için Visual Studio güncelleştirme ve önizleme yayınlarına erişme yönergeleri.
-author: heiligerdankgesang
-ms.author: dominicn
+author: jmatthiesen
+ms.author: jomatthi
+manager: dominicn
 ms.date: 09/18/2019
 ms.technology: vs-ide-install
 ms.assetid: 0E1EF257-9DE4-4653-9DF4-805CE007A1A1
 ms.topic: how-to
-ms.openlocfilehash: 01f3cac1ac985f79e576e709b030c881a07a801d
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.openlocfilehash: 70f313d891eb475066ff8aca6276c98b2f406ea1
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123964749"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135806371"
 ---
 # <a name="install-a-preview-version-of-visual-studio-for-mac"></a>Mac için Visual Studio önizleme sürümünü yükler
 

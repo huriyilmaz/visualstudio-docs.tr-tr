@@ -1,78 +1,79 @@
 ---
 title: Bağlı Hizmetler
-description: Azure veri depolama, kimlik doğrulaması ve anında Mac için Visual Studio platformlar arası bir uygulamaya ekleme hakkında bilgi edinin.
+description: Azure veri depolama, kimlik doğrulaması ve Mac için Visual Studio içinden bir platformlar arası uygulamaya anında iletme bildirimleri eklemeyi öğrenin.
 ms.assetid: 41CB62FF-0F39-4CE8-8917-6A77F058719F
-author: sayedihashimi
-ms.author: sayedha
+author: jmatthiesen
+ms.author: jomatthi
+manager: dominicn
 ms.date: 11/06/2018
 ms.topic: how-to
-ms.openlocfilehash: f16702a31bd77f30c8fc909755ae85b0824743e7
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.openlocfilehash: a7fe22162901f60aff761c0678c96072296cbf98
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123964758"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135806280"
 ---
-# <a name="connected-services-walkthrough"></a>Bağlı Hizmetler için izlenecek yol
+# <a name="connected-services-walkthrough"></a>Bağlı hizmetler izlenecek yolu
 
-Bağlı Hizmetler iş akışı Azure portal iş akışını Mac için Visual Studio, bu nedenle hizmetleri eklemek için projenizi bırakmak zorunda değilsiniz.
+bağlı hizmetler iş akışı, Azure portal iş akışını Mac için Visual Studio taşır; bu nedenle, hizmet eklemek için projenizden çıkmak zorunda kalmazsınız.
 
-Bu kılavuzda, platformlar arası bir Xamarin.Forms Taşınabilir Sınıf Kitaplığı (PCL) uygulamasına bulut veri depolama, kimlik doğrulaması ve anında yükleme bildirimleri getiren bir Azure arka uç hizmetinin nasıl ekli olduğu açıklanır.
+Bu izlenecek yol, bulut veri depolama, kimlik doğrulama ve platformlar arası bir Xamarin. Forms taşınabilir sınıf kitaplığı (PCL) uygulamasına anında iletme bildirimleri getiren bir Azure arka uç hizmetinin nasıl ekleneceğini gösterir.
 
-1. Başlangıç olarak çözümdeki **Bağlı Hizmetler düğümüne** çift tıklayarak başlayabilir ve bu da Hizmet **Galerisi'ni getirir.**
-  Bu, uygulama türü için kullanılabilir tüm hizmetlerin listesidir. Üzerine tıklayarak bir hizmet **(örneğin,** Azure App Service mobil arka uç) seçin.
+1. ' Yi, çözüm içindeki **bağlı hizmetler** düğümüne çift tıklayarak başlatın, bu, **Hizmetler galerisini** getirir.
+  Bu, uygulama türü için kullanılabilir tüm hizmetlerin bir listesidir. Üzerine tıklayarak bir hizmet ( **Azure App Service Ile mobil arka uç** gibi) seçin.
 
-    [![Mac için Visual Studio'de Bağlı Hizmetler Mac için Visual Studio](media/connected-services-image001-sml.png "Mac için Visual Studio'de Bağlı Hizmetler düğümü")](media/connected-services-image001.png#lightbox)
+    [![Mac için Visual Studio bağlı hizmetler düğümü](media/connected-services-image001-sml.png "Mac için Visual Studio bağlı hizmetler düğümü")](media/connected-services-image001.png#lightbox)
 
-2. Hizmet Ayrıntıları Sayfasında, hizmetin açıklaması ve yüklenme bağımlılıkları vardır.
-  Bağımlılıkları  uygulamaya eklemek için Ekle düğmesine tıklayın:
+2. Hizmet Ayrıntıları sayfasında, hizmetin açıklaması ve yüklenecek bağımlılıklar bulunur.
+  Uygulamaya bağımlılıkları eklemek için **Ekle** düğmesine tıklayın:
 
     [![Azure ile mobil arka uç](media/connected-services-image002-sml.png "Azure ile mobil arka uç")](media/connected-services-image002.png#lightbox)
 
-3. Bağımlılıkların çalışması için hem PCL'ye hem de platforma özgü projelere ekleniyor olması gerekir.
-  Hizmete başvuracak her projeye (doğrudan veya dolaylı olarak) eklemek için onay kutularını seçin:
+3. Bağımlılıkların çalışması için hem PCL hem de platforma özgü projelere eklenmesi gerekir.
+  Hizmeti kendisine başvuracak her projeye eklemek için onay kutularını seçin (doğrudan veya dolaylı olarak):
 
-    [![Hizmete başvuracak tüm projeleri denetleme](media/connected-services-image003-sml.png "Hizmete başvuracak tüm projeleri denetleme")](media/connected-services-image003.png#lightbox)
+    [![Hizmete başvurması gereken tüm projeleri denetle](media/connected-services-image003-sml.png "Hizmete başvurması gereken tüm projeleri denetle")](media/connected-services-image003.png#lightbox)
 
-4. Uygulama **paketleri** için **Lisans Kabulü iletişim** kutularının Kabul NuGet seçin.
-  Kabul edilecek iki iletişim kutusu olabilir: biri MobileClient ve bağımlılıklar için, diğeri de çevrimdışı veri eşitlemesi için gereken SQLiteStore için:
+4. NuGet paketleri için **lisans kabulü** iletişim kutularında **kabul et** ' i seçin.
+  Bir adet, MobileClient ve Dependencies için bir tane olmak üzere iki iletişim kutusu olabilir ve çevrimdışı veri eşitleme için gerekli olan SQLiteStore için bir diğeri:
 
-    [![Lisans Sözleşmelerini Kabul Etme](media/connected-services-image004-sml.png "Lisans Sözleşmelerini Kabul Etme")](media/connected-services-image004.png#lightbox)
+    [![Lisans sözleşmelerini kabul et](media/connected-services-image004-sml.png "Lisans sözleşmelerini kabul et")](media/connected-services-image004.png#lightbox)
 
-    ![Lisans Kabulü penceresi](media/connected-services-image005.png "Lisans Kabulü penceresi")
+    ![Lisans kabul penceresi](media/connected-services-image005.png "Lisans kabul penceresi")
 
-5. Bağımlılıklar eklendiktan sonra, Azure ile iletişim kurmak için kullanmak istediğiniz hesapta oturum açmanız isteniyor.
-  Zaten bir Microsoft kimliğiyle oturum açtıysanız Mac için Visual Studio Azure aboneliklerinizi ve onlarla ilişkili tüm uygulama hizmetlerini getirmeye çalışabilirsiniz. Aboneliğiniz yoksa, ücretsiz deneme sürümüne kaydolarak veya abonelik planı satın alarak abonelik planı Azure portal.
+5. Bağımlılıklar eklendikten sonra, Azure ile iletişim kurmak için kullanmak istediğiniz hesapla oturum açmanız istenir.
+  zaten bir Microsoft kimliğiyle oturum açtıysanız Mac için Visual Studio Azure aboneliklerinizi ve bunlarla ilişkili tüm uygulama hizmetlerini getirmeye çalışacaktır. Aboneliğiniz yoksa, ücretsiz deneme için kaydolup veya Azure portal bir abonelik planı satın alarak bir tane ekleyebilirsiniz.
 
-6. Listeden bir uygulama hizmeti seçin. Bu işlem, nesnenin şablon kodunu `MobileServiceClient` Azure'da uygulama hizmetinin ilgili URL'si ile doldurur:
+6. Listeden bir App Service seçin. Bu işlem, nesnenin şablon kodunu `MobileServiceClient` Azure üzerinde App Service 'in karşılık gelen URL 'si ile doldurur:
 
-    [![Listeden app service seçme](media/connected-services-image006-sml.png "Listeden app service seçme")](media/connected-services-image006.png#lightbox)
+    [![Listeden App Service 'i seçin](media/connected-services-image006-sml.png "Listeden App Service 'i seçin")](media/connected-services-image006.png#lightbox)
 
-    Listede hizmet yoksa Yeni düğmesine tıklayın **(bkz.** 9. Adım).)
+    Listelenen hizmetler yoksa, **Yeni** düğmesine tıklayın (bkz. 9. adım)
 
-7. için şablon kodunu `MobileServiceClient` PCL'ye kopyalayın. Dosyanın yalnızca bir örneği olduğu sürece dosya konumu önemli değildir.
-  Önerilen yaklaşım, tüm `AzureService` Azure etkileşimlerini ele alan ve kullanan bir sınıf oluşturmaktır: `MobileServiceClient`
+7. İçin şablon kodunu `MobileServiceClient` PCL 'e kopyalayın. Dosya konumu önemli değildir, bu nedenle yalnızca bir örneği olduğu sürece.
+  Önerilen yaklaşım, `AzureService` tüm Azure etkileşimlerini işleyen ve şunları kullanan bir sınıf oluşturmaktır `MobileServiceClient` :
 
-    ![Yapılandırma kodunu ap'ye kopyalama](media/connected-services-image007.png "Yapılandırma kodunu uygulamaya kopyalama")
+    ![Yapılandırma kodunu AP 'ye kopyalama](media/connected-services-image007.png "Yapılandırma kodunu uygulamaya Kopyala")
 
-8. Uygulamanıza **veri, çevrimdışı eşitleme,** kimlik doğrulaması ve anında bildirim eklemek için Sonraki Adımlar'daki belgeleri izleyin:
+8. Uygulamanıza veri, çevrimdışı eşitleme, kimlik doğrulama ve anında iletme bildirimleri eklemek için **sonraki adımlarda** bulunan belgeleri izleyin:
 
-    [![Sonraki adım yönergelerini gözden geçirme](media/connected-services-image008-sml.png "Sonraki adım yönergelerini gözden geçirme")](media/connected-services-image008.png#lightbox)
+    [![Sonraki adım yönergelerini gözden geçirin](media/connected-services-image008-sml.png "Sonraki adım yönergelerini gözden geçirin")](media/connected-services-image008.png#lightbox)
 
-9. Mevcut uygulama hizmetleriniz yoksa, uygulama hizmetlerinden yeni hizmetler Mac için Visual Studio.
-  Hizmetler **listesinin** sol alt kısmında bulunan Yeni düğmesine tıklayarak Yeni hizmetler **iletişim App Service** açın:
+9. mevcut bir app service yoksa Mac için Visual Studio içinden yeni hizmetler oluşturabilirsiniz.
+  **Yeni App Service** iletişim kutusunu açmak için hizmetler listesinin sol alt kısmındaki **Yeni** düğmesine tıklayın:
 
-    [![Mac için Visual Studio'de yeni bir uygulama hizmeti oluşturma](media/connected-services-image009-sml.png "Mac için Visual Studio'de yeni bir uygulama hizmeti oluşturma")](media/connected-services-image009.png#lightbox)
+    [![Mac için Visual Studio yeni bir app service oluşturun](media/connected-services-image009-sml.png "Mac için Visual Studio yeni bir app service oluşturun")](media/connected-services-image009.png#lightbox)
 
-Yeni bir hizmet için aşağıdaki parametreler gerekir:
+Yeni bir hizmet aşağıdaki parametreleri gerektirir:
 
 - **App Service adı** – plan için benzersiz ad/kimlik
-- **Abonelik** – hizmet için ödeme yapmak istediğiniz abonelik
-- **Kaynak Grubu:** Bir proje için tüm Azure kaynaklarınızı düzenleme veya düzenleme yolu. Mevcut bir tane kullanma veya yeni bir tane oluşturma seçeneği. İlk Azure hizmetiniz bu ise yeni bir tane oluşturun.
-- **Hizmet Planı–** Bunu kullanan kaynakların konumunu ve maliyetini belirler. Mevcut bir tane kullanma veya yeni bir tane oluşturma seçeneği. İlk Azure hizmetiniz bu ise varsayılan hizmeti kullanın veya ücretsiz katmanda (F1) yeni bir tane oluşturun.
+- **Abonelik** : hizmet için ödeme yapmak üzere kullanmak istediğiniz abonelik
+- **Kaynak grubu** : bir proje Için tüm Azure kaynaklarınızı bir yol veya düzenleme. Varolanı kullanma veya yeni bir tane oluşturma seçeneği. İlk Azure hizmetiniz bu ise yeni bir tane oluşturun.
+- **Hizmet planı** – onu kullanan kaynakların konumunu ve maliyetini belirler. Varolanı kullanma veya yeni bir tane oluşturma seçeneği. İlk Azure hizmetiniz ise, varsayılan olanı kullanın veya ücretsiz katmanda yeni bir tane oluşturun (F1).
 
-Daha fazla [bilgi için Mobil uygulamalar](/azure/developer/mobile-apps/azure-mobile-apps/overview) belgelerini ziyaret edin.
+Daha fazla bilgi için [Mobile Apps belgelerini](/azure/developer/mobile-apps/azure-mobile-apps/overview) ziyaret edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Bağlı Hizmetler (Visual Studio Windows)](/visualstudio/azure/vs-azure-tools-connected-services-storage)
+- [bağlı hizmetler (Windows Visual Studio)](/visualstudio/azure/vs-azure-tools-connected-services-storage)

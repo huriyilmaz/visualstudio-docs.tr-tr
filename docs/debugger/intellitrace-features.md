@@ -23,12 +23,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 391ff83ccefe79a7c14ac50ecc6c508d6aedd610
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: c265ba3a711f67f66bb45e0b06e28b89a96db8c9
+ms.sourcegitcommit: fc874be3fe4637a23997b4ef2d99a2ee9a499581
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122112639"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "135516536"
 ---
 # <a name="intellitrace-features-c-visual-basic-c"></a>IntelliTrace Özellikleri (C#, Visual Basic, C++)
 
@@ -127,9 +127,3 @@ IntelliTrace verilerini dosyaya kaydettiğinizde, IntelliTrace 'in topladığı 
 ## <a name="forums"></a>Forumlar
 
 [Visual Studio Hata Ayıklayıcısı](https://social.msdn.microsoft.com/Forums/en-US/home)
-
-## <a name="videos"></a>Videolar
-
-[IntelliTrace Deneyimi](https://channel9.msdn.com/Series/Visual-Studio-2015-Enterprise-Videos/IntelliTrace-Experience)
-
-[Microsoft Visual Studio Ultimate 2015'te IntelliTrace ile Geçmiş Hata Ayıklama](https://channel9.msdn.com/events/Ignite/2015/BRK3716)

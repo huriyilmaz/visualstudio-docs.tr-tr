@@ -4,8 +4,6 @@ description: Hata ayıklayıcısında program durumunu incelemenin ve değiştir
 ms.custom: SEO-VS-2020
 ms.date: 01/09/2019
 ms.topic: conceptual
-f1_keywords:
-- vs.debug
 dev_langs:
 - CSharp
 - VB
@@ -22,12 +20,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9cdce099df34fbf7937ed83d1adc70fe36c13176
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 2ef14445d3a4197a61abb1a7dc6df61bfdf277eb
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122043914"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135803069"
 ---
 # <a name="create-custom-views-of-data-in-the-visual-studio-debugger-c-visual-basic-c"></a>Visual Studio hata ayıklayıcısında (C#, Visual Basic, C++) verilerin özel görünümlerini oluşturma
 
@@ -35,7 +33,7 @@ Hata [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ayıklayıcısı,
 
 ## <a name="create-custom-views-of-data-in-variable-windows-and-datatips"></a>Değişken pencerelerde ve DataTips'te verilerin özel görünümlerini oluşturma
 
- Otomatikler [ve İzleme pencereleri](../debugger/debugger-windows.md)gibi hata **ayıklayıcısı pencerelerinin** **çoğu** değişkenleri incelemenizi sağlar. C++ türlerinin, yönetilen nesnelerin ve kendi türlerinizin hata ayıklayıcısı değişken pencerelerinde ve [DataTips'te nasıl gösterildiğini özelleştirebilirsiniz.](../debugger/view-data-values-in-data-tips-in-the-code-editor.md) Daha fazla bilgi için [bkz. C++ nesnelerinin özel görünümlerini oluşturma](../debugger/create-custom-views-of-native-objects.md) [ve Yönetilen nesnelerin özel görünümlerini oluşturma.](../debugger/create-custom-views-of-managed-objects.md)
+ Otomatikler [ve İzleme pencereleri](../debugger/debugger-windows.md)gibi hata **ayıklayıcısı pencerelerinin** **çoğu** değişkenleri incelemenizi sağlar. C++ türlerinin, yönetilen nesnelerin ve kendi türlerinizi hata ayıklayıcısı değişken pencerelerinde ve [DataTips'te nasıl gösterebileceğinizi özelleştirebilirsiniz.](../debugger/view-data-values-in-data-tips-in-the-code-editor.md) Daha fazla bilgi için [bkz. C++ nesnelerinin özel görünümlerini oluşturma](../debugger/create-custom-views-of-native-objects.md) [ve Yönetilen nesnelerin özel görünümlerini oluşturma.](../debugger/create-custom-views-of-managed-objects.md)
 
 ## <a name="create-custom-visualizers"></a>Özel görselleştiriciler oluşturma
 
