@@ -1,17 +1,18 @@
 ---
 title: Xamarin
-description: "Xamarin'i Mac için Visual Studio iOS, Mac, Android, tvOS ve watchOS'u hedef alan platformlar arası uygulamalar oluşturmanıza olanak sağlar "
-author: therealjohn
-ms.author: johmil
+description: "Mac için Visual Studio 'de Xamarin kullanmak iOS, Mac, Android, tvos ve watchos 'yi hedefleyen platformlar arası uygulamalar oluşturmanıza olanak tanır "
+author: jmatthiesen
+ms.author: jomatthi
+manager: dominicn
 ms.date: 06/18/2019
 ms.assetid: 339F6051-5F90-48DC-8237-EBBC8A03A32B
-ms.topic: overview
-ms.openlocfilehash: 41b26eb75454299aed86a3cdb3905d6c66efb098
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.topic: how-to
+ms.openlocfilehash: 739536f6f632450fec722a38556897bf48baf722
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123964779"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135805305"
 ---
 # <a name="xamarin-mobile-app-development"></a>Xamarin mobil uygulama geliştirme
 
@@ -19,51 +20,51 @@ ms.locfileid: "123964779"
 
 ## <a name="xamarinforms"></a>Xamarin.Forms
 
-Xamarin.Forms için XAML Çalışırken Yeniden Yükleme, 8.3 ve Mac için Visual Studio sürümünde yerleşik olarak yerleşiktir. Bu özellik etkinleştirildiğinde, dosyayı her kaydedildiğinde değişiklikler çalışan uygulamanıza anında yansıtıldı.
+Xamarin. Forms için XAML Hot Reload, sürüm 8,3 ve sonraki sürümlerde Mac için Visual Studio yerleşik olarak bulunur. Bu özellik etkinleştirildiğinde değişiklikler, dosyayı her kaydettiğinizde çalışan uygulamanıza anında yansıtılır.
 
-XAML Çalışırken Yeniden Yükleme, **Xamarin** Çalışırken Yeniden Yükleme'de Visual Studio > Tercihler > Projeleri'nde **Xamarin > etkinleştir onay kutusu Çalışırken Yeniden Yükleme.**
+XAML etkin yeniden yüklemesi, **Visual Studio > tercihleri > projeler > xamarin hot reload**' da, **xamarin hot reload 'i etkinleştir** onay kutusunu işaretleyerek etkinleştirilebilir.
 
-Xamarin.Forms Çalışırken Yeniden Yükleme hakkında daha [fazla bilgi için XAML Çalışırken Yeniden Yükleme Xamarin.Forms için](/xamarin/xamarin-forms/xaml/hot-reload) yükleme kılavuzuna bakın.
+Dinamik yeniden yükleme hakkında daha fazla bilgi için, belgeler içindeki [Xamarin. Forms Için xaml Hot Reload Kılavuzu kılavuzuna](/xamarin/xamarin-forms/xaml/hot-reload) bakın.
 
 ## <a name="android"></a>Android
 
-Mac için Visual Studio, uygulamanın hedeflemesini istediğiniz ANDROID SDK'lere erişmenizi sağlayan kendi tümleşik Android SDK yöneticisine sahip olur.
+Mac için Visual Studio kendi tümleşik Android SDK yöneticisi 'ne sahiptir ve uygulamanızın hedeflemesini istediğiniz sdk 'lara erişmenizi sağlar.
 
-Android uygulamaları için Mac için Visual Studio, kullanıcı arabirimlerini görsel olarak oluşturmak için Android `.axml` dosyalarıyla çalışan kendi tasarımcısını içerir. Mac için Visual Studio, aşağıdaki görüntüde Android Designer bu dosyaları kendi dosyalarında açar:
+android uygulamaları için Mac için Visual Studio, kendi tasarımcısını içerir ve bu, `.axml` kullanıcı arabirimlerini görsel olarak oluşturmak için android dosyalarıyla birlikte kullanılır. Mac için Visual Studio, aşağıdaki görüntüde gösterildiği gibi bu dosyaları Android Designer açacak:
 
-![Android Kullanıcı Arabirimi Tasarımcısı](media/intro-image31.png)
+![Android kullanıcı arabirimi Tasarımcısı](media/intro-image31.png)
 
-Daha fazla bilgi için [Xamarin.Android Designer Genel](/xamarin/android/user-interface/android-designer/index) Bakış Android Designer bakın.
+Android Designer hakkında daha fazla bilgi için bkz. [Xamarin. Android Designer genel bakış](/xamarin/android/user-interface/android-designer/index) Kılavuzu.
 
 ## <a name="ios"></a>iOS
 
-iOS Tasarımcısı, iOS, tvOS ve WatchOS kullanıcı Mac için Visual Studio ve geçişler oluşturmak için .xib ve Görsel Görüntü dosyalarının görsel olarak düzenlenmesine olanak sağlar. Kullanıcı arabiriminin tamamı, olayları işlemeye sezgisel bir yaklaşım benimserken Araç Kutusu ile Tasarım Yüzeyi sürükle bırak işlevi kullanılarak bir yandan da kullanılabilir. iOS Tasarımcısı, tasarım [zamanı işlemenin](/xamarin/ios/user-interface/designer/ios-designable-controls-overview) ek avantajıyla özel denetimleri de destekler.
+ios tasarımcısı, Mac için Visual Studio ile tam olarak tümleşiktir ve ios, tvos ve watchos usıs ve geçişleri oluşturmak için. xıb ve görsel taslak dosyalarının görsel düzenlemesini sağlar. Kullanıcı arabiriminin tamamı, araç kutusu ve Tasarım Yüzeyi arasında sürükle ve bırak işlevleri kullanılarak oluşturulabilir, bu da olayları işlemek için sezgisel bir yaklaşım kullanmaktır. İOS Tasarımcısı, tasarım zamanı işlemenin sağladığı avantaja sahip [özel denetimleri](/xamarin/ios/user-interface/designer/ios-designable-controls-overview) de destekler.
 
-![iOS Storyboard tasarımcısı](media/intro-image30.png)
+![iOS görsel taslak Tasarımcısı](media/intro-image30.png)
 
-iOS Tasarımcısı'nın kullanımı hakkında daha fazla bilgi için bkz. [Tasarımcı](/xamarin/ios/user-interface/designer/?tabs=macos) kılavuzları.
+İOS tasarımcısını kullanma hakkında daha fazla bilgi için [Tasarımcı](/xamarin/ios/user-interface/designer/?tabs=macos) kılavuzlarını inceleyin.
 
 ### <a name="mac"></a>Mac
 
 Xamarin, güzel Mac uygulamaları oluşturmanıza olanak sağlayan yerel Mac API bağlamaları sağlar.
 
-Mac uygulamaları yazma hakkında daha fazla bilgi Mac için Visual Studio [Xamarin.Mac kılavuzlarına](/xamarin/mac/get-started/index) bakın.
+Mac için Visual Studio ile Mac uygulamaları yazma hakkında daha fazla bilgi için [Xamarin. Mac](/xamarin/mac/get-started/index) kılavuzlarını inceleyin.
 
 ## <a name="xamarin-enterprise-features"></a>Xamarin Enterprise özellikleri
 
 > [!Note]
-> Bu ürünler yalnızca bir Visual Studio Enterprise kullanılabilir.
+> bu ürünler yalnızca Visual Studio Enterprise abonelikle birlikte kullanılabilir.
 
 ### <a name="profiler"></a>Profil Oluşturucu
 
-Profil Xamarin Profiler profil oluşturma için kullanılabilen üç araç vardır. [Xamarin Profiler'a](/xamarin/tools/profiler/index?tabs=macos) giriş kılavuzu, bu araçların ölçülerini ve uygulamanızı nasıl analiz etmelerini inceler ve her ekranda sunulan verilerin anlamını net bir şekilde gösterir.
+Xamarin Profiler profil oluşturma için kullanılabilen üç araçlar vardır. [Xamarin Profiler kılavuza giriş](/xamarin/tools/profiler/index?tabs=macos) , bu gereçlerin ne ölçmesini ve uygulamanızı nasıl analiz edeceğinizi ve her ekranda sunulan verilerin anlamını açıklığa kavuşturduğunu gösterir.
 
 ### <a name="inspector"></a>Denetçi
 
-Bu Xamarin Inspector kullanıcı araçlarıyla etkileşimli bir C# konsolu sağlar. Canlı uygulamaları incelerken hata ayıklama veya tanılama yardımı olarak, bir öğretim aracı, belge aracı veya deneme aracı olarak kullanılabilir.
+Xamarin Inspector, Kullanıcı araçlarıyla etkileşimli bir C# konsolu sağlar. Canlı uygulamalar, bir eğitim aracı olarak bir belge aracı veya bir deneme aracı olarak incelenirken hata ayıklama veya tanılama Yardımcısı olarak kullanılabilir.
 
 ![Xamarin Inspector](media/intro-inspector.png)
 
-Çeşitli programlama platformlarını (Android, iOS, Mac ve Windows) hedefleyebiliyor ve IDE hata ayıklama iş akışınıza tümleştirebiliyor zengin bir C# konsolu sağlayan tek başına bir uygulamadan oluşur.
+çeşitli programlama platformlarını (Android, iOS, Mac ve Windows) hedefleyebilir ve ıdes hata ayıklama iş akışınıza tümleştirerek, zengin bir C# konsolu sağlayan tek başına bir uygulamadan oluşur.
 
-Daha fazla bilgi için [bkz. Xamarin Inspector](/xamarin/tools/inspector/release-notes/1.5) bakın.
+Daha fazla bilgi için [Xamarin Inspector](/xamarin/tools/inspector/release-notes/1.5) kılavuzuna bakın.

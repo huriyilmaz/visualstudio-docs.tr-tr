@@ -1,16 +1,18 @@
 ---
 title: Kaynak Düzenleyicisi
 description: Mac için Visual Studio 'de kaynak düzenleyiciyi kullanma
-author: cobey
-ms.author: cobey
+author: jmatthiesen
+ms.author: jomatthi
+manager: dominicn
 ms.date: 05/06/2018
+ms.topic: reference
 ms.assetid: A018A314-C1C4-4F36-BCB6-2D434208FCFE
-ms.openlocfilehash: c4a22ec0765c39a8bec83f9e2acff7b22b706890
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 8c4ea988af9768795603850897f9f36a8908ac40
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126725977"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135805636"
 ---
 # <a name="source-editor"></a>Kaynak Düzenleyicisi
 

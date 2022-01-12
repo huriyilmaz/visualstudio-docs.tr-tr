@@ -1,22 +1,24 @@
 ---
 title: Proje ve Çözüm Özelliklerini Yönetme
-description: Bu makalede, Mac için Visual Studio'de projelerin ve çözümlerin özelliklerini yönetme açık Mac için Visual Studio
-author: heiligerdankgesang
-ms.author: dominicn
+description: Bu makalede, Mac için Visual Studio'da projelerin ve çözümlerin özelliklerini yönetme açık Mac için Visual Studio
+author: jmatthiesen
+ms.author: jomatthi
+manager: dominicn
 ms.date: 11/09/2020
+ms.topic: how-to
 ms.assetid: 75247EB8-323A-4AFD-A451-6703A03D5D1F
-ms.openlocfilehash: 0c3277df3be22658acf85a4f0607ed9ad0308b5c
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.openlocfilehash: 0c2edd3679f61e796b61f47eac1f5897ec7b16cf
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123964783"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135804382"
 ---
 # <a name="managing-project-and-solution-properties"></a>Proje ve Çözüm Özelliklerini Yönetme
 
 ## <a name="project-options"></a>Proje seçenekleri
 
-Project seçenekleri her projeye özeldir ve projenin nasıl yazıldığı, nasıl yazıldığı ve çalıştırıldığı etkiler. Kullanıcıya Mac için Visual Studio tercihlerin aksine, proje seçenekleri proje (.csproj) dosyasında depolanır, böylece diğer geliştiriciler projeyi doğru şekilde oluşturabilir ve çalıştırabilir. Belirli proje seçeneklerine sahip olmak, birçok geliştiricinin dosyanın biçimlendirmesini tehlikeye atmadan aynı belge üzerinde çalışmasına olanak sağlar.
+Project seçenekleri her projeye özeldir ve projenin nasıl yazıldığı, nasıl yazıldığı ve çalıştırıldığı etkiler. Kullanıcıya Mac için Visual Studio tercihlerin aksine, proje seçenekleri proje (.csproj) dosyasında depolanır, böylece diğer geliştiriciler projeyi doğru bir şekilde oluşturabilir ve çalıştırabilir. Belirli proje seçeneklerine sahip olmak, birçok geliştiricinin dosyanın biçimlendirmesini tehlikeye atmadan aynı belge üzerinde çalışmasına olanak sağlar.
 
 Aşağıdaki Project açmak Mac için Visual Studio proje adına çift tıklayın veya sağ tıklar ve ardından Seçenekler'i **seçin:**
 
@@ -26,7 +28,7 @@ Düzenlenebilir seçenekler, kaynak kodu ve sürüm denetimi oluşturma, çalı�
 
 Project seçenekleri beş farklı kategoriye ayrılır:
 
-* **Genel** - Project, Açıklama ve Varsayılan Ad Alanı gibi genel bilgiler burada projenin Konumu ile birlikte ayarlanır.
+* **Genel** - Project, Açıklama ve Varsayılan Ad Alanı gibi genel bilgiler, projenin Konumu ile birlikte burada ayarlanır.
 * **Derleme** - Taşınabilir Sınıf Kitaplıkları için PCL profillerini ayarlamak veya değiştirmek için kullanılır. Ayrıca özel komutların, yapılandırmaların ve derleyici seçeneklerinin de ayarlandırabilirsiniz. Çıkış yolu ve derleme adı burada da ayarlandır.
 * **Çalıştır** - Proje başına özel çalıştırma yapılandırmaları oluşturmak için kullanılır.
 * **Kaynak Kodu** - Birçok farklı dosya türü ve adlandırma kuralının biçimlendirmesini kontrol eder. Adlandırma ilkelerini ve varsayılan üst bilgi stillerini burada da değiştirebilirsiniz.

@@ -196,7 +196,7 @@
           href: get-started/tutorial-open-project-from-repo.md
         - name: 'Projeleri taşıma, geçirme ve yükseltme'
           href: porting/port-migrate-and-upgrade-visual-studio-projects.md
-        - name: Çözüm Gezgini hakkında bilgi Çözüm Gezgini
+        - name: Çözüm Gezgini
           href: ide/use-solution-explorer.md
         - name: Proje ve çözüm özelliklerini yönetme
           href: ide/managing-project-and-solution-properties.md
@@ -442,7 +442,7 @@
                   href: ide/reference/regex-completion-through-intellisense.md
                 - name: Erişilemeyen kodları kaldırma
                   href: ide/reference/remove-unreachable-code.md
-                - name: Kullanılmayan başvuruları kaldır
+                - name: Kullanılmayan başvuruları kaldırma
                   href: ide/reference/remove-unused-references.md
                 - name: Rename
                   href: ide/reference/rename.md
@@ -653,31 +653,12 @@
               items:
                 - name: 'Öğretici 1: Resim görüntüleyici oluşturma (C#)'
                   items:
-                    - name: Genel Bakış
-                      displayName: Tutorial 1 Picture viewer
-                      href: ide/tutorial-1-create-a-picture-viewer.md
-                    - name: '1. Adım: Windows Forms Uygulaması projesi oluşturma'
-                      href: ide/step-1-create-a-windows-forms-application-project.md
-                    - name: '2. Adım: Uygulamanızı çalıştırma'
-                      href: ide/step-2-run-your-program.md
-                    - name: '3. Adım: Form özelliklerinizi ayarlama'
-                      href: ide/step-3-set-your-form-properties.md
-                    - name: '4. Adım: TableLayoutPanel denetimi ile formunuzu düzenleme'
-                      href: ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md
-                    - name: '5. Adım: Formunuza denetimler ekleme'
-                      href: ide/step-5-add-controls-to-your-form.md
-                    - name: '6. Adım: Düğme denetimlerinizi adlandırma'
-                      href: ide/step-6-name-your-button-controls.md
-                    - name: '7. Adım: Formunuza iletişim kutusu bileşenleri ekleme'
-                      href: ide/step-7-add-dialog-components-to-your-form.md
-                    - name: '8. Adım: Resim Göster düğmesi olay işleyicisi için kod yazma'
-                      href: ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md
-                    - name: '9. Adım: Kodunuzu gözden geçirme, açıklama ve test etme'
-                      href: ide/step-9-review-comment-and-test-your-code.md
-                    - name: '10. Adım: Ek düğmeler ve onay kutusu için kod yazma'
-                      href: ide/step-10-write-code-for-additional-buttons-and-a-check-box.md
-                    - name: '11. Adım: Uygulamanızı çalıştırma ve diğer özellikleri deneme'
-                      href: ide/step-11-run-your-program-and-try-other-features.md
+                    - name: 1. Resim Görüntüleyicisi uygulaması oluşturma
+                      href: ide/tutorial-windows-forms-picture-viewer-layout.md
+                    - name: 2. Uygulamaya denetim ekleme
+                      href: ide/tutorial-windows-forms-picture-viewer-controls.md
+                    - name: '3. Uygulamayı kodla, test edin ve çalıştırın'
+                      href: ide/tutorial-windows-forms-picture-viewer-code.md
                 - name: 'Öğretici 2: Zamanlı matematik testi oluşturma (C#)'
                   items:
                     - name: Genel Bakış
@@ -854,8 +835,6 @@
           href: ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md
         - name: Derleme çıkış dizinini değiştirme
           href: ide/how-to-change-the-build-output-directory.md
-        - name: Ortak çıkış dizinine derleme
-          href: ide/how-to-build-to-a-common-output-directory.md
         - name: Özel derleme olayları belirtme
           href: ide/specifying-custom-build-events-in-visual-studio.md
         - name: Çoklu başlangıç projeleri ayarlama
@@ -1068,7 +1047,7 @@
       items:
         - name: Çağrı Hiyerarşisi
           href: ide/reference/call-hierarchy.md
-        - name: Geliştirici Komut İstemi & Geliştirici PowerShell
+        - name: Geliştirici Komut İstemi & geliştirici PowerShell
           href: ide/reference/command-prompt-powershell.md
         - name: Değişiklikleri Önizleme
           href: ide/preview-changes.md
@@ -1447,9 +1426,9 @@
       href: 'https://visualstudio.microsoft.com/license-terms/'
     - name: Destek yaşam döngüsü ve bakım
       href: /visualstudio/productinfo/vs-servicing-vs/
-    - name: Müşteri Deneyimini Geliştirme
+    - name: Müşteri deneyimini geliştirme
       href: ide/visual-studio-experience-improvement-program.md
-    - name: Visual Studio'de bağlantılı deneyimler
+    - name: Visual Studio bağlı deneyimler
       href: ide/reference/connected-experiences.md
 - name: Geri bildirim gönder
   items:
@@ -1461,7 +1440,7 @@
       href: ide/how-to-increase-chances-of-performance-issue-being-fixed.md
     - name: MSBuild sorunları için günlükler oluşturma
       href: ide/msbuild-logs.md
-    - name: ETL izlemesi toplama ve minidumps oluşturma
+    - name: Bir ETL izlemesi toplayın ve mini döküm oluşturun
       href: ide/report-a-problem-perfview-minidumps.md
     - name: Geliştirici Topluluğu yönergeleri
       href: ide/developer-community-guidelines.md

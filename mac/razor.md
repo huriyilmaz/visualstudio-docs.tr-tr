@@ -1,22 +1,23 @@
 ---
 title: Razor web uygulamaları oluşturma
-description: Bir uygulamanın tüm uygulamalarına razor ASP.NET Core razor desteği hakkında Mac için Visual Studio.
-author: sayedihashimi
-ms.author: sayedha
+description: Bir uygulamanın içinde yer alan ASP.NET Core Razor desteği hakkında Mac için Visual Studio.
+author: jmatthiesen
+ms.author: jomatthi
+manager: dominicn
 ms.date: 05/03/2018
 ms.technology: vs-ide-general
 ms.assetid: F898CB6E-05ED-44CD-8DB6-427B2592CCC6
 ms.topic: how-to
-ms.openlocfilehash: 26575367d7aff2b92c64dc5d07068b4900b24e7f
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.openlocfilehash: 3a99b02009b940f6d51405ff81901763bce92816
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123964822"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135805526"
 ---
 # <a name="create-razor-web-apps"></a>Razor web uygulamaları oluşturma
 
-Bu kılavuz, ilk Razor web uygulamanızı oluşturmaya giriş sunar. Daha ayrıntılı rehberlik için [bkz. Razor Pages'de ASP.NET Core.](/aspnet/core/razor-pages/index)
+Bu kılavuz, ilk Razor web uygulamanızı oluşturmaya giriş sunar. Daha ayrıntılı rehberlik için [bkz. ASP.NET Core'de Razor Pages' ASP.NET Core.](/aspnet/core/razor-pages/index)
 
 Mac için Visual Studio. *.cshtml* dosyalarında IntelliSense ve söz dizimi vurgulama da dahil olmak üzere Razor düzenleme desteği sağlar. Mac için Visual Studio 2019 8.3+ sürümü, bir Razor dosyasında bağlam algısı olan IntelliSense'e sahip olmaktır. Böylece, bir belge içinde düzenlemekte olduğu dille eşleşen IntelliSense'i alırsınız.
 
@@ -37,7 +38,7 @@ Mac için Visual Studio. *.cshtml* dosyalarında IntelliSense ve söz dizimi vur
    Mac için Visual Studio kod düzeni penceresinde projenizi açar.
 1. **Command+Option+F5 komutunu kullanarak projeyi hata ayıklamadan çalıştırın.**
 
-   Visual Studio [Kestrel'i](/aspnet/core/fundamentals/servers/kestrel)başlatır, için bir tarayıcı açar `https://localhost:5001` ve ilk Razor web uygulamanızı görüntüler.
+   Visual Studio [Kestrel'i](/aspnet/core/fundamentals/servers/kestrel)başlatır, için bir tarayıcı `https://localhost:5001` açar ve ilk Razor web uygulamanızı görüntüler.
 
    ![Safari'de Razor web uygulaması](media/razor-webapp.png)
 
@@ -55,11 +56,11 @@ Destekleyen dosyaların adları alt çizgiyle başlar. Örneğin, *\_ Layout.csh
 
 ### <a name="launch-settings"></a>Başlatma ayarları
 
-Dosya *launchSettings.jsIIS* ayarlarını, uygulama URL'sini ve diğer ilgili ayarları içerir.
+*launchSettings.json dosyası* IIS ayarlarını, uygulama URL'sini ve diğer ilgili ayarları içerir.
 
 ### <a name="app-settings"></a>Uygulama ayarları
 
-Dosya *appSettings.jsbağlantı* dizeleri gibi yapılandırma verilerini içerir.
+*appSettings.json dosyası* bağlantı dizeleri gibi yapılandırma verilerini içerir.
 
 Yapılandırma hakkında daha fazla bilgi için [bkz. yapılandırma ASP.NET.](/aspnet/core/fundamentals/configuration/index)
 
@@ -77,4 +78,4 @@ Bu dosya, uygulamanın tanımlama bilgileri için onay isteyip istemesi gibi uyg
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-Razor web uygulamaları oluşturma hakkında daha kapsamlı bir kılavuz için [bkz. Razor Pages'de ASP.NET Core.](/aspnet/core/razor-pages/index)
+Razor web uygulamaları oluşturma hakkında daha kapsamlı bir kılavuz için [bkz. Razor Pages'ASP.NET Core.](/aspnet/core/razor-pages/index)

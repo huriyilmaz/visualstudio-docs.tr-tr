@@ -10,12 +10,12 @@ ms.technology: vs-ide-test
 monikerRange: '>= vs-2022'
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c435446a9ddae6d13ceaf6ca636a6e543668b35
-ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
+ms.openlocfilehash: 551584d15ced1b9100df247d9c809f4c1d0e40af
+ms.sourcegitcommit: d38d1b083322019663fec7d1d85a4cda456aadca
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "135805994"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "135533860"
 ---
 # <a name="remote-testing-experimental-preview"></a>Uzaktan test (deneysel Önizleme)
 
@@ -41,17 +41,6 @@ Ortamlar `testenvironments.json` , çözümünüzün kökünde kullanılarak bel
     ]
 }
 ```
-#### <a name="properties-of-an-environment-in-testenvironmentsjson"></a>TestEnvironment. JSON içindeki bir ortamın özellikleri 
-| Özellik         | Tür | Description |
-| ----------------- | ---- | -------------------------------- |
-| name | string | Test Gezgini 'nde görüntülenen kullanıcı dostu ortam adı. Bu, bir Testortam. JSON dosyası içinde benzersiz olmalıdır. |
-| localRoot | string | **[Isteğe bağlı]** Uzak ortama yansıtılmak üzere yerel makinedeki yol (ya mutlak veya çözüm dizinine göre). belirtilmezse, bu varsayılan olarak bir git deposu bağlamı içindeki depo köküne (Visual Studio 2022 sürüm 17,1 ve üzeri) göre yapılır. Git deposunun dışında bu, varsayılan olarak çözüm dizinidir. |
-| tür | enum | Uzak ortamın türünü gösterir. Bu değer,, ya da olabilir `docker` `wsl` `ssh` . |
-| Dockerımage | string | Docker ortamında yüklenecek bir Docker görüntüsünün adı. <br/> Ortam ise bu gereklidir `type` `docker` . Dockerımage veya dockerFile belirtilmelidir, ancak her ikisi birden belirtilmemelidir.|
-| dockerFile | string | Bir Docker ortamında görüntü oluşturmak ve yüklemek için çözüm dizinine göre Docker dosyasının yolu. <br/> Ortam ise bu gereklidir `type` `docker` . Dockerımage veya dockerFile belirtilmelidir, ancak her ikisi birden belirtilmemelidir. |
-| wslDistribution | string | Test ortamının çalıştırılacağı yerel WSL dağıtımının adı. <br/> Ortam ise bu gereklidir `type` `wsl` . |
-| remoteUri | string | Uzak makineye bağlantıyı belirten bir URI. Örneğin, ssh://user@hostname:22. <br/> Ortam ise bu gereklidir `type` `ssh` . |
-
 
 ### <a name="local-container-connections"></a>Yerel kapsayıcı bağlantıları
 
@@ -61,6 +50,7 @@ Dockerfile için, ortam `testEnvironments.json` çözümünüzün kökünde içi
 ```json
     {
     "name": "<name>",
+    "localRoot": "<path to local environment>", // optional
     "type": "docker",
     "dockerImage": "<docker image tag>",
     }
@@ -154,13 +144,13 @@ Ortam, `testEnvironments.json` çözümünüzün kökünde, aşağıdaki şemay�
 
 * Bir ortam seçildikten sonra, testler yeni ortamda keşfedilir ve çalıştırılır.
 
-  ![Testler uzak ortamlarda keşfedildi ve yürütülür](media/remote-test-linux-discovery.png)
+  ![Testler uzak ortamlarda keşfedilir ve yürütülür](media/remote-test-linux-discovery.png)
 
-* Artık testlerinizi uzak ortamda çalıştırabilir ve ortamlarda testlerinizi ayıkabilirsiniz!
+* Artık testlerinizi uzak ortamda çalıştırabilir ve testlerde ortamınızda hata ayıklaması yapabilirsiniz!
 
-  ![Test gezgininde uzak ortamdan test sonuçlarını görüntüleme](media/remote-test-linux-passing.png)
+  ![Test Gezgini 'nde uzak ortamdan test sonuçlarını görüntüleme](media/remote-test-linux-passing.png)
 
-* Test Gezgini bazı eksik ortam önkoşullarını yükleme ve eksik bağımlılıkları yükleme denemesi istendiğinde. Ancak, uzak ortamın sağlanmasının büyük bir kısmını kullanıcının belirtimleri sağlar.
+* Test Gezgini, bazı eksik ortam önkoşullarını yüklemenizi ve eksik bağımlılıkları yüklemeyi denemesini isteyebilir. Ancak, uzak ortamı sağlamanın toplu işlemi, kullanıcının belirtimine göre yapılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

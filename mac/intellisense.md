@@ -1,64 +1,66 @@
 ---
 title: IntelliSense
-description: Mac için Visual Studio'de IntelliSense kullanma hakkında Mac için Visual Studio
-author: cobey
-ms.author: cobey
+description: Mac için Visual Studio 'da ıntellisense kullanma hakkında bilgi
+author: jmatthiesen
+ms.author: jomatthi
+manager: dominicn
 ms.date: 08/16/2019
-ms.openlocfilehash: 07ef1d6292e4ac88ca616d0f35e3fd831cacc649
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.topic: reference
+ms.openlocfilehash: 4d33a75eb2f6e45d5768f3b1820c4de70146734e
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123964799"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135804889"
 ---
 # <a name="intellisense"></a>IntelliSense
 
-IntelliSense, kod yazma ve düzenleme deneyimini geliştirmeye yardımcı olan çeşitli özellikler sağlar. Örneğin, Kod tamamlamaya ek olarak IntelliSense altyapısı üye listeleri, parametre bilgileri ve hızlı bilgiler de sağlar.
+IntelliSense, kod yazma ve düzenlemenin deneyiminden artırılmasına yardımcı olmak için çeşitli özellikler sağlar. Örneğin, kod tamamlanmasına ek olarak, IntelliSense altyapısı üye listeleri, parametre bilgileri ve hızlı bilgi bilgileri de sağlar.
 
-Bu Mac için Visual Studio IntelliSense, temel düzenleyici hizmeti tarafından sağlanır ve C#, XAML, F#, JavaScript ve daha birçok dilde de sağlanır. Mac için Visual Studio henüz projeye aktarılmış kitaplıklardan tamamlamaları gösterme gibi gelişmiş IntelliSense özelliklerine de sahiptir.
+Mac için Visual Studio, ıntellisense çekirdek düzenleyici hizmeti tarafından sağlanır ve C#, XAML, F #, JavaScript gibi birçok dilde desteklenir. Mac için Visual Studio, henüz projeye aktarılmamış kitaplıkların tamamlanmalarından gösterilmesinin yanı sıra gelişmiş ıntellisense özelliklerine de sahiptir.
 
-## <a name="code-completion"></a>Kod Tamamlama
+## <a name="code-completion"></a>Kod tamamlama
 
-C# kod dosyası gibi desteklenen bir dosyanın içinde yazarken, yazdığınız dize için geçerli tamamlamalar bir tamamlama listesinde görüntülenir ve siz yazarken güncelleştirilir. Ayrıca, metni silersiniz, liste verilen dizeyi tamamlamak için daha geniş bir olasılık aralığını içerecek şekilde yeniden otomatik olarak güncelleştirmeyi de sağlar. 
+C# kod dosyası gibi desteklenen bir dosya içine yazarken, şu anda yazmakta olduğunuz dize için geçerli tamamlama işlemleri bir tamamlanma listesinde görüntülenir ve siz yazarken güncelleştirilir. Ayrıca, metni silerseniz, liste otomatik olarak, verilen dizeyi tamamlamaya yönelik daha geniş olanaklar aralığını içerecek şekilde otomatik olarak güncelleştirilecek. 
 
-Tamamlama penceresi, dahil edilen tamamlamaları türe göre filtreleme desteği de sunar. Örneğin, listenin üyelerini yalnızca sınıflar veya temsilciler gibi türleri temsil edecek şekilde sınırlamak mümkündür. Bu filtreleme işlemi, filtrelenmiş türü temsil eden belirli bir simgeye tıklar veya belirli bir türe karşılık gelen klavye kısayolları aracılığıyla etkinleştirilebilir. Tamamlama penceresinin en altında bulunan simgeler aşağıdaki gibidir:
+Tamamlama penceresi ayrıca tür tarafından dahil edilen tamamlamaların filtrelenmesi için destek sağlar. Örneğin, Liste üyelerini yalnızca sınıflar veya temsilciler gibi türleri temsil edecek şekilde sınırlamak mümkündür. Bu filtreleme işlemi, filtrelemeye veya belirli bir türe karşılık gelen klavye kısayollarına göre süzülecek belirli bir simgeye tıklanınca etkinleştirilebilir. Tamamlama penceresinin alt kısmında bulunan simgeler aşağıdaki gibidir:
 
-| Simge                         | Name          | Anahtar kelime    | Hotkey |
+| Simge                         | Name          | Sözcükle    | Kısayol tuşu |
 | -----------------------------|---------------| -----------|--------|
-| ![Sınıflar Simgesi](media/classes-icon.png)  | sınıf         | `class`    |  ⌥C
-| ![Sabit Simgesi](media/constant-icon.png) |  sabiti      | `const`    |  ⌥O
-| ![Temsilci Simgesi](media/delegate-icon.png) | temsilci      | `delegate` |  ⌥D
-| ![Enum simgesi](media/enums-icon.png)    | enum          | `enum`     |  ⌥E
-| ![Olay Simgesi](media/event-icon.png)    | event         |            |  ⌥V
-| ![Alan Simgesi](media/fields-icon.png)   | alan         |            |  ⌥F
-| ![Arabirim Simgesi](media/interface-icon.png)| arabirim     | `interface`|  ⌥I
-| ![Anahtar Sözcük Simgesi](media/keyword-icon.png)  | Anahtar kelime       |            |  ⌥K
-| ![Yöntem Simgesi](media/method-icon.png)   | method        |            |  ⌥M
-| ![Ad Alanı Simgesi](media/namespace-icon.png)| ad alanı     | `namespace`|  ⌥N
-| ![Props Simgesi](media/props-icon.png)    | özellik      |            |  ⌥P
-| ![Kod Parçacığı Simgesi](media/snippet-icon.png)  | Parçacığını       | `class`    |  ⌥S
-| ![Yapı Simgesi](media/struct-icon.png)   | yapı     | `struct`   |  ⌥S
+| ![Sınıflar simgesi](media/classes-icon.png)  | sınıf         | `class`    |  ⌥ C
+| ![Sabit simgesi](media/constant-icon.png) |  sabiti      | `const`    |  ⌥ O
+| ![Temsilci simgesi](media/delegate-icon.png) | temsilci      | `delegate` |  ⌥ D
+| ![Sabit Listesi simgesi](media/enums-icon.png)    | enum          | `enum`     |  ⌥ E
+| ![Olay simgesi](media/event-icon.png)    | event         |            |  ⌥ V
+| ![Alan simgesi](media/fields-icon.png)   | alan         |            |  ⌥ F
+| ![Arabirim simgesi](media/interface-icon.png)| arabirim     | `interface`|  ⌥ I
+| ![Anahtar sözcük simgesi](media/keyword-icon.png)  | sözcükle       |            |  ⌥ K
+| ![Yöntem simgesi](media/method-icon.png)   | method        |            |  ⌥
+| ![Ad alanı simgesi](media/namespace-icon.png)| ad alanı     | `namespace`|  ⌥ N
+| ![Props simgesi](media/props-icon.png)    | özellik      |            |  ⌥ P
+| ![Kod parçacığı simgesi](media/snippet-icon.png)  | gösterildiği       | `class`    |  ⌥ S
+| ![Struct simgesi](media/struct-icon.png)   | yapı     | `struct`   |  ⌥ S
 
-Simgelerden herhangi bir simgeye tıklayarak veya ilgili kısayol tuşlarına basarak tamamlama listesi yalnızca filtre kümesi tarafından tanımlanan türlerle sınırlayıcı olur.  
+Simgelere tıklayarak veya ilgili kısayol tuşlarına basarak, tamamlanma listesi yalnızca filtre kümesi tarafından tanımlanan türlerle sınırlayacaktır.  
 
-![Intellisense Tür Filtreleme](media/intellisense-typefiltering.gif)
+![IntelliSense tür filtrelemesi](media/intellisense-typefiltering.gif)
 
-## <a name="parameter-window"></a>Parametre Penceresi
+## <a name="parameter-window"></a>Parametre penceresi
 
-IntelliSense'in bir diğer özelliği de uygun olduğunda parametre listesi sağlayabilme özelliğidir. Parametre listesi, çağrılan kod için yöntem imzalarının ayrıntılarını sağlar. İmzanın içindeki yukarı/aşağı oklara tıklayarak, kullanılabilir parametre imzalarının her biri arasında döngüye geçerek, ihtiyaçlarınıza en uygun olanı seçebilirsiniz. İzin verilen veri türlerinin ayrıntılarına ek olarak, XML açıklamaları aracılığıyla hedef yöntemde tanımlandığı gibi bir açıklama da olabilir.
+IntelliSense 'in başka bir özelliği, uygun yerlerde bir parametre listesi sağlayabilmesidir. Parametre listesi, Çağrılmakta olan kod için yöntem imzalarının ayrıntılarını sağlar. İmza içindeki yukarı/aşağı oklara tıklayarak, gereksinimlerinize en uygun olanını belirleyebilmek için kullanılabilir her bir parametre imzasının her biri boyunca geçiş yapabilirsiniz. İzin verilen veri türlerinin ayrıntılarına ek olarak, XML açıklamaları aracılığıyla hedef yöntemde tanımlanan bir açıklama da olabilir.
 
 ![Parametre Listesi](media/intellisense-parameter.png)
 
-Parametreleri doldururken şu anda düzenlemekte olan parametre kalın, etkin olmayan parametreler ise standart ağırlık değerine sahip olur. 
+Parametreleri doldurduktan sonra, şu anda düzenlemekte olduğunuz parametre kalın olacaktır, ancak etkin olmayan parametreler standart ağırlığa sahip olur. 
 
 
-## <a name="triggering-completion-window-and-parameter-window"></a>Tamamlama Penceresini ve Parametre Penceresini Tetikleme
+## <a name="triggering-completion-window-and-parameter-window"></a>Tamamlama penceresi ve parametre penceresi tetikleniyor
 
-Siz kaynak dosyanıza yazarak tamamlama penceresi otomatik olarak tetiklenir. Ancak, kısayolunu kullanarak tamamlama penceresini de `control-space` tetiklersiniz. Bu tuş bileşimi tamamlama listesinin, noktanın geçerli konumunda görünmesine neden olur. 
+Tamamlanma penceresi, kaynak dosyanız içine yazarken otomatik olarak tetiklenecektir. Ancak, kısayolu kullanarak tamamlama penceresini de tetikleyebilirsiniz `control-space` . Bu anahtar birleşimi, tamamlanma listesinin giriş işaretinin geçerli konumunda görünmesine neden olur. 
 
-Ayrıca, yazarak parametre penceresinin görünümünü el ile `control-shift-space` tetikleyebilirsiniz. Caret'iniz bir parametre listesi için geçerli konumda olduğunda parametre listesi, caret konumunun yakınında görünür.
+Ayrıca, yazarak parametre penceresinin görünümünü el ile de tetikleyebilirsiniz `control-shift-space` . Giriş işareti bir parametre listesi için geçerli olan konumda olduğunda, parametre listesi, giriş işareti konumunun yakınında görünür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hızlı Eylemler (Visual Studio Windows)](/visualstudio/ide/quick-actions)
-- [Kodu yeniden düzenleme (Visual Studio üzerinde Windows)](/visualstudio/ide/refactoring-in-visual-studio)
+- [hızlı eylemler (Windows Visual Studio)](/visualstudio/ide/quick-actions)
+- [kodu yeniden düzenleme (Windows Visual Studio)](/visualstudio/ide/refactoring-in-visual-studio)

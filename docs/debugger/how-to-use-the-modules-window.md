@@ -26,12 +26,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: dd4be2f7cef8615fe7b12a2440c5fcdc24257bf4
-ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
+ms.openlocfilehash: 93fb75b96606a1bd7918604e5d84357d786a31b0
+ms.sourcegitcommit: 52a425b5a541034cda26db8df9cd43281c007e80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "129971160"
+ms.lasthandoff: 12/23/2021
+ms.locfileid: "135540555"
 ---
 # <a name="view-dlls-and-executables-in-the-modules-window-c-c-visual-basic-f"></a>modüller penceresinde dll 'leri ve yürütülebilir dosyaları görüntüleme (C#, C++, Visual Basic, F #)
 
@@ -60,7 +60,7 @@ Varsayılan olarak **modüller** penceresi modülleri yükleme sırasına göre 
 
 1. semboller yüklenmediğinde, **seçenekler** iletişim kutusunu açmak için **sembol Ayarlar** seçin ve sembol yükleme konumlarını belirtin veya değiştirin.
 
-   Sembolleri ortak Microsoft sembol sunucularından veya diğer sunuculardan indirebilir veya bilgisayarınızdaki bir klasörden sembolleri yükleyebilirsiniz. Ayrıntılar için bkz. [simge konumlarını ve yükleme davranışını belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md#BKMK_Specify_symbol_locations_and_loading_behavior).
+   Sembolleri ortak Microsoft sembol sunucularından veya diğer sunuculardan indirebilir veya bilgisayarınızdaki bir klasörden sembolleri yükleyebilirsiniz. Ayrıntılar için bkz. [sembol dosyalarının ve yükleme davranışının konumunu yapılandırma](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md#configure-location-of-symbol-files-and-loading-options).
 
 **Sembol yükleme davranışı ayarlarını değiştirmek için:**
 

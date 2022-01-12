@@ -1,6 +1,6 @@
 ---
-title: Azure AD bağlı hizmetiyle ilgili hataları tanılama (Visual Studio)
-description: Active Directory bağlı hizmeti uyumsuz bir kimlik doğrulaması türü algıladı
+title: Azure AD bağlı hizmeti ile hataları tanılama (Visual Studio)
+description: Active Directory bağlı hizmeti uyumsuz bir kimlik doğrulama türü algıladı
 author: ghogen
 manager: jillfra
 ms.prod: visual-studio-windows
@@ -10,28 +10,28 @@ ms.topic: reference
 ms.date: 12/14/2021
 ms.author: ghogen
 ms.custom: aaddev, vs-azure
-ms.openlocfilehash: 525e774728b4740d8503d539a5afdaf9cffdf727
-ms.sourcegitcommit: d3578c384959f1b76dd06fb4b5d075fb052f8c69
+ms.openlocfilehash: 4441e8b0191092a3501dc095beff62d4efdc30c4
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "135386749"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135805083"
 ---
-# <a name="diagnosing-errors-with-the-azure-active-directory-connected-service"></a>Azure Active Directory Bağlı Hizmet ile hataları tanılama
+# <a name="diagnosing-errors-with-the-azure-active-directory-connected-service"></a>Azure Active Directory bağlı hizmeti ile hataları tanılama
 
-Önceki kimlik doğrulama kodu algılandığında, Azure Active Directory bağlı hizmet uyumsuz bir kimlik doğrulama türü algıladı.
+Azure Active Directory bağlı hizmet, önceki kimlik doğrulama kodunu algılarken uyumsuz bir kimlik doğrulama türü algıladı.
 
-Projede önceki kimlik doğrulama kodunu doğru algılamak için projenin yeniden oluşturulmuş olması gerekir. Bu hatayı görüyorsanız ve projenize daha önce kimlik doğrulama kodunuz yoksa yeniden oluştur ve yeniden deneyin.
+Bir projede önceki kimlik doğrulama kodunu doğru bir şekilde algılamak için projenin yeniden oluşturulması gerekir. Bu hatayı görürseniz ve projenizde önceki bir kimlik doğrulama kodunuz yoksa, yeniden derleyin ve tekrar deneyin.
 
 ## <a name="project-types"></a>Project türleri
 
-Bağlı hizmet, projeye doğru kimlik doğrulama mantığını eklemesi için geliştirmekte olduğunu projenin türünü denetler. Projeden türeten herhangi bir denetleyici `ApiController` varsa, proje bir WebAPI projesi olarak kabul edilir. Yalnızca projeden türeten `MVC.Controller` denetleyiciler varsa, proje bir MVC projesi olarak kabul edilir. Bağlı hizmet başka bir proje türünü desteklemez.
+Bağlı hizmet, projenin doğru kimlik doğrulama mantığını ekleyebilmesi için, geliştirmekte olduğunuz projenin türünü denetler. Projede türetilen herhangi bir denetleyici varsa `ApiController` , proje bir WebAPI projesi olarak kabul edilir. Yalnızca projede türetilen denetleyiciler varsa `MVC.Controller` , proje BIR MVC projesi olarak kabul edilir. Bağlı hizmet diğer proje türlerini desteklemiyor.
 
 ## <a name="compatible-authentication-code"></a>Uyumlu kimlik doğrulama kodu
 
-Bağlı hizmet ayrıca daha önce yapılandırılmış veya hizmetle uyumlu olan kimlik doğrulama ayarlarını da denetler. Tüm ayarlar mevcutsa, yeniden kabul edilir ve bağlı hizmet açılırken ayarlar görüntülenir.  Yalnızca bazı ayarlar varsa, bu bir hata durumu olarak kabul edilir.
+Bağlı hizmet, daha önce yapılandırılmış veya hizmetle uyumlu olan kimlik doğrulama ayarlarını da denetler. Tüm ayarlar varsa, bu bir re-entrant durumu olarak kabul edilir ve bağlı hizmet, ayarları görüntüle ' yi açar.  Ayarlardan yalnızca bazıları varsa, bu durum bir hata durumu olarak kabul edilir.
 
-Bir MVC projesinde, bağlı hizmet aşağıdaki ayarlardan herhangi birini denetler ve bu da hizmetin önceki kullanımından kaynaklandır:
+Bir MVC projesinde, bağlı hizmet aşağıdaki ayarlardan herhangi birini denetler ve bu da hizmetin önceki kullanımıyla sonuçlanır:
 
 ```xml
 <add key="ida:ClientId" value="" />
@@ -40,7 +40,7 @@ Bir MVC projesinde, bağlı hizmet aşağıdaki ayarlardan herhangi birini denet
 <add key="ida:PostLogoutRedirectUri" value="" />
 ```
 
-Ayrıca bağlı hizmet, Web API projesinde aşağıdaki ayarlardan herhangi birini denetler ve bu da hizmetin önceki kullanımından kaynaklandır:
+Ayrıca, bağlı hizmet, bir Web API projesinde aşağıdaki ayarlardan herhangi birini denetler ve bu da hizmetin önceki kullanımı ile sonuçlanır:
 
 ```xml
 <add key="ida:ClientId" value="" />
@@ -50,13 +50,13 @@ Ayrıca bağlı hizmet, Web API projesinde aşağıdaki ayarlardan herhangi biri
 
 ## <a name="incompatible-authentication-code"></a>Uyumsuz kimlik doğrulama kodu
 
-Son olarak, bağlı hizmet, kimlik doğrulama kodunun önceki sürümleriyle yapılandırılmış olan sürümlerini algılamaya Visual Studio. Bu hatayı aldıysanız projenizin uyumsuz bir kimlik doğrulama türü içerdiği anlamına gelir. Bağlı hizmet, önceki sürümlerden gelen aşağıdaki kimlik doğrulama türlerini Visual Studio:
+Son olarak, bağlı hizmet, Visual Studio önceki sürümleriyle yapılandırılmış kimlik doğrulama kodu sürümlerini algılamaya çalışır. Bu hatayı aldıysanız, projenizin uyumsuz bir kimlik doğrulama türü içerdiği anlamına gelir. Bağlı hizmet, Visual Studio önceki sürümlerinden aşağıdaki kimlik doğrulama türlerini algılar:
 
 * Windows Kimlik Doğrulaması
-* Bireysel Kullanıcı Hesapları
-* Kuruluş Hesapları
+* Bireysel kullanıcı hesapları
+* Kuruluş hesapları
 
-Bir MVC Windows kimlik doğrulamasını algılamak için bağlı öğesi `authentication` dosyanıza `web.config` bakarak.
+MVC projesinde Windows kimlik doğrulamasını algılamak için, bağlantılı `authentication` öğeyi `web.config` dosyanızda arar.
 
 ```xml
 <configuration>
@@ -66,7 +66,7 @@ Bir MVC Windows kimlik doğrulamasını algılamak için bağlı öğesi `authen
 </configuration>
 ```
 
-Web API Windows kimlik doğrulamasını algılamak için bağlı hizmet `IISExpressWindowsAuthentication` projenizin dosyasındaki öğesini `.csproj` aramaz:
+bir Web apı projesinde Windows kimlik doğrulamasını algılamak için, bağlı hizmet `IISExpressWindowsAuthentication` projenizin dosyasındaki öğesini arar `.csproj` :
 
 ```xml
 <Project>
@@ -76,7 +76,7 @@ Web API Windows kimlik doğrulamasını algılamak için bağlı hizmet `IISExpr
 </Project>
 ```
 
-Bireysel Kullanıcı Hesapları kimlik doğrulamasını algılamak için bağlı hizmet dosyanız içinde paket öğesini `packages.config` okur.
+Bireysel kullanıcı hesapları kimlik doğrulamasını algılamak için, bağlı hizmet dosyanızdaki paket öğesini arar `packages.config` .
 
 ```xml
 <packages>
@@ -84,7 +84,7 @@ Bireysel Kullanıcı Hesapları kimlik doğrulamasını algılamak için bağlı
 </packages>
 ```
 
-Kuruluş Hesabı kimlik doğrulamasının eski bir formunu algılamak için bağlı hizmet içinde aşağıdaki öğeyi `web.config` aramaz:
+Eski bir kurumsal hesap kimlik doğrulaması biçimini algılamak için bağlı hizmet içinde aşağıdaki öğeyi arar `web.config` :
 
 ```xml
 <configuration>
@@ -94,6 +94,6 @@ Kuruluş Hesabı kimlik doğrulamasının eski bir formunu algılamak için bağ
 </configuration>
 ```
 
-Kimlik doğrulama türünü değiştirmek için uyumsuz kimlik doğrulama türünü kaldırın ve bağlı hizmeti yeniden eklemeyi deneyin.
+Kimlik doğrulama türünü değiştirmek için, uyumsuz kimlik doğrulama türünü kaldırın ve bağlı hizmeti yeniden eklemeyi deneyin.
 
-Daha fazla bilgi için [bkz. Azure AD için Kimlik Doğrulama Senaryoları.](/azure/active-directory/develop/authentication-vs-authorization.md)
+Daha fazla bilgi için bkz. [Azure AD Için kimlik doğrulama senaryoları](/azure/active-directory/develop/authentication-vs-authorization).

@@ -5,7 +5,6 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
-- vs.debug.gputthreads
 - vs.debug.gputhreads
 dev_langs:
 - CSharp
@@ -21,12 +20,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9be84a36c06da9fde107f5eaa9f1265985faa9db
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 7176b3a7108f27adac13f131ed3ab17703d2fbe0
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122154037"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135804850"
 ---
 # <a name="how-to-use-the-gpu-threads-window-c"></a>Nasıl yapılır: GPU Iş parçacıkları penceresini kullanma (C++)
 GPU Iş parçacıkları penceresinde, hata ayıklaması yaptığınız uygulamadaki GPU üzerinde çalışan iş parçacıklarını inceleyebilir ve bunlarla çalışabilirsiniz. GPU üzerinde çalışan uygulamalar hakkında daha fazla bilgi için bkz. [C++ AMP genel bakış](/cpp/parallel/amp/cpp-amp-overview).

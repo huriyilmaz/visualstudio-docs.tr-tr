@@ -1,50 +1,51 @@
 ---
 title: Çoklu başlangıç projeleri ayarlama
-description: Bu makalede, birden çok projenin çalıştırıldığında veya hata ayıklamada başlatılacak şekilde nasıl ayarlanacağı açıklanır.
+description: Bu makalede, çalıştırma veya hata ayıklama için birden çok proje ayarlama açıklanmıştır.
 author: jmatthiesen
 ms.author: jomatthi
+manager: dominicn
 ms.date: 11/09/2020
 ms.topic: how-to
 ms.prod: visual-studio-mac
 ms.assetid: fd354fff-ce6b-4505-a815-84a2311e39ba
-ms.openlocfilehash: df1e088a5e2d0f65d8b72dad0895f1edb1740f1f
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: d219d8aca5c9af49ff8f4f0e0490f0bd794b56d9
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126633553"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135805513"
 ---
 # <a name="set-multiple-startup-projects"></a>Çoklu başlangıç projeleri ayarlama
 
-Mac için Visual Studio, çözümünüzü hata ayıkladığınızda veya çalıştırdığınızda birden çok projenin başlatılmasını belirtmenizi sağlar.
+Mac için Visual Studio, çözümde hata ayıklarken veya çözümde hata ayıklarken birden fazla projenin başlat gerektiğini belirtmenize olanak sağlar.
 
 ## <a name="to-set-multiple-startup-projects"></a>Birden çok başlangıç projesi ayarlamak için
 
-1. Çözüm penceresinde çözümü (üstteki düğüm) seçin.
+1. Çözüm Penceresinde çözümü (üst düğüm) seçin.
 
-2. Çözüm düğümüne sağ tıklayın ve ardından **Başlangıç projelerini ayarla**' yı seçin:
+2. Çözüm düğümüne sağ tıklayın ve Başlangıç Projelerini **Ayarla'yı seçin:**
 
    ![Başlangıç Projelerini Ayarlama seçeneğini belirleyin](media/startup-proj-ctx-menu.png)
 
-3. **Çözüm çalıştırma yapılandırması oluştur** iletişim kutusu açılır. Bu iletişim kutusu, çözümünüz için yeni bir adlandırılmış çözüm çalıştırma yapılandırması oluşturmanıza olanak sağlar. Dilediğiniz adı kullanabilirsiniz. Varsayılan ad `Multiple Projects` .
+3. Çözüm **Çalıştırma Yapılandırması Oluştur** iletişim kutusu açılır. Bu iletişim kutusu, çözümünüz için Çözüm Çalıştırma Yapılandırması adlı yeni bir oluşturmanızı sağlar. Istediğiniz adı kullanabilirsiniz. Varsayılan ad: `Multiple Projects` .
 
-   ![Çözüm çalıştırma yapılandırması oluştur iletişim kutusu](media/create-sln-run-config.png)
+   ![Çözüm Çalıştırma Yapılandırması Oluştur iletişim kutusu](media/create-sln-run-config.png)
 
-4. **Çalıştırma yapılandırması oluştur**' u seçin. **Çözüm seçenekleri** iletişim kutusu yeni çözüm Çalıştır Yapılandırması seçiliyken açılır:
+4. Çalıştırma **Yapılandırması Oluştur'a seçin.** Çözüm **Seçenekleri iletişim** kutusu yeni Çözüm Çalıştırma Yapılandırması seçili olarak açılır:
 
-   ![Çözüm seçenekleri iletişim kutusu](media/sln-options-run-config-multi-projects.png)
+   ![Çözüm Seçenekleri iletişim kutusu](media/sln-options-run-config-multi-projects.png)
 
-5. Mac için Visual Studio ' den uygulamanızı hata ayıkladığınızda veya çalıştırırken başlatmak istediğiniz projeleri seçin:
+5. Uygulamanıza hata ayıklarken veya bu projelerden uygulamalarınızı çalıştırarak başlatmak Mac için Visual Studio:
 
-   ![Seçili projeler içeren çözüm seçenekleri iletişim kutusu](media/sln-options-run-config-multi-projects-configured.png)
+   ![Seçili projelerin yer alan Çözüm Seçenekleri iletişim kutusu](media/sln-options-run-config-multi-projects-configured.png)
 
-6. **Tamam**’ı seçin. Yeni çözüm çalıştırma yapılandırması etkin çalıştırma yapılandırması olarak ayarlanır:
+6. **Tamam**’ı seçin. Yeni Çözüm Çalıştırma Yapılandırması etkin çalıştırma yapılandırması olarak ayarlanır:
 
-   ![Hata ayıklamada veya çalıştırmada başlatılacak şekilde yapılandırılmış birden çok projeyle sahip çözüm](media/startup-project-configured.png)
+   ![Hata ayıklama veya çalıştırma için birden çok proje yapılandırılan çözüm](media/startup-project-configured.png)
 
-   Artık iki proje başlatılacak şekilde yapılandırılmıştır. Bu, çözüm penceresinde **kalın** görüntülenen her iki proje tarafından temsil edilir. Araç çubuğunda, yeni çalıştırma yapılandırması geçerli çözüm çalıştırma yapılandırması olarak ayarlanır.
+   Şimdi iki proje başlatacak şekilde yapılandırıldı. Bu, Çözüm Penceresinde kalın görünen her iki **projeyle** de gösterilir. Araç çubuğunda, yeni çalıştırma yapılandırması geçerli Çözüm Çalıştırma Yapılandırması olarak ayarlanır.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Mac için Visual Studio derleme ve oluşturma](compiling-and-building.md)
+- [Derleme ve derleme Mac için Visual Studio](compiling-and-building.md)
 - [Yapı yapılandırmalarını anlama](configurations.md)

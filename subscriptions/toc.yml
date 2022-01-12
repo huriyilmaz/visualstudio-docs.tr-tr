@@ -24,7 +24,7 @@
                   href: manage-mpn-subscriptions.md
             - name: Startup’lar için Microsoft
               href: program-startups.md
-    - name: Abone portalında oturum açın
+    - name: Abone portalında oturum açma
       items:
         - name: Microsoft Hesaplarıyla oturum açma
           href: sign-in-msa.md
@@ -46,9 +46,9 @@
       href: manage-vs-subscriptions.md
     - name: Aboneliklerin süresi dolduğunda
       href: subscription-expiration.md
-    - name: Abonelik düzeyi değişiklikleri
+    - name: Abonelik düzeyindeki değişiklikler
       href: subscription-level-changes.md
-    - name: Kaldırılan abonelikler
+    - name: Abonelikler kaldırıldı
       href: subscription-removed.md
 - name: Abonelikler yöneticinize başvurma
   href: contact-my-admin.md
@@ -60,8 +60,10 @@
   items:
     - name: Azure DevTest teklifi
       href: /azure/devtest/offer/
-    - name: Azure geliştirme ve test teklifi uygunluğu
+    - name: Azure Geliştirme ve Test teklifi uygunluğu
       href: vs-azure-eligibility.md
+    - name: Azure kredi erişimini koruma
+      href: azure-access.md
     - name: Azure DevOps
       href: vs-azure-devops.md
 - name: Diğer avantajlar
@@ -128,7 +130,7 @@
       href: product-keys.md
     - name: Anahtar bulma ve isteme
       href: find-keys.md
-    - name: Internet gösterileri ve RDS 'yi sunma
+    - name: İnternet tanıtımları ve RDS teklifi
       href: internet-demos.md
 - name: Yönetici sorumlulukları
   items:
@@ -170,11 +172,11 @@
           href: assign-license-bulk.md
         - name: Özel abonelikler atama
           href: assign-guid.md
-    - name: Yeni sözleşmelere erişin
+    - name: Yeni sözleşmelere erişme
       href: agreement-renewals.md
-    - name: Abonelikleri yeni sözleşmelere taşıyın
+    - name: Abonelikleri yeni sözleşmelere taşıma
       href: migrate-subscriptions.md
-    - name: Anlaşmalar yenilediğinde ne olur?
+    - name: Sözleşmeler yenilendi mi ne olur?
       href: agreement-renewals.md
     - name: Abonelikleri düzenleme
       href: edit-license.md
@@ -188,7 +190,7 @@
       href: handle-overclaimed-license.md
     - name: En fazla kullanım
       href: maximum-usage.md
-    - name: Sözleşmelerin süreleri dolduğunda ne olur?
+    - name: Anlaşmaların süresi dolduğunda ne olur?
       href: admin-expiration.md
     - name: Microsoft tarafından kaldırılan hesaplar
       href: account-removed.md

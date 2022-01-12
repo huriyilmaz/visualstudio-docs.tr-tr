@@ -16,12 +16,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 3def27cc4960852bce00fdc65f575231c9be871f
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: e8e828505077e30b6c80b47bbdeb53fbb91ffb68
+ms.sourcegitcommit: 52a425b5a541034cda26db8df9cd43281c007e80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126627806"
+ms.lasthandoff: 12/23/2021
+ms.locfileid: "135540542"
 ---
 # <a name="visualizer-architecture"></a>Görselleştirici Mimarisi
 Bir hata ayıklayıcı görselleştiricisi mimarisi iki bölümden oluşur:
@@ -60,7 +60,7 @@ Bir hata ayıklayıcı görselleştiricisi mimarisi iki bölümden oluşur:
 |DialogDebuggerVisualizer sınıfı<br /><br /> Idalogvisualizerservice arabirimi|Veri nesnesi|
 |Nesne sağlayıcısı (uygular <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider> )|Nesne kaynağı (türetilen <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> )|
 
- Nesne sağlayıcısı, görselleştiricisi Kullanıcı arabirimine görselleştirilebilen nesne verileri sağlar. Nesne sağlayıcısı nesne kaynağından nesne verilerini alır. Nesne sağlayıcısı ve nesne kaynağı, hata ayıklayıcı tarafı ve hata ayıklama tarafı arasındaki nesne verilerini iletmek için API 'Ler sağlar.
+ Nesne sağlayıcısı, görselleştiricisi Kullanıcı arabirimine görselleştirilebilen nesne verileri sağlar. Nesne sağlayıcısı nesne kaynağından nesne verilerini alır. Nesne sağlayıcısı ve nesne kaynağı, hata ayıklayıcı tarafı ile hata ayıklanan kenar arasındaki nesne verilerini iletmek için API 'Ler sağlar.
 
  Her Görselleştirici görselleştirilebilen veri nesnesini almalıdır. Aşağıdaki tabloda, nesne sağlayıcısının ve nesne kaynağının bu amaçla kullandığı ilgili API 'Ler gösterilmektedir:
 

@@ -1,12 +1,10 @@
 ---
-title: Uygulama Visual Studio dışında çalıştırırken erişim ihlallerinde hata ayıkla
+title: Uygulamayı uygulamanın dışında çalıştırarak erişim ihlallerinin Visual Studio
 titleSuffix: ''
-description: Visual Studio ortamının dışında oluşan bir erişim ihlaline hata ayıklaması yapmak için tam zamanında hata ayıklayıcıyı kullanın.
+description: Uygulama ortamının dışında oluşan erişim ihlalinde hata ayıklamak için Tam Zamanında Hata Ayıklayıcı'Visual Studio kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
-f1_keywords:
-- vs.debug.access
 dev_langs:
 - CSharp
 - VB
@@ -22,21 +20,21 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: ec9b41f45211294f0587d4e78fc879394e677e7f
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: ef9b645c22296aeaa9af3c08e3767e6c821c954b
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122080825"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135804148"
 ---
 # <a name="how-can-i-debug-access-violations-when-running-my-program-outside-the-debugger"></a>Kendi Programımı Hata Ayıklayıcı Dışında Çalıştırırken Erişim İhlallerinde Nasıl Hata Ayıklayabilirim?
 
 ## <a name="problem-description"></a>Sorun Açıklaması
- programımı Visual Studio ortamda ince çalışır, ancak Windows işletim sistemiyle tek başına çalıştırıldığımda, bir erişim ihlali üretir. Bu sorunu nasıl ayıklayabilirim?
+ Programım Visual Studio iyi çalışıyor, ancak bunu işletim sistemiyle tek başına Windows erişim ihlaline neden oluyor. Bu sorunda nasıl hata ayık bilmiyorum?
 
 ## <a name="solution"></a>Çözüm
- [Tam zamanında hata ayıklama](../debugger/just-in-time-debugging-in-visual-studio.md) seçeneğini ayarlayın ve erişim ihlali gerçekleşene kadar programınızı tek başına çalıştırın. Ardından, **erişim ihlali** iletişim kutusunda, hata ayıklayıcıyı başlatmak için **iptal** ' e tıklayabilirsiniz.
+ Tam [zamanında hata ayıklama seçeneğini ayarlayın ve](../debugger/just-in-time-debugging-in-visual-studio.md) erişim ihlali oluşana kadar programınızı tek başına çalıştırın. Ardından, Erişim **İhlali** iletişim kutusunda İptal'e **tıklar ve** hata ayıklayıcıyı başlatabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Yerel kod SSS hatalarını ayıklama](../debugger/debugging-native-code-faqs.md)
+- [Yerel Kodda Hata Ayıklama hakkında SSS](../debugger/debugging-native-code-faqs.md)
 - [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)

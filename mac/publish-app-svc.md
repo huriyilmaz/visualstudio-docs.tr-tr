@@ -5,20 +5,20 @@ ms.date: 04/02/2019
 helpviewer_keywords:
 - deployment, website
 ms.assetid: 8524a4c5-97a9-41ac-a2a0-034efb9bfc57
-author: jmatthiesen
-ms.author: jomatthi
-manager: dominicn
+author: sayedihashimi
+ms.author: sayedha
+manager: unniravindranathan
 ms.prod: visual-studio-mac
 ms.custom: video
 ms.topic: how-to
 ms.workload:
 - azure
-ms.openlocfilehash: 79d6c9de13fe42b4f530a9b2c40081ff9f945431
-ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
+ms.openlocfilehash: 65bcdfd7226d3e0141e98e7a524d6ffa7fde0c39
+ms.sourcegitcommit: fc874be3fe4637a23997b4ef2d99a2ee9a499581
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "135805773"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "135516705"
 ---
 # <a name="publish-a-web-app-to-azure-app-service-using-visual-studio-for-mac"></a>Mac için Visual Studio kullanarak Azure App Service bir Web uygulaması yayımlama
 

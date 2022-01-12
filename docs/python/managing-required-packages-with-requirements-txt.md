@@ -1,6 +1,6 @@
 ---
-title: requirements.txt ile paket bağımlılıklarını yönetme
-description: Bir requirements.txt dosyası projenin bağımlılıklarını açıklar. Bir requirements.txt dosyası içeren bir proje alıyorsanız, bu bağımlılıkları tek bir adımda kolayca yükleyebilirsiniz.
+title: Python paket bağımlılıklarını yönetme
+description: Pip freeze > requirements.txt python paketi bağımlılıklarını yönetme Visual Studio.
 ms.date: 12/11/2021
 ms.custom: devdivchpfy22
 ms.topic: how-to
@@ -11,46 +11,46 @@ ms.technology: vs-python
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 7b1d3a042a753460163b09d855c55f4bbbde6c5b
-ms.sourcegitcommit: 04fb8ba0f7ea73ba17baa88f10563c8600e7fd7b
+ms.openlocfilehash: 67eca5ffd74b630af90f55a0e631c2f09fad7351
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "135121506"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135805110"
 ---
-# <a name="manage-required-packages-with-requirementstxt"></a>Gerekli paketleri requirements.txt ile yönetme
+# <a name="manage-required-python-packages-with-requirementstxt"></a>Gerekli Python paketlerini requirements.txt
 
-Bir projeyi başkalarıyla paylaşıyorsanız, bir yapı sistemi kullanıyorsanız veya projeyi geri yüklemeniz gereken başka bir konuma kopyalamayı planlıyorsanız, projenin gerektirdiği harici paketleri belirtmeniz gerekir. Önerilen yaklaşım, bağımlı paketlerin gerekli sürümlerini yükleyen PIP komutlarının bir listesini içeren bir [requirements.txt dosyası](https://pip.readthedocs.org/en/latest/user_guide.html#requirements-files) (readthedocs.org) kullanmaktır. En yaygın komut, `pip freeze > requirements.txt` bir ortamın geçerli paket listesini *requirements.txt* olarak kaydeder.
+Projeyi başkalarla paylaşıyorsanız, derleme sistemi kullanıyorsanız veya projeyi ortamı geri yüklemeniz gereken başka bir konuma kopyalamayı planlıyorsanız, projenin gerektirdiği dış paketleri belirtmeniz gerekir. Önerilen yaklaşım, bağımlı [ paketlerin gerekli sürümlerinirequirements.txt](https://pip.readthedocs.org/en/latest/user_guide.html#requirements-files) pip komutlarının listesini içeren birrequirements.txt dosyası (readthedocs.org) kullanmaktır. En yaygın komut, `pip freeze > requirements.txt` ortamın geçerli paket listesini ** requirements.txt.
 
-teknik olarak, her türlü dosya adı, gereksinimleri izlemek için kullanılabilir ( `-r <full path to file>` bir paket yüklenirken kullanılarak), ancak Visual Studio *requirements.txt* için özel destek sağlar:
+Teknik olarak, herhangi bir dosya adı gereksinimleri izlemek için kullanılabilir (bir paket yüklerken kullanarak) ancak Visual Studio için belirli `-r <full path to file>` *requirements.txt:*
 
-- *requirements.txt* içeren bir proje yüklediyseniz ve bu dosyada listelenen tüm paketleri yüklemek istiyorsanız, **Çözüm Gezgini**' de **Python ortamları** düğümünü genişletin, ardından bir ortam düğümüne sağ tıklayıp **requirements.txt'den Install**' u seçin:
+- *requirements.txt* içeren bir proje yüklemiş ve bu dosyada listelenen tüm paketleri yüklemek isterseniz, **Çözüm Gezgini'daki** **Python** Ortamları düğümünü genişletin, ardından bir ortam düğümüne sağ tıklayın ve requirements.txt'den **yükle'yi seçin:**
 
     :::moniker range=">=vs-2019"
-    ![requirements.txt 'den Install-2019](media/environments/environments-requirements-txt-install.png)
+    ![requirements.txt-2019'dan yükleme](media/environments/environments-requirements-txt-install.png)
     :::moniker-end
 
-- Bağımlılıkları bir sanal ortama yüklemek istiyorsanız önce bu ortamı oluşturup etkinleştirin, ardından **requirements.txt'Den Install** komutunu kullanın. Sanal ortam oluşturma hakkında daha fazla bilgi için bkz. [sanal ortamları kullanma](selecting-a-python-environment-for-a-project.md#use-virtual-environments).
+- Bağımlılıkları bir sanal ortama yüklemek için önce bu ortamı oluşturun ve etkinleştirin, ardından Install **from requirements.txt** komutunu kullanın. Sanal ortam oluşturma hakkında daha fazla bilgi için [bkz. Sanal ortamları kullanma.](selecting-a-python-environment-for-a-project.md#use-virtual-environments)
 
-- Bir ortama zaten gerekli olan tüm paketler varsa, **Çözüm Gezgini** bu ortama sağ tıklayıp gerekli dosyayı oluşturmak Için **requirements.txtoluştur** ' u seçebilirsiniz. Dosya zaten varsa, güncelleştirme hakkında bir istem görünür:
+- Bir ortamda gerekli tüm paketler zaten yüklüyse, gerekli dosyayı oluşturmak  için Çözüm Gezgini'da bu ortama sağ tık requirements.txt **Oluştur'u** seçin. Dosya zaten varsa, dosyanın nasıl güncelleştiril burasıyla ilgili bir istem görüntülenir:
 
     :::moniker range=">=vs-2022"
-    ![requirements.txt oluştur](media/environments/environments-requirements-txt-install-2022.png)
+    ![Yeni requirements.txt](media/environments/environments-requirements-txt-install-2022.png)
     :::moniker-end
 
     :::moniker range="<=vs-2019"
-    ![requirements.txt oluştur](media/environments/environments-requirements-txt-install.png)
+    ![Yeni requirements.txt](media/environments/environments-requirements-txt-install.png)
     :::moniker-end
 
-    ![requirements.txt seçeneklerini Güncelleştir](media/environments/environments-requirements-txt-replace.png)
+    ![Güncelleştirme requirements.txt güncelleştirme](media/environments/environments-requirements-txt-replace.png)
 
-  - Tüm **dosyanın yerini değiştirme** , var olan tüm öğeleri, açıklamaları ve seçenekleri kaldırır.
-  - **Mevcut girdileri Yenile** paket gereksinimlerini algılar ve sürüm belirticilerini Şu anda yüklü olan sürümle eşleşecek şekilde güncelleştirir.
-  - **Girişleri güncelleştirme ve ekleme** , bulunan tüm gereksinimleri yeniler ve diğer tüm paketleri dosyanın sonuna ekler.
+  - **Dosyanın tamamını** değiştir seçeneği mevcut olan tüm öğeleri, yorumları ve seçenekleri kaldırır.
+  - **Mevcut girdileri yenileme** paket gereksinimlerini algılar ve sürüm belirleyicilerini şu anda yüklü olan sürümle eşlenecek şekilde günceller.
+  - **Güncelleştirme ve ekleme girişleri** bulunan tüm gereksinimleri yeniler ve diğer tüm paketleri dosyanın sonuna ekler.
 
-*requirements.txt* dosyaları yüklü tüm paketlerin kesin sürümlerini içerir ve bu dosyaları bir ortamın gereksinimlerini dondurmak için kullanabilirsiniz. Kesin sürümler kullanarak, ortamınızı başka bir bilgisayarda kolayca yeniden oluşturabilirsiniz. Gereksinim dosyaları, bir sürüm aralığıyla yüklenseler bile, başka bir paketin bağımlılığı olarak veya PIP dışında bir yükleyiciyle birlikte paketleri içerir.
+Bu *requirements.txt* tüm yüklü paketlerin kesin sürümlerini içerir ve bu dosyaları kullanarak bir ortamın gereksinimlerini dondurabilirsiniz. Hassas sürümleri kullanarak ortamınızı başka bir bilgisayarda kolayca yeniden üretebilirsiniz. Gereksinimler dosyaları, bir sürüm aralığıyla, başka bir paketin bağımlılığı olarak veya pip dışında bir yükleyiciyle yüklenmiş olsalar bile paketleri içerir.
 
-PIP bir paket yüklememezse ve paket bir *requirements.txt* dosyasında görünürse, tüm yükleme başarısız olur. Bu durumda, bu paketi hariç tutmak için dosyayı el ile düzenleyin veya paketin yüklenebilir bir sürümüne başvurmak için [PIP 'nin seçeneklerini](https://pip.readthedocs.org/en/latest/reference/pip_install.html#requirements-file-format) kullanın. Örneğin, [`pip wheel`](https://pip.readthedocs.org/en/latest/reference/pip_wheel.html) bir bağımlılığı derlemek verequirements.txtseçeneği eklemek için kullanmayı tercih edebilirsiniz `--find-links <path>` : **
+pip bir paket yüklemezse ve paket bir requirements.txtgörünürse, yüklemenin tamamı başarısız olur. Bu durumda, bu paketi dışlamak veya paketin yüklü bir sürümüne başvurmak için [pip'in](https://pip.readthedocs.org/en/latest/reference/pip_install.html#requirements-file-format) seçeneklerini kullanmak için dosyayı el ile düzenleyin. Örneğin, bir bağımlılığı derlemek için kullanmayı ve seçeneğini [`pip wheel`](https://pip.readthedocs.org/en/latest/reference/pip_wheel.html) `--find-links <path>`requirements.txt: **
 
 ```output
 C:\Project>pip wheel azure
@@ -79,7 +79,7 @@ Cleaning up...
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio Python ortamlarını yönetme](managing-python-environments-in-visual-studio.md)
+- [Python ortamlarını Visual Studio](managing-python-environments-in-visual-studio.md)
 - [Proje için yorumlayıcıyı seçme](selecting-a-python-environment-for-a-project.md)
 - [Arama yolları](search-paths.md)
-- [Python ortamları penceresi başvurusu](python-environments-window-tab-reference.md)
+- [Python Ortamları pencere başvurusu](python-environments-window-tab-reference.md)

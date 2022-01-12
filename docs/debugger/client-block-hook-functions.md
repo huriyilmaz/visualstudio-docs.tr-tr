@@ -4,8 +4,6 @@ description: _CLIENT_BLOCK bloklarında depolanan verilerin içeriğini doğrula
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.hooks
 dev_langs:
 - CSharp
 - VB
@@ -24,12 +22,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 3528d52f7e185c804d2f56b3cc9b0baa61228f38
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 99011706a0f034f13bd9f9923358282f3b5d6e19
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126630903"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135805032"
 ---
 # <a name="client-block-hook-functions"></a>İstemci Blok Kanca İşlevleri
 Bloklar halinde depolanan verilerin içeriğini doğrulamak veya raporlamak isterseniz `_CLIENT_BLOCK` , bu amaçla özel olarak bir işlev yazabilirsiniz. Yazdığınız işlev, CRTDBG içinde tanımlandığı şekilde aşağıdakine benzer bir prototipi içermelidir. Olsun

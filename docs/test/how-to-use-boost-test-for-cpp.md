@@ -1,6 +1,6 @@
 ---
-title: C++ için Boost.Test kullanma
-description: Bu ünitede birim testleri oluşturmak için Boost.Test Visual Studio.
+title: C++ için Boost. test kullanma
+description: Visual Studio birim testleri oluşturmak için Boost. test kullanın.
 ms.date: 01/29/2020
 ms.topic: how-to
 author: corob-msft
@@ -8,92 +8,92 @@ ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11cf28dcbb62144c59ee44b3cbc548fcf3fcbdc203261efa6073865afb5a53ef
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e7e422322d1d2d03839fd16807c639c9c2420a9b
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121366588"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135804772"
 ---
-# <a name="how-to-use-boosttest-for-c-in-visual-studio"></a>Visual Studio'da C++ için Boost.Test'i kullanma
+# <a name="how-to-use-boosttest-for-c-in-visual-studio"></a>Visual Studio C++ için Boost. test kullanma
 
-Bu Visual Studio 2017 ve sonraki bir yıl içinde Boost.Test test bağdaştırıcısı, Visual Studio IDE ile tümleştirilmiştir. C++ iş yüküyle **Masaüstü geliştirmenin bir bileşenidir.**
+Visual Studio 2017 ve üzeri sürümlerde, Boost. test test bağdaştırıcısı Visual Studio ıde ile tümleşiktir. Bu, C++ iş yüküne **sahip masaüstü geliştirme** bileşenidir.
 
-![Boost.Test için Test Bağdaştırıcısı](media/cpp-boost-component.png)
+![Boost. test için test bağdaştırıcısı](media/cpp-boost-component.png)
 
-C++ ile Masaüstü geliştirme **iş yükünüz yüklüyse,** **Visual Studio Yükleyicisi.** **C++ ile masaüstü geliştirme iş yükünü** ve ardından Değiştir **düğmesini** seçin.
+C++ iş yükünün yüklü **olduğu masaüstü geliştirmesi** yoksa **Visual Studio Yükleyicisi** açın. C++ iş yükü **Ile masaüstü geliştirmeyi** seçin, sonra **Değiştir** düğmesini seçin.
 
 ## <a name="install-boost"></a>Boost’u yükleyin
 
-Boost.Test için [Boost gerekir!](https://www.boost.org/) Boost yüklü değilse Vcpkg paket yöneticisini kullanmanızı öneririz.
+Boost. test için [Boost](https://www.boost.org/)! Yükseltme yüklü değilse, Vcpkg paket yöneticisini kullanmanızı öneririz.
 
-1. Vcpkg yüklemek için [Vcpkg: Windows C++](/cpp/vcpkg) paket yöneticisi (henüz yoksa) yönergeleri izleyin.
+1. vcpkg yüklemek için (henüz yoksa) [Windows için vcpkg: bir C++ paket yöneticisi](/cpp/vcpkg) ' nde bulunan yönergeleri izleyin.
 
-1. Boost.Test dinamik veya statik kitaplığını yükleyin:
+1. Boost. test dinamik veya statik kitaplığını yükler:
 
-    - `vcpkg install boost-test`Boost.Test dinamik kitaplığını yüklemek için çalıştırın.
+    - `vcpkg install boost-test`Boost. test dinamik kitaplığını yüklemek için öğesini çalıştırın.
 
        -VEYA-
 
-    - `vcpkg install boost-test:x86-windows-static`Boost.Test statik kitaplığını yüklemek için çalıştırın.
+    - `vcpkg install boost-test:x86-windows-static`Boost. test statik kitaplığını yüklemek için ' i çalıştırın.
 
-1. Kitaplığı `vcpkg integrate install` ile Visual Studio için çalıştırın ve Boost üst bilgileri ve ikilileri yollarını dahil edin.
+1. `vcpkg integrate install`' i kitaplıkla Visual Studio yapılandırmak ve arttırma üst bilgilerine ve ikili dosyalarına yollar eklemek için komutunu çalıştırın.
 
-Visual Studio'da çözüm içinde testlerinizi yapılandırma seçeneğine sahipsiniz: Test kodunuzu test kapsamındaki projeye dahil etmek veya testlerinizi oluşturmak için ayrı bir test projesi oluşturabilirsiniz. Her iki seçeneğin de avantajları ve dezavantajları vardır.
+Visual Studio çözümünüzde testlerinizin içinde testlerinizi yapılandırma seçeneğiniz vardır: test altındaki projeye test kodunuzu dahil edebilir veya testleriniz için ayrı bir test projesi oluşturabilirsiniz. Her iki seçenek de olumlu ve olumsuz yönleri vardır.
 
 ## <a name="add-tests-inside-your-project"></a>Projenizin içine testler ekleme
 
-2017 Visual Studio 15.6 ve sonraki sürümlerde, projenize testler için bir öğe şablonu eklemek için kullanabilirsiniz. Hem testler hem de kodunuz aynı projede yer alar. Test derlemesi oluşturmak için ayrı bir derleme yapılandırması oluşturmanız gerekir. Ayrıca testleri hata ayıklama ve sürüm derlemelerinin dışında tutmanız gerekir.
+Visual Studio 2017 sürüm 15,6 ve sonraki sürümlerde, projenize testler için bir öğe şablonu ekleyebilirsiniz. Hem testler hem de kodunuz aynı projede canlı. Bir test derlemesi oluşturmak için ayrı bir yapı yapılandırması oluşturmanız gerekecektir. Ve, testleri hata ayıklama ve yayın derlemelerinizden dışarı tutmanız gerekir.
 
-2017 Visual Studio 15.5 sürümünde Boost.Test için önceden yapılandırılmış test projesi veya öğe şablonu yoktur. Ayrı bir test projesi oluşturmak ve yapılandırmak için yönergeleri kullanın.
+Visual Studio 2017 sürüm 15,5 ' de, Boost. test için önceden yapılandırılmış bir test projesi veya öğe şablonu yok. Ayrı bir test projesi oluşturmak ve yapılandırmak için yönergeleri kullanın.
 
-### <a name="create-a-boosttest-item"></a>Boost.Test öğesi oluşturma
+### <a name="create-a-boosttest-item"></a>Boost. test öğesi oluşturma
 
-1. Testleriniz için *bir .cpp* dosyası oluşturmak için, dosyanın içinde proje düğümüne **sağ tıklayın ve Çözüm Gezgini** **Ekle'yi**  >  **seçin.**
+1. Testleriniz için bir *. cpp* dosyası oluşturmak üzere **Çözüm Gezgini** içindeki proje düğümüne sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin.
 
-1. Yeni Öğe **Ekle iletişim kutusunda** Test etmek için Yüklü   >  **Visual C++**  >  **genişletin.** **Boost.Test'i** ve ardından **Ekle'yi** seçerek *Test.cpp'yi* projenize ekleyin.
+1. **Yeni öğe Ekle** iletişim kutusunda, **yüklü**  >  **Visual C++**  >  **Test**' i genişletin. **Boost. test**' i seçin ve ardından projenize *test. cpp* eklemek için **Ekle** ' yi seçin.
 
-   ![Boost.Test Öğesi Şablonu](media/boost_test_item_template.png)
+   ![Boost. test öğesi şablonu](media/boost_test_item_template.png)
 
-Yeni *Test.cpp dosyası* bir örnek test yöntemi içerir. Bu dosya, kendi üst bilgi dosyalarınızı dahil etmek ve uygulamanıza testler yazmak için 2. dosyadır.
+Yeni *test. cpp* dosyası bir örnek test yöntemi içerir. Bu dosya, kendi başlık dosyalarınızı ekleyebileceğiniz ve uygulamanız için yazma testlerine sahip olduğunuz yerdir.
 
-Test dosyası ayrıca test yapılandırmaları için yeni bir yordam tanımlamak `main` üzere makroları kullanır. Projenizi şimdi derlemeniz, "main.obj'de zaten tanımlanmış olan bir _main" gibi bir LNK2005 hatasıyla karşınıza alır.
+Test dosyası ayrıca test yapılandırmalarına yönelik yeni bir yordam tanımlamak için makroları kullanır `main` . Projenizi şimdi oluşturursanız, "_main zaten Main. obj içinde tanımlanmış bir LNK2005 hatası görürsünüz.
 
-### <a name="create-and-update-build-configurations"></a>Derleme yapılandırmalarını oluşturma ve güncelleştirme
+### <a name="create-and-update-build-configurations"></a>Derleme yapılandırması oluşturma ve güncelleştirme
 
-1. Bir test yapılandırması oluşturmak için menü çubuğunda Derleme ve  >  Yapılandırma Yöneticisi. Yeni **Yapılandırma Yöneticisi** iletişim kutusunda Etkin çözüm yapılandırması altındaki açılan **listeyi açın ve** Yeni'yi **seçin.** Yeni Çözüm **Yapılandırması iletişim kutusunda** "UnitTests'te Hata Ayıklama" gibi bir ad girin. Ayarlarından kopyalama altında Hata **ayıkla'ya ve** ardından Tamam'ı **seçin.** 
+1. Test yapılandırması oluşturmak için, menü çubuğunda **derleme**  >  **Configuration Manager**' yi seçin. **Configuration Manager** iletişim kutusunda, **etkin çözüm yapılandırması** altında açılan menüyü açın ve **Yeni**' yi seçin. **Yeni çözüm yapılandırması** iletişim kutusunda, "hata ayıklama unittests" gibi bir ad girin. **Ayarları** Seç ' ın altından **Hata Ayıkla**' nın altında **Tamam**' ı seçin.
 
-1. Test kodunu Hata Ayıklama ve Sürüm yapılandırmalarından dışlayın: **Çözüm Gezgini'da** Test.cpp'ye sağ tıklayın ve Özellikler'i **seçin.** Özellik Sayfaları **iletişim kutusunda** Yapılandırma açılan listesinde **Tüm Yapılandırmalar'ı** seçin.  Yapılandırma **Özellikleri**  >  **Genel'i** seçin ve Derlemeden Hariç **Tutulacak özelliği için açılan listeyi** açın. **Evet'i** ve ardından **Uygula'ya** seçerek değişikliklerinizi kaydedin.
+1. Hata ayıklama ve yayın yapılandırmalarınızın test kodunu dışlayın: **Çözüm Gezgini** Içinde, test. cpp öğesine sağ tıklayın ve **Özellikler**' i seçin. **Özellik sayfaları** iletişim kutusunda, **yapılandırma** açılan menüsünde **tüm yapılandırmalar** ' ı seçin. **Yapılandırma özelliklerini**  >  **genel** ' i seçin ve **derleme özelliğinden dışlanan** açılan menüsünü açın. **Evet**' i seçin, sonra değişikliklerinizi kaydetmek için **Uygula** ' yı seçin.
 
-1. Test kodunu Hata Ayıklama UnitTests yapılandırmanıza dahil  etmek için Özellik Sayfaları iletişim kutusunda Yapılandırma açılan **listesinden UnitTest'lerde** Hata **Ayıkla'ya** seçin. **Derlemeden** Dışlanan **özelliğinde Hayır'ı** seçin ve ardından **tamam'ı** seçerek değişikliklerinizi kaydedin.
+1. Hata ayıklama UnitTests yapılandırmanıza test kodu eklemek için, **Özellik sayfaları** **Iletişim kutusunda** **unittests hata ayıkla** ' yı seçin. **Derleme özelliğinden hariç** **değil** ' i seçin ve ardından değişikliklerinizi kaydetmek için **Tamam** ' ı seçin.
 
-1. Ana kodu Hata Ayıklama UnitTests yapılandırmanız dışında tutabilirsiniz. Bu **Çözüm Gezgini** işlevinizi içeren dosyaya sağ tıklayın ve `main` Özellikler'i **seçin.** Özellik Sayfaları **iletişim kutusunda** Yapılandırma açılan **listesinden UnitTests'te** Hata **Ayıkla'ya** seçin. Yapılandırma **Özellikleri**  >  **Genel'i** seçin ve Derlemeden Hariç **Tutulacak özelliği için açılan listeyi** açın. **Evet'i** ve ardından **Tamam'ı** seçerek değişikliklerinizi kaydedin.
+1. Hata ayıklama UnitTests yapılandırmanızda ana kodu dışlayın. **Çözüm Gezgini**, işlevinizi içeren dosyaya sağ tıklayın `main` ve **Özellikler**' i seçin. **Özellik sayfaları** iletişim kutusu ' nda, **yapılandırma** açılan menüsünde **unittests hata ayıkla** ' yı seçin. **Yapılandırma özelliklerini**  >  **genel** ' i seçin ve **derleme özelliğinden dışlanan** açılan menüsünü açın. **Evet**' i seçin ve ardından değişikliklerinizi kaydetmek için **Tamam** ' ı seçin.
 
-1. Çözüm Yapılandırmasını **UnitTests'de** Hata Ayıklama olarak ayarlayın, ardından Test Gezgini'nin yöntemini keşfetmesini **sağlamak** için projenizi derleme.
+1. Çözüm yapılandırmasını, **UnitTests hata ayıklaması** için ayarlayın ve ardından **Test Gezgini** 'nin yöntemi bulmasını sağlamak için projenizi derleyin.
 
-Yapılandırma adı "Hata Ayıkla" veya "Yayın" sözcükleriyle başladığı sürece ilgili Boost.Test kitaplıkları otomatik olarak açılır.
+Oluşturduğunuz yapılandırma adı "Debug" veya "Release" kelimeleri ile başladığı sürece, karşılık gelen Boost. test kitaplıkları otomatik olarak kullanıma alınır.
 
-Öğe şablonu Boost.Test'in tek üst bilgili varyantını kullanır, ancak tek başına kitaplık #include yolunu değiştirebilirsiniz. Daha fazla bilgi için [bkz. Ekleme yönergeleri ekleme.](#add-include-directives)
+Öğe şablonu, Boost. test öğesinin tek üst bilgi çeşidini kullanır, ancak tek başına kitaplık türevini kullanmak için #include yolunu değiştirebilirsiniz. Daha fazla bilgi için bkz. [içerme yönergeleri ekleme](#add-include-directives).
 
 ## <a name="create-a-separate-test-project"></a>Ayrı bir test projesi oluşturma
 
-Çoğu durumda, testleriniz için ayrı bir proje kullanmak daha kolaydır. Projeniz için özel bir test yapılandırması oluşturmanıza gerek olmayacaktır. Veya test dosyalarını Hata Ayıklama ve Yayın derlemelerinden hariç tutabilirsiniz.
+Çoğu durumda, testleriniz için ayrı bir proje kullanmak daha kolay olur. Projeniz için özel bir test yapılandırması oluşturmanız gerekmez. Ya da hata ayıklama ve sürüm Derlemeleriyle test dosyalarını hariç tutun.
 
 ### <a name="to-create-a-separate-test-project"></a>Ayrı bir test projesi oluşturmak için
 
-1. Bu **Çözüm Gezgini,** çözüm düğümüne sağ tıklayın ve Yeni **Ekle'yi Project.**  >  
+1. **Çözüm Gezgini**, çözüm düğümüne sağ tıklayın ve   >  **yeni Project** ekle ' yi seçin.
 
-1. Yeni proje **ekle iletişim kutusunda,** filtre açılan **listelerde C++**, **Windows** **ve** Konsol'ı seçin. Konsol Uygulaması **şablonunu ve** ardından Sonraki'yi **seçin.**
+1. **yeni proje ekle** iletişim kutusunda, filtre açılır penceresinde **C++**, **Windows** ve **konsol** ' ı seçin. **Konsol uygulaması** şablonunu seçin ve ardından **İleri**' yi seçin.
 
-1. Projeye bir ad girin ve Oluştur'a **seçin.**
+1. Projeye bir ad verin ve **Oluştur**' a tıklayın.
 
-1. `main` *.cpp dosyasındaki işlevini* silin.
+1. `main` *. Cpp* dosyasındaki işlevini silin.
 
-1. Boost.Test'in tek üst bilgili veya dinamik kitaplık sürümünü kullanıyorsanız Ekleme yönergeleri [ekleme'ye gidin.](#add-include-directives) Statik kitaplık sürümünü kullanıyorsanız bazı ek yapılandırmalar da yapılandırmanız gerekir:
+1. Boost. test için tek üst bilgi veya dinamik kitaplık sürümünü kullanıyorsanız [ekleme yönergeleri Ekle](#add-include-directives)' ye gidin. Statik kitaplık sürümünü kullanıyorsanız, bazı ek yapılandırmalar yapmanız gerekir:
 
-   a. Proje dosyasını düzenlemek için önce kaldırmanız gerekir. Bu **Çözüm Gezgini** proje düğümüne sağ tıklayın ve Yüklemeden **kaldır'ı Project.** Ardından proje düğümüne sağ tıklayın ve **\> .vcxproj <Düzenle'yi seçin.**
+   a. Proje dosyasını düzenlemek için önce onu kaldırın. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Project kaldır**' ı seçin. Ardından, proje düğümüne sağ tıklayın ve **<adı \> . vcxproj** öğesini seçin.
 
-   b. Burada gösterildiği gibi **GenelLer özellik** grubuna iki satır ekleyin:
+   b. **Genel** Özellikler grubuna burada gösterildiği gibi iki satır ekleyin:
 
     ```xml
     <PropertyGroup Label="Globals">
@@ -103,41 +103,41 @@ Yapılandırma adı "Hata Ayıkla" veya "Yayın" sözcükleriyle başladığı s
     </PropertyGroup>
     ```
 
-   c. *\* .vcxproj dosyasını kaydedin ve* kapatın ve projeyi yeniden yükleyin.
+   c. *\* . Vcxproj* dosyasını kaydedip kapatın ve ardından projeyi yeniden yükleyin.
 
-   d. Özellik **Sayfaları'ı açmak** için proje düğümüne sağ tıklayın ve Özellikler'i **seçin.**
+   d. **Özellik sayfalarını** açmak için, proje düğümüne sağ tıklayın ve **Özellikler**' i seçin.
 
-   e. **C/C++ Kod**  >  **Oluşturma 'yi genişletin** ve çalışma zamanı **kitaplığını seçin.** Statik çalışma zamanı kitaplığında hata ayıklamak için **/MTd'yi** veya yayın statik çalışma zamanı kitaplığı için **/MT'yi** seçin.
+   e. **C/C++**  >  **kod üretimini** genişletin ve sonra **çalışma zamanı kitaplığı**' nı seçin. Statik çalışma zamanı kitaplığı hata ayıklaması için **/MTD** 'yi, sürüm statik çalışma zamanı kitaplığı için **/MT** seçin.
 
-   f. Linker **System 'i**  >  **genişletin.** **SubSystem'in Konsol** olarak ayar olduğunu **doğrulayın.**
+   f. **Bağlayıcı**  >  **sistemi**' ni genişletin. **Alt sistemin** **konsol** olarak ayarlandığını doğrulayın.
 
-   örneğin: Özellik **sayfalarını** kapatmak için Tamam'ı seçin.
+   örneğin: Özellik sayfalarını kapatmak için **Tamam ' ı** seçin.
 
-## <a name="add-include-directives"></a>Ekleme yönergeleri ekleme
+## <a name="add-include-directives"></a>İçerme yönergeleri ekleme
 
-1. Test *.cpp dosyanıza,* program tür ve işlevlerini test koduna görünür hale eklemek için `#include` gerekli yönergeleri ekleyin. Ayrı bir test projesi kullanıyorsanız, program genellikle klasör hiyerarşisinde bir alt düzeydedir. yazmanız `#include "../"` durumunda bir IntelliSense penceresi açılır ve üst bilgi dosyasının tam yolunu seçmenize olanak sağlar.
+1. Test *. cpp* dosyanızda, `#include` programınızın türlerini ve işlevlerini test koduna görünür hale getirmek için gerekli yönergeleri ekleyin. Ayrı bir test projesi kullanıyorsanız, genellikle program klasör hiyerarşisinde eşdüzey düzeyindedir. Yazarsanız `#include "../"` , bir IntelliSense penceresi görünür ve üst bilgi dosyasının tam yolunu seçmenizi sağlar.
 
-   ![#include yönergeleri ekleme](media/cpp-gtest-includes.png)
+   ![#İnclude yönergeleri ekleme](media/cpp-gtest-includes.png)
 
-   Tek başına kitaplığı aşağıdakilerle kullanabilirsiniz:
+   Tek başına kitaplığı ile birlikte kullanabilirsiniz:
 
    ```cpp
    #include <boost/test/unit_test.hpp>
    ```
 
-   Veya tek üst bilgili sürümü şu şekilde kullanabilirsiniz:
+   Ya da, ile tek üst bilgi sürümünü kullanın:
 
    ```cpp
    #include <boost/test/included/unit_test.hpp>
    ```
 
-   Ardından, `BOOST_TEST_MODULE` tanımlayın.
+   Ardından, tanımlayın `BOOST_TEST_MODULE` .
 
-Aşağıdaki örnek testin Test Gezgini'nde keşfedilebilir olması **için yeterlidir:**
+Test **Gezgini**'nde, testin keşfedilebilir olması için aşağıdaki örnek yeterlidir:
 
 ```cpp
 #define BOOST_TEST_MODULE MyTest
-#include <boost/test/included/unit_test.hpp\> //single-header
+#include <boost/test/included/unit_test.hpp> //single-header
 #include "../MyProgram/MyClass.h" // project being tested
 #include <string>
 
@@ -154,7 +154,7 @@ BOOST_AUTO_TEST_CASE(my_boost_test)
 
 ## <a name="write-and-run-tests"></a>Testleri yazma ve çalıştırma
 
-Artık Boost testleri yazmaya ve çalıştırmaya hazır oluruz. Test [makroları hakkında bilgi için](https://www.boost.org/doc/libs/1_71_0/libs/test/doc/html/index.html) Boost test kitaplığı belgelerine bakın. Test [Gezgini'ni kullanarak testlerinizi bulma,](run-unit-tests-with-test-explorer.md) çalıştırma ve gruplama hakkında bilgi için bkz. Test Gezgini ile **birim testleri çalıştırma.**
+Artık yükseltme testleri yazmaya ve çalıştırmaya hazırsınız. Test makroları hakkında bilgi için bkz. [Test kitaplığını destekleme belgeleri](https://www.boost.org/doc/libs/1_71_0/libs/test/doc/html/index.html) . **Test Gezgini**'ni kullanarak testlerinizi bulma, çalıştırma ve gruplandırma hakkında bilgi için bkz. [Test Gezgini Ile birim testleri çalıştırma](run-unit-tests-with-test-explorer.md) .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

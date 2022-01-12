@@ -1,27 +1,29 @@
 ---
 title: Mac için Visual Studio Apple Silikon makinelerde 8.10 ve .NET
 description: M1 makinelerde 2019'da çalışan desteklenen .NET sürümlerini alma adımları.
-author: heiligerdankgesang
-ms.author: dominicn
+author: jmatthiesen
+ms.author: jomatthi
+manager: dominicn
 ms.date: 11/08/2021
+ms.topic: how-to
 ms.assetid: db2dc420-63d2-44ef-bdda-a351561dc900
-ms.openlocfilehash: 785eb0814e27e83df4cc921bda18c6ad04960b2f
-ms.sourcegitcommit: 8b44ba7864f67afa476708d5092729345e689f93
+ms.openlocfilehash: 3cfda970cbada8ac746603f2439028552bd08478
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2021
-ms.locfileid: "132861568"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135805565"
 ---
 # <a name="visual-studio-for-mac-810-and-net-on-apple-silicon-machines"></a>Mac için Visual Studio Apple Silikon makinelerde 8.10 ve .NET
 
 Apple Silikon makinelerde (M1 veya ARM olarak da bilinir), Mac için Visual Studio 8.10 şu anda Kasım ayında yayımlanan .NET 6, .NET 5 ve .NET Core 3.1 x64 SDK'larını desteklememektedir. .NET 6 Arm64 SDK'sı da desteklemez. Bunlardan herhangi biri yüklüyse, 8.10'Mac için Visual Studio ve kaldırılması gereken eski .NET SDK'leri kaldırılır. 
 
 > [!NOTE]
-> Bu bilgiler, Mac için Visual Studio 2019 (8.10.x) sürümlerine özeldir. Mac için Visual Studio 2022 Preview sürümleri için bu işlem hakkında daha fazla bilgi için apple Silikon Mac için Visual Studio [17.0 ve .NET](/visualstudio/mac/uninstall-net-2022) sürümlerine bakın.
+> Bu bilgiler, Mac için Visual Studio 2019 (8.10.x) sürümlerine özeldir. Mac için Visual Studio 2022 Preview sürümlerine ilişkin bu işlem hakkında bilgi için ayrıntılar için Apple Silikon Mac için Visual Studio [17.0 ve .NET'e](/visualstudio/mac/uninstall-net-2022) bakın.
 
 ## <a name="uninstall-net-from-your-machine"></a>Makineden .NET'i kaldırın: 
 
-1. .NET [depolama deposundan](https://github.com/dotnet/sdk/blob/main/scripts/obtain/uninstall/dotnet-uninstall-pkgs.sh) kaldırma GitHub sağ tıklar ve Farklı Kaydet'i  seçerek dosyayı Mac'inize kaydedin.
+1. .NET [depolama deposundan](https://github.com/dotnet/sdk/blob/main/scripts/obtain/uninstall/dotnet-uninstall-pkgs.sh) kaldırma GitHub sağ tıklar ve Farklı Kaydet'i seçerek dosyayı Mac'inize kaydedin. 
 2. Terminal'i açın ve çalışma dizinini betiğin indirilmiş olduğu dizin olarak değiştirme:
  
     ```bash

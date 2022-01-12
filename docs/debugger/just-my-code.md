@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f3c65d76fd76eaf8391bd3757f9fbe112eed8fc
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 0ecdb99b23c47a237995be1179c3bf26258c3ea6
+ms.sourcegitcommit: 52a425b5a541034cda26db8df9cd43281c007e80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122090752"
+ms.lasthandoff: 12/23/2021
+ms.locfileid: "135540684"
 ---
 # <a name="debug-only-user-code-with-just-my-code"></a>Yalnızca Yalnızca kendi kodum ile Kullanıcı kodunda hata ayıkla
 
@@ -96,11 +96,11 @@ Visual Studio 2017 sürüm 15,8 ' den başlayarak, kod adımlaması için Yalnı
 
 Kod atlama davranışı için C++ içindeki Yalnızca kendi kodum yalnızca bu işlevleri *Kullanıcı olmayan kod* olarak değerlendirir:
 
-- Karşılık gelen PDB dosyası hata ayıklayıcıda yüklenmemiş olan işlevleri.
+- Karşılık gelen PDB dosyası hata ayıklayıcıda yüklenmeyen işlevler.
 - *%VSInstallDirectory%\common7\packages\debugger\visualıcılar* klasöründeki *\* . natjmc* dosyalarında belirtilen işlevler.
 
 > [!NOTE]
-> Yalnızca kendi kodum 'de kod adımlama desteği için, C++ kodunun Visual Studio 15,8 Preview 3 veya sonraki bir sürümde MSVC derleyicileri kullanılarak derlenmesi ve/jmc derleyici anahtarının etkinleştirilmesi gerekir (varsayılan olarak etkindir). Daha fazla bilgi için bkz. [C++ çağrı yığınını ve kod atlama davranışını özelleştirme](#BKMK_CPP_Customize_call_stack_behavior)ve bu [blog gönderisi](https://devblogs.microsoft.com/cppblog/announcing-jmc-stepping-in-visual-studio/). Eski bir derleyici kullanılarak derlenen kod için *. natstepfilter* dosyaları, yalnızca kendi kodum bağımsız olan kod adımlamayı özelleştirmenin tek yoludur. Bkz. [C++ atlama davranışını özelleştirme](#BKMK_CPP_Customize_stepping_behavior).
+> Yalnızca kendi kodum 'de kod adımlama desteği için, C++ kodunun Visual Studio 15,8 Preview 3 veya sonraki bir sürümde MSVC derleyicileri kullanılarak derlenmesi ve/jmc derleyici anahtarının etkinleştirilmesi gerekir (varsayılan olarak etkindir). Daha fazla bilgi için bkz. [C++ çağrı yığınını ve kod Adımlama davranışını](#BKMK_CPP_Customize_call_stack_behavior) ve bu [blog gönderisini](https://devblogs.microsoft.com/cppblog/announcing-jmc-stepping-in-visual-studio/)özelleştirme. Eski bir derleyici kullanılarak derlenen kod için *. natstepfilter* dosyaları, yalnızca kendi kodum bağımsız olan kod adımlamayı özelleştirmenin tek yoludur. Bkz. [C++ atlama davranışını özelleştirme](#BKMK_CPP_Customize_stepping_behavior).
 
 <a name="BKMK_CPP_Stepping_behavior"></a> C++ hata ayıklaması sırasında:
 
@@ -191,7 +191,7 @@ Bir *. natstepfilter* dosyası, bu söz dizimi Ile bir XML dosyasıdır:
 |Öğe|Açıklama|
 |-------------|-----------------|
 |`Function`|Gereklidir. Kullanıcı dışı işlevler olarak bir veya daha fazla işlevi belirtir.|
-|`Name`|Gereklidir. Eşleştirilecek tam işlev adını belirten bir ECMA-262 biçimli normal ifade. Örnek:<br /><br /> `<Name>MyNS::MyClass.*</Name>`<br /><br /> içindeki tüm yöntemlerin `MyNS::MyClass` Kullanıcı dışı kod olarak kabul edileceğini hata ayıklayıcıya söyler. Eşleşme büyük/küçük harfe duyarlıdır.|
+|`Name`|Gereklidir. Eşleştirilecek tam işlev adını belirten bir ECMA-262 biçimli normal ifade. Örneğin:<br /><br /> `<Name>MyNS::MyClass.*</Name>`<br /><br /> içindeki tüm yöntemlerin `MyNS::MyClass` Kullanıcı dışı kod olarak kabul edileceğini hata ayıklayıcıya söyler. Eşleşme büyük/küçük harfe duyarlıdır.|
 |`Module`|İsteğe bağlı. İşlevi içeren modülün tam yolunu belirten bir ECMA-262 biçimli normal ifade. Eşleşme büyük/küçük harfe duyarsızdır.|
 |`Action`|Gereklidir. Şu büyük/küçük harfe duyarlı değerlerden biri:<br /><br /> `NoStepInto`  -hata ayıklayıcıya işlevin üzerinde ilermasını söyler.<br /> `StepInto`  -hata ayıklayıcıya eşleşen işlev için diğerini geçersiz kılarak işlevin içine gitmesini söyler `NoStepInto` .|
 
@@ -213,15 +213,15 @@ JavaScript hata ayıklayıcısı kodu Kullanıcı veya Kullanıcı olmayan bu s�
    - Bir çerçeve başvurusunda, WinJS veya Azure SDK gibi betik, **Librarycode**' tır.
    - ,, Veya işlevlerine bir dize geçirerek yürütülen `setTimeout` betik `setImmediate` `setInterval` **UnrelatedCode**.
 
-2. dosyasındaki *% vsınstalldirectory% \JavaScript\JustMyCode\mycode.default.wwa.js* Visual Studio tüm JavaScript projeleri için belirtilen sınıflandırmalar.
+2. *%VSInstallDirectory%\JavaScript\JustMyCode\mycode.default.wwa.json* dosyasındaki Visual Studio tüm JavaScript projeleri için belirtilen sınıflandırmalar.
 
-3. Geçerli projenin dosyasındaki *mycode.js* sınıflandırmalar.
+3. Geçerli projenin *MyCode. JSON* dosyasındaki sınıflandırmalar.
 
 Her sınıflandırma adımı önceki adımları geçersiz kılar.
 
 Diğer tüm kodlar **MyCode** olarak sınıflandırılır.
 
-Bir JavaScript projesinin kök klasörüne *mycode.js* adlı bir *. JSON* dosyası ekleyerek varsayılan sınıflandırmaları değiştirebilir ve belirli dosyaları ve URL 'leri Kullanıcı veya Kullanıcı dışı kod olarak sınıflandırabilirsiniz. Bkz. [JavaScript yalnızca kendi kodum özelleştirme](#BKMK_JS_Customize_Just_My_Code).
+JavaScript projesinin kök klasörüne *MyCode. JSON* adlı bir *. JSON* dosyası ekleyerek varsayılan sınıflandırmaları değiştirebilir ve belirli dosyaları ve URL 'leri Kullanıcı veya Kullanıcı dışı kod olarak sınıflandırabilirsiniz. Bkz. [JavaScript yalnızca kendi kodum özelleştirme](#BKMK_JS_Customize_Just_My_Code).
 
 <a name="BKMK_JS_Stepping_behavior"></a> JavaScript hata ayıklaması sırasında:
 
@@ -248,11 +248,11 @@ Kodda ayarlanan kesme noktaları her zaman isabet ediyor, ancak kod sınıfland�
 
 ### <a name="customize-javascript-just-my-code"></a><a name="BKMK_JS_Customize_Just_My_Code"></a> JavaScript Yalnızca kendi kodum özelleştirme
 
-Tek bir JavaScript projesinde kullanıcı ve Kullanıcı olmayan kodu kategorilere ayırmak için, *mycode.js* adlı bir *. JSON* dosyasını projenin kök klasörüne ekleyebilirsiniz.
+Tek bir JavaScript projesi için Kullanıcı ve Kullanıcı olmayan kodu kategorilere ayırmak üzere, projenin kök klasörüne *MyCode. JSON* adlı bir *. JSON* dosyası ekleyebilirsiniz.
 
-Bu dosyadaki belirtimler, Varsayılan sınıflandırmaları ve dosyadaki *mycode.default.wwa.js* geçersiz kılar. Dosyadaki *mycode.js* tüm anahtar değer çiftlerini listelemez. **MyCode**, **Kitaplıklar** ve **ilişkisiz** değerler boş diziler olabilir.
+Bu dosyadaki belirtimlerde varsayılan sınıflandırmalar ve *MyCode. default. WWA. JSON* dosyası geçersiz kılınır. *MyCode. JSON* dosyasının tüm anahtar değer çiftlerini listeme gereksinimi yoktur. **MyCode**, **Kitaplıklar** ve **ilişkisiz** değerler boş diziler olabilir.
 
-Dosyalar *üzerindeMycode.js* bu söz dizimini kullanır:
+*MyCode. JSON* dosyaları şu sözdizimini kullanır:
 
 ```json
 {
@@ -282,7 +282,7 @@ Dosyalar *üzerindeMycode.js* bu söz dizimini kullanır:
 
 **Eval**, **Function** ve **ScriptBlock** anahtar değer çiftleri, dinamik olarak üretilen kodun sınıflandırıldığını belirleme:
 
-|Ad|Açıklama|
+|Adı|Açıklama|
 |-|-|
 |**Dğer**|Ana bilgisayar tarafından sunulan işleve bir dize geçirerek yürütülen komut dosyası `eval` . Varsayılan olarak, eval betiği **MyCode** olarak sınıflandırılır.|
 |**İşlev**|Oluşturucuya bir dize geçirerek yürütülen komut dosyası `Function` . Varsayılan olarak, Işlev betiği **Librarycode** olarak sınıflandırılır.|
@@ -298,7 +298,7 @@ Değeri şu anahtar sözcüklerden birine değiştirebilirsiniz:
 
 **MyCode**, **Kitaplıklar** ve **ilişkisiz** anahtar değer çiftleri bir sınıflandırmayla dahil etmek istediğiniz URL 'leri veya dosyaları belirtir:
 
-|Ad|Açıklama|
+|Adı|Açıklama|
 |-|-|
 |**MyCode**|**MyCode** olarak sınıflandırılan bir URL veya dosya dizisi.|
 |**Kitaplıklar**|**Librarycode** olarak sınıflandırılan bir URL veya dosya dizisi.|

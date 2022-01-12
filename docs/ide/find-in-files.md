@@ -2,7 +2,7 @@
 title: Dosyalarda Bul
 description: Dosyalarda Bul özelliğini ve bu özelliği kullanarak belirli bir dosya kümesinde arama yapmayı öğrenin.
 ms.custom: SEO-VS-2020
-ms.date: 08/02/2021
+ms.date: 11/29/2021
 ms.topic: conceptual
 f1_keywords:
 - vs.findinfiles
@@ -21,12 +21,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 6a1e75d54e0d6e5db484c35948beb6e2a2563416
-ms.sourcegitcommit: 28168514c0c9472e852de35cceb4f95837669da6
+ms.openlocfilehash: 41902f7e629864d355d0aa7067e82eeace9a3736
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "133257484"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135804746"
 ---
 # <a name="find-in-files"></a>Dosyalarda Bul
 
@@ -43,7 +43,7 @@ ms.locfileid: "133257484"
 :::image type="content" source="media/find-files-vs2019.png" alt-text="Visual Studio 2019'da Dosyalarda Bul sekmesinin açık olduğu Bul ve Değiştir iletişim kutusunun ekran görüntüsü.":::
 
 > [!IMPORTANT]
-> **Visual Studio 2019** sürüm [**16.6**](/visualstudio/releases/2019/release-notes-v16.6/) veya önceki bir  sürümü kullanıyorsanız, Bul ve Değiştir iletişim kutusu burada göründüğü gibi görünmüyor olabilir. Bu sayfanın [Visual Studio 2017](find-in-files.md?view=vs-2017&preserve-view=true) sürümüne geçiş yapmak için ekranda gördüğünüz açıklamalara bakın.
+> **Visual Studio 2019** sürüm [**16.6**](/visualstudio/releases/2019/release-notes-v16.6/) veya önceki bir sürümü  kullanıyorsanız, Bul ve Değiştir iletişim kutusu burada göründüğü gibi görünmüyor olabilir. Bu sayfanın [Visual Studio 2017](find-in-files.md?view=vs-2017&preserve-view=true) sürümüne geçiş yapmak için ekranda gördüğünüz açıklamalara bakın.
 
 ::: moniker-end
 
@@ -93,7 +93,7 @@ Aşağıdaki seçenekleri kullanabilir veya temizebilirsiniz:
 
 - **Eşleşme durumu** - Aramanızı büyük/büyük/büyük harfe duyarlı olduğundan emin olmak için bu seçeneği kullanın.
 - **Tam sözcüğü eşle** - Aramanızı yalnızca tam sözcük eşleşmeleri döndürecek şekilde emin olmak için bu seçeneği kullanın.
-- **Normal ifadeler kullan** - Bu seçeneği, Arama kutusunda (veya Değiştir metin kutusunda) eşleşmeye yönelik metin desenlerini tanımlayan özel ifadeler **kullanmak** için kullanın. Bu ifadelerin listesi için [bkz. Visual Studio.](../ide/using-regular-expressions-in-visual-studio.md)
+- **Normal ifadeler kullan** - Bu seçeneği, Arama kutusunda (veya Değiştir metin kutusunda) eşleşmeye yönelik metin desenlerini tanımlayan özel ifadeler **kullanmak** için kullanın. Bu ifadelerin listesi için [bkz. Visual Studio'de normal ifadeler kullanma.](../ide/using-regular-expressions-in-visual-studio.md)
 
     > [!Important]
     > İfade **Oluşturucusu** düğmesi, Arama kutusunun yanında yalnızca Normal ifadeler kullan **onay kutusunu seçtiyebilirsiniz.**
@@ -135,7 +135,7 @@ Aşağıdaki seçenekleri kullanabilir veya temizebilirsiniz:
 
 - **Eşleşme durumu** - Aramanızı büyük/büyük/büyük harfe duyarlı olduğundan emin olmak için bu seçeneği kullanın.
 - **Tam sözcüğü eşle** - Aramanızı yalnızca tam sözcük eşleşmeleri döndürecek şekilde emin olmak için bu seçeneği kullanın.
-- **Normal ifadeler kullan** - Bu seçeneği, Arama kutusunda (veya Değiştir metin kutusunda) eşleşmeye yönelik metin desenlerini tanımlayan özel ifadeler **kullanmak** için kullanın. Bu ifadelerin listesi için [bkz. Visual Studio.](../ide/using-regular-expressions-in-visual-studio.md)
+- **Normal ifadeler kullan** - Bu seçeneği, Arama kutusunda (veya Değiştir metin kutusunda) eşleşmeye yönelik metin desenlerini tanımlayan özel ifadeler **kullanmak** için kullanın. Bu ifadelerin listesi için [bkz. Visual Studio'de normal ifadeler kullanma.](../ide/using-regular-expressions-in-visual-studio.md)
 
     > [!Important]
     > İfade **Oluşturucusu** düğmesi, Arama kutusunun yanında yalnızca Normal ifadeler kullan **onay kutusunu seçtiyebilirsiniz.**
@@ -183,7 +183,7 @@ Arama açılan listesinden **seçilen** seçenek, Dosyalarda  Bul seçeneğinin 
 Listeden bir arama kapsamı seçin veya Gözat **(...)**  düğmesine tıklayarak Arama Klasörlerini Seç iletişim kutusunu görüntüleyin ve kendi dizin kümenizi girin. Ayrıca, Doğrudan Arama kutusuna bir **yol da girebilirsiniz.**
 
 > [!WARNING]
-> Çözümün Tamamı **veya Geçerli Çözüm** seçeneklerini **Project** proje ve çözüm dosyaları aranır. Proje dosyalarına bakmak için bir arama klasörü seçin.
+> Çözümün Tamamı **veya Geçerli Çözüm** **Project** seçerseniz proje ve çözüm dosyaları aranır. Proje dosyalarına bakmak için bir arama klasörü seçin.
 
 > [!NOTE]
 > Kaynak kodu **denetiminden** kullanıma alınmış bir dosyayı aramak için Arama seçeneğini kullanırsanız, yalnızca yerel makinenize indirilen dosyanın sürümü bulunur.
@@ -210,7 +210,7 @@ Seçildiğinde, Sonuçları **Bul pencereleri** yalnızca tam sözcük eşleşme
 
 **Normal İfadeler Kullanma**
 
-Bu onay kutusu seçiliyse, Bul veya Değiştir metin kutularında eşleşmek üzere metin desenlerini tanımlamak **için özel** **notalar** kullanabilirsiniz. Bu ifadelerin listesi için [bkz. Visual Studio.](../ide/using-regular-expressions-in-visual-studio.md)
+Bu onay kutusu seçiliyse, Bul veya Değiştir metin kutularında eşleşmek üzere metin desenlerini tanımlamak **için özel** **notalar** kullanabilirsiniz. Bu ifadelerin listesi için [bkz. Visual Studio'de normal ifadeler kullanma.](../ide/using-regular-expressions-in-visual-studio.md)
 
 **Bu dosya türlerine bakın**
 
@@ -254,7 +254,7 @@ Arama eşleşmelerini görüntülemek yerine arama eşleşmelerini içeren dosya
 Tüm sonuçlar için bir arama gerçekleştirin, sonuçlar kullanılabilir hale geldi olarak görünür.
 
 > [!NOTE]
-> Visual Studio, yeni proje açma, dalları değiştirme veya dosya listesini başka bir şekilde değiştirme gibi kod bağlamınız yüklendikten sonra dizin oluşturmaya başlar. Kaynak dosyalarınızın dizinini Visual Studio arama yaparken arama yaptıysanız, sonuçların eksik olduğuyla ilgili bir uyarıyla karşınıza çıktı.
+> Visual Studio proje açma, dalları değiştirme veya dosya listesini başka bir şekilde değiştirme gibi kod bağlamınız yüklendikten sonra dizin oluşturmaya başlar. Kaynak dosyalarınızın dizinini Visual Studio arama yaparken arama yaptıysanız, sonuçların eksik olduğuyla ilgili bir uyarıyla karşınıza çıktı.
 
 :::moniker-end
 
@@ -278,7 +278,7 @@ Diğer aramaları yaparken sonuçları bir aramadan tutabilirsiniz. Bu, sonuçla
 
 :::moniker range=">=vs-2022"
 
-2022 Visual Studio sonraki bir yıl içinde, sonuçları her zaman tutmak Visual Studio için bu ayardan geçebilirsiniz. Araçlar Seçenekler **Genel**  >    >  **Bul ve**  >  **Değiştir'e** gidin ve Arama sonuçlarını varsayılan olarak tut onay kutusunu **seçin.**
+2022 ve sonraki bir Visual Studio, sonuçları her zaman tutmak Visual Studio için bu ayardan geçebilirsiniz. Araçlar Seçenekler **Genel**  >    >  **Bul ve**  >  **Değiştir'e** gidin ve Arama sonuçlarını varsayılan olarak tut onay kutusunu **seçin.**
 
 :::moniker-end
 

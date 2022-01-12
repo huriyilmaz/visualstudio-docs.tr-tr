@@ -1,10 +1,8 @@
 ---
-title: Durdurulan MFC işlevini çağıran işleve | Microsoft Docs
-description: Hata ayıklayıcısında yürütme durdurulsa MFC'yi çağıran işleve Visual Studio anlıyoruz.
+title: Durdurulmuşsa MFC 'yi çağıran işleve geri dön | Microsoft Docs
+description: Visual Studio hata ayıklayıcısında yürütme durdurulmuşsa MFC 'yi çağıran işleve nasıl geri alınacağını anlayın.
 ms.date: 11/04/2016
 ms.topic: how-to
-f1_keywords:
-- vs.debug.mfc
 dev_langs:
 - CSharp
 - VB
@@ -25,27 +23,27 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 5cdb2ffd30b8fcf1a0dd8a9b1df8e2be21057db1
-ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
+ms.openlocfilehash: b069ef584724c0c4dbd592fb47268048c2ac6916
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "129972550"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135803849"
 ---
 # <a name="how-to-get-back-to-the-function-that-called-mfc-if-halted"></a>Nasıl Yapılır: Durdurulduysa MFC'yi Çağıran İşleve Geri Dönme
 
 > [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için Araçlar menüsünde İçeri **ve Dışarı Ayarlar'yi** seçin.  Daha fazla bilgi için [bkz. Ayarları sıfırlama.](../ide/environment-settings.md#reset-settings)
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. ayarlarınızı değiştirmek için **araçlar** menüsünden **içeri aktar ve dışarı aktar Ayarlar** seçin. Daha fazla bilgi için bkz. [ayarları sıfırlama](../ide/environment-settings.md#reset-settings).
 
-Hata Ayıklama **menüsündeki** Break  komutunu kullanarak programı durdurduysanız ve MFC'de sonlandı ve sorunun kodunda olduğundan emin olduysanız Çağrı Yığını penceresini kullanarak işlevinize geri dönebilirsiniz. Daha fazla bilgi için, [bkz. How to: Use the Call Stack Window](../debugger/how-to-use-the-call-stack-window.md).
+Programı durdurmak ve MFC 'de sonlandırmak için **hata ayıklama** menüsündeki **kesme** komutunu kullandıysanız ve sorunun kodunuzda olduğundan eminseniz, Işlevinizde geri dönmek için çağrı yığını penceresini kullanabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: çağrı yığını penceresini kullanma](../debugger/how-to-use-the-call-stack-window.md).
 
-Bazen kodunuz ileti pompasını bozabilir. Bu durumda, çağrı yığınında kullanıcı kodu yoktur. Bu sorunu önlemek için Kesme komutu yerine kesme noktaları (büyük olasılıkla koşullar ve isabet sayıları ile) **kullanabilirsiniz.** Daha fazla bilgi için [bkz. Kesme Noktaları ve İzleme Noktaları.](/previous-versions/ktf38f66(v=vs.100))
+Bazen kodunuzun ileti göndericisinin kesintiye uğramayabilir. Bu durumda, çağrı yığınında Kullanıcı kodu yoktur. Bu sorundan kaçınmak için **kesme komutu yerine kesme noktaları** (büyük olasılıkla koşullar ve isabet sayısı ile birlikte) kullanabilirsiniz. Daha fazla bilgi için bkz. [kesme noktaları ve Izleme noktaları](/previous-versions/ktf38f66(v=vs.100)).
 
-## <a name="navigate-to-the-function-from-which-mfc-was-called"></a>MFC'nin çağrıldı olduğu işleve gidin
+## <a name="navigate-to-the-function-from-which-mfc-was-called"></a>MFC 'nin çağrıldığı işleve gitme
 
-- Çağrı Yığını **penceresini** kullanın.
+- **Çağrı yığını** penceresini kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yerel Kodda Hata Ayıklama hakkında SSS](../debugger/debugging-native-code-faqs.md)
+- [Yerel kod SSS hatalarını ayıklama](../debugger/debugging-native-code-faqs.md)
 - [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)

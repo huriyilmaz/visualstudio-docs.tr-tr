@@ -1,69 +1,70 @@
 ---
 title: 'Sorun Giderme: Mevcut uzantımın yeni sürümünü nasıl yayınlarım?'
-description: Yayımlama iş akışı aracılığıyla mevcut uzantıları güncelleştirme Kılavuzu.
-author: heiligerdankgesang
-ms.author: dominicn
+description: Yayımlama iş akışı aracılığıyla mevcut uzantıları güncelleştirme kılavuzu.
+author: jmatthiesen
+ms.author: jomatthi
+manager: dominicn
 ms.date: 12/14/2020
 ms.technology: vs-ide-general
 ms.assetid: 5DA76197-7859-421f-AC45-401F22F5D794
 ms.topic: troubleshooting
-ms.openlocfilehash: 862ae404571da44d9ca28db2c94d2ebeb39ce79f
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.openlocfilehash: f77d53ca5fec6aa38e78b45579b2f37af28582c5
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123964802"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135805617"
 ---
 # <a name="troubleshooting-how-do-i-release-a-new-version-of-my-existing-extension"></a>Sorun Giderme: Mevcut uzantımın yeni sürümünü nasıl yayınlarım?
 
 > [!IMPORTANT]
-> şu anda yeni uzantılar oluşturma, Mac için Visual Studio 2019 ' de resmi olarak desteklenmez.
+> Şu anda Mac için 2019'da yeni uzantılar Visual Studio resmi olarak desteklenmiyor.
 
-Mac için Visual Studio uzantısı depo sunucusu 15 ocak 2021 tarihinde taşınır. Bu taşıma, uzantınızı zaten indirmiş olan kullanıcıları etkilemez, ancak bu tarihten sonra uzantınızın yeni sürümlerini yayımlamanıza olanak sağlayacak.
+Uzantı Mac için Visual Studio sunucusu 15 Ocak 2021'de taşınacak. Bu taşıma, uzantınızı indiren kullanıcıları etkilemez, ancak bu tarihten sonra uzantının yeni yayınlarını yayımlama yolunu değiştirir.
 
-Varolan bir uzantının yazarı olarak, daha fazla güncelleştirme yayınlamak için farklı bir iş akışını izlemeniz gerekir. Bu işlem aşağıdakilerden oluşur:
-- her uzantı için genel GitHub deposu ayarlama
-- depo URL 'sini [uzantı yayımlama posta listesi](mailto:vsmextpub@microsoft.com) ile Mac için Visual Studio ekibine paylaşma
-- GitHub 'teki yayınlar özelliğini kullanarak uzantınızı güncelleştirme
+Mevcut bir uzantının yazarı olarak, diğer güncelleştirmeleri yayın için farklı bir iş akışını izlemeniz gerekir. Bu işlem şunları oluşur:
+- Her uzantı için GitHub depo ayarlama
+- Uzantı yayımlama posta listesi aracılığıyla Mac için Visual Studio [ekiple depo URL'sini paylaşma](mailto:vsmextpub@microsoft.com)
+- GitHub'de sürümler özelliğini kullanarak uzantınızı GitHub
 
 
 ## <a name="initial-setup"></a>İlk kurulum 
 
-uzantılara güncelleştirme yayımlamaya devam edebilmek için ortak bir GitHub deposu oluşturmanız gerekir. Birden çok uzantı yayımlarsanız, her zaman birlikte yayımlanmadığınız ve yayımlanmadığınız müddetçe her biri için ayrı bir depoya sahip olmanız gerekir. Bu durumda, tek bir depoyu kullanabilirsiniz.
+Uzantılarınıza güncelleştirme yayımlamaya devam etmek için, genel bir GitHub oluşturmanız gerekir. Birden çok uzantı yayımlarsanız, her zaman sürüm ve birlikte yayımlamadıkça her biri için ayrı bir depoya sahip olursunuz; bu durumda tek bir depo kullanabilirsiniz.
 
 > [!NOTE]
-> uzantınızın GitHub deposunun ortak olması gerekir, ancak herhangi bir kodunuzda kod barındırmanıza gerek kalmaz. Bu işlemin ardından, GitHub kodunuzun herhangi birine sahip olmanızı gerektirmez.
+> Uzantınız GitHub deponun genel olması gerekir ancak kodunuzun herhangi birini orada barındırmanız gerekli değil. Bu işlemi takip etmek için kodlarınızı herhangi bir GitHub.
 
 
-## <a name="share-the-location-of-your-repository"></a>Deponuzun konumunu paylaşma
+## <a name="share-the-location-of-your-repository"></a>Deponun konumunu paylaşma
 
-Depoyu ayarladıktan sonra [uzantı yayımlama posta lıstesıne](mailto:vsmextpub@microsoft.com) URL ile bir e-posta gönderin.
+Depoyu ayar verdiktan sonra UZANTı yayımlama posta listesine URL'si [ile bir e-posta](mailto:vsmextpub@microsoft.com) gönderin.
 
 
 ## <a name="release-a-new-version"></a>Yeni bir sürüm yayınla
 
-Uzantınızı güncelleştirme işlemini başlatmak için deponun ana sayfasında "yeni yayın oluştur" bağlantısını kullanacaksınız. Bu bağlantıyı seçtikten sonra aşağıdaki adımları izleyin:
+Uzantınızı güncelleştirme işlemini başlamak için deponun ana sayfasındaki "Yeni sürüm oluştur" bağlantısını kullanacağız. Bu bağlantıyı seçtikten sonra şu adımları izleyin:
 
 1. Sürümün **etiket sürümüne** aşağıdaki biçimde bilgi ekleyin
 
-    > v \<releaseVersion> \- VSM\<targetVersion>
+    > v \<releaseVersion> \- vsm\<targetVersion>
 
     Konum:
-     - **&lt; ReleaseVersion &gt;** , uzantınızın sürüm numarasıdır
-     - **&lt; targetversion &gt;** , uzantınızın hedeflediği Mac için Visual Studio en düşük sürümüdür
+     - **&lt; releaseVersion, &gt;** uzantı sürüm numaranızdır
+     - **&lt; targetVersion, &gt;** uzantınız tarafından Mac için Visual Studio en düşük sürümdür
 
-2. Seçim **Başlık** ve **Açıklama** alanları istediğiniz bilgilerle doldurulabilir; Bu iş akışı, bu alanlardaki bilgileri kullanmaz.
+2. (İsteğe bağlı) Başlık  ve **açıklama** alanları, sizin için herhangi bir bilgiyle doldurulmalıdır; bu iş akışı bu alanlardaki bilgileri kullanmaz.
 
-3. **Yayın öncesi** onay kutusunun işaretinin kaldırıldığından emin olun. Bu onay işaretliyse, yayın bu yayımlama işlemi tarafından çekilmeyecektir.
+3. Yayın **öncesi onay kutusunun** işaretlenmemiş olduğundan emin olmak. İşaretlenirse, yayın bu yayımlama işlemi tarafından teslimlanmaz.
 
-4. **İkili dosyaları** bölümünde uzantınızı uygulayan **. mpack** dosyalarını ekleyin. Bir yayına birden çok **. mpack** dosyası eklemek mümkündür.
+4. Uzantınızı **uygulayan .mpack** dosyasını ikili dosyalar **bölümüne** iliştirin. Bir sürümde birden çok **.mpack** dosyası eklemek mümkündür.
 
-Mac için Visual Studio, uzantınızın uzantı deposuna erişmek için kullanılan Mac için Visual Studio yüklemesiyle uyumlu olan en son sürümünü görüntüler.
+Mac için Visual Studio, uzantı depoya erişmek için kullanılan Mac için Visual Studio sürümüyle uyumlu olan en son sürümü görüntüler.
 
-GitHub deponuzu Mac için Visual Studio ekiple kaydettiğiniz sürece, dahili sürüm, 24 saat içinde Mac için Visual Studio tarafından alınacaktır.
+GitHub deposunu Mac için Visual Studio, uzantı yayınını 24 saat içinde Mac için Visual Studio tarafından alır.
 
 ## <a name="additional-information"></a>Ek bilgiler
 
-- Yukarıda açıklanan gereksinimlere uymayan yayınlar yayımlanmaz. 
-- 14 ocak 2021 ' den sonra, uzantı güncelleştirmeleri yalnızca Mac için Visual Studio 8,0 veya daha yeni bir sürümde görünür.
-- mevcut uzantılar, sizin bölüminizdeki herhangi bir eylemde bulunmadan kullanıcıları Mac için Visual Studio için kullanılabilir olmaya devam edecektir. Yalnızca 15 Ocak 2021 ' den sonra yeni bir sürüm yayımladığınızda bu kılavuzdaki yönergeleri izlemeniz gerekir.
+- Yukarıda belirtilen gereksinimlere uymayan sürümler yayımlanamaz. 
+- 15 Ocak 2021'den sonra uzantı güncelleştirmeleri yalnızca Mac için Visual Studio 8.0 veya daha yeni bir sürümde göster.
+- Mevcut uzantılar, kullanıcı Mac için Visual Studio herhangi bir işlem yapmadan kullanılabilir durumda kalır. Bu kılavuzda yer alan yönergeleri yalnızca 15 Ocak 2021'den sonra yeni bir sürüm yayımlamanız gerekir.

@@ -1,17 +1,18 @@
 ---
 title: Kodu yeniden düzenleme
-description: Hızlı eylemler ve Mac için Visual Studio kullanarak kodu yenidenfining.
+description: Kod ve hızlı Mac için Visual Studio kullanarak kodu yenidenfining.
 author: jmatthiesen
 ms.author: jomatthi
+manager: dominicn
 ms.date: 07/03/2020
 ms.assetid: C7782BF3-016F-4B41-8A81-85FC540A1A8F
-ms.custom: video
-ms.openlocfilehash: af426ff3f5f9488cd15fdc2f1a239b1777d38656
-ms.sourcegitcommit: fc874be3fe4637a23997b4ef2d99a2ee9a499581
+ms.topic: reference
+ms.openlocfilehash: e197f7d8e7ed7e0c2dd9a5466837bea4d11953ef
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2021
-ms.locfileid: "135517402"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135806644"
 ---
 # <a name="refactoring"></a>Yeniden Düzenle
 
@@ -44,7 +45,7 @@ Hızlı Eylemler şunları yapmak için kullanılabilir:
 
 Hızlı Eylemler, ampul ampul simgesi veya tornavida tornavida simgesi simgeleri kullanılarak veya imleciniz bir eylemin kullanılabilir olduğu bir kod satırı üzerindeyken ![ ](media/quick-actions-light-bulb-icon.png) Seçenek ![ ](media/quick-actions-screwdriver-icon.png) **(⌥)** + **Enter** tuşuna basarak uygulanabilir. Hataya işaret eden kırmızı bir geçiş varsa ve hatanın düzeltmesi varsa hata ampulü Visual Studio ampul ![ ](media/quick-actions-error-light-bulb-icon.png) simgesi görüntülenir.
 
-Herhangi bir dil için üçüncü taraflar, örneğin bir SDK'nın parçası olarak özel tanılama ve öneri s sağlamanın yanı sıra bu Visual Studio ampuller kullanabilir.
+Herhangi bir dil için, üçüncü taraflar sdk'nın bir parçası olarak özel tanılama ve öneri s sağlamanın yanı sıra bu kurallara Visual Studio ampuller kullanabilir.
 
 ### <a name="quick-action-icons"></a>Hızlı Eylem Simgeleri
 Hızlı Eylem kullanılabilir olduğunda görüntülenen simge, kullanılabilir düzeltmenin veya yeniden düzenlemenin türünü gösterir. *Tornavida* tornavida simgesi simgesi, kodu değiştirmek için kullanabileceğiniz eylemler olduğunu gösterir, ancak bunları ![ ](media/quick-actions-screwdriver-icon.png) mutlaka kullanmamak gerekir. Sarı *ampul ampul* simgesi ![ ](media/quick-actions-light-bulb-icon.png) simgesi, kodunuzu geliştirmek için gereken *eylemler* olduğunu gösterir. Hata *ampulü* ![ hata ampul simgesi ](media/quick-actions-error-light-bulb-icon.png) simgesi, kodundaki bir hatayı düzelten bir eylem olduğunu gösterir.
@@ -65,11 +66,11 @@ Bağlam eylemlerinden herhangi biri üzerine gelindiğinde, kodunuzdan nelerin e
 
 ![Bağlam öğelerini Girme Seçeneği](media/refactoring-image2a.png)
 
-Bu seçenekleri etkinleştirmek için,  Kaynak Analizi'nde Tercihler ve Metin Düzenleyici Mac için Visual Studio > **seçeneklerinde Açık dosyaların > analizini > seçmeniz gerekir:**
+Bu seçenekleri etkinleştirmek için,  Kaynak Analizi'nde Tercihler ve Metin Düzenleyici Mac için Visual Studio > **seçeneklerinde Açık dosyaların kaynak analizini > > seçmeniz gerekir:**
 
 ![Kaynak analizini etkinleştirme](media/refactoring-options.png)
 
-Mac için Visual Studio > Tercihleri > Kaynak Analizi **> C# > Kod** Eylemleri'ne göz atarak ve eylemin yanındaki kutuyu seçerek ya da seçimi kaldırarak etkinleştirilen veya devre dışı bırakılabilir 100'den fazla olası eylem vardır:
+Mac için Visual Studio > Tercihleri > Kaynak Analizi **> C# > Kod** Eylemleri'ne göz atarak ve eylemin yanındaki kutuyu seçerek veya seçimi kaldırarak etkinleştirilen veya devre dışı bırakılabilir 100'den fazla eylem önerilebilir:
 
 ![C# Kaynak Analizi eylemleri](media/refactoring-image3a.png)
 

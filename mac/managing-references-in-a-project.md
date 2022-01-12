@@ -3,15 +3,16 @@ title: Project başvuruları yönetme
 description: bu makalede, Mac için Visual Studio projedeki başvuruların nasıl yönetileceği açıklanmaktadır
 author: jmatthiesen
 ms.author: jomatthi
+manager: dominicn
 ms.date: 11/09/2020
 ms.assetid: 4AD51385-B0A8-4BA7-B2D4-BF2BD167A142
 ms.topic: overview
-ms.openlocfilehash: 8a75368e746a02ae0789d9f0a90bf2f8907e0d04
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.openlocfilehash: 4977fcf4947db8838e8a6e4e4ba573121efba93e
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123964782"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135804829"
 ---
 # <a name="managing-references-in-a-project"></a>Project başvuruları yönetme
 

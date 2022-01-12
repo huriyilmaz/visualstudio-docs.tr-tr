@@ -2,16 +2,17 @@
 title: Kullanıcı Hesapları
 description: Mac için Visual Studio Mac için Visual Studio ve abonelikleri etkinleştirmek için oturum açma hakkında bilgiler
 ms.topic: overview
-author: heiligerdankgesang
-ms.author: dominicn
+author: jmatthiesen
+ms.author: jomatthi
+manager: dominicn
 ms.date: 09/18/2019
 ms.assetid: 17AB4F31-4921-4B4E-8D9D-95FB84294521
-ms.openlocfilehash: ba403c2c382918781e74e8bb6329251257b118a8
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 5f51259daf585b8d5f4b7dc4d17fff68ed780428
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126725955"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135805721"
 ---
 # <a name="user-accounts"></a>Kullanıcı Hesapları
 

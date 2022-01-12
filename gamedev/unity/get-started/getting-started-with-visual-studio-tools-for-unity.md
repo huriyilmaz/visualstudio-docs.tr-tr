@@ -1,7 +1,7 @@
 ---
 title: 'hızlı başlangıç: ınstall & configure Unity için Visual Studio Araçları'
 description: platformlar arası geliştirme için Unity ve Visual Studio bağlamayı öğrenin.
-ms.date: 12/10/2021
+ms.date: 1/10/2021
 ms.technology: vs-unity-tools
 ms.prod: visual-studio-dev16
 ms.topic: quickstart
@@ -12,12 +12,12 @@ manager: crdun
 ms.workload:
 - unity
 zone_pivot_groups: platform
-ms.openlocfilehash: 67e0893ad5fd0329a9542ecec5991f8ae641df02
-ms.sourcegitcommit: 2a4744fb312396d36086dd59fd55ab741ae8e106
+ms.openlocfilehash: 559301c65aaef9c46350a7007c836de4f902c173
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/28/2021
-ms.locfileid: "135575976"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135805292"
 ---
 # <a name="quickstart-configure-visual-studio-for-cross-platform-development-with-unity"></a>hızlı başlangıç: Unity ile platformlar arası geliştirme için Visual Studio yapılandırma
 
@@ -30,7 +30,7 @@ bu hızlı başlangıçta, Unity için Visual Studio Araçları uzantısını y�
 
 :::zone pivot="windows"
 
-1. [Visual Studio yükleyicisini indirin](/visualstudio/install/install-visual-studio.md)veya zaten yüklüyse açın.
+1. [Visual Studio yükleyicisini indirin](/visualstudio/install/install-visual-studio)veya zaten yüklüyse açın.
 2. İstediğiniz Visual Studio sürümünüz için **Değiştir** (zaten yüklüyse) veya **yükleme** (yeni yüklemeler için) öğesini seçin.
 3. **Iş yükleri** sekmesini seçin ve ardından Unity iş yüküyle **oyun geliştirmeyi** seçin.    
 4. Unity zaten yüklü değilse, yükleyicinin Isteğe bağlı bölümünde Unity hub onay kutusunu seçin.
@@ -78,16 +78,6 @@ varsayılan olarak, Unity zaten bir betik düzenleyicisi olarak Visual Studio ve
 
     ![Windows 'daki Unity düzenleyicisinde dış araçlar tercihi menüsünün ekran görüntüsü](../media/vs/preferences-external-tools.png)
 
-### <a name="install-or-update-the-visual-studio-editor-package"></a>Visual Studio düzenleyicisi paketini yükler veya güncelleştirir
-
-Unity sürümleri 2020 ve daha yeni sürümlerde, Visual Studio gibi en iyi deneyim ile çalışma için ayrı bir Unity paketi gerekir. Bu, varsayılan olarak dahil edilmelidir, ancak bu pakete, dilediğiniz zaman güncelleyebilir güncelleştirmeler yayınlarız.
-
-1. Unity düzenleyicisinde **Windows > Paket Yöneticisi** menüsünü seçin.
-1. **Visual Studio düzenleyicisi** paketini seçin.
-1. Yeni bir sürüm varsa **Güncelleştir** düğmesini seçin.
-
-![Windows üzerinde Unity düzenleyicisinde Paket Yöneticisi penceresinin ekran görüntüsü](../media/vs/unity-package-manager.png)
-
 ### <a name="add-a-version-of-visual-studio-that-is-not-listed"></a>listelenmeyen Visual Studio bir sürümünü ekleyin
 listelenmemiş ve özel bir dizinde yüklü olan Visual Studio diğer sürümlerini seçmek mümkündür.
 
@@ -108,6 +98,16 @@ listelenmemiş ve özel bir dizinde yüklü olan Visual Studio diğer sürümler
 4. Yapılandırma işlemini gerçekleştirmek için **Tercihler** iletişim kutusunu kapatın.
 
 :::zone-end
+
+### <a name="install-or-update-the-visual-studio-editor-package"></a>Visual Studio düzenleyicisi paketini yükler veya güncelleştirir
+
+Unity sürümleri 2020 ve daha yeni sürümlerde, Visual Studio ve Mac için Visual Studio gibi en iyi deneyimlerle çalışma için ayrı bir Unity paketi gerekir. Bu, varsayılan olarak dahil edilmelidir, ancak güncelleştirmeleri dilediğiniz zaman güncelleyebilir Bu pakette serbest bırakılır.
+
+1. Unity düzenleyicisinde **Windows > Paket Yöneticisi** menüsünü seçin.
+1. **Visual Studio düzenleyicisi** paketini seçin.
+1. Yeni bir sürüm varsa **Güncelleştir** düğmesini seçin.
+
+![Windows üzerinde Unity düzenleyicisinde Paket Yöneticisi penceresinin ekran görüntüsü](../media/vs/unity-package-manager.png)
 
 ## <a name="check-for-updates"></a>Güncelleştirmeleri denetle
 

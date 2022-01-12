@@ -1,12 +1,11 @@
 ---
 title: Veri kümeleri arasında ilişki oluşturma
-description: Veri kümelerini kullanarak veri kümeleri arasında ilişki Visual Studio. DataRelation nesnelerini ve kısıtlamalarını anlama. Veri Kümesi Yöneticisi'nde el ile veri ilişkisi oluşturun.
+description: Veri kümelerini kullanarak veri kümeleri arasında Visual Studio. DataRelation nesnelerini ve kısıtlamalarını anlama. Veri Kümesi Yöneticisi'nde el ile veri ilişkisi oluşturun.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
 - vbData.Microsoft.VSDesigner.DataSource.DesignRelation
-- vbdata.Microsoft.VSDesigner.DataSource.DesignRelation
 helpviewer_keywords:
 - relationships, about relationships
 - datasets [Visual Basic], relationships
@@ -18,19 +17,19 @@ manager: jmartens
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 40a964f6b5d21f2e5a601cd81d33fafbdd030189
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 9752215dba24a68ba86830e0067032e2ae311567
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126631233"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135805370"
 ---
 # <a name="create-relationships-between-datasets"></a>Veri kümeleri arasında ilişki oluşturma
-İlgili veri tablolarını içeren veri kümeleri, tablolar arasındaki üst/alt ilişkiyi temsil etmek ve ilişkili kayıtları <xref:System.Data.DataRelation> bir diğer tablodan geri dönmek için nesneleri kullanır. Veri Kaynağı Yapılandırma Sihirbazı'nı veya Veri Kümesi Tasarımcısı kullanarak ilgili tabloları veri **kümelerine** eklemek, nesnesini sizin için <xref:System.Data.DataRelation> oluşturur ve yapılandırıyor.
+İlgili veri tablolarını içeren veri kümeleri, tablolar arasındaki üst/alt ilişkiyi temsil etmek ve ilişkili kayıtları <xref:System.Data.DataRelation> diğerlerinden geri dönmek için nesneleri kullanır. Veri Kaynağı Yapılandırma Sihirbazı'nı veya Veri Kümesi Tasarımcısı kullanarak veri kümelerine ilişkili tablolar **eklemek,** nesnesini sizin için <xref:System.Data.DataRelation> oluşturur ve yapılandırıyor.
 
 nesnesi <xref:System.Data.DataRelation> iki işlev gerçekleştirir:
 
-- Üzerinde çalışmakta olan bir kayıtla ilgili kayıtları kullanılabilir hale olabilir. Bir üst kayıtta ( ) ve bir alt kayıt () ile çalışıyorsanız üst kayıtta yer alır. <xref:System.Data.DataRow.GetChildRows%2A> <xref:System.Data.DataRow.GetParentRow%2A>
+- Üzerinde çalışmakta olan bir kayıtla ilgili kayıtları kullanılabilir hale olabilir. Bir üst kayıtta ( ) ve bir alt kayıtla ( ) çalışıyorsanız üst kayıtta yer <xref:System.Data.DataRow.GetChildRows%2A> <xref:System.Data.DataRow.GetParentRow%2A> alır.
 
 - Bir üst kaydı silebilirsiniz ilgili alt kayıtları silme gibi bilgi tutarlılığı kısıtlamaları zorlar.
 
@@ -45,35 +44,35 @@ Gerçek birleşim ile bir nesnenin işlevi arasındaki farkı anlamak <xref:Syst
 
 Bir nesnede belirttiğiniz <xref:System.Data.DataRelation> kısıtlamalar, uygun nesneleri otomatik olarak oluşturarak veya özellikleri ayararak uygulanır. nesnesini kullanarak bir yabancı anahtar kısıtlaması <xref:System.Data.DataRelation> oluşturursanız, <xref:System.Data.ForeignKeyConstraint> sınıfın örnekleri nesnenin <xref:System.Data.DataRelation> özelliğine <xref:System.Data.DataRelation.ChildKeyConstraint%2A> eklenir.
 
-Benzersiz bir kısıtlama, yalnızca bir veri sütununu özelliği olarak ayararak veya sınıfının bir örneğini nesnenin <xref:System.Data.DataColumn.Unique%2A> `true` <xref:System.Data.UniqueConstraint> <xref:System.Data.DataRelation> özelliğine ekleyerek <xref:System.Data.DataRelation.ParentKeyConstraint%2A> uygulanır. Bir veri kümesinde kısıtlamaları askıya alma hakkında bilgi için [bkz. Veri kümesi doldururken kısıtlamaları kapatma.](../data-tools/turn-off-constraints-while-filling-a-dataset.md)
+Benzersiz bir kısıtlama, yalnızca bir veri sütununu özelliği olarak ayararak veya nesnesinin özelliğine sınıfının bir <xref:System.Data.DataColumn.Unique%2A> `true` örneği ek tarafından <xref:System.Data.UniqueConstraint> <xref:System.Data.DataRelation> <xref:System.Data.DataRelation.ParentKeyConstraint%2A> uygulanır. Bir veri kümesinde kısıtlamaları askıya alma hakkında bilgi için [bkz. Veri kümesi doldururken kısıtlamaları kapatma.](../data-tools/turn-off-constraints-while-filling-a-dataset.md)
 
 ### <a name="referential-integrity-rules"></a>Bilgi tutarlılığı kuralları
-Yabancı anahtar kısıtlaması kapsamında, üç nokta için uygulanan bilgi tutarlılığı kuralları belirtesiniz:
+Yabancı anahtar kısıtlaması kapsamında, üç nokta için uygulanan bilgi tutarlılığı kuralları belirtsiniz:
 
 - Üst kayıt güncelleştirildiğinde
 
 - Üst kayıt silindiğinde
 
-- Bir değişiklik kabul edilir veya reddedilirse
+- Bir değişiklik kabul edilse veya reddedilirse
 
-Liste listesinde belirtilebilir <xref:System.Data.Rule> ve aşağıdaki tabloda listelenmiştir.
+Sıralandırabilirsiniz kurallar, <xref:System.Data.Rule> numaralandırmada belirtilir ve aşağıdaki tabloda listelenmiştir.
 
 |Yabancı anahtar kısıtlama kuralı|Eylem|
 | - |------------|
 |<xref:System.Data.Rule.Cascade>|Üst kayıtta yapılan değişiklik (güncelleştirme veya silme), alt tablodaki ilgili kayıtlarda da yapılır.|
-|<xref:System.Data.Rule.SetNull>|Alt kayıtlar silinmez, ancak alt kayıtlarda yabancı anahtar olarak <xref:System.DBNull> ayarlanır. Bu ayarla, alt kayıtlar "yalnızlar" olarak bırakabilirsiniz; yani üst kayıtlarla hiçbir ilişkisi yoktur. **Not:** Bu kuralın kullanımı, alt tabloda geçersiz verilere neden olabilir.|
+|<xref:System.Data.Rule.SetNull>|Alt kayıtlar silinmez, ancak alt kayıtlarda yabancı anahtar olarak <xref:System.DBNull> ayarlanır. Bu ayarla, alt kayıtlar "yalnızlar" olarak bırakabilirsiniz; başka bir şekilde üst kayıtlarla hiçbir ilişkisi yoktur. **Not:** Bu kuralın kullanımı alt tabloda geçersiz verilere neden olabilir.|
 |<xref:System.Data.Rule.SetDefault>|İlgili alt kayıtlarda yabancı anahtar varsayılan değerine ayarlanır (sütunun özelliği tarafından <xref:System.Data.DataColumn.DefaultValue%2A> belirlendi).|
 |<xref:System.Data.Rule.None>|İlgili alt kayıtlarda değişiklik olmaz. Bu ayarla, alt kayıtlar geçersiz üst kayıtlara başvurular içerebilir.|
 
 Veri kümesi tablolarında güncelleştirmeler hakkında daha fazla bilgi için [bkz. Verileri veritabanına geri kaydetme.](../data-tools/save-data-back-to-the-database.md)
 
 ### <a name="constraint-only-relations"></a>Yalnızca kısıtlama ilişkileri
-Bir nesnesi oluşturursanız, ilişkinin yalnızca kısıtlamaları zorlamak için kullanıla olacağını, yani ilgili kayıtlara erişmek için de <xref:System.Data.DataRelation> kullanılmay olacağını belirtme seçeneğiniz vardır. Bu seçeneği kullanarak biraz daha verimli olan ve ilgili kayıtlar özelliğine sahip yöntemlerden daha az yöntem içeren bir veri kümesi oluşturabilirsiniz. Ancak, ilgili kayıtlara erişesiniz. Örneğin, yalnızca kısıtlama ilişkisi, hala alt kayıtları olan bir üst kaydı silmenizi sağlar ve üst kayıt üzerinden alt kayıtlara erişemeysiniz.
+Bir nesnesi oluşturursanız, ilişkinin yalnızca kısıtlamaları zorlamak için kullanıla olacağını belirtme seçeneğiniz vardır; diğer bir ifade, ilgili kayıtlara erişmek için <xref:System.Data.DataRelation> de kullanılmaz. Bu seçeneği, biraz daha verimli ve ilgili kayıtlar özelliğine sahip birden az yöntem içeren bir veri kümesi oluşturmak için kullanabilirsiniz. Ancak, ilgili kayıtlara erişesiniz. Örneğin, yalnızca kısıtlama ilişkisi, hala alt kayıtları olan bir üst kaydı silmenizi sağlar ve üst kayıt üzerinden alt kayıtlara erişemeysiniz.
 
 ## <a name="manually-creating-a-data-relation-in-the-dataset-designer"></a>Veri ilişkisi oluşturmak için veri Veri Kümesi Tasarımcısı
 Veri tasarım araçlarını kullanarak veri tabloları Visual Studio, verilerin kaynağından veri toplanıp toplanamaysa ilişkiler otomatik olarak oluşturulur. Veri tablolarını Araç Kutusunun **DataSet sekmesinden** el ile **eklersiniz,** ilişkiyi el ile oluşturmanız gerekebilir. Program aracılığıyla nesne <xref:System.Data.DataRelation> oluşturma hakkında bilgi için bkz. [DataRelations Ekleme.](/dotnet/framework/data/adonet/dataset-datatable-dataview/adding-datarelations)
 
-Veri tabloları arasındaki ilişkiler, ilişkinin **bire çok** yönünü gösteren bir Veri Kümesi Tasarımcısı ve sonsuz glyph ile birlikte veri tablolarında satırlar olarak görünür. Varsayılan olarak, ilişkinin adı tasarım yüzeyinde görünmez.
+Veri tabloları arasındaki ilişkiler, **ilişkinin bire Veri Kümesi Tasarımcısı** gösteren bir anahtar ve sonsuz glyph ile birlikte veri tablolarında satırlar olarak görünür. Varsayılan olarak, ilişkinin adı tasarım yüzeyinde görünmez.
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
@@ -105,7 +104,7 @@ Veri tabloları arasındaki ilişkiler, ilişkinin **bire çok** yönünü göst
 
 1. veri kümenizi **Veri Kümesi Tasarımcısı.** Daha fazla bilgi için [bkz. Adım Adım: Veri Kümesi Oluşturma Veri Kümesi Tasarımcısı.](walkthrough-creating-a-dataset-with-the-dataset-designer.md)
 
-2. Veri **menüsünden** İlişki **Etiketlerini Göster komutunu** seçerek ilişki adını görüntüleyin. İlişki adını gizlemek için bu komutun temizlen.
+2. İlişki adını **görüntülemek** için Veri **menüsünde İlişki Etiketlerini** Göster komutunu seçin. İlişki adını gizlemek için bu komutun temizlen.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

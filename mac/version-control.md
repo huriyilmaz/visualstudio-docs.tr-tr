@@ -4,14 +4,15 @@ description: Mac için Visual Studio Git ve alt sürüm kullanma.
 ms.topic: overview
 author: jmatthiesen
 ms.author: jomatthi
+manager: dominicn
 ms.date: 05/06/2018
 ms.assetid: 49917483-28AA-4598-A847-71F1F2E0DCB5
-ms.openlocfilehash: 9206ab892ef125706ab16f9a739fe88a52f5c242
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 2ae148de845e916542c4b1c43a177e23104fb8af
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126725953"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135805019"
 ---
 # <a name="version-control"></a>Sürüm denetimi
 

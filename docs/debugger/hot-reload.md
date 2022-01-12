@@ -13,12 +13,12 @@ ms.technology: vs-ide-debug
 monikerRange: '>= vs-2022'
 ms.workload:
 - multiple
-ms.openlocfilehash: fd616cb467d5367fd317601ecfdbacf5fc946b48
-ms.sourcegitcommit: ba40c6208b2cb27d047fec4fa2c83c6be4f9ee5a
+ms.openlocfilehash: b5d65709ff7e59825d67ecc2869fd415355285ae
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "134463514"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135804161"
 ---
 # <a name="write-and-debug-running-code-with-hot-reload-in-visual-studio-c-visual-basic-c"></a>Visual Studio çalışırken çalışan kodu yazma ve hata ayıklama (C#, Visual Basic, C++)
 
@@ -91,91 +91,91 @@ Bu özellik .NET 6 + ' a özeldir. .NET 6 ' yı (.NET 5 veya altı) hedeflemenin
 
 Ayrıca, şu anda tüm proje türlerinin "hata ayıklayıcı yok" senaryosunu desteklemediğini unutmayın. Özellikle:
 
-* UWP uygulamaları, hata ayıklayıcı olmadan dinamik yeniden yükleme için desteklenmez. Bu tasarıma göre yapılır ve bunu geliştirmek için geçerli bir plan yoktur.
-* İOS ve Android 'i hedefleyen Xamarin. Forms uygulamaları .NET Hot Reload 'i desteklemez (uygulamanızı hata ayıklayıcı ile başlatıp başlatamadığına bakılmaksızın), ancak XAML sık yükleme 'yi desteklemeye devam edecektir.
-* .NET MAUı uygulamaları yalnızca hata ayıklayıcı ile desteklenir.
+* Hata ayıklayıcı olmadan UWP Çalışırken Yeniden Yükleme için desteklanmaz. Bu tasarıma göredir ve bunu geliştirmek için geçerli bir plan yoktur.
+* iOS ve Android'i hedef alan Xamarin.Forms uygulamaları .NET Çalışırken Yeniden Yükleme'ı desteklemez (hata ayıklayıcı ile veya hata ayıklayıcı olmadan başlatıp başlatmamanıza bakılmaksızın) ancak bu uygulamaları desteklemeye XAML Çalışırken Yeniden Yükleme.
+* .NET MAUI uygulamaları yalnızca hata ayıklayıcıda de destekler.
 
-## <a name="visual-studio-2022-with-a-net-6-app"></a>.net 6 uygulamasıyla Visual Studio 2022
+## <a name="visual-studio-2022-with-a-net-6-app"></a>Visual Studio 2022'de .NET 6 uygulaması
 
-hem Visual Studio 2022 hem de .net 6 ' yı hedefleyen uygulamalarda çalışıyorsanız, en parlak ve yetenekli yeniden yükleme deneyiminin avantajlarını elde edersiniz.
+Hem Visual Studio 2022 hem de .NET 6'ya yönelik uygulamalarda çalışıyorsanız, en iyi ve en iyi deneyimin avantajlarından Çalışırken Yeniden Yükleme elde edin.
 
-Bu senaryoda desteklenir:
+Bu senaryoda desteklenenler:
 
-* Blazor uygulamaları (sunucu ve WebAssembly (bkz. Note))
-* Blazor ve normal ASP.NET Core web sitelerinde Razor dosyalarını düzenlemeyle
-* CSS etkin yeniden yükleme
-* Hata ayıklayıcı olmadan uygulama çalıştırırken sık yeniden yükleme desteği (daha önce daha ayrıntılı olarak açıklandığı gibi)
+* Blazor uygulamaları (Sunucu ve WebAssembly (nota bakın))
+* Hem Blazor hem de normal web sitelerinde Razor ASP.NET Core düzenleme
+* CSS Çalışırken Yeniden Yükleme
+* Çalışırken Yeniden Yükleme ayıklayıcı olmadan uygulama çalıştırma desteği (daha önce daha ayrıntılı olarak açıklandığı gibi)
 
-.net 6 ' yı hedefliyorsanız yakında Visual Studio 2022 güncelleştirmelerinde ve .net özellik bantındaki ana sürümlerde geliştirmeler almaya devam edersiniz.
+.NET 6'ya yönelik hedefleriniz varsa, 2022 güncelleştirmeleri ile .NET özellik Visual Studio ve ana sürümlerde geliştirmeler almaya devam edersiniz.
 
 > [!NOTE]
-> Visual Studio 2022 ' nin ilk sürümünde (sürüm 17,0), Visual Studio hata ayıklayıcı şu anda etkin değil, ancak 17,1 ' den başlayarak kullanılabilir. uygulamanızı hata ayıklayıcı olmadan veya 17,1 sürümüne güncelleştirerek Visual Studio aracılığıyla başlatırsanız, hala etkin yeniden yükleme yapabilirsiniz.
+> Visual Studio 2022'nin ilk sürümünde (sürüm 17.0), Visual Studio hata ayıklayıcısını kullanırken Blazor WebAssembly için Çalışırken Yeniden Yükleme desteği şu anda etkin değildir ancak 17.1 sürümünden itibaren kullanılabilir. Hata ayıklayıcı Çalışırken Yeniden Yükleme veya 17.1 sürümüne güncelleştirerek Visual Studio uygulamanıza devam edin.
 
-## <a name="supported-aspnet-core-scenarios"></a>desteklenen ASP.NET Core senaryoları
+## <a name="supported-aspnet-core-scenarios"></a>Desteklenen ASP.NET Core Senaryoları
 
-temel sık yükleme deneyimi birçok ASP.NET senaryo için desteklenir. En yaygın olarak kullanılabilecek özellik, çoğu Web uygulaması türü için arka plan kod ve diğer .NET sınıfı dosyalarını değiştirme olanağıdır. bu özellik Visual Studio hata ayıklayıcı kullanılırken çalışarak, her yerde düzenle ve devam et daha önce mevcut.
+Temel Çalışırken Yeniden Yükleme deneyimi birçok farklı senaryo ASP.NET de desteklenemelerini sağlar. En yaygın olarak kullanılabilen özellik, çoğu web uygulaması türü için arka arkasındaki kodu ve diğer .NET sınıf dosyalarını değiştirebilme özelliğidir. Bu özellik, Visual Studio hata ayıklayıcısını kullanırken çalışır ve Düzenle ve Devam'ın daha önce kullanılabilir olduğu her yerde mevcuttur.
 
-.net 6 ' yı hedefleyen ASP.NET Core geliştiriciler için, daha düşük .net sürümleri için kullanılamayan ek yetenekler vardır. Bu özellikler şunları içerir:
+.NET 6 ASP.NET Core ı hedef alan diğer geliştiriciler için, daha düşük .NET sürümleri için sağlanmaz ek özellikler vardır. Bu özellikler şunları içerir:
 
-* **Cshtml:** Razor CSHTML dosyasını düzenleme çok sayıda düzenleme türünü destekler.
-* **Tarayıcı yenileme:** Bir Razor dosyası düzenlendiğinde, hata ayıklarken Web tarayıcınızdaki değişiklikler otomatik olarak yenilenir. Bu özellik daha önce yalnızca hata ayıklayıcı olmadan uygulama başlatılırken kullanılabilir.
-* **CSS etkin yeniden yükleme:** Uygulama çalışırken CSS dosyalarını değiştirebilirsiniz ve değişiklikler siz yazarken çalışan uygulamaya hemen uygulanır.
-* **Hata ayıklayıcı yok:** web uygulamanızı hata ayıklayıcı olmadan başlatmak için Visual Studio kullanırken etkin yeniden yükleme desteği alırsınız (CTRL-F5).
+* **CSHTML:** Razor CSHTML dosyasını düzenlemek birçok tür düzenlemeyi destekler.
+* **Tarayıcı Yenileme:** Razor dosyası düzenlendiğinde, hata ayıklama sırasında web tarayıcınızdaki değişiklikler otomatik olarak yenilenir. Bu özellik daha önce yalnızca hata ayıklayıcı olmadan uygulama başlatıcıda kullanılabilirdi.
+* **CSS Çalışırken Yeniden Yükleme:** Uygulama çalışırken CSS dosyalarını değiştirebilirsiniz ve değişiklikler siz yazarak çalışan uygulamaya hemen uygulanır.
+* **Hata Ayıklayıcısı Yok:** Hata Çalışırken Yeniden Yükleme (CTRL-F5 Visual Studio web uygulamasını başlatmak için web uygulamasını kullanırken destek alırsınız.
 
-## <a name="supported-net-edits"></a>Desteklenen .NET düzenlemeleri
+## <a name="supported-net-edits"></a>Desteklenen .NET Düzenlemeleri
 
-.NET Hot Reload yeniden yükleme deneyimi [Düzenle ve devam et](../debugger/edit-and-continue-visual-csharp.md) mekanizmasıyla desteklenir. Geliştirmeler, Visual Studio eski sürümlerinde ilk olarak mümkün olan diğer düzenleme türleri için destek içerir. Geliştirmeler şunları içerir:
+.NET Çalışırken Yeniden Yükleme deneyimi Düzenle ve Devam [Edin mekanizmasıyla güçlendirilmiştir.](../debugger/edit-and-continue-visual-csharp.md) Geliştirmeler arasında, önceki sürümlerde mümkün olanın ötesinde ek düzenleme türleri için destek Visual Studio. Geliştirmeler şunlardır:
 
-* Özel öznitelikleri ekleme, güncelleştirme veya silme
-* Kayıt yapıları ekleme veya güncelleştirme
-* #Line yönergeleri ekleme veya güncelleştirme
-* Anahtar ifadeleri düzenleniyor
-* Yönergedeki değişiklikler dahil olmak üzere #line yönergeleriyle dosyaları düzenlemeyle
-* Üst düzey deyimleri Düzenle
-* Genel using yönergeleri, dosya kapsamlı ad alanları, geliştirilmiş Lambdalar ve parametre-Less struct oluşturucuları gibi yeni C# 10 özelliklerinden herhangi birini kullanan kodu düzenlemeyle
-* Lambda parametrelerini yeniden adlandırma
-* Mevcut yöntemlerin parametrelerini yeniden adlandırma
+* Özel Öznitelik ekleme, güncelleştirme veya silme
+* Kayıt yapılarını ekleme veya güncelleştirme
+* #line ekleme veya güncelleştirme
+* Switch ifadelerini düzenleme
+* Yönergenin kendi #line dahil olmak üzere dosyaları #line yönergeleriyle düzenleme
+* Üst düzey deyimleri düzenleme
+* Genel kullanım yönergeleri, dosya kapsamlı ad alanları, geliştirilmiş lambdalar ve parametresiz yapı oluşturucuları gibi yeni C# 10 özelliklerinden herhangi birini kullanan kodu düzenleme
+* Lambda parametrelerini yeniden adı
+* Mevcut yöntemlerin parametrelerini yeniden adı
 
-Önceki geliştirmeler, hem dinamik yeniden yükleme hem de Düzenle ve devam et deneyimlerinde kullanılabilir.
+Yukarıdaki geliştirmeler hem Çalışırken Yeniden Yükleme ve Devam Edin deneyimleri için kullanılabilir.
 
 ## <a name="unsupported-net-scenarios"></a>Desteklenmeyen .NET senaryoları
 
 Desteklenmeyen senaryolar:
 
-* Xamarin. Forms uygulamaları iOS ve Android senaryolarında .NET Hot Reload 'i desteklemez. UWP uygulamasını hedeflerken, sık yeniden yükleme için kısmi destek alabilirsiniz. Bu tasarıma göre yapılır ve başka geliştirmeler yapmak zorunda kalmazsınız. (Note: XAML etkin yeniden yüklemesi, en son SDK 'daki Xamarin. Forms müşterileri için kullanılabilir ve desteklenmeye devam edecektir.)
-* .net mauı uygulamaları Visual Studio 2022 sürüm 17,1 Preview 1 ' den önce desteklenmez. 17,1 Preview 1 ' den başlayarak, .NET MAUı desteklenir, ancak yalnızca hata ayıklayıcı eklenmiş olur.
-* F # veya .NET Native hedefleme kullanılarak oluşturulan uygulamalar, sık yeniden yüklemeyi desteklemez.
+* Xamarin.Forms uygulamaları, iOS ve Android Çalışırken Yeniden Yükleme .NET uygulamalarını desteklemez. UWP uygulamasını hedeflerken Çalışırken Yeniden Yükleme kısmi destek elde edin. Bu, tasarıma göredir ve başka geliştirmeler de görmeyi bekleyeceğiz. (Not: XAML Çalışırken Yeniden Yükleme sdk'da Xamarin.Forms müşterileri için kullanılabilir ve destek olmaya devam edecektir.)
+* .NET MAUI 2022 sürüm 17.1 Önizleme 1'den önce Visual Studio uygulamaları desteklenmiyor. 17.1 Preview 1'den başlayarak, .NET MAUI yalnızca hata ayıklayıcı ekli olarak de destekleni.
+* F# veya hedef kitle kullanılarak .NET Native uygulamalar bu uygulamaları Çalışırken Yeniden Yükleme.
 
-hata ayıklayıcı olmadan Visual Studio kullanıyorsanız. NET Hot Reload yalnızca .NET 6 ' yı hedefleyen uygulamalar için çalışır.
+Hata ayıklayıcı olmadan Visual Studio kullanıyorsanız. NET Çalışırken Yeniden Yükleme yalnızca .NET 6'ya yönelik uygulamalar için çalışır.
 
-Ayrıca, sık yeniden yükleme bazı proje yapılandırmalarında kullanılamaz:
+Ayrıca, Çalışırken Yeniden Yükleme proje yapılandırmalarında kullanılamaz:
 
-* uygulamanızı çalıştırmak için Visual Studio hata ayıklayıcı kullanıyorsanız, ancak ayarlarda devre dışı bırakıldıysa `Edit and Continue` , sık yeniden yükleme desteklenmez.
-* Yayın veya özel derleme konfigürasyonları desteklenmez. Projenizin hata ayıklama yapı yapılandırmasını kullanması gerekir.
-* Bazı başlatma veya derleme iyileştirmeleri .NET Hot Reload 'te desteklenmez. Örneğin, projenizin hata ayıklama profili aşağıdaki yollarla yapılandırılırsa, .NET Hot Reload desteklenmez:
-  * Projeniz için [kırpma](/dotnet/core/deploying/trimming/trimming-options) etkin. Örneğin, `PublishTrimmed` hata ayıklama profili için proje dosyanızda true olarak ayarlanırsa bu desteklenmez.
-  * [Readytorun](/dotnet/core/deploying/ready-to-run) , projeniz için etkinleştirildi. Örneğin, `PublishReadyToRun` hata ayıklama profili için proje dosyanızda true olarak ayarlanırsa bu desteklenmez.
-* WinUI 3 uygulamaları için yerel kod hata ayıklaması varsayılan olarak etkindir (ayar *Launchsettings. JSON*' dan olmasa bile) ve karışık mod hata ayıklaması bu şekilde yapıldığında .net Hot Reload desteklenmez. Bu nedenle, `nativeDebugging: false` .net Hot Reload 'in düzgün çalışmasını sağlamak Için *launchsettings. JSON* ' a açık ayarı eklemeniz gerekir.
+* Visual Studio hata ayıklayıcısını kullanarak uygulamayı çalıştırdı ancak ayarlarda devre dışı `Edit and Continue` Çalışırken Yeniden Yükleme desteklenmiyor.
+* Yayın veya özel derleme yapılandırmaları desteklenmiyor. Projenizin Hata ayıklama derleme yapılandırmasını kullanması gerekir.
+* .NET'te bazı başlatma veya derleme iyileştirmeleri Çalışırken Yeniden Yükleme. Örneğin, projenizin hata ayıklama profili aşağıdaki yollarla yapılandırılmışsa, .NET Çalışırken Yeniden Yükleme desteklenmiyor:
+  * [Projeniz](/dotnet/core/deploying/trimming/trimming-options) için kırpma etkindir. Örneğin, hata ayıklama profili için proje dosyanız içinde `PublishTrimmed` True olarak ayarlanırsa bu destek desteklanmaz.
+  * [Projeniz için ReadyToRun](/dotnet/core/deploying/ready-to-run) etkinleştirilir. Örneğin, hata ayıklama profili için proje dosyanız içinde `PublishReadyToRun` True olarak ayarlanırsa bu destek desteklanmaz.
+* WinUI 3 uygulamaları için yerel kod hata ayıklama varsayılan olarak etkinleştirilir (ayar *LaunchSettings.json'da* yoksa bile) ve karma mod hata ayıklaması bu şekilde Çalışırken Yeniden Yükleme.NET Çalışırken Yeniden Yükleme desteklenmiyor. Bu nedenle, .NET ağının düzgün şekilde çalışması için `nativeDebugging: false` *LaunchSettings.json'a* Çalışırken Yeniden Yükleme ayarını eklemeniz gerekir.
 
-## <a name="configure-hot-reload"></a>Dinamik yeniden yüklemeyi yapılandırma
+## <a name="configure-hot-reload"></a>Yapılandırma Çalışırken Yeniden Yükleme
 
-dinamik **yeniden yükleme açılan düğmesinden** **Ayarlar** seçerek, sık yeniden yükleme yapılandırabilirsiniz.
+Açılan Çalışırken Yeniden Yükleme açılan Ayarlar **seçerek** **Çalışırken Yeniden Yükleme** yapılandırabilirsiniz.
 
-![Dinamik yeniden yükleme yapılandırması ekran görüntüsü](../debugger/media/vs-2022/dotnet-hot-reload-configure.png)
+![Yapılandırma ekran Çalışırken Yeniden Yükleme](../debugger/media/vs-2022/dotnet-hot-reload-configure.png)
 
-Ya da,   >    >    >  **.NET/C++ Hot Reload** hata ayıklama araçları seçeneklerini açın.
+Veya   >    >    >  **.NET/C++** Hata Ayıklama Araçları Seçenekleri'Çalışırken Yeniden Yükleme.
 
-Dinamik yeniden yükleme ayarları şunlardır:
+Uygulama ayarları Çalışırken Yeniden Yükleme içerir:
 
-* **Dinamik yeniden yükleme ve düzenleme ve hata ayıklama sırasında devam et 'ı etkinleştirin**. Hata ayıklayıcı ekli (F5) ile Başlarken sık yeniden yükleme etkinleştirilir.
+* **Hata Çalışırken Yeniden Yükleme ve Düzenle ve Devam'ı etkinleştirin.** Hata Çalışırken Yeniden Yükleme (F5) ile başlayarak hata ayıklayıcıyı sağlar.
 
-* **Hata ayıklama olmadan Başlarken etkin yeniden yüklemeyi etkinleştirin**. Hata ayıklayıcı ekli olmadan Başlarken sık yeniden yükleme etkinleştirilir (CTRL + F5).
+* **Hata Çalışırken Yeniden Yükleme başlatmadan başlatma sırasında uygulamanın etkinleştirildi.** Hata Çalışırken Yeniden Yükleme ekli olmadan (Ctrl+F5) başlatma sırasında hata ayıklamayı sağlar.
 
-* **Dosya kaydetme üzerine sık yeniden yükleme Uygula**. Dosyayı kaydettiğinizde kod değişikliklerini uygular.
+* **Dosya Çalışırken Yeniden Yükleme'a uygulama.** Dosyayı kaydeden kod değişikliklerini uygular.
 
-![.NET Hot reload için ayarların ekran görüntüsü](../debugger/media/vs-2022/dotnet-hot-reload-settings.png)
+![.NET için ayarların ekran Çalışırken Yeniden Yükleme](../debugger/media/vs-2022/dotnet-hot-reload-settings.png)
 
-Ayrıca, .net 6 projelerinizi launchSetting. JSON ve ayarını olarak değiştirerek proje düzeyinde .NET Hot Reload 'ın kullanılabilir olup olmadığını kontrol edebilirsiniz `hotReloadEnabled` `false` .
+.NET 6 projelerinizi launchSetting.json olarak ayarlayarak .NET Çalışırken Yeniden Yükleme'nin proje düzeyinde kullanılabilir olup olmadığını da kontrol `hotReloadEnabled` etmek için kullanılabilirsiniz. `false`
 
 Örnek:
 
@@ -192,16 +192,16 @@ Ayrıca, .net 6 projelerinizi launchSetting. JSON ve ayarını olarak değiştir
 
 ## <a name="warning-message"></a>Uyarı iletisi
 
-Aşağıdaki iletişim kutusunu görürseniz, etkin yeniden yükleme, geçerli düzenlemeleri yeniden başlatmaya gerek kalmadan uygulayamaz. Uygulamayı yeniden oluşturmayı ve değişiklikleri uygulamayı (yeniden başlatmayı) seçebilir ya da düzenlemesine devam edebilirsiniz. Yeniden oluşturursanız, tüm uygulama durumu kaybedilir. Düzenlenmesine devam ederseniz, ek değişiklikler veya düzeltmeler, sık yeniden yükleme işleminin yeniden çalışmasına neden olabilir.
+Aşağıdaki iletişim kutusunu görüyorsanız, Çalışırken Yeniden Yükleme yeniden başlatmadan geçerli düzenlemeleri uygulayamaz. Uygulamayı yeniden oluşturma ve değişiklikleri uygulama (yeniden başlatma) veya düzenlemeye devam etmek için seçebilirsiniz. Yeniden oluşturmanız, tüm uygulama durumu kaybolur. Düzenlemeye devam edersiniz, ek değişiklikler veya düzeltmeler yeniden çalışmaya Çalışırken Yeniden Yükleme olabilir.
 
-![Değişiklikleri Uygula iletişim kutusunun ekran görüntüsü](../debugger/media/vs-2022/dotnet-hot-reload-apply-changes.png)
+![Değişiklikleri uygula iletişim kutusunun ekran görüntüsü](../debugger/media/vs-2022/dotnet-hot-reload-apply-changes.png)
 
-iletişim kutusunda **her zaman yeniden oluştur** seçeneğini belirlerseniz, iletişim kutusunu geçerli Visual Studio oturumunda tekrar görmezsiniz ve Visual Studio iletişim kutusunu göstermek yerine otomatik olarak yeniden oluşturulur ve yeniden yüklenir.
+İletişim kutusunda **Her** zaman yeniden oluştur seçeneğini belirtirseniz, iletişim kutusunu geçerli Visual Studio oturumunda yeniden görmeyebilirsiniz ve Visual Studio iletişim kutusunu göstermek yerine otomatik olarak yeniden oluşturulur ve yeniden yüklenir.
 
 > [!NOTE]
-> Visual Studio ilk sürümünde (sürüm 17,0) standart düzenle ve devam et iletişim kutusu, hata ayıklayıcı ile sık yeniden yükleme kullanılırken gösterilmeye devam eder. Bu bir hatadır ve 17,1 Preview 2 sürümünden itibaren çözüldü.
+> Visual Studio (sürüm 17.0) ilk sürümünde, hata ayıklayıcı ile birlikte Çalışırken Yeniden Yükleme düzenle ve devam edin iletişim kutusu gösterilmeye devam eder. Bu bir hatadır ve 17.1 Preview 2 sürümüyle başlayarak çözüldü.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Düzenle ve devam et (Visual C#)](../debugger/edit-and-continue-visual-csharp.md) 
- [Düzenle ve devam et (C++)](../debugger/edit-and-continue-visual-cpp.md)
+[Düzenle ve Devam Ediyor (Visual C#)](../debugger/edit-and-continue-visual-csharp.md) 
+ [Düzenle ve Devam Edin (C++)](../debugger/edit-and-continue-visual-cpp.md)

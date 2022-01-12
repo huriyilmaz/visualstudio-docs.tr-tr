@@ -1,17 +1,18 @@
 ---
 title: Mac için Visual Studio klavye gezintisi
 description: klavye komutlarıyla Mac için Visual Studio kullanma
-author: heiligerdankgesang
-ms.author: dominicn
+author: jmatthiesen
+ms.author: jomatthi
+manager: dominicn
 ms.date: 09/23/2019
 ms.assetid: EF574E49-0465-4973-BE67-286DA20B8836
 ms.topic: how-to
-ms.openlocfilehash: f5fe827566d9949f5dca2a1a3e1dcfb1bf191c6e
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 24bc5001b22201089cdfb4099b00d879130d9b56
+ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126726000"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135804473"
 ---
 # <a name="keyboard-navigation-in-visual-studio-for-mac"></a>Mac için Visual Studio klavye gezintisi
 
