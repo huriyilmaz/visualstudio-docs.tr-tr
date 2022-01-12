@@ -4,6 +4,8 @@ description: Sık karşılaşılan hata ayıklama sorunları ve yerel uygulamala
 ms.custom: SEO-VS-2020
 ms.date: 04/11/2017
 ms.topic: conceptual
+f1_keywords:
+- vs.debug
 dev_langs:
 - CSharp
 - VB
@@ -21,12 +23,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 109a05d64d425473c84ffd8e6eb26d3cee3f8a42
-ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
+ms.openlocfilehash: 5e09d729e86aa0b72c92940cf5f449ea79103631
+ms.sourcegitcommit: 52a425b5a541034cda26db8df9cd43281c007e80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "135804837"
+ms.lasthandoff: 12/23/2021
+ms.locfileid: "135540724"
 ---
 # <a name="debugging-native-code"></a>Yerel Kodda Hata Ayıklama
 Bölümünde yerel uygulamalar için bazı yaygın hata ayıklama sorunları ve teknikleri yer almaktadır. Bu bölümde ele alan teknikler üst düzey tekniklerdir. hata ayıklayıcısını kullanma Visual Studio için [bkz. İlk olarak hata ayıklayıcısına bakın.](../debugger/debugger-feature-tour.md)
