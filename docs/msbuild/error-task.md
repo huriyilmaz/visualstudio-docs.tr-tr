@@ -1,6 +1,6 @@
 ---
-title: Hata Görevi | Microsoft Docs
-description: Bir derlemeyi MSBuild ve değerlendirilen koşullu deyime göre bir hatayı günlüğe günlük kaydı yapmak için MSBuild Error görevini kullanın.
+title: Hata görevi | Microsoft Docs
+description: bir derlemeyi durdurmak ve değerlendirilen bir koşullu ifadeye dayanarak bir hatayı günlüğe kaydetmek için MSBuild hata görevini kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -21,39 +21,42 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: ad3b206dbbbc65b2a3a08bc4bee7e8a4e4e85773
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 25051888bcabf288f90d8315a17ffc6432a521a4
+ms.sourcegitcommit: 1d44a5509772c3926f5ad13b1796485d6d8c441e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122108973"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135963947"
 ---
 # <a name="error-task"></a>Hata görevi
 
-Bir derlemeyi durdurur ve değerlendirilen koşullu deyime göre bir hatayı günlüğe kaydeder.
+Bir derlemeyi durdurup değerlendirilen bir koşullu ifadeye göre bir hata kaydeder.
 
 ## <a name="parameters"></a>Parametreler
 
-Aşağıdaki tabloda görevin parametreleri açık `Error` almaktadır.
+Aşağıdaki tablo, görevin parametrelerini açıklar `Error` .
 
 | Parametre | Açıklama |
 |---------------| - |
-| `Code` | İsteğe `String` bağlı parametre.<br /><br /> Hatayla ilişkilendirilen hata kodu. |
-| `File` | İsteğe `String` bağlı parametre.<br /><br /> Hatayı içeren dosyanın adı. Hiçbir dosya adı sağlanmayacaksa, Hata görevini içeren dosya kullanılır. |
-| `HelpKeyword` | İsteğe `String` bağlı parametre.<br /><br /> Hatayla ilişkilendirilen Yardım anahtar sözcüğü. |
-| `Text` | İsteğe `String` bağlı parametre.<br /><br /> Parametresinin değerlendirmesi MSBuild `Condition` günlüklere kaydeden hata `true` metni. |
+| `Code` | İsteğe bağlı `String` parametre.<br /><br /> Hatayla ilişkilendirilecek hata kodu. |
+| `File` | İsteğe bağlı `String` parametre.<br /><br /> Hatayı içeren dosyanın adı. Dosya adı sağlanmazsa, hata görevini içeren dosya kullanılacaktır. |
+| `HelpKeyword` | İsteğe bağlı `String` parametre.<br /><br /> Hatayla ilişkilendirilecek Yardım anahtar sözcüğü. Yalnızca dahili kullanım içindir. |
+| `HelpLink` | İsteğe bağlı `String` parametre.<br/><br /> Hata hakkında daha fazla bilgi için bir bağlantı. |
+| `Text` | İsteğe bağlı `String` parametre.<br /><br /> `Condition`parametresi olarak değerlendirilirse MSBuild hata metni `true` . |
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu `Error` görev, MSBuild projelerinin günlüklere hata metni oluşturmasını ve derleme yürütmesini durdurmasını sağlar.
+`Error`görev MSBuild projelerin günlüğe hata metni vermesini ve derleme yürütmeyi durdurmasını sağlar.
 
-parametresi `Condition` olarak değerlendirilirse `true` derleme durdurulur ve bir hata günlüğe kaydedilir. Parametre `Condition` yoksa hata günlüğe kaydedilir ve derleme yürütmesi durdurulur. Günlüğe kaydetme hakkında daha fazla bilgi için [bkz. Derleme günlüklerini alma.](../msbuild/obtaining-build-logs-with-msbuild.md)
+`Condition`Parametresi olarak değerlendirilirse `true` , derleme durdurulur ve bir hata günlüğe kaydedilir. Bir `Condition` parametre yoksa, hata günlüğe kaydedilir ve derleme yürütmesi duraklar. Günlüğe kaydetme hakkında daha fazla bilgi için bkz. [Derleme günlüklerini alma](../msbuild/obtaining-build-logs-with-msbuild.md).
 
-Bu görev, yukarıda listelenen parametrelere ek olarak, sınıfından devralınan parametreleri de <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından <xref:Microsoft.Build.Utilities.Task> devralınır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı.](../msbuild/taskextension-base-class.md)
+Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
+
+`HelpKeyword`, Visual Studio tarafından bağlamsal yardım özelliğini (F1) desteklemek için kullanılır. `HelpLink`Çevrimiçi yardım sayfasını bir hata iletisiyle ilişkilendirmek için ' i kullanabilirsiniz.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod örneği tüm gerekli özelliklerin ayar olduğunu doğrular. Ayarlanmazsa, proje bir hata olayı döndürür ve görevin parametresinin `Text` değerini günlüğe `Error` kaydeder.
+Aşağıdaki kod örneği, tüm gerekli özelliklerinin ayarlandığını doğrular. Bunlar ayarlanmamışsa, proje bir hata olayı oluşturur ve görevin parametresinin değerini günlüğe kaydeder `Text` `Error` .
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -72,4 +75,4 @@ Aşağıdaki kod örneği tüm gerekli özelliklerin ayar olduğunu doğrular. A
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)
-- [Derleme günlüklerini alma](../msbuild/obtaining-build-logs-with-msbuild.md)
+- [Derleme günlüklerini al](../msbuild/obtaining-build-logs-with-msbuild.md)

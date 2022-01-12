@@ -1,6 +1,6 @@
 ---
-title: Uyarı görevi | Microsoft Docs
-description: MSBuild, değerlendirilen bir koşullu ifadeye dayalı bir derleme sırasında uyarı kaydetmek için uyarı görevini nasıl kullandığını öğrenin.
+title: Uyarı Görevi | Microsoft Docs
+description: Değerlendirme MSBuild bir derleme sırasında uyarıyı günlüğe kaydedilirken Uyarı görevini nasıl kullandığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -21,39 +21,42 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: faf53415b62550cb2091ffc9741ed2eeef60bbcc
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 9906e901d1d793e80a6e099b1f003659515bf6e3
+ms.sourcegitcommit: 1d44a5509772c3926f5ad13b1796485d6d8c441e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122076938"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "135963927"
 ---
 # <a name="warning-task"></a>Uyarı görevi
 
-Değerlendirilen bir koşullu ifadeye dayanan bir derleme sırasında bir uyarı kaydeder.
+Değerlendirilen koşullu deyimi temel alan bir derleme sırasında bir uyarıyı günlüğe kaydeder.
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıdaki tablo, görevin parametrelerini açıklar `Warning` .
+ Aşağıdaki tabloda görevin parametreleri açık `Warning` almaktadır.
 
 | Parametre | Açıklama |
 |---------------| - |
-| `Code` | İsteğe bağlı `String` parametre.<br /><br /> Uyarıyla ilişkilendirilecek uyarı kodu. |
-| `File` | İsteğe bağlı `String` parametre.<br /><br /> Varsa ilgili dosyayı belirtir. Dosya sağlanmazsa, uyarı görevini içeren dosya kullanılır. |
-| `HelpKeyword` | İsteğe bağlı `String` parametre.<br /><br /> Uyarıyla ilişkilendirilecek Yardım anahtar sözcüğü. |
-| `Text` | İsteğe bağlı `String` parametre.<br /><br /> parametresi olarak değerlendirilirse MSBuild olan uyarı metni `Condition` `true` . |
+| `Code` | İsteğe `String` bağlı parametre.<br /><br /> Uyarıyla ilişkilendirilen uyarı kodu. |
+| `File` | İsteğe `String` bağlı parametre.<br /><br /> Varsa ilgili dosyayı belirtir. Hiçbir dosya sağlanmazsa, Uyarı görevini içeren dosya kullanılır. |
+| `HelpKeyword` | İsteğe `String` bağlı parametre.<br /><br /> Uyarıyla ilişkilendirilen Yardım anahtar sözcüğü. Yalnızca dahili kullanım içindir. |
+| `HelpLink` | İsteğe `String` bağlı parametre.<br/><br /> Uyarı hakkında daha fazla bilgi için bir bağlantı. |
+| `Text` | İsteğe `String` bağlı parametre.<br /><br /> Parametresinin değerlendirmesi MSBuild günlüğe `Condition` kaydeden uyarı `true` metni. |
 
 ## <a name="remarks"></a>Açıklamalar
 
- görev, bir `Warning` sonraki derleme adımına geçmeden önce, MSBuild projelerin gerekli bir yapılandırma veya özellik varlığını denetlemesini sağlar.
+ Görev, MSBuild bir sonraki derleme adımına devam etmeden önce gerekli yapılandırmanın veya özelliğin `Warning` varlığını denetlemeye olanak sağlar.
 
- `Condition` `Warning` Görevin parametresi olarak değerlendirilirse `true` , `Text` parametrenin değeri günlüğe kaydedilir ve derleme yürütülmeye devam eder. Bir `Condition` parametre yoksa, uyarı metni günlüğe kaydedilir. Günlüğe kaydetme hakkında daha fazla bilgi için bkz. [Derleme günlüklerini alma](../msbuild/obtaining-build-logs-with-msbuild.md).
+ Görevin `Condition` parametresi olarak `Warning` değerlendirilirse parametrenin değeri günlüğe kaydedilir ve derleme `true` `Text` yürütülmaya devam eder. Parametre `Condition` yoksa uyarı metni günlüğe kaydedilir. Günlüğe kaydetme hakkında daha fazla bilgi için [bkz. Derleme günlüklerini alma.](../msbuild/obtaining-build-logs-with-msbuild.md)
 
- Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
+ Bu görev, yukarıda listelenen parametrelere ek olarak, sınıfından devralınan parametreleri de <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından <xref:Microsoft.Build.Utilities.Task> devralınır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı.](../msbuild/taskextension-base-class.md)
+
+`HelpKeyword`, Visual Studio (F1) özelliğini desteklemek için kullanılır. Çevrimiçi yardım `HelpLink` sayfasını bir hata iletisiyle ilişkilendirmek için kullanabilirsiniz.
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki kod örneği, komut satırında ayarlanan özellikleri denetler. Hiçbir özellik ayarlanmamışsa, proje bir uyarı olayı oluşturur ve görevin parametresinin değerini günlüğe kaydeder `Text` `Warning` .
+ Aşağıdaki kod örneği, komut satırına ayarlanmış özellikleri denetler. Ayarlanmış bir özellik yoksa proje bir uyarı olayı verir ve görevin parametresinin `Text` değerini günlüğe `Warning` kaydeder.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -71,5 +74,5 @@ Değerlendirilen bir koşullu ifadeye dayanan bir derleme sırasında bir uyarı
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Derleme günlüklerini al](../msbuild/obtaining-build-logs-with-msbuild.md)
-- [Project dosya şeması başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
+- [Derleme günlüklerini alma](../msbuild/obtaining-build-logs-with-msbuild.md)
+- [Project dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
