@@ -442,7 +442,7 @@
                   href: ide/reference/regex-completion-through-intellisense.md
                 - name: Erişilemeyen kodları kaldırma
                   href: ide/reference/remove-unreachable-code.md
-                - name: Kullanılmayan başvuruları kaldırma
+                - name: Kullanılmayan başvuruları kaldır
                   href: ide/reference/remove-unused-references.md
                 - name: Rename
                   href: ide/reference/rename.md
@@ -653,11 +653,11 @@
               items:
                 - name: 'Öğretici 1: Resim görüntüleyici oluşturma (C#)'
                   items:
-                    - name: 1. Resim Görüntüleyicisi uygulaması oluşturma
+                    - name: 1. Resim görüntüleyici uygulaması oluşturma
                       href: ide/tutorial-windows-forms-picture-viewer-layout.md
                     - name: 2. Uygulamaya denetim ekleme
                       href: ide/tutorial-windows-forms-picture-viewer-controls.md
-                    - name: '3. Uygulamayı kodla, test edin ve çalıştırın'
+                    - name: '3. Uygulamayı kodlayın, test edin ve çalıştırın'
                       href: ide/tutorial-windows-forms-picture-viewer-code.md
                 - name: 'Öğretici 2: Zamanlı matematik testi oluşturma (C#)'
                   items:
@@ -682,27 +682,14 @@
                       href: ide/step-8-customize-the-quiz.md
                 - name: 'Öğretici 3: Eşleştirme oyunu oluşturma (C#)'
                   items:
-                    - name: Genel Bakış
-                      displayName: Tutorial 3 Matching game
-                      href: ide/tutorial-3-create-a-matching-game.md
-                    - name: '1. Adım: Proje oluşturma ve formunuza tablo ekleme'
-                      href: ide/step-1-create-a-project-and-add-a-table-to-your-form.md
-                    - name: '2. Adım: Rastgele nesne ve simge listesi ekleme'
-                      href: ide/step-2-add-a-random-object-and-a-list-of-icons.md
-                    - name: '3. Adım: Her etikete rastgele bir simge atama'
-                      href: ide/step-3-assign-a-random-icon-to-each-label.md
-                    - name: '4. Adım: Her etikete bir tıklama olayı işleyicisi ekleme'
-                      href: ide/step-4-add-a-click-event-handler-to-each-label.md
-                    - name: '5. Adım: Etiket başvuruları ekleme'
-                      href: ide/step-5-add-label-references.md
-                    - name: '6. Adım: Süreölçer ekleme'
-                      href: ide/step-6-add-a-timer.md
-                    - name: '7. Adım: Çiftleri görünür durumda tutma'
-                      href: ide/step-7-keep-pairs-visible.md
-                    - name: '8. Adım: Oyuncunun kazanıp kazanmadığını doğrulamak için yöntem ekleme'
-                      href: ide/step-8-add-a-method-to-verify-whether-the-player-won.md
-                    - name: '9. Adım: Diğer özellikleri deneme'
-                      href: ide/step-9-try-other-features.md
+                    - name: 1. Eşleşen bir oyun oluşturun
+                      href: ide/tutorial-windows-forms-create-match-game.md
+                    - name: 2. Eşleştirme oyununuza simgeler ekleme
+                      href: ide/tutorial-windows-forms-match-game-icons.md
+                    - name: 3. Etiketler ve Zamanlayıcı ekleme
+                      href: ide/tutorial-windows-forms-match-game-labels.md
+                    - name: 4. Eşleşme oyununuzu oynatın
+                      href: ide/tutorial-windows-forms-match-game-play.md
         - name: F#
           items:
             - name: F# geliştirme
@@ -1047,7 +1034,7 @@
       items:
         - name: Çağrı Hiyerarşisi
           href: ide/reference/call-hierarchy.md
-        - name: Geliştirici Komut İstemi & geliştirici PowerShell
+        - name: Geliştirici Komut İstemi & Geliştirici PowerShell
           href: ide/reference/command-prompt-powershell.md
         - name: Değişiklikleri Önizleme
           href: ide/preview-changes.md
@@ -1401,20 +1388,20 @@
           href: ide/dotfuscator/capabilities.md
         - name: Dotfuscator Community’yi yükleme
           href: ide/dotfuscator/install.md
-        - name: Dotfuscator Community Kaydet
+        - name: Dotfuscator Community
           href: ide/dotfuscator/register.md
         - name: Dotfuscator Community’yi yükseltme
           href: ide/dotfuscator/upgrades.md
-        - name: dotfuscator Community 5 ' ten yükseltme
+        - name: Dotfuscator 5'Community yükseltme
           href: ide/dotfuscator/upgrade-from-5.md
 - name: Kaynaklar
   expanded: true
   items:
-    - name: 'Visual Studio 2022: yenilikler'
+    - name: 'Visual Studio 2022: What''s new'
       href: ide/whats-new-visual-studio-2022.md
-    - name: 'Visual Studio 2019: yenilikler'
+    - name: 'Visual Studio 2019: What''s new'
       href: ide/whats-new-visual-studio-2019.md
-    - name: 'Visual Studio 2017: yenilikler'
+    - name: 'Visual Studio 2017: What''s new'
       href: ide/whats-new-visual-studio-2017.md
     - name: Docs’taki Yenilikler
       href: ide/whats-new-visual-studio-docs.md
@@ -1426,9 +1413,9 @@
       href: 'https://visualstudio.microsoft.com/license-terms/'
     - name: Destek yaşam döngüsü ve bakım
       href: /visualstudio/productinfo/vs-servicing-vs/
-    - name: Müşteri deneyimini geliştirme
+    - name: Müşteri Deneyimini Geliştirme
       href: ide/visual-studio-experience-improvement-program.md
-    - name: Visual Studio bağlı deneyimler
+    - name: Visual Studio'de bağlantılı deneyimler
       href: ide/reference/connected-experiences.md
 - name: Geri bildirim gönder
   items:
@@ -1440,7 +1427,7 @@
       href: ide/how-to-increase-chances-of-performance-issue-being-fixed.md
     - name: MSBuild sorunları için günlükler oluşturma
       href: ide/msbuild-logs.md
-    - name: Bir ETL izlemesi toplayın ve mini döküm oluşturun
+    - name: ETL izlemesi toplama ve minidumps oluşturma
       href: ide/report-a-problem-perfview-minidumps.md
     - name: Geliştirici Topluluğu yönergeleri
       href: ide/developer-community-guidelines.md
