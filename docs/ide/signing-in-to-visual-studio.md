@@ -11,76 +11,70 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c60186a4300e50781212384118dd29861ea0bec
-ms.sourcegitcommit: 0f2af2f1a8cf0a481fd8f673accf3aebf2e262c8
+ms.openlocfilehash: 412d226e2e4657b004d1c1d795e7f62ed4cb5e41
+ms.sourcegitcommit: 658edd3b0dc23fb20728dafc12734b22f8ed1a89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/13/2021
-ms.locfileid: "134714506"
+ms.lasthandoff: 01/18/2022
+ms.locfileid: "136890692"
 ---
 # <a name="sign-in-to-visual-studio-on-windows"></a>Windows Visual Studio için oturum açın 
 
-Oturum açmanız gerekmiyorsa, bunu yapmanın [pek çok avantajı](#benefits-to-signing-in) vardır. Bu makalede, [oturum açmayı](#how-to-sign-in), [profilinizi güncelleştirmeyi](#update-your-profile)ve [oturum açma hatalarını nasıl giderebileceğinizi](#troubleshooting)de öğreneceksiniz.
-
-> [!NOTE]
-> bu konu Windows Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [Mac için Visual Studio oturum açma](/visualstudio/mac/signing-in).
+Bu makalede şunları öğreneceksiniz:
++ [Hesap oturum açma avantajları](#benefits)
++ Bir hesapla [oturum açma](#sign-in)
++ [Profilinizi güncelleştirme](#update-your-profile)
 
 ::: moniker range="vs-2017"
 
 > [!WARNING]
-> koşullu erişim için yapılandırılmış kaynaklarla çalışmak için Visual Studio 2019 güncelleştirme 16,6 veya sonraki bir sürüme yükseltin. daha fazla bilgi için bkz. [multi-factor authentication gerektiren hesaplarla Visual Studio kullanma](work-with-multi-factor-authentication.md).
-> koşullu erişim için yapılandırılmış kaynaklara erişmek üzere Visual Studio 2017 kullanmak, azaltılmış bir kimlik doğrulama deneyimi tetikleyip aynı Visual Studio oturumunda birkaç kez yeniden kimlik doğrulaması işlemi tetiklenebilir. 
-> 
+> koşullu erişim veya multi-factor authentication için yapılandırılmış kaynaklarla çalışmak için Visual Studio 2019 güncelleştirme 16,6 veya üzeri bir sürüm gerekir. daha önceki sürümler, azaltılmış bir kimlik doğrulama deneyimi tetikleyip aynı Visual Studio oturumunda birkaç kez yeniden kimlik doğrulamaya neden olabilir. 
+
 ::: moniker-end
 
-## <a name="benefits-to-signing-in"></a>Oturum açma avantajları
+<a name="benefits"></a>
+## <a name="benefits-why-sign-in"></a>Avantajlar: neden oturum açma? 
 
-İşte, oturum açtıktan sonra neleri beklediklerinize ilişkin tam bir liste aşağıda verilmiştir:
+Oturum açmanız gerekmiyorsa, bunu yapmanın pek çok avantajı vardır.   
 
-|Avantaj|Açıklama|
+|Avantaj|Description|
 |---|---|
-|Visual Studio deneme süresini uzat|30 günlük deneme süresi ile sınırlı olmak yerine, **ek 90 gün boyunca** Visual Studio Professional veya Visual Studio Enterprise kullanın. <br/>Bkz. [deneme sürümünü genişletme veya lisans güncelleştirme](../ide/how-to-unlock-visual-studio.md).|
-|Visual Studio kilit açma (Visual Studio abonelik veya Azure DevOps kuruluş)|Visual Studio aboneliği veya Azure DevOps organizasyonu ile ilişkili bir hesap kullanıyorsanız, Visual Studio açın.<br/>Bkz. [deneme sürümünü genişletme veya lisans güncelleştirme](../ide/how-to-unlock-visual-studio.md).|
-|Visual Studio ayarlarınızı eşitler|anahtar bağlamaları, pencere düzeni ve renk teması gibi özelleştirdiğiniz Ayarlar, herhangi bir cihazda Visual Studio oturum açtığınızda hemen uygulanır. <br/>Bkz. [Visual Studio ayarları senkronize](../ide/synchronized-settings-in-visual-studio.md)etme.|
-|Hizmetlere otomatik olarak bağlan|aynı hesapta kimlik bilgileri için yeniden sormadan, Azure ve Azure DevOps Services gibi hizmetlere Bağlan.|
-|Visual Studio Community sürümünü kullanmaya devam et|Community edition yüklemeniz bir lisans isterse, Visual Studio Community **ücretsiz** kullanmaya devam etmek için ıde 'de oturum açın. |
-|' Visual Studio Dev Essentials ' al|Bu program ücretsiz yazılım teklifleri, eğitim, destek ve daha fazlasını içerir. <br/>bkz. [Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/).|
+|[Visual Studio deneme süresini genişletin](../ide/how-to-unlock-visual-studio.md)|30 günlük deneme süresi ile sınırlı olmak yerine, **ek 90 gün boyunca** Visual Studio Professional veya Visual Studio Enterprise kullanın.|
+|[Visual Studio kilidini aç](../ide/how-to-unlock-visual-studio.md)|[Visual Studio aboneliği](/visualstudio/subscriptions/using-the-subscriber-portal) veya Azure DevOps organizasyonu ile ilişkili bir hesap kullanıyorsanız, Visual Studio açın.|
+|Ayarlarınızı [eşitler](../ide/synchronized-settings-in-visual-studio.md)|anahtar bağlamaları, pencere düzeni ve renk teması gibi özelleştirdiğiniz Ayarlar, herhangi bir cihazda Visual Studio oturum açtığınızda hemen uygulanır.|
+|Azure hizmetlerine otomatik bağlanma|aynı hesapta kimlik bilgileri için yeniden sormadan, Azure ve Azure DevOps Services gibi hizmetlere Bağlan.|
+|Community sürümünüzü kullanmaya devam edin|yükleme sizden bir lisans isterse, Visual Studio Community **ücretsiz** kullanmaya devam etmek için ıde 'de oturum açın. |
+|[' Visual Studio Dev Essentials ' al](https://visualstudio.microsoft.com/dev-essentials/)|Bu program ücretsiz yazılım, eğitim, destek ve daha fazlasını içerir.|
 
-## <a name="how-to-sign-in"></a>Oturum açma 
+<a name="sign-in"></a>
+## <a name="sign-in-to-account"></a>Hesap oturumu açma
 
 ::: moniker range="<=vs-2019"
 
-1. Visual Studio başlatın.
-
-   Visual Studio ilk kez açtığınızda, oturum açmanız ve bazı temel kayıt bilgilerini sağlamanız istenir.
+1. Visual Studio başlatın. Visual Studio ilk kez açtığınızda, oturum açmanız ve bazı temel kayıt bilgilerini sağlamanız istenir.
 
    ![Oturum açma istemi](../ide/media/vs2019_signinpopup.png)
+   
+   > [!NOTE]
+   > Visual Studio ilk kez açtığınızda oturum açmayı tercih ediyorsanız daha sonra kolayca yapabilirsiniz. Visual Studio ortamının sağ üst köşesindeki **oturum aç** bağlantısına bakın.
 
 ::: moniker-end
 
 ::: moniker range="vs-2022"
 
-1. Visual Studio başlatın.
-
-   Visual Studio ilk kez açtığınızda, oturum açmanız ve bazı temel kayıt bilgilerini sağlamanız istenir.
+1. Visual Studio başlatın.  Visual Studio ilk kez açtığınızda, oturum açmanız ve bazı temel kayıt bilgilerini sağlamanız istenir.
 
    ![Oturum açma istemi](../ide/media/vs-2022/visual-studio-sign-in-pop-up.png)
 
 ::: moniker-end
 
-2. Sizi en iyi şekilde temsil eden bir Microsoft hesabı veya bir iş veya okul hesabı seçin. 
-   
-   Bu hesaplardan herhangi birine sahip değilseniz, oturum aç düğmesinin altındaki bağlantıya tıklayarak bir Microsoft hesabı ücretsiz olarak oluşturabilirsiniz. Sorun yaşıyorsanız, [Microsoft hesabı nasıl yaparım? kaydolma](https://support.microsoft.com/help/4026324/microsoft-account-how-to-create) bölümüne bakın.
+2. Microsoft hesabı veya bir iş veya okul hesabı seçin.  Bir tane yoksa, **oturum aç** düğmesinin yakınında bulunan bağlantıyı seçerek [ücretsiz olarak bir Microsoft hesabı oluşturun](https://support.microsoft.com/help/4026324/microsoft-account-how-to-create) . 
 
-3. Visual Studio içinde kullanmak istediğiniz kullanıcı arabirimi ayarlarını ve renk temasını seçin. 
-   
-   Visual Studio bu ayarları anımsar ve oturum açmış olduğunuz tüm Visual Studio ortamlarında eşitlenir. Eşitlenen ayarların listesi için bkz. [Eşitlenmiş Ayarlar](../ide/synchronized-settings-in-visual-studio.md).   >  Visual Studio ' de araçlar **seçenekler** menüsünü açarsanız ayarları daha sonra değiştirebilirsiniz.
+3. Tercih ettiğiniz renk temasını ve diğer kullanıcı arabirimi ayarlarını seçin.  Visual Studio [bu ayarları anımsar ve](../ide/synchronized-settings-in-visual-studio.md) oturum açmış olduğunuz tüm Visual Studio ortamlarında eşitlenir.   >  Visual Studio ' de araçlar **seçenekler** menüsünü açarsanız ayarları daha sonra değiştirebilirsiniz.
 
-   Ayarları yaptıktan sonra Visual Studio başlatılır, oturumunuz açılır ve başlamaya hazır olursunuz. 
+   Visual Studio ortamının sağ üst köşesinde başarıyla oturum açtığınızdan emin olabilirsiniz.   oturumu kapatmadığınız takdirde, her başlattığınızda Visual Studio otomatik olarak oturum açtınız ve eşitlenmiş ayarlarda yapılan değişiklikler otomatik olarak uygulanır.
 
 ::: moniker range="<=vs-2019"
-
-4. oturum açmış olup olmadığını doğrulamak için Visual Studio ortamının sağ üst köşesinde adınızı arayın.
 
    ![VS2019 'de Şu anda oturum açmış olan Kullanıcı](../ide/media/vs2019_username.png)
 
@@ -88,48 +82,24 @@ Oturum açmanız gerekmiyorsa, bunu yapmanın [pek çok avantajı](#benefits-to-
 
 ::: moniker range="vs-2022"
 
-4. oturum açmış olup olmadığını doğrulamak için Visual Studio ortamının sağ üst köşesinde adınızı arayın.
-
    ![VS2019 'de Şu anda oturum açmış olan Kullanıcı](../ide/media/vs-2022/visual-studio-sign-in.png)
 
 ::: moniker-end
 
-oturumu kapatmadığınız takdirde, her başlattığınızda Visual Studio otomatik olarak oturum açtınız ve eşitlenmiş ayarlarda yapılan değişiklikler otomatik olarak uygulanır.
 
-oturumu kapatmak için, Visual Studio ortamının sağ üst köşesindeki profil adınızla simgeye tıklayın, **hesap ayarları** komutunu seçin ve ardından **oturumu kapat** bağlantısını seçin. yeniden oturum açmak için Visual Studio ortamının sağ üst köşesindeki **oturum aç** komutunu seçin.
+## <a name="sign-out-of-account"></a>Hesap oturumunuzu kapat
 
-::: moniker range="<=vs-2019"
-
-> [!NOTE]
-> Visual Studio ilk kez açtığınızda oturum açmayı tercih ediyorsanız daha sonra kolayca yapabilirsiniz. Visual Studio ortamının sağ üst köşesindeki **oturum aç** bağlantısına bakın.
->
-> ![Oturum açmamış Kullanıcı](../ide/media/vs2019_usernotsignedin.png)
->
-
-::: moniker-end
-
-::: moniker range="vs-2022"
-
-> [!NOTE]
-> Visual Studio ilk kez açtığınızda oturum açmayı tercih ediyorsanız daha sonra kolayca yapabilirsiniz. Visual Studio ortamının sağ üst köşesindeki **oturum aç** bağlantısına bakın.
->
-> ![Oturum açmamış Kullanıcı](../ide/media/vs-2022/visual-studio-user-not-signed-in.png)
->
-
-::: moniker-end
+1. Visual Studio ortamının sağ üst köşesindeki profil adınızla simgeye tıklayın
+2. **Hesap ayarları** komutunu seçin.
+3. **Oturumu** kapat bağlantısını seçin. 
 
 ## <a name="update-your-profile"></a>Profilinizi güncelleştirme
 
 1. Ayarlar **dosya**  >  **hesabı** ' na gidin ve **Visual Studio profilini yönet** bağlantısını seçin.
-
 1. Tarayıcı penceresinde **Profili Düzenle** ' yi seçin ve istediğiniz ayarları değiştirin.
-
 1. İşiniz bittiğinde **Değişiklikleri Kaydet**' i seçin.
 
-## <a name="troubleshooting"></a>Sorun giderme
-
-Yardım almak için [abonelik desteği](https://visualstudio.microsoft.com/subscriptions/support/) sayfasına bakın.
-
 ## <a name="see-also"></a>Ayrıca bkz.
+
+- Sorun giderme: [abonelik desteği](https://visualstudio.microsoft.com/subscriptions/support/)
 - [Visual Studio 2022 sürümlerini karşılaştırın](https://visualstudio.microsoft.com/vs/compare/)
-- [Abonelik portalına genel bakış](/visualstudio/subscriptions/using-the-subscriber-portal)
