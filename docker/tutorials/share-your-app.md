@@ -1,21 +1,20 @@
 ---
 title: 'Docker öğreticisi-2. Bölüm: uygulamanızı paylaşma'
 description: Docker Hub kayıt defteri kullanılarak Docker görüntülerinin nasıl paylaşılacağını açıklar.
-ms.date: 08/06/2021
-author: nebuk89
-ms.author: ghogen
+ms.prod: vs-code
+ms.topic: tutorial
+ms.author: mikemort
+author: BigMorty
 manager: jmartens
-ms.technology: vs-docker
-ms.custom: contperf-fy22q1
-ms.topic: conceptual
-ms.workload:
-- azure
-ms.openlocfilehash: 0367ca6b2ab6219ab50030df0b80a6aed213854f
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.reviewer: nebuk89, ghogen
+ms.custom: “docker-team-owned”
+ms.date: 08/06/2021
+ms.openlocfilehash: 0b2c6379cb7f198d0f228f52839283657269c818
+ms.sourcegitcommit: 2a8c7de72f952203289459736107c875837bb07e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126633457"
+ms.lasthandoff: 01/20/2022
+ms.locfileid: "137109912"
 ---
 # <a name="share-your-app"></a>Uygulamanızı paylaşma
 

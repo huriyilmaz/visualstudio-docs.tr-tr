@@ -1,25 +1,24 @@
 ---
 title: 'Docker öğreticisi - 5. Bölüm: Verilerinizi kalıcı yapma'
 description: Bir birim takarak veritabanındaki verileri kalıcı yapmayı ve dizinleri kapsayıcıda paylaşmayı öğrenin.
-ms.date: 08/06/2021
-author: nebuk89
-ms.author: ghogen
+ms.prod: vs-code
+ms.topic: tutorial
+ms.author: mikemort
+author: BigMorty
 manager: jmartens
-ms.technology: vs-docker
-ms.custom: contperf-fy22q1
-ms.topic: conceptual
-ms.workload:
-- azure
-ms.openlocfilehash: 36c7a2dbada3dd1f23b45019dc0690f3ba1ab5f1
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.reviewer: nebuk89, ghogen
+ms.custom: “docker-team-owned”
+ms.date: 08/06/2021
+ms.openlocfilehash: f41ffead61523332d7a2ca87d3151a26388bf7af
+ms.sourcegitcommit: 2a8c7de72f952203289459736107c875837bb07e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126633462"
+ms.lasthandoff: 01/20/2022
+ms.locfileid: "137109964"
 ---
-# <a name="persist-your-data"></a>Verilerinizi kalıcı olarak kalıcı olarak koruma
+# <a name="persist-your-data"></a>Verilerinizi kalıcı olarak koruma
 
-Fark etmeyebilirsiniz; kapsayıcıyı her başlatmada todo listesi temizlenir. Bu neden? Şimdi kapsayıcının nasıl çalıştığına bakalım.
+Fark etmeyebilirsiniz; kapsayıcıyı her başlatan todo listesi temizlenir. Bu neden? Şimdi kapsayıcının nasıl çalıştığına bakalım.
 
 ## <a name="the-containers-filesystem"></a>Kapsayıcının dosya sistemi
 
@@ -29,7 +28,7 @@ Kapsayıcı çalıştır geldiğinde, dosya sistemi için bir görüntüdeki çe
 
 Bunu uygulamalı olarak görmek için iki kapsayıcı başlatacak ve her kapsayıcıda bir dosya oluşturabilirsiniz. Bir kapsayıcıda oluşturulan dosyaların başka bir kapsayıcıda mevcut olmadığını göreceğiz.
 
-1. 1 `ubuntu` ile 10000 arasında rastgele bir sayı ile adlı bir `/data.txt` dosya oluşturacak bir kapsayıcıyı başlatma.
+1. 1 `ubuntu` ile 10000 arasında rastgele bir sayı ile adlı bir `/data.txt` dosya oluşturacak kapsayıcıyı başlatma.
 
     ```bash
     docker run -d ubuntu bash -c "shuf -i 1-10000 -n 1 -o /data.txt && tail -f /dev/null"
@@ -37,7 +36,7 @@ Bunu uygulamalı olarak görmek için iki kapsayıcı başlatacak ve her kapsay�
 
     Komutu merak ediyor olabilir, bir bash kabuğu başlatıyor ve iki komutu (neden komutu var) `&&` başlatıyorsunuz? İlk bölüm tek bir rastgele sayı seçer ve bunu 'a `/data.txt` yazar. İkinci komut, kapsayıcıyı çalıştırmaya devam etmek için bir dosyayı izlemektir.
 
-1. Kapsayıcıya almak için kullanarak çıkışı `exec` gördüğünüzi onaylar. Bunu yapmak için, VS Code uzantısını açın ve Kabuk Ekle **seçeneğine** tıklayın. Bu, yeni `exec` terminalin içindeki kapsayıcıda bir kabuk VS Code kullanır.
+1. Kapsayıcıya almak için kullanarak çıkışı `exec` gördüğünüzi onaylar. Bunu yapmak için, VS Code uzantısını açın ve Kabuk Ekle **seçeneğine** tıklayın. Bu, `exec` terminalde kapsayıcıda bir kabuk açmak için VS Code kullanır.
 
     ![VS Code CLI'sini ubuntu kapsayıcısı içine açma](media/attach_shell.png)
 
@@ -47,7 +46,7 @@ Bunu uygulamalı olarak görmek için iki kapsayıcı başlatacak ve her kapsay�
     cat /data.txt
     ```
 
-    Komut satırı tercih ederseniz komutunu kullanarak `docker exec` da aynı komutu kullanabilirsiniz. Kapsayıcının kimliğini (almak için `docker ps` kullanın) ve aşağıdaki komutla içeriği alasiniz.
+    Komut satırı tercih ederseniz komutunu kullanarak `docker exec` da aynı komutu kullanabilirsiniz. Kapsayıcının kimliğini (almak için kullanın) ve `docker ps` aşağıdaki komutla içeriği alasiniz.
 
     ```bash
     docker exec <container-id> cat /data.txt
@@ -67,7 +66,7 @@ Bunu uygulamalı olarak görmek için iki kapsayıcı başlatacak ve her kapsay�
 
 ## <a name="container-volumes"></a>Kapsayıcı birimleri
 
-Önceki denemede her kapsayıcının her başlatıldığında görüntü tanımından başlat olduğunu görmüştük. Kapsayıcılar dosyaları oluşturabilir, güncelleştire ve silebilir ancak kapsayıcı kaldırıldığı zaman bu değişiklikler kaybolur ve tüm değişiklikler bu kapsayıcıya yalıtılır. Birimlerle bunların hepsini değiştirebilirsiniz.
+Önceki denemede, her kapsayıcının her başlatıldığında görüntü tanımından başlat olduğunu görmüştün. Kapsayıcılar dosyaları oluşturabilir, güncelleştire ve silebilir ancak kapsayıcı kaldırıldığı zaman bu değişiklikler kaybolur ve tüm değişiklikler bu kapsayıcıya yalıtılır. Birimlerle bunların hepsini değiştirebilirsiniz.
 
 [Birimler,](https://docs.docker.com/storage/volumes/) kapsayıcının belirli dosya sistemi yollarını konak makineye geri bağlama olanağı sağlar. Kapsayıcıda bir dizin bağlı ise, konak makinede bu dizinde yapılan değişiklikler de görülür. Aynı dizini kapsayıcı yeniden başlatmaları arasında bağlarsanız aynı dosyaları da görebilirsiniz.
 
@@ -75,11 +74,11 @@ Bunu uygulamalı olarak görmek için iki kapsayıcı başlatacak ve her kapsay�
 
 ## <a name="persist-your-todo-data"></a>Todo verilerinizi kalıcı olarak koruma
 
-Varsayılan olarak, todo uygulaması verilerini bir [SQLite](https://www.sqlite.org/index.html) Veritabanında `/etc/todos/todo.db` depolar. SQLite hakkında bilginiz yoksa endişelenmeyin! Yalnızca tüm verilerin tek bir dosyada depolandığı ilişkisel bir veritabanıdır. Bu, büyük ölçekli uygulamalar için en iyi uygulama olsa da, küçük tanıtımlar için çalışır. Bunu daha sonra gerçek bir veritabanı altyapısına değiştirme hakkında konuşacağız.
+Varsayılan olarak, todo uygulaması verilerini bir [SQLite Veritabanında depolar.](https://www.sqlite.org/index.html) `/etc/todos/todo.db` SQLite hakkında bilginiz yoksa endişelenmeyin! Yalnızca tüm verilerin tek bir dosyada depolandığı ilişkisel bir veritabanıdır. Bu, büyük ölçekli uygulamalar için en iyi uygulama olsa da, küçük tanıtımlar için çalışır. Bunu daha sonra gerçek bir veritabanı altyapısına değiştirme hakkında konuşacağız.
 
-Veritabanının tek bir dosya olmasıyla, bu dosyayı konakta kalıcı hale gelip sonraki kapsayıcı için kullanılabilir hale geliyorsanız, en son kalan dosyayı alabilecektir. Bir birim oluşturarak ve verileri depolandığı dizine iliştirerek (genellikle "bağlama" olarak adlandırılır), verileri kalıcı olarak bulundurabilirsiniz. Kapsayıcı dosyaya `todo.db` yazdığında birim içinde konakta kalıcı olur.
+Veritabanının tek bir dosya olmasıyla, bu dosyayı konakta kalıcı hale gelip sonraki kapsayıcıya kullanılabilir hale gelecek şekilde hazırlarsanız, en son kalan dosyayı alabilecektir. Bir birim oluşturarak ve verileri depolandığı dizine iliştirerek (genellikle "bağlama" olarak adlandırılır), verileri kalıcı olarak bulundurabilirsiniz. Kapsayıcı dosyaya `todo.db` yazdığında birim içinde konakta kalıcı olur.
 
-Daha önce de belirtildiği gibi, adlı bir birim **kullan kullanırsiniz.** Adlandırılmış birimi bir veri demeti olarak düşünebilirsiniz. Docker diskte fiziksel konumun bakımını yapar ve yalnızca birimin adını hatırlamamız gerekir. Birimi her kullanımında Docker doğru verilerin sağ olduğundan emin olur.
+Daha önce belirtildiği gibi, adlı bir birim **kullanasiniz.** Adlandırılmış birimi bir veri demeti olarak düşünebilirsiniz. Docker, diskte fiziksel konumun bakımını yapar ve yalnızca birimin adını hatırlamaya ihtiyacınız vardır. Birimi her kullanımında Docker doğru verilerin sağ olduğundan emin olur.
 
 1. komutunu kullanarak birim `docker volume create` oluşturun.
 
@@ -140,7 +139,7 @@ docker volume inspect todo-db
 
 Bu noktada, yeniden başlatmalara dayanacak, işleve sahip bir uygulamanız var! Bunu yatırımcılara gösterebilir ve vizyonunu yakalayacaklarını umarız!
 
-Ancak daha önce her değişiklik için görüntülerin yeniden oluşturmanın uzun zaman alan bir süre olduğunu görmüştük. Değişiklik yapmak için daha iyi bir yol olması gerekir, değil mi? Bağlama bağlamaları (daha önce ima ettiysek) daha iyi bir yol vardır! Şimdi buna göz at bakalım!
+Ancak daha önce her değişiklik için görüntülerin yeniden oluşturmanın uzun zaman alan bir süre olduğunu görmüştük. Değişiklik yapmak için daha iyi bir yol olması gerekir, değil mi? Bağlama bağlamaları (daha önce de ima ettiysek) daha iyi bir yol vardır! Şimdi buna göz at bakalım!
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

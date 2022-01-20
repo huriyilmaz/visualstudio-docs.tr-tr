@@ -1,8 +1,8 @@
 ---
 title: Birinci taraf .NET çözümleyicilerinin etkinleştirilmesi veya yüklenmesi
-ms.date: 08/03/2018
+ms.date: 01/13/2022
 description: .net SDK 'dan birinci taraf .net çözümleyicileri 'ni etkinleştirmeyi veya bu çözümleyicileri NuGet bir paket olarak yüklemeyi öğrenin.
-ms.custom: SEO-VS-2020
+ms.custom: SEO-VS-2020, devdivchpfy22
 ms.topic: how-to
 helpviewer_keywords:
 - .NET analyzers
@@ -12,18 +12,18 @@ manager: jmartens
 ms.technology: vs-ide-code-analysis
 ms.workload:
 - dotnet
-ms.openlocfilehash: 25d98bfd0ddbc691c6fbc1ce22a129f9c6cfa692
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 15d4322fdd50f3d6c71bf00ef6f5c1a7bbaefceb
+ms.sourcegitcommit: 2a8c7de72f952203289459736107c875837bb07e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126631910"
+ms.lasthandoff: 01/20/2022
+ms.locfileid: "137110094"
 ---
 # <a name="enable-or-install-first-party-net-analyzers"></a>Birinci taraf .NET çözümleyicilerinin etkinleştirilmesi veya yüklenmesi
 
 ## <a name="overview"></a>Genel Bakış
 
-.NET derleyici platformu (Roslyn) çözümleyicileri, C# veya Visual Basic kodunuzda kod kalitesi ve kod stili sorunları olup olmadığını inceler. Birinci taraf .NET Çözümleyicileri, **hedef platform belirsiz**' dir. Diğer bir deyişle, projenizin belirli bir .NET platformunu hedeflemesi gerekmez. Çözümleyiciler, `net5.0` ve gibi önceki .NET sürümlerinin yanı sıra hedeflenen projeler için de çalışır `netcoreapp` `netstandard` `net472` .
+.NET derleyici platformu (Roslyn) çözümleyicileri, C# veya Visual Basic kodunuzda kod kalitesi ve kod stili sorunları olup olmadığını inceler. Birinci taraf .NET Çözümleyicileri, **hedef platform belirsiz**' dir. Diğer bir deyişle, projenizin belirli bir .NET platformunu hedeflemesini gerektirmez. Çözümleyiciler, ve gibi önceki .NET sürümlerini hedefleyen projeler için çalışır `net5.0` `netcoreapp` `netstandard` `net472` .
 
 Birinci taraf .NET Çözümleyicileri 'ni aşağıdaki yollarla etkinleştirebilir veya yükleyebilirsiniz:
 
