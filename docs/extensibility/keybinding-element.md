@@ -14,17 +14,17 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: be359809e973d8fbb0e1fe0b964d04bc3e41b5d8
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 832dd4319a581dad66fb85215c66bc85cf21e08d
+ms.sourcegitcommit: 1c0eda2db1b1fff9595ca644503f467bf3e223e0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126726908"
+ms.lasthandoff: 01/20/2022
+ms.locfileid: "137094854"
 ---
 # <a name="keybinding-element"></a>KeyBinding öğesi
 KeyBinding öğesi komutların klavye kısayollarını belirler.
 
- Komutlarda kendileriyle ilişkilendirilmiş tek ve çift anahtar bağlamaları bulunabilir.  +  **Kaydet** komutu için tek tuşla bağlama bir örnektir. Çift anahtar bağlamaları bir komutun tetiklenmesi için iki ardışık anahtar kombinasyonu gerektirir. Bir yer işareti ayarlamak için <strong>CTRL *+</strong> k <strong>,</strong>CTRL <strong>+</strong> k** ikili anahtar bağlamasının bir örneğidir.
+ Komutlarda kendileriyle ilişkilendirilmiş tek ve çift anahtar bağlamaları bulunabilir.  +  **Kaydet** komutu için tek tuşla bağlama bir örnektir. Çift anahtar bağlamaları bir komutun tetiklenmesi için iki ardışık anahtar kombinasyonu gerektirir. Çift anahtar bağlamasının bir örneği **Ctrl + k**,**Ctrl + k** , bir yer işareti ayarlamak için bir örnektir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,9 +43,9 @@ KeyBinding öğesi komutların klavye kısayollarını belirler.
 |kimlik|Gereklidir.|
 |düzenleyici|Gereklidir. Düzenleyici GUID 'SI, bu klavye kısayolunun etkin olacağı düzenleme bağlamını gösterir. Genel bağlama kapsamı değeri "guidVSStd97" değeridir.|
 |key1|Gereklidir. Geçerli değerler, tüm tyıılabilen alfasayısal değerleri ve bundan önce 0x ve [VK_constants](/windows/desktop/inputdev/virtual-key-codes)olan iki basamaklı onaltılık değerler içerir.|
-|mod1|İsteğe bağlı. Boşluğa göre ayrılan **CTRL**, **alt** ve **SHIFT** 'in herhangi bir birleşimi.|
+|mod1|İsteğe bağlı. Boşluk ile ayrılmış **Denetim**, **alt** ve **vardiyanın** birleşimi.|
 |key2|İsteğe bağlı. Geçerli değerler, tüm tyıılabilen alfasayısal değerleri ve bundan önce 0x ve [VK_constants](/windows/desktop/inputdev/virtual-key-codes)olan iki basamaklı onaltılık değerler içerir.|
-|mod2|İsteğe bağlı. Boşluğa göre ayrılan **CTRL**, **alt** ve **SHIFT** 'in herhangi bir birleşimi.|
+|mod2|İsteğe bağlı. Boşluk ile ayrılmış **Denetim**, **alt** ve **vardiyanın** birleşimi.|
 |öykünücü|İsteğe bağlı.|
 |Koşul|İsteğe bağlı. Bkz. [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 

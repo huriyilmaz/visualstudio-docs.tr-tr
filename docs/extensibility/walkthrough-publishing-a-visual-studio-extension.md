@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 53fa4543bd56bd85f58b5c4251af19300a12fecf
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 2f985201a31381b233a8e4c91af9fb62eb169f97
+ms.sourcegitcommit: 1c0eda2db1b1fff9595ca644503f467bf3e223e0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126634486"
+ms.lasthandoff: 01/20/2022
+ms.locfileid: "137095065"
 ---
 # <a name="walkthrough-publish-a-visual-studio-extension"></a>izlenecek yol: Visual Studio uzantısını yayımlama
 
@@ -145,88 +145,98 @@ Başlamadan önce, uzantınızın yeni yayın sürümünü oluşturduğunuzdan v
 
     - **Iç ad** \* , uzantının ayrıntı sayfasının URL 'sinde kullanılır. Örnek olarak, "MyName" yayımcı adı altında bir uzantı yayımlamak ve dahili adı "My extenm" olarak belirtmek, uzantınızın ayrıntı sayfası için "marketplace.visualstudio.com/items?itemName=myname.myextension" URL 'SI ile sonuçlanır.
 
-    - **Görünen ad** \* . Bu ad, *Source. Extension. valtmanifest* dosyasından otomatik olarak doldurulur.
+    - **Görünen Ad** \* uzantısını kullanır. Bu ad *source.extension.vsixmanifest dosyasından otomatik olarak* doldurulur.
 
-    - **Sürümü** \* karşıya yüklediğiniz uzantının numarası. Bu sürüm, *kaynak. Extension. valtmanifest* dosyasından otomatik olarak doldurulur.
+    - **Sürüm** \* karşıya yüklediğiniz uzantının sayısı. Bu sürüm, *source.extension.vsixmanifest dosyasından otomatik olarak* doldurulur.
 
-    - **VSıX kimliği** \* Visual Studio uzantınızın kullandığı benzersiz tanıtıcıdır. Uzantınızın otomatik güncelleştirilmesini istiyorsanız bu tanımlayıcı gereklidir. Bu tanımlayıcı, *kaynak. Extension. valtmanifest* dosyasından otomatik olarak doldurulur.
+    - **VSIX Kimliği** \* , uzantınız için Visual Studio benzersiz tanımlayıcıdır. Uzantınızı otomatik olarak güncelleştirilir yapmak için bu tanımlayıcı gereklidir. Bu tanımlayıcı *source.extension.vsixmanifest dosyasından otomatik olarak* doldurulur.
 
-    - **Logo** \* Bu, uzantınız için kullanılır. Bu logo, sağlanmışsa *kaynak. Extension. valtmanifest* dosyasından otomatik olarak doldurulur.
+    - **Logo** \* bu, uzantınız için kullanılır. Bu logo, sağlanan *source.extension.vsixmanifest dosyasından* otomatik olarak doldurulur.
 
-    - **Kısa açıklama** \* uzantınızın ne yaptığını. Bu açıklama, *Source. Extension. valtmanifest* dosyasından otomatik olarak doldurulur.
+    - **Kısa açıklama** \* uzantısının ne yaptığını. Bu açıklama *source.extension.vsixmanifest dosyasından otomatik olarak* doldurulur.
 
-    - **Genel bakış** , dahili ekran görüntülerini ve uzantınızın ne yaptığını hakkında ayrıntılı bilgileri içerecek şekilde iyi bir yerdir.
+    - **Genel** bakış, uzantının ne yaptığına ilişkin ekran görüntülerini ve ayrıntılı bilgileri eklemek için iyi bir yerdir.
 
-    - **desteklenen Visual Studio sürümleri** \* uzantınızın hangi Visual Studio sürümünün üzerinde çalışabileceği seçmenize olanak sağlar. Uzantınızın yalnızca bu sürümlere yüklenmiş olması.
+    - **Desteklenen Visual Studio sürümleri,** \* uzantınız için hangi Visual Studio sürümlerini seçmenize olanak sağlar. Uzantınız yalnızca bu sürümlere yüklenir.
 
-    - **desteklenen Visual Studio sürümü** \* uzantınızın hangi Visual Studio sürümlerini seçebilmenizi sağlar. Uzantınızın yalnızca bu sürümlerde yüklü olması.
+    - **Desteklenen Visual Studio sürümü,** \* uzantınız üzerinde çalışacak Visual Studio sürümleri seçmenize olanak sağlar. Uzantınız yalnızca bu sürümlere yüklenir.
 
-    - **Yazın**. En yaygın uzantı türü **araçlardır**.
+    - **yazın.** En yaygın uzantı türü **Araçlar'dır.**
 
-    - **Kategoriler**. Uzantınıza en uygun olan en fazla üç seçin.
+    - **Kategorileri.** Uzantınıza en uygun olan üçe kadar seçim yapabilirsiniz.
 
-    - **Etiketler** , kullanıcıların uzantınızı bulmasına yardımcı olan anahtar sözcüklerdir. etiketler, Visual Studio market 'teki uzantılarınızın arama uygunluğunu artırmaya yardımcı olabilir.
+    - **Etiketler,** kullanıcıların uzantınızı bulmalarını yardımcı olan anahtar sözcüklerdir. Etiketler, Market'te uzantılarınız için arama ilgi düzeyinin Visual Studio olabilir.
 
-    - **Fiyatlandırma kategorisi** , uzantınızın maliyetidir.
+    - **Fiyatlandırma Kategorisi,** uzantının maliyetidir.
 
-    - **Kaynak kodu deposu** , topluluk ile kaynak kodunuzun bağlantısını paylaşmanıza olanak sağlar.
+    - **Kaynak kod deposu,** kaynak kodunuzun bağlantısını toplulukla paylaşmanıza olanak sağlar.
 
-    - **Uzantınız Için Q&A 'Nın Izin verme** özelliği, kullanıcıların uzantı giriş sayfanızda soru bırakabilir.
+    - **Uzantınız için&A'ya izin ver,** kullanıcıların uzantı giriş sayfanıza soru bırakmasına olanak sağlar.
 
-       \* Bu ayrıntı, bir uzantı güncelleştirmesi için değiştirilemez.
+       \* Uzantı güncelleştirmesi için bu ayrıntı değiştirilemez.
 
-1. **& kaydet**' e tıklayın upload. Bu seçenek sizi yayımcı yönetimi sayfanıza geri götürür. Uzantınız henüz yayımlanmadı.
+1. **Kaydet'e & Upload.** Bu seçenek sizi yayımcı yönetimi sayfanıza geri alır. Uzantınız henüz yayımlanmadı.
 
-1. Uzantınızı yayımlamak için, uzantınızı sağ tıklatın ve **genel yap**' ı seçin. uzantınızın Visual Studio marketi 'nde nasıl görüneceğine bakmak için **uzantıyı görüntüle**' yi seçin. Alım numaraları için **raporlar**' a tıklayın. Uzantınızın üzerinde değişiklik yapmak için **Düzenle**' ye tıklayın.
+1. Uzantınızı yayımlamak için uzantınıza sağ tıklayın ve Genel'i **seçin.** Uzantının Market'te nasıl Visual Studio görmek için Uzantıyı **Görüntüle'yi seçin.** Alım numaraları için Raporlar'a **tıklayın.** Uzantınız üzerinde değişiklik yapmak için Düzenle'ye **tıklayın.**
 
-## <a name="add-additional-users-to-manage-your-publisher-account"></a>Yayımcı hesabınızı yönetmek için ek kullanıcılar ekleyin
+## <a name="add-additional-users-to-manage-your-publisher-account"></a>Yayımcı hesabı yönetmek için başka kullanıcılar ekleme
 
-Visual Studio Market, bir yayımcı hesabına erişmek ve bunları yönetmek için ek kullanıcı izinleri vermeyi destekler.
+Visual Studio Market, bir yayımcı hesabına erişmek ve bu hesabı yönetmek için ek kullanıcı izinleri verilmesini destekler.
 
 1. Ek kullanıcı eklemek istediğiniz yayımcı hesabına gidin.
 
-2. **Üyeler** ' i seçin ve **Ekle**' ye tıklayın.
+2. **Üyeler'i** seçin ve Ekle'ye **tıklayın.**
 
-   ![Ek Kullanıcı ekleme](media/add-users.png)
+   ![Ek Kullanıcı Ekle](media/add-users.png)
 
-3. Ardından, eklemek istediğiniz kullanıcının e-posta adresini belirtebilir ve **Rol Seç** altında doğru erişim düzeyine sahip olabilirsiniz.  Aşağıdaki seçeneklerden birini belirtebilirsiniz:
+3. Daha sonra eklemek istediğiniz kullanıcının e-posta adresini belirtebilirsiniz ve Rol seçin altında doğru erişim **düzeyini belirtebilirsiniz.**  Aşağıdaki seçeneklerden birini belirtebilirsiniz:
 
-   * **Oluşturucu**: Kullanıcı Uzantıları yayımlayabilir, ancak diğer kullanıcılar tarafından yayımlanan uzantıları görüntüleyemez veya yönetemez.
+   * **Oluşturucu:** Kullanıcı uzantıları yayımlar, ancak diğer kullanıcılar tarafından yayımlanan uzantıları görüntüamaz veya yönetamaz.
 
-   * **Okuyucu**: Kullanıcı Uzantıları görüntüleyebilir, ancak uzantıları yayımlayamaz veya yönetemez.
+   * **Okuyucu:** Kullanıcı uzantıları görüntülemenizi sağlar, ancak uzantıları yayımlar veya yönetamaz.
 
-   * **Katkıda bulunan**: Kullanıcı Uzantıları yayımlayabilir ve yönetebilir, ancak yayımcı ayarlarını düzenleyemez veya erişimi yönetebilir.
+   * **Katkıda** Bulunan: Kullanıcı uzantıları yayımlar ve yönetebilir, ancak yayımcı ayarlarını düzenleyemez veya erişimi yönetamaz.
 
-   * **Sahip**: Kullanıcı Uzantıları yayımlayabilir ve yönetebilir, yayımcı ayarlarını düzenleyebilir ve erişimi yönetebilir.
+   * **Sahip:** Kullanıcı uzantıları yayımlar ve yönetebilir, yayımcı ayarlarını düzenleyebilir ve erişimi yönetebilir.
 
-## <a name="install-the-extension-from-visual-studio-marketplace"></a>uzantıyı Visual Studio marketi 'nden yüklemesi
+### <a name="troubleshoot-adding-a-user-to-the-publisher-account"></a>Yayımcı hesabına kullanıcı ekleme sorunlarını giderme
 
-artık uzantı yayımlandığına göre Visual Studio yükleyip test edin.
+Yayımcı profiline e-posta adresini kullanarak bir kullanıcı eklerken hatasını `TF14045: The identity could not be found` alabilirsiniz.
 
-1. Visual Studio, **araçlar** menüsünde **uzantılar ve güncelleştirmeler**' e tıklayın.
+Bu hatayı önlemek için kullanıcının kullanıcı kimliğini e-posta adresi yerine kullanarak yayımcı hesabına ekleyin. Bir kullanıcının kullanıcı kimliğini bulmak için Visual Studio Market'te bölmenin üst kısmında kullanıcının adının üzerine gelin. Kullanıcı kimliğini kopyalamak için kopyala simgesini seçin.
 
-2. **Çevrimiçi** ' e tıklayın ve ardından **TestPublish** için arama yapın.
+![Market'te bir kullanıcının adının ve e-posta adresinin yanındaki kullanıcı kimliğini gösteren ekran görüntüsü.](media/marketplace-user-id.png)
 
-3. **İndir**’e tıklayın. Uzantı daha sonra yüklenmek üzere zamanlanır.
+Daha [sonra, kullanıcı kimliğini kullanarak](#add-additional-users-to-manage-your-publisher-account) yeni kullanıcı eklemek için.
 
-4. Yüklemeyi gerçekleştirmek için Visual Studio tüm örneklerini kapatın.
+## <a name="install-the-extension-from-visual-studio-marketplace"></a>Uzantıyı Market'Visual Studio yükleme
+
+Artık uzantı yayımlanır ve uzantıyı Visual Studio orada test etmek için yükleyin.
+
+1. Bu Visual Studio Araçlar menüsünde **Uzantılar** ve **Güncelleştirmeler'e tıklayın.**
+
+2. **Çevrimiçi'ne** tıklayın ve **TestPublish araması için arama.**
+
+3. **İndir**’e tıklayın. Uzantı daha sonra yüklenmek üzere zamanlandı.
+
+4. Yükleme işlemini tamamlamak için tüm örnek örneklerini Visual Studio.
 
 ## <a name="remove-the-extension"></a>Uzantıyı kaldırma
 
-uzantıyı Visual Studio marketi 'nden ve bilgisayarınızdan kaldırabilirsiniz.
+Uzantıyı Market'Visual Studio bilgisayarınızdan kaldırabilirsiniz.
 
-### <a name="to-remove-the-extension-from-visual-studio-marketplace"></a>Visual Studio marketi 'nden uzantıyı kaldırmak için
+### <a name="to-remove-the-extension-from-visual-studio-marketplace"></a>Uzantıyı Market'Visual Studio kaldırmak için
 
-1. [Visual Studio marketi](https://marketplace.visualstudio.com/vs)' ne gidin.
+1. [Market'Visual Studio gidin.](https://marketplace.visualstudio.com/vs)
 
-2. Sağ üst köşede bulunan uzantıları **Yayımla** ' ya tıklayın. **TestPublish** yayımlamak için kullandığınız yayımcıyı seçin. **TestPublish** listesi görüntülenir.
+2. Sağ üst köşeden Uzantıları **yayımla'ya** tıklayın. TestPublish'i yayımlamak için **kullanılan yayımcıyı seçin.** **TestPublish listesi** görüntülenir.
 
-3. Uzantı girişine sağ tıklayın ve **Kaldır**' a tıklayın. Uzantıyı kaldırmak isteyip istemediğinizi onaylamanız istenir. **Tamam**'a tıklayın.
+3. Uzantı girişe sağ tıklayın ve **Kaldır'a tıklayın.** Uzantıyı kaldırmak istemenizi onaylamanız istener. **Tamam**'a tıklayın.
 
 ### <a name="to-remove-the-extension-from-your-computer"></a>Uzantıyı bilgisayarınızdan kaldırmak için
 
-1. Visual Studio, **araçlar** menüsünde **uzantılar ve güncelleştirmeler**' e tıklayın.
+1. Bu Visual Studio Araçlar menüsünde **Uzantılar** ve **Güncelleştirmeler'e tıklayın.**
 
-2. **TestPublish** ' ı seçin ve ardından **Kaldır**' a tıklayın. Uzantı daha sonra kaldırma için zamanlanır.
+2. **TestPublish'i seçin** ve **kaldır'a tıklayın.** Uzantı daha sonra kaldırılmak üzere zamanlandı.
 
-3. Kaldırma işlemini gerçekleştirmek için Visual Studio tüm örneklerini kapatın.
+3. Kaldırma işlemini tamamlamak için tüm örnek örneklerini Visual Studio.

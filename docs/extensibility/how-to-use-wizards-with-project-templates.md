@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl Yapılır: Sihirbazları Proje Şablonlarıyla Kullanma'
-description: Kullanıcı şablondan proje oluşturduğunda özel kod çalıştırmanızı sağlayan IWizard arabirimini Visual Studio SDK'da kullanmayı öğrenin.
+description: Kullanıcı şablondan proje oluşturduğunda özel kod çalıştırmanızı sağlayan IWizard arabirimini Visual Studio SDK'da nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: how-to
@@ -17,33 +17,33 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: cc023655c42ea63db5015d00a33ce140275f6ee0
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 59a2c541a4ba1869d0f08084de657a5ea0891cd3
+ms.sourcegitcommit: 1c0eda2db1b1fff9595ca644503f467bf3e223e0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126626240"
+ms.lasthandoff: 01/20/2022
+ms.locfileid: "137094878"
 ---
 # <a name="how-to-use-wizards-with-project-templates"></a>Nasıl oluşturulur: Sihirbazları proje şablonlarıyla kullanma
 
-Visual Studio, bir kullanıcı şablondan proje oluşturduğunda özel kod çalıştırmanızı sağlayan <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> arabirimi sağlar.
+Visual Studio, bir kullanıcı şablondan proje oluşturduğunda özel kod çalıştırmanızı <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> sağlayan arabirimi sağlar.
 
 Project özelleştirme, şablonu özelleştirmek için kullanıcı girişi toplayan özel kullanıcı arabirimini görüntülemek, şablona ek dosya eklemek veya projede izin verilen diğer herhangi bir eylemi görüntülemek için kullanılabilir.
 
-Arabirim yöntemleri proje oluşturulurken çeşitli zamanlarda çağrılır ve kullanıcı Yeni Giriş iletişim kutusunda <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> **Tamam'a Project** olarak başlayarak.  Arabirimin her yöntemi, çağrıldıları noktanın açıklaması için adlandırılmıştır. Örneğin, Visual Studio hemen çağırarak kullanıcı girişini toplamak için özel kod yazmak için iyi bir <xref:Microsoft.VisualStudio.TemplateWizard.IWizard.RunStarted%2A> konum oluşturabilirsiniz.
+Arabirim yöntemleri, proje oluşturulurken çeşitli zamanlarda çağrılır ve kullanıcı Yeni Giriş iletişim kutusunda <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> **Tamam'a Project** olarak başlayarak.  Arabirimin her yöntemi, çağrıldıları noktanın açıklaması için adlandırılmıştır. Örneğin, Visual Studio oluşturmaya başladığında hemen çağırarak kullanıcı girişini toplamak için özel kod yazmak için iyi <xref:Microsoft.VisualStudio.TemplateWizard.IWizard.RunStarted%2A> bir konum oluşturabilirsiniz.
 
 ## <a name="create-a-project-template-project-with-a-vsix-project"></a>VSIX projesiyle proje şablonu projesi oluşturma
 
-Visual Studio SDK'sı kapsamındaki proje şablonu projesiyle özel bir şablon oluşturmaya başlarsınız. Bu yordamda bir C# proje şablonu projesi kullanmayacak ancak proje şablonu projesinde Visual Basic de vardır. Ardından, proje şablonu projesini içeren çözüme bir VSIX projesi eklersiniz.
+Visual Studio SDK'sı kapsamındaki proje şablonu projesiyle özel bir şablon oluşturmaya başlarsınız. Bu yordamda, bir C# proje şablonu projesi kullanmayacak, ancak bir proje şablonu Visual Basic proje de vardır. Ardından, proje şablonu projesini içeren çözüme bir VSIX projesi eklersiniz.
 
-1. Bir C# proje şablonu projesi oluşturun (Visual Studio Yeni Dosya'Project  >    >   seçin ve "proje şablonu" araması yazın). **MyProjectTemplate olarak ad girin.**
+1. Bir C# proje şablonu projesi oluşturun (Visual Studio Yeni Dosya'Project seçin ve   >    >   "proje şablonu" için arama yazın). **MyProjectTemplate olarak ad girin.**
 
    > [!NOTE]
    > Visual Studio SDK'yı yüklemeniz istenebilirsiniz. Daha fazla bilgi için [bkz. Visual Studio SDK'sı yükleme.](../extensibility/installing-the-visual-studio-sdk.md)
 
-2. Proje şablonu projesiyle aynı çözüme yeni bir VSIX projesi ekleyin **(Çözüm Gezgini'de** çözüm düğümünü seçin, sağ tıklayın ve Yeni  >  **Ekle'yi Project** ve "vsix" araması için arama). **MyProjectWizard olarak ad girin.**
+2. Proje şablonu projesiyle aynı çözüme yeni bir VSIX projesi ekleyin **(Çözüm Gezgini'de** çözüm düğümünü seçin, sağ tıklayın ve Yeni Ekle Project'yi seçin ve  >   "vsix" araması için). **MyProjectWizard olarak ad girin.**
 
-3. VSIX projesini başlangıç projesi olarak ayarlayın. Bu **Çözüm Gezgini,** VSIX proje düğümünü seçin, sağ tıklayın ve Başlangıç Olarak **Ayarla'yı Project.**
+3. VSIX projesini başlangıç projesi olarak ayarlayın. Bu **Çözüm Gezgini** VSIX proje düğümünü seçin, sağ tıklayın ve Başlangıç Olarak Ayarla'yı seçin **Project.**
 
 4. Şablon projesini VSIX projesinin bir varlığı olarak ekleyin. Bu **Çözüm Gezgini,** VSIX proje düğümü altında *source.extension.vsixmanifest dosyasını* bulun. Bildirim düzenleyicisinde açmak için çift tıklayın.
 
@@ -53,7 +53,7 @@ Visual Studio SDK'sı kapsamındaki proje şablonu projesiyle özel bir şablon 
 
 7. Çözümü derleme ve hata ayıklamayı başlatma. İkinci bir örnek Visual Studio görüntülenir. (Bu birkaç dakika sürebilir.)
 
-8. Visual Studio'nin ikinci örneğinde, yeni şablonunuzla ( Dosya YeniDosya  >    >  Project, "myproject" araması) yeni bir proje oluşturun. Yeni proje Class1 adlı bir **sınıfla görünse iyi olur.** Şimdi özel bir proje şablonu oluşturdun! Hata ayıklamayı hemen durdurun.
+8. Visual Studio'nin ikinci örneğinde, yeni şablonunuzla ( DosyaYeni Dosya  >    >  Project, "myproject" araması) yeni bir proje oluşturun. Yeni proje Class1 adlı bir **sınıfla görünse gerekir.** Şimdi özel bir proje şablonu oluşturdun! Hata ayıklamayı şimdi durdurun.
 
 ## <a name="create-a-custom-template-wizard"></a>Özel şablon oluşturma sihirbazı
 
@@ -61,19 +61,19 @@ Bu yordam, proje oluşturulmadan önce Bir Form Windows özel bir sihirbazın na
 
 1. VSIX projesini bir derleme oluşturmasına izin verecek şekilde ayarlayın.
 
-2. Bu **Çözüm Gezgini** VSIX proje düğümünü seçin. Aşağıda **Çözüm Gezgini,** Özellikler penceresini **görüyor gerekir.** Bunu yapmadıysanız Özellikler Penceresini  >  **Görüntüle'yi seçin** veya **F4 tuşuna basın.** Özellikler **penceresinde,** için aşağıdaki alanları `true` seçin:
+2. Bu **Çözüm Gezgini** VSIX proje düğümünü seçin. Aşağıda **Çözüm Gezgini,** Özellikler penceresini **görüyor** gerekir. Bunu yapmadıysanız Özellikler Penceresini  >  **Görüntüle'yi seçin** veya **F4 tuşuna basın.** Özellikler **penceresinde,** için aşağıdaki alanları `true` seçin:
 
-   - **VSIX kapsayıcısı içinde derlemeyi dahil edin**
-
-   - **VSIX Kapsayıcısı'ne Hata Ayıklama Sembolleri Ekleme**
+   - **VSIX Kapsayıcısı'na Derleme dahil edin**
 
    - **Yerel VSIX Dağıtımına Hata Ayıklama Sembolleri Ekleme**
 
-3. Derlemeyi VSIX projesine varlık olarak ekleyin. *source.extension.vsixmanifest dosyasını* açın ve **Varlıklar sekmesini** seçin. Yeni Varlık **Ekle penceresinde**  Tür olarak **Microsoft.VisualStudio.Assembly'i** seçin, Kaynak için  Geçerli çözümde bir proje'yi seçin ve Project **Için MyProjectWizard'ı seçin.**  
+   - **VSIX Kapsayıcısı'ne Hata Ayıklama Sembolleri Ekleme**
 
-4. VSIX projesine aşağıdaki başvuruları ekleyin. (Çözüm Gezgini VSIX proje düğümünün altında Başvurular'ı **seçin,** sağ tıklayın ve Başvuru **Ekle'yi** seçin.) Başvuru **Ekle iletişim** kutusundaki Framework **sekmesinde** **System.Windows Forms derlemesini bulun** ve seçin. Ayrıca System ve  **System.Drawing derlemelerini bulup** seçin. Şimdi **Uzantılar sekmesini** seçin. **EnvDTE derlemesi** bulun ve seçin. **Ayrıca Microsoft.VisualStudio.TemplateWizardInterface derlemeyi** bulun ve seçin. **Tamam**'a tıklayın.
+3. Derlemeyi VSIX projesine varlık olarak ekleyin. *source.extension.vsixmanifest dosyasını* açın ve **Varlıklar sekmesini** seçin. Yeni Varlık Ekle **penceresinde**  Tür olarak **Microsoft.VisualStudio.Assembly'i** seçin, Kaynak için  Geçerli çözümde bir proje'yi seçin **ve** Project **Için MyProjectWizard'ı seçin.** 
 
-5. VSIX projesine sihirbaz uygulaması için bir sınıf ekleyin. (Çözüm Gezgini'de VSIX proje düğümüne sağ tıklayın ve **Ekle'yi,** ardından Yeni Öğe'yi ve **ardından** **Sınıf'ı** seçin.)  Sınıfa **WizardImplementation adını girin.**
+4. VSIX projesine aşağıdaki başvuruları ekleyin. (Çözüm Gezgini VSIX proje düğümünün altında Başvurular'ı **seçin,** sağ tıklayın ve Başvuru **Ekle'yi** seçin.) Başvuru **Ekle iletişim** kutusundaki **Framework sekmesinde** **System.Windows Derlemeyi** oluşturur ve seçin. Ayrıca System ve  **System.Drawing derlemelerini bulup** seçin. Şimdi **Uzantılar sekmesini** seçin. **EnvDTE derlemesi** bulun ve seçin. **Ayrıca Microsoft.VisualStudio.TemplateWizardInterface derlemeyi** bulun ve seçin. **Tamam**'a tıklayın.
+
+5. VSIX projesine sihirbaz uygulaması için bir sınıf ekleyin. **(Çözüm Gezgini,** VSIX proje düğümüne sağ tıklayın ve **Ekle'yi,** ardından Yeni Öğe'yi ve **ardından** **Sınıf'ı** seçin.) Sınıfa **WizardImplementation adını girin.**
 
 6. *WizardImplementationClass.cs dosyasındaki kodu* aşağıdaki kodla değiştirin:
 
@@ -148,13 +148,13 @@ Bu yordam, proje oluşturulmadan önce Bir Form Windows özel bir sihirbazın na
 
     Bu **kodda başvurulan UserInputForm** daha sonra uygulanacaktır.
 
-    sınıfı, `WizardImplementation` her üyesi için yöntem uygulamaları <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> içerir. Bu örnekte, bir görevi <xref:Microsoft.VisualStudio.TemplateWizard.IWizard.RunStarted%2A> yalnızca yöntemi gerçekleştirir. Diğer tüm yöntemler hiçbir şey yapmaz veya dönüş `true` yapar.
+    sınıfı, `WizardImplementation` her üyesi için yöntem uygulamaları <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> içerir. Bu örnekte, yalnızca <xref:Microsoft.VisualStudio.TemplateWizard.IWizard.RunStarted%2A> yöntemi bir görevi gerçekleştirir. Diğer tüm yöntemler hiçbir şey yapmaz veya dönüş `true` yapar.
 
     yöntemi <xref:Microsoft.VisualStudio.TemplateWizard.IWizard.RunStarted%2A> dört parametre kabul eder:
 
-   - Projeyi <xref:System.Object> özelleştirmenize olanak sağlamak için <xref:EnvDTE._DTE> kök nesnesine değiştirebileceğiniz bir parametre.
+   - <xref:System.Object>Projeyi özelleştirmenize olanak sağlamak için <xref:EnvDTE._DTE> kök nesnesine değiştirebileceğiniz bir parametre.
 
-   - Şablonda <xref:System.Collections.Generic.Dictionary%602> tüm önceden tanımlanmış parametrelerin koleksiyonunu içeren bir parametre. Şablon parametreleri hakkında daha fazla bilgi için [bkz. Şablon parametreleri.](../ide/template-parameters.md)
+   - Şablonda <xref:System.Collections.Generic.Dictionary%602> tüm önceden tanımlanmış parametrelerin koleksiyonunu içeren bir parametre. Şablon parametreleri hakkında daha fazla bilgi için bkz. [Şablon parametreleri.](../ide/template-parameters.md)
 
    - <xref:Microsoft.VisualStudio.TemplateWizard.WizardRunKind>Kullanılan şablon türü hakkında bilgi içeren bir parametre.
 
@@ -215,7 +215,7 @@ Bu yordam, proje oluşturulmadan önce Bir Form Windows özel bir sihirbazın na
 
 2. Project **penceresinde** İmzalama sekmesini **seçin.** İmzalama sekmesinde **Derlemeyi** **imzala'ya tıklayın.** Bir **güçlü ad anahtar dosyası seçin alanında** öğesini **\<New>** seçin. Güçlü **Ad Anahtarı Oluştur** penceresindeki Anahtar **dosyası adı alanına** **key.snk yazın.** Anahtar dosyamı **parolayla koru alanı işaretini** kaldırın.
 
-3. Aşağıdaki **Çözüm Gezgini** VSIX projesini seçin ve Özellikler **penceresini** bulun.
+3. Bu **Çözüm Gezgini** VSIX projesini seçin ve Özellikler **penceresini** bulun.
 
 4. Derleme **Çıktısını Çıkış Dizinine Kopyala alanını** true olarak **ayarlayın.** Bu, çözüm yeniden oluşturulurken derlemenin çıkış dizinine kopyalanır. Dosyada hala yer `.vsix` alan bir dosyadır. İmzalama anahtarını bulmak için derlemeyi görüyor gerekir.
 

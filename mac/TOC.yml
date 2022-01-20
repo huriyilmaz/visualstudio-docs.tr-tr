@@ -58,6 +58,34 @@
       href: managing-app-resources.md
     - name: 'Nasıl yapılır: Birden çok çözüm veya örneği açma'
       href: open-multiple-solutions.md
+    - name: Düzenleyici
+      items:
+        - name: Düzenleyici Özellikleri
+          href: source-editor.md
+        - name: Yeniden Düzenle
+          href: refactoring.md
+        - name: IntelliSense
+          href: intellisense.md
+        - name: İçeri Aktarma Öğelerini Gösterme
+          href: show-imports.md
+        - name: Çoklu Giriş İşareti Düzenleme
+          href: multi-caret-editing.md
+        - name: Açıklamalar
+          href: comments.md
+        - name: Düzenleyici Davranışı
+          href: editor-behavior.md
+        - name: Görev Açıklamaları
+          href: task-comments.md
+        - name: Kod Parçacıkları
+          href: snippets.md
+        - name: Blok Seçimi
+          href: block-selection.md
+        - name: Düzenleyici Temaları
+          href: editor-themes.md
+        - name: EditorConfig
+          href: editorconfig.md
+        - name: Varsayılan Klavye Kısayolları
+          href: keyboard-shortcuts.md
 - name: Hata Ayıklama
   items:
     - name: Genel Bakış
@@ -110,22 +138,6 @@
           href: publish-app-svc.md
         - name: Klasöre Yayımlama
           href: publish-folder.md
-    - name: ASP.NET Core
-      items:
-        - name: .NET Core Desteği
-          href: net-core-support.md
-        - name: ASP.NET Core Kullanmaya Başlama
-          href: asp-net-core.md
-        - name: Mac için Visual Studio’da ASP.NET Core uygulamaları oluşturma
-          href: building-asp-net-core.md
-        - name: Razor
-          href: razor.md
-        - name: Blazor
-          href: blazor.md
-        - name: JavaScript ve TypeScript
-          href: javascript.md
-        - name: launchSettings.json
-          href: launch-settings.md
         - name: Video öğreticiler
           items:
             - name: Mac için Visual Studio’da ASP.NET Core kullanmaya başlama
@@ -168,34 +180,22 @@
           href: accessibility-voiceover.md
 - name: Başvuru
   items:
-    - name: Kaynak Düzenleyicisi
+    - name: ASP.NET Core
       items:
-        - name: Düzenleyici Özellikleri
-          href: source-editor.md
-        - name: Yeniden Düzenle
-          href: refactoring.md
-        - name: IntelliSense
-          href: intellisense.md
-        - name: İçeri Aktarma Öğelerini Gösterme
-          href: show-imports.md
-        - name: Çoklu Giriş İşareti Düzenleme
-          href: multi-caret-editing.md
-        - name: Açıklamalar
-          href: comments.md
-        - name: Düzenleyici Davranışı
-          href: editor-behavior.md
-        - name: Görev Açıklamaları
-          href: task-comments.md
-        - name: Kod Parçacıkları
-          href: snippets.md
-        - name: Blok Seçimi
-          href: block-selection.md
-        - name: Düzenleyici Temaları
-          href: editor-themes.md
-        - name: EditorConfig
-          href: editorconfig.md
-        - name: Varsayılan Klavye Kısayolları
-          href: keyboard-shortcuts.md
+        - name: Desteklenen .NET sürümleri
+          href: supported-versions-net.md
+        - name: ASP.NET Core Kullanmaya Başlama
+          href: asp-net-core.md
+        - name: Mac için Visual Studio’da ASP.NET Core uygulamaları oluşturma
+          href: building-asp-net-core.md
+        - name: Razor
+          href: razor.md
+        - name: Blazor
+          href: blazor.md
+        - name: JavaScript ve TypeScript
+          href: javascript-and-typescript-support.md
+        - name: launchSettings.json
+          href: launch-settings.md
     - name: Windows Kullanıcılarına yönelik Mac için Visual Studio
       href: vsmac-for-windows-users.md
 - name: Kaynaklar
