@@ -4,8 +4,6 @@ description: Bir sınıf diyagramına şeklini ekleyerek var olan bir türü ve 
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
-f1_keywords:
-- vs.classdesigner.CannotShowBaseType
 helpviewer_keywords:
 - types [Visual Studio], visualizing
 - types [Visual Studio], class diagrams
@@ -17,12 +15,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 03bd0d6bc66e97c0449287823457c3af8eb0cc86
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 3d8b0ce1f042078c3d420a13fc931508ebd21486
+ms.sourcegitcommit: 7746657b87b22a7684e79e508af598b02dfe24b7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122109480"
+ms.lasthandoff: 01/21/2022
+ms.locfileid: "137609618"
 ---
 # <a name="how-to-view-existing-types-in-class-designer"></a>Nasıl yapılır: Sınıf Tasarımcısı varolan türleri görüntüleme
 
