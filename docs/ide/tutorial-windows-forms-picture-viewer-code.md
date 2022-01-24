@@ -12,20 +12,20 @@ ms.topic: tutorial
 ms.date: 01/05/2022
 ms.custom:
 - vs-acquisition
-ms.openlocfilehash: 4f6da9bd5c0ad35bcf33ef7635c3aa684964bbd7
-ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
+ms.openlocfilehash: 9d93ba0e8a6c77ddc6b90fffadea7e4243490882
+ms.sourcegitcommit: 7d319435c35075d4cec021b7b667666a81c02435
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "135808614"
+ms.lasthandoff: 01/24/2022
+ms.locfileid: "137650438"
 ---
-# <a name="tutorial-add-code-to-the-picture-viewer-windows-forms-app-in-visual-studio"></a>Öğretici: Visual Studio'de Forms Windows resim görüntüleyiciye kod Visual Studio
+# <a name="tutorial-add-code-to-the-picture-viewer-windows-forms-app-in-visual-studio"></a>Öğretici: Visual Studio'de Forms uygulaması Windows resim görüntüleyiciye kod Visual Studio
 
 Bu üç öğretici serisinde, bir resim yük Windows görüntüleyen bir Windows Forms uygulaması oluşturabilirsiniz.
 Visual Studio Tümleşik Tasarım Ortamı (IDE), uygulamayı oluşturmak için ihtiyacınız olan araçları sağlar.
-Daha fazla bilgi için [bkz. IDE'Visual Studio hoş geldiniz.](../get-started/visual-studio-ide.md)
+Daha fazla bilgi edinmek için [bkz. IDE'Visual Studio hoş geldiniz.](../get-started/visual-studio-ide.md)
 
-Denetimler, C# Visual Basic ilgili eylemleri yapmak için kod kullanır.
+Denetimler C# veya Visual Basic ile ilişkili eylemleri yapmak için kod kullanır.
 
 Bu üçüncü öğreticide şunların nasıl olduğunu öğrenirsiniz:
 
@@ -50,7 +50,7 @@ Uygulamanız, bir düğme seçme gibi bir eylem ıldığında bir olay işleyici
 1. Windows **Forms Tasarımcısı'nda** Resim göster **düğmesine çift** tıklayın.
    Bunun yerine formda **Resim göster düğmesini** seçerek Enter tuşuna **basabilirsiniz.**
 
-   IDE Visual Studio ana pencerede bir sekme açar. C# için sekme **Form1.cs olarak adlandırılmıştır.** Bu sekmeyi kullanıyorsanız Visual Basic **Form1.vb olarak adlandırılmıştır.**
+   IDE Visual Studio de ana pencerede bir sekme açılır. C# için sekme **Form1.cs olarak adlandırılmıştır.** Bu sekmeyi kullanıyorsanız Visual Basic **Form1.vb olarak adlandırılmıştır.**
 
    Bu sekme, formun arkasındaki kod dosyasını görüntüler.
 
@@ -77,7 +77,7 @@ Uygulamanız, bir düğme seçme gibi bir eylem ıldığında bir olay işleyici
 
 1. Windows **Forms Tasarımcısı** sekmesini yeniden seçin ve ardından Resmi temizle düğmesine **çift tıklayarak** kodunu açın.
    Kalan iki düğme için tekrarlayın.
-   Her Visual Studio IDE, formun kod dosyasına yeni bir yöntem ekler.
+   Her zaman, Visual Studio IDE formun kod dosyasına yeni bir yöntem ekler.
 
 1. Form Tasarımcısı'nda **CheckBox** denetimine **Windows çift tıklar** ve bir yöntem `checkBox1_CheckedChanged()` ekleyin. 
    Onay kutusunu işaretle veya temizle, bu yöntem çağrılır.
@@ -101,7 +101,7 @@ Bu yordam, bu bileşeni çağıran kodu ekler.
 IDE Visual Studio *IntelliSense* adlı güçlü bir araç sunar.
 Siz yazarak IntelliSense olası kodlar önerir.
 
-1. Windows **Forms Tasarımcısı'nda** Resim göster **düğmesine çift** tıklayın. 
+1. Form **Windows'da** Resim göster düğmesine **çift** tıklayın. 
    IDE imlecinizi veya yönteminin `showButton_Click()` içine `ShowButton_Click()` taşır.
 
 1. İki *ayraç* arasındaki boş satıra veya ile arasına bir i `{ }` `Private Sub...` `End Sub` yazın.
@@ -126,7 +126,7 @@ Siz yazarak IntelliSense olası kodlar önerir.
 1. içinde "g" ifadesinin hemen sonrasını parantez `ShowDialog` `()` ekleyin.
    Kodunuz olması `openFileDialog1.ShowDialog()` gerekir.
 
-1. C# için bir boşluk ekleyin ve ardından iki eşittir işareti ( ) `==` ekleyin. Daha Visual Basic bir boşluk ekleyin ve ardından tek bir eşittir işareti () `=` kullanın.
+1. C# için bir boşluk ekleyin ve ardından iki eşittir işareti ( ) `==` ekleyin. Daha Visual Basic için bir boşluk ekleyin ve ardından tek bir eşittir işareti () `=` kullanın.
 
 1. Başka bir alan ekleyin. *DialogResult* girmek için IntelliSense kullanın.
 
@@ -171,7 +171,7 @@ Resim Görüntüleyici, **görüntülemek istediğiniz** resmi seçerek Dosya A�
 
 Bu bölümde, diğer olay işleyicileri için kodu ekleyin.
 
-1. Windows **Forms Tasarımcısı'nda** Resmi temizle **düğmesine** çift tıklayın.
+1. Form **Windows'nda** Resmi temizle **düğmesine** çift tıklayın.
    Kodu küme ayraçları içinde ekleyin.
 
    ```csharp
@@ -277,29 +277,29 @@ Tüm denetimleri test eder.
 
 1. Arka plan rengini ayarlamak için bir renk seçin.
 
-1. Resim görüntülemek için **bir resim göster** ' i seçin.
+1. Resim **görüntülemek için Resim göster'i** seçin.
 
-   ![Ekran görüntüsü, bir resim görüntülenirken resim görüntüleyici uygulamasını gösterir.](../ide/media/tutorial-windows-forms-picture-viewer-code/run-picture-viewer.png)
+   ![Resim Görüntüleyicisi uygulamasını gösteren ve bir resim görüntülenen ekran görüntüsü.](../ide/media/tutorial-windows-forms-picture-viewer-code/run-picture-viewer.png)
 
-1. **Esnetme** seçin ve seçimini kaldırın.
+1. Esnet'i seçin ve seçimini **kaldırın.**
 
-1. Görüntülemenin temizlediğinizden emin olmak için **Resmi Temizle** düğmesini seçin.
+1. Resmin **temiz olduğundan emin** olmak için Resmi temizle düğmesini seçin.
 
-1. Uygulamadan çıkmak için **Kapat** ' ı seçin.
+1. Uygulamadan **çıkmak** için Kapat'ı seçin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 Tebrikler!
-Bu öğretici serisini tamamladınız.
-Visual Studio ıde 'de bu programlama ve tasarım görevlerini tamamladınız:
+Bu öğretici serisini tamamladık.
+Bu programlama ve tasarım görevlerini IDE'de Visual Studio gerçekleştirebilirsiniz:
 
 - Windows Forms kullanan bir Visual Studio projesi oluşturuldu
-- Resim görüntüleme uygulaması için Düzen tamamlandı
-- Düğme ve onay kutusu eklendi
+- Resim görüntüleme uygulaması için bitti düzeni
+- Düğmeler ve onay kutusu eklendi
 - İletişim kutuları eklendi
 - Denetimleriniz için olay işleyicileri eklendi
-- olayları işlemek için yazılan C# veya Visual Basic kodu
+- Olayları işlemek için Visual Basic C# veya kod yazma
 
-Zaman aşımına uğrayan bir matematik testi oluşturma hakkında başka bir öğretici serisini öğrenmeye devam edin.
+Zamanlı matematik testi oluşturma hakkında başka bir öğretici serisiyle öğrenmeye devam edin.
 > [!div class="nextstepaction"]
-> [Öğretici 2: süreli bir matematik testi oluşturma](tutorial-2-create-a-timed-math-quiz.md)
+> [Öğretici 2: Zamanlı matematik testi oluşturma](tutorial-windows-forms-math-quiz-create-project-add-controls.md)

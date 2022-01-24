@@ -9,16 +9,16 @@ manager: jmartens
 ms.reviewer: nebuk89, ghogen
 ms.custom: “docker-team-owned”
 ms.date: 08/06/2021
-ms.openlocfilehash: 0e6d40f743b9d7cc7a7b12c407d000c97a16e99e
-ms.sourcegitcommit: 2a8c7de72f952203289459736107c875837bb07e
+ms.openlocfilehash: 7cfdbaf98c0f1465c31eb8c8e490fa24e00364a9
+ms.sourcegitcommit: 7d319435c35075d4cec021b7b667666a81c02435
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/20/2022
-ms.locfileid: "137110081"
+ms.lasthandoff: 01/24/2022
+ms.locfileid: "137650124"
 ---
-# <a name="tutorial-get-started-with-docker"></a>Öğretici: Docker Kullanmaya başlayın öğretici
+# <a name="tutorial-get-started-with-docker"></a>Öğretici: Docker Kullanmaya başlayın ile birlikte kullanma
 
-Bu öğreticide, bir veritabanıyla birden çok kapsayıcı kullanma ve Windows kullanma dahil olmak üzere Visual Studio Code veya Mac'te Docker uygulamaları oluşturma ve dağıtma hakkında Docker Compose. Ayrıca kapsayıcılı uygulamanızı Azure'a dağıtın.
+Bu öğreticide, veritabanıyla birden çok kapsayıcı kullanma ve Windows kullanarak Visual Studio Code veya Mac üzerinde Docker uygulamaları oluşturma ve dağıtma hakkında bilgi Docker Compose. Ayrıca kapsayıcılı uygulamanızı Azure'a dağıtın.
 
 Kapsayıcılar, tam işletim sisteminin tam boyutu ve ek yükü olmadan uygulama oluşturmak ve çalıştırmaya bir platform sağlayan sanal makineler (VM) gibi küçük sanallaştırılmış ortamlardır. [Docker,](https://www.docker.com) üçüncü taraf, endüstri standardı bir kapsayıcı sağlayıcısı ve kapsayıcı yönetim sistemidir. Docker Desktop makineniz üzerinde çalışır ve yerel kapsayıcılarınızı yönetir. Visual Studio VS Code gibi geliştirme araçları, kapsayıcılı uygulamalar oluşturmak, kapsayıcılara uygulama dağıtmak ve kapsayıcılar üzerinde çalışan uygulamalarda hata ayıklamak için yerel olarak yüklenmiş bir Docker Desktop hizmetiyle çalışmanızı sağlar.
 
@@ -81,3 +81,7 @@ Daha sonra katmanlama, en iyi yöntemler ve daha fazlası gibi konuları kapsaya
 
 > [!div class="nextstepaction"]
 > [Uygulama](your-application.md)
+
+Bazı kaynaklar:
++ [Docker Cloud Integration](https://github.com/docker/compose-cli)
++ [Örnekler](https://github.com/docker/awesome-compose)

@@ -1,34 +1,25 @@
-- name: Docker
+- name: Kullanıcılar için Docker VS Code
   expanded: true
   items:
-    - name: VS Code kullanıcıları için Docker’a giriş
-      expanded: true
-      items:
-        - name: '1. kısım: Başlarken'
-          href: tutorials/docker-tutorial.md
-        - name: 'Bölüm 2: uygulama'
-          href: tutorials/your-application.md
-        - name: '3. kısım: uygulamanızı güncelleştirme'
-          href: tutorials/update-your-app.md
-        - name: '4. Bölüm: uygulamanızı paylaşma'
-          href: tutorials/share-your-app.md
-        - name: '5. Bölüm: veritabanınızı kalıcı hale getirme'
-          href: tutorials/persist-your-data.md
-        - name: '6. Bölüm: BIND bağlama kullanma'
-          href: tutorials/use-bind-mounts.md
-        - name: '7. Bölüm: çok Kapsayıcılı uygulamalar'
-          href: tutorials/multi-container-apps.md
-        - name: '8. Bölüm: Docker Compose kullanma'
-          href: tutorials/use-docker-compose.md
-        - name: '9. Bölüm: görüntü oluşturma en iyi uygulamalar'
-          href: tutorials/image-building-best-practices.md
-        - name: '10. kısım: buluta dağıtma'
-          href: tutorials/deploy-to-cloud.md
-        - name: Sırada ne var?
-          href: tutorials/whats-next.md
-        - name: Kaynaklar
-          items:
-            - name: Örnekler
-              href: 'https://github.com/docker/awesome-compose'
-            - name: Docker ACI tümleştirmesi
-              href: 'https://github.com/docker/aci-integration-beta/'
+    - name: '1. Bölüm: Başlarken'
+      href: tutorials/docker-tutorial.md
+    - name: 'Bölüm 2: Uygulama'
+      href: tutorials/your-application.md
+    - name: '3. Bölüm: Uygulamalarınızı güncelleştirme'
+      href: tutorials/update-your-app.md
+    - name: '4. Bölüm: Uygulamalarınızı paylaşma'
+      href: tutorials/share-your-app.md
+    - name: '5. Bölüm: Veritabanınızı kalıcı olarak kalıcı olarak oluşturma'
+      href: tutorials/persist-your-data.md
+    - name: 'Bölüm 6: Bağlamaları kullanma'
+      href: tutorials/use-bind-mounts.md
+    - name: 'Bölüm 7: Çok kapsayıcılı uygulamalar'
+      href: tutorials/multi-container-apps.md
+    - name: 'Bölüm 8: Docker Compose'
+      href: tutorials/use-docker-compose.md
+    - name: 'Bölüm 9: Görüntü en iyi yöntemleri'
+      href: tutorials/image-building-best-practices.md
+    - name: 'Bölüm 10: Buluta dağıtma'
+      href: tutorials/deploy-to-cloud.md
+    - name: Sırada ne var?
+      href: tutorials/whats-next.md

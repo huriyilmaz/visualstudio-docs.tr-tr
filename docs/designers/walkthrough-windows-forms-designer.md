@@ -1,5 +1,5 @@
 ---
-title: Windows Form Tasarımcısı öğreticisi
+title: Windows Forms Tasarımcısı öğreticisi
 description: Windows Forms Designer tarafından sağlanan çeşitli araçları kullanarak Windows öğrenin. Uygulama, birçok kullanılabilir düzen özelliği kullanan özel bir denetimdir.
 ms.custom: SEO-VS-2020
 ms.date: 08/09/2019
@@ -10,12 +10,12 @@ author: TerryGLee
 ms.author: tglee
 manager: jmartens
 ms.technology: vs-ide-designers
-ms.openlocfilehash: 6e43c010e84f31b39167baa60cef6cceb7b21c25
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 5ed70cd7dc19629bcf4cbcba3230a9de46e6121e
+ms.sourcegitcommit: 7d319435c35075d4cec021b7b667666a81c02435
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122035416"
+ms.lasthandoff: 01/24/2022
+ms.locfileid: "137650376"
 ---
 # <a name="tutorial-get-started-with-windows-forms-designer"></a>Öğretici: Kullanmaya başlayın Forms Windows ile birlikte kullanma
 
@@ -42,11 +42,11 @@ Bitirdikten sonra, Windows Forms Tasarımcısı'nda bulunan düzen özelliklerin
 
    ::: moniker range=">=vs-2019"
 
-   ![Windows Visual Studio 2019'da Forms Denetim Kitaplığı şablonu](media/windows-forms-control-library-template.png)
+   ![Windows 2019'da Visual Studio Forms Denetim Kitaplığı şablonu](media/windows-forms-control-library-template.png)
 
    ::: moniker-end
 
-2. Dosyayı yeniden adlandırmak **için Çözüm Gezgini'de** **UserControl1.vb** veya **UserControl1.cs'ye** sağ tıklayın, Yeniden Adlandır'ı seçin ve dosya adını DemoCalculator.vb veya DemoCalculator.cs olarak değiştirebilirsiniz.  "UserControl1" kod öğesine yapılan tüm başvuruları yeniden adlandırmak istediğiniz sorulması için Evet'i seçin. 
+2. Dosyayı yeniden adlandırmak için **Çözüm Gezgini'de** **UserControl1.vb** veya **UserControl1.cs'ye** sağ tıklayın, Yeniden Adlandır'ı seçin ve dosya adını DemoCalculator.vb veya DemoCalculator.cs olarak değiştirebilirsiniz.  "UserControl1" kod öğesine yapılan tüm başvuruları yeniden adlandırmak istediğiniz sorulması için Evet'i seçin. 
 
 Windows Forms Tasarımcısı, DemoCalculator denetimi için tasarımcı yüzeyini gösterir. Bu görünümde, Araç Kutusu'nda denetimleri ve bileşenleri seçerek ve bunları tasarımcı yüzeyine yerleştirerek denetimin görünümünü grafiksel olarak tasarabilirsiniz. Özel denetimler hakkında daha fazla bilgi için [bkz. Özel denetim çeşitliliği.](/dotnet/framework/winforms/controls/varieties-of-custom-controls)
 
@@ -100,7 +100,7 @@ DemoCalculator denetimi birçok farklı Form Windows içerir. Bu yordamda, Windo
 
     Sütun **ve Satır Stilleri** iletişim kutusu açılır.
 
-14. Beş **sütun görüntülenene** kadar Ekle düğmesini seçin. Beş sütunun hepsini ve ardından Boyut **Türü** kutusunda **Yüzde'yi** seçin. Yüzde **değerini** **20 olarak ayarlayın.** Bu, her sütunu aynı genişlikte ayarlar.
+14. Beş **sütun görüntülenene** kadar Ekle düğmesini seçin. Beş sütunun hepsini ve ardından Boyut **Türü** kutusunda **Yüzde'yi** seçin. Yüzde **değerini** **20 olarak ayarlayın.** Bu, her sütunu aynı genişliğe ayarlar.
 
 15. **Göster'in** altında Satırlar'ı **seçin.**
 
@@ -304,18 +304,18 @@ Bir uygulamada Demohesaplayıcı denetimini kullanmak için, onu bir forma yerle
 
 6. `Dock`Özelliğin değerini olarak değiştirin `Fill` .
 
-7. Formu seçin ve ardından `Padding` özellik düğümünü genişletin. All (Hepsi) **değerini** **20 olarak değiştirir.**
+7. Formu seçin ve ardından `Padding` özellik düğümünü genişletin. **All** değerini **20** olarak değiştirin.
 
-   DemoCalculator denetimi, formun yeni değerine uyum sağlayacak `Padding` şekilde azaltıldı.
+   Demohesaplayıcı denetiminin boyutu, formun yeni değerine uyum sağlayacak şekilde azaltılır `Padding` .
 
-8. Çeşitli boyutlandırma tutamaçlarını farklı konumlara sürükleyerek formu yeniden boyutlandırabilirsiniz. DemoCalculator denetimine sığacak şekilde nasıl yeniden boyutlandırıldıklarını gözlemlemek.
+8. Çeşitli boyutlandırma tutamaçlarını farklı konumlara sürükleyerek formu yeniden boyutlandırın. Demohesaplayıcı denetiminin sığması için nasıl yeniden boyutlandırıldığını gözlemleyin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu makalede, basit bir hesaplayıcı için kullanıcı arabiriminin nasıl inşa edildikleri açıklanmıştır. Devam etmek için hesap makinesi mantığını uygulayarak işlevselliğini genişletebilirsiniz, ardından uygulamayı [ClickOnce.](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md) Veya, Windows Forms kullanarak resim [görüntüleyici oluşturarak farklı bir öğreticiye devam edin.](../ide/tutorial-1-create-a-picture-viewer.md)
+Bu makalede, basit bir Hesaplayıcı için Kullanıcı arabiriminin nasıl oluşturulacağı gösterilmiştir. Devam etmek için, hesaplayıcı mantığını uygulayarak ve sonra [ClickOnce kullanarak uygulamayı yayımlayabilirsiniz](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md). ya da [Windows Forms kullanarak bir resim görüntüleyici oluşturduğunuz](../ide/tutorial-windows-forms-picture-viewer-layout.md)farklı bir öğreticiye devam edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Windows Forms denetimleri](/dotnet/framework/winforms/controls/)
 - [Windows Forms denetimleri için erişilebilirlik](/dotnet/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form)
-- [ClickOnce kullanarak yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
+- [ClickOnce kullanarak yayımlayın](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

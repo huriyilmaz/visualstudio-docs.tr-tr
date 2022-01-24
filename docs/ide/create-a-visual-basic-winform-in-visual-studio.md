@@ -12,12 +12,12 @@ dev_langs:
 - VB
 ms.date: 01/07/2022
 ms.custom: vs-acquisition, get-started
-ms.openlocfilehash: a5fa899af5c15bca318e713722854aa163932448
-ms.sourcegitcommit: 9b1c1cceab4c59f0b91e19ae46a51969f72fcc34
+ms.openlocfilehash: 86c0f162662c98383ba849db4ae78313143f8480
+ms.sourcegitcommit: 7d319435c35075d4cec021b7b667666a81c02435
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "136801319"
+ms.lasthandoff: 01/24/2022
+ms.locfileid: "137650463"
 ---
 # <a name="tutorial-create-a-winforms-app-with-visual-basic"></a>Öğretici: Visual Basic bir WinForms uygulaması oluşturma
 
@@ -196,26 +196,26 @@ Uygulamanız derlemek ve çalıştırmak için hazırlayın.
 
    Birkaç şey meydana gelir.
    Visual Studio ıde 'de, **tanılama araçları** penceresi açılır ve bir **çıkış** penceresi açılır.
-   IDE'nin dışında bir **Form1 iletişim** kutusu görüntülenir.
-   Bu düğmeye tıklayın **ve** Label1 metnini **içerir.**
+   IDE dışında bir **Form1** iletişim kutusu belirir.
+   **Bu** düğme ve **Label1** görüntülenen metni içerir.
 
-1. Form1 **iletişim** kutusunda Bu **düğmeye tıklayın'ı** seçin.
+1. **Form1** iletişim kutusunda **Bu düğmeye tıklayın** .
 
-   ![Form 1 başlıklı iletişim kutusunun ekran görüntüsü. Bu iletişim kutusunda Merhaba Dünya!](media/create-a-visual-basic-winform-in-visual-studio/visual-studio-dialog-hello-world.png)
+   ![Ekran görüntüsünde Merhaba Dünya metin görüntüleyen form 1 başlıklı iletişim kutusu gösterilir!](media/create-a-visual-basic-winform-in-visual-studio/visual-studio-dialog-hello-world.png)
 
-   **Label1 metni** şu şekilde **Merhaba Dünya:**.
+   **Label1** metni **Merhaba Dünya!** olarak değişir.
 
-1. Uygulamayı **çalıştırmayı durdurmak** için Form1 iletişim kutusunu kapatın.
+1. Uygulamayı çalıştırmayı durdurmak için **Form1** iletişim kutusunu kapatın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Formlar hakkında daha fazla Windows için aşağıdaki öğreticiyle devam edin:
+Windows Forms hakkında daha fazla bilgi edinmek için aşağıdaki öğreticiye geçin:
 
 > [!div class="nextstepaction"]
-> [Öğretici: Resim görüntüleyici oluşturma](tutorial-1-create-a-picture-viewer.md)
+> [Öğretici: resim görüntüleyici oluşturma](tutorial-windows-forms-picture-viewer-layout.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Diğer Visual Basic öğreticileri](../get-started/visual-basic/index.yml)
+* [daha fazla Visual Basic öğretici](../get-started/visual-basic/index.yml)
 * [C# öğreticileri](../get-started/csharp/index.yml)
 * [C++ öğreticileri](/cpp/get-started/tutorial-console-cpp)

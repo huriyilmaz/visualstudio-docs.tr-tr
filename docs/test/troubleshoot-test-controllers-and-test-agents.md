@@ -14,12 +14,12 @@ author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.technology: vs-ide-test
-ms.openlocfilehash: d88014eb9b6141ccc06919aa6d869b364588feee
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: f88b8b45661e17d281f3e590f00f1f6189cf7866
+ms.sourcegitcommit: 7d319435c35075d4cec021b7b667666a81c02435
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122054185"
+ms.lasthandoff: 01/24/2022
+ms.locfileid: "137650496"
 ---
 # <a name="strategies-for-troubleshooting-test-controllers-and-test-agents-in-load-tests"></a>Yük testlerinde test denetleyicileri ve test aracıları sorunlarını giderme stratejileri
 
@@ -29,7 +29,7 @@ Bu makalede, test denetleyicileri ve test aracıları ile çalışma sırasında
 
 ## <a name="unable-to-collect-performance-counters-on-test-agent-computer"></a>Test aracısı bilgisayarda performans sayaçları topyamıyor
 
-Bir yük testi çalıştırarak bir test aracısı bilgisayarına bağlanmaya ve performans sayaçlarını toplamaya çalışsanız hatalar alırsınız. Uzak Kayıt Defteri hizmeti, uzak bir bilgisayara performans sayacı verileri sağlamakla sorumlu olan hizmettir. Bazı işletim sistemlerinde, Uzak Kayıt Defteri hizmeti otomatik olarak başlamaz. Bu sorunu çözmek için Uzak Kayıt Defteri hizmetini el ile başlatın.
+Bir yük testi çalıştırsanız, bir test aracısı bilgisayarına bağlanmaya ve performans sayaçlarını toplamaya çalışsanız hatalar alırsınız. Uzak Kayıt Defteri hizmeti, uzak bir bilgisayara performans sayacı verileri sağlamakla sorumlu olan hizmettir. Bazı işletim sistemlerinde, Uzak Kayıt Defteri hizmeti otomatik olarak başlamaz. Bu sorunu çözmek için Uzak Kayıt Defteri hizmetini el ile başlatın.
 
 > [!NOTE]
 > Uzak Kayıt Defteri hizmetine **Denetim Masası.** Yönetimsel **Araçlar'ı** ve ardından Hizmetler'i **seçin.**
@@ -40,7 +40,7 @@ Bu sorunun bir diğer nedeni de performans sayaçlarını okumak için yeterli i
 
 Bir test denetleyicisi bilgisayarda günlüğe kaydetme düzeyini kontrol edin. Bu, bir ortamda yük testi çalıştırarak bir sorunu tanılamaya çalışırken kullanışlıdır.
 
-### <a name="to-set-the-logging-level-on-a-test-controller-computer"></a>Test denetleyicisi bilgisayarın günlük düzeyini ayarlamak için
+### <a name="to-set-the-logging-level-on-a-test-controller-computer"></a>Bir test denetleyicisi bilgisayarda günlüğe kaydetme düzeyini ayarlamak için
 
 1. Test denetleyicisi hizmetini durdurun. Komut isteminde `net stop vsttcontroller` yazın.
 
@@ -73,7 +73,7 @@ Bir test denetleyicisi bilgisayarda günlüğe kaydetme düzeyini kontrol edin. 
 
 Bu durum test denetleyicisi, test aracısı hizmeti ve test aracısı işlemi için geçerlidir. Sorunları tanılarken üç işlemde de günlüğe kaydetmeyi etkinleştirmek yararlı olur. Günlük düzeyini ayarlama yordamı, test denetleyicisi için daha önce belirtildiği gibi üç işlem için de aynıdır. Test aracısı hizmeti ve aracı işleminin günlük düzeylerini ayarlamak için aşağıdaki yapılandırma dosyalarını kullanın:
 
-- *QTController.exe.config* Conttoller hizmeti
+- *QTController.exe.config* Denetleyici hizmeti
 
 - *QTAgentService.exe.config* Aracı hizmeti
 
@@ -89,7 +89,7 @@ Bu durum test denetleyicisi, test aracısı hizmeti ve test aracısı işlemi i�
 
 Bir test aracısı ayarlamaya çalışsanız aşağıdaki hatayı alabilirsiniz:
 
-**Hata 8110. Belirtilen denetleyici bilgisayara bağlanamıyor veya denetleyici nesnesine erişiyamıyor.**
+**Hata 8110. Belirtilen denetleyici bilgisayara bağlanamıyor veya denetleyici nesnesine erişiyemedi.**
 
 Bu hatanın nedeni, test denetleyicisinin birden fazla ağ bağdaştırıcısı olan bir bilgisayara yükleyerek olması olabilir.
 
@@ -102,9 +102,9 @@ Bu hatayı düzeltmek için test denetleyicisini ağ bağdaştırıcılarından 
 
 1. **Başlat'ı** ve ardından Çalıştır'ı **seçin.**
 
-     **Çalıştır** iletişim kutusu görüntülenir.
+     Çalıştır  iletişim kutusu görüntülenir.
 
-2. yazın `cmd` ve ardından Tamam'ı **seçin.**
+2. yazın `cmd` ve Ardından Tamam'ı **seçin.**
 
      Bir komut istemi açılır.
 

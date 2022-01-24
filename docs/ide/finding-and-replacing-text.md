@@ -2,7 +2,7 @@
 title: Metin bul ve Değiştir ve çok şapka seçimi
 description: Bul ve Değiştir özelliği ve bir düzenin örneklerini bulmak ve değiştirmek için nasıl kullanılacağı hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
-ms.date: 11/17/2021
+ms.date: 01/21/2022
 ms.topic: conceptual
 f1_keywords:
 - vs.find
@@ -33,12 +33,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 01641d8c0680d2245b60c35710ddda42aa6f1ff9
-ms.sourcegitcommit: 76541583274c4af4218ac2a8ab4308077a7e340e
+ms.openlocfilehash: 37b7c9a395cd7273bf829beee44d150fe841aebd
+ms.sourcegitcommit: 7d319435c35075d4cec021b7b667666a81c02435
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "132733237"
+ms.lasthandoff: 01/24/2022
+ms.locfileid: "137650126"
 ---
 # <a name="find-and-replace-text"></a>Metin bulma ve değiştirme
 
@@ -94,11 +94,15 @@ Bul ve Değiştir Windows ve **sonuçları bul** **pencereleri gibi bir** kod ve
 
 :::image type="content" source="media/vs-2022/find-files.png" alt-text="Visual Studio 20222 ' deki bul ve değiştir iletişim kutusunun, dosyaları bul sekmesinde açık olan ekran görüntüsü.":::
 
+Daha ayrıntılı bilgi için bkz. [Dosya Içinde bulma](find-in-files.md) ve [dosyalardaki değiştirme](replace-in-files.md) sayfalarında.
+
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
 :::image type="content" source="media/find-files-vs2019.png" alt-text="Visual Studio 2019 ' deki bul ve değiştir iletişim kutusunun, dosyaları bul sekmesinde açık olan ekran görüntüsü.":::
+
+Daha ayrıntılı bilgi için bkz. [Dosya Içinde bulma](find-in-files.md) ve [dosyalardaki değiştirme](replace-in-files.md) sayfalarında.
 
 > [!IMPORTANT]
 > **Visual Studio 2019** [**sürüm 16,6**](/visualstudio/releases/2019/release-notes-v16.6/) veya önceki bir sürümünü kullanıyorsanız **bul ve değiştir** iletişim kutusu burada göründüğü gibi görünmeyebilir. ekranınızda gördüklerinize uyacak açıklamalar için bu sayfanın [Visual Studio 2017](?view=vs-2017&preserve-view=true) sürümüne geçin.
@@ -108,6 +112,8 @@ Bul ve Değiştir Windows ve **sonuçları bul** **pencereleri gibi bir** kod ve
 ::: moniker range="vs-2017"
 
 :::image type="content" source="media/find-files-vs2017.png" alt-text="Visual Studio 2017 ' deki bul ve değiştir iletişim kutusunun, dosyaları bul sekmesinde açık olan ekran görüntüsü.":::
+
+Daha ayrıntılı bilgi için bkz. [Dosya Içinde bulma](find-in-files.md) ve [dosyalardaki değiştirme](replace-in-files.md) sayfalarında.
 
 ::: moniker-end
 
@@ -181,18 +187,18 @@ Birden çok Evcil hayvan seçmek için her zamanki gibi ilk metin seçimini tık
 |**SHIFT** + **Alt** + **.**|Sonraki eşleşen metni seçim olarak ekle|
 |**SHIFT** + **Alt** + **;**|Tüm eşleşen metni seçimler olarak ekle|
 |**SHIFT** + **Alt** + **,**|Son seçili oluşumu kaldır|
-|**SHIFT** + **Alt**+**/**|Sonraki eşleştirme oluşumunu atla|
-|**Alt** + tıklama|Kutu seçimi ekleme|
-|**Esc tuşuna** basın veya tıklayın|Tüm seçimleri temizle|
+|**SHIFT** + **Alt**+**/**|Sonraki eşleşen oluşumu atla|
+|**Alt** + tıklama|Kutu seçimi Ekle|
+|**ESC** veya tıklama|Tüm Seçimleri Temizle|
 
-Komutlardan bazıları Düzenle menüsünde, Birden **Çok** **Carets altında da kullanılabilir:**
+Bazı komutlardan biri de **düzenleme** menüsünde, **birden çok sepetin** altında bulunur:
 
-:::image type="content" source="media/edit-menu-multiple-carets-find-replace.png" alt-text="Visual Studio'daki Birden Çok Carets açılır menüsünün ekran Visual Studio":::
+:::image type="content" source="media/edit-menu-multiple-carets-find-replace.png" alt-text="Visual Studio içindeki çoklu Evcil hayvan açılan menüsünün ekran görüntüsü":::
 
 ::: moniker-end
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Normal ifadeleri Visual Studio](../ide/using-regular-expressions-in-visual-studio.md)
-- [Kodda yeniden düzenleme Visual Studio](../ide/refactoring-in-visual-studio.md)
-- [Seçimi engelle (Mac için Visual Studio)](/visualstudio/mac/block-selection)
+- [Visual Studio içindeki normal ifadeleri kullanma](../ide/using-regular-expressions-in-visual-studio.md)
+- [Visual Studio kodu yeniden düzenleme](../ide/refactoring-in-visual-studio.md)
+- [seçimi engelle (Mac için Visual Studio)](/visualstudio/mac/block-selection)

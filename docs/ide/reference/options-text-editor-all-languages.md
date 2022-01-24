@@ -1,6 +1,6 @@
 ---
 title: Seçenekler, Metin Düzenleyici, Tüm Diller
-description: Kod Düzenleyicisi'nin varsayılan davranışını değiştirmek için Tüm Diller bölümündeki Genel sayfasını kullanmayı Visual Studio.
+description: Visual Studio içindeki kod düzenleyicisinin varsayılan davranışını değiştirmek için tüm diller bölümündeki Genel sayfasını nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -20,7 +20,6 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.HTML.General
 - VS.ToolsOptionsPages.Text_Editor.HTML_(Web_Forms).General
 - VS.ToolsOptionsPages.Text_Editor.JavaScript.General
-- VS.ToolsOptionsPages.Text_Editor.TypeScript.General
 - VS.ToolsOptionsPages.Text_Editor.JSON.General
 - VS.ToolsOptionsPages.Text_Editor.LESS.General
 - VS.ToolsOptionsPages.Text_Editor.Plain_Text.General
@@ -45,90 +44,90 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: f581f48efb9fbba97aa65b9826f7114f7377e951
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 5816c775f3e2a677b400eddad6be029dc6c6aaa4
+ms.sourcegitcommit: 7d319435c35075d4cec021b7b667666a81c02435
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126627194"
+ms.lasthandoff: 01/24/2022
+ms.locfileid: "137650111"
 ---
-# <a name="options-dialog-box-text-editor--all-languages"></a>Seçenekler iletişim kutusu: Metin Düzenleyici \> Tüm Diller
+# <a name="options-dialog-box-text-editor--all-languages"></a>Seçenekler iletişim kutusu: metin düzenleyici \> tüm diller
 
-Bu iletişim kutusu, Kod Düzenleyicisi'nin varsayılan davranışını değiştirmenizi sağlar. Bu ayarlar, HTML Tasarımcısı'nın Kaynak görünümü gibi Kod Düzenleyicisi'ni temel alan diğer düzenleyiciler için de geçerlidir. Bu iletişim kutusunu açmak için Araçlar **menüsünden** **Seçenekler'i** seçin. Metin Düzenleyici **klasöründe Tüm** Diller alt **klasörünü genişletin** ve ardından Genel'i **seçin.**
+Bu iletişim kutusu, kod düzenleyicisinin varsayılan davranışını değiştirmenize izin verir. Bu ayarlar ayrıca, HTML tasarımcısının kaynak görünümü gibi kod düzenleyicisine dayalı diğer düzenleyiciler için de geçerlidir. Bu iletişim kutusunu açmak için, **Araçlar** menüsünden **Seçenekler** ' i seçin. **Metin Düzenleyicisi** klasörü Içinde **tüm diller** alt klasörünü genişletin ve ardından **genel**' i seçin.
 
 > [!CAUTION]
-> Bu sayfa tüm geliştirme dilleri için varsayılan seçenekleri ayarlar. Bu iletişim kutusundaki bir seçeneğin sıfırlanması, tüm dillerdeki Genel seçeneklerini burada seçili olan seçeneklere sıfırlar. Yalnızca bir dil için Metin Düzenleyici seçeneklerini değiştirmek için, bu dilin alt klasörlerini genişletin ve seçenek sayfalarını seçin.
+> Bu sayfa tüm geliştirme dillerinin varsayılan seçeneklerini ayarlar. Bu iletişim kutusunda bir seçeneğin sıfırlanması, burada seçili olan seçeneklere ilişkin tüm dillerdeki genel seçenekleri sıfırlayacaktır. Yalnızca bir dile ait metin düzenleyici seçeneklerini değiştirmek için, bu dilin alt klasörünü genişletin ve seçenek sayfalarını seçin.
 
-Bazı programlama dilleri için Genel seçenekler sayfalarında bir seçenek seçildiğinde gri bir onay işareti görüntülenir, ancak diğerleri için görüntülenmez.
+Bazı programlama dillerinin genel seçenekler sayfalarında bir seçenek seçildiğinde gri onay işareti görüntülenir, ancak diğerleri için değildir.
 
 ## <a name="statement-completion"></a>Deyim Tamamlama
 
-**Üyeleri otomatik olarak listele**
+**Üyeleri otomatik Listele**
 
-Seçildiğinde, düzenleyicide siz yazarak IntelliSense tarafından kullanılabilir üyelerin, özelliklerin, değerlerin veya yöntemlerin açılır listeleri görüntülenir. Öğeyi kodunuza eklemek için açılır listeden herhangi bir öğe seçin. Bu seçeneğin seçerek Gelişmiş **üyeleri gizle seçeneğine olanak** sağlar.
+Seçildiğinde, kullanılabilir üyelerin, özelliklerin, değerlerin veya yöntemlerin açılır listeleri, düzenleyicide yazarken IntelliSense tarafından görüntülenir. Öğeyi kodunuza eklemek için açılır listedeki herhangi bir öğeyi seçin. Bu seçeneğin belirlenmesi, **Gelişmiş üyeleri Gizle** seçeneğini sunar.
 
-**Gelişmiş üyeleri gizleme**
+**Gelişmiş üyeleri gizle**
 
-Seçildiğinde, yalnızca en yaygın kullanılan öğeleri görüntüleyerek açılır deyim tamamlama listelerini kısaltıyor. Diğer öğeler listeden filtrelenmiş.
+Seçildiğinde, yalnızca en yaygın olarak kullanılan öğeleri görüntüleyerek açılan deyimin tamamlanma listelerini kısaltır. Diğer öğeler listeden filtrelenir.
 
 **Parametre bilgileri**
 
-Seçildiğinde, geçerli bildirim veya yordamın tam söz dizimi düzenleyicide ekleme noktası altında ve tüm kullanılabilir parametreleriyle birlikte görüntülenir. Ataydığınız sonraki parametre kalın olarak görüntülenir.
+Seçildiğinde, geçerli bildirim veya yordamın bütün sözdizimi, tüm kullanılabilir parametreleriyle birlikte düzenleyicide ekleme noktası altında görüntülenir. Atayabilmeniz için bir sonraki parametre kalın yazı tipinde görüntülenir.
 
 ## <a name="settings"></a>Ayarlar
 
-**Sanal alanı etkinleştirme**
+**Sanal alanı etkinleştir**
 
-Bu seçenek seçildiğinde ve **Sözcük kaydırma** temiz olduğunda, Kod Düzenleyicisi'nde bir satırın sonunun ötesinde herhangi bir yere tıklar ve yazabilirsiniz. Bu özellik, açıklamalarınızı kodunuzun yanındaki tutarlı bir noktaya konumlandırmak için kullanılabilir.
+Bu seçenek belirlendiğinde ve **sözcük kaydırmayı** temizlenmemiş olduğunda, kod düzenleyici ve türünde bir satırın sonundaki herhangi bir yere tıklayabilirsiniz. Bu özellik, kodunuzun yanındaki tutarlı bir noktada Yorumları konumlandırmak için kullanılabilir.
 
 **Sözcük kaydırma**
 
-Seçildiğinde, bir satırın görüntülenebilir düzenleyici alanı ötesine yatay olarak genişleten herhangi bir kısmı otomatik olarak bir sonraki satırda görüntülenir. Bu seçeneğin seçerek **sözcük kaydırma için görselleri göster seçeneğine olanak** sağlar.
+Seçildiğinde, bir satırın, görüntülenebilir düzenleyici alanının ötesinde yatay olarak genişleyen herhangi bir kısmı otomatik olarak bir sonraki satırda görüntülenir. Bu seçeneğin belirlenmesi, **sözcük kaydırması için görsel glifleri göster** seçeneğinin kullanılmasına izin vermez.
 
 > [!NOTE]
-> Sözcük **Kaydırma** açıkken Sanal **Alan özelliği** kapalıdır.
+> **Sözcük kaydırması** açık durumdayken **sanal alan** özelliği kapalıdır.
 
-**Sözcük kaydırma için görsel ifadeleri gösterme**
+**Sözcük kaydırması için görsel glifleri göster**
 
-Seçildiğinde, uzun bir çizginin ikinci satıra kaydırılan bir dönüş oku göstergesi görüntülenir.
+Seçildiğinde, uzun bir çizginin ikinci bir satıra sarmaladığı bir dönüş oku göstergesi görüntülenir.
 
 ![LineBreakSymbol ekran görüntüsü](../../ide/reference/media/linebreak.gif)
 
-Bu göstergeleri görüntülememeyi tercih ediyorsanız bu seçeneğin temizlemesi gerekir.
+Bu göstergeleri görüntülememayı tercih ediyorsanız bu seçeneği temizleyin.
 
 > [!NOTE]
-> Bu anımsatıcı okları kodunuza eklenmez ve yazdırılmaz. Bunlar yalnızca başvuruya göredir.
+> Bu anımsatıcı okları kodunuza eklenmez ve yazdırılmıyor. Bunlar yalnızca başvuru amaçlıdır.
 
 **Satır numaraları**
 
-Seçildiğinde, her kod satırı yanında bir satır numarası görünür.
+Seçildiğinde, her kod satırının yanında bir satır numarası görünür.
 
 > [!NOTE]
-> Bu satır numaraları kodunuza eklenmez ve yazdırılmaz. Bunlar yalnızca başvuruya göredir.
+> Bu satır numaraları kodunuza eklenmez ve yazdırılmıyor. Bunlar yalnızca başvuru amaçlıdır.
 
-**Tek tıklamayla URL gezintisini etkinleştirme**
+**Tek tıklama URL gezintisini etkinleştir**
 
-Seçildiğinde, fare imleci düzenleyicide bir URL'den geçerken işaret eden el olarak değişir. Belirtilen sayfayı web tarayıcınızda görüntülemek için URL'ye tıklayabilirsiniz.
+Seçildiğinde fare imleci, düzenleyicide bir URL üzerinden geçen bir işaret halinde değişir. Web tarayıcınızda belirtilen sayfayı göstermek için URL 'ye tıklayabilirsiniz.
 
 **Gezinti çubuğu**
 
-Seçildiğinde, kod **düzenleyicisinin** üst kısmında Gezinti çubuğunu görüntüler. Açılan Nesneler **ve** **Üyeler** listeleri, kodunuzdaki belirli bir nesneyi seçmenize, üyelerinden birini seçmenize ve Kod Düzenleyicisi'nde seçili üyenin bildirimine gezinmenize olanak sağlar.
+Seçildiğinde, kod düzenleyicisinin en üstündeki **Gezinti çubuğunu** görüntüler. Açılan **nesneler** ve **Üyeler** listeleri, kodunuzda belirli bir nesneyi seçmenizi, üyelerinden seçim yapmanıza ve kod düzenleyicisinde seçili üyenin bildirimine götürür.
 
-**Seçim yoksa boş satırlara Kesme veya Kopyalama komutları uygulama**
+**Seçim olmadığında boş satırlara Kes veya Kopyala komutlarını Uygula**
 
-Bu seçenek, ekleme noktasını boş bir satıra yerleştirme, hiçbir şey seçme ve ardından Kopyala veya Kes'i seçerek düzenleyicinin davranışını ayarlar.
+Bu seçenek, ekleme noktasını boş bir satıra yerleştirdiğinizde düzenleyicinin davranışını ayarlar, hiçbir şey seçin ve sonra Kopyala veya kes.
 
-- Bu seçenek seçildiğinde boş satır kopyalanır veya kesilir. Yapıştır'ı tamamlarsanız yeni ve boş bir satır eklenir.
+- Bu seçenek belirlendiğinde boş satır kopyalanır veya kesilir. Daha sonra yapıştırırsanız, yeni, boş bir satır eklenir.
 
-- Bu seçenek temiz olduğunda, Kes komutu boş satırları kaldırır. Ancak Panodaki veriler korunur. Bu nedenle Yapıştır komutunu kullanırsanız panoya en son kopyalanan içerik yapıştırır. Daha önce hiçbir şey kopyalanmazsa hiçbir şey yapıştırlanmaz.
+- Bu seçenek temizlenmiş olduğunda kes komutu boş satırları kaldırır. Ancak, Panodaki veriler korunur. Bu nedenle, Yapıştır komutunu kullanırsanız, pano 'Ya en son kopyaladığınız içerik yapıştırılır. Daha önce hiçbir şey kopyalanmadığı takdirde hiçbir şey yapıştırılmaz.
 
-Bu ayarın, satır boş değilken Kopyala veya Kes üzerinde hiçbir etkisi yoktur. Hiçbir şey seçilmezse, satırın tamamı kopyalanır veya kesilir. Yapıştırıyorsanız, satırın tamamının ve bitiş çizgisi karakterinin metni yapıştırıldı.
+Bu ayarın, bir satır boş olmadığında kopyalama veya kesme üzerinde hiçbir etkisi yoktur. Hiçbir şey seçilmezse, tüm satır kopyalanır veya kesilir. Daha sonra yapıştırırsanız, tüm satırın metni ve onun EndLine karakteri yapıştırılır.
 
 > [!TIP]
-> Boşluklar, sekmeler ve satır uçları göstergelerini görüntülemek ve girintili satırları tamamen  boş  satırlardan ayırmak için Düzenle menüsünden Gelişmiş'i seçin ve Boşluğu **Görüntüle'yi seçin.**
+> Boşluk, sekme ve satır uçları göstergelerini görüntülemek ve bu nedenle girintili çizgileri tamamen boş olan satırlardan ayırt etmek için, **Düzenle** menüsünden **Gelişmiş** ' i seçin ve **boşluğu görüntüle**' yi seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Seçenekler, Metin Düzenleyici, Tüm Diller, Sekmeler](../../ide/reference/options-text-editor-all-languages-tabs.md)
 - [Genel, Ortam, Seçenekler İletişim Kutusu](../../ide/reference/general-environment-options-dialog-box.md)
-- [IntelliSense'i kullanma](../../ide/using-intellisense.md)
+- [IntelliSense kullanma](../../ide/using-intellisense.md)

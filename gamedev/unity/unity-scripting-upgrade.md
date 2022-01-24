@@ -10,12 +10,12 @@ ms.technology: vs-unity-tools
 ms.prod: visual-studio-dev16
 ms.workload:
 - unity
-ms.openlocfilehash: c1b745e4a1da85324b2dc73e30bebb873e2d0720
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: f15aa8326e98df08d9302782c7af739d4779236c
+ms.sourcegitcommit: 7d319435c35075d4cec021b7b667666a81c02435
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96559816"
+ms.lasthandoff: 01/24/2022
+ms.locfileid: "137650429"
 ---
 # <a name="using-net-4x-in-unity"></a>Unity’de .NET 4.x kullanma
 
@@ -32,7 +32,7 @@ Unity 2017,1 sürümü ile Unity, betik çalışma zamanının bir .NET 4,6, C# 
 
 .NET 4. x Scripting çalışma zamanını etkinleştirmek için aşağıdaki adımları uygulayın:
 
-1. **> proje ayarlarını düzenle > oynatıcı**' yı seçerek Unity denetçisinde playersettings ' i açın.
+1. **> düzenle ' Project Ayarlar > oynatıcı**' yı seçerek Unity denetçisinde playersettings ' i açın.
 
 1. **Yapılandırma** başlığı altında, **komut dosyası çalışma zamanı sürüm** açılan listesine tıklayın ve **.NET 4. x eşdeğerini** seçin. Unity 'yi yeniden başlatmanız istenir.
 
@@ -40,9 +40,9 @@ Unity 2017,1 sürümü ile Unity, betik çalışma zamanının bir .NET 4,6, C# 
 
 ## <a name="choosing-between-net-4x-and-net-standard-20-profiles"></a>.NET 4. x ve .NET Standard 2,0 profillerinin arasından seçim yapma
 
-.NET 4. x eşdeğer betik çalışma zamanına geçiş yaptıktan sonra, PlayerSettings (**> proje ayarlarını düzenle > Player**) açılır menüsünü kullanarak **API uyumluluk düzeyini** belirtebilirsiniz. İki seçenek vardır:
+.net 4. x eşdeğer betik çalışma zamanına geçiş yaptıktan sonra, playersettings (**düzenleme > Project Ayarlar > oynatıcı**) menüsündeki açılan menüyü kullanarak **apı uyumluluk düzeyini** belirtebilirsiniz. İki seçenek vardır:
 
-* **.NET Standard 2,0**. Bu profil, .NET Foundation tarafından yayımlanan [.NET Standard 2,0 profiliyle](https://github.com/dotnet/standard/blob/master/docs/versions/netstandard2.0.md) eşleşir. Unity yeni projeler için .NET Standard 2,0 önerir. Boyut kısıtlı platformlar için avantajlı olan .NET 4. x 'ten daha küçüktür. Ayrıca Unity, Unity 'nin desteklediği tüm platformlarda bu profili desteklemeye kararlıdır.
+* **.NET Standard 2,0**. Bu profil, .NET Foundation tarafından yayımlanan [.NET Standard 2,0 profiliyle](https://github.com/dotnet/standard/blob/release/3.0/docs/versions/netstandard2.0.md) eşleşir. Unity yeni projeler için .NET Standard 2,0 önerir. Boyut kısıtlı platformlar için avantajlı olan .NET 4. x 'ten daha küçüktür. Ayrıca Unity, Unity 'nin desteklediği tüm platformlarda bu profili desteklemeye kararlıdır.
 
 * **.NET 4. x**. Bu profil, en son .NET 4 API 'sine erişim sağlar. .NET Framework sınıfı kitaplıklarında bulunan tüm kodu içerir ve .NET Standard 2,0 profillerini de destekler. Projeniz .NET Standard 2,0 profilinde bulunmayan API 'nin bir parçasını gerektiriyorsa .NET 4. x profilini kullanın. Ancak, bu API 'nin bazı bölümleri Unity 'nin tüm platformlarında desteklenmeyebilir.
 
@@ -58,7 +58,7 @@ Bu seçenekler hakkında daha fazla bilgi için Unity 'nin [Blog](https://blogs.
 
 ![eksik bütünleştirilmiş kod başvurusu](media/vs/vstu-missing-reference.png)
 
-Visual Studio her açılışında Unity projeleri için. csproj ve. sln dosyalarını yeniden oluşturur. Sonuç olarak, proje yeniden alındıktan sonra kaybolabilecek olduğundan doğrudan Visual Studio 'da derleme başvuruları ekleyemezsiniz. Bunun yerine, **CSC. rsp** adlı özel bir metin dosyası kullanılmalıdır:
+Visual Studio, her açılışında Unity projeleri için. csproj ve. sln dosyalarını yeniden üretir. sonuç olarak, proje yeniden alındıktan sonra kaybocağından, derleme başvurularını doğrudan Visual Studio ekleyemezsiniz. Bunun yerine, **CSC. rsp** adlı özel bir metin dosyası kullanılmalıdır:
 
 1. Unity projenizin kök **varlıklar** dizininde **CSC. rsp** adlı yeni bir metin dosyası oluşturun.
 
@@ -70,17 +70,17 @@ Visual Studio her açılışında Unity projeleri için. csproj ve. sln dosyalar
 
 Yeni C# sözdizimi ve dil özelliklerine ek olarak, .NET 4. x Scripting Runtime, Unity kullanıcılarına eski .NET 3,5 komut dosyası çalışma zamanı ile uyumlu olmayan çok sayıda .NET paketi kitaplığı erişimi sağlar.
 
-### <a name="add-packages-from-nuget-to-a-unity-project"></a>NuGet 'ten bir Unity projesine paket ekleme
+### <a name="add-packages-from-nuget-to-a-unity-project"></a>NuGet bir Unity projesine paket ekleme
 
-[NuGet](https://www.nuget.org/) , .NET için paket yöneticisidir. NuGet, Visual Studio ile tümleşiktir. Ancak Unity projeleri, NuGet paketleri eklemek için özel bir işlem gerektirir. Bunun nedeni, Unity 'de bir proje açtığınızda, Visual Studio proje dosyalarının yeniden oluşturulması ve gerekli yapılandırmaların geri alınması nedeniyle oluşur. NuGet 'den Unity projenize bir paket eklemek için aşağıdakileri yapın:
+.net için paket yöneticisi [NuGet](https://www.nuget.org/) . NuGet Visual Studio tümleşiktir. ancak, Unity projeleri NuGet paketlerini eklemek için özel bir işlem gerektirir. bunun nedeni, Unity 'de bir proje açtığınızda, Visual Studio proje dosyalarının yeniden oluşturulması, gerekli yapılandırmaların geri alınması. Unity projenize NuGet bir paket eklemek için aşağıdakileri yapın:
 
-1. Eklemek istediğiniz uyumlu bir paketi bulmak için NuGet 'e gözatıp (.NET Standard 2,0 veya .NET 4. x). Bu örnek, .NET Standard 2,0 projesine JSON ile çalışmaya yönelik popüler bir paket olan [JSON.net](https://www.nuget.org/packages/Newtonsoft.Json/)eklemeyi gösterir.
+1. eklemek istediğiniz uyumlu bir paketi bulmak için NuGet tarayın (.NET Standard 2,0 veya .net 4. x). Bu örnek, .NET Standard 2,0 projesine JSON ile çalışmaya yönelik popüler bir paket olan [JSON.net](https://www.nuget.org/packages/Newtonsoft.Json/)eklemeyi gösterir.
 
 1. **İndir** düğmesine tıklayın:
 
     ![İndir düğmesi](media/vs/vstu-nuget-download.png)
 
-1. İndirilen dosyayı bulun ve uzantıyı **. nupkg** konumundan **. zip** olarak değiştirin.
+1. İndirilen dosyayı bulun ve uzantıyı **. nupkg** 'dan **.zip** değiştirin.
 
 1. ZIP dosyası içinde **lib/Netstandard 2.0** dizinine gidin ve **Newtonsoft.Json.dll** dosyasını kopyalayın.
 
@@ -185,7 +185,7 @@ public string PlayerHealthUiText => $"Player health: {Health}";
 
 Zaman [uyumsuz programlama](/dotnet/csharp/async) , uygulamanızın yanıt vermemesine neden olmadan zaman alma işlemlerinin gerçekleşmesini sağlar. Bu işlevsellik Ayrıca, bu işlemlerin sonuçlarına bağlı olan koda devam etmeden önce kodunuzun zaman tüketen işlemlerin bitmesini beklemesini sağlar. Örneğin, bir dosyanın yüklenmesini veya bir ağ işleminin tamamlanmasını bekleyebilirsiniz.
 
-Unity 'de, zaman uyumsuz programlama genellikle [eş](https://docs.unity3d.com/Manual/Coroutines.html)yordamlar ile gerçekleştirilir. Ancak, C# 5 ' de, .NET geliştirmede zaman uyumsuz programlama için tercih edilen yöntem, [Task-based Asynchronous Pattern (TAP)](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap) `async` `await` [System. Threading. Task](/dotnet/api/system.threading.tasks.task)ile ve anahtar sözcüklerini kullanarak görev tabanlı zaman uyumsuz bir modeldir (TAP). Özet ' de bir `async` işlevde, `await` uygulamanızın geri kalanını güncelleştirmeden önce bir görevin tamamlanması gerekir:
+Unity 'de, zaman uyumsuz programlama genellikle [eş](https://docs.unity3d.com/Manual/Coroutines.html)yordamlar ile gerçekleştirilir. Ancak, C# 5 ' de, .NET geliştirmede zaman uyumsuz programlama için tercih edilen yöntem, [](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap) `async` `await` [System. Threading. Task](/dotnet/api/system.threading.tasks.task)ile ve anahtar sözcüklerini kullanarak görev tabanlı zaman uyumsuz bir modeldir (TAP). Özet ' de bir `async` işlevde, `await` uygulamanızın geri kalanını güncelleştirmeden önce bir görevin tamamlanması gerekir:
 
 ```csharp
 // Unity coroutine
@@ -339,9 +339,9 @@ Oyununuzu iOS gibi platformlarda dışa aktarırken, Unity, IL2CPP altyapısın�
 
 Ayrıca, yukarıdaki Json.NET örneğinde belirtildiği gibi Unity, IL2CPP dışa aktarma işlemi sırasında kullanılmayan kodu kullanıma açmaya çalışır.  Bu genellikle bir sorun olmasa da, yansıma kullanan kitaplıklar sayesinde, yanlışlıkla dışa aktarma zamanında belirlenemeyecek çalışma zamanında çağrılacak özellikleri veya yöntemleri açabilir.  Bu sorunları gidermek için, projenize, ortaya çıkan işlemi çalıştırmayan derlemelerin ve ad alanlarının listesini içeren bir **link.xml** dosyası ekleyin.  Tam Ayrıntılar için lütfen bkz. [Unity 'nin belge bytecode üzerinde çaba](https://docs.unity3d.com/Manual/IL2CPP-BytecodeStripping.html)
 
-## <a name="net-4x-sample-unity-project"></a>.NET 4. x örnek Unity projesi
+## <a name="net-4x-sample-unity-project"></a>.NET 4. x örnek Unity Project
 
-Örnek, çeşitli .NET 4. x özelliklerine örnek içerir. Projeyi indirebilir veya [GitHub](https://github.com/Microsoft/unity-scripting-upgrade)'da kaynak kodu görüntüleyebilirsiniz.
+Örnek, çeşitli .NET 4. x özelliklerine örnek içerir. Projeyi indirebilir veya [GitHub](https://github.com/Microsoft/unity-scripting-upgrade)kaynak kodu görüntüleyebilirsiniz.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
