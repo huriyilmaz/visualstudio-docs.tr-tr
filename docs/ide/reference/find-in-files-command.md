@@ -2,7 +2,7 @@
 title: Dosyalarda Bul Komutu
 description: Bul ve Değiştir penceresinin dosyalarda bul sekmesinde bulunan bazı seçenekleri kullanarak Bul komutu ve dosyaları nasıl arayacağını öğrenin.
 ms.custom: SEO-VS-2020
-ms.date: 01/12/2022
+ms.date: 01/14/2022
 ms.topic: reference
 f1_keywords:
 - edit.findinfiles
@@ -17,18 +17,18 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: <=vs-2019
-ms.openlocfilehash: 51e4fecb63462e4bbdf45e2aa4a995a09ebb8aad
-ms.sourcegitcommit: 9b1c1cceab4c59f0b91e19ae46a51969f72fcc34
+ms.openlocfilehash: e7b0191c320072792d4905a7a038637b71456dc8
+ms.sourcegitcommit: ba56ce62366f8c6fe2a7e38828fa79bc48801cae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "136801350"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "136855167"
 ---
 # <a name="find-in-files-command"></a>Dosyalarda Bul Komutu
 **Bul ve Değiştir** penceresinin **dosyalarda bul** sekmesinde bulunan seçeneklerin bir alt kümesini kullanarak dosyaları arayın.
 
 > [!IMPORTANT]
-> bu komut için destek 16,5 Visual Studio 2019 sürümünde kullanımdan kaldırılmıştır. Bu komutu sonraki bir sürümle birlikte kullanırsanız, *"Edit. FindinFiles" komutunun bağımsız değişkenleri veya anahtarları kabul etmadığını* belirten bir hata iletisi görebilirsiniz.
+> bu komut için destek 16,5 Visual Studio 2019 sürümünde kullanımdan kaldırılmıştır. Bu komutu 16,5 veya sonraki bir sürümle kullanırsanız, *"Edit. FindinFiles" komutunun bağımsız değişkenleri veya anahtarları kabul etmadığını* belirten bir hata iletisi görebilirsiniz.
 
 ## <a name="syntax"></a>Söz dizimi
 
