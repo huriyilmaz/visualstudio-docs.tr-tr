@@ -11,12 +11,12 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 9c1926921d6a757933c491765381aa2865f51b11
-ms.sourcegitcommit: bfae1f88c278835e26f3200cfced769be3191fc4
+ms.openlocfilehash: f03b494c688fa9ac232175366e59e1740258d37f
+ms.sourcegitcommit: 429b2378ee21b5f473b26f4b4ea0a70372a34ec2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2021
-ms.locfileid: "132535132"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "137733394"
 ---
 # <a name="work-with-github-accounts-in-visual-studio"></a>Visual Studio’da GitHub hesaplarıyla çalışma
 
@@ -46,6 +46,29 @@ farklı bir hesapla Visual Studio üzere oturum açmadıysanız, Visual Studio o
 
 ![Oturum açmamış Kullanıcı](../ide/media/vs2019_usernotsignedin.png)
 
+## <a name="adding-github-enterprise-managed-user-emu-accounts"></a>GitHub Enterprise yönetilen kullanıcı (EMU) hesapları ekleme
+
+zaten bir Microsoft hesabı veya bir iş veya okul hesabı ile Visual Studio oturum açtıysanız GitHub EMU hesabınızı ekleyebilirsiniz.
+
+1. Visual Studio ortamının sağ üst köşesindeki baş harflerinizi içeren simgeyi seçin. Ardından, hesaplarınızı yönetmek için **Hesap ayarları...** seçeneğini belirleyin. ayrıca, Ayarlar **dosya**  >  **hesabına** giderek hesap Ayarlar iletişim kutusunu açabilirsiniz...
+
+    :::image type="content" source="../ide/media/account-picker.png" alt-text="Hesap ayarları iletişim kutusunu gösteren ekran görüntüsü":::
+
+2. **Tüm hesaplar** alt menüsünde, **+** hesap eklemek için veya açılan menü **Ekle** ' yi seçin ve ardından **GitHub**' yi seçin.
+
+    :::image type="content" source="../ide/media/sign-in-add-github.png" alt-text="GitHub hesabı seçme ve ekleme işlemlerinin gösterildiği ekran görüntüsü":::
+
+3. GitHub EMU kimlik bilgilerinizle oturum açabileceğiniz tarayıcıya yönlendirilirsiniz. 
+
+> [!NOTE]
+> bu sayfada GitHub EMU hesabı kimlik bilgilerinizi (kullanıcı adının bir alt çizgi ve ardından şirket adıyla) girdiğinizden emin olun.
+
+ :::image type="content" source="../ide/media/github-enterprise-managed-users-sign-in.png" alt-text="GitHub Enterprise yönetilen kullanıcı hesabı için GitHub oturum açma deneyimini gösteren ekran görüntüsü":::
+
+Oturum açtıktan sonra, tarayıcıda başarılı bir pencere alırsınız ve Visual Studio geri dönebilirsiniz.
+
+:::image type="content" source="../ide/media/github-success-signin.png" alt-text="Tarayıcıda oturum açma başarısını gösteren ekran görüntüsü":::
+
 ## <a name="adding-github-enterprise-accounts"></a>GitHub kurumsal hesap ekleme
 
 varsayılan olarak Visual Studio yalnızca ortak GitHub hesapları etkindir.
@@ -63,4 +86,4 @@ varsayılan olarak Visual Studio yalnızca ortak GitHub hesapları etkindir.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Birden çok kullanıcı hesabıyla çalışma](work-with-multiple-user-accounts.md)
-- [Visual Studio’da oturum açma](signing-in-to-visual-studio.md)
+- [Visual Studio oturum açın](signing-in-to-visual-studio.md)
