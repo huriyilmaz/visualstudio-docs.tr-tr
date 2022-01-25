@@ -1,7 +1,7 @@
 ---
 title: Python kodunu düzenleme
-description: Python için Visual Studio, biçimlendirme, kodlama ve yeniden düzenleme özellikleriyle zengin ıntellisense, kod parçacıkları ve gezinti özellikleri sağlar.
-ms.date: 03/13/2019
+description: Python için Visual Studio, biçimlendirme, linting ve yeniden düzenlemenin yanı sıra zengin IntelliSense, kod parçacıkları ve gezinti özellikleri sağlar.
+ms.date: 01/18/2022
 ms.topic: conceptual
 author: rjmolyneaux
 ms.author: rmolyneaux
@@ -10,91 +10,91 @@ ms.technology: vs-python
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 7f615d41e3eaa34a6f06a18034927d172721d687
-ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
+ms.openlocfilehash: 9b51932813186533ee4bced225ce9efe9db9a19b
+ms.sourcegitcommit: f81a8f381bcdbac96d112f815737ba1df55d97a3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "129972420"
+ms.lasthandoff: 01/24/2022
+ms.locfileid: "137667440"
 ---
 # <a name="edit-python-code"></a>Python kodunu düzenleme
 
-geliştirme zamanınızın çoğunu kod düzenleyicisinde harcaymanız nedeniyle [Visual Studio 'de Python desteği](installing-python-support-in-visual-studio.md) daha üretken olmanıza yardımcı olacak işlevselliği sağlar. Özellikler IntelliSense sözdizimi vurgulaması, otomatik tamamlama, imza yardımı, metot geçersiz kılmaları, arama ve gezinme içerir.
+Geliştirme sürenizin büyük bir çoğunu kod düzenleyicisinde harcadığınız için, [Visual Studio Python](installing-python-support-in-visual-studio.md) desteği daha üretken çalışmanıza yardımcı olacak işlevler sağlar. IntelliSense söz dizimi vurgulama, otomatik tamamlama, imza yardımı, yöntem geçersiz kılmaları, arama ve gezinti özellikleridir.
 
-düzenleyici ayrıca Visual Studio **etkileşimli** penceresiyle tümleşiktir ve bu iki arasında kod alışverişi kolaylaştırır. Ayrıntılar için bkz. [Adım 3: ETKILEŞIMLI REPL penceresini kullanma](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md) ve etkileşimli [pencereyi etkileşimli Gönder komutunu kullanma](python-interactive-repl-in-visual-studio.md#send-to-interactive-command) .
+Düzenleyici ayrıca etkileşimli pencereyle **tümleşiktir** Visual Studio ikisi arasında kod değişimini kolaylaştırır. Ayrıntılar [için bkz. Öğretici 3. Adım:](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md) Etkileşimli REPL penceresini kullanma ve Etkileşimli penceresi - [Etkileşimliye Gönder](python-interactive-repl-in-visual-studio.md#send-to-interactive-command) komutunu kullanma.
 
-Visual Studio kodu düzenleme hakkında genel belgeler için bkz. [kod düzenleyicisinin özellikleri](../ide/writing-code-in-the-code-and-text-editor.md). Ayrıca, kodunuzun belirli bölümlerine odaklanmanıza yardımcı olan [anahat oluşturma](../ide/outlining.md)bölümüne bakın.
+Visual Studio'da kodu düzenlemeye ilişkin genel belgeler için [bkz. Kod düzenleyicisinin özellikleri.](../ide/writing-code-in-the-code-and-text-editor.md) Ayrıca kodunuzun belirli bölümlerine odaklanmanıza yardımcı olan [Outlining (Outlining)](../ide/outlining.md)(Kodun belirli bölümlerine odaklanmanıza yardımcı olan) da bakın.
 
-   >    >    +   >  her modülde tanımlanan Python sınıflarını ve bu sınıflarda tanımlanan işlevleri incelemek için Visual Studio Nesne Tarayıcısı (diğer Windows Nesne Tarayıcısı veya Ctrl W **J**) de kullanabilirsiniz.
+Ayrıca, her modülde tanımlanan Python sınıflarını ve bu sınıflarda tanımlanan işlevleri incelemek için Visual Studio **Object Browser** **(** View Other Windows Object Browser veya  >    >   **Ctrl** + **W**  >  **J**) kullanabilirsiniz.
 
 ## <a name="intellisense"></a>IntelliSense
 
-IntelliSense, [tamamlama](#completions), [imza yardımı](#signature-help), [hızlı bilgi](#quick-info)ve [kod renklendirme](#code-coloring)sağlar. Visual Studio 2017 sürümleri 15,7 ve üzeri de [tür ipuçlarını](#type-hints)destekler.
+IntelliSense [tamamlamalar,](#completions)imza [yardımı,](#signature-help) [hızlı bilgi](#quick-info)ve [kod renklendirmesi sağlar.](#code-coloring) Visual Studio 2017 sürüm 15.7 ve sonraki sürümler de tür [ipuçlarını destekler.](#type-hints)
 
-performansı artırmak için, Visual Studio 2017 sürüm 15,5 ve önceki sürümlerde ıntellisense, projenizdeki her Python ortamı için oluşturulan bir tamamlanma veritabanına bağlıdır. Paketleri ekler, kaldırırsanız veya güncelleştirirseniz veritabanlarının yenilenmesi gerekebilir. Veritabanı durumu, **IntelliSense** sekmesindeki **Python ortamları** penceresinde ( **Çözüm Gezgini** eşdüzey öğesi) gösterilir (bkz. [ortamlar pencere başvurusu](python-environments-window-tab-reference.md)).
+Performansı artırmak için Visual Studio 2017 sürüm 15.5 ve önceki sürümlerde IntelliSense, projenizin her Python ortamı için oluşturulan tamamlama veritabanına bağlıdır. Paketleri eklemeniz, kaldırmanız veya güncelleştirmeniz gerekirse veritabanlarının yenilenmesi gerekir. Veritabanı durumu, **IntelliSense** sekmesindeki **Python** Ortamları penceresinde **(Çözüm Gezgini)** gösterilir (bkz. [Ortamlar penceresi başvurusu).](python-environments-window-tab-reference.md)
 
-Visual Studio 2017 sürüm 15,6 ve üzeri, veritabanına bağımlı olmayan ıntellisense tamamlamalar sağlamak için farklı bir yol kullanır.
+Visual Studio 2017 sürüm 15.6 ve sonraki sürümler, veritabanına bağımlı olmayan IntelliSense tamamlamaları sağlamak için farklı bir şekilde kullanılır.
 
 ### <a name="completions"></a>Tamamlamalar
 
-Tamamlama deyimleri, tanımlayıcıları ve düzenleyicideki geçerli konuma uygun şekilde girilmiş olabilecek diğer sözcükler olarak görünür. Listede gösterilen Özellikler bağlam tabanlıdır ve yanlış veya dikkat dağıtıcı seçeneklerini atlamak üzere filtrelenmiştir. Tamamlamalar genellikle farklı deyimler (örneğin `import` ,) ve işleçler (bir nokta dahil) yazılarak tetiklenir, ancak **CTRL** + **J**  >  **Space** yazarak istediğiniz zaman görünmesini sağlayabilirsiniz.
+Tamamlamalar, düzenleyicide geçerli konuma uygun şekilde girilebilir deyimler, tanımlayıcılar ve diğer sözcükler olarak görünür. Listede gösterilenler bağlama dayalıdır ve yanlış veya dikkat dağıtan seçenekleri atacak şekilde filtrelenmiş. Tamamlamalar genellikle farklı deyimler (örneğin) ve işleçler (nokta dahil) yazarak tetiklenir, ancak Ctrl J Ara Çubuğu yazarak istediğiniz zaman görünmesini `import`  +   >  **sebilirsiniz.**
 
 ![Visual Studio düzenleyicisinde üye tamamlama](media/code-editing-completions-simple.png)
 
-Bir tamamlanma listesi açıkken, ok tuşlarını, fareyi veya yazmaya devam ederek istediğiniz tamamlamayı arayabilirsiniz. Daha fazla harf yazdığınızda, liste muhtemelen tamamlanmaları göstermek için daha fazla filtrelenmiştir. Ayrıca, gibi kısayollar da kullanabilirsiniz:
+Bir tamamlama listesi açık olduğunda, ok tuşlarını, fareyi kullanarak veya türe devam etmek için istediğiniz tamamlamayı arayabilirsiniz. Daha fazla harf yazarak büyük olasılıkla tamamlamaları gösterecek şekilde liste daha fazla filtrelenmiş olur. Aşağıdakiler gibi kısayolları da kullanabilirsiniz:
 
-- Adın başlangıcında olmayan, ' argparse ' bulmak için ' Parse ' gibi harfler yazma
-- ' As_integer_ratio ' bulmak için ' soyut Ctbaseclass ' veya ' Air ' bulmak üzere sözcüklerin başlangıcında olan ' abc ' gibi yalnızca harfleri yazmak
-- ' Base64 ' bulmak için ' B64 ' gibi harfler atlanıyor
+- Adın başında yer alan harfler ('argparse' bulmak için 'parse' gibi) yazma
+- 'AbstractBaseClass' veya 'air' sözcüklerini bulmak için yalnızca sözcüklerin başında olan harfler (örneğin, 'abc' gibi) as_integer_ratio
+- 'base64' bulmak için "b64" gibi harfleri atlama
 
 Bazı örnekler:
 
-![Visual Studio düzenleyicisinde filtrelemeye sahip üye tamamlama](media/code-editing-completion-filtering.png)
+![Düzenleyicide filtreleme ile üye Visual Studio tamamlama](media/code-editing-completion-filtering.png)
 
-Bir değişken veya değerden sonra bir nokta yazdığınızda, olası türlerin yöntemleri ve öznitelikleri ile birlikte tamamlama işlemleri otomatik olarak görünür. Bir değişken birden fazla türden ise, her bir tamamlamayı hangi türlerin desteklediğini belirtmek üzere ek bilgiler içeren tüm türlerden tüm olanaklar de bu listede bulunur. Tamamlanma tüm olası türler tarafından desteklendiğinde, ek açıklama olmadan gösterilir.
+Üye tamamlamaları, olası türlerin yöntemleri ve öznitelikleriyle birlikte bir değişken veya değerden sonra nokta yazarak otomatik olarak görüntülenir. Bir değişken birden fazla türde olabilirse, liste tüm türlerden tüm olasılıkları içerir ve her tamamlamayı destekleyen türleri gösteren ek bilgiler içerir. Bir tamamlamanın tüm olası türler tarafından desteklenesi, ek açıklama olmadan gösterilir.
 
-![Visual Studio düzenleyicisinde birden çok türden üye tamamlama](media/code-editing-completion-types.png)
+![Düzenleyicide birden çok türde üye Visual Studio tamamlama](media/code-editing-completion-types.png)
 
-Varsayılan olarak, "din" üyeleri (çift alt çizgiyle başlayan ve biten Üyeler gösterilmez). Genel olarak, bu tür üyelere doğrudan erişilmemelidir. Ancak, bir tane gerekliyse, önde gelen çift alt çizgi yazılması bu tamamlanmaları listeye ekler:
+Varsayılan olarak, "dunder" üyeleri (çift alt çizgiyle başlayan ve biten üyeler) gösterilmez. Genel olarak, bu tür üyelere doğrudan erişilmamalı. Ancak, bir alt çizgiye ihtiyacınız varsa, başındaki çift alt çizgi yazarak bu tamamlamalar listeye eklenir:
 
 ![Visual Studio düzenleyicisinde özel üye tamamlama](media/code-editing-completion-dunder.png)
 
-`import`Ve `from ... import` deyimleri, içeri aktarılabilecek modüllerin bir listesini görüntüler. İle `from ... import` liste, belirtilen modülden içeri aktarılabilecek üyeleri içerir.
+ve `import` `from ... import` deyimleri, içe aktarılmış modüllerin listesini görüntüler. ile `from ... import` liste, belirtilen modülden içe aktarabilirsiniz üyeleri içerir.
 
 ![Visual Studio düzenleyicisinde içeri aktarma tamamlama](media/code-editing-completion-import.png)
 
-`raise`Ve `except` deyimleri, muhtemelen hata türleri olabilecek sınıfların listesini görüntüler. Liste, Kullanıcı tanımlı tüm özel durumları içermeyebilir, ancak uygun yerleşik özel durumları hızla bulmanıza yardımcı olur:
+ve `raise` `except` deyimleri, büyük olasılıkla hata türleri olan sınıfların listelerini görüntüler. Liste tüm kullanıcı tanımlı özel durumları içermeyebilirsiniz, ancak uygun yerleşik özel durumları hızla bulumanıza yardımcı olur:
 
 ![Visual Studio düzenleyicisinde özel durum tamamlama](media/code-editing-completion-exception.png)
 
-Yazma @ bir dekoratör başlatır ve potansiyel dekoratörler gösterir. Bu öğelerin birçoğu dekoratörler olarak kullanılamaz; hangisini kullanacağınızı öğrenmek için kitaplık belgelerini denetleyin.
+@ yazarak bir dekoratör başlatılır ve olası dekoratörler gösterir. Bu öğelerin çoğu dekoratör olarak kullanılamaz; Hangisinin kullanılamayacaklarını belirlemek için kitaplık belgelerini inceleyin.
 
 ![Visual Studio düzenleyicisinde dekoratör tamamlama](media/code-editing-completion-decorator.png)
 
 > [!Tip]
-> **Araç**  >  **seçenekleri**  >  **metin Düzenleyicisi**  >  **Python**  >  **Gelişmiş** aracılığıyla tamamlama davranışını yapılandırabilirsiniz. Bunlar arasında, **arama dizesini temel alan filtre listesi** , siz yazarken (varsayılan olarak işaretlidir) tamamlama önerilerinin filtrelemesini uygular ve **üye tamamlama, üyelerin kesişimini** yalnızca tüm olası türler tarafından desteklenen işlemleri gösterir (varsayılan olarak işaretli değildir). Bkz. [Seçenekler-tamamlanma sonuçları](python-support-options-and-settings-in-visual-studio.md#completion-results).
+> Araç Seçenekleri Metin Düzenleyici Python Gelişmiş aracılığıyla  >    >  **tamamlamaların davranışını**  >    >  **yapılandırabilirsiniz.** Bunların yanı **sıra,** Arama dizesini temel alan filtre listesi siz yazarak  tamamlama önerilerinin filtresini uygular (varsayılan olarak işaretlidir) ve Üye tamamlaması üyelerin kesişimlerini yalnızca tüm olası türler tarafından desteklenen tamamlamaları gösterir (varsayılan seçenek işaretlenmemiştir). Bkz. [Seçenekler - tamamlama sonuçları.](python-support-options-and-settings-in-visual-studio.md#completion-results)
 
 ### <a name="type-hints"></a>Tür ipuçları
 
-*Visual Studio 2017 sürüm 15,7 ve üzeri.*
+*Visual Studio 2017 sürüm 15.7 ve sonrası.*
 
-Python 3.5 + ' da "tür ipuçları" ([Pep 484](https://www.python.org/dev/peps/pep-0484/) (Python.org), bağımsız değişkenlerin türlerini, dönüş değerlerini ve sınıf özniteliklerini belirten işlevler ve sınıflar için ek açıklama sözdizimidir. IntelliSense, işlev çağrılarının, bağımsız değişkenlerin ve bu ek açıklamaların bulunduğu değişkenlerin üzerine geldiğinizde tür ipuçlarını görüntüler.
+Python 3.5+ 'da "Tür ipuçları"[(PEP 484](https://www.python.org/dev/peps/pep-0484/) (python.org), bağımsız değişken, dönüş değeri ve sınıf öznitelikleri türlerini belirten işlevler ve sınıflar için ek açıklama söz dizimidir. IntelliSense, bu ek açıklamalara sahip işlev çağrılarını, bağımsız değişkenleri ve değişkenlerin üzerine gelindiğinde tür ipuçlarını görüntüler.
 
-Aşağıdaki örnekte, `Vector` sınıfının olarak bildirildiği `List[float]` ve `scale` işlevi hem bağımsız değişkenleri hem de dönüş değeri için tür ipuçları içerir. Bu işleve yapılan bir çağrının üzerine gelindiğinde tür ipuçları gösterilmektedir:
+Aşağıdaki örnekte sınıfı olarak bildirildi ve işlevi hem bağımsız değişkenleri hem de dönüş `Vector` değeri için tür ipuçları `List[float]` `scale` içerir. Bu işlev çağrısının üzerine gelindiğinde tür ipuçları yer almaktadır:
 
-![Tür ipuçlarını açığa çıkarmak için bir işlev çağrısının üzerine gelindiğinde](media/code-editing-type-hints1.png)
+![Tür ipuçlarını ortaya çıkarmak için işlev çağrısının üzerine gelme](media/code-editing-type-hints1.png)
 
-Aşağıdaki örnekte, sınıfının açıklamalı özniteliklerinin `Employee` bir öznitelik Için IntelliSense tamamlanma açılan penceresinde nasıl göründüğünü görebilirsiniz:
+Aşağıdaki örnekte, sınıfın açıklamalı özniteliklerinin bir öznitelik için IntelliSense tamamlama açılan menüsünde nasıl `Employee` görüntülenmiş olduğunu görürsünüz:
 
-![IntelliSense tamamlanmasında tür ipuçları gösteriliyor](media/code-editing-type-hints2.png)
+![Tür ipuçlarını gösteren IntelliSense tamamlaması](media/code-editing-type-hints2.png)
 
-Genellikle çalışma zamanına kadar hatalar görünmeyeceği için, projenizin tamamında tür ipuçlarını doğrulamak da yararlıdır. bu amaçla, Visual Studio sektör standart mypy aracını bağlam **menüsü komutu ile** tümleştirerek,  >  **Çözüm Gezgini** içinde **mypy çalıştırma** :
+Hatalar normalde çalışma süresine kadar görünmeyeceği için projeniz genelinde tür ipuçlarını doğrulamak da yararlıdır. Bu amaçla Visual Studio, python Run Mypy in Çözüm Gezgini bağlam menüsü komutu aracılığıyla endüstri standardı  >  **MyPy** **aracını tüm Çözüm Gezgini:**
 
-![Çözüm Gezgini MyPy bağlam menüsü komutunu çalıştırın](media/code-editing-type-hints-run-mypy.png)
+![MyPy bağlam menüsü komutunu Çözüm Gezgini](media/code-editing-type-hints-run-mypy.png)
 
-Komutu çalıştırmak, gerekirse mypy paketini yüklemenizi ister. Visual Studio sonra, projedeki her Python dosyasındaki tür ipuçlarını doğrulamak için mypy ' yi çalıştırır. hatalar Visual Studio **Hata Listesi** penceresinde görünür. Penceredeki bir öğenin seçilmesi kodunuzda uygun satıra gider.
+komutunu çalıştırarak gerekirse mypy paketini yüklemeniz istenir. Visual Studio projesinde her Python dosyasında tür ipuçlarını doğrulamak için mypy'yi çalıştırır. Hata Listesi penceresinde Visual Studio **görüntülenir.** Pencerede bir öğe seçmek, kodunda uygun satıra giditir.
 
-Basit bir örnek olarak, aşağıdaki işlev tanımı bağımsız değişkenin tür olduğunu göstermek için bir tür ipucu içerir `input` `str` , ancak bu işleve yapılan çağrı bir tamsayı geçirmeye çalışır:
+Basit bir örnek olarak, aşağıdaki işlev tanımı bağımsız değişkenin türünde olduğunu belirtmek için bir tür ipucu içerirken, bu işleve yapılan çağrı bir `input` `str` tamsayıyı geçmeyi dener:
 
 ```python
 def commas_to_colons(input: str):
@@ -105,72 +105,72 @@ def commas_to_colons(input: str):
 commas_to_colons(1)
 ```
 
-Bu kodda **Mypy Run** komutunu kullanmak aşağıdaki hatayı üretir:
+Bu **kodda Mypy'yi** Çalıştır komutunun kullanımı aşağıdaki hatayı üretir:
 
-![Mypy doğrulaması tür ipuçlarının örnek sonucu](media/code-editing-type-hints-validation-error.png)
+![Mypy doğrulama türü ipuçlarının örnek sonucu](media/code-editing-type-hints-validation-error.png)
 
 ::: moniker range="vs-2017"
 > [!Tip]
-> Python 'un 3,5 öncesindeki sürümleri için Visual Studio, ayrıca, yazı türü olan *saplama dosyaları* (*. pyi*) aracılığıyla sağladığınız tür ipuçlarını da görüntüler. Doğrudan kodunuzda tür ipuçlarını dahil etmek istediğinizde veya doğrudan kullanmayan bir kitaplık için tür ipuçları oluşturmak istediğinizde, saplama dosyalarını kullanabilirsiniz. Daha fazla bilgi için bkz. mypy proje wiki 'de [Python modülleri için saplamalar oluşturma](https://github.com/python/mypy/wiki/Creating-Stubs-For-Python-Modules) .
+> Python'ın 3.5'Visual Studio sürümleri için, *Typeshed* saplama dosyaları (*.pyi)* aracılığıyla temin edersiniz tür ipuçlarını da görüntüler. Saplama dosyalarını doğrudan kodunuza tür ipuçları eklemek istemeden veya bunları doğrudan kullanmayan bir kitaplık için tür ipuçları oluşturmak istediğiniz her zaman kullanabilirsiniz. Daha fazla bilgi için mypy [projesi wiki'sinde Python](https://github.com/python/mypy/wiki/Creating-Stubs-For-Python-Modules) modülleri için saplamalar oluşturma makalesini bakın.
 >
-> mevcut olduğunda Visual Studio açıklamalarda tür ipuçlarını desteklemez.
+> Şu anda Visual Studio tür ipuçlarını desteklemez.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 > [!Tip]
-> Python 'un 3,5 öncesindeki sürümleri için Visual Studio, ayrıca, yazı türü olan *saplama dosyaları* (*. pyi*) aracılığıyla sağladığınız tür ipuçlarını da görüntüler. Doğrudan kodunuzda tür ipuçlarını dahil etmek istediğinizde veya doğrudan kullanmayan bir kitaplık için tür ipuçları oluşturmak istediğinizde, saplama dosyalarını kullanabilirsiniz. Daha fazla bilgi için bkz. mypy proje wiki 'de [Python modülleri için saplamalar oluşturma](https://github.com/python/mypy/wiki/Creating-Stubs-For-Python-Modules) .
+> Python'ın 3.5'Visual Studio sürümleri için, *Typeshed* saplama dosyaları (*.pyi)* aracılığıyla temin edersiniz tür ipuçlarını da görüntüler. Saplama dosyalarını doğrudan kodunuza tür ipuçları eklemek istemeden veya bunları doğrudan kullanmayan bir kitaplık için tür ipuçları oluşturmak istediğiniz her zaman kullanabilirsiniz. Daha fazla bilgi için mypy [projesi wiki'sinde Python](https://github.com/python/mypy/wiki/Creating-Stubs-For-Python-Modules) modülleri için saplamalar oluşturma makalesini bakın.
 >
-> Visual Studio, Python 2 ve 3 için bir dizi yazı dosyası kümesi içerir, bu nedenle ek indirmeler gerekli değildir. Ancak, farklı bir dosya kümesi kullanmak istiyorsanız, **Araçlar**  >  **Seçenekler**  >  **Python**  >  **dil sunucusu** seçeneklerinde yolu belirtebilirsiniz. Bkz. [Seçenekler-dil sunucusu](python-support-options-and-settings-in-visual-studio.md#language-server-options).
+> Visual Studio Python 2 ve 3 için Typeshed dosyaları paket kümesi içerir, bu nedenle ek indirmeler gerekmez. Ancak, farklı bir dosya kümesi kullanmak için, Yolu Araçlar Seçenekleri Python Dil Sunucusu  >    >    >  **seçeneklerinde belirtebilirsiniz.** Bkz. [Seçenekler - Dil Sunucusu](python-support-options-and-settings-in-visual-studio.md#language-server-options).
 >
-> mevcut olduğunda Visual Studio açıklamalarda tür ipuçlarını desteklemez.
+> Şu anda Visual Studio tür ipuçlarını desteklemez.
 ::: moniker-end
 
 ### <a name="signature-help"></a>İmza yardımı
 
-Bir işlevi çağıran kodu yazarken, açma 'yı yazdığınızda imza yardımı görünür `(` ve kullanılabilir belgeleri ve parametre bilgilerini görüntüler. Ayrıca,  +  + bir işlev çağrısının içinde CTRL vardiyası **alanıyla** görünmesini sağlayabilirsiniz. Görünen bilgiler, işlevin kaynak kodundaki belge dizelerine bağlıdır, ancak varsayılan değerleri içerir.
+bir işlevi çağıran kod yazarken, açılış yazınca imza yardımı görünür ve kullanılabilir `(` belgeleri ve parametre bilgilerini görüntüler. Bir işlev çağrısının içinde **Ctrl** + **Shift** + **Tuşu ile görünmesini** de sabilirsiniz. Görüntülenen bilgiler, işlevin kaynak kodundaki belge dizelerini kullanır ancak varsayılan değerleri içerir.
 
 ![Visual Studio düzenleyicisinde imza yardımı](media/code-editing-signature-help.png)
 
 > [!Tip]
-> İmza yardımını devre dışı bırakmak için, **Araçlar**  >  **Seçenekler**  >  **metin Düzenleyicisi**  >  **Python**  >  **genel** ' e gidin ve **ekstre tamamlama**  >  **parametresi bilgilerini** temizleyin.
+> İmza yardım kutusunu devre dışı bırakmak için Araçlar **Seçenekler Metin** Düzenleyicisi Python  >    >  **Genel'e** gidin ve Deyim  >    >   tamamlama **Parametre**  >  **bilgilerini temizlenin.**
 
-### <a name="quick-info"></a>Hızlı bilgi
+### <a name="quick-info"></a>Hızlı bilgiler
 
-Bir tanımlayıcı üzerinde fare işaretçisinin üzerine gelindiğinde bir Hızlı Bilgi ipucu görüntülenir. Tanımlayıcıya bağlı olarak hızlı bilgi, olası değerler veya türler, kullanılabilir tüm belgeler, dönüş türleri ve tanım konumları gösterebilir:
+Fare işaretçisinin bir tanımlayıcının üzerine gelindiğinde bir Hızlı Bilgi ipucu. Tanımlayıcıya bağlı olarak, Hızlı Bilgi olası değerleri veya türleri, kullanılabilir tüm belgeleri, dönüş türlerini ve tanım konumlarını görüntüler:
 
-![Visual Studio düzenleyicisinde hızlı bilgi](media/code-editing-quick-info.png)
+![Visual Studio Düzenleyicisi'nde Hızlı Bilgi](media/code-editing-quick-info.png)
 
 ### <a name="code-coloring"></a>Kod renklendirme
 
-Kod renklendirme kod analizinden renk değişkenlerine, deyimlerine ve kodunuzun diğer bölümlerine kadar bilgi kullanır. Örneğin, modüller veya sınıflara başvuran değişkenler, işlevlerden veya diğer değerlerden farklı bir renkte görünebilir ve parametre adları yerel veya genel değişkenlerden farklı bir renkle gösterilir. (Varsayılan olarak işlevler kalın olarak gösterilmez):
+Kod renklendirme, kod analizinden değişkenleri, deyimleri ve kodunuzun diğer bölümlerini renklendirmeye kadar olan bilgileri kullanır. Örneğin, modüllere veya sınıflara başvuran değişkenler işlevlerden veya diğer değerlerden farklı bir renkte gösterebilirsiniz ve parametre adları yerel veya genel değişkenlerden farklı bir renkte görünür. (Varsayılan olarak işlevler kalın olarak gösterilmez):
 
-![Visual Studio düzenleyicisinde kod ve söz dizimi renklendirmesi](media/code-editing-code-coloring.png)
+![Düzenleyicide kod ve söz Visual Studio renklendirme](media/code-editing-code-coloring.png)
 
-Renkleri özelleştirmek için, **Araçlar**  >  **Seçenekler**  >  **ortam**  >  **yazı tipleri ve renkler** ' e gidin ve **görüntüleme öğeleri** listesinde **Python** girdilerini değiştirin:
+Renkleri özelleştirmek için Araçlar Seçenekler Ortam Yazı  >  **Tipleri**  >  **ve**  >  **Renkler'e gidin** ve Öğeleri görüntüle listesinde **Python** **girişlerini** değiştirebilirsiniz:
 
-![Visual Studio yazı tipi ve renkler seçenekleri](media/code-editing-customize-colors.png)
+![Visual Studio'daki Yazı Tipleri ve Renkler Visual Studio](media/code-editing-customize-colors.png)
 
 > [!Tip]
-> Kod renklendirmesini devre dışı bırakmak için, **Araçlar**  >  **Seçenekler**  >  **metin Düzenleyicisi**  >  **Python**  >  **Gelişmiş** ' e gidin ve türe göre **çeşitli seçenekler**  >  **renk adlarını** temizleyin. Bkz. [Seçenekler-çeşitli seçenekler](python-support-options-and-settings-in-visual-studio.md#miscellaneous-options).
+> Kod renklendirmeyi devre dışı bırakmak için **Araçlar Seçenekler** Metin Düzenleyici Python Gelişmiş'e gidin ve türüne göre Çeşitli  >    >    >    >   **Seçenekler**  >  **Renk adları'nın temizlerini açın.** Bkz. [Seçenekler - Çeşitli seçenekler.](python-support-options-and-settings-in-visual-studio.md#miscellaneous-options)
 
 ## <a name="code-snippets"></a>Kod parçacıkları
 
-Kod parçacıkları, bir kısayol yazıp **Tab** tuşuna basarak veya IntelliSense **düzenleme**  >    >  **kodu kod parçacığını** ve komutlarla **çevrelemeyi** , **Python**'u seçip istenen kod parçacığını seçerek dosyalarınıza eklenebilen kod parçacıklarında yer alabilir.
+Kod parçacıkları, bir kısayol yazarak ve **Sekme** tuşuna basarak veya IntelliSense Kod Parçacığını Düzenle ve Komutlarla Çevrele komutlarını  >    >    **kullanarak, Python'ı** seçerek ve ardından istenen kod parçacığını seçerek dosyalarınıza eklenebiliyor kod parçalarıdır.
 
-Örneğin, bir `class` sınıf tanımı ekleyen kod parçacığına yönelik bir kısayoldur. Kod parçacığının, şunu yazdığınızda otomatik tamamlama listesinde göründüğünü görürsünüz `class` :
+Örneğin, `class` bir sınıf tanımı ekser kod parçacığı için bir kısayoldur. kod parçacığını, yazarak otomatik tamamlama listesinde `class` görünür.
 
 ![Sınıf kısayolu için kod parçacığı](media/code-editing-code-snippet-class.png)
 
-**Tab** tuşuna basıldığında sınıfın geri kalanı oluşturulur. Daha sonra ad ve temellerin listesini yazabilir, vurgulanan alanlar arasında **sekme** ile hareket edebilir ve ardından gövde yazmaya başlamak için **ENTER** tuşuna basabilirsiniz.
+Tab **tuşuna** basılarak sınıfın geri kalanı oluşturulur. Ardından Sekme ile vurgulanan alanlar arasında hareket eden ad ve temeller  listesinin üzerine yazarak **Enter** tuşuna basarak gövdeyi yazmaya başlayabilirsiniz.
 
-![Doldurmanız için bir kod parçacığı alanlarının üzerinde vurgular](media/code-editing-code-snippets.png)
+![Tamamlamanız için kod parçacığının alanlarını vurgular](media/code-editing-code-snippets.png)
 
 ### <a name="menu-commands"></a>Menü komutları
 
-IntelliSense 'i **Düzenle**  >    >  **kod parçacığı Ekle** menü komutunu kullandığınızda, önce **Python**' ı, sonra da bir kod parçacığını seçin:
+IntelliSense **Kod Parçacığı** Ekle menü komutunu kullanarak Python'ı ve ardından bir kod  >    >   parçacığını seçersiniz:
 
-![Kod parçacığı Ekle komutuyla kod parçacığı seçme](media/code-editing-code-snippet-insert.png)
+![Kod Parçacığı Ekle komutuyla kod parçacığı seçme](media/code-editing-code-snippet-insert.png)
 
-  >    >  Benzer şekilde IntelliSense **ile çevreleyin** komutu, geçerli seçimi seçili yapısal öğenin içine metin düzenleyicisine koyar. Örneğin, aşağıdaki gibi bir kod biraz daha olduğunu varsayalım:
+Benzer **şekilde**  >  **IntelliSense** Surround'i Düzenle komutu, geçerli seçimi seçilen yapısal  >   öğenin içine metin düzenleyicisine yer verir. Örneğin, aşağıdakine benzer bir kodun olduğunu varsayalım:
 
 ```python
 sum = 0
@@ -178,55 +178,55 @@ for x in range(1, 100):
     sum = sum + x
 ```
 
-Bu kodun seçilmesi ve **birlikte surround** komutuyla seçilmesi, kullanılabilir kod parçacıklarının bir listesini görüntüler. Listeden **def** seçilmesi, seçilen kodu bir işlev tanımına koyar ve vurgulanan işlev adı ile bağımsız değişkenler arasında gezinmek için **Tab** tuşunu kullanabilirsiniz:
+Bu kodun ve Surround **With komutunun seçiminde** kullanılabilir kod parçacıklarının listesi görüntülenir. Listeden **def** seçildiğinde seçilen kod bir işlev tanımına eklenir ve **Sekme** tuşuyla vurgulanan işlev adı ile bağımsız değişkenler arasında gezinebilirsiniz:
 
-![Kod parçacıkları için WITH komutuyla surround kullanma](media/code-editing-code-snippet-surround-with.png)
+![Kod parçacıkları için Surround With komutunu kullanma](media/code-editing-code-snippet-surround-with.png)
 
-### <a name="examine-available-snippets"></a>Kullanılabilir parçacıkları İncele
+### <a name="examine-available-snippets"></a>Kullanılabilir kod parçacıklarını inceleme
 
-Kullanılabilir kod parçacıklarını, **Araçlar** kod parçacıkları Yöneticisi menü komutu kullanılarak açılan ve dil olarak Python seçeneğini belirleyerek **kod parçacıkları yöneticisinde** görebilirsiniz  >    :
+Kullanılabilir kod parçacıklarını Kod Parçacıkları Yöneticisi'nde, Araçlar Kod Parçacıkları Yöneticisi menü komutu kullanılarak açılan ve dil olarak  >   **Python'ı** seçerek açabilirsiniz:
 
-![Visual Studio 'de kod parçacıkları Yöneticisi](media/code-editing-code-snippets-manager.png)
+![Visual Studio'de Kod Parçacıkları Yöneticisi](media/code-editing-code-snippets-manager.png)
 
-Kendi kod parçacıklarınızı oluşturmak için bkz. [Izlenecek yol: kod parçacığı oluşturma](../ide/walkthrough-creating-a-code-snippet.md).
+Kendi kod parçacıklarınızı oluşturmak için bkz. [Adım adım kılavuz: Kod parçacığı oluşturma.](../ide/walkthrough-creating-a-code-snippet.md)
 
-Paylaşmak istediğiniz harika bir kod parçacığı yazarsanız, bunu bir GİST içinde göndermekten ve [bize bildirelim](https://github.com/Microsoft/PTVS/issues). Visual Studio gelecek bir sürümüne dahil edebiliriz.
+Paylaşmak için harika bir kod parçacığı yazarsanız, bunu bir gist'e paylaşmak ve bize haber [verebilirsiniz.](https://github.com/Microsoft/PTVS/issues) Bunu gelecekteki bir sürümde dahil Visual Studio.
 
 ## <a name="navigate-your-code"></a>Kodunuzda gezinme
 
-Visual Studio 'de Python desteği; kaynak kodun kullanılabildiği kitaplıklar da dahil olmak üzere kodunuzda hızlı bir şekilde gezinmek için birkaç yol sağlar: [gezinti çubuğu](#navigation-bar), [**tanıma git**](#go-to-definition), [**öğesine**](#navigate-to)git ve [**tüm başvuruları bul**](#find-all-references). Visual Studio [**Nesne Tarayıcısı**](../ide/viewing-the-structure-of-code.md#BKMK_ObjectBrowser)de kullanabilirsiniz.
+Visual Studio'de Python desteği, kaynak kodunun kullanılabilir olduğu kitaplıklar da dahil olmak üzere kodunuz içinde hızla gezinmek için çeşitli yol sağlar: gezinti [çubuğu,](#navigation-bar)Tanıma [**Git,**](#go-to-definition) [**Git**](#navigate-to), Git ve Tüm [**Başvuruları Bul.**](#find-all-references) Visual Studio [**Object Browser'Visual Studio da kullanabilirsiniz.**](../ide/viewing-the-structure-of-code.md#BKMK_ObjectBrowser)
 
 ### <a name="navigation-bar"></a>Gezinti çubuğu
 
-Gezinti çubuğu her bir düzenleyici penceresinin üst kısmında görüntülenir ve iki düzeyli bir tanım listesi içerir. Sol açılan liste, geçerli dosyadaki en üst düzey sınıfı ve işlev tanımlarını içerir; Sağ açılan listede, sol tarafta gösterilen kapsam içindeki tanımların bir listesi görüntülenir. Düzenleyicide hareket ettirmek için, listeler geçerli bağlamınızı gösterecek şekilde güncelleştirir ve bu listelerden doğrudan gitmek için bir giriş de seçebilirsiniz.
+Gezinti çubuğu her düzenleyici penceresinin en üstünde görüntülenir ve iki düzeyli bir tanım listesi içerir. Sol açılan liste, geçerli dosyada üst düzey sınıf ve işlev tanımlarını içerir; Sağ açılan listede, sol tarafta gösterilen kapsam içindeki tanımların listesi görüntülenir. Düzenleyicide ilerlerken listeler geçerli bağlamınızı gösterecek şekilde güncelleştirmesinin yanı sıra doğrudan atlamak için bu listelerden bir giriş de seçersiniz.
 
-![Visual Studio düzenleyicisinde gezinti çubuğu](media/code-editing-navigation-bar.png)
+![Visual Studio düzenleyicisinde Gezinti Çubuğu](media/code-editing-navigation-bar.png)
 
 > [!Tip]
-> gezinti çubuğunu gizlemek için, **araçlar**  >  **seçenekler**  >  **metin düzenleyicisi**  >  **Python**  >  **genel** ' e gidin ve   >  **gezinti çubuğunu** Ayarlar temizleyin.
+> Gezinti çubuğunu gizlemek için Araçlar Seçenekler Metin Düzenleyicisi  >    >  Python **Genel'e gidin** ve Gezinti  >    >   **çubuğundan Ayarlar** için  >  **temizlemeniz gerekir.**
 
 ### <a name="go-to-definition"></a>Tanıma Git
 
-**Tanıma Git** , bir tanımlayıcının (bir işlev adı, sınıf veya değişken) tanımlandıkları kaynak koda hızlı bir şekilde atlanacaktır. Bir tanımlayıcıya sağ tıklayıp **Tanıma Git** ' i seçerek ve giriş işaretini tanımlayıcıya yerleştirip **F12** tuşuna basarak bu seçeneği çağırın. Bu, kodunuz ve harici kitaplıklarınızda çalışarak kaynak kodunun kullanılabilir olmasını sağladı. Kitaplık kaynak kodu kullanılabilir değilse, **tanım** ' `import` a bir modül başvurusu için ilgili ifadeye atlar veya bir hata görüntüler.
+**Tanıma Git,** tanımlayıcının kullanımından (işlev adı, sınıf veya değişken gibi) tanımlandığı kaynak koda hızla atlar. Bir tanımlayıcıya sağ tıklar ve  Tanıma Git'i seçerek veya caret'i tanımlayıcıya yerleştirerek ve F12 tuşuna basarak **çağırabilirsiniz.** Kaynak kodun kullanılabilir olması şartıyla, kodunuz ve dış kitaplıklar genelinde çalışır. Kitaplık kaynak kodu kullanılamıyorsa Tanıma **Git** modül başvurusu için ilgili deyime `import` atlar veya bir hata görüntüler.
 
-![Visual Studio tanım komutuna git](media/code-editing-go-to-definition.png)
+![Visual Studio'de Tanıma Git komutu](media/code-editing-go-to-definition.png)
 
-### <a name="navigate-to"></a>Şuraya gidin
+### <a name="navigate-to"></a>Şu sayfaya gidin:
 
-  >  **Git** komutuna Düzenle (**CTRL** + ), düzenleyicide herhangi bir dize yazabileceğiniz ve kodunuzda, sınıfta veya bu dizeyi içeren değişkeni tanımlayan olası eşleşmeleri görebileceğiniz bir arama kutusu görüntüler. Bu özellik, **Tanıma Git** , ancak tanımlayıcı kullanımını bulmaya gerek kalmadan, benzer bir yetenek sağlar.
+**Git'i** Düzenle  >   komutu (**Ctrl**, ) düzenleyicide herhangi bir dize yazarak kodunda bu dizeyi içeren bir işlev, sınıf veya değişken tanımlayan olası eşleşmeleri görene bir arama + kutusu görüntüler. Bu özellik Tanıma Git ile benzer **bir özellik sağlar** ancak tanımlayıcının kullanımını bulmak zorunda kalmadan kullanılabilir.
 
-Herhangi bir ada çift tıklayın veya ok tuşlarıyla ve **ENTER** ile seçip, Bu tanımlayıcının tanımına gider.
+Herhangi bir ada çift tıklayın veya ok tuşlarıyla ve **Enter** tuşlarıyla öğesini seçerek bu tanımlayıcının tanımına gidin.
 
-![Visual Studio komutuna git](media/code-editing-navigate-to.png)
+![Visual Studio'da Git komutu](media/code-editing-navigate-to.png)
 
 ### <a name="find-all-references"></a>Tüm Başvuruları Bul
 
-**Tüm başvuruları bul** , içeri aktarmalar ve atamalar dahil olmak üzere, verilen her bir tanımlayıcının hem tanımlanmış hem de kullanıldığı yerleri bulmanın yararlı bir yoludur. Bir tanımlayıcıya sağ tıklayıp **tüm başvuruları bul**' u seçerek veya giriş işaretini tanımlayıcıya yerleştirip **SHIFT** + **F12** tuşlarına basarak çağırabilirsiniz. Listedeki bir öğeye çift tıklamak, konumuna gider.
+**Tüm Başvuruları Bul,** içeri aktarmalar ve atamalar da dahil olmak üzere belirli bir tanımlayıcının tanımlandığı ve kullanılan yeri bulmanın yararlı bir yolu olur. Bir tanımlayıcıya sağ tıklar ve Tüm Başvuruları Bul'ı seçerek veya caret'i tanımlayıcıya yerleştirerek ve **Shift** F12 tuşuna basarak + **çağırabilirsiniz.** Listede bir öğeye çift tıklar ve bu öğenin bulunduğu konuma giditir.
 
-![Tüm başvuruları bul sonuçları](media/code-editing-find-all-references.png)
+![Tüm Başvuruları Bul sonuçları](media/code-editing-find-all-references.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Biçimlendirme](formatting-python-code.md)
 - [Yeniden Düzenle](refactoring-python-code.md)
-- [Bir Inter kullanın](linting-python-code.md)
+- [Linter kullanma](linting-python-code.md)

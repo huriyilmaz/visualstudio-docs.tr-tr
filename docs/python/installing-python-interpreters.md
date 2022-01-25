@@ -1,7 +1,7 @@
 ---
 title: Python yorumlayıcıları seçme ve bunları yüklemesi
 description: Visual Studio sürümünde desteklenen Python yorumlayıcıları 'nın, yükleyicilerinin nerede bulabilecekleri hakkında kısa yönergeler içeren, kapsamlı bir listesi.
-ms.date: 07/28/2021
+ms.date: 01/15/2022
 ms.topic: how-to
 author: rjmolyneaux
 ms.author: rmolyneaux
@@ -10,12 +10,12 @@ ms.technology: vs-python
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: ceebaea84f13bb5656162d350ef4bc0566954f6e
-ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
+ms.openlocfilehash: fb5074d5a1dc4f76eaaa814f1f730dae660cfa05
+ms.sourcegitcommit: f81a8f381bcdbac96d112f815737ba1df55d97a3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "129968663"
+ms.lasthandoff: 01/24/2022
+ms.locfileid: "137667362"
 ---
 # <a name="install-python-interpreters"></a>Python yorumlayıcılarını yükleme
 
@@ -50,11 +50,11 @@ Visual Studio, [**Python ortamları**](managing-python-environments-in-visual-st
 
 | Sından | Description |
 | --- | --- |
-| [CPython](https://www.python.org/) | 32-bit ve 64 bit sürümlerde kullanılabilen "yerel" ve en yaygın olarak kullanılan yorumlayıcı (32-bit önerilir). En son dil özelliklerini, en yüksek Python paketi uyumluluğunu, tam hata ayıklama desteğini ve [IPython](https://ipython.org/)ile birlikte çalışabilirliği içerir. Ayrıca bkz: [Python 2 veya Python 3 mi kullanmalıyım?](https://wiki.python.org/moin/Python2orPython3). Visual Studio 2015 ve önceki sürümleri Python 3.6 + ' yı desteklemediğine ve **desteklenmeyen Python sürümü 3,6** gibi hatalara sahip olabileceğini unutmayın. Bunun yerine Python 3,5 veya önceki bir sürümünü kullanın. |
+| [CPython](https://www.python.org/) | 32 bit ve 64 bit sürümlerde kullanılabilen "yerel" ve en yaygın olarak kullanılan yorumlayıcı (32-bit önerilir). En son dil özelliklerini, en yüksek Python paketi uyumluluğunu, tam hata ayıklama desteğini ve [IPython](https://ipython.org/)ile birlikte çalışabilirliği içerir. Ayrıca bkz: [Python 2 veya Python 3 mi kullanmalıyım?](https://wiki.python.org/moin/Python2orPython3). Visual Studio 2015 ve üzeri, python 3.6 + ' yı desteklemez ve **desteklenmeyen python sürümü 3,6** gibi hatalara sahip olabilir. Bunun yerine Python 3,5 veya önceki bir sürümünü kullanın. |
 | [IronPython](https://github.com/IronLanguages/ironpython2) | 32 bit ve 64 bit sürümlerde kullanılabilen, .net apı 'leri, standart Python hata ayıklama (ancak C++ karışık mod hata ayıklama) ve karışık ıronpython/C# hata ayıklama Visual Basic sağlayan bir Python .net uygulamasıdır. Ancak IronPython, sanal ortamları desteklemez. |
-| [Anaconda](https://anaconda.com) | Python tarafından desteklenen açık bir veri bilimi platformu, en son Cpne Thon sürümü ve çok sayıda yüklemeyi zor olan paketleri içerir. Aksi takdirde karar vermeniz önerilir. |
+| [Anaconda](https://anaconda.com) | Python tarafından desteklenen açık bir veri bilimi platformu, en son Cpne Thon sürümü ve çok sayıda yüklemeyi zor olan paketleri içerir. Karar veriyorsanız, Anaconda kullanmanızı öneririz. |
 | [PyPy](https://www.pypy.org/) | Uzun süre çalışan programlar ve performans sorunlarını tanımlayabileceğiniz ancak diğer çözümleri bulamadığınız durumlar için iyi olan, Python 'un yüksek performanslı izleme JıT uygulamasıdır. Visual Studio ile birlikte çalışarak gelişmiş hata ayıklama özellikleri için sınırlı destek sağlar. |
-| [Jyıthon](https://www.jython.org/) | Java Sanal Makinesi (JVM) üzerinde Python 'un bir uygulamasıdır. IronPython 'a benzer şekilde, Jithon 'da çalışan kod Java sınıfları ve kitaplıkları ile etkileşime geçebilir, ancak Cpithon için tasarlanan birçok kitaplığı kullanmayabilir. Visual Studio ile birlikte çalışarak gelişmiş hata ayıklama özellikleri için sınırlı destek sağlar. |
+| [Jyıthon](https://www.jython.org/) | Java Sanal Makinesi (JVM) üzerinde Python 'un bir uygulamasıdır. IronPython 'a benzer şekilde, Jithon 'da çalışan kod Java sınıfları ve kitaplıkları ile etkileşime geçebilir. Ancak, Cpyıthon için tasarlanan kitaplıkların birçoğu erişilebilir olmayabilir. Visual Studio ile birlikte çalışarak gelişmiş hata ayıklama özellikleri için sınırlı destek sağlar. |
 
 Python ortamları için yeni algılama biçimleri sağlamak isteyen geliştiriciler, bkz. [PTV ortamı algılama](https://github.com/Microsoft/PTVS/wiki/Extensibility-Environments) (GitHub.com).
 
@@ -68,8 +68,8 @@ varolan yorumlayıcı dosya sistemini kullanarak yeni bir konuma taşırsanız, 
 
   1. Python yorumlayıcı 'yı özgün konumuna geri yükleyin.
   2. Kayıt defteri girdilerini temizleyen yükleyicisini kullanarak yorumlayıcı 'yı kaldırın.
-  3. Yorumlayıcı 'yı istenen konuma yeniden yükleyin.
-  4. eski konumun yerine yeni konumu otomatik olarak algılaması gereken Visual Studio yeniden başlatın.
+  3. Yorumlayıcı 'yı yeni konuma yeniden yükleyin.
+  4. eski konumun yerine yeni konumu otomatik algıla Visual Studio yeniden başlatın.
 
 bu işlemin ardından, yorumlayıcı konumunu tanımlayan kayıt defteri girişlerinin Visual Studio tarafından düzgün şekilde güncelleştirildiğini sağlar. Bir yükleyicinin kullanılması, mevcut olabilecek diğer yan etkileri de işler.
 
