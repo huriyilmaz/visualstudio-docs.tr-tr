@@ -2,7 +2,7 @@
 title: Visual Studio 2022'de yapılan yeniler
 titleSuffix: ''
 description: Visual Studio 2022'de yeni özellikler hakkında bilgi.
-ms.date: 12/03/2021
+ms.date: 01/26/2022
 helpviewer_keywords:
 - Visual Studio, what's new
 - what's new [Visual Studio]
@@ -14,12 +14,12 @@ ms.prod: visual-studio-dev17
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d42453ab789f3534a45229c8692478c829705dd
-ms.sourcegitcommit: 7a300823cf1bd3355be03bde561cf2777bc09eae
+ms.openlocfilehash: 3b5181f8cbc173a90146f38ecae1f22ff6bae76c
+ms.sourcegitcommit: ebd651e00fe3bae5914c211c4828219bf7d1fc70
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/07/2021
-ms.locfileid: "133978322"
+ms.lasthandoff: 01/27/2022
+ms.locfileid: "137798541"
 ---
 # <a name="whats-new-in-visual-studio-2022"></a>Visual Studio 2022'de yapılan yeniler
 
@@ -28,7 +28,7 @@ ms.locfileid: "133978322"
 >[!div class="button"]
 >[2022 Visual Studio indirme](https://visualstudio.microsoft.com/downloads/)
 
-[2022](https://visualstudio.microsoft.com/vs/)Visual Studio ile her zaman tüm geliştirici, tüm uygulama ve platformlar için kullanılabilen sınıfının en iyisi araçlara ve hizmetlere sahip oluruz. İster ilk kez Visual Studio ister yıllardır kullanıyor olun, en yeni sürümde çok fazla şey var!
+[2022](https://visualstudio.microsoft.com/vs/)Visual Studio ile her zaman herhangi bir geliştirici, herhangi bir uygulama ve herhangi bir platform için kullanılabilen sınıfının en iyisi araçlara ve hizmetlere sahip oluruz. İster ilk kez Visual Studio ister yıllardır kullanıyor olun, en yeni sürümde çok fazla şey var!
 
 > [!TIP]
 > YouTube [**kanalımızda Visual Studio 2022**](https://www.youtube.com/watch?v=f8jXO946eDw) başlatma [etkinliğine göz atabilirsiniz.](https://www.youtube.com/visualstudio) Bunu Kanal kanalımızda da [yakalayabilirsiniz.](https://www.twitch.tv/visualstudio)
@@ -47,15 +47,18 @@ Visual Studio 2022 Windows artık 64 bitlik bir uygulamadır. Bu, belleğin yete
 
 :::image type="content" source="media/vs-2022/find-files-faster.gif" alt-text="Büyük bir C# çözümünde önceki sürümden üç kat daha hızlı arama yaptığı için Dosyalarda Bul özelliğinin animasyonu Visual Studio.":::
 
+> [!NOTE]
+> **17.1 Önizleme 3'te** yeni: Yeni dizinli arama özelliğiyle Dosyalarda Bul özelliği daha da hızlıdır! Daha fazla bilgi için [bkz. Visual Studio 2022'de](https://devblogs.microsoft.com/visualstudio/code-search-in-visual-studio-is-about-to-get-much-faster/) Kod araması çok daha hızlı bir blog gönderisi almak için.
+
 ## <a name="build-modern-apps"></a>Modern uygulamalar oluşturma
 
 Visual Studio 2022, Azure ile modern, bulut tabanlı uygulamalar derlemeyi hızlı ve kolay bir şekilde sağlar. Ayrıca, yeni sürümde [.NET 6](https://devblogs.microsoft.com/dotnet/announcing-net-6/) için tam destek ve hem web, istemci hem de Mac geliştiricileri için web, istemci ve mobil uygulamalar için birleşik Windows vardır. Ayrıca Visual Studio 2022' de yeni üretkenlik özellikleri, C++20 aracı ve [IntelliSense](using-intellisense.md)ile C++ iş yükü için sağlam destek içerir.
 
 ### <a name="better-dev-tools-for-c-and-net-and-hot-reload"></a>C++ ve .NET için daha iyi geliştirme araçları ve Çalışırken Yeniden Yükleme
 
-[Visual Studio 2022, C++20](https://devblogs.microsoft.com/visualstudio/visual-studio-2022-preview-2-is-out/) desteği eklemek için daha iyi platformlar arası uygulama geliştirme araçları ve C++ derleme araçlarının en son sürümünü içerir.
+[Visual Studio 2022, C++20](https://devblogs.microsoft.com/visualstudio/visual-studio-2022-preview-2-is-out/) desteği eklemek için daha iyi platformlar arası uygulama geliştirme araçları ve en son C++ derleme araçları sürümünü içerir.
 
-Ayrıca, uygulamanız **çalışırken C++ Çalışırken Yeniden Yükleme** .NET projelerini düzenleyebilirsiniz. Daha fazla bilgi için [**Visual Studio 2022**](https://devblogs.microsoft.com/visualstudio/speed-up-your-dotnet-and-cplusplus-development-with-hot-reload-in-visual-studio-2022/) blog gönderisinde Çalışırken Yeniden Yükleme ile .NET ve C++ geliştirmenizi hızlandırın ve [C#, C++](../debugger/hot-reload.md) veya Visual Basic Docs ile Visual Studio Çalışırken Yeniden Yükleme ile kod yazma ve hata ayıklama sayfasına bakın.
+Ayrıca, uygulamanız **çalışırken C++ Çalışırken Yeniden Yükleme** .NET projelerini düzenleyebilirsiniz. Daha fazla bilgi için [**Visual Studio 2022**](https://devblogs.microsoft.com/visualstudio/speed-up-your-dotnet-and-cplusplus-development-with-hot-reload-in-visual-studio-2022/) blog gönderisinde Çalışırken Yeniden Yükleme ile .NET ve C++ geliştirmenizi hızlandırın ve [C#, C++](../debugger/hot-reload.md) veya Visual Basic Docs ile Visual Studio'da Çalışırken Yeniden Yükleme ile kod yazma ve hata ayıklama sayfasına bakın.
 
 ### <a name="updates-for-blazor--razor-editors--hot-reload-for-aspnet"></a>Blazor & Razor düzenleyicileri + Çalışırken Yeniden Yükleme güncelleştirmeleri ASP.NET
 
@@ -69,7 +72,10 @@ Gerçek zamanlı & zaman uyumsuz işbirliği araçlarından günlük iş akış�
 
 ### <a name="multi-repo-support-with-git-in-the-ide"></a>IDE'de Git ile çoklu depo desteği
 
-Farklı Git depoları üzerinde barındırılan projelerle çalıştıysanız, dış araçları veya birden çok Visual Studio örneğini kullanarak bağlanabilirsiniz. [2022'Visual Studio'de](https://devblogs.microsoft.com/visualstudio/visual-studio-2022-preview-3-now-available/)birden çok depoda projeleri olan tek bir çözümle çalışarak bunların tek bir örneğiyle katkıda Visual Studio. Daha fazla bilgi edinmek için [**bkz. Çoklu Visual Studio**](https://devblogs.microsoft.com/visualstudio/multi-repo-support-in-visual-studio/) blog gönderisi.
+Farklı Git depoları üzerinde barındırılan projelerle çalıştıysanız, dış araçları veya birden çok Visual Studio örneğini kullanarak bağlanabilirsiniz. [2022 Visual Studio de,](https://devblogs.microsoft.com/visualstudio/visual-studio-2022-preview-3-now-available/)birden çok depoda projeleri olan tek bir çözümle çalışarak bunların tek bir örneğiyle katkıda Visual Studio. Daha fazla bilgi edinmek için [**bkz. Çoklu Visual Studio**](https://devblogs.microsoft.com/visualstudio/multi-repo-support-in-visual-studio/) blog gönderisi.
+
+> [!NOTE]
+> **17.1 Önizleme 2'de** yeni: Git özellik kümesine daha fazla işlev eklemeye devam ediyoruz. En son bilgiler için [2022'de yeni Git özelliklerine Visual Studio](https://devblogs.microsoft.com/visualstudio/introducing-new-git-features-to-visual-studio-2022/) blog gönderisi'ne bakın.
 
 ### <a name="intellicode-improvements"></a>IntelliCode geliştirmeleri
 
@@ -83,17 +89,17 @@ Akışınızı daha iyi bir şekilde tutmak için kullanıcı arabirimini yenile
 
 ### <a name="look--feel"></a>Nasıl & bakın
 
-Yeni simgeografiden ince renk karşıtlığı oranı ayarlamaları ve yeni [bir Cascadia Code](https://github.com/microsoft/cascadia-code#welcome) yazı tipine kadar 2022'den Visual Studio herkes için daha erişilebilir hale geliyor. Tüm ayrıntılar için Visual Studio [**2022'de kullanıcı arabirimini yükselttik blog gönderisi'ne**](https://devblogs.microsoft.com/visualstudio/weve-upgraded-the-ui-in-visual-studio-2022/) bakın.
+Yeni simgeografiden ince renk karşıtlığı oranı ayarlamaları ve yeni [bir Cascadia Code](https://github.com/microsoft/cascadia-code#welcome) yazı tipine kadar, 2022'de 2022'Visual Studio herkesin daha erişilebilir olmasını sağlamak için çalışıyoruz. Tüm ayrıntılar için Visual Studio [**2022**](https://devblogs.microsoft.com/visualstudio/weve-upgraded-the-ui-in-visual-studio-2022/) blog gönderisinde kullanıcı arabirimini yükselttik.
 
 :::image type="content" source="media/vs-2022/icon-refresh.png" alt-text="Önceki ve yenilenmiş simgeler arasındaki karşıtlık ekran görüntüsü Visual Studio.":::
 
 ### <a name="personalization"></a>Kişiselleştirme
 
-En önemli odak alanlarından biri, IDE'Visual Studio daha kişiselleştirilmiş ve esnek hale getirir. Örneğin, [Visual Studio 2022](https://devblogs.microsoft.com/visualstudio/visual-studio-2022-preview-3-now-available/) size kendi temanız ile eşitleme Windows sunar. Bu nedenle burada "gece ışığı" özelliğini etkinleştirdiysek Visual Studio de kullanır. Daha fazla bilgi için Visual Studio [**2022**](https://devblogs.microsoft.com/visualstudio/personalize-your-visual-studio-2022/) blog gönderinize bakın.
+En önemli odak alanlarından biri, IDE'Visual Studio daha kişiselleştirilmiş ve esnek hale getirir. Örneğin, [Visual Studio 2022,](https://devblogs.microsoft.com/visualstudio/visual-studio-2022-preview-3-now-available/) temanız ile eşitleme Windows sunar. Bu nedenle burada "gece ışığı" özelliğini etkinleştirdiysek Visual Studio de kullanır. Daha fazla bilgi için Visual Studio [**2022**](https://devblogs.microsoft.com/visualstudio/personalize-your-visual-studio-2022/) blog gönderinize bakın.
 
 ## <a name="whats-next"></a>Sırada ne var?
 
-2022'de neleri planlamamız Visual Studio istiyor musunuz? Ayrıntılar için [**Yol Haritası**](/visualstudio/productinfo/vs-roadmap/) sayfasına ve [**Visual Studio 2022 Preview**](/visualstudio/releases/2022/release-notes-preview/) sürüm notlarına bakın.
+2022'de planlamamız gerekenler hakkında daha fazla Visual Studio ister misiniz? Ayrıntılar için [**Yol Haritası**](/visualstudio/productinfo/vs-roadmap/) sayfasına ve [**Visual Studio 2022 Preview**](/visualstudio/releases/2022/release-notes-preview/) sürüm notlarına bakın.
 
 ## <a name="give-us-feedback"></a>Geri bildirimde bulunun
 

@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 412d226e2e4657b004d1c1d795e7f62ed4cb5e41
-ms.sourcegitcommit: 658edd3b0dc23fb20728dafc12734b22f8ed1a89
+ms.openlocfilehash: 2c5198d2b99f2f808e3c42c2f35bfcfd9188941a
+ms.sourcegitcommit: ebd651e00fe3bae5914c211c4828219bf7d1fc70
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/18/2022
-ms.locfileid: "136890692"
+ms.lasthandoff: 01/27/2022
+ms.locfileid: "137798606"
 ---
 # <a name="sign-in-to-visual-studio-on-windows"></a>Windows Visual Studio için oturum açın 
 

@@ -12,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 951bc8fa65991daaad2661744efd6bcbd17bdcd4
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 4e586669aa5e8e00292091184f38f8c14922af9b
+ms.sourcegitcommit: ebd651e00fe3bae5914c211c4828219bf7d1fc70
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126628544"
+ms.lasthandoff: 01/27/2022
+ms.locfileid: "137798528"
 ---
 # <a name="wrap-indent-and-align-refactorings"></a>Yeniden düzenlemeleri sarmalama, girintileme ve hizalama
 
@@ -41,7 +41,7 @@ Bu yeniden düzenleme için geçerlidir:
 2. **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
 3. Yeniden düzenlemeyi kabul etmek için **çağrı zincirini sarın** veya **Sarla ve hizalamayı** seçin.
 
-   ![warap çağrı zinciri seçili ve C# kod değişiklikleri gösterilen Visual Studio hızlı eylemler ve yeniden düzenlemeler menüsünün bir görüntüsü.](media/wrap-call-chain.png)
+   ![Visual Studio içindeki hızlı eylemler ve yeniden düzenlemeler menüsünün ekran görüntüsü, Wrap çağrısı zinciri seçiliyken ve C# kod değişiklikleri gösteriliyor.](media/wrap-call-chain.png)
 
 ## <a name="wrap-indent-and-align-parameters-or-arguments"></a>Parametreleri veya bağımsız değişkenleri sarın, Girintile ve Hizala
 
@@ -86,7 +86,7 @@ Bu yeniden düzenleme için geçerlidir:
 2. **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
 3. Yeniden düzenlemeyi kabul etmek için **Wrap ifadesi** ' ni seçin.
 
-   ![warap ifadesi seçili ve C# kod değişiklikleri gösterilen Visual Studio hızlı eylemler ve yeniden düzenlemeler menüsünün bir görüntüsü.](media/wrap-binary-expression.png)
+   ![Visual Studio ' deki hızlı eylemler ve yeniden düzenlemeler menüsünün ekran görüntüsü ve Wrap ifadesi seçilidir ve C# kod değişiklikleri gösteriliyor.](media/wrap-binary-expression.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

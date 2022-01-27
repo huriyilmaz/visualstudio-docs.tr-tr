@@ -33,12 +33,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 37b7c9a395cd7273bf829beee44d150fe841aebd
-ms.sourcegitcommit: 7d319435c35075d4cec021b7b667666a81c02435
+ms.openlocfilehash: 2b66972a4f2982ee669c753de5ef6ead2916f05d
+ms.sourcegitcommit: ebd651e00fe3bae5914c211c4828219bf7d1fc70
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "137650126"
+ms.lasthandoff: 01/27/2022
+ms.locfileid: "137798580"
 ---
 # <a name="find-and-replace-text"></a>Metin bulma ve değiştirme
 
@@ -170,10 +170,10 @@ Aşağıdaki ekran görüntüsünde, `-0000` üç konumda seçilidir; Kullanıc�
 
 ![Visual Studio bir XML dosyasında çoklu giriş işareti seçimi](media/multi-caret-selection.png)
 
-Birden çok Evcil hayvan seçmek için her zamanki gibi ilk metin seçimini tıklatın veya seçin, sonra da her bir ek konumda metin ' i tıklattığınızda veya seçerken **alt** tuşuna basın. Ayrıca, eşleşen metni ek seçimler olarak otomatik olarak ekleyebilir veya her satırda aynı şekilde düzenlenecek metin kutusunu seçebilirsiniz.
+Çoklu Evcil hayvan seçmek için, ilk metin seçimini her zamanki gibi seçin veya seçin, sonra da  + her bir ek konumda metin ' i tıklattığınızda veya seçerken CTRL **alt** tuşuna basın. Ayrıca, eşleşen metni ek seçimler olarak otomatik olarak ekleyebilir veya her satırda aynı şekilde düzenlenecek metin kutusunu seçebilirsiniz.
 
 > [!TIP]
-> Fare tıklaması için değiştirici tuşu olarak **alt** öğesini seçtiyseniz **Araçlar** seçeneklerinde tanıma git ' e tıklayın  >  , çoklu şapka seçimi devre dışıdır.
+> **Araç** seçeneklerinde "tanıma git" bölümünde fare tıklaması için değiştirici tuşu olarak **alt** ' i seçtiyseniz  >    >    >  , çoklu giriş işareti seçimi devre dışı bırakılır. Daha fazla bilgi için bkz. [Seçenekler iletişim kutusu: metin düzenleyici/> genel](reference/options-text-editor-general.md).
 
 ### <a name="commands"></a>Komutlar
 
@@ -185,20 +185,20 @@ Birden çok Evcil hayvan seçmek için her zamanki gibi ilk metin seçimini tık
 |**CTRL** + **Alt** + çift tıklama|İkincil sözcük seçimi ekleme|
 |**CTRL** + **Alt** + tıklatıp + sürükleyin|İkincil bir seçim ekleyin|
 |**SHIFT** + **Alt** + **.**|Sonraki eşleşen metni seçim olarak ekle|
-|**SHIFT** + **Alt** + **;**|Tüm eşleşen metni seçimler olarak ekle|
-|**SHIFT** + **Alt** + **,**|Son seçili oluşumu kaldır|
-|**SHIFT** + **Alt**+**/**|Sonraki eşleşen oluşumu atla|
-|**Alt** + tıklama|Kutu seçimi Ekle|
-|**ESC** veya tıklama|Tüm Seçimleri Temizle|
+|**SHIFT** + **Alt** + **;**|Eşleşen tüm metni seçim olarak ekleme|
+|**Üstkrkt** + **Alt** + **,**|Son seçilen oluşum kaldırma|
+|**Üstkrkt** + **Alt**+**/**|Sonraki eşleştirme oluşumunu atla|
+|**Alt** + tıklama|Kutu seçimi ekleme|
+|**Esc tuşuna** basın veya tıklayın|Tüm seçimleri temizle|
 
-Bazı komutlardan biri de **düzenleme** menüsünde, **birden çok sepetin** altında bulunur:
+Komutlardan bazıları Düzenle menüsünde, Birden **Çok** **Carets altında da kullanılabilir:**
 
-:::image type="content" source="media/edit-menu-multiple-carets-find-replace.png" alt-text="Visual Studio içindeki çoklu Evcil hayvan açılan menüsünün ekran görüntüsü":::
+:::image type="content" source="media/edit-menu-multiple-carets-find-replace.png" alt-text="Visual Studio'da Birden Çok Carets açılır menüsünün ekran Visual Studio":::
 
 ::: moniker-end
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio içindeki normal ifadeleri kullanma](../ide/using-regular-expressions-in-visual-studio.md)
-- [Visual Studio kodu yeniden düzenleme](../ide/refactoring-in-visual-studio.md)
-- [seçimi engelle (Mac için Visual Studio)](/visualstudio/mac/block-selection)
+- [Normal ifadeleri Visual Studio](../ide/using-regular-expressions-in-visual-studio.md)
+- [Kodda yeniden düzenleme Visual Studio](../ide/refactoring-in-visual-studio.md)
+- [Seçimi engelle (Mac için Visual Studio)](/visualstudio/mac/block-selection)

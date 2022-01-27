@@ -12,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2c474c43451006121f940da5eed66dfb9277806a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 5a1f72867dff23cdb39a789079e94576aa66dd01
+ms.sourcegitcommit: ebd651e00fe3bae5914c211c4828219bf7d1fc70
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122101212"
+ms.lasthandoff: 01/27/2022
+ms.locfileid: "137798567"
 ---
 # <a name="inline-method"></a>Satır içi metot
 
@@ -29,7 +29,7 @@ Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
 **Ne:** Satır içi yöntem yeniden düzenlemesi. 
 
-**Ne zaman:** Tek bir deyim gövdesi içindeki statik, örnek ve uzantı yönteminin kullanımlarını özgün yöntem bildirimini kaldırma seçeneğiyle değiştirmek istediğiniz.
+**Tesis:** Tek bir deyim gövdesi içindeki statik, örnek ve uzantı yönteminin kullanımlarını özgün yöntem bildirimini kaldırma seçeneğiyle değiştirmek istediğiniz.
 
 **Neden:**  Bu yeniden düzenleme daha net bir söz dizimi sağlar.
 
@@ -37,17 +37,17 @@ Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
 1. Yöntemin kullanımına dikkat edin.
 
-2. **Ctrl tuşuna** + **basın.** Hızlı Eylemler **ve Yeniden Düzenleme menüsünü tetiklemek** için.
+2. **Ctrl tuşuna** + **basın.** hızlı eylemler **ve yeniden düzenleme menüsünü tetiklemek** için.
 
 3. Aşağıdaki seçeneklerden birini belirleyin: 
     
    Satır içi yöntem bildirimini kaldırmak için **Satır içi `<QualifiedMethodName>`** seçeneğini belirleyin: 
 
-    !['Satır içi 'CreateWidget()' öğesini dönüştür'Visual Studio C# kod değişikliklerinin gösterildiği Hızlı Eylemler ve Yeniden Düzenleme menüsünün screeenshot'ını seçin.](media/inline-method-remove-declaration.png)
+    !['Satır içi 'CreateWidget()' öğesini dönüştür'Visual Studio C# kod değişikliklerinin gösterildiği Hızlı Eylemler ve Yeniden Düzenleme menüsünün ekran görüntüsü.](media/inline-method-remove-declaration.png)
 
    Özgün yöntem bildirimini korumak için **Satır içine al ve koru `<QualifiedMethodName>`** seçeneğini belirleyin: 
 
-    !['Satır içi'ni Dönüştür ve 'CreateWidget()' öğesini seçili tut ve C# kod değişiklikleri göster'i seçerek Visual Studio'daki Hızlı Eylemler ve Yeniden Düzenleme menüsünün screeenshot'ını seçin.](media/inline-method-preserve-declaration.png)
+    !['Satır içi dönüştürme ve 'CreateWidget()' öğesini seçili Visual Studio C# kod değişikliklerinin gösterildiği Hızlı Eylemler ve Yeniden Düzenleme menüsünün ekran görüntüsü.](media/inline-method-preserve-declaration.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -11,12 +11,12 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: f03b494c688fa9ac232175366e59e1740258d37f
-ms.sourcegitcommit: 429b2378ee21b5f473b26f4b4ea0a70372a34ec2
+ms.openlocfilehash: 8b3dd9959e0972bcda095329c4e760374b08664d
+ms.sourcegitcommit: ebd651e00fe3bae5914c211c4828219bf7d1fc70
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "137733394"
+ms.lasthandoff: 01/27/2022
+ms.locfileid: "137798619"
 ---
 # <a name="work-with-github-accounts-in-visual-studio"></a>Visual Studio’da GitHub hesaplarıyla çalışma
 

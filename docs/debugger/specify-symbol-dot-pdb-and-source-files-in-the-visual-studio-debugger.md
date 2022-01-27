@@ -3,7 +3,7 @@ title: Hata ayıklayıcısında sembol (.pdb) ve kaynak dosyaları ayarlama
 description: Kaynak dosyalarında sembol ve kaynak dosyaları yapılandırmayı ve yönetmeyi Visual Studio
 ms.date: 12/12/2021
 ms.custom: contperf-fy21q4
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.ToolsOptionsPages.Debugger.Native
 - VS.ToolsOptionsPages.Debugger.Symbols
@@ -30,12 +30,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: cbcd8b330baa076b5e13998102a227062704bcf9
-ms.sourcegitcommit: 52a425b5a541034cda26db8df9cd43281c007e80
+ms.openlocfilehash: 786e1216faab3da3701361ac7ecd1433211072ea
+ms.sourcegitcommit: ebd651e00fe3bae5914c211c4828219bf7d1fc70
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2021
-ms.locfileid: "135540750"
+ms.lasthandoff: 01/27/2022
+ms.locfileid: "137798593"
 ---
 # <a name="specify-symbol-pdb-and-source-files-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>Visual Studio hata ayıklayıcısında (C#, C++, Visual Basic, F#) sembolünü (.pdb) ve kaynak dosyaları belirtin
 
@@ -63,11 +63,11 @@ Sembol dosyaları ayrıca kaynak dosyaların konumunu ve isteğe bağlı olarak 
 Hata ayıklayıcısı yalnızca bir uygulama oluşturulduğunda (yani özgün .pdb dosyaları veya kopyaları) *oluşturulan .pdb* dosyalarıyla tam olarak eşan.pdb dosyalarını yükler.   Bu tam yineleme gereklidir çünkü kodun kendisi değişmese bile uygulamaların düzeni değişebilir. Daha fazla bilgi için bkz. Visual Studio hata ayıklayıcısı sembol dosyalarının, kendileriyle derlenilen ikili dosyalarla [tam olarak eşleşmesi için neden gerekli?](/archive/blogs/jimgries/why-does-visual-studio-require-debugger-symbol-files-to-exactly-match-the-binary-files-that-they-were-built-with)
 
 > [!TIP]
-> Proje çağrılarınızı Windows kodu veya üçüncü taraf kodu gibi proje kaynak kodunuzun dışında kodda hata ayıklamak için dış kodun *.pdb* dosyalarının (ve isteğe bağlı olarak kaynak dosyalarının) konumunu belirtmeniz gerekir. Bu, uygulama derlemeleri ile tam olarak eşleşmesi gerekir.
+> Proje çağrılarınızı Windows kodu veya üçüncü taraf kod gibi proje kaynak kodunuzun dışında kodda hata ayıklamak için, dış kodun *.pdb* dosyalarının (ve isteğe bağlı olarak kaynak dosyalarının) konumunu belirtmeniz gerekir. Bu, uygulama derlemeleri ile tam olarak eşleşmesi gerekir.
 
 ## <a name="where-the-debugger-looks-for-symbols"></a>Hata ayıklayıcının sembolleri nerede bakarak
 
-Visual Studio IDE'de bir projede hata ayıklarken, hata ayıklayıcı varsayılan olarak bularak simge dosyalarını otomatik olarak yükler.
+IDE'de bir projede Visual Studio ayıklarken, hata ayıklayıcı varsayılan olarak buluna sembol dosyalarını otomatik olarak yükler.
 
 > [!NOTE]
 > Uzak bir cihazda yönetilen kodda hata ayıklarken, tüm sembol dosyalarının yerel makinede veya hata ayıklayıcı seçeneklerinde belirtilen bir [konumda yer alıyor olması gerekir.](#configure-location-of-symbol-files-and-loading-options)
@@ -76,7 +76,7 @@ Hata ayıklayıcısı aşağıdaki konumlarda sembol dosyalarını arar:
 
 1. Proje klasörü.
 
-1. DLL veya yürütülebilir *dosya*(.exe) içinde belirtilen konum.
+1. DLL veya yürütülebilir dosya (.exe) dosyası *içinde* belirtilen konum.
 
    Varsayılan olarak, bilgisayarınızda bir DLL veya *.exe* dosyası bilgisayarınızda varsa, bağlantıcı dll veya dosya dosyasına ilişkili *.pdb* dosyasının tam yolunu *ve dosya adını.exe.* Hata ayıklayıcısı sembol dosyasının o konumda var olup olduğunu denetler.
 
@@ -86,15 +86,15 @@ Hata ayıklayıcısı aşağıdaki konumlarda sembol dosyalarını arar:
 
    - Herhangi bir yerel sembol önbellek klasörü.
 
-   - Seçiliyse Microsoft Sembol Sunucuları gibi belirtilen ağ, internet veya yerel sembol sunucuları ve konumları. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , protokolü uygulayan sembol sunucularından hata ayıklama sembol dosyalarını `symsrv` indirebilir. [Visual Studio Team Foundation Server](/azure/devops/pipelines/tasks/build/index-sources-publish-symbols) için Hata [Ayıklama Araçları Windows](/windows-hardware/drivers/debugger/index) sembol sunucularını kullana iki araçtır.
+   - Seçiliyse Microsoft Sembol Sunucuları gibi belirtilen ağ, internet veya yerel sembol sunucuları ve konumları. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , protokolü uygulayan sembol sunucularından hata ayıklama sembol dosyalarını `symsrv` indirebilir. [Visual Studio Team Foundation Server](/azure/devops/pipelines/tasks/build/index-sources-publish-symbols) ve Hata [Ayıklama Araçları Windows](/windows-hardware/drivers/debugger/index) sembol sunucularını kullana iki araçtır.
 
      Kullanabileceğiniz sembol sunucuları şunlardır:
 
-     **Genel Microsoft Sembol Sunucuları:** Bir sistem DLL'sini veya üçüncü taraf kitaplığını çağırma sırasında oluşan bir kilitlenmede hata ayıklamak için genellikle sistem *.pdb* dosyaları gerekir. Sistem *.pdb* dosyaları, *Windows,*.exeve cihaz sürücüleri için semboller içerir. Genel Microsoft Sembol Sunucularından Windows sistemleri, MDAC, IIS, ISA ve .NET için semboller edinebilirsiniz.
+     **Genel Microsoft Sembol Sunucuları:** Bir sistem DLL'sini veya üçüncü taraf kitaplığını çağırma sırasında oluşan bir kilitlenmede hata ayıklamak için genellikle sistem *.pdb* dosyaları gerekir. Sistem *.pdb* dosyaları, Windows,.exe *ve* cihaz sürücüleri için semboller içerir. Genel Microsoft Sembol Sunucularından Windows sistemleri, MDAC, IIS, ISA ve .NET için semboller edinebilirsiniz.
 
      **Bir iç ağ veya yerel** makineniz üzerinde sembol sunucuları: Takımınız veya şirketiniz, kendi ürünleriniz için sembol sunucuları ve dış kaynaklardan gelen semboller için bir önbellek olarak oluşturabilir. Kendi makineniz üzerinde bir sembol sunucusu olabilir.
 
-     **Üçüncü taraf sembol sunucuları:** Uygulama ve kitaplıkların Windows üçüncü taraf sağlayıcıları, internet üzerinde sembol sunucusuna erişim sağlar.
+     **Üçüncü taraf sembol sunucuları:** Uygulama ve kitaplıkların üçüncü Windows sağlayıcılar, internet üzerinde sembol sunucusuna erişim sağlayabiliyor.
 
      > [!WARNING]
      > Genel Microsoft Sembol Sunucuları dışında bir sembol sunucusu kullanıyorsanız, sembol sunucusunun ve yolunun güvenilir olduğundan emin olun. Sembol dosyaları rastgele yürütülebilir kod içerene kadar güvenlik tehditlerine maruz kalmış olabilir.
@@ -112,7 +112,7 @@ Araçlar **Seçenekleri**  >  **Hata**  >  **Ayıklama Sembolleri**  >  **sayfas
 
 **Sembol konumlarını ve yükleme seçeneklerini belirtmek için:**
 
-1. Bu Visual Studio Araçlar Seçenekleri **Hata Ayıklama**  >  **Sembolleri**  >  **(veya** Hata  >   Ayıklama **Seçenekleri**  >  **Sembolleri)**  >  **'i açın.**
+1. Bu Visual Studio Araçlar Seçenekleri **Hata Ayıklama** Sembolleri (veya Hata Ayıklama Seçenekleri  >    >    >     >  **Sembolleri)**  >  **'i açın.**
 
 2. Sembol **dosyası (.pdb) konumları altında,**
    - Microsoft Sembol **Sunucularını veya** **NuGet.org Sembol Sunucusunu kullanmak** için onay kutusunu işaretleyin.
@@ -122,17 +122,17 @@ Araçlar **Seçenekleri**  >  **Hata**  >  **Ayıklama Sembolleri**  >  **sayfas
      1. Metin alanına sembol sunucusunun URL'sini (http), ağ paylaşımını veya simge konumunun yerel yolunu yazın. Deyimi tamamlama doğru biçimi bulmanıza yardımcı olur.
 
      ::: moniker range=">= vs-2022"
-     ![Tools &#45; Options &#45; Debugging &#45; Symbols sayfası](media/vs-2022/dbg-options-symbols.png "Tools &#45; Options &#45; Debugging &#45; Symbols sayfası")
+     ![Tools &#45; Options &#45; Debugging &#45; Symbols sayfası](media/vs-2022/dbg-options-symbols.png "Araçlar &#45; seçenekler &#45; hata ayıklama &#45; semboller sayfası")
      ::: moniker-end
      ::: moniker range="<= vs-2019"
-     ![Tools &#45; Options &#45; Debugging &#45; Symbols sayfası](media/dbg-options-symbols.gif "Tools &#45; Options &#45; Debugging &#45; Symbols sayfası")
+     ![Tools &#45; Options &#45; Debugging &#45; Symbols sayfası](media/dbg-options-symbols.gif "Araçlar &#45; seçenekler &#45; hata ayıklama &#45; semboller sayfası")
      ::: moniker-end
 
      >[!NOTE]
      >Yalnızca belirtilen klasör aranır. Aramak istediğiniz alt klasörler için girdiler eklemeniz gerekir.
 
    - Yeni bir VSTS Sembol Sunucusu konumu eklemek için,
-     1. Araç ![çubuğundaKimlik&#47; Seçenekler&#47;'&#47;Simgeler yeni sunucu](media/dbg_tools_options_foldersicon.png "Tools &#45; Options &#45; Debugging &#45; Symbols new server icon") simgesi simgesini seçin.
+     1. Araç ![çubuğundaKimlik&#47; Seçenekler&#47;'&#47;Simgeler yeni sunucu](media/dbg_tools_options_foldersicon.png "Araçlar &#45; seçenekler &#45; hata ayıklama &#45; simgeler yeni sunucu simgesi") simgesi simgesini seçin.
      1. **VSTS Bağlan Sunucusuna** Ekle iletişim kutusunda, kullanılabilir sembol sunucularından birini seçin ve sonra da **Bağlan.**
 
    - Sembol konumlarını yükleme sıralarını değiştirmek için **Ctrl** Yukarı ve Ctrl Down tuşlarını veya Yukarı ve +   +  **Aşağı ok** **simgelerini** kullanın.
@@ -167,13 +167,13 @@ Araçlar Seçenekler Hata Ayıklama Genel **(veya Hata**  >  **Ayıklama Seçene
 
   Kaynak veya sembol dosyaları bulunamadığnda her zaman disassembly gösterilir.
 
-  ![Genel &#47; seçenekleri &#47; hata ayıklama seçenekleri](../debugger/media/dbg-options-general-disassembly-checkbox.png "Genel &#47; seçenekleri &#47; hata ayıklama seçenekleri")
+  ![Genel &#47; seçenekleri &#47; hata ayıklama seçenekleri](../debugger/media/dbg-options-general-disassembly-checkbox.png "Seçenekler &#47; hata ayıklama &#47; genel ayrıştırma seçenekleri")
 
 - **Kaynak sunucu desteğini etkinleştirme**
 
-  Yerel makinede kaynak kodu yoksa veya *.pdb* dosyası kaynak kodla eşleşmezse uygulamanın hata ayıklamasında yardımcı olması için Kaynak Sunucu'ya yardımcı olur. Kaynak Sunucu, dosyalar için istekleri alır ve kaynak denetiminden gerçek dosyaları döndürür. Kaynak Sunucu, uygulamanın *.pdb* *dosyasınısrcsrv.dll* adlı DLL kullanılarak çalışır. *.pdb* dosyası, kaynak kod deposuna işaretçilerin yanı sıra depodan kaynak kodu almak için kullanılan komutları içerir.
+  Yerel makinede kaynak kodu yoksa veya *.pdb* dosyası kaynak kodla eşleşmezse uygulamanın hata ayıklamasında yardımcı olması için Kaynak Sunucu'ya yardımcı olur. Kaynak Sunucu, dosyalar için istekleri alır ve kaynak denetiminden gerçek dosyaları döndürür. Kaynak Sunucu, uygulamanın *.pdb* *srcsrv.dll* içinsrcsrv.dlladlı bir DLL kullanarak çalışır. *.pdb* dosyası, kaynak kod deposuna işaretçilerin yanı sıra depodan kaynak kodu almak için kullanılan komutları içerir.
 
-  srcsrv.dlladlı *bir* dosyada izin verilen komutları listeleerek uygulamanın *.pdb* dosyasından yürütebilirsiniz komutlarını *sınırsrcsrv.ini.* *srcsrv.ini* dosyasını *srcsrv.dll* ve *devenv.exe* aynı klasöre yerleştirin.
+  srcsrv.iniadlısrcsrv.dll *bir dosyada* izin verilen komutları listeleerek uygulamanın *.pdb* dosyasından yürütebilirsiniz *srcsrv.ini.* *srcsrv.ini* dosyasını *srcsrv.dll* ve *devenv.exe* aynı klasöre yerleştirin.
 
   >[!IMPORTANT]
   >Rastgele komutlar uygulamanın *. pdb* dosyasına katıştırılabildiğinden, yalnızca yürütmek istediğiniz komutları bir *srcsrv.ini* dosyasına yerleştirdiğinizden emin olun. *srcsvr.ini* dosyasında olmayan bir komutu yürütme girişimi, bir onay iletişim kutusunun görüntülenmesine neden olur. Daha fazla bilgi için bkz. [güvenlik uyarısı: hata ayıklayıcı güvenilmeyen komut yürütmelidir](../debugger/security-warning-debugger-must-execute-untrusted-command.md).
@@ -284,9 +284,9 @@ Hata ayıklayıcının kaynak dosyalarını arayacağı konumları belirtebilir 
 
 1. **Bu kaynak dosyalara bakmayın** altında, aramadan dışlanacak kaynak dosyalarının adlarını yazın.
 
-1. **Tamam'ı veya** Uygula'yi **seçin.**
+1. **Tamam ' ı** veya **Uygula**' yı seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sembol dosyalarını ve Visual Studio ayarlarını anlama](https://devblogs.microsoft.com/devops/understanding-symbol-files-and-visual-studios-symbol-settings/)
+- [sembol dosyalarını ve Visual Studio sembol ayarlarını anlama](https://devblogs.microsoft.com/devops/understanding-symbol-files-and-visual-studios-symbol-settings/)
 
-- [2012 ve 2013 Visual Studio .NET uzak sembol yükleme değişiklikleri](https://devblogs.microsoft.com/devops/net-remote-symbol-loading-changes-in-visual-studio-2012-and-2013/)
+- [.net uzak sembol Visual Studio 2012 ve 2013 değişikliklerini yükleme](https://devblogs.microsoft.com/devops/net-remote-symbol-loading-changes-in-visual-studio-2012-and-2013/)
