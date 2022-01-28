@@ -54,7 +54,7 @@
       href: run-a-unit-test-as-a-64-bit-process.md
     - name: .runsettings dosyasını kullanarak birim testlerini yapılandırma
       href: configure-unit-tests-by-using-a-dot-runsettings-file.md
-    - name: Çalışırken Yeniden Yükleme ile Yürütmeyi Test Çalışırken Yeniden Yükleme
+    - name: Dinamik yeniden yükleme ile test yürütmesi
       href: test-execution-with-hot-reload.md
     - name: Yönetilen kod için birim testleri yazma
       items:
@@ -109,9 +109,7 @@
       items:
         - name: C++ UWP DLL’ye birim testi uygulama
           href: unit-testing-a-visual-cpp-dll-for-store-apps.md
-        - name: UWP uygulamalarında Visual C# koduna birim testi uygulama
-          href: unit-testing-visual-csharp-code-in-a-store-app.md
-        - name: 'İzlenecek yol: UWP uygulamaları için birim testleri oluşturma ve çalıştırma'
+        - name: UWP uygulamaları için birim testleri oluşturma & çalıştırma
           href: walkthrough-creating-and-running-unit-tests-for-windows-store-apps.md
     - name: Kod kapsamı
       items:
@@ -123,9 +121,9 @@
           href: troubleshooting-code-coverage.md
     - name: Geçiş
       items:
-        - name: MSTestV1'den MSTestV2'ye yükseltme
+        - name: MSTestV1 'den MSTestV2 'ye yükseltme
           href: mstest-update-to-mstestv2.md
-        - name: Testsetting'leri runsetting'lere geçirme
+        - name: Testsettings 'ı runsettings 'e geçirin
           href: migrate-testsettings-to-runsettings.md
 - name: Live Unit Testing
   items:
@@ -404,5 +402,5 @@
       href: lab-management/use-build-or-rm-instead-of-lab-management.md
     - name: Test aracılarını ve test denetleyicilerini yükleme
       href: lab-management/install-configure-test-agents.md
-- name: Visual Studio uzaktan test
+- name: Visual Studio'de uzaktan test
   href: remote-testing.md

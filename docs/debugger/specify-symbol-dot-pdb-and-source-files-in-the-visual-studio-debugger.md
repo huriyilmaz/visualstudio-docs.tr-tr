@@ -1,6 +1,7 @@
 ---
-title: Hata ayıklayıcısında sembol (.pdb) ve kaynak dosyaları ayarlama
-description: Kaynak dosyalarında sembol ve kaynak dosyaları yapılandırmayı ve yönetmeyi Visual Studio
+title: Hata ayıklayıcısında sembol / PDB Visual Studio
+titleSuffix: ''
+description: Kaynak dosyaları & ve bu dosyaları hata ayıklayıcısında yapılandırmayı Visual Studio öğrenin.
 ms.date: 12/12/2021
 ms.custom: contperf-fy21q4
 ms.topic: how-to
@@ -30,12 +31,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 786e1216faab3da3701361ac7ecd1433211072ea
-ms.sourcegitcommit: ebd651e00fe3bae5914c211c4828219bf7d1fc70
+ms.openlocfilehash: 942d53d65ba000f618580d1781ce8bfcaba368f6
+ms.sourcegitcommit: abd19232659447bc9bf946692a5de49130416bad
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "137798593"
+ms.lasthandoff: 01/28/2022
+ms.locfileid: "137831771"
 ---
 # <a name="specify-symbol-pdb-and-source-files-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>Visual Studio hata ayıklayıcısında (C#, C++, Visual Basic, F#) sembolünü (.pdb) ve kaynak dosyaları belirtin
 
@@ -171,9 +172,9 @@ Araçlar Seçenekler Hata Ayıklama Genel **(veya Hata**  >  **Ayıklama Seçene
 
 - **Kaynak sunucu desteğini etkinleştirme**
 
-  Yerel makinede kaynak kodu yoksa veya *.pdb* dosyası kaynak kodla eşleşmezse uygulamanın hata ayıklamasında yardımcı olması için Kaynak Sunucu'ya yardımcı olur. Kaynak Sunucu, dosyalar için istekleri alır ve kaynak denetiminden gerçek dosyaları döndürür. Kaynak Sunucu, uygulamanın *.pdb* *srcsrv.dll* içinsrcsrv.dlladlı bir DLL kullanarak çalışır. *.pdb* dosyası, kaynak kod deposuna işaretçilerin yanı sıra depodan kaynak kodu almak için kullanılan komutları içerir.
+  Yerel makinede kaynak kodu yoksa veya *.pdb* dosyası kaynak kodla eşleşmezse uygulamanın hata ayıklamasında yardımcı olması için Kaynak Sunucu'ya yardımcı olur. Kaynak Sunucu, dosyalar için istekleri alır ve kaynak denetiminden gerçek dosyaları döndürür. Kaynak Sunucu, uygulamanın *.pdb* *srcsrv.dll* adlı DLL kullanılarak çalışır. *.pdb* dosyası, kaynak kod deposuna işaretçilerin yanı sıra depodan kaynak kodu almak için kullanılan komutları içerir.
 
-  srcsrv.iniadlısrcsrv.dll *bir dosyada* izin verilen komutları listeleerek uygulamanın *.pdb* dosyasından yürütebilirsiniz *srcsrv.ini.* *srcsrv.ini* dosyasını *srcsrv.dll* ve *devenv.exe* aynı klasöre yerleştirin.
+  srcsrv.iniadlı bir *srcsrv.dll* izin verilen komutları listeleerek uygulamanın *.pdb* dosyasından yürütebilirsiniz komutlarını *sınırsrcsrv.ini.* *srcsrv.ini* dosyasını *srcsrv.dll* ve *devenv.exe* aynı klasöre yerleştirin.
 
   >[!IMPORTANT]
   >Rastgele komutlar uygulamanın *. pdb* dosyasına katıştırılabildiğinden, yalnızca yürütmek istediğiniz komutları bir *srcsrv.ini* dosyasına yerleştirdiğinizden emin olun. *srcsvr.ini* dosyasında olmayan bir komutu yürütme girişimi, bir onay iletişim kutusunun görüntülenmesine neden olur. Daha fazla bilgi için bkz. [güvenlik uyarısı: hata ayıklayıcı güvenilmeyen komut yürütmelidir](../debugger/security-warning-debugger-must-execute-untrusted-command.md).

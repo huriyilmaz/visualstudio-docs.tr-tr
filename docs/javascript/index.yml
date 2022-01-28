@@ -10,21 +10,19 @@ metadata:
   ms.author: mikejo
   manager: jmartens
   ms.date: 10/15/2019
-  ms.openlocfilehash: bd85f7e864a5901eed51989ee51fc55eea521ccc
-  ms.sourcegitcommit: 65a1b6aae8387735f05a83b45e1a6865e9805e1f
+  ms.openlocfilehash: 8089365a04f662758516efa383782374f1cf6762
+  ms.sourcegitcommit: abd19232659447bc9bf946692a5de49130416bad
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 10/01/2021
-  ms.locfileid: "129339887"
+  ms.lasthandoff: 01/28/2022
+  ms.locfileid: "137831330"
 landingContent:
 - title: Kullanmaya başlayın
   linkLists:
   - linkListType: overview
     links:
-    - text: Visual Studio 2022'de JavaScript ve TypeScript
+    - text: Visual Studio’da JavaScript ve TypeScript
       url: javascript-in-vs-2022.md
-    - text: Visual Studio 2019'da JavaScript ve TypeScript
-      url: javascript-in-vs-2019.md
   - linkListType: how-to-guide
     links:
     - text: Visual Studio'yu yükleme
@@ -37,7 +35,7 @@ landingContent:
   linkLists:
   - linkListType: quickstart
     links:
-    - text: Angular Oluşturma
+    - text: Angular Uygulama Oluşturma
       url: tutorial-create-angular-app.md
     - text: React Oluşturma
       url: tutorial-create-react-app.md
