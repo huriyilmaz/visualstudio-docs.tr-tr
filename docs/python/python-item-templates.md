@@ -10,12 +10,12 @@ ms.technology: vs-python
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: a2780d54d3c49c3255e877124627e09840d2b83b
-ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
+ms.openlocfilehash: 71cfdded0d1778221ead1f9b59ba3530294fae36
+ms.sourcegitcommit: f303d052e451bcfd4722b99a9adbcb3f575d1678
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "129971081"
+ms.lasthandoff: 01/27/2022
+ms.locfileid: "137816797"
 ---
 # <a name="python-item-templates"></a>Python öğe şablonları
 
@@ -38,7 +38,6 @@ Aşağıdaki tablo, bir Python projesindeki her öğe şablonunun etkisini kısa
 | **Stil sayfası** | İçin boş bir stil içeren bir *. css* dosyası `body` . |
 | **Metin dosyası** | Boş bir *.txt* dosyası. |
 | **Docgo 1,9 uygulaması**<br/>**Docgo 1,4 uygulaması** | bir docgo uygulamasının çekirdek dosyalarını içeren bir klasör, [Visual Studio docgo hakkında bilgi edinin,](learn-django-in-visual-studio-step-02-create-an-app.md#step-2-1-create-an-app-with-a-default-structure) docgo 1,9 için 2-2. adıma bakın. Docgo 1,4 için, *geçişler* klasörü, *admin.py* dosyası ve *Apps.py* dosyası dahil değildir. |
-| **IronPython WPF penceresi** | İki yan yana dosyadan oluşan bir WPF penceresi: boş bir öğesi ile tanımlayan *. xaml* dosyası `<Window>` `<Grid>` ve kitaplığı kullanarak xaml dosyasını yükleyen ilişkili *. Kopyala* dosyası. `wpf` Genellikle IronPython proje şablonlarından biri kullanılarak oluşturulan bir proje içinde kullanılır. bkz. [Python projelerini yönetme-Project şablonları](managing-python-projects-in-visual-studio.md#project-templates). |
 | **Web rolü destek dosyaları** | Proje kökündeki bir *bin* klasörü (projedeki seçili klasöre bakılmaksızın). Klasör, Azure Cloud Service Web rolleri için bir varsayılan dağıtım betiği ve bir *web.config* dosyası içerir. Şablon, ayrıntıları açıklayan bir *readme.html* dosyası da içerir. |
 | **Çalışan rolü destek dosyaları** | Proje kökündeki bir *bin* klasörü (projedeki seçili klasöre bakılmaksızın). Klasör, Azure bulut hizmeti çalışan rolleri için bir *web.config* dosyası ile birlikte varsayılan dağıtım ve başlatma betiği içerir. Şablon, ayrıntıları açıklayan bir *readme.html* dosyası da içerir. |
 | **Azure web.config (FastCGI)** | Gelen bağlantıları işlemek için bir [WSGI](https://wsgi.readthedocs.io/en/latest/) nesnesi kullanan uygulamalar için girişleri içeren bir *web.config* dosyası. Bu dosya genellikle IIS çalıştıran bir Web sunucusunun köküne dağıtılır. Daha fazla bilgi için bkz. [IIS için uygulama yapılandırma](configure-web-apps-for-iis-windows.md). |

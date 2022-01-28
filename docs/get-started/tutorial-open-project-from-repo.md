@@ -1,8 +1,8 @@
 ---
 title: 'Öğretici: Visual Studio bir depoyu bir proje açın'
-description: Visual Studio ile bir Git veya Azure DevOps deposundaki bir projeyi açmayı öğrenin.
+description: Visual Studio kullanarak klonladığınız bir Git veya Azure DevOps deposunda bir projeyi açmayı öğrenin.
 ms.custom: vs-acquisition, get-started
-ms.date: 11/11/2021
+ms.date: 01/27/2022
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: tutorial
@@ -14,16 +14,16 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 619a9cacfdf272bb6b76e0115b90edddf2c73180
-ms.sourcegitcommit: d38d1b083322019663fec7d1d85a4cda456aadca
+ms.openlocfilehash: 9ef7cb2c9a96e8599941179c6aebbc836665a741
+ms.sourcegitcommit: f303d052e451bcfd4722b99a9adbcb3f575d1678
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2021
-ms.locfileid: "135534170"
+ms.lasthandoff: 01/27/2022
+ms.locfileid: "137816732"
 ---
 # <a name="tutorial-open-a-project-from-a-repo"></a>Öğretici: bir depodan bir proje açın
 
-bu öğreticide, bir depoya ilk kez bağlanmak ve ardından bir projeyi açmak için Visual Studio kullanacaksınız.
+bu öğreticide, bir depoya ilk kez bağlanmak, onu kopyalamanız ve sonra bir projeyi açmak için Visual Studio kullanacaksınız.
 
 Visual Studio henüz yüklemediyseniz, [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına giderek ücretsiz yükleme yapın.
 
@@ -384,16 +384,16 @@ Aşağıdaki dile özgü öğreticilerden herhangi birine daha fazla bilgi alabi
 
 ::: moniker range="<=vs-2019"
 
-- [Visual Studio git deneyimi](../version-control/git-with-visual-studio.md)
-- [Git ve Takım Gezgini yan yana karşılaştırın](../version-control/git-team-explorer-feature-comparison.md)
-- [Microsoft Learn: Visual Studio Git ve GitHub kullanmaya başlama](/learn/modules/visual-studio-github-push/)
-- [Microsoft Learn: Azure DevOps kullanmaya başlama](/learn/modules/get-started-with-devops/)
-- [Azure DevOps Services: Azure Repos ve Visual Studio kullanmaya başlayın](/azure/devops/repos/git/gitquickstart/)
+- [Visual Studio'de Git deneyimi](../version-control/git-with-visual-studio.md)
+- [Git ile Takım Gezgini yan yana karşılaştırma](../version-control/git-team-explorer-feature-comparison.md)
+- [Microsoft Learn: Kullanmaya başlayın Git ve GitHub ile Visual Studio](/learn/modules/visual-studio-github-push/)
+- [Microsoft Learn: Kullanmaya başlayın ile Azure DevOps](/learn/modules/get-started-with-devops/)
+- [Azure DevOps Services: Kullanmaya başlayın ve Azure Repos ile Visual Studio](/azure/devops/repos/git/gitquickstart/)
 
 ::: moniker-end
 
 ::: moniker range="vs-2022"
 
-[sürüm denetimi belgelerini Visual Studio](../version-control/index.yml)
+[Visual Studio denetimi belgeleri](../version-control/index.yml)
 
 ::: moniker-end
