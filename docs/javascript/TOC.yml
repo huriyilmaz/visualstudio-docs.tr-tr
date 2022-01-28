@@ -2,12 +2,8 @@
   href: index.yml
 - name: Genel Bakış
   items:
-    - name: Visual Studio 2022 ' de JavaScript
-      href: javascript-in-vs-2022.md
-    - name: Visual Studio 2019’de JavaScript
-      href: javascript-in-vs-2019.md
-    - name: Visual Studio 2017’de JavaScript
-      href: javascript-in-vs-2017.md
+    - name: Visual Studio’da JavaScript
+      href: javascript-in-visual-studio.md
 - name: Hızlı Başlangıçlar
   items:
     - name: Visual Studio IDE’ye ilk bakış
