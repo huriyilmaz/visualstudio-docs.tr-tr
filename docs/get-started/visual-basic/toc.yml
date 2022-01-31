@@ -21,8 +21,39 @@
       href: tutorial-wpf.md
     - name: Web uygulaması oluşturma
       href: /aspnet/web-pages/overview/getting-started/introducing-razor-syntax-vb
-    - name: Windows Forms uygulaması oluşturma
+- name: ilk Windows Forms uygulamanızı oluşturma
+  expanded: true
+  items:
+    - name: basit bir Windows Forms uygulaması oluşturma
       href: ../../ide/create-a-visual-basic-winform-in-visual-studio.md?toc=/visualstudio/get-started/visual-basic/toc.json&bc=/visualstudio/get-started/visual-basic/breadcrumb/toc.json
+    - name: 'Öğretici 1: resim görüntüleyici oluşturma (VB)'
+      items:
+        - name: 1. Resim görüntüleyici uygulaması oluşturma
+          href: ../csharp/tutorial-windows-forms-picture-viewer-layout.md
+        - name: 2. Uygulamaya denetimler ekleyin
+          href: ../csharp/tutorial-windows-forms-picture-viewer-controls.md
+        - name: '3. Uygulamayı kodlayın, test edin ve çalıştırın'
+          href: ../csharp/tutorial-windows-forms-picture-viewer-code.md
+    - name: 'Öğretici 2: zamanlı matematik testi oluşturma (VB)'
+      items:
+        - name: 1. Matematik test uygulaması oluşturma
+          href: ../csharp/tutorial-windows-forms-math-quiz-create-project-add-controls.md
+        - name: 2. Uygulamaya matematik sorunları ekleme
+          href: ../csharp/tutorial-windows-forms-math-quiz-add-math-problems.md
+        - name: 3. Uygulamaya süreölçer ekleme
+          href: ../csharp/tutorial-windows-forms-math-quiz-add-timer.md
+        - name: 4. Uygulamayı özelleştirme
+          href: ../csharp/tutorial-windows-forms-math-quiz-customize-ui.md
+    - name: 'Öğretici 3: eşleşen oyun oluşturma (VB)'
+      items:
+        - name: 1. Eşleşen bir oyun oluşturun
+          href: ../csharp/tutorial-windows-forms-create-match-game.md
+        - name: 2. Eşleştirme oyununuza simgeler ekleme
+          href: ../csharp/tutorial-windows-forms-match-game-icons.md
+        - name: 3. Etiketler ve Zamanlayıcı ekleme
+          href: ../csharp/tutorial-windows-forms-match-game-labels.md
+        - name: 4. Eşleşme oyununuzu oynatın
+          href: ../csharp/tutorial-windows-forms-match-game-play.md
 - name: Visual Studio'yu öğrenin
   expanded: true
   items:

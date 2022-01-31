@@ -63,7 +63,7 @@
                   href: install/troubleshooting-network-related-errors-in-visual-studio.md
         - name: Bir kurumda dağıtma
           items:
-            - name: Yönetici güncelleştirmeleri uygulanıyor
+            - name: Yönetici güncelleştirmelerini uygulama
               href: install/applying-administrator-updates.md
             - name: Yönetici güncelleştirmelerini etkinleştirme
               href: install/enabling-administrator-updates.md
@@ -85,7 +85,7 @@
           items:
             - name: Visual Studio örneklerini algılamaya ve yönetmeye yönelik araçlar
               href: install/tools-for-managing-visual-studio-instances.md
-            - name: bir ağdan yüklenen bir Visual Studio örneğini güncelleştirme
+            - name: Ağdan Visual Studio bir örnek güncelleştirme
               href: install/update-a-network-installation-of-visual-studio.md
             - name: Bakım temeli sırasında Visual Studio’yu güncelleştirme
               href: install/update-servicing-baseline.md
@@ -152,7 +152,7 @@
     - name: 'C#: Web uygulaması oluşturma'
       href: ide/quickstart-aspnet-core.md
     - name: 'C#: Konsol uygulaması oluşturma'
-      href: ide/quickstart-csharp-console.md
+      href: get-started/csharp/tutorial-console.md
     - name: 'Visual Basic: Konsol uygulaması oluşturma'
       href: ide/quickstart-visual-basic-console.md
     - name: 'Node.js: Web uygulaması oluşturma'
@@ -166,7 +166,7 @@
   items:
     - name: C++ >>
       href: /cpp/get-started/tutorial-console-cpp
-    - name: C#   >>
+    - name: C#  >>
       href: get-started/csharp/
     - name: Visual Basic  >>
       href: get-started/visual-basic/
@@ -174,7 +174,7 @@
       href: javascript/
     - name: Python  >>
       href: python/
-    - name: 'F #   >>'
+    - name: F#  >>
       href: /dotnet/fsharp/
 - name: Geliştirme
   items:
@@ -196,7 +196,7 @@
           href: get-started/tutorial-open-project-from-repo.md
         - name: 'Projeleri taşıma, geçirme ve yükseltme'
           href: porting/port-migrate-and-upgrade-visual-studio-projects.md
-        - name: Çözüm Gezgini hakkında bilgi edinin
+        - name: Çözüm Gezgini hakkında bilgi Çözüm Gezgini
           href: ide/use-solution-explorer.md
         - name: Proje ve çözüm özelliklerini yönetme
           href: ide/managing-project-and-solution-properties.md
@@ -442,7 +442,7 @@
                   href: ide/reference/regex-completion-through-intellisense.md
                 - name: Erişilemeyen kodları kaldırma
                   href: ide/reference/remove-unreachable-code.md
-                - name: Kullanılmayan başvuruları kaldır
+                - name: Kullanılmayan başvuruları kaldırma
                   href: ide/reference/remove-unused-references.md
                 - name: Rename
                   href: ide/reference/rename.md
@@ -649,36 +649,6 @@
               items:
                 - name: System.Windows.Forms API >>
                   href: /dotnet/api/system.windows.forms
-            - name: Öğreticiler
-              items:
-                - name: 'Öğretici 1: Resim görüntüleyici oluşturma (C#)'
-                  items:
-                    - name: 1. Resim Görüntüleyicisi uygulaması oluşturma
-                      href: ide/tutorial-windows-forms-picture-viewer-layout.md
-                    - name: 2. Uygulamaya denetim ekleme
-                      href: ide/tutorial-windows-forms-picture-viewer-controls.md
-                    - name: '3. Uygulamayı kodla, test edin ve çalıştırın'
-                      href: ide/tutorial-windows-forms-picture-viewer-code.md
-                - name: 'Öğretici 2: Zamanlı matematik testi oluşturma (C#)'
-                  items:
-                    - name: 1. Matematik testi uygulamasını oluşturma
-                      href: ide/tutorial-windows-forms-math-quiz-create-project-add-controls.md
-                    - name: 2. Uygulamaya matematik sorunları ekleme
-                      href: ide/tutorial-windows-forms-math-quiz-add-math-problems.md
-                    - name: 3. Uygulamaya zamanlayıcı ekleme
-                      href: ide/tutorial-windows-forms-math-quiz-add-timer.md
-                    - name: 4. Uygulamayı özelleştirme
-                      href: ide/tutorial-windows-forms-math-quiz-customize-ui.md
-                - name: 'Öğretici 3: Eşleştirme oyunu oluşturma (C#)'
-                  items:
-                    - name: 1. Eşleştirme oyunu oluşturma
-                      href: ide/tutorial-windows-forms-create-match-game.md
-                    - name: 2. Eşleşme oyunnize simgeler ekleme
-                      href: ide/tutorial-windows-forms-match-game-icons.md
-                    - name: 3. Etiket ve zamanlayıcı ekleme
-                      href: ide/tutorial-windows-forms-match-game-labels.md
-                    - name: 4. Maç oyunlarınızı oynatma
-                      href: ide/tutorial-windows-forms-match-game-play.md
         - name: F#
           items:
             - name: F# geliştirme

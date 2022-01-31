@@ -23,12 +23,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 1651cb8004603311cab6ea1f429b2917c1cf50e0a8f432f888f901b1a1b467a6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 3b57372fd69e8c8076a19a3904454ac623cbedb7
+ms.sourcegitcommit: 20f9529648e69707063dccb2b15089bf4e9bf639
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121443782"
+ms.lasthandoff: 01/31/2022
+ms.locfileid: "137886455"
 ---
 # <a name="copy-task"></a>Kopyalama görevi
 
@@ -36,17 +36,17 @@ Dosyaları, dosya sisteminde yeni bir konuma kopyalar.
 
 ## <a name="parameters"></a>Parametreler
 
-Aşağıdaki tablo, görevin parametrelerini açıklar `Copy` .
+Aşağıdaki tablo, görevin parametrelerini `Copy` açıklar.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`CopiedFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Gerçekten kopyalanmamış, ancak zaten güncel olduğundan atlandığı *için, başarıyla* kopyalanan öğeleri içerir `SkipUnchangedFiles` `true` .|
+|`CopiedFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Gerçekten kopyalanmamış, ancak zaten güncel olduğundan atlandığı için `SkipUnchangedFiles` `true` *, başarıyla* kopyalanan öğeleri içerir.|
 |`DestinationFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> Kaynak dosyaların kopyalanacağı dosyaların listesini belirtir. Bu listenin, `SourceFiles` parametresinde belirtilen liste ile bire bir eşlenir olması beklenir. Yani, `SourceFiles` içinde belirtilen ilk dosya `DestinationFiles` içinde belirtilen ilk konuma kopyalanır ve böyle devam eder.|
 |`DestinationFolder`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> Dosyaları kopyalamak istediğiniz dizini belirtir. Bu, bir dosya değil, bir dizin olmalıdır. Eğer dizin yoksa otomatik olarak oluşturulur.|
 |`OverwriteReadOnlyFiles`|İsteğe bağlı `Boolean` parametre.<br /><br /> Salt okunur dosyalar olarak işaretlenmiş olsa bile dosyaların üzerine yaz|
-|`Retries`|İsteğe bağlı `Int32` parametre.<br /><br /> Eğer önceki tüm denemeler başarısız olursa, kopyalamanın kaç kere deneneceğini belirtir. Varsayılan olarak sıfırdır.<br /><br /> **Dikkat:** Yeniden denemeler kullanımı, yapı sürecinizdeki bir eşitleme sorununu maskeleyebilir.<br /><br /> **Note:** *Görev* varsayılanı sıfır yeniden deneme olsa da, `$(CopyRetryCount)` Varsayılan olarak sıfır dışı olan görev genellikle geçişi kullanır.|
+|`Retries`|İsteğe bağlı `Int32` parametre.<br /><br /> Eğer önceki tüm denemeler başarısız olursa, kopyalamanın kaç kere deneneceğini belirtir. Varsayılan olarak sıfırdır.<br /><br /> **Dikkat:** Yeniden denemeler kullanımı, yapı sürecinizdeki bir eşitleme sorununu maskeleyebilir.<br /><br /> **Note:** *Görev* varsayılanı sıfır yeniden deneme olsa da, varsayılan olarak sıfır dışı olan görev genellikle geçişi `$(CopyRetryCount)` kullanır.|
 |`RetryDelayMilliseconds`|İsteğe bağlı `Int32` parametre.<br /><br /> Gerekli yeniden denemeler arasındaki gecikmeyi belirtir. Varsayılan olarak, CopyTask oluşturucusuna geçirilen RetryDelayMillisecondsDefault değerini kullanır.|
-|`SkipUnchangedFiles`|İsteğe bağlı `Boolean` parametre.<br /><br /> Eğer `true` ise, kaynak ve hedef arasında değişmeyen dosyaların kopyalanmasını atlar. `Copy` görevi, dosyalar aynı boyuta ve aynı son değiştirme tarihine sahipse bu dosyaları değişmemiş kabul eder. <br /><br /> **Note:**  Bu parametreyi ' a ayarlarsanız `true` ,, yalnızca kaynak dosyaların son değiştirilme zamanları hedef dosyaların son değiştirilme zamanından daha yeniyse görevi çalıştırdığı için, kapsayan hedefte bağımlılık analizini kullanmamalısınız.|
+|`SkipUnchangedFiles`|İsteğe bağlı `Boolean` parametre.<br /><br /> Eğer `true` ise, kaynak ve hedef arasında değişmeyen dosyaların kopyalanmasını atlar. `Copy` görevi, dosyalar aynı boyuta ve aynı son değiştirme tarihine sahipse bu dosyaları değişmemiş kabul eder. <br /><br /> **Note:**  Bu parametreyi ' a ayarlarsanız,, yalnızca kaynak dosyaların son değiştirilme zamanları hedef dosyaların son değiştirilme zamanından daha yeniyse görevi çalıştırdığı için `true` , kapsayan hedefte bağımlılık analizini kullanmamalısınız.|
 |`SourceFiles`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Kopyalanacak dosyaları belirtir.|
 |`UseHardlinksIfPossible`|İsteğe bağlı `Boolean` parametre.<br /><br /> Eğer `true` ise, dosyaları kopyalamak yerine kopyalanan dosyalar için Sabit Bağlantılar oluşturur.|
 
@@ -74,11 +74,11 @@ Aşağıdakiler dahil olmak üzere uyarılar günlüğe kaydedilir:
 
 `DestinationFolder` veya `DestinationFiles` parametresinin belirtilmesi gerekir, ancak ikisi birden belirtilmemelidir. Eğer her ikisi de belirtilirse görev başarısız olur ve bir hata günlüğe kaydedilir.
 
-Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
+Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralınan <xref:Microsoft.Build.Utilities.Task> parametreleri <xref:Microsoft.Build.Tasks.TaskExtension> devralır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="example-1"></a>Örnek 1
 
-Aşağıdaki örnek, `MySourceFiles` öğe koleksiyonundaki öğeleri *C:\myproject\destination* klasörüne kopyalar.
+Aşağıdaki örnek, öğe koleksiyonundaki öğeleri `MySourceFiles` *C:\myproject\destination* klasörüne kopyalar.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -104,11 +104,15 @@ Aşağıdaki örnek, yinelemeli bir kopyalamanın nasıl gerçekleştirileceğin
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
-    <ItemGroup>
-        <MySourceFiles Include="c:\MySourceTree\**\*.*"/>
-    </ItemGroup>
-
     <Target Name="CopyFiles">
+        <ItemGroup>
+            <!-- Because this ItemGroup is inside the target, this will enumerate
+                 all files just before calling Copy. If the ItemGroup were outside
+                 the target , it would enumerate the files during evaluation, before
+                 the build starts, which may miss files created during the build. -->
+            <MySourceFiles Include="c:\MySourceTree\**\*.*"/>
+        </ItemGroup>
+
         <Copy
             SourceFiles="@(MySourceFiles)"
             DestinationFiles="@(MySourceFiles->'c:\MyDestinationTree\%(RecursiveDir)%(Filename)%(Extension)')"

@@ -1,23 +1,23 @@
 ### YamlMime:Landing
-title: Kodda düzenleme ve düzenleme Visual Studio
-summary: Kod projeleriyle çalışma, kod düzenleyicisi özelliklerini kullanma ve tutarlı kod stilini koruma hakkında bilgi öğrenin.
+title: Visual Studio kodu düzenleme ve düzenleme
+summary: Kod projeleri ile çalışma, kod Düzenleyicisi özelliklerini kullanma ve tutarlı kod stili koruma hakkında bilgi edinin.
 metadata:
-  title: Kod düzenleyicisi özellikleri
-  description: Visual Studio'daki kod düzenleme özellikleri hakkında bilgi Visual Studio.
+  title: Kod Düzenleyicisi özellikleri
+  description: Visual Studio 'de kod düzenlemesi özellikleri hakkında bilgi edinin.
   ms.prod: visual-studio-windows
   ms.technology: vs-ide-general
   ms.topic: landing-page
   author: terryglee
   ms.author: tglee
   ms.date: 10/15/2019
-  ms.openlocfilehash: 45e648730c3d93bf63ee395ea1c75e80519ab4930fddf0e58f2698067e95956d
-  ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+  ms.openlocfilehash: 02449f4cd83aeba2e887f4037141e79bc3729535
+  ms.sourcegitcommit: 20f9529648e69707063dccb2b15089bf4e9bf639
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 08/12/2021
-  ms.locfileid: "121357849"
+  ms.lasthandoff: 01/31/2022
+  ms.locfileid: "137886546"
 landingContent:
-- title: Proje açma veya oluşturma
+- title: Proje açın veya oluşturun
   linkLists:
   - linkListType: tutorial
     links:
@@ -27,21 +27,21 @@ landingContent:
       url: ../get-started/tutorial-open-project-from-repo.md
   - linkListType: how-to-guide
     links:
-    - text: Proje Visual Studio çözüm olmadan kaynak kullanma
+    - text: proje veya çözüm olmadan Visual Studio kullanma
       url: develop-code-in-visual-studio-without-projects-or-solutions.md
-    - text: Arama Visual Studio kullanma
+    - text: Visual Studio arama kullan
       url: visual-studio-search.md
-- title: Düzenleme özelliklerini kullanma
+- title: Özellikleri Düzenle özelliğini kullanma
   linkLists:
   - linkListType: overview
     links:
     - text: Kod düzenleyicisini kullanma
       url: writing-code-in-the-code-and-text-editor.md
-    - text: Kodda gezinme
+    - text: Koda git
       url: navigating-code.md
     - text: Kod oluşturma ve düzeltme
       url: code-generation-in-visual-studio.md
-    - text: Kod tamamlama için IntelliSense kullanma
+    - text: Kod tamamlama için IntelliSense 'i kullanma
       url: using-intellisense.md
     - text: Kod stili tercihlerini yönetme
       url: code-styles-and-code-cleanup.md
@@ -49,17 +49,19 @@ landingContent:
       url: ../code-quality/roslyn-analyzers-overview.md
     - text: IntelliCode
       url: /visualstudio/intellicode/intellicode-visual-studio
-- title: Kullanmaya başlayın dilleriyle programlama
+- title: Programlama dilleri ile çalışmaya başlama
   linkLists:
   - linkListType: tutorial
     links:
-    - text: Kullanmaya başlayın C# ve ASP.NET Core ile Visual Studio
+    - text: ASP.NET Core C# ve Visual Studio ile çalışmaya başlama
       url: ../get-started/csharp/tutorial-aspnet-core.md
-    - text: Visual Studio'de C++ konsol uygulaması oluşturma
+    - text: Visual Studio bir C++ konsol uygulaması oluşturma
       url: /cpp/get-started/tutorial-console-cpp
-    - text: Kullanmaya başlayın Python ile Visual Studio
+    - text: Visual Studio 'de Python ile çalışmaya başlama
       url: quickstart-python.md
-    - text: Visual Basic ile konsol uygulaması oluşturma
+    - text: 'C ile bir konsol uygulaması oluşturma #'
+      url: ../get-started/csharp/tutorial-console.md
+    - text: Visual Basic bir konsol uygulaması oluşturma
       url: quickstart-visual-basic-console.md
-    - text: Node.js ile web uygulaması oluşturma
+    - text: Node.js bir Web uygulaması oluşturma
       url: quickstart-nodejs.md

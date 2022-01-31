@@ -2,7 +2,7 @@
 title: 2. adım, görünümler Visual Studio şablonlarda Flask öğreticisini öğrenin
 titleSuffix: ''
 description: Özel olarak uygulama oluşturma ve görünümleri ve şablonları kullanma Visual Studio flask temel bilgilerine yönelik kılavuz.
-ms.date: 01/07/2019
+ms.date: 01/26/2022
 ms.topic: tutorial
 author: rjmolyneaux
 ms.author: rmolyneaux
@@ -11,12 +11,12 @@ ms.technology: vs-python
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 0863d7dc681f7fb71d0344f4b2f3dd3e583520d3
-ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
+ms.openlocfilehash: d678b3a306c515f0eb745360611bcbaad441af61
+ms.sourcegitcommit: 20f9529648e69707063dccb2b15089bf4e9bf639
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "129968455"
+ms.lasthandoff: 01/31/2022
+ms.locfileid: "137887196"
 ---
 # <a name="step-2-create-a-flask-app-with-views-and-page-templates"></a>2. Adım: Görünümler ve sayfa şablonlarıyla bir Flask uygulaması oluşturma
 
@@ -32,11 +32,11 @@ Bu adımda şimdi şunların nasıl olduğunu öğreniriz:
 
 ## <a name="step-2-1-refactor-the-project-to-support-further-development"></a>2-1. Adım: Daha fazla geliştirmeyi desteklemek için projeyi yeniden düzenleme
 
-"Blank Flask Web Project" şablonu tarafından oluşturulan kodda, tek bir *görünümle* birlikte başlangıç app.py içeren tek bir app.py dosyanız vardır. Birden çok görünüme ve şablona sahip bir uygulamanın daha fazla geliştirilmesine olanak vermek için en iyisi bu endişeleri ayırmaktır.
+"Blank Flask Web Project" şablonu tarafından oluşturulan kodda, tek bir *görünümle birlikte başlangıç app.py* içeren tek bir app.py dosyanız vardır. Birden çok görünüme ve şablona sahip bir uygulamanın daha fazla geliştirilmesine olanak vermek için en iyisi bu endişeleri ayırmaktır.
 
-1. Proje klasörünüzde adlı bir uygulama klasörü oluşturun (Çözüm Gezgini'da projeye sağ tıklayın ve Yeni Klasör `HelloFlask`    >  **Ekle'yi seçin.)**
+1. Proje klasörünüzde adlı bir uygulama klasörü oluşturun `HelloFlask` (Çözüm Gezgini'da projeye sağ **tıklayın** ve **EkleYeni** >  **Klasör'e tıklayın**.)
 
-2. *HelloFlask* klasöründe örneği oluşturan ve uygulamanın görünümlerini yükleyen aşağıdaki içeriklerle *\_ \_ init \_ \_ .py* adlı bir dosya oluşturun (sonraki adımda `Flask` oluşturulur):
+2. *HelloFlask* klasöründe örneği *\_\_oluşturan ve uygulamanın görünümlerini yükleyen aşağıdaki içeriklerle init.py\_\_* `Flask` adlı bir dosya oluşturun (sonraki adımda oluşturulur):
 
     ```python
     from flask import Flask
@@ -45,7 +45,7 @@ Bu adımda şimdi şunların nasıl olduğunu öğreniriz:
     import HelloFlask.views
     ```
 
-3. *HelloFlask klasöründe* aşağıdaki içeriklerle *views.py* adlı bir dosya oluşturun. Init  `import HelloFlask.views` *\_ \_ \_ \_ .py views.py de* kullanılan adlar önemli olduğundan, adlar eşleşmezse çalışma zamanında bir hata alırsınız.
+3. *HelloFlask klasöründe* aşağıdaki içeriklerle *views.py* adlı bir dosya oluşturun.  `import HelloFlask.views` *\_\_Init.py\_\_* views.py de kullanılan adlar önemli olduğundan, adlar eşleşmezse çalışma zamanında bir hatayla karşı karşınız olur.
 
     ```python
     from flask import Flask
@@ -57,11 +57,11 @@ Bu adımda şimdi şunların nasıl olduğunu öğreniriz:
         return "Hello Flask!"
     ```
 
-    İşlevi ve yolu olarak yeniden adı eklemenin yanı sıra, bu kod app.py sayfasından sayfa işleme kodunu içerir ve init .py içinde bildirilen nesneyi `home`  `app` içeri *\_ \_ \_ \_ aktarıyor.*
+    İşlevi ve `home`yolu olarak yeniden eklemenin yanı sıra, bu kod *app.py* `app` sayfasından sayfa işleme kodunu içerir ve *init.py\_\_ içinde\_\_ bildirilen nesneyi içeri aktarıyor*.
 
-4. *HelloFlask'ta templates* *adlı* bir alt klasör oluşturun ve bu klasör şimdilik boş kalır.
+4. *HelloFlask'ta templates* adlı bir *alt* klasör oluşturun ve bu klasör şimdilik boş kalır.
 
-5. Projenin kök klasöründe, dosya adını *app.py* *runserver.py* olarak yeniden adlandırarak içeriğinin aşağıdaki kodla eşleşmesini sağlar:
+5. Projenin kök klasöründe, dosya adını app.py *runserver.py* ve  içeriğinin aşağıdaki kodla eşleşmesini sağlar:
 
     ```python
     import os
@@ -82,9 +82,9 @@ Bu adımda şimdi şunların nasıl olduğunu öğreniriz:
 
     ![Project yeniden düzenleme sonrasında yapıyı yeniden düzenleme](media/flask/step02-project-structure.png)
 
-7. Hata **AyıklamaYı**  >  **Başlat** (**F5**) öğesini seçin veya uygulamayı başlatmak ve bir tarayıcı açmak için araç **çubuğundaki Web Sunucusu** düğmesini (gördüğünüz tarayıcı farklılık gösterebilir) kullanın. / ve /home URL yollarını deneyin.
+7. Hata **Ayıklama Hata** >  **Ayıklamayı Başlat** (**F5**) öğesini seçin veya uygulamayı başlatmak ve bir tarayıcı açmak için araç **çubuğundaki Web Sunucusu** düğmesini (gördüğünüz tarayıcı farklılık gösterebilir) kullanın. / ve /home URL yollarını deneyin.
 
-8. Ayrıca kodun çeşitli kısımlarında kesme noktaları ayarp başlatma sırasını takip etmek için uygulamayı yeniden başlatabilirsiniz. Örneğin, runserver.py ve *\_ HelloFlask'ın* *ilk* satırlarında *.py* init_ bir kesme noktası ayarlayın ve `return "Hello Flask!"` views.py.  Ardından uygulamayı **yeniden** başlatın ( Yeniden Başlat ,  >   **Ctrl** + **Shift** + **F5** veya aşağıda gösterilen araç çubuğu düğmesi) ve kodun üzerinden (**F10**) geçin veya F5 kullanarak her kesme noktası üzerinden çalıştırın.
+8. Ayrıca kodun çeşitli kısımlarında kesme noktaları ayarp başlatma sırasını takip etmek için uygulamayı yeniden başlatabilirsiniz. Örneğin, *runserver.py* ve *HelloFlask\_* init_ *.py'nin*`return "Hello Flask!"` ilk satırlarında ve *views.py.* Ardından uygulamayı yeniden başlatın (**DebugRestart** > , **CtrlShiftF5**++ veya aşağıda gösterilen araç çubuğu düğmesi) ve kodun üzerinden (**F10**) geçin veya **F5** kullanarak her kesme noktası üzerinden çalıştırın.
 
     ![Hata ayıklama araç çubuğundaki Yeniden Başlat düğmesi Visual Studio](media/debugging-restart-toolbar-button.png)
 
@@ -94,11 +94,11 @@ Bu adımda şimdi şunların nasıl olduğunu öğreniriz:
 
 Kodunuz üzerinde değişiklikler yaptığınız ve bunları başarıyla test ettiyebilirsiniz. Şimdi değişikliklerinizi gözden geçirebilirsiniz ve kaynak denetimine işebilirsiniz. Bu öğreticinin sonraki adımlarında, kaynak denetimine yeniden işlemeniz için uygun zamanları anımsatır ve bu bölüme geri dönersiniz.
 
-1. Öğesinin (aşağıda daire içine Visual Studio) altındaki değişiklikler düğmesini seçin ve bu düğmeyi **Takım Gezgini.**
+1. Uygulamanın (aşağıda daire içine Visual Studio) altındaki değişiklikler düğmesini seçin ve bu düğmeyi **Takım Gezgini.**
 
     ![Durum çubuğundaki kaynak denetimi Visual Studio düğmesi](media/flask/step02-source-control-changes-button.png)
 
-1. Bu **Takım Gezgini**" Kodu yeniden düzenleme" gibi bir işleme iletisi girin ve Hepsini **İşle'yi seçin.** Yürütme tamamlandığında, Yerel olarak oluşturulmuş bir Commit **\<hash> iletisiyle karşılanır. Değişikliklerinizi sunucuyla paylaşmak için eşitle.** Değişiklikleri uzak depoya itmek için Eşitle'yi ve **ardından** Giden Commit'ler altında **Gönder'i seçin.**  Uzak işlemeye itmeden önce birden çok yerel işleme de biriktirin.
+1. Bu **Takım Gezgini** "Kodu yeniden düzenleme" gibi bir işleme iletisi girin ve Hepsini İşle'yi **seçin**. Yürütme tamamlandığında, Yerel olarak oluşturulmuş bir Commit **iletisiyle \<hash> karşılanır. Değişikliklerinizi sunucuyla paylaşmak için eşitle.** Değişiklikleri uzak depoya itmek için Eşitle'yi **ve** ardından Giden Commit'ler'in **altından** **Gönder'i seçin**. Uzak işlemeye itmeden önce birden çok yerel işleme de biriktirin.
 
     ![Uzak depolamada uzak işlemeleri Takım Gezgini](media/flask/step02-source-control-push-to-remote.png)
 
@@ -106,15 +106,15 @@ Kodunuz üzerinde değişiklikler yaptığınız ve bunları başarıyla test et
 
 Cevap: Değişiklikleri kaynak denetimine işlemek, değişiklik günlüğünde bir kayıt oluşturur ve gerekirse depoyu geri döndüren bir nokta oluşturur. Her işlemenin belirli değişiklikleri de incelendi. Git'te işlemeler uygun maliyetli olduğundan, tek bir işlemede çok sayıda değişiklik biriktirmek yerine sık işlemeler yapmak daha iyidir. Açıkça görülüyor ki her küçük değişikliği tek tek dosyalara işlemeye gerek yok. Genellikle bir özellik eklerken, bu adımda olduğu gibi bir yapıyı değiştirirken veya bazı kod yeniden düzenlemeleri yapılırken işleme yapılır. Ayrıca herkes için en iyi şekilde çalışacak işlemelerin ayrıntısı için takımınıza başkalarını da kontrol edin.
 
-Ne sıklıkta işlemeniz ve uzak bir depoya işlemeleri ne sıklıkta ittmeniz iki farklı endişedir. Yerel depoda birden çok işlemeyi uzak depoya itmeden önce biriktirin. Yine işleme sıklık dereceniz, takımınız depoyu nasıl yönetmek istediğine bağlıdır.
+Ne sıklıkta işlemeniz ve uzak depoya işlemeleri ne sıklıkta ittmek iki farklı endişedir. Yerel depoda birden çok işlemeyi uzak depoya itmeden önce biriktirin. Yine işleme sıklık dereceniz, takımınız depoyu nasıl yönetmek istediğine bağlıdır.
 
 ## <a name="step-2-2-use-a-template-to-render-a-page"></a>2.-2. Adım: Sayfayı işlemek için şablon kullanma
 
-Şu ana kadar içinde sahip views.py, sayfa için düz metin `home` HTTP yanıtından başka bir şey oluşturmaz.  Ancak gerçek dünya web sayfalarının çoğu genellikle canlı verileri içeren zengin HTML sayfalarıyla yanıt verir. Aslında işlev kullanarak bir görünüm tanımlamanın birincil nedeni içeriği dinamik olarak oluşturmaktır.
+Şu `home` ana kadar *views.py işlevi,* sayfa için düz metin HTTP yanıtından başka bir şey oluşturmaz. Ancak gerçek dünya web sayfalarının çoğu genellikle canlı verileri içeren zengin HTML sayfalarıyla yanıt verir. Aslında işlev kullanarak bir görünüm tanımlamanın birincil nedeni, içeriği dinamik olarak oluşturmaktır.
 
 Görünümün dönüş değeri yalnızca bir dize olduğundan, dinamik içeriği kullanarak bir dize içinde, herhangi bir HTML oluşturabilirsiniz. Ancak, işaretlemeyi verilerden ayırmanın en iyisi olduğundan, işaretlemeyi bir şablona yer ve verileri kodda tutmak çok daha iyidir.
 
-1. Başlangıç olarak, *sayfa views.py* satır içi HTML kullanan aşağıdaki kodu içermek için sayfayı düzenleyin:
+1. Başlangıç olarak, *sayfa views.py* satır içi HTML kullanan aşağıdaki kodu içermesi için sayfayı düzenleyin ve bazı dinamik içerikler ekleyin:
 
     ```python
     from datetime import datetime
@@ -136,7 +136,7 @@ Görünümün dönüş değeri yalnızca bir dize olduğundan, dinamik içeriği
 
 1. Tarihin/saatin güncelleştirilmiş olduğunu görmek için uygulamayı çalıştırın ve sayfayı birkaç kez yenileyin. Bitirinca uygulamayı durdurun.
 
-1. Sayfa işlemeyi şablon kullanmak üzere dönüştürmek için, *templates* klasöründe aşağıdaki içeriğe sahipindex.htmladlı bir dosya oluşturun. Burada, kodda bir değer temin etmek için bir yer tutucu veya değiştirme belirteci (şablon değişkeni olarak da  `{{ content }}` denir) bulunur: 
+1. Sayfa işlemeyi şablon kullanmak üzere dönüştürmek için, *templates* klasöründe aşağıdaki içeriğe sahipindex.htmladlı bir dosya oluşturun. Burada, `{{ content }}` kodda bir değer temin etmek için bir yer tutucu veya değiştirme belirteci (şablon değişkeni olarak da ** *denir) bulunur*:
 
     ```html
     <html>
@@ -148,7 +148,7 @@ Görünümün dönüş değeri yalnızca bir dize olduğundan, dinamik içeriği
     </html>
     ```
 
-1. Şablonu yüklemek ve yer tutucu adıyla eşleşen adlandırılmış bir bağımsız değişken kullanılarak yapılan "content" için bir değer sağlamak için `home` `render_template` işlevini kullanmak üzere değiştirme. Flask şablonlar klasöründe şablonları otomatik *olarak* aramaz, bu nedenle şablonun yolu bu klasöre göredir:
+1. Şablonu yüklemek `home` ve yer tutucu `render_template` adıyla eşleşen adlandırılmış bir bağımsız değişken kullanılarak yapılan "content" için bir değer sağlamak için işlevini kullanmak üzere değiştirme. Flask şablonlar klasöründe şablonları otomatik *olarak* aramaz, bu nedenle şablonun yolu bu klasöre göredir:
 
     ```python
     def home():
@@ -160,9 +160,9 @@ Görünümün dönüş değeri yalnızca bir dize olduğundan, dinamik içeriği
             content = "<strong>Hello, Flask!</strong> on " + formatted_now)
     ```
 
-1. Sonuçları görmek için uygulamayı çalıştırın ve `content` templating engine (Jinja)  html içeriğine otomatik olarak kaçışı olduğundan değer içinde satır içi HTML'nin HTML olarak işlenmez. Otomatik kaçış, ekleme saldırılarında yanlışlıkla güvenlik açıklarını önler: Geliştiriciler genellikle bir sayfadan giriş toplar ve şablon yer tutucusu aracılığıyla bunu başka bir sayfada değer olarak kullanır. Kaçış ayrıca HTML kodunun dışında tutmanın en iyisi olduğunu anımsatıcı olarak da görevdir.
+1. Sonuçları görmek için uygulamayı çalıştırın ve templating engine (Jinja) html içeriğine otomatik olarak kaçışı olduğundan değer içinde satır *içi HTML'nin* `content` HTML olarak işlenmez. Otomatik kaçış, ekleme saldırılarında yanlışlıkla güvenlik açıklarını önler: Geliştiriciler genellikle bir sayfadan giriş toplar ve şablon yer tutucusu aracılığıyla bunu başka bir sayfada değer olarak kullanır. Kaçış, HTML kodunun dışında tutmanın yeniden en iyi olduğunu anımsatıcı olarak da görev sağlar.
 
-    Buna uygun olarak, *templates\index.html* her veri parçası için ayrı yer tutucular içermesi için aşağıdaki bilgileri gözden geçirebilirsiniz:
+    Buna uygun olarak, *templates\index.html* biçimlendirme içindeki her veri parçası için ayrı yer tutucular içermesi için aşağıdaki bilgileri gözden geçirebilirsiniz:
 
     ```html
     <html>
@@ -175,7 +175,7 @@ Görünümün dönüş değeri yalnızca bir dize olduğundan, dinamik içeriği
     </html>
     ```
 
-    Ardından işlevi `home` tüm yer tutuculara değer sağlayacak şekilde güncelleştirin:
+    Ardından işlevi tüm `home` yer tutuculara değer sağlayacak şekilde güncelleştirin:
 
     ```python
     def home():
@@ -193,7 +193,7 @@ Görünümün dönüş değeri yalnızca bir dize olduğundan, dinamik içeriği
 
     ![Şablon kullanarak uygulama çalıştırma](media/flask/step02-result.png)
 
-1. İsterseniz, [2-1.](#commit-to-source-control)adım altında açıklandığı gibi değişikliklerinizi kaynak denetimine işin ve uzak depoyu güncelleştirin.
+1. İsterseniz, 2-1. adım altında açıklandığı gibi değişikliklerinizi kaynak denetimine işin ve uzak [depoyu güncelleştirin](#commit-to-source-control).
 
 ### <a name="question-do-page-templates-have-to-be-in-a-separate-file"></a>Soru: Sayfa şablonlarının ayrı bir dosyada olması gerekir mi?
 
@@ -201,13 +201,13 @@ Cevap: Şablonlar genellikle ayrı HTML dosyalarında korunsa da satır içi şa
 
 ### <a name="question-must-templates-use-the-html-file-extension"></a>Soru: Şablonlar dosya uzantısını .html mı?
 
-Cevap: *.html* dosyanın göreli yolunu işlevin ilk bağımsız değişkende her zaman tam olarak tanımlaysınız, sayfa şablonu dosyaları için uzantı tamamen `render_template` isteğe bağlıdır. Ancak Visual Studio (ve diğer düzenleyiciler) genellikle.htmldosyalarıyla kod tamamlama  ve söz dizimi renklendirmesi gibi özellikler sağlar ve bu da sayfa şablonlarının tamamen HTML olmadığının ağır basıyor olmasıdır.
+Cevap: *.html* dosyanın göreli yolunu işlevin ilk bağımsız değişkende her zaman tam olarak tanımlaysınız, sayfa şablonu dosyaları için uzantı tamamen isteğe `render_template` bağlıdır. Ancak Visual Studio (ve diğer düzenleyiciler) genellikle.htmldosyalarıyla kod tamamlama ve söz dizimi renklendirmesi gibi özellikler sunar ** ve bu da sayfa şablonlarının tamamen HTML olmadığını gösterir.
 
-Aslında, bir Flask projesiyle çalışırken, Visual Studio html dosyasının gerçekten bir Flask şablonu olduğunu otomatik olarak algılar ve belirli otomatik tamamlama özellikleri sağlar. Örneğin, bir Flask sayfa şablonu açıklaması yazmaya `{#` başladığınızda, Visual Studio otomatik olarak kapatma karakterleri `#}` verir. Açıklama **Seçimi ve** **Açıklama Seçimini Kaldır komutları** (Gelişmiş Düzenle menüsünde ve araç çubuğunda) HTML açıklamalarının yerine şablon   >   açıklamalarını da kullanır.
+Aslında, bir Flask projesiyle çalışırken, Visual Studio html dosyası aslında bir Flask şablonu olduğunda otomatik olarak algılar ve belirli otomatik tamamlama özellikleri sağlar. Örneğin, bir Flask sayfa şablonu açıklaması yazmaya başladığınızda, `{#`Visual Studio otomatik olarak kapatma karakterleri `#}` verir. Açıklama **Seçimi ve** **Açıklama Seçimini Kaldır** komutları (**EditAdvanced**  >  menüsünde ve araç çubuğunda) HTML açıklamalarının yerine şablon açıklamalarını da kullanır.
 
 ### <a name="question-can-templates-be-organized-into-further-subfolders"></a>Soru: Şablonlar daha fazla alt klasöre düzenleniyor mu?
 
-Cevap: Evet, alt klasörleri kullanabilir ve ardından çağrısında şablonlar altındaki *göreli yola* `render_template` başvurabilirsiniz. Bunu yapmak, şablonlarınız için etkili bir şekilde ad alanları oluşturmanın harika bir yoludur.
+Cevap: Evet, alt klasörleri kullanabilir ve ardından çağrısında şablonlar altındaki *göreli yola* başvurabilirsiniz `render_template`. Bunu yapmak, şablonlarınız için etkili bir şekilde ad alanları oluşturmanın harika bir yoludur.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

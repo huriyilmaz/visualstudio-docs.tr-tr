@@ -26,8 +26,39 @@
       href: tutorial-uwp.md
     - name: WPF uygulaması oluşturma
       href: tutorial-wpf.md
-    - name: Windows Forms uygulaması oluşturma
-      href: ../../ide/create-csharp-winform-visual-studio.md?toc=/visualstudio/get-started/csharp/toc.json&bc=/visualstudio/get-started/csharp/breadcrumb/toc.json
+    - name: ilk Windows Forms uygulamanızı oluşturma
+      expanded: true
+      items:
+        - name: basit bir Windows Forms uygulaması oluşturma
+          href: ../../ide/create-csharp-winform-visual-studio.md?toc=/visualstudio/get-started/csharp/toc.json&bc=/visualstudio/get-started/csharp/breadcrumb/toc.json
+        - name: 'Öğretici 1: Resim görüntüleyici oluşturma (C#)'
+          items:
+            - name: 1. Resim görüntüleyici uygulaması oluşturma
+              href: tutorial-windows-forms-picture-viewer-layout.md
+            - name: 2. Uygulamaya denetimler ekleyin
+              href: tutorial-windows-forms-picture-viewer-controls.md
+            - name: '3. Uygulamayı kodlayın, test edin ve çalıştırın'
+              href: tutorial-windows-forms-picture-viewer-code.md
+        - name: 'Öğretici 2: Zamanlı matematik testi oluşturma (C#)'
+          items:
+            - name: 1. Matematik test uygulaması oluşturma
+              href: tutorial-windows-forms-math-quiz-create-project-add-controls.md
+            - name: 2. Uygulamaya matematik sorunları ekleme
+              href: tutorial-windows-forms-math-quiz-add-math-problems.md
+            - name: 3. Uygulamaya süreölçer ekleme
+              href: tutorial-windows-forms-math-quiz-add-timer.md
+            - name: 4. Uygulamayı özelleştirme
+              href: tutorial-windows-forms-math-quiz-customize-ui.md
+        - name: 'Öğretici 3: Eşleştirme oyunu oluşturma (C#)'
+          items:
+            - name: 1. Eşleşen bir oyun oluşturun
+              href: tutorial-windows-forms-create-match-game.md
+            - name: 2. Eşleştirme oyununuza simgeler ekleme
+              href: tutorial-windows-forms-match-game-icons.md
+            - name: 3. Etiketler ve Zamanlayıcı ekleme
+              href: tutorial-windows-forms-match-game-labels.md
+            - name: 4. Eşleşme oyununuzu oynatın
+              href: tutorial-windows-forms-match-game-play.md
 - name: Visual Studio'yu öğrenin
   expanded: true
   items:

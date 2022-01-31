@@ -2,7 +2,7 @@
 title: Visual Studio 4. adım, web projesi şablonundaki docgo öğreticisini öğrenin
 titleSuffix: ''
 description: Visual Studio projeler bağlamında, özellikle de docgo Web Project şablonu tarafından sunulan özellikler hakkında docgo hakkında bir anlatım.
-ms.date: 11/19/2018
+ms.date: 01/25/2022
 ms.topic: tutorial
 author: rjmolyneaux
 ms.author: rmolyneaux
@@ -11,12 +11,12 @@ ms.technology: vs-python
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: fefb60bae9b195e6f71a1058feb39f3fa3ef7f2d
-ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
+ms.openlocfilehash: 7a5c2803f099d25252a18a0e709335aa4c1d4af3
+ms.sourcegitcommit: 20f9529648e69707063dccb2b15089bf4e9bf639
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "129968650"
+ms.lasthandoff: 01/31/2022
+ms.locfileid: "137886624"
 ---
 # <a name="step-4-use-the-full-django-web-project-template"></a>4. adım: tam docgo Web Project şablonunu kullanma
 
@@ -35,7 +35,7 @@ Bu adımda Şu anda şunları yapabilirsiniz:
 
 ## <a name="step-4-1-create-a-project-from-the-template"></a>Adım 4-1: Şablondan proje oluşturma
 
-1. Visual Studio, **Çözüm Gezgini**' e gidin, bu öğreticide daha önce oluşturulan **learningdocgo** çözümüne sağ tıklayın ve   >  **yeni Project** ekle ' yi seçin. (Alternatif olarak, yeni bir çözüm kullanmak isterseniz **Dosya**  >  ' yı seçin. **Yeni**  >  bunun yerine **Project** .)
+1. Visual Studio, **Çözüm Gezgini**' e gidin, bu öğreticide daha önce oluşturulan **learningdocgo** çözümüne sağ tıklayın ve **yeni Project** **ekle**  >  ' yi seçin. (Alternatif olarak, yeni bir çözüm kullanmak isterseniz **Dosya**  >  ' yı seçin. **Yeni**  >  bunun yerine **Project** .)
 
 1. yeni proje iletişim kutusunda, **docgo web Project** şablonunu arayıp seçin, "docgoweb" projesini çağırın ve **tamam**' ı seçin.
 
@@ -47,7 +47,7 @@ Bu adımda Şu anda şunları yapabilirsiniz:
 
     ![Docgoweb projesini başlangıç projesi olarak gösteren Çözüm Gezgini](media/django/step04-second-project-in-solution-set-as-startup-project.png)
 
-1. Sunucuyu çalıştırmak için **hata ayıklama**  >  **başlatma hata ayıklamayı Başlat** (**F5**) veya araç çubuğundaki **Web sunucusu** düğmesini seçin:
+1.  > Sunucuyu çalıştırmak için hata ayıklama **başlatma hata ayıklamayı Başlat** (**F5**) veya araç çubuğundaki **Web sunucusu** **düğmesini seçin:**
 
     ![Visual Studio Web sunucusu araç çubuğu düğmesini Çalıştır](media/django/run-web-server-toolbar-button.png)
 
@@ -87,7 +87,7 @@ Bununla birlikte, mevcut bir sanal ortamı kullanmak için şunları yapın:
 
 ## <a name="step-4-2-understand-the-views-and-page-templates-created-by-the-project-template"></a>Adım 4-2: proje şablonu tarafından oluşturulan görünümleri ve sayfa şablonlarını anlayın
 
-Projeyi çalıştırdığınızda gözlemleyeceksiniz, uygulama üç görünüm içerir: Home, hakkında ve Ilgili kişi. Bu görünümlerin kodu *App/views* klasöründe bulunur. Her görünüm işlevi `django.shortcuts.render` , bir şablon yolunu ve basit bir sözlük nesnesini çağırır. Örneğin, hakkında sayfası işlevi tarafından işlenir `about` :
+Projeyi çalıştırdığınızda gözlemleyeceksiniz, uygulama üç görünüm içerir: Home, hakkında ve Ilgili kişi. Bu görünümlerin kodu *App/views* klasöründe bulunur. Her görünüm işlevi, bir şablon yolunu ve basit bir sözlük nesnesini çağırır `django.shortcuts.render` . Örneğin, hakkında sayfası işlevi tarafından `about` işlenir:
 
 ```python
 def about(request):
@@ -144,7 +144,7 @@ def about(request):
 </html>
 ```
 
-Tek tek sayfa şablonları, *about.html*, *contact.html* ve *index.html*, her biri temel şablonu *layout.html* genişletir. En basit *about.html* ve `{% extends %}` etiketlerini gösterir `{% block content %}` :
+Tek tek sayfa şablonları, *about.html*, *contact.html* ve *index.html*, her biri temel şablonu *layout.html* genişletir. En basit *about.html* ve etiketlerini gösterir `{% extends %}` `{% block content %}` :
 
 ```html
 {% extends "app/layout.html" %}
@@ -161,7 +161,7 @@ Tek tek sayfa şablonları, *about.html*, *contact.html* ve *index.html*, her bi
 
 *index.html* ve *contact.html* aynı yapıyı kullanır ve "içerik" bloğunda tablodan içerik sağlar.
 
-*Şablonlar/App* klasöründe ayrıca, *layout.html* ' e getirilen *loginpartial.html* birlikte dördüncü bir sayfa *login.html* `{% include %}` . Bu şablon dosyaları, kimlik doğrulamasında 5. adımda ele alınmıştır.
+*Şablonlar/App* klasöründe ayrıca, *layout.html* `{% include %}` ' e getirilen *loginpartial.html* birlikte dördüncü bir sayfa *login.html*. Bu şablon dosyaları, kimlik doğrulamasında 5. adımda ele alınmıştır.
 
 ### <a name="question-can--block--and--endblock--be-indented-in-the-django-page-template"></a>Soru: {% Block%} ve {% endblock%}, Docgo sayfa şablonunda girintilenebilir mi?
 
@@ -204,7 +204,7 @@ urlpatterns = [
 ]
 ```
 
-İlk üç URL deseni `home` , `contact` `about` uygulamanın *views.py* dosyasındaki, ve görünümleriyle doğrudan eşlenir. Desenler `^login/$` ve `^logout$` diğer yandan, uygulama tanımlı görünümler yerine yerleşik Docgo görünümlerini kullanın. Yöntemine yapılan çağrılar, `url` görünümü özelleştirmek için ek veriler de içerir. 5. adım bu çağrıları araştırır.
+İlk üç URL deseni, uygulamanın *views.py* dosyasındaki, `contact` ve `about` görünümleriyle doğrudan `home` eşlenir. Desenler `^login/$` ve `^logout$` diğer yandan, uygulama tanımlı görünümler yerine yerleşik Docgo görünümlerini kullanın. Yöntemine yapılan çağrılar `url` , görünümü özelleştirmek için ek veriler de içerir. 5. adım bu çağrıları araştırır.
 
 ### <a name="question-in-the-project-i-created-why-does-the-about-url-pattern-uses-about-instead-of-about-as-shown-here"></a>Soru: oluşturduğum projede neden "About" URL deseninin, burada gösterildiği gibi ' ^ about $ ' yerine ' ^ about ' kullanması gerekir mi?
 

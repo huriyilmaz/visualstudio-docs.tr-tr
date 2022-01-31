@@ -1,7 +1,7 @@
 ---
 title: Python için Web uygulaması şablonları
-description: Visual Studio, şişe, flask ve docgo çerçeveleri kullanarak Python web uygulamalarına yönelik şablonlar sağlar; destek, hata ayıklama konfigürasyonları ve Azure App Service yayımlamayı içerir.
-ms.date: 01/28/2019
+description: Visual Studio, şişe, flask ve docgo çerçeveleri kullanarak Python web uygulamalarına yönelik şablonlar sağlar; destek, hata ayıklama yapılandırması ve Azure App Service yayımlamayı içerir.
+ms.date: 01/27/2022
 ms.topic: conceptual
 author: rjmolyneaux
 ms.author: rmolyneaux
@@ -10,12 +10,12 @@ ms.technology: vs-python
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 56a9f0bc78d942d34ce0a2aadfd9f7a59becd7c8
-ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
+ms.openlocfilehash: 781bd02c562eab13609aec3d0bbe11065a7984c5
+ms.sourcegitcommit: 20f9529648e69707063dccb2b15089bf4e9bf639
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "129972914"
+ms.lasthandoff: 01/31/2022
+ms.locfileid: "137887118"
 ---
 # <a name="python-web-application-project-templates"></a>Python web uygulaması proje şablonları
 
@@ -27,7 +27,7 @@ Python web uygulamasını Azure 'a dağıtma hakkında bilgi için bkz. [Azure A
 
 ## <a name="use-a-project-template"></a>Proje şablonu kullanma
 
-  >  **yeni**  >  **Project** dosya kullanarak bir şablondan proje oluşturursunuz. Web projelerine yönelik şablonları görmek için   >  iletişim kutusunun sol tarafındaki Python **Web** ' i seçin. Ardından seçtiğiniz bir şablonu seçin, proje ve çözüm için adlar sağlayıp bir çözüm dizini ve git deposu için seçenekleri ayarlayın ve **Tamam**' ı seçin.
+**yeni**  >  **Project** **dosya**  >  kullanarak bir şablondan proje oluşturursunuz. Web projelerine yönelik şablonları görmek için iletişim kutusunun sol tarafındaki **Python**  >  **Web** ' i seçin. Ardından seçtiğiniz bir şablonu seçin, proje ve çözüm için adlar sağlayıp bir çözüm dizini ve git deposu için seçenekleri ayarlayın ve **Tamam**' ı seçin.
 
 ![Web uygulamaları için yeni proje iletişim kutusu](media/projects-new-project-dialog-web.png)
 
@@ -51,9 +51,9 @@ tüm **boş \<framework> Web Project** şablonları, daha fazla veya daha az ort
 
 | Şablon | Description |
 | --- | --- |
-| **Boş şişe Web Project** | , İçin bir giriş sayfası  `/` ve `/hello/<name>` `<name>` çok kısa bir satır içi sayfa şablonu kullanarak yankı sağlayan bir sayfa olan App.py içinde en az bir uygulama oluşturur. |
+| **Boş şişe Web Project** | , İçin `/` bir giriş sayfası ve çok kısa bir satır içi sayfa şablonu kullanarak yankı `<name>` sağlayan bir `/hello/<name>` sayfa olan *app.py* içinde en az bir uygulama oluşturur. |
 | **Boş Docgo Web Project** | Core Docgo site yapısıyla bir Docgo projesi oluşturur, ancak Docgo uygulaması yoktur. Daha fazla bilgi için bkz. [docgo şablonları](python-django-web-application-project-template.md) ve [docgo 1. adımı öğrenme](learn-django-in-visual-studio-step-01-project-and-solution.md). |
-| **Boş Flask Web Project** | Tek bir "Merhaba Dünya!" ile en az bir uygulama üretir sayfası `/` . bu uygulama, [hızlı başlangıç: ilk Python web uygulamanızı oluşturmak için Visual Studio kullanma](../ide/quickstart-python.md?toc=/visualstudio/python/toc.json&bc=/visualstudio/python/_breadcrumb/toc.json)sonucuna benzer. Ayrıca bkz. [Flask adımını öğrenin 1](learn-flask-visual-studio-step-01-project-solution.md).
+| **Boş Flask Web Project** | Tek bir "Merhaba Dünya!" ile en az bir uygulama üretir `/`sayfası. bu uygulama, [hızlı başlangıç: ilk Python web uygulamanızı oluşturmak için Visual Studio kullanma](../ide/quickstart-python.md?toc=/visualstudio/python/toc.json&bc=/visualstudio/python/_breadcrumb/toc.json)sonucuna benzer. Ayrıca bkz. [Flask adımını öğrenin 1](learn-flask-visual-studio-step-01-project-solution.md).
 
 ### <a name="web-group"></a>Web grubu
 
@@ -72,7 +72,7 @@ tüm **\<Framework> Web Project** şablonları, seçilen çerçeveden bağımsı
 
 | Şablon | Description |
 | --- | --- |
-| **Şişe Web Project yoklar** | ortam değişkeni kullanılarak yapılandırılan, bellek içi veritabanı, mongodb veya Azure tablo Depolama karşı çalışabilen bir uygulama oluşturur `REPOSITORY_NAME` . Veri modelleri ve veri deposu kodu *modeller* klasöründe bulunur ve *Settings.py* dosyası, hangi veri deposunun kullanıldığını belirleyen kodu içerir. |
+| **Şişe Web Project yoklar** | ortam değişkeni kullanılarak `REPOSITORY_NAME` yapılandırılan, bellek içi veritabanı, mongodb veya Azure tablo Depolama karşı çalışabilen bir uygulama oluşturur. Veri modelleri ve veri deposu kodu *modeller* klasöründe bulunur ve *Settings.py* dosyası, hangi veri deposunun kullanıldığını belirleyen kodu içerir. |
 | **Docgo Web Project yoklar** | Üç sayfa ve bir SQLite veritabanı ile Docgo projesi ve Docgo uygulaması oluşturur. Kimliği doğrulanmış bir yöneticinin yoklamaları oluşturmasına ve yönetmesine izin vermek için Docgo yönetim arabirimine özelleştirmeler içerir. Daha fazla bilgi için bkz. [docgo şablonları](python-django-web-application-project-template.md) ve [docgo 6. adımı öğrenin](learn-django-in-visual-studio-step-06-polls-django-web-project-template.md). |
 | **Flask/Jade Web Project yoklar** | , **flask Web Project** şablonuyla aynı uygulamayı ve jınja şablon oluşturma altyapısı için jade uzantısını kullanarak oluşturur. |
 ::: moniker-end
@@ -96,56 +96,56 @@ bir web projesi hata ayıklama için başlatıldığında, Visual Studio rastgel
 **Hata ayıklama** grubunda:
 
 - **Arama yolları**, **betik bağımsız değişkenleri**, **yorumlayıcı bağımsız değişkenleri** ve **yorumlayıcı yolu**: Bu seçenekler, [normal hata ayıklama](debugging-python-in-visual-studio.md)ile aynıdır.
-- **Başlatma URL 'si**: tarayıcınızda açılan URL 'yi belirtir. Varsayılan olarak olur `localhost` .
-- **bağlantı noktası numarası**: URL 'de hiçbiri belirtilmemişse kullanılacak bağlantı noktası (Visual Studio varsayılan olarak bir otomatik olarak seçilir). Bu ayar, `SERVER_PORT` yerel hata ayıklama sunucusunun dinlediği bağlantı noktasını yapılandırmak için şablonlar tarafından kullanılan ortam değişkeninin varsayılan değerini geçersiz kılmanıza olanak sağlar.
+- **Başlatma URL 'si**: tarayıcınızda açılan URL 'yi belirtir. Varsayılan olarak `localhost` olur.
+- **bağlantı noktası numarası**: URL 'de hiçbiri belirtilmemişse kullanılacak bağlantı noktası (Visual Studio varsayılan olarak bir otomatik olarak seçilir). Bu ayar, yerel hata ayıklama sunucusunun dinlediği bağlantı noktasını yapılandırmak için şablonlar tarafından kullanılan ortam değişkeninin varsayılan değerini `SERVER_PORT` geçersiz kılmanıza olanak sağlar.
 
 **Sunucu Çalıştır komutundaki** Özellikler ve **hata ayıklama sunucusu komut** grupları (ikinci olarak, görüntüde gösterilmekte olan), Web sunucusunun nasıl başlatılmadığını belirlemek için kullanılır. Birçok çerçeve geçerli proje dışında bir komut dosyası kullanımını gerektirdiğinden, betik burada yapılandırılabilir ve başlangıç modülünün adı bir parametre olarak geçirilebilir.
 
-- **Komut**: bir Python betiği (*\* . köpek* dosyası), bir modül adı (içinde olduğu gibi) `python.exe -m module_name` veya tek satırlık kod (içinde olduğu gibi `python.exe -c "code"` ) olabilir. Açılan kutuda bulunan değer bu türlerden hangisinin hedeflendiğini gösterir.
+- **Komut**: bir Python betiği (*\* . köpek* dosyası), bir modül adı (içinde `python.exe -m module_name` olduğu gibi) veya tek satırlık kod (içinde `python.exe -c "code"` olduğu gibi) olabilir. Açılan kutuda bulunan değer bu türlerden hangisinin hedeflendiğini gösterir.
 - **Bağımsız değişkenler**: Bu bağımsız değişkenler komutundan sonra komut satırına geçirilir.
-- **Ortam**: \<NAME> = \<VALUE> ortam değişkenlerini belirten bir çift satır ayrılmış listesi. Bu değişkenler, bağlantı noktası numarası ve arama yolları gibi ortamı değiştirebilen tüm özelliklerden sonra ayarlanır ve bu değerlerin üzerine yazabilir.
+- **Ortam**: ortam değişkenlerini belirten bir çift satır ayrılmış listesi \<NAME> = \<VALUE> . Bu değişkenler, bağlantı noktası numarası ve arama yolları gibi ortamı değiştirebilen tüm özelliklerden sonra ayarlanır ve bu değerlerin üzerine yazabilir.
 
 herhangi bir proje özelliği veya ortam değişkeni MSBuild sözdizimiyle belirtilebilir, örneğin: `$(StartupFile) --port $(SERVER_PORT)` .
-`$(StartupFile)` , başlangıç dosyasının göreli yoludur ve `{StartupModule}` Başlangıç dosyasının Importable adıdır. `$(SERVER_HOST)` ve, `$(SERVER_PORT)` **başlatma URL 'Si** ve **bağlantı noktası numarası** özellikleri tarafından, otomatik olarak veya **ortam** özelliği tarafından ayarlanan normal ortam değişkenleridir.
+`$(StartupFile)` , başlangıç dosyasının göreli yoludur ve `{StartupModule}` Başlangıç dosyasının Importable adıdır. `$(SERVER_HOST)` ve `$(SERVER_PORT)` , **başlatma URL 'Si** ve **bağlantı noktası numarası** özellikleri tarafından, otomatik olarak veya **ortam** özelliği tarafından ayarlanan normal ortam değişkenleridir.
 
 > [!Note]
 > **Run Server komutunda** bulunan değerler **hata ayıklama**  >  **başlatma sunucusu** komutu veya **CTRL** + **F5** ile birlikte kullanılır; **hata ayıklama sunucusu komut** grubundaki değerler **Hata Ayıkla**  >  **Start Debug Server** komutuyla veya **F5** ile kullanılır.
 
 ### <a name="sample-bottle-configuration"></a>Örnek şişe yapılandırması
 
-**şişe Web Project** şablonu, gerekli yapılandırmayı yapan ortak kod içerir. İçeri aktarılan bir şişe uygulaması bu kodu içermeyebilir, ancak bu durumda aşağıdaki ayarlar uygulamayı yüklü modülünü kullanarak başlatır `bottle` :
+**şişe Web Project** şablonu, gerekli yapılandırmayı yapan ortak kod içerir. İçeri aktarılan bir şişe uygulaması bu kodu içermeyebilir, ancak bu durumda aşağıdaki ayarlar uygulamayı yüklü `bottle` modülünü kullanarak başlatır:
 
 - **Sunucu komut grubunu Çalıştır** :
   - **Komut**: `bottle` (modül)
   - **Bağımsız değişkenler**: `--bind=%SERVER_HOST%:%SERVER_PORT% {StartupModule}:app`
 
-- **Hata ayıklama sunucusu komut** grubu:
+- **Sunucu Komut grubunda hata** ayıklama:
   - **Komut**: `bottle` (modül)
   - **Bağımsız değişkenler** `--debug --bind=%SERVER_HOST%:%SERVER_PORT% {StartupModule}:app`
 
-`--reload`hata ayıklama için Visual Studio kullanılırken seçenek önerilmez.
+Bu `--reload` seçenek, hata ayıklama için Visual Studio önerilmez.
 
-### <a name="sample-pyramid-configuration"></a>Örnek piramit yapılandırması
+### <a name="sample-pyramid-configuration"></a>Örnek Piramid yapılandırması
 
-Piramit uygulamalar şu anda en iyi `pcreate` komut satırı aracı kullanılarak oluşturulmuştur. Bir uygulama oluşturulduktan sonra, [**mevcut Python kod**](managing-python-projects-in-visual-studio.md#create-a-project-from-existing-files) şablonundan kullanılarak içeri aktarılabilir. bunu yaptıktan sonra, seçenekleri yapılandırmak için **genel Web Project** özelleştirmesini seçin. Bu ayarlar, piramit 'in konumundaki bir sanal ortama yüklendiğini varsayar `..\env` .
+Piramid uygulamaları şu anda en iyi komut satırı `pcreate` aracı kullanılarak oluşturulmuş durumda. Bir uygulama oluşturulduktan sonra Mevcut [**Python kod şablonundan kullanılarak içe aktarabilirsiniz**](managing-python-projects-in-visual-studio.md#create-a-project-from-existing-files) . Bunu yaptıktan sonra, seçenekleri **yapılandırmak Project Genel Web** Uygulaması özelleştirmesini seçin. Bu ayarlar, Piramidin 'de bir sanal ortama yük olduğunu varsaymaktadır `..\env`.
 
 - **Hata ayıklama** grubu:
-  - **Sunucu bağlantı noktası**: 6543 (veya *.ini* dosyalarında yapılandırılmış herhangi bir şey)
+  - **Sunucu Bağlantı** Noktası: 6543 (veya dosyalarda yapılandırılmış *.ini* )
 
-- **Sunucu komut grubunu Çalıştır** :
+- **Sunucu Komut grubunu** çalıştırın:
   - Komut: `..\env\scripts\pserve-script.py` (betik)
-  - Değişkenlerinden `Production.ini`
+  - Bağımsız değişken: `Production.ini`
 
-- **Hata ayıklama sunucusu komut** grubu:
+- **Sunucu Komut grubunda hata** ayıklama:
   - Komut: `..\env\scripts\pserve-script.py` (betik)
-  - Değişkenlerinden `Development.ini`
+  - Bağımsız değişken: `Development.ini`
 
 > [!Tip]
-> Piramit, genellikle proje kökünün altındaki bir klasör olduğundan projenizin **çalışma dizini** özelliğini yapılandırmanız gerekir.
+> Piramid uygulamaları genellikle proje **kökünden** bir klasör olduğundan, büyük olasılıkla projenizin Çalışma Dizini özelliğini yapılandırmanız gerekir.
 
-### <a name="other-configurations"></a>Diğer yapılandırma
+### <a name="other-configurations"></a>Diğer yapılandırmalar
 
-Paylaşmak istediğiniz başka bir çerçeve için ayarlarınız varsa veya başka bir Framework için ayarları istemek istiyorsanız [GitHub bir sorun](https://github.com/Microsoft/PTVS/issues)açın.
+Paylaşmak istediğiniz başka bir çerçeve için ayarlarınız varsa veya başka bir çerçevenin ayarlarını talep etmek için bu çerçevede [bir sorun GitHub](https://github.com/Microsoft/PTVS/issues).
 
 
 ## <a name="see-also"></a>Ayrıca bkz.

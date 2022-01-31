@@ -14,12 +14,12 @@ metadata:
   ms.technology: vs-acquisition
   dev_langs:
   - CSharp
-  ms.openlocfilehash: 622f09d75b34bb15a40f40f680b6f606f70b53c8
-  ms.sourcegitcommit: 4efdab6a579b31927c42531bb3f7fdd92890e4ac
+  ms.openlocfilehash: 12395fa3d82aa5e9c0feddbbbaa09c5f42543cdb
+  ms.sourcegitcommit: 20f9529648e69707063dccb2b15089bf4e9bf639
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 10/26/2021
-  ms.locfileid: "130351489"
+  ms.lasthandoff: 01/31/2022
+  ms.locfileid: "137887027"
 landingContent:
 - title: Kullanmaya başlayın
   linkLists:
@@ -33,8 +33,6 @@ landingContent:
       url: visual-studio-ide.md
   - linkListType: quickstart
     links:
-    - text: “Merhaba Dünya” konsol uygulaması oluşturma
-      url: ../../ide/quickstart-csharp-console.md
     - text: “Merhaba Dünya” web uygulaması oluşturma
       url: ../../ide/quickstart-aspnet-core.md
 - title: C# uygulamaları oluşturma

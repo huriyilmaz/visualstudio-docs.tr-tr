@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-ide-designers
 ms.workload:
 - multiple
-ms.openlocfilehash: 09a57db0479a1e304bc365ebc7584bf9a9102c09
-ms.sourcegitcommit: a149b3a034bb555ad217656c0ec8bc1672b1e215
+ms.openlocfilehash: 19b794c616f8856e40641ebe57bb2b24ea526e79
+ms.sourcegitcommit: 20f9529648e69707063dccb2b15089bf4e9bf639
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "133514473"
+ms.lasthandoff: 01/31/2022
+ms.locfileid: "137886442"
 ---
 # <a name="what-is-windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF) nedir?
 
@@ -32,7 +32,7 @@ Bu bölümde WPF ile çalışmaya başlamanıza yardımcı olan konular yer alı
 |-|-|
 |Hemen hızlı bir şekilde geçmek istiyorum...|[İzlenecek yol: İlk WPF masaüstü uygulamam](/dotnet/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application)|
 |XAML tasarım araçlarını karşılaştırmak istiyorum...|[Visual Studio ve Visual Studio için Blend XAML tasarlama](../xaml-tools/designing-xaml-in-visual-studio.md)|
-|.NET ile yeni misiniz?|[.NET kılavuzu](/dotnet/standard/)<br /><br />[Uygulama Temelleri](/dotnet/standard/application-essentials)<br /><br />[Visual C ile Başlarken #](../ide/quickstart-csharp-console.md)|
+|.NET ile yeni misiniz?|[.NET kılavuzu](/dotnet/standard/)<br /><br />[Uygulama Temelleri](/dotnet/standard/application-essentials)<br /><br />[Visual C ile Başlarken #](../get-started/csharp/tutorial-console.md)|
 |WPF hakkında daha fazla bilgi ver...|[WPF’ye genel bakış](/dotnet/framework/wpf/introduction-to-wpf)<br /><br />[XAML 'ye Genel Bakış (WPF)](/dotnet/framework/wpf/advanced/xaml-overview-wpf)<br /><br />[Denetimler](/dotnet/framework/wpf/controls/)<br /><br />[Veri bağlamaya genel bakış](/dotnet/desktop-wpf/data/data-binding-overview)<br /><br />[LINQ to XML ile WPF verilerini bağlama](/dotnet/framework/wpf/data/wpf-data-binding-with-linq-to-xml-overview)|
 |Windows Forms geliştirici misiniz?|[Windows Forms denetimleri ve eşdeğer WPF denetimleri](/dotnet/framework/wpf/advanced/windows-forms-controls-and-equivalent-wpf-controls)<br /><br />[WPF ve Windows Forms birlikte çalışma ile desteklenen senaryolar](/dotnet/framework/wpf/advanced/wpf-and-windows-forms-interoperation)|
 

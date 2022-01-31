@@ -8,20 +8,20 @@ ms.author: jomatthi
 manager: dominicn
 ms.topic: reference
 ms.date: 01/10/2022
-ms.openlocfilehash: 5baa1c16960e0501731d337b4f4d3112f9374cdc
-ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
+ms.openlocfilehash: 6581503dce2be5d96f389d7f061d05c2e4ed5a4d
+ms.sourcegitcommit: 20f9529648e69707063dccb2b15089bf4e9bf639
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "135806384"
+ms.lasthandoff: 01/31/2022
+ms.locfileid: "137887131"
 ---
 # <a name="install-and-use-visual-studio-for-mac-behind-a-firewall-or-proxy-server"></a>Güvenlik duvarı veya Mac için Visual Studio sunucusu arkasında yükleme ve kullanma
 
-Siz veya kuruluşta güvenlik duvarı veya ara sunucu gibi güvenlik önlemleri kullanıyorsanız, Mac için Visual Studio ve Azure Hizmetleri'nin yükleme ve kullanma deneyimine sahip olmak için bir "izin ver listesine" eklemek istediğiniz etki alanları ve açmak istediğiniz bağlantı noktaları ve protokoller vardır.
+Siz veya kuruluşta güvenlik duvarı veya ara sunucu gibi güvenlik önlemleri kullanıyorsanız, Mac için Visual Studio ve Azure Hizmetleri'nin yükleme ve kullanma deneyimine sahip olmak için bir "izin verme listesine" eklemek istediğiniz etki alanları ve açmak istediğiniz bağlantı noktaları ve protokoller vardır.
 
-- [**Yükleme Mac için Visual Studio:**](#install-visual-studio-for-mac)Bu tablolar, kullanıcıların tüm özelliklerine ve iş yüklerine erişiminizin olması için bağlantı izni ver Mac için Visual Studio.
+- [**Yükleme Mac için Visual Studio**](#install-visual-studio-for-mac): Bu tablolar, kullanıcıların tüm özelliklerine ve iş yüklerine erişiminizin olması için bağlantı izni ver Mac için Visual Studio.
 
-- [**Şu Mac için Visual Studio**](#use-visual-studio-for-mac)kullanın: Bu tablolar, ilgili özelliklere erişiminiz olması için bağlantı izni ver gereken etki alanlarını içerir.
+- [**Aşağıdaki Mac için Visual Studio**](#use-visual-studio-for-mac) kullanın: Bu tablolar, ilgili özelliklere erişiminiz olması için bağlantı izni ver gereken etki alanlarını içerir.
 
 ## <a name="install-visual-studio-for-mac"></a>Mac için Visual Studio’yu yükleyin
 

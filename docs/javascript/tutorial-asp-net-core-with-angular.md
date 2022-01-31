@@ -1,7 +1,7 @@
 ---
-title: Angular ile ASP.NET Core uygulama oluşturma
-description: Bu öğreticide, ASP.NET Core ve Angular
-ms.date: 11/08/2021
+title: Angular ASP.NET Core uygulama oluşturma
+description: bu öğreticide, ASP.NET Core ve Angular kullanarak bir uygulama oluşturacaksınız
+ms.date: 01/28/2022
 ms.topic: tutorial
 ms.devlang: javascript
 author: mikejo5000
@@ -13,122 +13,129 @@ dev_langs:
 ms.workload:
 - nodejs
 monikerRange: '>= vs-2022'
-ms.openlocfilehash: f5890a40f445f2fc7b559f9f771a0ad80510390e
-ms.sourcegitcommit: 8b44ba7864f67afa476708d5092729345e689f93
+ms.openlocfilehash: 55245b11de769371349da0a8d560b56effccca39
+ms.sourcegitcommit: 20f9529648e69707063dccb2b15089bf4e9bf639
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2021
-ms.locfileid: "132861659"
+ms.lasthandoff: 01/31/2022
+ms.locfileid: "137886780"
 ---
-# <a name="tutorial-create-an-aspnet-core-app-with-angular-in-visual-studio"></a>Öğretici: ASP.NET Core'de Angular uygulama Visual Studio
+# <a name="tutorial-create-an-aspnet-core-app-with-angular-in-visual-studio"></a>öğretici: Visual Studio Angular ile ASP.NET Core uygulama oluşturma
 
-Bu makalede, API arka ucu olarak ASP.NET Core bir Angular projesi derlemeyi öğrenirsiniz.
+bu makalede, bir apı arka ucu görevi gören bir ASP.NET Core projesi ve kullanıcı arabirimi olarak görev yapacak bir Angular projesi oluşturmayı öğreneceksiniz.
 
-Şu anda Visual Studio uygulama ve ASP.NET Core destekleyen tek sayfalı uygulama (SPA) Angular React. Şablonlar, her çerçevenin temel dosyalarını ve klasörlerini içeren ASP.NET Core projelerinde yerleşik bir İstemci Uygulaması klasörü sağlar.
+şu anda Visual Studio, Angular ve React destekleyen ASP.NET Core tek sayfalı uygulama (SPA) şablonlarını içerir. şablonlar, her bir çerçevenin temel dosya ve klasörlerini içeren ASP.NET Core projelerinizde yerleşik bir istemci uygulaması klasörü sağlar.
 
-2022 Visual Studio 2022 Preview 2'den başlayarak, tek sayfalı uygulamalar oluşturmak için bu ASP.NET Core açıklanan yöntemi kullanabilirsiniz:
+Visual Studio 2022 Preview 2 ' den başlayarak, bu makalede açıklanan yöntemi kullanarak aşağıdaki ASP.NET Core tek sayfalı uygulamalar oluşturabilirsiniz:
 
-- İstemci uygulamasını ASP.NET Core projesinin dışında ayrı bir projeye koyma
-- Bilgisayarınızda yüklü olan çerçeve CLI'sini temel alarak istemci projesini oluşturma
+- istemci uygulamasını ASP.NET Core projeden farklı bir projeye yerleştirme
+- Bilgisayarınızda yüklü olan Framework CLı 'yı temel alan istemci projesini oluşturun
 
 >[!NOTE]
-> Şu anda ön uç projesinin el ile yayımlanır (şu anda Yayımla aracıyla desteklenmiyor). Daha fazla bilgi için [https://github.com/MicrosoftDocs/visualstudio-docs/issues/7135](https://github.com/MicrosoftDocs/visualstudio-docs/issues/7135) bkz. .
+> Şu anda ön uç projesinin el ile yayımlanması gerekir (yayımlama aracı ile henüz desteklenmemektedir). Daha fazla bilgi için bkz [https://github.com/MicrosoftDocs/visualstudio-docs/issues/7135](https://github.com/MicrosoftDocs/visualstudio-docs/issues/7135) ..
 
 ## <a name="prerequisites"></a>Önkoşullar
 
 Aşağıdakilerin yüklü olduğundan emin olun:
 
-- Visual Studio ve web geliştirme iş yükünün yüklü olduğu 2022 **Preview 2 ASP.NET veya** sonraki bir sürümü yükleyin. Ücretsiz yüklemek [Visual Studio](https://visualstudio.microsoft.com/downloads/) indirmeler sayfasına gidin.
-  İş yükünü yüklemeniz ve önceden yüklemeniz gerekirse Visual Studio Araçları ve Özellikleri Al... 'a gidin  >  **ve** Visual Studio Yükleyicisi. Web geliştirme **ASP.NET iş yükünü ve ardından** Değiştir'i **seçin.**
-- npm ( [https://www.npmjs.com/](https://www.npmjs.com/) ) 
-- Angular CLI ( [https://angular.io/cli](https://angular.io/cli) ) Bu, tercihe bağlı bir sürüm olabilir
+- **ASP.NET ve web geliştirme** iş yükü yüklü Visual Studio 2022 Preview 2 veya üzeri. ücretsiz olarak yüklemek için [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına gidin.
+  iş yükünü yüklemeniz gerekiyorsa ve Visual Studio zaten varsa, araçlar **ve özellikler al.**.. ' a giderek Visual Studio Yükleyicisi açan **araçlar**  >  ' a gidin. **ASP.NET ve web geliştirme** iş yükünü seçin ve ardından **değiştir**' i seçin.
+- Node.js ile birlikte gelen NPM ( [https://www.npmjs.com/](https://www.npmjs.com/package/npm) )
+- Angular clı ( [https://angular.io/cli](https://angular.io/cli) ) bu sizin tercih ettiğiniz sürümü olabilir
 
 ## <a name="create-the-frontend-app"></a>Ön uç uygulamasını oluşturma
 
-1. Yeni Proje Oluştur Project Yeni proje **oluştur'a seçin.** 
+1. yeni Project iletişim kutusunda **yeni proje oluştur**' u seçin. 
 
    :::image type="content" source="media/vs-2022/create-new-project.png" alt-text="Yeni proje oluşturma":::
 
-1. Üst Angular arama çubuğunda tek başına arama çubuğuna arama yazın ve Ardından Tek Başına Angular **Şablonu'Angular seçin.**
+1. üstteki arama çubuğunda Angular araması yapın ve **tek başına TypeScript Angular şablonu**' nu seçin.
 
    :::image type="content" source="media/vs-2022/angular-choose-template.png" alt-text="Şablon seçme":::
 
-1. Projenize ve çözümünüze bir ad girin. Ek bilgiler penceresine **bakarak** Boş web API'si ASP.NET **tümleştirmesi** ekle seçeneğini Project olun. Bu seçenek, daha sonra Angular projeyle bağlanacak şekilde dosya şablonunuz ASP.NET Core ekler.
+1. Projenize ve çözümünüze bir ad verin. **ek bilgi** penceresine geldiğinizde, **boş ASP.NET Web apı 'si için tümleştirme ekle Project** seçeneğini denetlediğinizden emin olun. bu seçenek, daha sonra ASP.NET Core projesiyle kullanıma abilmesi için Angular şablonunuza dosya ekler.
 
    :::image type="content" source="media/vs-2022/asp-net-core-with-angular-additional-info.png" alt-text="Ek bilgi":::
 
-   Proje oluşturulduktan sonra bazı yeni ve değiştirilmiş dosyalar görüyorsunuz:
+   Proje oluşturulduktan sonra bazı yeni ve değiştirilmiş dosyalar görürsünüz:
 
    - aspnetcore-https.js
    - proxy.js
-   - package.json(modified)
-   - angular.json(modified)
-   - app.components.ts
-   - app.module.ts
+   - Package. JSON (değiştirilmiş)
+   - Angular. JSON (değiştirilmiş)
+   - App. components. TS
+   - App. Module. TS
 
 ## <a name="create-the-backend-app"></a>Arka uç uygulamasını oluşturma
 
-1. Çözüm gezgininde çözüm adına sağ tıklayın, Ekle'nin üzerine **gelin ve** Ardından Yeni **girişler'i Project.** 
+1. Çözüm Gezgini ' nde çözüm adına sağ tıklayın, **Ekle**' nin üzerine gelin ve sonra **yeni Project**' yi seçin. 
 
-   :::image type="content" source="media/vs-2022/asp-net-core-add-project.png" alt-text="Yeni proje ekleme":::
+   :::image type="content" source="media/vs-2022/asp-net-core-add-project.png" alt-text="Yeni Proje Ekle":::
 
-1. ASP.NET Core Web API'si projesini arama ve seçme.
+1. ASP.NET Core Web apı projesinde arama yapın ve seçin.
  
-   :::image type="content" source="media/vs-2022/asp-net-core-choose-web-api-template.png" alt-text="Web API şablonunu seçme":::
+   :::image type="content" source="media/vs-2022/asp-net-core-choose-web-api-template.png" alt-text="Web API şablonunu seçin":::
 
-1. Projenize ve çözümünüze bir ad girin. Ek bilgiler penceresine **ulaşarak hedef** çerçeveniz **olarak .NET 6.0'ı** seçin.
+1. Projenize ve çözümünüze bir ad verin. **Ek bilgi** penceresine geldiğinizde, hedef çatısı olarak **.net 6,0** ' i seçin.
 
-   Proje oluşturulduktan sonra Çözüm Gezgini şöyle olması gerekir:
+   Proje oluşturulduktan sonra Çözüm Gezgini şöyle görünmelidir:
 
-   :::image type="content" source="media/vs-2022/asp-net-core-with-angular-solution-explorer.png" alt-text="Çözüm Gezgini":::
+   :::image type="content" source="media/vs-2022/asp-net-core-with-angular-solution-explorer.png" alt-text="Çözüm Gezgini göz atın":::
 
 ## <a name="set-the-project-properties"></a>Proje özelliklerini ayarlama
 
-1. ASP.NET Core projesine sağ tıklayın ve Özellikler'i **seçin.**
+1. ASP.NET Core projesine sağ tıklayın ve **özellikler**' i seçin.
 
-   :::image type="content" source="media/vs-2022/asp-net-core-project-properties.png" alt-text="Proje özelliklerini açma"::: 
+   :::image type="content" source="media/vs-2022/asp-net-core-project-properties.png" alt-text="Proje özelliklerini aç"::: 
  
-1. Hata ayıkla menüsüne gidin ve Hata ayıklama **başlatma profilleri kullanıcı arabirimini aç seçeneğini** belirleyin. Tarayıcıyı Başlat **seçeneğinin işaretini** kaldırın.
+1. Hata Ayıkla menüsüne gidin ve **hata ayıklamayı başlatma profilleri kullanıcı arabirimi** seçeneğini belirleyin. **Tarayıcıyı Başlat** seçeneğinin işaretini kaldırın.
 
-   :::image type="content" source="media/vs-2022/asp-net-core-with-angular-deselect-launch-browser.png" alt-text="Hata ayıklama başlatma profilleri kullanıcı arabirimini açma"::: 
+   :::image type="content" source="media/vs-2022/asp-net-core-with-angular-deselect-launch-browser.png" alt-text="Hata ayıklama başlatma profilleri kullanıcı arabirimini açın"::: 
 
-1. Ardından, Angular projesine sağ tıklayın, **Özellikler menüsünü seçin** ve Hata Ayıklama **bölümüne** gidin. Debugger'ı **launch.json seçeneğiyle değiştirebilirsiniz.**
+1. sonra, Angular projesine sağ tıklayın ve **özellikler** menüsünü seçin ve **hata ayıklama** bölümüne gidin. Hata ayıklayıcıyı Launch **. JSON** seçeneğine başlatılacak şekilde değiştirin.
  
-   :::image type="content" source="media/vs-2022/asp-net-core-with-angular-choose-debugger.png" alt-text="Hata ayıklayıcısını (launch.json) seçin":::
+   :::image type="content" source="media/vs-2022/asp-net-core-with-angular-choose-debugger.png" alt-text="Hata ayıklayıcıyı seçin (Launch. JSON)":::
 
-## <a name="set-the-startup-project"></a>Başlangıç projesini ayarlama
+## <a name="set-the-startup-project"></a>Başlangıç projesini ayarla
 
-1. Çözüme sağ tıklayın ve Başlangıç Ayarlarını **Ayarla'yı Project.** Tek başlangıç projesi olan başlangıç projesini Birden çok başlangıç **projesi olarak değiştirme.** Her **projenin** eylemi için Başlat'ı seçin.
+1. Çözüme sağ tıklayın ve **başlangıç Project ayarla**' yı seçin. Başlangıç projesini tek başlangıç projesinden **Çoklu başlangıç projelerine** değiştirin. Her projenin eylemi için **Başlat** ' ı seçin.
 
    :::image type="content" source="media/vs-2022/asp-net-core-with-angular-multiple-startup-projects.png" alt-text="Çoklu başlangıç projeleri ayarlama":::
   
-1. Ardından, arka uç projesini seçin ve ön ucun üzerine taşıarak ilk olarak başlamayı seçin.
+1. Sonra, arka uç projesini seçin ve ilk kez başlaması için ön uca taşıyın.
 
    :::image type="content" source="media/vs-2022/asp-net-core-with-angular-set-first-project.png" alt-text="İlk başlangıç projesini seçin":::
 
 ## <a name="start-the-project"></a>Projeyi başlatma
 
-Projeyi başlatmadan önce bağlantı noktası numaralarının eş olduğundan emin olun.
+Projeye başlamadan önce, bağlantı noktası numaralarının eşleştiğinden emin olun.
 
-1. ASP.NET Core *projenizin launchSettings.json* dosyasına gidin *(Özellikler klasöründe).* özelliğinden bağlantı noktası numarasını `applicationUrl` almak.
+1. ASP.NET Core projenizdeki *launchsettings. json* dosyasına gidin ( *özellikler* klasöründe). Özellikten bağlantı noktası numarasını `applicationUrl` alın.
 
-   Birden çok özellik `applicationUrl` varsa, uç nokta kullanarak bir tane `https` olup bakabilirsiniz. şuna benzer şekilde görünüyor `https://localhost:7049` olabilir: .
+   Birden çok `applicationUrl` özellik varsa, uç nokta kullanarak `https` bir tane bulun. Şuna benzer `https://localhost:7049` görünmelidir.
 
-1. Ardından,proxy.conf.js *projenizin* Angular *(src klasörüne* bakın) gidin. `applicationUrl` *launchSettings.json'daki özelliğiyle eşleşmesi için hedef özelliği güncelleştirin.*
+1. sonra, Angular projeniz için *proxy.conf.js* dosyasına gidin ( *src* klasörüne bakın). *Launchsettings. JSON* içindeki özellik ile eşleşecek `applicationUrl` şekilde Target özelliğini güncelleştirin. Bunu güncelleştirdiğinizde bu değer şuna benzer görünmelidir:
 
-1. Projeyi başlatmak için **F5 tuşuna** basın veya **pencerenin** üst kısmından Başlat düğmesini seçin. İki komut istemi görüntülenir:
+   ```js
+   target: 'https://localhost:7049',
+   ```
 
-   - Çalışan ASP.NET Core API projesi
-   - ng Angular komutunu çalıştıran Angular CLI
+1. Projeyi başlatmak için **F5** tuşuna basın veya pencerenin üst kısmındaki **Başlat** düğmesini seçin. İki komut isteminin göründüğünü göreceksiniz:
 
-API aracılığıyla Angular bir uygulamanın görüntü olduğunu görüyorsanız.
+   - çalıştıran ASP.NET Core apı projesi
+   - ng start komutunu çalıştıran Angular clı
+
+   >[!NOTE]
+   > Node.js sürümünüzü güncelleştirmenizi bir ileti gibi iletiler için konsol çıktısını denetleyin.
+
+apı aracılığıyla doldurulan bir Angular uygulamasının göründüğünü görmeniz gerekir.
 
 ## <a name="troubleshooting"></a>Sorun giderme
 
-Aşağıdaki hatayı alabilirsiniz:
+Aşağıdaki hatayı görebilirsiniz:
 
 ```
 [HPM] Error occurred while trying to proxy request /weatherforecast from localhost:4200 to https://localhost:5001 (ECONNREFUSED) (https://nodejs.org/api/errors.html#errors_common_system_errors)
 ```
 
-Bu sorunu görüyorsanız, büyük olasılıkla ön uç arka uç öncesinde başlamıştır. Arka uç komut isteminin çalışır olduğunu gördüğünüzde, tarayıcıda Angular App'i yenilemeniz gerekir.
+Bu sorunu görürseniz, büyük olasılıkla ön uç arka uca başlamadan önce başlatılır. arka uç komut istemi 'ni çalışır durumda olduktan sonra tarayıcıda Angular uygulamayı yenilemeniz yeterlidir.

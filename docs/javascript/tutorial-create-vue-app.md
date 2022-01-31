@@ -1,7 +1,7 @@
 ---
-title: Vue.js uygulaması oluşturma
-description: Bu öğreticide, Visual Studio Vue.js basit bir uygulama oluşturmayı öğrenin.
-ms.date: 07/30/2021
+title: Vue.js oluşturma
+description: Bu öğreticide, bu öğreticide basit bir Vue.js uygulaması Visual Studio.
+ms.date: 01/28/2022
 ms.custom: vs-acquisition
 ms.topic: tutorial
 ms.devlang: javascript
@@ -14,54 +14,57 @@ dev_langs:
 ms.workload:
 - nodejs
 monikerRange: '>= vs-2022'
-ms.openlocfilehash: 926051ad98d43715a15a20091eb6a17c20f96758
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 3dc5470906bf189e11d9252b4a4177ffe485dba8
+ms.sourcegitcommit: 20f9529648e69707063dccb2b15089bf4e9bf639
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126635889"
+ms.lasthandoff: 01/31/2022
+ms.locfileid: "137886662"
 ---
-# <a name="create-a-vuejs-app"></a>Vue.js uygulaması oluşturma
+# <a name="create-a-vuejs-app"></a>Vue.js oluşturma
 
-bu 5-10 dakikalık Visual Studio tümleşik geliştirme ortamına (ıde) giriş sırasında basit bir Vue.js ön uç web uygulaması oluşturup çalıştırırsınız.
+Visual Studio tümleşik geliştirme ortamına (IDE) 5-10 dakikalık bir girişte, basit bir ön uç web uygulaması Vue.js ve çalıştırabilirsiniz.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
 Aşağıdakilerin yüklü olduğundan emin olun:
 
-- Visual Studio 2022 Preview 2 veya üzeri. ücretsiz olarak yüklemek için [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına gidin.
-- NPM ( [https://www.npmjs.com/](https://www.npmjs.com/) ) 
-- Vue.js ([yükleme | Vue.js (vuejs.org)](https://v3.vuejs.org/guide/installation.html#npm))
-- Vue.js CLı ([(yükleme | Vue.js (vuejs.org)](https://v3.vuejs.org/guide/installation.html#cli))
+- Visual Studio 2022 Preview 2 veya sonraki bir sürümü. Ücretsiz yüklemek [Visual Studio](https://visualstudio.microsoft.com/downloads/) indirmeler sayfasına gidin.
+- npm ()[https://www.npmjs.com/](https://www.npmjs.com/package/npm)), bu, Node.js
+- Vue.js ([Yükleme | Vue.js (vuejs.org)](https://v3.vuejs.org/guide/installation.html#npm))
+- Vue.js CLI ([(Yükleme | Vue.js (vuejs.org)](https://v3.vuejs.org/guide/installation.html#cli))
 
-## <a name="create-your-app"></a>Uygulamanızı oluşturun
+## <a name="create-your-app"></a>Uygulama oluşturma
 
-1. yeni Project iletişim kutusunda **yeni proje oluştur**' u seçin.
+1. Yeni Proje Oluştur Project Yeni proje **oluştur'a seçin**.
 
    :::image type="content" source="media/vs-2022/create-new-project.png" alt-text="Yeni proje oluşturma":::
 
-1. Üstteki arama çubuğunda Vue araması yapın ve tercihinize göre **tek başına JavaScript Vue şablonu** veya **tek başına TypeScript Vue şablonu**' nu seçin.
+1. Üsttaki arama çubuğunda Vue'yi aratın ve ardından tercihinizi temel alarak Tek Başına **JavaScript Vue Şablonu** veya **Tek Başına TypeScript Vue Şablonu'ları** seçin.
 
    :::image type="content" source="media/vs-2022/vue-choose-template.png" alt-text="Şablon seçme":::
 
-1. Projenize ve çözümünüze bir ad verin. 
+1. Projenize ve çözümünüze bir ad girin. 
 
 ## <a name="set-the-project-properties"></a>Proje özelliklerini ayarlama
 
-1. Çözüm Gezgini, Vue.js projesine sağ tıklayın, **Özellikler**' i seçin ve ardından **hata ayıklama** bölümüne gidin.
+1. Bu Çözüm Gezgini, Vue.js projesine sağ tıklayın, Özellikler'i **seçin** ve hata ayıklama **bölümüne** gidin.
 
-1. Hata ayıklayıcıyı Launch **. JSON** seçeneğine başlatılacak şekilde değiştirin.
+1. Debugger'ı **launch.json seçeneğiyle değiştirebilirsiniz** .
  
-   :::image type="content" source="media/vs-2022/vue-choose-debugger.png" alt-text="Hata ayıklayıcıyı seçin (Launch. JSON)":::
+   :::image type="content" source="media/vs-2022/vue-choose-debugger.png" alt-text="Hata ayıklayıcısını (launch.json) seçin":::
 
-## <a name="build-your-project"></a>Project oluşturun
+## <a name="build-your-project"></a>Derleme Project
 
-  >  Projeyi derlemek için derleme **Yapı çözümünü** seçin.
+Projeyi **derlemek** >  **için BuildBuild Solution** 'ı seçin.
 
-## <a name="start-your-project"></a>Project başlatın
+## <a name="start-your-project"></a>Çalışma Project
 
-**F5** tuşuna basın veya pencerenin üst kısmındaki **Başlat** düğmesini seçin. Bir komut istemi görüntülenir:
+**F5** tuşuna **basın** veya pencerenin üst kısmından Başlat düğmesini seçin; bir komut istemi görüntülenir:
 
-- Vue-CLI-Service Start komutunu çalıştıran NPM
+- npm running the vue-cli-service start command
 
-Sonra, temel Vue.js uygulamanın göründüğünü görmeniz gerekir!
+   >[!NOTE]
+   > Konsol çıkışında iletileri kontrol edin; örneğin, konsolunuzun sürümünü güncelleştirmenizi Node.js.
+
+Ardından, temel uygulamanın Vue.js görün!
