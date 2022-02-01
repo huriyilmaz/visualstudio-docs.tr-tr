@@ -1,16 +1,16 @@
-- name: Mac için Visual Studio
+- name: Mac için Visual Studio Docs
   href: index.yml
 - name: Genel Bakış
   items:
-    - name: IDE Turu
+    - name: IDE turu
       href: ide-tour.md
-    - name: Windows Kullanıcılarına yönelik Mac için Visual Studio
+    - name: Mac için Visual Studio kullanıcılar Windows için
       href: vsmac-for-windows-users.md
-    - name: Tümleşik Terminal
+    - name: Tümleşik terminal
       href: integrated-terminal.md
 - name: Yükleme
   items:
-    - name: Mac için Visual Studio 2019’u Yükleme
+    - name: Yükleme
       href: installation.md
     - name: Bir güvenlik duvarı veya ara sunucunun arkasına yükleme ve burada kullanma
       href: install-behind-a-firewall-or-proxy-server.md
@@ -20,22 +20,38 @@
       href: update.md
     - name: Kaldır
       href: uninstall.md
-    - name: Kullanılabilir İş Yükleri
+    - name: Kullanılabilir iş yükleri
       href: workloads.md
-- name: Kişiselleştirme Mac için Visual Studio
+- name: Kişiselleştirme
   items:
-    - name: Kullanıcı Hesapları
+    - name: Kullanıcı hesapları
       items:
         - name: Genel Bakış
           href: user-accounts.md
-        - name: Oturum Açma
+        - name: Oturum açma hesabı
           href: signing-in.md
-        - name: Aboneliği Etkinleştirme
+        - name: Aboneliği etkinleştirme
           href: enable-subscription.md
     - name: IDE’yi Özelleştirme
       items:
         - name: IDE görünümünü ve deneyimini özelleştirme
           href: customizing-the-ide.md
+- name: Örnekler
+  items:
+    - name: Öne Çıkan Örnekler
+      href: samples/index.yml
+    - name: Tüm ASP.NET Core Örnekleri
+      href: /samples/browse/?products=aspnet-core
+    - name: Tüm .NET Core Örnekleri
+      href: /samples/browse/?products=dotnet-core
+    - name: Tüm Xamarin.Forms Örnekleri
+      href: /xamarin/xamarin-forms/samples/
+    - name: Tüm Xamarin.iOS Örnekleri
+      href: /xamarin/ios/samples/
+    - name: Tüm Xamarin.Android Örnekleri
+      href: /xamarin/android/samples/
+    - name: Tüm Xamarin.Mac Örnekleri
+      href: /xamarin/mac/samples/
 - name: Geliştirme
   items:
     - name: Genel Bakış
@@ -44,7 +60,7 @@
       href: create-new-projects.md
     - name: Proje öğeleri ekleme ve kaldırma
       href: add-and-remove-project-items.md
-    - name: Çözümleri ve Proje özelliklerini yönetme
+    - name: Çözümleri ve proje özelliklerini yönetme
       href: managing-solutions-and-project-properties.md
     - name: Çoklu Sürüm Desteği
       href: project-multitargeting.md
@@ -140,15 +156,15 @@
           href: publish-folder.md
         - name: Video öğreticiler
           items:
-            - name: Mac için Visual Studio’da ASP.NET Core kullanmaya başlama
+            - name: ASP.NET Core'da Mac için Visual Studio
               href: tutorial-aspnet-core-vsmac-getting-started.md
-            - name: Mevcut bir ASP.NET Core web uygulamasını genişletme
+            - name: Mevcut web ASP.NET Core genişletme
               href: tutorial-aspnet-core-vsmac-extending.md
     - name: Azure
       items:
         - name: Genel Bakış
           href: azure-workload.md
-        - name: Azure İşlevleri’ne Giriş
+        - name: Azure İşlevleri hakkında
           href: azure-functions.md
         - name: 'Öğretici: Azure İşlevleri'
           href: azure-functions-lab.md
@@ -164,20 +180,16 @@
       href: /visualstudio/gamedev/unity/get-started/visual-studio-tools-for-unity
     - name: Xamarin ile mobil uygulamalar
       href: ./xamarin.md
-- name: Erişilebilirlik
+- name: Erişilebilirlik Araçları ve Özellikleri
   items:
     - name: Genel Bakış
       href: accessibility.md
     - name: IDE erişilebilirlik seçeneklerini ayarlama
       href: accessibility-ide-options.md
-    - name: macOS Erişilebilirlik Araçları ve Özellikleri
-      items:
-        - name: macOS Erişilebilirlik Araçlarını Kullanma
-          href: accessibility-macos.md
-        - name: Klavye ile Gezinmeyi Kullanma
-          href: accessibility-keyboard.md
-        - name: VoiceOver kullanma
-          href: accessibility-voiceover.md
+    - name: macOS Erişilebilirlik Araçlarını Kullanma
+      href: accessibility-macos.md
+    - name: Klavye ile Gezinmeyi Kullanma
+      href: accessibility-keyboard.md
 - name: Başvuru
   items:
     - name: ASP.NET Core
@@ -200,39 +212,23 @@
       href: vsmac-for-windows-users.md
 - name: Kaynaklar
   items:
-    - name: Sürüm Notları
-      href: /visualstudio/releasenotes/vs2019-mac-relnotes
-    - name: Önizleme Sürüm Notları
-      href: /visualstudio/releasenotes/vs2019-mac-preview-relnotes
-- name: Örnekler
-  items:
-    - name: Öne Çıkan Örnekler
-      href: samples/index.yml
-    - name: Tüm ASP.NET Core Örnekleri
-      href: /samples/browse/?products=aspnet-core
-    - name: Tüm .NET Core Örnekleri
-      href: /samples/browse/?products=dotnet-core
-    - name: Tüm Xamarin.Forms Örnekleri
-      href: /xamarin/xamarin-forms/samples/
-    - name: Tüm Xamarin.iOS Örnekleri
-      href: /xamarin/ios/samples/
-    - name: Tüm Xamarin.Android Örnekleri
-      href: /xamarin/android/samples/
-    - name: Tüm Xamarin.Mac Örnekleri
-      href: /xamarin/mac/samples/
+    - name: Sürüm notları & yol haritaları
+      href: /visualstudio/productinfo/mac-roadmap
+    - name: Sorun giderme
+      items:
+        - name: Günlükler ve Özel Durumlar
+          href: troubleshooting.md
+        - name: Mevcut uzantımı yeni bir sürüme yayınla
+          href: migrate-extensions.md
+        - name: Destek Team Foundation Sürüm Denetimi
+          href: tf-version-control.md
+        - name: 'Sorun Giderme: Neden tüm şablonları göremiyorum?'
+          href: troubleshooting-no-templates.md
+        - name: 'Sorun Giderme: Güncelleştirici, bilgileri alırken hatalarla karşılaşıyor'
+          href: updater-troubleshooting.md
 - name: Geri bildirim gönder
   items:
-    - name: Günlükler ve Özel Durumlar
-      href: troubleshooting.md
     - name: Visual Studio Müşteri Deneyimini Geliştirme Programı
       href: visual-studio-experience-improvement-program.md
     - name: Sorun Bildirme
       href: report-a-problem.md
-    - name: 'Sorun Giderme: Mevcut uzantımın yeni sürümünü nasıl yayınlarım?'
-      href: migrate-extensions.md
-    - name: 'Sorun Giderme: Mac için Visual Studio, Team Foundation Sürüm Denetimi’ni destekler mi?'
-      href: tf-version-control.md
-    - name: 'Sorun Giderme: Neden tüm şablonları göremiyorum?'
-      href: troubleshooting-no-templates.md
-    - name: 'Sorun Giderme: Güncelleştirici, bilgileri alırken hatalarla karşılaşıyor'
-      href: updater-troubleshooting.md

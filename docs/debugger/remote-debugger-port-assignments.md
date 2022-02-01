@@ -1,6 +1,6 @@
 ---
 title: Uzaktan Hata Ayıklayıcı Bağlantı Noktası Atamaları | Microsoft Docs
-description: 32 bit Visual Studio, 64 bit işletim sistemleri ve Azure'da uzaktan hata ayıklayıcı bağlantı noktası atamalarını anlıyoruz. Bulma bağlantı noktası hakkında bilgi öğrenin.
+description: 32 bit Visual Studio sistemleri, 64 bit işletim sistemleri ve Azure'da uzaktan hata ayıklayıcı bağlantı noktası atamalarını anlama. Bulma bağlantı noktası hakkında bilgi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 09/10/2021
 ms.topic: reference
@@ -11,15 +11,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9eacb91faa204f92b63ecf464c1ef418b387e38a
-ms.sourcegitcommit: 64d6c5cf93984bbb22812577af17128cd2239f79
+ms.openlocfilehash: fac1ae8069e88fcfa1ffb56dae5d2047beadded1
+ms.sourcegitcommit: 47ab08ca7a364bafb295d53b57f0e5b5e3413586
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "134366949"
+ms.lasthandoff: 02/01/2022
+ms.locfileid: "137894943"
 ---
 # <a name="remote-debugger-port-assignments"></a>Uzaktan Hata Ayıklayıcı Bağlantı Noktası Atamaları
-Bu Visual Studio Uzaktan Hata Ayıklayıcı uygulama olarak veya arka plan hizmeti olarak çalışır. Uygulama olarak çalıştırdığı zaman, varsayılan olarak atanan bir bağlantı noktasını aşağıdaki gibi kullanır:
+Bu Visual Studio Uzaktan Hata Ayıklayıcı uygulama olarak veya arka plan hizmeti olarak  çalışır. Uygulama olarak çalıştırdığı zaman, varsayılan olarak atanan bir bağlantı noktasını aşağıdaki gibi kullanır:
 
 - Visual Studio 2022: 4026
 
@@ -47,15 +47,15 @@ Başka bir deyişle, uzak hata ayıklayıcıya atanan bağlantı noktası sayıs
  TCP 4022 (Visual Studio 2017'de) ana bağlantı noktasıdır ve tüm senaryolar için gereklidir. Bunu komut satırı veya uzaktan hata ayıklayıcısı penceresinden yapılandırabilirsiniz.
 ::: moniker-end
 
- Uzaktan hata ayıklayıcısı penceresinde Araçlar ve **Seçenekler'>'ye** tıklayın ve TCP/IP bağlantı noktası numarasını ayarlayın.
+ Uzaktan hata ayıklayıcısı penceresinde Araçlar ve **>'a tıklayın** ve TCP/IP bağlantı noktası numarasını ayarlayın.
 
- Komut satırına **/port** switch: msvsmon /port komutuyla **uzak hata ayıklayıcısını başlatabilirsiniz. \<port number>**
+ Komut satırına / **port** switch: **msvsmon /port komutuyla uzak hata ayıklayıcısını başlatabilirsiniz \<port number>**.
 
- Tüm uzaktan hata ayıklayıcı komut satırı anahtarlarını uzaktan hata ayıklama yardımında bulabilirsiniz **(F1** tuşuna basın veya uzaktan hata ayıklayıcı **penceresinde** >'a tıklayın).
+ Tüm uzaktan hata ayıklayıcı komut satırı anahtarlarını uzaktan hata ayıklama yardımında bulabilirsiniz (**F1** tuşuna basın veya uzaktan hata ayıklayıcı penceresinde >'ye tıklayın).
 
 ## <a name="the-remote-debugger-port-on-64-bit-operating-systems"></a>64 bit İşletim Sistemlerinde Uzaktan Hata Ayıklayıcı Bağlantı Noktası
 ::: moniker range=">=vs-2022"
- Uzak hata ayıklayıcının 64 bit sürümü başlatıcı, varsayılan olarak ana bağlantı noktasını (4026) kullanır.  32 bit işlemde hata ayıklarsanız, uzak hata ayıklayıcının 64 bit sürümü, 4025 bağlantı noktası üzerinde uzaktan hata ayıklayıcının 32 bit sürümünü başlatır. 32 bit uzaktan hata ayıklayıcısını kullanırsanız, 4026 kullanır ve 4025 kullanılmaz.
+ Uzak hata ayıklayıcının 64 bit sürümü başlatıcı, varsayılan olarak ana bağlantı noktasını (4026) kullanır.  32 bit işlemde hata ayıklarsanız, uzak hata ayıklayıcının 64 bit sürümü çoğu durumda 4025 bağlantı noktası üzerinde uzaktan hata ayıklayıcının 32 bit sürümünü başlatır. 32 bit uzaktan hata ayıklayıcısını kullanırsanız, 4026 kullanır ve 4025 kullanılmaz. Visual Studio için Uzak Araçlar 2022 sürüm 17.2 veya daha yenisi yüklüyse ve uzak hata ayıklayıcıyı hizmet olarak başlatmak için Uzaktan Hata Ayıklayıcı Yapılandırma Sihirbazı kullanılırsa, varsayılan 32 bit hata ayıklama bağlantı noktası 4025 yerine 4040 olur.
 ::: moniker-end
 ::: moniker range="vs-2019"
  Uzak hata ayıklayıcının 64 bit sürümü başlatıcı, varsayılan olarak ana bağlantı noktasını (4024) kullanır.  32 bit işlemde hata ayıklarsanız, uzak hata ayıklayıcının 64 bit sürümü, 4025 numaralı bağlantı noktası üzerinde uzak hata ayıklayıcının 32 bit sürümünü başlatır (ana bağlantı noktası numarası 1 artırılır). 32 bit uzaktan hata ayıklayıcısını kullanırsanız, 4024 kullanır ve 4025 kullanılmaz.
@@ -64,10 +64,10 @@ Başka bir deyişle, uzak hata ayıklayıcıya atanan bağlantı noktası sayıs
  Uzak hata ayıklayıcının 64 bit sürümü başlatıcı, varsayılan olarak ana bağlantı noktasını (4022) kullanır.  32 bit işlemde hata ayıklarsanız, uzak hata ayıklayıcının 64 bit sürümü, 4023 numaralı bağlantı noktası üzerinde uzak hata ayıklayıcının 32 bit sürümünü başlatır (ana bağlantı noktası numarası 1 artırılır). 32 bit uzaktan hata ayıklayıcısını kullanırsanız, 4022 kullanır ve 4023 kullanılmaz.
 :::moniker-end
 
- Bu bağlantı noktası komut satırıyla yapılandırılabilir: **Msvsmon \<port number> /wow64port**.
+ Bu bağlantı noktası komut satırıyla yapılandırılabilir: **Msvsmon /wow64port \<port number>**.
 
 ## <a name="the-discovery-port"></a>Bulma Bağlantı Noktası
- UDP 3702, ağ üzerinde uzak hata ayıklayıcının çalışan örneklerini bulmak  için kullanılır (örneğin İşleme Ekle iletişim kutusundaki Bul **iletişim** kutusu). Yalnızca uzak hata ayıklayıcısını çalıştıran bir makineyi bulmak için kullanılır, bu nedenle hedef bilgisayarın makine adını veya IP adresini öğrenmenin başka bir yolu varsa isteğe bağlıdır. Bu, bulma için standart bir bağlantı noktasıdır, bu nedenle bağlantı noktası numarası yapılandıramaz.
+ UDP 3702, ağ üzerinde uzak hata ayıklayıcının çalışan örneklerini bulmak için kullanılır (örneğin İşleme Ekle iletişim kutusundaki Bul **iletişim** kutusu). Yalnızca uzak hata ayıklayıcısını çalıştıran bir makineyi bulmak için kullanılır, bu nedenle hedef bilgisayarın makine adını veya IP adresini öğrenmenin başka bir yolu varsa isteğe bağlıdır. Bu, bulma için standart bir bağlantı noktasıdır, bu nedenle bağlantı noktası numarası yapılandıramaz.
 
  Bulmayı etkinleştirmek istemiyorsanız, msvsmon'ı komut satırına bulma devre dışı bırakarak  **başlatabilirsiniz: Msvsmon /nodiscovery**.
 
