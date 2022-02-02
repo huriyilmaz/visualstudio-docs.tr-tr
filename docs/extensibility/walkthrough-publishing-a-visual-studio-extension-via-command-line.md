@@ -14,18 +14,18 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: fd432c79ddc1dd12503ff6cbe8d7db7d47486b78
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: b7cac2a9f5aa59bb3305f96340a987569e18a1a5
+ms.sourcegitcommit: 23b0ef3815833426933ff6491271034658683f9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122144177"
+ms.lasthandoff: 02/02/2022
+ms.locfileid: "137983825"
 ---
 # <a name="walkthrough-publishing-a-visual-studio-extension-via-command-line"></a>izlenecek yol: komut satırı aracılığıyla Visual Studio uzantısı yayımlama
 
 bu izlenecek yol, komut satırını kullanarak Visual Studio marketi 'nde bir Visual Studio uzantısının nasıl yayımlanacağını gösterir. Uzantınızı Market 'e eklediğinizde, geliştiriciler [**uzantıları ve güncelleştirmeler**](../ide/finding-and-using-visual-studio-extensions.md) iletişim kutusunu kullanarak yeni ve güncelleştirilmiş uzantılara gözatabilirler.
 
-VsixPublisher.exe, market 'e Visual Studio uzantıları yayımlamaya yönelik komut satırı aracıdır. $ {VSInstallDir} \VSSDK\VisualStudioIntegration\Tools\Bin\VsixPublisher.exe adresinden erişilebilir. Bu araçta kullanılabilen komutlar şunlardır: **Publish**, **CreatePublisher**, **deletepublisher**, **deleteextension**, **login**, **Logout**.
+VsixPublisher.exe, market 'e Visual Studio uzantıları yayımlamaya yönelik komut satırı aracıdır. $ {VSInstallDir} \VSSDK\VisualStudioIntegration\Tools\Bin\VsixPublisher.exe adresinden erişilebilir. Bu araçtaki komutlar şunlardır: **Publish**, **deletepublisher**, **deleteextension**, **login**, **Logout**.
 
 ## <a name="commands"></a>Komutlar
 
@@ -33,7 +33,7 @@ VsixPublisher.exe, market 'e Visual Studio uzantıları yayımlamaya yönelik ko
 
 Market 'e bir uzantı yayımlar. Uzantı bir VSIX, bir exe/MSI dosyası ya da bir bağlantı olabilir. Aynı sürüme sahip uzantı zaten varsa, uzantının üzerine yazar. Uzantı yoksa, yeni bir uzantı oluşturacaktır.
 
-|Komut seçenekleri |Açıklama |
+|Komut seçenekleri |Description |
 |---------|---------|
 |Yük (gerekli) | Yayımlanacak yükün yolu veya "daha fazla bilgi URL 'SI" olarak kullanılacak bir bağlantı. |
 |publishManifest (gerekli) | Kullanılacak yayımlama bildirimi dosyasının yolu. |
@@ -44,27 +44,11 @@ Market 'e bir uzantı yayımlar. Uzantı bir VSIX, bir exe/MSI dosyası ya da bi
 VsixPublisher.exe publish -payload "{path to vsix}" -publishManifest "{path to vs-publish.json}" -ignoreWarnings "VSIXValidatorWarning01,VSIXValidatorWarning02"
 ```
 
-### <a name="createpublisher"></a>createPublisher
-
-Market 'te bir Yayımcı oluşturur. Ayrıca, gelecekteki eylemler için yayımcıyı makineye de kaydeder (örneğin, bir uzantıyı silme/yayımlama).
-
-|Komut seçenekleri |Açıklama |
-|---------|---------|
-|displayName (gerekli) | Yayımcının görünen adı. |
-|publisherName (gerekli) | Yayımcının adı (örneğin, tanımlayıcı). |
-|personalAccessToken (gerekli) | Yayımcının kimliğini doğrulamak için kullanılan kişisel erişim belirteci. |
-|shortDescription | Yayımcının kısa bir açıklaması (dosya değil). |
-|longDescription | Yayımcının uzun açıklaması (dosya değil). |
-
-```
-VsixPublisher.exe createPublisher -publisherName "{Publisher Name}" -displayName "{Publisher Display Name}" -personalAccessToken "{Personal Access Token}"
-```
-
 ### <a name="deletepublisher"></a>deletePublisher
 
 Market 'teki bir yayımcıyı siler.
 
-|Komut seçenekleri |Açıklama |
+|Komut seçenekleri |Description |
 |---------|---------|
 |publisherName (gerekli) | Yayımcının adı (örneğin, tanımlayıcı). |
 |personalAccessToken (gerekli) | Yayımcının kimliğini doğrulamak için kullanılan kişisel erişim belirteci. |
@@ -77,7 +61,7 @@ VsixPublisher.exe deletePublisher -publisherName "{Publisher Name}" -personalAcc
 
 Marketten bir uzantıyı siler.
 
-|Komut seçenekleri |Açıklama |
+|Komut seçenekleri |Description |
 |---------|---------|
 |extensionName (gerekli) | Silinecek uzantının adı. |
 |publisherName (gerekli) | Yayımcının adı (örneğin, tanımlayıcı). |
@@ -91,7 +75,7 @@ VsixPublisher.exe deleteExtension -extensionName "{Extension Name}" -publisherNa
 
 Bir yayımcıyı makineye kaydeder.
 
-|Komut seçenekleri |Açıklama |
+|Komut seçenekleri |Description |
 |---------|---------|
 |personalAccessToken (gerekli | Yayımcının kimliğini doğrulamak için kullanılan kişisel erişim belirteci. |
 |publisherName (gerekli) | Yayımcının adı (örneğin, tanımlayıcı). |
@@ -105,7 +89,7 @@ VsixPublisher.exe login -personalAccessToken "{Personal Access Token}" -publishe
 
 Makinenin bir yayımcısını günlüğe kaydeder.
 
-|Komut seçenekleri |Açıklama |
+|Komut seçenekleri |Description |
 |---------|---------|
 |publisherName (gerekli) | Yayımcının adı (örneğin, tanımlayıcı). |
 |ıgnoremissingpublisher | Belirtilen yayımcı zaten oturum açmadıysa aracın hata olmaması gerektiğini belirtir. |
@@ -113,6 +97,10 @@ Makinenin bir yayımcısını günlüğe kaydeder.
 ```
 VsixPublisher.exe logout -publisherName "{Publisher Name}"
 ```
+
+### <a name="createpublisher"></a>createPublisher
+> [!Caution]
+> Bu komut artık kullanılamıyor. [Visual Studio marketi](https://marketplace.visualstudio.com/manage/publishers)' ne giderek yeni bir yayımcı oluşturabilirsiniz.
 
 ## <a name="publishmanifest-file"></a>publishManifest dosyası
 
@@ -225,67 +213,53 @@ Bu durumda, varsayılan VSPackage uzantısını kullanacağız, ancak her uzant�
 
 3. **Araçlar** menüsünde, test komutunu görtığınızdan emin olun.
 
-### <a name="publish-the-extension-to-the-marketplace-via-command-line"></a>Uzantıyı komut satırı aracılığıyla Market 'e yayımlayın
+### <a name="publish-the-extension-to-the-marketplace-via-command-line"></a>Uzantıyı komut satırı aracılığıyla Market'te yayımlama
 
-1. Uzantınızın yayın sürümünü derlediğinizden ve güncel olduğundan emin olun.
+1. Uzantının Yayın sürümünü ve güncel olduğundan emin olun.
 
-2. Üzerinde publishmanifest.jsve overview.md dosyaları oluşturmuş olduğunuzdan emin olun.
+2. publishmanifest.json ve overview.md emin olun.
 
-3. Komut satırını açın ve $ {VSInstallDir} \VSSDK\VisualStudioIntegration\Tools\Bin\ dizinine gidin.
+3. Komut satırı açın ve ${VSInstallDir}\VSSDK\VisualStudioIntegration\Tools\Bin\ dizinine gidin.
 
-4. Yeni bir yayımcı oluşturmak için aşağıdaki komutu kullanın:
-
-   ```
-   VsixPublisher.exe createPublisher -publisherName "TestVSIXPublisher" -displayName "Test VSIX Publisher" -personalAccessToken "{Personal Access Token that is used to authenticate the publisher. If not provided, the pat is acquired from the logged-in users.}"
-   ```
-
-5. Yayımcının başarıyla oluşturulması sırasında aşağıdaki komut satırı iletisini görürsünüz:
+4. Yeni bir uzantı yayımlamak için aşağıdaki komutu kullanın:
 
    ```
-   Added 'Test VSIX Publisher' as a publisher on the Marketplace.
+   VsixPublisher.exe publish -payload "{Path to vsix file}"  -publishManifest "{path to publishManifest file}"  -personalAccessToken "{Personal Access Token that is used to authenticate the publisher. If not provided, the pat is acquired from the logged-in users.}"
    ```
 
-6. [Visual Studio market](https://marketplace.visualstudio.com/manage/publishers) 'e giderek oluşturduğunuz yeni yayımcıyı doğrulayabilirsiniz
-
-7. Yeni bir uzantı yayımlamak için aşağıdaki komutu kullanın:
-
-   ```
-   VsixPublisher.exe publish -payload "{Path to vsix file}"  -publishManifest "{path to publishManifest file}"
-   ```
-
-8. Yayımcının başarıyla oluşturulması sırasında aşağıdaki komut satırı iletisini görürsünüz:
+5. Uzantı başarıyla yayımlanırken aşağıdaki komut satırı iletisini alırsınız:
 
    ```
    Uploaded 'MyVsixExtension' to the Marketplace.
    ```
 
-9. [Visual Studio market](https://marketplace.visualstudio.com/) 'e giderek yayımladığınız yeni uzantıyı doğrulayabilirsiniz
+6. Visual Studio Market'e giderek yayımladığınız [yeni uzantıyı doğruabilirsiniz](https://marketplace.visualstudio.com/)
 
-### <a name="install-the-extension-from-the-visual-studio-marketplace"></a>uzantıyı Visual Studio marketi 'nden yüklemesi
+### <a name="install-the-extension-from-the-visual-studio-marketplace"></a>Visual Studio Market'Visual Studio yükleme
 
-artık uzantı yayımlandığına göre Visual Studio yükleyip test edin.
+Artık uzantı yayımlanır ve uzantıyı Visual Studio test etmek için bu uzantıyı yükleyin.
 
-1. Visual Studio, **araçlar** menüsünde **uzantılar ve güncelleştirmeler ' e tıklayın...**
+1. Bu Visual Studio Araçlar menüsünde **Uzantılar** ve Güncelleştirmeler... **seçeneğine tıklayın**.
 
-2. **Çevrimiçi** ' e tıklayın ve ardından TestPublish için arama yapın.
+2. **Çevrimiçi'ne** tıklayın ve TestPublish araması için arama.
 
-3. **İndir**’e tıklayın. Uzantı daha sonra yüklenmek üzere zamanlanır.
+3. **İndir**’e tıklayın. Uzantı daha sonra yüklenmek üzere zamanlanmış olur.
 
-4. Yüklemeyi gerçekleştirmek için Visual Studio tüm örneklerini kapatın.
+4. Yükleme işlemini tamamlamak için tüm örnek örneklerini Visual Studio.
 
 ## <a name="remove-the-extension"></a>Uzantıyı kaldırma
 
-uzantıyı Visual Studio marketi 'nden ve bilgisayarınızdan kaldırabilirsiniz.
+Uzantıyı Market'Visual Studio bilgisayarınızdan kaldırabilirsiniz.
 
-### <a name="to-remove-the-extension-from-the-marketplace-via-command-line"></a>Uzantıyı Market 'ten komut satırı aracılığıyla kaldırma
+### <a name="to-remove-the-extension-from-the-marketplace-via-command-line"></a>Uzantıyı marketten komut satırı aracılığıyla kaldırmak için
 
-1. Bir uzantıyı kaldırmak istiyorsanız aşağıdaki komutu kullanın:
+1. Uzantıyı kaldırmak için aşağıdaki komutu kullanın:
 
    ```
    VsixPublisher.exe deleteExtension -publisherName "TestVSIXPublisher" -extensionName "MyVsixExtension"
    ```
 
-2. Uzantının başarıyla silinmesinin ardından aşağıdaki komut satırı iletisini görürsünüz:
+2. Uzantının başarıyla silinmesinin ardından aşağıdaki komut satırı iletisini alırsınız:
 
    ```
    Removed 'MyVsixExtension' from the Marketplace.
@@ -293,8 +267,8 @@ uzantıyı Visual Studio marketi 'nden ve bilgisayarınızdan kaldırabilirsiniz
 
 ### <a name="to-remove-the-extension-from-your-computer"></a>Uzantıyı bilgisayarınızdan kaldırmak için
 
-1. Visual Studio, **araçlar** menüsünde **uzantılar ve güncelleştirmeler**' e tıklayın.
+1. Bu Visual Studio Araçlar menüsünde **Uzantılar** ve **Güncelleştirmeler'e tıklayın**.
 
-2. "Myvaltextension" öğesini seçin ve ardından **Kaldır**' a tıklayın. Daha sonra uzantı kaldırma işlemi için zamanlanır.
+2. "MyVsixExtension" öğesini seçin ve kaldır'a **tıklayın**. Uzantı daha sonra kaldırılmak üzere zamanlanmış olur.
 
-3. Kaldırma işlemini gerçekleştirmek için Visual Studio tüm örneklerini kapatın.
+3. Kaldırma işlemini tamamlamak için tüm örnek örneklerini Visual Studio.
