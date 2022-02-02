@@ -156,7 +156,7 @@
           href: publish-folder.md
         - name: Video öğreticiler
           items:
-            - name: ASP.NET Core'da Mac için Visual Studio
+            - name: ASP.NET Core'de Mac için Visual Studio
               href: tutorial-aspnet-core-vsmac-getting-started.md
             - name: Mevcut web ASP.NET Core genişletme
               href: tutorial-aspnet-core-vsmac-extending.md
@@ -212,15 +212,15 @@
       href: vsmac-for-windows-users.md
 - name: Kaynaklar
   items:
-    - name: Sürüm notları & yol haritaları
+    - name: '& yol haritaları sürüm notları'
       href: /visualstudio/productinfo/mac-roadmap
     - name: Sorun giderme
       items:
         - name: Günlükler ve Özel Durumlar
           href: troubleshooting.md
-        - name: Mevcut uzantımı yeni bir sürüme yayınla
+        - name: Var olan Uzantımın yeni bir sürümünü serbest bırakma
           href: migrate-extensions.md
-        - name: Destek Team Foundation Sürüm Denetimi
+        - name: destek Team Foundation Sürüm Denetimi
           href: tf-version-control.md
         - name: 'Sorun Giderme: Neden tüm şablonları göremiyorum?'
           href: troubleshooting-no-templates.md
@@ -232,3 +232,7 @@
       href: visual-studio-experience-improvement-program.md
     - name: Sorun Bildirme
       href: report-a-problem.md
+    - name: Geliştirici Topluluğu yönergeleri
+      href: /docs/ide/developer-community-guidelines.md
+    - name: Geliştirici Topluluğu veri gizliliği
+      href: /docs/ide/developer-community-privacy.md

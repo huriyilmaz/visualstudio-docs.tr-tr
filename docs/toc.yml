@@ -299,8 +299,6 @@
           href: ide/outlining.md
         - name: Kod oluşturma ve yeniden düzenleme
           items:
-            - name: Kod oluşturma ve düzeltme
-              href: ide/code-generation-in-visual-studio.md
             - name: Kod parçacıkları
               items:
                 - name: Kod parçacıkları kullanma
@@ -442,7 +440,7 @@
                   href: ide/reference/regex-completion-through-intellisense.md
                 - name: Erişilemeyen kodları kaldırma
                   href: ide/reference/remove-unreachable-code.md
-                - name: Kullanılmayan başvuruları kaldırma
+                - name: Kullanılmayan başvuruları kaldır
                   href: ide/reference/remove-unused-references.md
                 - name: Rename
                   href: ide/reference/rename.md
@@ -993,7 +991,7 @@
       items:
         - name: Çağrı Hiyerarşisi
           href: ide/reference/call-hierarchy.md
-        - name: Geliştirici Komut İstemi & Geliştirici PowerShell
+        - name: Geliştirici Komut İstemi & geliştirici PowerShell
           href: ide/reference/command-prompt-powershell.md
         - name: Değişiklikleri Önizleme
           href: ide/preview-changes.md

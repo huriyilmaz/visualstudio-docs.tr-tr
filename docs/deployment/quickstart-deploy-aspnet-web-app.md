@@ -1,8 +1,9 @@
 ---
 title: ASP.NET web uygulaması yayımlama
-description: Yayımlama aracını kullanarak web sitelerinden bir ASP.NET ASP.NET Core yayımlamayı Visual Studio.
-ms.date: 10/22/2021
+description: yayımla aracını kullanarak Visual Studio bir web sitesine ASP.NET ve ASP.NET Core yayımlayın.
+ms.date: 01/30/2022
 ms.topic: quickstart
+ms.custom: devdivchpfy22
 helpviewer_keywords:
 - deployment, web app
 author: mikejo5000
@@ -12,150 +13,150 @@ ms.technology: vs-ide-deployment
 monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: c829f0f4e2d0b541f84f7f0a4c2cc3e5204163b3
-ms.sourcegitcommit: 7a820b7698a8dcf076eb36e3d766fb0751f56bb1
+ms.openlocfilehash: 4ad4c0a5b9c663f4daf02dbe8de8826ac31926dd
+ms.sourcegitcommit: 3766c051f9a8b35106b16f751db7fecde0b92254
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "131130465"
+ms.lasthandoff: 02/02/2022
+ms.locfileid: "137951637"
 ---
-# <a name="quickstart-publish-an-aspnet-web-app"></a>Hızlı Başlangıç: ASP.NET web uygulaması yayımlama
+# <a name="quickstart-publish-an-aspnet-web-app"></a>hızlı başlangıç: ASP.NET web uygulaması yayımlama
 
-Bu makalede, iis gibi yerel bir web sunucusu ve Azure App Service gibi uzak bir bulut ortamı dahil olmak üzere çeşitli konumlarda ilk ASP.NET web uygulamanızı yayımlamayı Azure App Service.
+bu makalede, ilk ASP.NET web uygulamanızı ııs gibi yerel bir web sunucusu ve Azure App Service gibi uzak bir bulut ortamı gibi çeşitli konumlara nasıl yayımlayacağınızı öğreneceksiniz.
 
-Bu makaledeki adımlar, ASP.NET ve ASP.NET Core.
+bu makale ASP.NET ve ASP.NET Core destekler.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Web [Visual Studio](https://www.visualstudio.com/downloads) iş yüküyle ASP.NET gerekir.
+ASP.NET ve web geliştirme iş yüküyle yüklenmiş [Visual Studio](https://www.visualstudio.com/downloads) gerekir.
 
-Önceden yükleme yaptıysanız Visual Studio:
+Visual Studio zaten yüklüyse:
 
-* Güncelleştirmeler için Yardım Denetimi'Visual Studio seçerek en **son**  >  **güncelleştirmeleri Visual Studio'ye yükleyin.**
-* Araçlar Araçları ve Özellikleri Al'ı  >  **seçerek iş yükünü ekleyin.**
+* **güncelleştirmeler için** **yardım**  >  denetle 'yi seçerek en son güncelleştirmeleri Visual Studio.
+* **Araçlar**  >  **Al araçlar ve Özellikler '** i seçerek iş yükünü ekleyin.
 
-## <a name="get-started"></a>başlarken
+## <a name="get-started"></a>Başlarken
 
-Bu Çözüm Gezgini projenize sağ tıklayın ve Yayımla'yı **seçin.**
+Çözüm Gezgini, projenize sağ tıklayın ve **Yayımla**' yı seçin.
 
-![sağ tıklayın ve yayımlayın](./media/right-click-publish.png)
+![sağ tıklayıp Yayımla](./media/right-click-publish.png)
 
-Bu web uygulamasını ilk kez yayımlayacaksanız Yayımla sihirbazını görüyor olursanız.
+Bu Web uygulamasını ilk kez yayınlıyorsanız, daha sonra Yayımla Sihirbazı ' nı görürsünüz.
 
-![yayımlama sihirbazı - hedefleri yayımlama](./media/publish-targets-general.png)
+![Yayımlama Sihirbazı-hedefleri Yayımla](./media/publish-targets-general.png)
 
 > [!NOTE]
-> Visual Studio web uygulamasının türüne bağlı olarak hedef listesini filtreler.
+> Visual Studio, web uygulamasının türüne bağlı olarak hedeflerin listesini filtreler.
 
 ## <a name="azure"></a>[Azure](#tab/azure)
 ## <a name="publish-your-web-app-to-azure"></a>Web uygulamanızı Azure’a yayımlama
 
-Ayrıntılı adımlar için [bkz. Hızlı Başlangıç: Web uygulaması ASP.NET dağıtma.](/azure/app-service/quickstart-dotnetcore?tabs=netcore31&pivots=development-environment-vs#publish-your-web-app)
+web uygulamanızı yayımlama hakkında ayrıntılı adımlar için bkz. [hızlı başlangıç: ASP.NET web uygulaması dağıtma](/azure/app-service/quickstart-dotnetcore?tabs=netcore31&pivots=development-environment-vs#publish-your-web-app).
 
 ## <a name="docker"></a>[Docker](#tab/docker)
-## <a name="publish-your-web-app-to-docker-container-registry"></a>Web uygulamalarınızı Docker Container Registry
+## <a name="publish-your-web-app-to-docker-container-registry"></a>Web uygulamanızı Docker Container Registry yayımlayın
 
-Web uygulamalarınızı herhangi bir uyumlu Docker kapsayıcısı için Docker kapsayıcısı olarak Container Registry.
+Web uygulamanızı, uyumlu herhangi bir Docker Container Registry için bir Docker kapsayıcısı olarak yayımlayabilirsiniz.
 
-![Docker'da yayımlama Container Registry vurgulanmış](./media/publish-docker-container-registry-highlighted.png)
+![Docker Container Registry vurgulanmış olarak Yayımla](./media/publish-docker-container-registry-highlighted.png)
 
-**Sonraki'ye** tıklayın ve kullanılabilir seçenekler (örneğin, Azure Container Registry veya Docker Hub.
+**İleri** ' ye tıklayın ve Azure Container Registry veya Docker Hub gibi kullanılabilir seçenekler arasından seçim yapın.
 
-![Docker'da yayımlama Container Registry seçenekleri](./media/publish-docker-container-registry-options.png)
+![Docker Container Registry seçeneklerinde Yayımla](./media/publish-docker-container-registry-options.png)
 
 ### <a name="azure-container-registry"></a>Azure Container Registry
 
-Ardından, Azure Container Registry örneği seçin veya yeni bir örnek oluşturun.
+Daha sonra, Azure Container Registry için mevcut bir örneği seçin veya yeni bir tane oluşturun.
 
-![Azure Container Registry'de yayımlama](./media/publish-acr-select-instance.png)
+![Azure Container Registry yayımlama](./media/publish-acr-select-instance.png)
 
 ### <a name="docker-hub"></a>Docker Hub
 
-Ardından, Docker Hub kimlik bilgilerini girin.
+Ardından, Docker Hub için yayımlama kimlik bilgilerini sağlayın.
 
-![Docker Hub'de yayımlama](./media/publish-dockerhub-details.png)
+![Docker Hub 'a Yayımla](./media/publish-dockerhub-details.png)
 
 ### <a name="other-docker-container-registry"></a>Diğer Docker Container Registry
 
-Ardından, diğer Docker kapsayıcısı kayıt defterleri için URI'yi girin ve kimlik bilgilerini yayımlayın.
+Ardından, diğer Docker kapsayıcı kayıt defterleri için URI ve yayımlama kimlik bilgilerini sağlayın.
 
-![diğer Docker Container Registry](./media/publish-custom-docker-registry-details.png)
+![diğer Docker Container Registry yayımlayın](./media/publish-custom-docker-registry-details.png)
 
-### <a name="finish-the-publish-wizard"></a>Yayımla sihirbazını tamamlayın
+### <a name="finish-the-publish-wizard"></a>Yayımlama Sihirbazı 'nı tamamlama
 
-Ardından, Yayımla sihirbazını kullanarak yeni [oluşturduğunuz](./publish-overview.md) yeni yayımlama profilinin özet sayfasını görebilirsiniz. **Yayımla'Visual Studio** tıklarsanız web uygulamanızı belirtilen Docker uygulamasına Container Registry.
+Daha sonra, Yayımlama Sihirbazı 'nı kullanarak yeni oluşturduğunuz [Yayımlama profili](./publish-overview.md) için Özet sayfasını görürsünüz. **yayımla** ' ya tıklayın ve Visual Studio web uygulamanızı belirtilen docker Container Registry dağıtır.
 
-![Docker Container Registry yayımlama - özet sayfası](./media/publish-docker-container-registry-summary-page.png)
+![Docker Container Registry yayımlama-Özet sayfası](./media/publish-docker-container-registry-summary-page.png)
 
 > [!NOTE]
-> Yukarıdaki ekran görüntüsünde Azure Docker Kayıt Defteri'ni hedef alan bir yayımlama profili gösteriliyor, ancak üç Docker kayıt defteri seçeneği için de aynı Container Registry kullanılabilir.
+> Yukarıdaki ekran görüntüsü, Azure Docker kayıt defteri 'ni hedefleyen bir yayımlama profili gösterir, ancak üç Docker Container Registry seçeneği için de aynı Yayımla düğmesi bulunur.
 
 ## <a name="folder"></a>[Klasör](#tab/folder)
-## <a name="publish-your-web-app-to-a-folder"></a>Web uygulamasını bir klasörde yayımlama
+## <a name="publish-your-web-app-to-a-folder"></a>Web uygulamanızı bir klasöre yayımlayın
 
-Web uygulamalarınızı hem yerel hem de ağ klasörlerinde yayımlayın.
+Web uygulamanızı hem yerel hem de ağ klasörlerinde yayımlayabilirsiniz.
 
-![klasöre yayımlama vurgulanmış](./media/publish-folder-highlighted.png)
+![klasöre yayınla vurgulanmış](./media/publish-folder-highlighted.png)
 
-İlk olarak, yolu sağlayın ve **Yayımla sihirbazını** tamamlamak için Son'a tıklayın.
+İlk olarak, yolu belirtin ve **son** ' a tıklayarak Yayımlama Sihirbazı 'nı doldurun.
 
-![klasöre yayımlama](./media/publish-folder.png)
+![klasöre Yayımla](./media/publish-folder.png)
 
-Ardından, Yayımla sihirbazını kullanarak yeni [oluşturduğunuz](./publish-overview.md) yeni yayımlama profilinin özet sayfasını görebilirsiniz. **Yayımla'Visual Studio** web uygulamanızı sağlanan yola dağıtın.
+Daha sonra, Yayımlama Sihirbazı 'nı kullanarak yeni oluşturduğunuz [Yayımlama profili](./publish-overview.md) için Özet sayfasını görürsünüz. **yayımla** ' ya tıklayın ve web uygulamanızı belirtilen yola dağıtır Visual Studio.
 
-![klasöre yayımlama - özet sayfası](./media/publish-folder-summary-page.png)
+![klasöre Yayımla-Özet sayfası](./media/publish-folder-summary-page.png)
 
-Kapatarak bu özet sayfasına dönebilirsiniz. Sağ tıklar ve Yayımla'yı bir **sonraki Visual Studio** bu özet sayfasını açar. (Yayımla sihirbazına geri dönmek için özet **sayfasında Yeni'ye** tıklamanız gerekir.)
+Bu özet sayfasına kapattıktan sonra geri dönebilirsiniz. daha sonra sağ tıklayıp **yayımla**' yı seçtiğinizde Visual Studio bu özet sayfasını açar. (Yayımla sihirbazına geri dönmek için, Özet sayfasında **Yeni** ' ye tıklamanız yeterlidir.)
 
 ## <a name="ftpftps"></a>[FTP/FTPS](#tab/ftp-ftps)
-## <a name="publish-your-web-app-to-an-ftpftps-server"></a>Web uygulamasını FTP/FTPS sunucusunda yayımlama
+## <a name="publish-your-web-app-to-an-ftpftps-server"></a>Web uygulamanızı bir FTP/FTPS sunucusunda yayımlayın
 
-FTP veya FTPS kullanarak web uygulamalarınızı yayımlayın.
+FTP veya FTPS kullanarak Web uygulamanızı yayımlayabilirsiniz.
 
-![FTP veya FTPS Sunucusuna yayımlama](./media/publish-ftp.png)
+![FTP veya FTPS sunucusunda Yayımla](./media/publish-ftp.png)
 
-Gerekli bağlantı ayrıntılarını sip Son'a **tıklayın.**
+Gerekli bağlantı ayrıntılarını girip **son**' a tıklayın.
 
-![FTP veya FTPS Sunucusuna yayımlama - ayrıntılar](./media/publish-ftp-details.png)
+![FTP veya FTPS sunucusunda Yayımla-Ayrıntılar](./media/publish-ftp-details-latest.png)
 
-Ardından, Yayımla sihirbazını kullanarak yeni [oluşturduğunuz](./publish-overview.md) yeni yayımlama profilinin özet sayfasını görebilirsiniz. **Yayımla'Visual Studio** tıklayın ve web uygulamanızı sağlanan FTP veya FTPS Sunucusuna dağıtır.
+Daha sonra, Yayımlama Sihirbazı 'nı kullanarak yeni oluşturduğunuz [Yayımlama profili](./publish-overview.md) için Özet sayfasını görürsünüz. **yayımla** ' ya tıklayın ve web uygulamanızı belirtilen FTP veya ftps sunucusuna dağıtır Visual Studio.
 
-![FTP veya ftps sunucusuna yayımlama - özet sayfası](./media/publish-ftp-summary-page.png)
+![FTP veya FTPS sunucusunda Yayımla-Özet sayfası](./media/publish-ftp-summary-page.png)
 
-Kapatarak bu özet sayfasına dönebilirsiniz. Sağ tıklar ve yayımlarken bir sonraki Visual Studio bu özet sayfası açılır. (Yayımla sihirbazına geri dönmek için özet **sayfasında Yeni'ye** tıklamanız gerekir.)
+Bu özet sayfasına kapattıktan sonra geri dönebilirsiniz. daha sonra sağ tıkladığınızda ve yayımladığınızda Visual Studio, bu özet sayfasını açar. (Yayımla sihirbazına geri dönmek için, Özet sayfasında **Yeni** ' ye tıklamanız yeterlidir.)
 
-## <a name="web-server"></a>[Web Sunucusu](#tab/web-server)
-## <a name="publish-your-web-app-to-web-server-iis"></a>Web uygulamasını Web Server'da yayımlama (IIS)
+## <a name="web-server"></a>[Web sunucusu](#tab/web-server)
+## <a name="publish-your-web-app-to-web-server-iis"></a>Web uygulamanızı Web sunucusuna yayımlama (IIS)
 
-Web uygulamalarınızı IIS'de yayımlayın.
+Web uygulamanızı IIS 'de yayımlayabilirsiniz.
 
-![IIS'de yayımlama](./media/publish-iis.png)
+![IIS 'de Yayımla](./media/publish-iis.png)
 
-İstediğiniz dağıtım modunu seçin (emin değilseniz varsayılanı kullanın).
+İstenen dağıtım modunu seçin (emin değilseniz, Varsayılanı kullanın).
 
-![IIS'de yayımlama - dağıtım modu](./media/publish-iis-deployment-mode.png)
+![IIS dağıtım modunda Yayımla](./media/publish-iis-deployment-mode.png)
 
 ### <a name="web-deploy"></a>Web Dağıtımı
 
-Gerekli bağlantı ayrıntılarını sip Son'a **tıklayın.**
+Gerekli bağlantı ayrıntılarını girip **son**' a tıklayın.
 
-![IIS'de yayımlama - Web Dağıtımı](./media/publish-iis-web-deploy.png)
+![IIS 'de Yayımla-Web Dağıtımı](./media/publish-iis-web-deploy-latest.png)
 
 ### <a name="web-deploy-package"></a>Web Dağıtımı Paketi
 
-Gözat... **seçeneğine** tıklar ve Paket Konumu Seç iletişim kutusunu açın ve dosya adı da dahil olmak üzere *paketin.zip* girin.
+Bir paket konumu Seç iletişim kutusunu açmak ve *.zip* dosya adı da dahil olmak üzere paketin oluşturulmasını istediğiniz yolu girmek Için, **araştır...** ' a tıklayın.
 
-![IIS'de yayımlama - Web Dağıtımı Paketi](./media/publish-iis-web-deploy-package.png)
+![IIS-Web Dağıtımı Paketi 'ne yayımlama](./media/publish-iis-web-deploy-package.png)
 
-### <a name="finish-the-publish-wizard"></a>Yayımla sihirbazını tamamlayın
+### <a name="finish-the-publish-wizard"></a>Yayımlama Sihirbazı 'nı tamamlama
 
-Ardından, Yayımla sihirbazını kullanarak yeni [oluşturduğunuz](./publish-overview.md) yeni yayımlama profilinin özet sayfasını görebilirsiniz. **Yayımla'Visual Studio** web uygulamanızı belirtilen IIS sunucusuna dağıtın.
+Daha sonra, Yayımlama Sihirbazı 'nı kullanarak yeni oluşturduğunuz [Yayımlama profili](./publish-overview.md) için Özet sayfasını görürsünüz. **yayımla** ' ya tıklayın ve web uygulamanızı belirtilen ııs sunucusuna dağıtır Visual Studio.
 
-![IIS'de yayımlama - özet sayfası](./media/publish-iis-web-deploy-package-summary-page.png)
+![IIS 'de Yayımla-Özet sayfası](./media/publish-iis-web-deploy-package-summary-page.png)
 
-## <a name="import-profile"></a>[Profili içeri aktarma](#tab/import-profile)
-## <a name="import-profile"></a>Profili İçeri Aktar
+## <a name="import-profile"></a>[Profili içeri aktar](#tab/import-profile)
+## <a name="import-profile"></a>Profili içeri aktar
 
-Yayımlama ayarlarını [IIS](./tutorial-import-publish-settings-iis.md) ve [](./tutorial-import-publish-settings-azure.md#create-the-publish-settings-file-in-azure-app-service) Azure App Service
+Yayımlama ayarlarını [IIS 'den](./tutorial-import-publish-settings-iis.md) ve [Azure App Service](./tutorial-import-publish-settings-azure.md#create-the-publish-settings-file-in-azure-app-service) içeri aktarabilirsiniz
 
 ---
