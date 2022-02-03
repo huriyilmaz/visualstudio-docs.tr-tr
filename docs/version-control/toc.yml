@@ -1,46 +1,43 @@
-- name: Sürüm denetimi belgeleri
+- name: Visual Studio denetim belgeleri
   href: index.yml
 - name: Genel Bakış
+  expanded: true
   items:
-    - name: Git deneyimi Visual Studio
+    - name: Visual Studio'de Git deneyimi
       href: git-with-visual-studio.md
-- name: başlarken
+- name: Başlarken
   items:
     - name: GitHub hesabı oluşturma
       href: git-create-github-account.md
-    - name: Depoyu kopyalama
+    - name: Bir repo kopyalama
       href: git-clone-repository.md
-    - name: Depo oluşturma
+    - name: Bir repo oluşturma
       href: git-create-repository.md
-- name: Günlük iş akışı
+- name: Innerloop iş akışı
   items:
     - name: Dal oluşturma
       href: git-create-branch.md
-    - name: Bir kayıt oluştur
+    - name: Commit yapma
       href: git-make-commit.md
-    - name: Uzaktan gönder
+    - name: Uzak sunucuya itme
       href: git-push-remote.md
     - name: 'Getirme, çekme ve eşitleme'
       href: git-fetch-pull-sync.md
-- name: Depo Yönetimi
+- name: Repo yönetimi
   items:
-    - name: Depoya git
+    - name: Bir repoya göz atma
       href: git-browse-repository.md
-    - name: Depoyu yönetme
+    - name: Bir repo yönetme
       href: git-manage-repository.md
     - name: Birleştirme çakışmalarını çözümleme
       href: git-resolve-conflicts.md
-- name: Başvuru
+- name: Kaynaklar
   items:
     - name: Git ayarları ve tercihleri
       href: git-settings.md
-    - name: Visual Studio kaynak denetimini nasıl kolaylaştırdı
+    - name: Kaynak Visual Studio denetimi nasıl kolaylaştırır?
       href: git-visual-studio-source-control.md
-    - name: Git ve Takım Gezgini yan yana karşılaştırın
+    - name: Git ile Takım Gezgini yan yana karşılaştırma
       href: git-team-explorer-feature-comparison.md
-- name: Yenilikler
-  items:
-    - name: Visual Studio 2022 Preview sürüm notları
-      href: /visualstudio/releases/2022/release-notes-preview
-    - name: Visual Studio 2022 sürüm notları
+    - name: Sürüm notları
       href: /visualstudio/releases/2022/release-notes

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio kaynak denetimini nasıl kolaylaştırdı
+title: Visual Studio kaynak denetimini Git ile nasıl kolay hale getiriyor
 titleSuffix: ''
 description: kodunuzda yapılan değişiklikleri izlemek ve gerekirse onları dönüştürmek için Git & GitHub Visual Studio nasıl kullanacağınızı öğrenin.
 ms.date: 11/08/2021
@@ -9,20 +9,20 @@ ms.author: tglee
 ms.manager: jmartens
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.openlocfilehash: 6d7d3d5e78cd16cf10bfb982bac866a2d9baf759
-ms.sourcegitcommit: dc12d3d0ca2ec3601cb9de7c22e61ecf22c7c514
+ms.openlocfilehash: cbb10cc55429545e1ca5a872a606d2758df6c576
+ms.sourcegitcommit: 204973a0fde6c1dbe1e8fd6e1d2483bc1b7873ae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "132264065"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "138000470"
 ---
-# <a name="how-visual-studio-makes-source-control-easy"></a>Visual Studio kaynak denetimini nasıl kolaylaştırdı
+#  <a name="how-visual-studio-makes-source-control-easy-with-git"></a>Visual Studio kaynak denetimini Git ile nasıl kolay hale getiriyor
 
 Kodunuzun daha önce çalışan bir sürümüne geri dönebilirsiniz misiniz? Kodunuzun kopyalarını farklı konumlarda yedekleme olarak el ile depolamanızı ister misiniz? Kaynak denetimi, zaman içinde kodunuzda yaptığınız değişiklikleri izlemenizi mümkün kılar, böylece hem ilerlemenizi izleyip belirli sürümlere döndürebilirsiniz. Visual Studio, en yaygın olarak kullanılan modern sürüm denetim sistemi olan Git ile çalışmayı kolaylaştırır.
 
 ## <a name="a-great-place-to-start-with-git--github"></a>Git & kullanmaya başlamak için harika bir yer GitHub
 
-GitHub, kodunuzu depolayabileceğiniz ve dilediğiniz cihazdan her yerden erişebileceğiniz ücretsiz ve güvenli bulut kodu depolaması sunar. Visual Studio, birinci sınıf Git ve GitHub işlevselliğiyle birlikte gelir ve kodunuzu yönetmek ve başkalarıyla işbirliği yapmak için kaynak denetimini kullanmayı kolaylaştırır. aşağıdaki **git deposu oluştur** iletişim kutusuyla kodunuzu git & GitHub ekleyerek başlayın. Bunu yapmak için, **Git**' i seçerek  >  menü çubuğundan git **deposu oluşturun** .
+GitHub, kodunuzu depolayabileceğiniz ve dilediğiniz cihazdan her yerden erişebileceğiniz ücretsiz ve güvenli bulut kodu depolaması sunar. Visual Studio, birinci sınıf Git ve GitHub işlevselliğiyle birlikte gelir ve kodunuzu yönetmek ve başkalarıyla işbirliği yapmak için kaynak denetimini kullanmayı kolaylaştırır. aşağıdaki **git deposu oluştur** iletişim kutusuyla kodunuzu git & GitHub ekleyerek başlayın. Bunu yapmak için, **Git**  >  ' i seçerek menü çubuğundan git **deposu oluşturun** .
 
 :::image type="content" source="media/git-source-control-create-repository.png" alt-text="Visual Studio git deposu oluştur iletişim kutusu.":::
 
@@ -30,7 +30,7 @@ ayrıca, çok sayıda açık kaynaklı depolardan keşfetmeye ve öğrenmeniz i�
 
 ## <a name="streamlined-and-intuitive-inner-loop-git-experience"></a>Kolaylaştırılmış ve sezgisel iç döngü git deneyimi
 
-Visual Studio, günlük iş akışınızın (iç döngülük) üretkenliğini en üst düzeye çıkarmak için, keşfedilebilir ve sezgisel Git özellikleri sağlar. Artık yaptığınız değişiklikleri uygulamak için kodunuzun dışında geçiş yapmanız gerekmez. Bu özellikler, üst düzey Git menüsünü, git değişiklikleri penceresini ve git odaklı durum çubuğunu içerir. Git, Visual Studio bir bütünsel deneyimi olarak tümleştirilir; Örneğin, hem Çözüm Gezgini hem de kod düzenleyicisinin birinci sınıf git tümleştirmesi vardır.
+Visual Studio, günlük iş akışınızın (iç döngülük) üretkenliğini en üst düzeye çıkarmak için, keşfedilebilir ve sezgisel Git özellikleri sağlar. Artık yaptığınız değişiklikleri uygulamak için kodunuzun dışında geçiş yapmanız gerekmez. Bu özellikler, üst düzey Git menüsünü, git değişiklikleri penceresini ve git odaklı durum çubuğunu içerir. Git, bütünsel deneyimi olarak Visual Studio tümleştirilir; örneğin, hem Çözüm Gezgini hem de kod düzenleyicisi birinci sınıf Git tümleştirmesine sahiptir.
 
 :::image type="content" source="media/git-source-control-inner-loop.png" alt-text="git menüsüyle ıde Visual Studio ve Çözüm Gezgini göstermek için git değişiklikleri sekmesi.":::
 

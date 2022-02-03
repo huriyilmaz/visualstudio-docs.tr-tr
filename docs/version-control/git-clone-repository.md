@@ -9,12 +9,12 @@ ms.author: tglee
 ms.manager: jmartens
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.openlocfilehash: ec32f6e36b12d34bf198a67bf64c6d0c085fe2a6
-ms.sourcegitcommit: 23b0ef3815833426933ff6491271034658683f9d
+ms.openlocfilehash: bb7d9d665c704e49669b9c480e516b2404276c63
+ms.sourcegitcommit: 204973a0fde6c1dbe1e8fd6e1d2483bc1b7873ae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "137983833"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "138000386"
 ---
 # <a name="clone-a-repo-in-visual-studio"></a>Visual Studio'de bir Visual Studio
 
@@ -52,7 +52,7 @@ Bu makaleyi takip etmek için aşağıdakiler gerekir:
 
     :::image type="content" source="media/vs-2022/git-menu-clone-repo-dialog-github-account.png" alt-text="Oturum aç penceresinin Oturum aç açılan bölümünün ekran GitHub görüntüsü.":::
 
-    Visual Studio'dan GitHub oturum Visual Studio bildirimi görüntülenir. İstediğiniz seçenekleri belirleyin ve ardından **Github'ı yetkilendir'i seçin**.
+    GitHub'dan Visual Studio oturum **Visual Studio görüntülenir.** İstediğiniz seçenekleri belirleyin ve ardından **Github'ı yetkilendir'i seçin**.
 
     :::image type="content" source="media/vs-2022/git-menu-github-authorize-visual-studio-sml.png" alt-text="Yetkilendirme iletişim kutusunun ekran görüntüsü." lightbox="media/vs-2022/git-menu-github-authorize-visual-studio-lrg.png":::
 
@@ -64,7 +64,7 @@ Bu makaleyi takip etmek için aşağıdakiler gerekir:
 
     :::image type="content" source="../ide/media/github-success-signin.png" alt-text="GitHub hesabınızla bağlantı verdikten sonra Visual Studio.":::
 
-1. Oturum açtıktan sonra Visual Studio kopyala iletişim kutusuna geri dönersiniz;  burada **GitHub'den** aç penceresi erişiminiz olan tüm depoları listeler. İstediğinizi seçin ve ardından Kopyala'ya **seçin**.
+1. Oturum açtıktan sonra Visual Studio Bir depoyu klonla iletişim kutusuna  geri dönersiniz; burada **GitHub'den** aç penceresi erişiminiz olan tüm depoları listeler. İstediğinizi seçin ve ardından Kopyala'ya **seçin**.
 
     Depo listesi görünmüyorsa deponun konumunu girin ve Kopyala'ya **tıklayın**.
 
@@ -72,7 +72,7 @@ Bu makaleyi takip etmek için aşağıdakiler gerekir:
 
 1. Daha Visual Studio, depoda bir çözüm listesi sunar. Yüklemek istediğiniz çözümü seçin veya Klasör Görünümü'ne **Çözüm Gezgini**[**.**](../ide/use-solution-explorer.md?view=vs-2022&preserve-view=true)
 
-    :::image type="content" source="../ide/media/vs-2022/git-solution-explorer-folder-view.png" alt-text="Visual Studio 2022'de Çözüm Gezgini Görünümü'nin ekran görüntüsü.":::
+    :::image type="content" source="../ide/media/vs-2022/git-solution-explorer-folder-view.png" alt-text="Visual Studio 2022'de Çözüm Gezgini Klasör Görünümü'nin ekran görüntüsü.":::
 
     > [!TIP]
     > Git menüsünden varsayılan Klasör Görünümü'yü Çözüm Görünümü olarak **değiştirebilirsiniz** . Bunu **Ayarlar** >  **Kaynak DenetimiGit** >  **Genel Ayarlar** >  **Otomatik olarak bir Git deposu a açılışında** çözümü yükle'yi seçin.
@@ -87,23 +87,14 @@ Depoyu klonladikten veya oluşturduktan [sonra Visual Studio Git](git-create-rep
 
 1. **Git menüsünden** Depoyu **Kopyala'ya tıklayın**.
 
-    :::image type="content" source="media/vs-2022/git-menu-clone-repository.png" alt-text="Visual Studio'daki Git menüsündeki Tam Depoyu Klonla seçeneğinin ekran görüntüsü.":::
+    :::image type="content" source="media/vs-2022/git-menu-clone-repository.png" alt-text="Visual Studio'daki Git menüsündeki tam Depoyu Klonla seçeneğinin ekran Visual Studio.":::
 
 1. Depo **klonla iletişim kutusunun** Depoya **gözat iletişim kutusunda** Depoya **gözat'ı Azure DevOps**.
 
-    :::image type="content" source="../ide/media/vs-2022/browse-repository-azure-devops.png" alt-text="Visual Studio'daki 'Depoyu klonla' iletişim kutusunun 'Depoya gözat' Azure DevOps ekran görüntüsü.":::
+    :::image type="content" source="../ide/media/vs-2022/browse-repository-azure-devops.png" alt-text="Visual Studio'daki 'Depoyu klonla' iletişim kutusunun 'Depoya gözat' bölümünün ekran Azure DevOps vurgulanmış.":::
 
 1. Bir **Bağlan iletişim Project** iletişim kutusu görüntülenir. İstemleri takip edin ve Azure hesabınızla oturum açın ve Azure DevOps Server dosyaları barındıran sunuculara gidin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 Yolculuğunuza devam etmek için [, Repo oluşturma sayfasını ziyaret](git-create-repository.md) edin.
-
-## <a name="see-also"></a>Ayrıca bkz.
-
-- [Visual Studio'de Git deneyimi](git-with-visual-studio.md)
-- [Visual Studio & GitHub: Birlikte daha iyi](https://visualstudio.microsoft.com/vs/github/)
-- [Öğretici: Bir repodan proje açma](../get-started/tutorial-open-project-from-repo.md)
-- [Visual Studio’da GitHub hesaplarıyla çalışma](../ide/work-with-github-accounts.md)
-- [Birden çok kullanıcı hesabıyla çalışma](../ide/work-with-multiple-user-accounts.md)
-- [Visual Studio'da oturum açma](../ide/signing-in-to-visual-studio.md)

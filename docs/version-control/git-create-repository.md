@@ -1,5 +1,5 @@
 ---
-title: Visual Studio için depo oluşturma
+title: Visual Studio GitHub depoyu oluşturma
 titleSuffix: ''
 description: Git kullanarak Visual Studio bir depo oluşturun veya bir Azure DevOps depoya gidin.
 ms.date: 02/02/2022
@@ -9,22 +9,21 @@ ms.author: tglee
 ms.manager: jmartens
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.openlocfilehash: 2125d832225918cc0118f689e74bacfdb7e08ee8
-ms.sourcegitcommit: 23b0ef3815833426933ff6491271034658683f9d
+ms.openlocfilehash: bd83490faaab751a968994f5793f3ffc998a6746
+ms.sourcegitcommit: 204973a0fde6c1dbe1e8fd6e1d2483bc1b7873ae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "137983799"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "138000378"
 ---
-# <a name="create-a-repo-in-visual-studio"></a>Visual Studio için depo oluşturma
+# <a name="create-a-git-repository-from-visual-studio"></a>Visual Studio git deposu oluşturma
 
-Visual Studio, bir depoyu doğrudan ıde 'den klonlamanızı kolaylaştırır. Aşağıdaki adımları uygulayın:
+Visual Studio, ıde 'den bir depoyu doğrudan oluşturmayı kolaylaştırır. Aşağıdaki adımları uygulayın:
 
 ## <a name="prerequisites"></a>Önkoşullar
 
 Bu makaleyi izlemek için şunlar gerekir:
 + [Visual Studio yüklendi](../install/install-visual-studio.md)
-
 + [GitHub kullanıcı hesabı](git-create-github-account.md)
 
 ## <a name="create-a-github-repo"></a>GitHub deposu oluşturma

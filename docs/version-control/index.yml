@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: Visual Studio denetimi belgeleri
-summary: Git ve Visual Studio gibi kaynak denetimi teknolojilerini kullanarak kodunuzu kendi içinde GitHub.
+title: Visual Studio sürüm denetimi belgeleri
+summary: Git ve GitHub gibi kaynak denetimi teknolojilerini kullanarak kodunuzu Visual Studio içinden paylaşabilirsiniz.
 metadata:
-  title: Sürüm denetimi & Git ile kaynak denetimi Visual Studio
-  description: Kaynaklarda sürüm/kaynak denetimi Visual Studio. Kod tabanınızı terk etmeden Git'te kod yayınlarınızı paylaşabilir& GitHub tümleştirebilirsiniz ve yönetebilirsiniz.
+  title: Git docs ile sürüm denetimi & kaynak denetimi
+  description: Visual Studio sürümünde sürüm/kaynak denetimi teknolojilerini kullanın. kod yayınlarınızı kod tabanınızdan çıkmadan Git & GitHub paylaşabilir, tümleştirebilirsiniz ve yönetebilirsiniz.
   ms.topic: landing-page
   ms.date: 02/02/2022
   author: TerryGLee
@@ -11,36 +11,36 @@ metadata:
   manager: jmartens
   ms.prod: visual-studio-windows
   ms.technology: vs-ide-general
-  ms.openlocfilehash: 91ffe0047951782ffd6f66e475bfc95244f9c26d
-  ms.sourcegitcommit: 23b0ef3815833426933ff6491271034658683f9d
+  ms.openlocfilehash: 0ad3b8e4f1a242043208a31bb2d9a2b020b1ac7f
+  ms.sourcegitcommit: 204973a0fde6c1dbe1e8fd6e1d2483bc1b7873ae
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 02/02/2022
-  ms.locfileid: "137983791"
+  ms.lasthandoff: 02/03/2022
+  ms.locfileid: "138000441"
 landingContent:
 - title: Başlarken
   linkLists:
   - linkListType: overview
     links:
-    - text: Visual Studio'de Git deneyimi
+    - text: Git deneyimi Visual Studio
       url: git-with-visual-studio.md
-    - text: Kaynak Visual Studio denetimi nasıl kolaylaştırır?
+    - text: Visual Studio kaynak denetimini nasıl kolaylaştırdı
       url: git-visual-studio-source-control.md
   - linkListType: tutorial
     links:
-    - text: Bir repo kopyalama
+    - text: Depoyu kopyalama
       url: git-clone-repository.md
     - text: Yeni depo oluşturma
       url: git-create-repository.md
-- title: Günlük iş akışı
+- title: Innerloop dev iş akışı
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Yeni dal oluşturma
+    - text: Yeni dal oluştur
       url: git-create-branch.md
-    - text: Commit yapma
+    - text: Bir kayıt oluştur
       url: git-make-commit.md
-    - text: Uzak sunucuya itme
+    - text: Uzaktan gönder
       url: git-push-remote.md
     - text: Getirme, çekme ve eşitleme
       url: git-fetch-pull-sync.md
@@ -48,7 +48,7 @@ landingContent:
   linkLists:
   - linkListType: whats-new
     links:
-    - text: Visual Studio 2022 Preview 17.1 Blogu
+    - text: Visual Studio 2022 Preview 17,1 blogu
       url: https://devblogs.microsoft.com/visualstudio/introducing-new-git-features-to-visual-studio-2022/
     - text: Visual Studio 2022 sürüm notları
       url: /visualstudio/releases/2022/release-notes-preview
@@ -60,17 +60,17 @@ landingContent:
     links:
     - text: Git ayarları & tercihleri
       url: git-settings.md
-    - text: Git & Takım Gezgini
+    - text: Git & Takım Gezgini Karşılaştır
       url: git-team-explorer-feature-comparison.md
-    - text: Git'te ana kaynak & olun (blog)
+    - text: Git & açık kaynak (blog) üzerinde ana öğe olun
       url: https://devblogs.microsoft.com/visualstudio/become-a-master-at-git-and-open-source/
-- title: Repo yönetimi
+- title: Depo Yönetimi
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Bir repoya göz atma
+    - text: Depoya git
       url: git-browse-repository.md
-    - text: Bir repo yönetme
+    - text: Depoyu yönetme
       url: git-manage-repository.md
     - text: Birleştirme çakışmalarını çözümleme
       url: git-resolve-conflicts.md
