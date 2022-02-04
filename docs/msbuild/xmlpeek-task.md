@@ -5,26 +5,20 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+  - VB
+  - CSharp
+  - C++
+  - jsharp
 helpviewer_keywords:
-- XmlPeek task [MSBuild]
-- MSBuild, XmlPeek task
+  - 'XmlPeek task [MSBuild]'
+  - 'MSBuild, XmlPeek task'
 ms.assetid: 19196031-a3bc-41b5-9c4a-f2572630e179
 author: ghogen
 ms.author: ghogen
 manager: jmartens
 ms.technology: msbuild
 ms.workload:
-- multiple
-ms.openlocfilehash: 8bf7e5548223733574b49322dfca21a51d758de5
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122136592"
+  - multiple
 ---
 # <a name="xmlpeek-task"></a>XmlPeek görevi
 
@@ -36,19 +30,19 @@ Xml dosyasından XPath Sorgusu tarafından belirtilen değerleri döndürür.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`Namespaces`|İsteğe `String` bağlı parametre.<br /><br /> XPath sorgu ön ekleri için ad alanlarını belirtir.|
-|`Query`|İsteğe `String` bağlı parametre.<br /><br /> XPath sorgusunu belirtir.|
-|`Result`|İsteğe <xref:Microsoft.Build.Framework.ITaskItem> `[]` bağlı çıkış parametresi.<br /><br /> Bu görev tarafından döndürülen sonuçları içerir.|
-|`XmlContent`|İsteğe `String` bağlı parametre.<br /><br /> XML girişini dize olarak belirtir.|
-|`XmlInputPath`|İsteğe <xref:Microsoft.Build.Framework.ITaskItem> bağlı parametre.<br /><br /> XML girişini bir dosya yolu olarak belirtir.|
+|`Namespaces`|İsteğe bağlı `String` parametre.<br /><br /> XPath sorgu ön ekleri için ad alanlarını belirtir.|
+|`Query`|İsteğe bağlı `String` parametre.<br /><br /> XPath sorgusunu belirtir.|
+|`Result`|İsteğe <xref:Microsoft.Build.Framework.ITaskItem>`[]` bağlı çıkış parametresi.<br /><br /> Bu görev tarafından döndürülen sonuçları içerir.|
+|`XmlContent`|İsteğe bağlı `String` parametre.<br /><br /> XML girişini dize olarak belirtir.|
+|`XmlInputPath`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> XML girişini bir dosya yolu olarak belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Bu görev, tabloda listelenen parametrelerin yanı sıra sınıfından devralınan parametreleri de sınıfından <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> devralınır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı.](../msbuild/taskextension-base-class.md)
+ Bu görev, tabloda listelenen parametrelerin yanı sıra sınıfından <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> devralınan parametreleri de sınıfından devralınır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Örnek
 
-Okunabilecek örnek bir XML `settings.config` dosyası şu şekildedir:
+Okunabilecek örnek bir XML dosyası `settings.config` şu şekildedir:
 
 ```xml
 <appSettings>
@@ -56,7 +50,7 @@ Okunabilecek örnek bir XML `settings.config` dosyası şu şekildedir:
 </appSettings>
 ```
 
-Bu örnekte, okumak için aşağıdaki `value` gibi bir kod kullanın:
+Bu örnekte, okumak için aşağıdaki `value`gibi bir kod kullanın:
 
 ```xml
 <Target Name="BeforeBuild">
@@ -75,7 +69,7 @@ Bu örnekte, okumak için aşağıdaki `value` gibi bir kod kullanın:
 </Target>
 ```
 
-XML ad alanlarıyla, aşağıdaki `Namespaces` örnekte olduğu gibi parametresini kullanırsınız. Giriş XML dosyası `XMLFile1.xml` ile:
+XML ad alanlarıyla, aşağıdaki örnekte `Namespaces` olduğu gibi parametresini kullanırsınız. Giriş XML dosyası ile `XMLFile1.xml`:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -87,7 +81,7 @@ XML ad alanlarıyla, aşağıdaki `Namespaces` örnekte olduğu gibi parametresi
 </class>
 ```
 
-Bir proje `Target` dosyasında aşağıdakiler tanımlanmıştır:
+Bir proje dosyasında `Target` aşağıdakiler tanımlanmıştır:
 
 ```xml
   <Target Name="TestPeek" BeforeTargets="Build">
@@ -121,3 +115,4 @@ Bir proje `Target` dosyasında aşağıdakiler tanımlanmıştır:
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)
 - [XPath sorgu söz dizimi](https://wikipedia.org/wiki/XPath)
+- [XPath Sorguları ve Ad Alanları](/dotnet/standard/data/xml/xpath-queries-and-namespaces)

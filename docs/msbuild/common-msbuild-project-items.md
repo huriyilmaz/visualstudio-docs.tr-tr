@@ -1,75 +1,69 @@
 ---
-title: ortak MSBuild Project öğeleri | Microsoft Docs
-description: ortak MSBuild proje öğeleri hakkında bilgi edinin. Öğeler bir veya daha fazla dosyaya başvuru olarak adlandırılır ve dosya adları, yollar ve sürüm numaraları gibi meta verilere sahiptir.
+title: Ortak MSBuild Project Öğeleri | Microsoft Docs
+description: 'Ortak proje öğeleri MSBuild öğrenin. Öğeler, bir veya daha fazla dosyaya yönelik adlandırılmış başvurulardır ve dosya adları, yollar ve sürüm numaraları gibi meta verilere sahip olur.'
 ms.custom: SEO-VS-2020
 ms.date: 10/29/2020
 ms.topic: reference
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+  - VB
+  - CSharp
+  - C++
+  - jsharp
 helpviewer_keywords:
-- MSBuild, common project items
+  - 'MSBuild, common project items'
 ms.assetid: 1eba3721-cc12-4b80-9987-84923ede5e2e
 author: ghogen
 ms.author: ghogen
 manager: jmartens
 ms.technology: msbuild
 ms.workload:
-- multiple
-ms.openlocfilehash: 49fd97e1d8e91cd6049bbe43f7fee9fb092e8f39
-ms.sourcegitcommit: efe1d737fd660cc9183177914c18b0fd4e39ba8b
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "130211967"
+  - multiple
 ---
 # <a name="common-msbuild-project-items"></a>Yaygın MSBuild proje öğeleri
 
-MSBuild, öğe bir veya daha fazla dosyaya yönelik adlandırılmış bir başvurudur. Öğeler, dosya adları, yollar ve sürüm numaraları gibi meta verileri içerir. Visual Studio tüm proje türlerinde ortak olarak birkaç öğe vardır. Bu öğeler *Microsoft. Build. CommonTypes. xsd* dosyasında tanımlanmıştır.
+Bu MSBuild öğe, bir veya daha fazla dosyanın adlandırılmış başvurusu olur. Öğeler dosya adları, yollar ve sürüm numaraları gibi meta verileri içerir. Tüm proje türlerinin Visual Studio ortak öğeleri vardır. Bu öğeler *Microsoft.Build.CommonTypes.xsd dosyasında tanımlanır*.
 
-Bu makalede tüm ortak proje öğeleri listelenir.
+Bu makalede tüm ortak proje öğeleri listelanmıştır.
 
 ## <a name="reference"></a>Başvuru
 
-Projedeki derleme (yönetilen) başvurusunu temsil eder.
+Projedeki derleme (yönetilen) başvurularını temsil eder.
 
 |Öğe meta veri adı|Description|
 |---------------|-----------------|
 |HintPath|İsteğe bağlı dize. Derlemenin göreli veya mutlak yolu.|
-|Name|İsteğe bağlı dize. Derlemenin görünen adı, örneğin, "System. Windows. Forms. "|
-|FusionName|İsteğe bağlı dize. Öğe için basit veya güçlü Fusion adı belirtir.<br /><br /> Bu öznitelik mevcut olduğunda, derleme dosyası Fusion adını almak için açılmadığından zaman tasarrufu yapabilirsiniz.|
-|Bahsedilen SpecificVersion|İsteğe bağlı Boolean. Yalnızca Fusion adındaki sürümün başvurulması gerekip gerekmediğini belirtir.|
-|Diğer adlar|İsteğe bağlı dize. Başvuru için herhangi bir diğer ad.|
-|Özel|İsteğe bağlı Boolean. Başvurunun çıkış klasörüne kopyalanıp kopyalanmayacağını belirtir. bu öznitelik, Visual Studio ıde 'de olan başvurunun yereli **kopyala** özelliği ile eşleşir.|
+|Adı|İsteğe bağlı dize. Derlemenin görünen adı, örneğin, "Sistem. Windows. Formlar."|
+|FusionName|İsteğe bağlı dize. Öğe için basit veya güçlü fusion adını belirtir.<br /><br /> Bu öznitelik mevcut olduğunda, derleme dosyasının fusion adını almak için açılması gerekmay olduğundan zaman kaydedebilir.|
+|SpecificVersion|İsteğe bağlı boole. Yalnızca fusion adlarında sürüme başvurulması gerekip gerek olmadığını belirtir.|
+|Diğer adlar|İsteğe bağlı dize. Başvuru için tüm diğer adlar.|
+|Özel|İsteğe bağlı boole. Başvuru çıktı klasörüne kopyalanır olup olmadığını belirtir. Bu öznitelik, **IDE'de** yer alan başvuru için Copy Local Visual Studio eşler.|
 
 ## <a name="comreference"></a>COMReference
 
-Projedeki COM (yönetilmeyen) bileşen başvurusunu temsil eder. Bu öğe yalnızca .NET projeleri için geçerlidir.
+Projedeki com (unmanaged) bileşen başvurularını temsil eder. Bu öğe yalnızca .NET projeleri için geçerlidir.
 
 |Öğe meta veri adı|Açıklama|
 |---------------|-----------------|
 |Ad|İsteğe bağlı dize. Bileşenin görünen adı.|
-|Guid|Gerekli dize. Formundaki bileşeni için bir GUID {12345678-1234-1234-1234-1234567891234} .|
-|VersionAna|Gerekli dize. Bileşenin sürüm numarasının ana bölümü. Örneğin, tam sürüm numarası "5,46" ise "5".|
-|VersionMinor|Gerekli dize. Bileşenin sürüm numarasının küçük bölümü. Örneğin, tam sürüm numarası "5,46" ise, "46".|
-|EmbedInteropTypes|İsteğe bağlı Boolean. Doğru ise, birlikte çalışma DLL 'SI oluşturmak yerine bu başvurudan doğrudan birlikte çalışma türlerini derlemeye ekleyin.|
-|LCID|İsteğe bağlı dize. Bileşenin LocaleID 'Si.|
-|WrapperTool|İsteğe bağlı dize. Bileşende kullanılan sarmalayıcı aracının adı. Değerler şunlardır:<br /><br />1. birincil<br />2. Tlbimp<br />3. bu yortlbimp<br />4. Aximp|
-|Yalıtılmış|İsteğe bağlı Boolean. Bileşenin bir reg-Free bileşeni olup olmadığını belirtir.|
+|Guid|Gerekli dize. bileşeni için şeklinde {12345678-1234-1234-1234-123456781234}bir GUID.|
+|VersionMajor|Gerekli dize. Bileşenin sürüm numarasının ana bölümü. Örneğin, tam sürüm numarası "5.46" ise "5".|
+|VersionMinor|Gerekli dize. Bileşenin sürüm numarasının küçük bölümü. Örneğin, tam sürüm numarası "5.46" ise "46".|
+|EmbedInteropTypes|İsteğe bağlı boole. True ise, birlikte çalışma DLL'si oluşturmak yerine bu başvurudan birlikte çalışma türlerini doğrudan derlemenize ekleyin.|
+|LCID|İsteğe bağlı dize. Bileşenin LocaleID'i.|
+|WrapperTool|İsteğe bağlı dize. Bileşende kullanılan sarmalayıcı aracının adı. Değerler:<br /><br />1. birincil<br />2. tlbimp<br />3. primaryortlbimp<br />4. aximp|
+|Yalıtılmış|İsteğe bağlı boole. Bileşenin kayıtsız bir bileşen olup olmadığını belirtir.|
 
 ## <a name="comfilereference"></a>COMFileReference
 
-`TypeLibFiles` [ResolveComReference](resolvecomreference-task.md) hedefinin parametresine geçirilen tür kitaplıklarının listesini temsil eder. Bu öğe yalnızca .NET projeleri için geçerlidir.
+[ResolveComReference](resolvecomreference-task.md) hedefinin parametresine geçirilen `TypeLibFiles` tür kitaplıklarının listesini temsil eder. Bu öğe yalnızca .NET projeleri için geçerlidir.
 
 |Öğe meta veri adı|Description|
 |---------------|-----------------|
-|WrapperTool|İsteğe bağlı dize. Bileşende kullanılan sarmalayıcı aracının adı. Değerler şunlardır:<br /><br />1. birincil<br />2. Tlbimp<br />3. bu yortlbimp<br />4. Aximp|
+|WrapperTool|İsteğe bağlı dize. Bileşende kullanılan sarmalayıcı aracının adı. Değerler:<br /><br />1. birincil<br />2. tlbimp<br />3. primaryortlbimp<br />4. aximp|
 
 ## <a name="nativereference"></a>NativeReference
 
-Yerel bir bildirim dosyasını veya bu tür bir dosyaya yapılan başvuruyu temsil eder.
+Yerel bildirim dosyasını veya bu tür bir dosyaya başvuruyu temsil eder.
 
 |Öğe meta veri adı|Açıklama|
 |---------------|-----------------|
@@ -78,20 +72,20 @@ Yerel bir bildirim dosyasını veya bu tür bir dosyaya yapılan başvuruyu tems
 
 ## <a name="projectreference"></a>ProjectReference
 
-Başka bir projenin başvurusunu temsil eder. `ProjectReference` öğeler, hedef tarafından [başvuru](#reference) öğelerine dönüştürülür `ResolveProjectReferences` `ProjectReference` . bu nedenle, dönüştürme işlemi onun üzerine yazmazsa, başvurudaki geçerli meta veriler üzerinde geçerli olabilir.
+Başka bir projeye başvuru temsil eder. `ProjectReference` öğeleri hedef tarafından [Başvuru](#reference) `ResolveProjectReferences` öğelerine dönüşür, bu nedenle dönüştürme işlemi üzerine yazmazsa bir Başvurudaki `ProjectReference`geçerli meta veriler üzerinde geçerli olabilir.
 
 |Öğe meta veri adı|Açıklama|
 |---------------|-----------------|
-|Ad|İsteğe bağlı dize. Başvurunun görünen adı.|
-|GlobalPropertiesToRemove|İsteğe bağlı `string[]` . Başvurulan proje oluşturulurken kaldırılacak özelliklerin adları (örneğin,) `RuntimeIdentifier;PackOnBuild` . Varsayılan olarak boştur.|
-|Project|İsteğe bağlı dize. Formundaki, başvuru için bir GUID {12345678-1234-1234-1234-1234567891234} .|
+|Ad|İsteğe bağlı dize. Başvuru görünen adı.|
+|GlobalPropertiesToRemove|İsteğe bağlı `string[]` . Başvurulan proje oluşturulurken kaldırılacak özelliklerin adları (örneğin `RuntimeIdentifier;PackOnBuild` ,). Varsayılan olarak boştur.|
+|Project|İsteğe bağlı dize. Formundaki {12345678-1234-1234-1234-123456781234} , başvuru için BIR GUID.|
 |Outputıtemtype|İsteğe bağlı dize. Hedef çıkışları içine yayan öğe türü. Varsayılan değer boştur. Başvuru meta verileri "true" (varsayılan) olarak ayarlandıysa, hedef çıkışlar derleyici için başvurular olur.|
-|ReferenceOutputAssembly|İsteğe bağlı Boolean. , Olarak ayarlanırsa `false` , başvurulan projenin çıktısını bu projenin bir [başvurusu](#reference) olarak içermez, ancak yine de diğer projenin bundan önce derleme yapmalarını sağlar. Varsayılan olarak olur `true` .|
-|SetConfiguration|İsteğe bağlı dize. `Configuration`Başvurulan proje için genel özelliği ayarlar, örneğin `Configuration=Release` .|
-|SetPlatform|İsteğe bağlı dize. `Platform`Başvurulan proje için genel özelliği ayarlar, örneğin `Platform=AnyCPU` .|
-|SetTargetFramework|İsteğe bağlı dize. `TargetFramework`Başvurulan proje için genel özelliği ayarlar, örneğin `TargetFramework=netstandard2.0` .|
-|SkipGetTargetFrameworkProperties|İsteğe bağlı Boolean. İse `true` , başvurulan projeyi en uyumlu değere anlaşmadan oluşturur `TargetFramework` . Varsayılan olarak olur `false` .|
-|Targets|İsteğe bağlı `string[]` . Başvurulan projelerde oluşturulması gereken hedeflerin noktalı virgülle ayrılmış listesi. Varsayılan, varsayılan `$(ProjectReferenceBuildTargets)` hedefleri gösteren varsayılan değeri boş olan değeridir.|
+|ReferenceOutputAssembly|İsteğe bağlı Boolean. , Olarak `false` ayarlanırsa, başvurulan projenin çıktısını bu projenin bir [başvurusu](#reference) olarak içermez, ancak yine de diğer projenin bundan önce derleme yapmalarını sağlar. Varsayılan olarak `true` olur.|
+|SetConfiguration|İsteğe bağlı dize. Başvurulan proje için genel özelliği `Configuration` Ayarlar, örneğin `Configuration=Release` .|
+|SetPlatform|İsteğe bağlı dize. Başvurulan proje için genel özelliği `Platform` Ayarlar, örneğin `Platform=AnyCPU` .|
+|SetTargetFramework|İsteğe bağlı dize. Başvurulan proje için genel özelliği `TargetFramework` Ayarlar, örneğin `TargetFramework=netstandard2.0` .|
+|SkipGetTargetFrameworkProperties|İsteğe bağlı Boolean. İse `true` , başvurulan projeyi en uyumlu `TargetFramework` değere anlaşmadan oluşturur. Varsayılan olarak `false` olur.|
+|Targets|İsteğe bağlı `string[]` . Başvurulan projelerde oluşturulması gereken hedeflerin noktalı virgülle ayrılmış listesi. Varsayılan, varsayılan hedefleri gösteren varsayılan değeri boş olan değeridir `$(ProjectReferenceBuildTargets)` .|
 
 ## <a name="compile"></a>Se
 
@@ -152,19 +146,19 @@ Yapı işleminde rolü olmaması gereken dosyaları temsil eder.
 
 ## <a name="assemblymetadata"></a>AssemblyMetadata
 
-Olarak oluşturulacak derleme özniteliklerini temsil eder `[AssemblyMetadata(key, value)]` .
+Olarak `[AssemblyMetadata(key, value)]` oluşturulacak derleme özniteliklerini temsil eder.
 
 | Öğe meta veri adı | Description |
 |-----------------------| - |
-| Şunları Dahil Et: | Öznitelik oluşturucusunda ilk parametre (anahtar) olur `AssemblyMetadataAttribute` . |
-| Değer | Gerekli dize. Öznitelik oluşturucusunda ikinci parametre (değer) olur `AssemblyMetadataAttribute` . |
+| Şunları Dahil Et: | Öznitelik oluşturucusunda ilk parametre (anahtar) `AssemblyMetadataAttribute` olur. |
+| Değer | Gerekli dize. Öznitelik oluşturucusunda ikinci parametre (değer) `AssemblyMetadataAttribute` olur. |
 
 > [!NOTE]
 > Bu öğe, .NET 5 (ve .NET Core) ve sonraki sürümler için SDK 'Yı kullanan projeler için geçerlidir.
 
 ## <a name="internalsvisibleto"></a>InternalsVisibleTo
 
-Derleme öznitelikleri olarak yayınlanedilecek derlemeleri belirtir `[InternalsVisibleTo(..)]` .
+Derleme öznitelikleri olarak `[InternalsVisibleTo(..)]` yayınlanedilecek derlemeleri belirtir.
 
 | Öğe meta veri adı | Description |
 |-----------------------| - |
