@@ -4,9 +4,9 @@
   items:
     - name: IDE turu
       href: ide-tour.md
-    - name: Windows kullanıcılar için Mac için Visual Studio
+    - name: Mac için Visual Studio kullanıcılar Windows için
       href: vsmac-for-windows-users.md
-    - name: Tümleşik Terminal
+    - name: Tümleşik terminal
       href: integrated-terminal.md
 - name: Yükleme
   items:
@@ -30,7 +30,7 @@
           href: user-accounts.md
         - name: Oturum açma hesabı
           href: signing-in.md
-        - name: Aboneliği etkinleştir
+        - name: Aboneliği etkinleştirme
           href: enable-subscription.md
     - name: IDE’yi Özelleştirme
       items:
@@ -156,9 +156,9 @@
           href: publish-folder.md
         - name: Video öğreticiler
           items:
-            - name: Mac için Visual Studio ASP.NET Core kullanma
+            - name: ASP.NET Core'de Mac için Visual Studio
               href: tutorial-aspnet-core-vsmac-getting-started.md
-            - name: mevcut ASP.NET Core web uygulamalarını genişletme
+            - name: Mevcut web ASP.NET Core genişletme
               href: tutorial-aspnet-core-vsmac-extending.md
     - name: Azure
       items:
@@ -180,7 +180,7 @@
       href: /visualstudio/gamedev/unity/get-started/visual-studio-tools-for-unity
     - name: Xamarin ile mobil uygulamalar
       href: ./xamarin.md
-- name: Erişilebilirlik araçları ve özellikleri
+- name: Erişilebilirlik Araçları ve Özellikleri
   items:
     - name: Genel Bakış
       href: accessibility.md
@@ -212,15 +212,15 @@
       href: vsmac-for-windows-users.md
 - name: Kaynaklar
   items:
-    - name: Sürüm notları & yol haritaları
+    - name: '& yol haritaları sürüm notları'
       href: /visualstudio/productinfo/mac-roadmap
     - name: Sorun giderme
       items:
         - name: Günlükler ve Özel Durumlar
           href: troubleshooting.md
-        - name: Mevcut uzantımı yeni bir sürüme yayınla
+        - name: Var olan Uzantımın yeni bir sürümünü serbest bırakma
           href: migrate-extensions.md
-        - name: Destek Team Foundation Sürüm Denetimi
+        - name: destek Team Foundation Sürüm Denetimi
           href: tf-version-control.md
         - name: 'Sorun Giderme: Neden tüm şablonları göremiyorum?'
           href: troubleshooting-no-templates.md
@@ -228,7 +228,7 @@
           href: updater-troubleshooting.md
 - name: Geri bildirim gönder
   items:
-    - name: Visual Studio Müşteri Deneyimini Geliştirme Programı
+    - name: Müşteri Deneyimi Geliştirme Programı
       href: visual-studio-experience-improvement-program.md
     - name: Sorun Bildirme
       href: report-a-problem.md

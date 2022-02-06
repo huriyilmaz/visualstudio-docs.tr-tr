@@ -159,8 +159,6 @@
       href: ide/quickstart-nodejs.md
     - name: 'Python: Web uygulaması oluşturma'
       href: ide/quickstart-python.md
-    - name: 'F#: Web hizmeti oluşturma'
-      href: ide/quickstart-fsharp.md
 - name: Öğreticiler
   expanded: true
   items:
@@ -651,6 +649,8 @@
           items:
             - name: F# geliştirme
               href: ide/fsharp-visual-studio.md
+            - name: 'Öğretici: F''de web hizmeti oluşturma #'
+              href: get-started/tutorial-fsharp-web-app.md
             - name: Eski .NET sürümlerini hedefleme
               href: ide/fsharp-target-older-dotnet-versions.md
         - name: Python >>
