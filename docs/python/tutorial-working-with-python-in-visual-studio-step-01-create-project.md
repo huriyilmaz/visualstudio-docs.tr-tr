@@ -1,24 +1,19 @@
 ---
-title: Python Visual Studio öğretici 1. adım, proje oluşturma
+title: 'Python Visual Studio öğretici 1. adım, proje oluşturma'
 titleSuffix: ''
 description: önkoşullar ve yeni bir python projesi oluşturma gibi Visual Studio Python özelliklerine ilişkin temel bir anlatımın genel bakış ve 1. adımı.
-ms.date: 01/15/2022
+ms.date: 02/02/2022
 ms.topic: tutorial
 author: rjmolyneaux
 ms.author: rmolyneaux
 manager: jmartens
 ms.technology: vs-python
-ms.custom: vs-acquisition
+ms.custom: 'vs-acquisition, devdivchpfy22'
 ms.workload:
-- python
-- data-science
-ms.openlocfilehash: 6734c7273ae53c707ce2be728f10564cc3c5202d
-ms.sourcegitcommit: f81a8f381bcdbac96d112f815737ba1df55d97a3
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "137667466"
+  - python
+  - data-science
 ---
+
 # <a name="tutorial-work-with-python-in-visual-studio"></a>Öğretici: Visual Studio 'de Python ile çalışma
 
 Python, güvenilir, esnek, kolayca öğrenilmesi kolay olan ve tüm işletim sistemlerinde kullanılabilen popüler bir programlama dilidir. Python hem güçlü bir geliştirici topluluğu hem de birçok, ücretsiz kitaplık tarafından desteklenir. Dil, Web uygulamaları, Web Hizmetleri, masaüstü uygulamaları, betik oluşturma ve bilimsel bilgi işlem gibi tüm geliştirme türlerini destekler. Birçok Üniversiteler, bilimciler, gündelik geliştiriciler ve profesyonel geliştiriciler Python kullanır.
@@ -37,12 +32,12 @@ Visual Studio Python için birinci sınıf dil desteği sağlar. Bu öğretici a
 
 ## <a name="step-1-create-a-new-python-project"></a>1. Adım: yeni bir Python projesi oluşturma
 
-bir *proje* , tek bir uygulama oluşturmak için birlikte gelen tüm dosyaları Visual Studio yönetir. Uygulama dosyaları, kaynak kodunu, kaynakları ve konfigürasyonları içerir. Proje, tüm proje dosyaları arasındaki ilişkileri biçimlendirir ve yönetir. Proje ayrıca birden çok proje arasında paylaşılan dış kaynakları yönetir. Bir proje, uygulamanızın kolay bir şekilde genişlemesini ve büyümesini sağlar. Projelerin kullanılması, geçici klasörlerdeki ilişkileri, betikleri, metin dosyalarını ve belleğinizin el ile yönetilmesini çok daha kolay hale getirir.
+bir *proje* , tek bir uygulama oluşturmak için birlikte gelen tüm dosyaları Visual Studio yönetir. Uygulama dosyaları, kaynak kodunu, kaynakları ve konfigürasyonları içerir. Proje, tüm proje dosyaları arasındaki ilişkileri biçimlendirir ve yönetir. Proje ayrıca birden çok proje arasında paylaşılan dış kaynakları yönetir. Bir proje, uygulamanızın kolay bir şekilde genişlemesini ve büyümesini sağlar. Proje kullanımı, planlanmamış klasörlerde, betiklerinizde, metin dosyalarında ve bellekte bulunan ilişkilerin el ile yönetilmesine kıyasla çok daha kolaydır.
 
 Bu öğretici, tek bir boş kod dosyası içeren basit bir proje ile başlar.
 
 ::: moniker range="<=vs-2019"
-1. Visual Studio ' de,   >    >    +  + **yeni Project** iletişim kutusunu gösteren dosya yeni Project (Ctrl shıft **N**) öğesini seçin. burada, farklı dillerdeki şablonlara gözatıp projeniz için bir tane seçip Visual Studio dosyaları nereye yerleştirmektir.
+1. Visual Studio ' de, **yeni Project** iletişim kutusunu gösteren **dosya**  >  **yeni**  >  **Project** (**Ctrl** + **shıft** + **N**) öğesini seçin. burada, farklı dillerdeki şablonlara gözatıp projeniz için bir tane seçip Visual Studio dosyaları nereye yerleştirmektir.
 
 1. Python şablonlarını görüntülemek için sol tarafta **yüklü**  >  **Python** ' ı seçin veya "Python" ifadesini arayın. Arama kullanmak, dil ağacındaki konumunu anımsayamıyorsanız bir şablonu bulmanın harika bir yoludur.
 
@@ -73,7 +68,7 @@ Bu öğretici, tek bir boş kod dosyası içeren basit bir proje ile başlar.
 ::: moniker-end
 
 ::: moniker range=">=vs-2022"
-1. Visual Studio ' de **dosya**  >  **yeni**  >  **Project** ' i seçin veya **Ctrl** + **shıft** + **N** tuşuna basın. Farklı dillerde şablonlar arayabilir ve gözatabileceğiniz **Yeni proje oluştur** ekranı görüntülenir.
+1. Visual Studio ' de **dosya**  >  **yeni**  >  **Project** ' i seçin veya **Ctrl** + **shıft** + **N** tuşuna basın. **Yeni proje oluştur** ekranı, farklı dillerdeki şablonlara arayabileceğiniz ve gözatabileceğiniz bir ekran görüntülenir.
    
 1. Python şablonlarını görüntülemek için *Python* araması yapın. Arama, dil ağacındaki konumunu anımsayamıyorsanız bir şablon bulmanın harika bir yoludur.
    
@@ -99,9 +94,9 @@ Bu öğretici, tek bir boş kod dosyası içeren basit bir proje ile başlar.
    
    - En üst düzey, varsayılan olarak projenizle aynı ada **(1)** sahip olan *çözümdür*.
      
-     Diskte *. sln* dosyası olarak görünen bir çözüm, bir veya daha fazla ilgili proje için bir kapsayıcıdır. Örneğin, Python uygulamanız için bir C++ uzantısı yazarsanız, bu C++ projesi aynı çözümde olabilir. Çözüm Ayrıca bir Web hizmeti projesi ve adanmış test programları için projeler içerebilir.
+     Disk üzerinde *. sln* dosyası olarak gösterilen bir çözüm, bir veya daha fazla ilgili proje için bir kapsayıcıdır. Örneğin, Python uygulamanız için bir C++ uzantısı yazarsanız, bu C++ projesi aynı çözümde olabilir. Çözüm Ayrıca bir Web hizmeti projesi ve adanmış test programları için projeler içerebilir.
    
-   - Projeniz, **Yeni proje oluştur** iletişim kutusunda verdiğiniz adla birlikte kalın **(2)** görünür. Disk üzerinde proje, proje klasörünüzdeki bir *. pyproj* dosyasıdır.
+   - Projeniz, **Yeni proje oluştur** iletişim kutusunda verdiğiniz adla birlikte kalın **(2)** olarak görüntülenir. Disk üzerinde proje, proje klasörünüzdeki bir *. pyproj* dosyasıdır.
    
    - Projenizin altında kaynak dosyaları, bu durumda yalnızca tek bir *. Kopyala* dosyası **(3)**. Bir dosya seçilmesi **Özellikler** penceresinde özelliklerini görüntüler. Bir dosyaya çift tıklamak söz konusu dosya için uygun olan her türlü şekilde açılır.
    

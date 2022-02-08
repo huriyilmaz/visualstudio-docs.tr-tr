@@ -1,5 +1,5 @@
 ---
-title: Yürütmeleri karşılaştırmak için & göz atma
+title: Commit'leri karşılaştırmak & bir repoya göz atma
 description: Git Deposu penceresini kullanarak Visual Studio herhangi bir Git deposuna göz atma.
 ms.date: 01/21/2022
 ms.topic: how-to
@@ -9,9 +9,12 @@ ms.manager: jmartens
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 ---
-# <a name="browse-git-repositories--compare-commits-in-visual-studio"></a>Git depolarına göz & işlemeleri karşılaştırma Visual Studio
+
+# <a name="browse-git-repos--compare-commits-in-visual-studio"></a>Git depolarına göz & işlemeleri karşılaştırma Visual Studio
 
 Git **Değişiklikleri penceresi** , kodunuzdan geçiş yapmak zorunda kalmadan kod yazma sırasında Git ile etkileşim kurmanın sorunsuz bir yolunu sağlar. Ancak bazen Git depona odaklanmanın daha anlamlı olduğu zamanlar olur. Örneğin, takımınız üzerinde çalıştığı şeyi iyi bir şekilde incelemeniz veya bir hatayı araştırmak için iki işlemeyi karşılaştırmanız gerekir.
+
+Git sağlayıcısıyla uzaktan çalışabilirsiniz( örneğin, GitHub veya Azure DevOps.
 
 ## <a name="browse-through-local-and-remote-branches"></a>Yerel ve uzak dallara göz atma
 
@@ -61,7 +64,7 @@ Bu Visual Studio Git Deposu **penceresindeki Git Graph** bölmesini **kullanarak
 > Bu eylemin eşdeğer komutu şu şekildedir `git branch <branchname> [<commit-id>]`: .
 
 > [!TIP]
-> Visual Studio 2022'nin Önizleme sürümünün işlemeleri daha kolay bir şekilde nasıl tamamlay olduğunu öğrenmek için, [Visual Studio 2022 için yeni Git](https://devblogs.microsoft.com/visualstudio/introducing-new-git-features-to-visual-studio-2022/#checkout-commits) özelliklerine giriş blog gönderisinin "Commit'leri iade etme" bölümüne bakın.[](/visualstudio/releases/2022/release-notes-preview)
+> Visual Studio 2022'nin Önizleme sürümünün işlemeleri daha kolay bir şekilde nasıl tamamlay olduğunu öğrenmek için, [Visual Studio 2022](https://devblogs.microsoft.com/visualstudio/introducing-new-git-features-to-visual-studio-2022/#checkout-commits) blog gönderisine yeni Git özellikleri tanıtımı blog gönderisinin "Commit'leri iade etme" bölümüne bakın.[](/visualstudio/releases/2022/release-notes-preview)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
