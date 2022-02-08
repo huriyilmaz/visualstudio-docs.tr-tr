@@ -1,5 +1,5 @@
 ---
-title: Docker Compose ile çok Kapsayıcılı uygulama
+title: 'Mac için VS: Docker Compose ile çok Kapsayıcılı uygulama'
 description: birden fazla kapsayıcıyı yönetmeyi ve Mac için Visual Studio aralarında iletişim kurmayı öğrenin
 ms.custom: SEO-VS-2020
 author: jmatthiesen
@@ -7,16 +7,18 @@ ms.author: jomatthi
 manager: dominicn
 ms.date: 07/03/2020
 ms.topic: how-to
-ms.openlocfilehash: aa8281ee0798421ead7778fe4d7d2497279e595b
-ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
+ms.openlocfilehash: b3e00a9091c436877dcd4cf4adb7ed1e4dba3e12
+ms.sourcegitcommit: 782992423db6e1cbbf206715c9b3b400c80052a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "135806124"
+ms.lasthandoff: 02/08/2022
+ms.locfileid: "138101040"
 ---
-# <a name="create-a-multi-container-app-with-docker-compose"></a>Docker Compose ile Çok Kapsayıcılı Uygulama Oluşturma
+# <a name="create-a-multi-container-app-with-docker-compose-for-visual-studio-for-mac"></a>Mac için Visual Studio için Docker Compose birden çok kapsayıcılı uygulama oluşturma
 
 bu öğreticide, birden fazla kapsayıcıyı yönetmeyi ve Mac için Visual Studio Docker Compose kullanırken aralarında iletişim kurmayı öğreneceksiniz.
+
+Visual Studio Windows sürümünde adımlar aranıyor [: Windows için Visual Studio ile Docker Compose ile çok kapsayıcılı bir uygulama oluşturma](/visualstudio/containers/tutorial-multicontainer).
 
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -66,7 +68,7 @@ services:
 
 artık çözümümüzde iki ASP.NET projesi var ve her ikisi de docker desteğiyle yapılandırıldı. Sonraki bir kod eklememiz gerekiyor!
 
-1. `DockerDemoFrontEnd`Projesinde, *Pages/Index. cshtml. cs* dosyasını açın ve `OnGet` yöntemi aşağıdaki kodla değiştirin:
+1. `DockerDemoFrontEnd`Projesinde, *Pages/Index. cshtml. cs* dosyasını açın ve yöntemi aşağıdaki kodla değiştirin `OnGet` :
 
    ```csharp
     public async Task OnGet()
@@ -85,9 +87,9 @@ artık çözümümüzde iki ASP.NET projesi var ve her ikisi de docker desteğiy
    ```
    
     > [!NOTE]
-    > Üretim kodunda, `HttpClient` her istekten sonra atılamaz. En iyi uygulamalar için bkz. [Esnek http isteklerini uygulamak Için HttpClientFactory kullanma](/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests).
+    > Üretim kodunda, her istekten sonra atılamaz `HttpClient` . En iyi uygulamalar için bkz. [Esnek http isteklerini uygulamak Için HttpClientFactory kullanma](/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests).
 
-1. *Index. cshtml* dosyasında, `ViewData["Message"]` dosyanın aşağıdaki koda benzeymek üzere görüntülenecek bir satır ekleyin:
+1. *Index. cshtml* dosyasında, dosyanın aşağıdaki koda benzeymek üzere görüntülenecek `ViewData["Message"]` bir satır ekleyin:
 
       ```cshtml
       @page
@@ -103,7 +105,7 @@ artık çözümümüzde iki ASP.NET projesi var ve her ikisi de docker desteğiy
       </div>
       ```
   
-1. Hem ön uç hem de Web API projelerinde, [](/dotnet/api/microsoft.aspnetcore.builder.httpspolicybuilderextensions.usehttpsredirection) `Configure` Bu örnek kod, Web API 'SINI çağırmak IÇIN https değil http 'Yi kullandığından, *Başlangıç. cs* Içindeki yönteminde Microsoft. Aspnetcore. Builder. Httpspolicybuilderextensions. usehttpsredirection çağrısını not edin.
+1. Hem ön uç hem de Web API projelerinde, bu örnek kod, Web API 'sini çağırmak için HTTPS değil HTTP 'yi kullandığından, *Başlangıç. cs* Içindeki yönteminde [Microsoft. Aspnetcore. Builder. HttpsPolicyBuilderExtensions. usehttpsredirection](/dotnet/api/microsoft.aspnetcore.builder.httpspolicybuilderextensions.usehttpsredirection) `Configure` çağrısını not edin.
 
       ```csharp
                   //app.UseHttpsRedirection();

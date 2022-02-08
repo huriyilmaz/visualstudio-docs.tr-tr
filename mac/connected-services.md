@@ -1,5 +1,5 @@
 ---
-title: Bağlı Hizmetler
+title: Mac için Visual Studio bağlı Azure hizmetleri &
 description: Azure veri depolama, kimlik doğrulaması ve Mac için Visual Studio içinden bir platformlar arası uygulamaya anında iletme bildirimleri eklemeyi öğrenin.
 ms.assetid: 41CB62FF-0F39-4CE8-8917-6A77F058719F
 author: jmatthiesen
@@ -7,14 +7,14 @@ ms.author: jomatthi
 manager: dominicn
 ms.date: 11/06/2018
 ms.topic: how-to
-ms.openlocfilehash: a7fe22162901f60aff761c0678c96072296cbf98
-ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
+ms.openlocfilehash: e93d572ca753aa475216ba7a0e443cec7c9fe9a9
+ms.sourcegitcommit: 782992423db6e1cbbf206715c9b3b400c80052a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "135806280"
+ms.lasthandoff: 02/08/2022
+ms.locfileid: "138101027"
 ---
-# <a name="connected-services-walkthrough"></a>Bağlı hizmetler izlenecek yolu
+# <a name="connected-services-walkthrough-in-visual-studio-for-mac"></a>Mac için Visual Studio bağlı hizmetler izlenecek yolu
 
 bağlı hizmetler iş akışı, Azure portal iş akışını Mac için Visual Studio taşır; bu nedenle, hizmet eklemek için projenizden çıkmak zorunda kalmazsınız.
 
@@ -51,8 +51,8 @@ Bu izlenecek yol, bulut veri depolama, kimlik doğrulama ve platformlar arası b
 
     Listelenen hizmetler yoksa, **Yeni** düğmesine tıklayın (bkz. 9. adım)
 
-7. İçin şablon kodunu `MobileServiceClient` PCL 'e kopyalayın. Dosya konumu önemli değildir, bu nedenle yalnızca bir örneği olduğu sürece.
-  Önerilen yaklaşım, `AzureService` tüm Azure etkileşimlerini işleyen ve şunları kullanan bir sınıf oluşturmaktır `MobileServiceClient` :
+7. İçin `MobileServiceClient` şablon kodunu PCL 'e kopyalayın. Dosya konumu önemli değildir, bu nedenle yalnızca bir örneği olduğu sürece.
+  Önerilen yaklaşım, tüm Azure etkileşimlerini işleyen ve şunları kullanan `MobileServiceClient` bir `AzureService` sınıf oluşturmaktır:
 
     ![Yapılandırma kodunu AP 'ye kopyalama](media/connected-services-image007.png "Yapılandırma kodunu uygulamaya Kopyala")
 

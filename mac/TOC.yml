@@ -118,13 +118,13 @@
   items:
     - name: Genel Bakış
       href: compiling-and-building.md
-    - name: Projeleri ve Çözümleri Oluşturma ve Temizleme
+    - name: Temiz & Çözümler oluşturma
       href: building-and-cleaning-projects-and-solutions.md
     - name: Derleme Eylemleri
       href: build-actions.md
-    - name: 'Nasıl yapılır: Çoklu başlangıç projeleri ayarlama'
+    - name: Çoklu başlangıç projeleri ayarlama
       href: set-startup-projects.md
-    - name: Derleme Sistemini Özelleştirme
+    - name: Derleme sistemini özelleştirme (msbuild)
       href: customizing-build-system.md
     - name: Yapılandırmalar
       items:
@@ -156,7 +156,7 @@
           href: publish-folder.md
         - name: Video öğreticiler
           items:
-            - name: ASP.NET Core'de Mac için Visual Studio
+            - name: ASP.NET Core'da Mac için Visual Studio
               href: tutorial-aspnet-core-vsmac-getting-started.md
             - name: Mevcut web ASP.NET Core genişletme
               href: tutorial-aspnet-core-vsmac-extending.md
@@ -212,15 +212,15 @@
       href: vsmac-for-windows-users.md
 - name: Kaynaklar
   items:
-    - name: '& yol haritaları sürüm notları'
+    - name: Sürüm notları & yol haritaları
       href: /visualstudio/productinfo/mac-roadmap
     - name: Sorun giderme
       items:
         - name: Günlükler ve Özel Durumlar
           href: troubleshooting.md
-        - name: Var olan Uzantımın yeni bir sürümünü serbest bırakma
+        - name: Mevcut uzantımı yeni bir sürüme yayınla
           href: migrate-extensions.md
-        - name: destek Team Foundation Sürüm Denetimi
+        - name: Destek Team Foundation Sürüm Denetimi
           href: tf-version-control.md
         - name: 'Sorun Giderme: Neden tüm şablonları göremiyorum?'
           href: troubleshooting-no-templates.md

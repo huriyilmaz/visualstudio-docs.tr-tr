@@ -1,5 +1,5 @@
 ---
-title: Uygulama kaynaklarını yönetme
+title: Xamarin uygulama kaynaklarını yönetme
 description: Bu makalede, Mac için Visual Studio'de çeşitli platformlar için uygulama kaynaklarını yönetmeyi açıklayan çeşitli kılavuzlara Mac için Visual Studio
 author: jmatthiesen
 ms.author: jomatthi
@@ -7,12 +7,12 @@ manager: dominicn
 ms.date: 05/06/2018
 ms.assetid: 61EAAB8F-3C32-4574-924F-CFC616604089
 ms.topic: overview
-ms.openlocfilehash: 2974133307ba4788b38cb16da4cc38543d10ac3e
-ms.sourcegitcommit: 965372ad0d75f015403c1af508080bf799914ce3
+ms.openlocfilehash: e5b7a74ba6b40de726eae5a9614a188be8d2f010
+ms.sourcegitcommit: 782992423db6e1cbbf206715c9b3b400c80052a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "135806085"
+ms.lasthandoff: 02/08/2022
+ms.locfileid: "138100910"
 ---
 # <a name="managing-app-resources"></a>Uygulama kaynaklarını yönetme
 
