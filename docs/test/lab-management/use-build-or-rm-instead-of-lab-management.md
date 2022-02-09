@@ -12,12 +12,12 @@ ms.technology: vs-ide-test
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 23991ee72e6ce108048a644371f33a13e529eaff
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: fa996411b934083cb8f47f22105c3444359e9055
+ms.sourcegitcommit: 169b7b66d13b7e3c86097b42206dd33389cd9166
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122032985"
+ms.lasthandoff: 02/09/2022
+ms.locfileid: "138148407"
 ---
 # <a name="use-azure-test-plans-instead-of-lab-management-for-automated-testing"></a>otomatikleştirilmiş test için Laboratuvar Yönetimi yerine Azure Test Plans kullanın
 
@@ -49,7 +49,7 @@ bu senaryo için Azure Pipelines veya TFS kullanmanın avantajlarından bazılar
 
 ## <a name="self-service-management-of-scvmm-environments"></a>SCVMM ortamlarının Self Servis Yönetimi
 
-[Microsoft Test Yöneticisi 'Daki test merkezi](/azure/devops/test/mtm/guidance-mtm-usage?view=vsts&preserve-view=true) , bir dizi ortam şablonu yönetme ve bir [SCVMM sunucusu](/system-center/vmm/overview?view=sc-vmm-1801&preserve-view=true)kullanarak isteğe bağlı ortamlar sağlama yeteneğini destekler.
+[Microsoft Test Yöneticisi 'Daki test merkezi](/azure/devops/test/reference-tcm) , bir dizi ortam şablonu yönetme ve bir [SCVMM sunucusu](/system-center/vmm/overview?view=sc-vmm-1801&preserve-view=true)kullanarak isteğe bağlı ortamlar sağlama yeteneğini destekler.
 
 Laboratuvar Merkezi 'nin Self Servis sağlama özellikleri iki farklı hedefle sahiptir:
 
